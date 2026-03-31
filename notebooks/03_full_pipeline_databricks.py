@@ -8,7 +8,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install anthropic rapidfuzz pydantic
+# MAGIC %pip install anthropic rapidfuzz "pydantic>=2.0"
 # MAGIC dbutils.library.restartPython()
 
 # COMMAND ----------

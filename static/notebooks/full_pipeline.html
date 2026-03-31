@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03_full_pipeline_databricks — Databricks Notebook</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1b1b2f;
+  color: #e0e0e8;
+  line-height: 1.6;
+}
+.nb-header {
+  background: #2d2d44;
+  border-bottom: 2px solid #3a3a55;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nb-header .logo {
+  font-weight: 800;
+  color: #ff6f61;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nb-header .sep { color: #555; font-size: 18px; }
+.nb-header .name { color: #ccc; font-size: 14px; font-weight: 500; }
+.nb-header .badge {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+.nb-header .cell-count {
+  color: #888;
+  font-size: 12px;
+}
+.nb-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+/* Markdown cells */
+.cell-md {
+  padding: 20px 28px;
+  margin-bottom: 8px;
+}
+.cell-md h1 { font-size: 26px; font-weight: 700; color: #fff; margin: 16px 0 10px; }
+.cell-md h2 { font-size: 21px; font-weight: 600; color: #ddd; margin: 20px 0 8px; border-bottom: 1px solid #3a3a55; padding-bottom: 6px; }
+.cell-md h3 { font-size: 17px; font-weight: 600; color: #ccc; margin: 14px 0 6px; }
+.cell-md p { color: #bbb; margin-bottom: 8px; }
+.cell-md ul, .cell-md ol { color: #bbb; margin-left: 24px; margin-bottom: 8px; }
+.cell-md li { margin-bottom: 3px; }
+.cell-md strong { color: #e0e0e8; }
+.cell-md code { background: #2d2d44; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #e8b86d; }
+.cell-md a { color: #64b5f6; }
+.cell-md hr { border: none; border-top: 1px solid #3a3a55; margin: 16px 0; }
+.cell-md table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.cell-md th { background: #2d2d44; color: #aaa; text-align: left; padding: 8px 14px; border: 1px solid #3a3a55; font-size: 13px; font-weight: 600; }
+.cell-md td { padding: 8px 14px; border: 1px solid #3a3a55; color: #ccc; font-size: 13px; }
+/* Code cells */
+.cell-code {
+  background: #1e1e32;
+  border: 1px solid #3a3a55;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.cell-toolbar {
+  background: #262640;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #3a3a55;
+  font-size: 12px;
+}
+.cell-num {
+  color: #666;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  min-width: 32px;
+}
+.cell-lang {
+  color: #888;
+  font-size: 11px;
+  margin-left: auto;
+  background: #2d2d44;
+  padding: 2px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cell-duration { color: #888; font-size: 11px; }
+.status-ok { color: #2ecc71; font-size: 14px; }
+.status-err { color: #e74c3c; font-size: 14px; }
+.status-none { color: #555; }
+.cell-source {
+  padding: 0;
+}
+.cell-source pre {
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: transparent;
+  white-space: pre;
+  tab-size: 4;
+}
+/* Output cells */
+.cell-output {
+  border-top: 1px solid #3a3a55;
+  background: #191930;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.cell-output pre {
+  padding: 12px 20px;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aaa;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.cell-output-table {
+  padding: 0;
+  overflow-x: auto;
+}
+.cell-output-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+.cell-output-table th {
+  background: #232340;
+  color: #aaa;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid #3a3a55;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+.cell-output-table td {
+  padding: 6px 12px;
+  border: 1px solid #2d2d44;
+  color: #ccc;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cell-output-table tr:nth-child(even) td { background: #1d1d35; }
+.cell-output-table tr:hover td { background: #252545; }
+.cell-output-table .truncated { color: #666; font-style: italic; text-align: center; }
+.cell-output-table .null { color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="nb-header">
+  <span class="logo">Databricks</span>
+  <span class="sep">/</span>
+  <span class="name">03_full_pipeline_databricks</span>
+  <span class="cell-count">30 cells</span>
+  <span class="badge">Serverless</span>
+</div>
+<div class="nb-container">
+<div class="cell cell-md"><h1>Clinical Note Intelligence -- Full Pipeline</h1>
+<p>End-to-end pipeline: PySpark ingestion -&gt; Claude API extraction -&gt; ICD-10 matching -&gt; quality analysis</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[1]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">29.2s</span>
+    <span class="cell-lang">shell</span>
+  </div>
+  <div class="cell-source"><pre>%pip<span style="color: #F8F8F2"> </span>install<span style="color: #F8F8F2"> </span>anthropic<span style="color: #F8F8F2"> </span>rapidfuzz<span style="color: #F8F8F2"> </span>pydantic&gt;<span style="color: #FF4689">=</span><span style="color: #AE81FF">2</span>.0
+dbutils.library.restartPython<span style="color: #FF4689">()</span>
+</pre></div>
+<div class="cell-output"><pre>Requirement already satisfied: anthropic in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (0.86.0)
+Requirement already satisfied: rapidfuzz in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (3.14.3)
+Collecting pydantic&gt;=2.0
+  Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+Requirement already satisfied: anyio&lt;5,&gt;=3.5.0 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (4.13.0)
+Requirement already satisfied: distro&lt;2,&gt;=1.7.0 in /usr/lib/python3/dist-packages (from anthropic) (1.7.0)
+Requirement already satisfied: docstring-parser&lt;1,&gt;=0.15 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (0.17.0)
+Requirement already satisfied: httpx&lt;1,&gt;=0.25.0 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (0.28.1)
+Requirement already satisfied: jiter&lt;1,&gt;=0.4.0 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (0.13.0)
+Requirement already satisfied: sniffio in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (1.3.1)
+Requirement already satisfied: typing-extensions&lt;5,&gt;=4.14 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from anthropic) (4.15.0)
+Collecting annotated-types&gt;=0.6.0 (from pydantic&gt;=2.0)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.5 (from pydantic&gt;=2.0)
+  Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (7.3 kB)
+Collecting typing-inspection&gt;=0.4.2 (from pydantic&gt;=2.0)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: idna&gt;=2.8 in /databricks/python3/lib/python3.11/site-packages (from anyio&lt;5,&gt;=3.5.0-&gt;anthropic) (3.4)
+Requirement already satisfied: certifi in /databricks/python3/lib/python3.11/site-packages (from httpx&lt;1,&gt;=0.25.0-&gt;anthropic) (2023.7.22)
+Requirement already satisfied: httpcore==1.* in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from httpx&lt;1,&gt;=0.25.0-&gt;anthropic) (1.0.9)
+Requirement already satisfied: h11&gt;=0.16 in /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d/lib/python3.11/site-packages (from httpcore==1.*-&gt;httpx&lt;1,&gt;=0.25.0-&gt;anthropic) (0.16.0)
+Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+Downloading pydantic_core-2.41.5-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/1.9 MB ? eta -:--:--   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 49.8 MB/s eta 0:00:00
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Installing collected packages: typing-inspection, pydantic-core, annotated-types, pydantic
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 1.10.6
+    Not uninstalling pydantic at /databricks/python3/lib/python3.11/site-packages, outside environment /local_disk0/.ephemeral_nfs/envs/pythonEnv-5b8f46c5-27c8-4340-bd60-d50d026dbc8d
+    Can&#x27;t uninstall &#x27;pydantic&#x27;. No files were found to uninstall.
+Successfully installed annotated-types-0.7.0 pydantic-2.12.5 pydantic-core-2.41.5 typing-inspection-0.4.2
+Note: you may need to restart the kernel using %restart_python or dbutils.library.restartPython() to use updated packages.</pre></div>
+</div>
+<div class="cell cell-md"><h2>Configuration</h2></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[2]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">220ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">RAW_DATA_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/raw-data/mtsamples.csv&quot;</span>
+<span style="color: #F8F8F2">OUTPUT_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/raw-data/mtsamples_clean&quot;</span>
+
+<span style="color: #F8F8F2">dbutils</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">widgets</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">text(</span><span style="color: #E6DB74">&quot;api_key&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Anthropic API Key&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ANTHROPIC_API_KEY</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">dbutils</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">widgets</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;api_key&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">ANTHROPIC_API_KEY:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;WARNING: No API key provided. Set the &#39;api_key&#39; widget at the top of the notebook.&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Stages 1 (ingestion) will run; Stage 2 (extraction) and 3 (ICD-10) require a key.&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><hr />
+<h2>Stage 1: PySpark Ingestion &amp; Cleaning</h2>
+<p>Load MTSamples CSV, clean text, deduplicate, and write to Delta.</p></div>
+<div class="cell cell-md"><h3>Schema Definition &amp; CSV Read</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[3]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">23.8s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">IntegerType,</span> <span style="color: #F8F8F2">StringType,</span> <span style="color: #F8F8F2">StructField,</span> <span style="color: #F8F8F2">StructType</span>
+
+<span style="color: #F8F8F2">MTSAMPLES_SCHEMA</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">StructType(</span>
+    <span style="color: #F8F8F2">[</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">IntegerType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">False</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">df_raw</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;header&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;multiLine&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;escape&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">schema(MTSAMPLES_SCHEMA)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">csv(RAW_DATA_PATH)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">raw_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Raw row count: {</span><span style="color: #F8F8F2">raw_count</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">))</span>
+</pre></div>
+<div class="cell-output"><pre>Raw row count: 4999</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>description</th>
+<th>medical_specialty</th>
+<th>sample_name</th>
+<th>transcription</th>
+<th>keywords</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td> A 23-year-old white female presents with complaint of allergies.</td>
+<td> Allergy / Immunology</td>
+<td> Allergic Rhinitis </td>
+<td>SUBJECTIVE:,  This 23-year-old white female presents with complaint of allergies.  She used to have allergies when she lived in Seattle but she thi...</td>
+<td>allergy / immunology, allergic rhinitis, allergies, asthma, nasal sprays, rhinitis, nasal, erythematous, allegra, sprays, allergic,</td>
+</tr>
+<tr>
+<td>1</td>
+<td> Consult for laparoscopic gastric bypass.</td>
+<td> Bariatrics</td>
+<td> Laparoscopic Gastric Bypass Consult - 2 </td>
+<td>PAST MEDICAL HISTORY:, He has difficulty climbing stairs, difficulty with airline seats, tying shoes, used to public seating, and lifting objects o...</td>
+<td>bariatrics, laparoscopic gastric bypass, weight loss programs, gastric bypass, atkin&#x27;s diet, weight watcher&#x27;s, body weight, laparoscopic gastric, w...</td>
+</tr>
+<tr>
+<td>2</td>
+<td> Consult for laparoscopic gastric bypass.</td>
+<td> Bariatrics</td>
+<td> Laparoscopic Gastric Bypass Consult - 1 </td>
+<td>HISTORY OF PRESENT ILLNESS: , I have seen ABC today.  He is a very pleasant gentleman who is 42 years old, 344 pounds.  He is 5&#x27;9&quot;.  He has a BMI o...</td>
+<td>bariatrics, laparoscopic gastric bypass, heart attacks, body weight, pulmonary embolism, potential complications, sleep study, weight loss, gastric...</td>
+</tr>
+<tr>
+<td>3</td>
+<td> 2-D M-Mode. Doppler.  </td>
+<td> Cardiovascular / Pulmonary</td>
+<td> 2-D Echocardiogram - 1 </td>
+<td>2-D M-MODE: , ,1.  Left atrial enlargement with left atrial diameter of 4.7 cm.,2.  Normal size right and left ventricle.,3.  Normal LV systolic fu...</td>
+<td>cardiovascular / pulmonary, 2-d m-mode, doppler, aortic valve, atrial enlargement, diastolic function, ejection fraction, mitral, mitral valve, per...</td>
+</tr>
+<tr>
+<td>4</td>
+<td> 2-D Echocardiogram</td>
+<td> Cardiovascular / Pulmonary</td>
+<td> 2-D Echocardiogram - 2 </td>
+<td>1.  The left ventricular cavity size and wall thickness appear normal.  The wall motion and left ventricular systolic function appears hyperdynamic...</td>
+<td>cardiovascular / pulmonary, 2-d, doppler, echocardiogram, annular, aortic root, aortic valve, atrial, atrium, calcification, cavity, ejection fract...</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><h3>Text Cleaning</h3>
+<p>Strip HTML, fix encoding artifacts, normalize whitespace. Applied as PySpark UDFs.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[4]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">12.1s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> html</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> re</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> unicodedata</span>
+
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">functions</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">F</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">StringType</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">strip_html_tags</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Remove HTML tags and decode HTML entities.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;&lt;[^&gt;]+&gt;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">html</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">unescape(text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">normalize_whitespace</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Collapse runs of whitespace into single spaces and strip edges.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;\s+&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">fix_encoding</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Normalize Unicode and replace common smart-quote / dash artifacts.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">unicodedata</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">normalize(</span><span style="color: #E6DB74">&quot;NFKD&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #F8F8F2">replacements</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2019</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2018</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201c</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201d</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2013</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2014</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2026</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;...&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u00a0</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #F8F8F2">}</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">src,</span> <span style="color: #F8F8F2">dst</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">replacements</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items():</span>
+        <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">text</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(src,</span> <span style="color: #F8F8F2">dst)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">clean_text</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Full cleaning pipeline: HTML removal, encoding fix, whitespace normalization.&quot;&quot;&quot;</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">strip_html_tags(text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">fix_encoding(text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">normalize_whitespace(text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #F8F8F2">clean_text_udf</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">udf(clean_text,</span> <span style="color: #F8F8F2">StringType())</span>
+
+<span style="color: #F8F8F2">TEXT_COLUMNS</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">]</span>
+
+<span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">TEXT_COLUMNS:</span>
+    <span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(col_name,</span> <span style="color: #F8F8F2">clean_text_udf(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)))</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=== BEFORE cleaning (raw) ===&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">))</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=== AFTER cleaning ===&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">))</span>
+</pre></div>
+<div class="cell-output"><pre>=== BEFORE cleaning (raw) ===</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>transcription</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>SUBJECTIVE:,  This 23-year-old white female presents with complaint of allergies.  She used to have allergies when she lived in Seattle but she thi...</td>
+</tr>
+</tbody></table></div>
+<div class="cell-output"><pre>=== AFTER cleaning ===</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>transcription</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>SUBJECTIVE:, This 23-year-old white female presents with complaint of allergies. She used to have allergies when she lived in Seattle but she think...</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><h3>Deduplication &amp; Quality Report</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[5]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">27.6s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">count_before</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">df_dedup</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">dropDuplicates([</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span>
+<span style="color: #F8F8F2">count_after</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Before dedup: {</span><span style="color: #F8F8F2">count_before</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;After dedup:  {</span><span style="color: #F8F8F2">count_after</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Removed:      {</span><span style="color: #F8F8F2">count_before </span><span style="color: #FF4689">-</span><span style="color: #F8F8F2"> count_after</span><span style="color: #E6DB74">} duplicate rows&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># --- Null rates per column ---</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Null rates:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">columns:</span>
+    <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">where(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">isNull())</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #F8F8F2">rate</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">count_after</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">count_after</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">0</span> <span style="color: #66D9EF">else</span> <span style="color: #AE81FF">0.0</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">col_name</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">rate</span><span style="color: #E6DB74">:.2%} ({</span><span style="color: #F8F8F2">null_count</span><span style="color: #E6DB74">} nulls)&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># --- Top 15 specialty distribution ---</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Specialty distribution (top 15):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">df_specialty</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">groupBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">orderBy(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">desc(</span><span style="color: #E6DB74">&quot;count&quot;</span><span style="color: #F8F8F2">))</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">15</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_specialty)</span>
+
+<span style="color: #959077"># --- Transcription length statistics ---</span>
+<span style="color: #F8F8F2">df_with_len</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">length(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)))</span>
+<span style="color: #F8F8F2">length_stats</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_with_len</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">agg(</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">min(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;min_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;max_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mean(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;mean_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">expr(</span><span style="color: #E6DB74">&quot;percentile_approx(transcription_length, 0.5)&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;median_length&quot;</span><span style="color: #F8F8F2">),</span>
+<span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Transcription length statistics:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Min:    {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;min_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Max:    {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;max_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Mean:   {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;mean_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">:.0f}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Median: {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;median_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Before dedup: 4999
+After dedup:  2358
+Removed:      2641 duplicate rows
+
+Null rates:
+  id: 0.00% (0 nulls)
+  description: 0.00% (0 nulls)
+  medical_specialty: 0.00% (0 nulls)
+  sample_name: 0.00% (0 nulls)
+  transcription: 0.04% (1 nulls)
+  keywords: 21.12% (498 nulls)
+
+Specialty distribution (top 15):</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>medical_specialty</th>
+<th>count</th>
+</tr></thead>
+<tbody>
+<tr>
+<td> Surgery</td>
+<td>976</td>
+</tr>
+<tr>
+<td> Radiology</td>
+<td>248</td>
+</tr>
+<tr>
+<td> Urology</td>
+<td>157</td>
+</tr>
+<tr>
+<td> General Medicine</td>
+<td>157</td>
+</tr>
+<tr>
+<td> SOAP / Chart / Progress Notes</td>
+<td>144</td>
+</tr>
+<tr>
+<td> Neurology</td>
+<td>67</td>
+</tr>
+<tr>
+<td> Orthopedic</td>
+<td>56</td>
+</tr>
+<tr>
+<td> Consult - History and Phy.</td>
+<td>55</td>
+</tr>
+<tr>
+<td> Pediatrics - Neonatal</td>
+<td>52</td>
+</tr>
+<tr>
+<td> Psychiatry / Psychology</td>
+<td>51</td>
+</tr>
+<tr>
+<td> Pain Management</td>
+<td>45</td>
+</tr>
+<tr>
+<td> Office Notes</td>
+<td>41</td>
+</tr>
+<tr>
+<td> Hematology - Oncology</td>
+<td>31</td>
+</tr>
+<tr>
+<td> Gastroenterology</td>
+<td>31</td>
+</tr>
+<tr>
+<td> Obstetrics / Gynecology</td>
+<td>26</td>
+</tr>
+</tbody></table></div>
+<div class="cell-output"><pre>Transcription length statistics:
+  Min:    11
+  Max:    18422
+  Mean:   2975
+  Median: 2579</pre></div>
+</div>
+<div class="cell cell-md"><h3>Save Cleaned Data as Delta</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[6]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">11.3s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">repartition(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">partitionBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(OUTPUT_PATH)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Delta table written to {</span><span style="color: #F8F8F2">OUTPUT_PATH</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Verify</span>
+<span style="color: #F8F8F2">df_verify</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(OUTPUT_PATH)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Verified row count: {</span><span style="color: #F8F8F2">df_verify</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Delta table written to /Volumes/workspace/default/raw-data/mtsamples_clean
+Verified row count: 2358</pre></div>
+</div>
+<div class="cell cell-md"><hr />
+<h2>Stage 2: LLM-Based Clinical Extraction</h2>
+<p>Extract diagnoses, procedures, and medications from clinical notes using Claude Haiku
+with structured <code>tool_use</code> output.</p></div>
+<div class="cell cell-md"><h3>Pydantic Models</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[7]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">193ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> typing </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">Literal,</span> <span style="color: #F8F8F2">Optional</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pydantic </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">BaseModel,</span> <span style="color: #F8F8F2">Field</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Diagnosis</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Name of the diagnosis&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">icd10_suggestion:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Suggested ICD-10-CM code (e.g. &#39;I25.10&#39;)&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this diagnosis&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Procedure</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Name of the procedure performed or planned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">cpt_suggestion:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Suggested CPT code if identifiable&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this procedure&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Medication</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Medication name&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">dosage:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Dosage if mentioned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">frequency:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Frequency if mentioned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">route:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Route of administration if mentioned&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this medication&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ClinicalExtraction</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">note_id:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Identifier of the source clinical note&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">diagnoses:</span> <span style="color: #F8F8F2">list[Diagnosis]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">procedures:</span> <span style="color: #F8F8F2">list[Procedure]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">medications:</span> <span style="color: #F8F8F2">list[Medication]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">chief_complaint:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Chief complaint or reason for visit&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">medical_specialty:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(</span>
+        <span style="color: #F8F8F2">default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Medical specialty of this note&quot;</span>
+    <span style="color: #F8F8F2">)</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h3>Extraction Tool Schema &amp; Prompt</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[8]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">89ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">SYSTEM_PROMPT</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">You are a clinical data extraction specialist. Your task is to extract structured </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">medical information from clinical notes with high accuracy.</span>
+
+<span style="color: #E6DB74">Use the extract_clinical_data tool to return your results.</span>
+
+<span style="color: #E6DB74">Rules:</span>
+<span style="color: #E6DB74">1. Only extract information explicitly stated in the note. Do not infer diagnoses </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">that are not mentioned.</span>
+<span style="color: #E6DB74">2. For each extraction, provide the exact verbatim text span from the note as evidence.</span>
+<span style="color: #E6DB74">3. Assign confidence levels:</span>
+<span style="color: #E6DB74">   - &quot;high&quot;: explicitly stated and unambiguous</span>
+<span style="color: #E6DB74">   - &quot;medium&quot;: strongly implied or uses clinical shorthand</span>
+<span style="color: #E6DB74">   - &quot;low&quot;: mentioned in differential or uncertain context</span>
+<span style="color: #E6DB74">4. For ICD-10 codes, suggest the most specific code you can. Use the format &quot;X00.00&quot;. </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">If unsure, provide the broader category code.</span>
+<span style="color: #E6DB74">5. If a field has no relevant information in the note, return an empty list or null.</span>
+
+<span style="color: #E6DB74">Example: For a note mentioning &quot;Type 2 diabetes mellitus&quot; in the assessment, extract </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">a diagnosis with name=&quot;Type 2 diabetes mellitus&quot;, icd10_suggestion=&quot;E11.9&quot;, </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">confidence=&quot;high&quot;, and evidence_span set to the verbatim text.</span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span>
+
+<span style="color: #F8F8F2">CONFIDENCE_ENUM</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span>
+
+<span style="color: #F8F8F2">EXTRACTION_TOOL</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span>
+    <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;extract_clinical_data&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">(</span>
+        <span style="color: #E6DB74">&quot;Extract structured clinical data from a clinical note. &quot;</span>
+        <span style="color: #E6DB74">&quot;Call this tool with all diagnoses, procedures, medications, &quot;</span>
+        <span style="color: #E6DB74">&quot;chief complaint, and medical specialty found in the note.&quot;</span>
+    <span style="color: #F8F8F2">),</span>
+    <span style="color: #E6DB74">&quot;input_schema&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+        <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+            <span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Diagnoses found in the note&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Name of the diagnosis&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;icd10_suggestion&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Suggested ICD-10-CM code (e.g. &#39;I25.10&#39;)&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Verbatim text from the note supporting this diagnosis&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Procedures performed or planned in the note&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Name of the procedure performed or planned&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;cpt_suggestion&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Suggested CPT code if identifiable&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Verbatim text from the note supporting this procedure&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Medications mentioned in the note&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Medication name&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;dosage&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Dosage if mentioned&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;frequency&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Frequency if mentioned&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;route&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Route of administration if mentioned&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                            <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span>
+                            <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Verbatim text from the note supporting this medication&quot;</span><span style="color: #F8F8F2">,</span>
+                        <span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Chief complaint or reason for visit, null if not stated&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Medical specialty of this note, null if not identifiable&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #F8F8F2">},</span>
+        <span style="color: #F8F8F2">},</span>
+        <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span>
+            <span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">,</span>
+            <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #F8F8F2">],</span>
+    <span style="color: #F8F8F2">},</span>
+<span style="color: #F8F8F2">}</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">build_extraction_prompt</span><span style="color: #F8F8F2">(transcription):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Build the user message for a single note extraction.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #E6DB74">f&quot;Extract structured clinical data from this note:</span><span style="color: #AE81FF">\n\n</span><span style="color: #E6DB74">{</span><span style="color: #F8F8F2">transcription</span><span style="color: #E6DB74">}&quot;</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h3>Clinical Extractor</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[9]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">473ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> anthropic</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> time</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> logging</span>
+
+<span style="color: #F8F8F2">logger</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">logging</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">getLogger(</span><span style="color: #E6DB74">&quot;clinical_extractor&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">DEFAULT_MODEL</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;claude-haiku-4-5-20251001&quot;</span>
+<span style="color: #F8F8F2">MAX_TOKENS</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">4096</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ExtractionError</span><span style="color: #F8F8F2">(</span><span style="color: #A6E22E">Exception</span><span style="color: #F8F8F2">):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Raised when extraction fails after retries.&quot;&quot;&quot;</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ClinicalExtractor</span><span style="color: #F8F8F2">:</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Extracts structured clinical data from a single note using Claude.&quot;&quot;&quot;</span>
+
+    <span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">__init__</span><span style="color: #F8F8F2">(self,</span> <span style="color: #F8F8F2">api_key,</span> <span style="color: #F8F8F2">model</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">DEFAULT_MODEL,</span> <span style="color: #F8F8F2">max_retries</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">):</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">client</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">Anthropic(api_key</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">api_key)</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">model</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">max_retries</span>
+
+    <span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">extract</span><span style="color: #F8F8F2">(self,</span> <span style="color: #F8F8F2">note_id,</span> <span style="color: #F8F8F2">transcription):</span>
+<span style="color: #F8F8F2">        </span><span style="color: #E6DB74">&quot;&quot;&quot;Extract clinical data from a single note via tool_use.&quot;&quot;&quot;</span>
+        <span style="color: #F8F8F2">user_message</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">build_extraction_prompt(transcription)</span>
+        <span style="color: #F8F8F2">messages</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[{</span><span style="color: #E6DB74">&quot;role&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;user&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;content&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">user_message}]</span>
+
+        <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">attempt</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">range(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">):</span>
+            <span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>
+                <span style="color: #F8F8F2">response</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">client</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">messages</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">create(</span>
+                    <span style="color: #F8F8F2">model</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model,</span>
+                    <span style="color: #F8F8F2">max_tokens</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">MAX_TOKENS,</span>
+                    <span style="color: #F8F8F2">system</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">SYSTEM_PROMPT,</span>
+                    <span style="color: #F8F8F2">messages</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">messages,</span>
+                    <span style="color: #F8F8F2">tools</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">[EXTRACTION_TOOL],</span>
+                    <span style="color: #F8F8F2">tool_choice</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;tool&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;extract_clinical_data&quot;</span><span style="color: #F8F8F2">},</span>
+                <span style="color: #F8F8F2">)</span>
+
+                <span style="color: #959077"># Parse the tool_use block</span>
+                <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">block</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">response</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">content:</span>
+                    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">block</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">type</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;tool_use&quot;</span><span style="color: #F8F8F2">:</span>
+                        <span style="color: #F8F8F2">data</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">block</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">input</span>
+                        <span style="color: #F8F8F2">data[</span><span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(note_id)</span>
+                        <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">ClinicalExtraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model_validate(data)</span>
+
+                <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">&quot;No tool_use block found in response&quot;</span><span style="color: #F8F8F2">)</span>
+
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">RateLimitError:</span>
+                <span style="color: #F8F8F2">logger</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">warning(</span><span style="color: #E6DB74">&quot;Rate limited on attempt %d/%d&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">attempt,</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries)</span>
+                <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #A6E22E">Exception</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Rate limit exceeded&quot;</span><span style="color: #F8F8F2">)</span>
+                <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">2</span> <span style="color: #FF4689">**</span> <span style="color: #F8F8F2">attempt)</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">APIStatusError</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+                <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">e</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">status_code</span> <span style="color: #FF4689">&gt;=</span> <span style="color: #AE81FF">500</span><span style="color: #F8F8F2">:</span>
+                    <span style="color: #F8F8F2">logger</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">warning(</span><span style="color: #E6DB74">&quot;Server error %d on attempt %d/%d&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">e</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">status_code,</span> <span style="color: #F8F8F2">attempt,</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries)</span>
+                    <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">e</span>
+                    <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">2</span> <span style="color: #FF4689">**</span> <span style="color: #F8F8F2">attempt)</span>
+                <span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+                    <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">f&quot;API error for note {</span><span style="color: #F8F8F2">note_id</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">from</span><span style="color: #F8F8F2"> e</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">ExtractionError:</span>
+                <span style="color: #66D9EF">raise</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #A6E22E">Exception</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+                <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">f&quot;Unexpected error for note {</span><span style="color: #F8F8F2">note_id</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">from</span><span style="color: #F8F8F2"> e</span>
+
+        <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span>
+            <span style="color: #E6DB74">f&quot;Failed to extract note {</span><span style="color: #F8F8F2">note_id</span><span style="color: #E6DB74">} after {</span><span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span><span style="color: #E6DB74">} attempts: {</span><span style="color: #F8F8F2">last_error</span><span style="color: #E6DB74">}&quot;</span>
+        <span style="color: #F8F8F2">)</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h3>Run Extraction on Sample Notes (10 notes)</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[10]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">45.2s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> pandas </span><span style="color: #66D9EF">as</span><span style="color: #F8F8F2"> pd</span>
+
+<span style="color: #66D9EF">assert</span> <span style="color: #F8F8F2">ANTHROPIC_API_KEY,</span> <span style="color: #E6DB74">&quot;Set the api_key widget before running extraction.&quot;</span>
+
+<span style="color: #F8F8F2">df_clean</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(OUTPUT_PATH)</span>
+<span style="color: #F8F8F2">sample_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_clean</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">filter(</span><span style="color: #E6DB74">&quot;transcription IS NOT NULL&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+
+<span style="color: #F8F8F2">extractor</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">ClinicalExtractor(api_key</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">ANTHROPIC_API_KEY)</span>
+<span style="color: #F8F8F2">results</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+<span style="color: #F8F8F2">extractions</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>  <span style="color: #959077"># keep full extraction objects for ICD-10 validation</span>
+
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">idx,</span> <span style="color: #F8F8F2">row</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">sample_notes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">iterrows():</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Extracting note {</span><span style="color: #F8F8F2">idx</span><span style="color: #FF4689">+</span><span style="color: #AE81FF">1</span><span style="color: #E6DB74">}/10: {</span><span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&#39;sample_name&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">extraction</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extract(str(row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">]),</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span>
+        <span style="color: #F8F8F2">extractions</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append(extraction)</span>
+        <span style="color: #F8F8F2">results</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append(</span>
+            <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #E6DB74">&quot;specialty&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #E6DB74">&quot;n_diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses),</span>
+                <span style="color: #E6DB74">&quot;n_procedures&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures),</span>
+                <span style="color: #E6DB74">&quot;n_medications&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications),</span>
+                <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">chief_complaint,</span>
+                <span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[d</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">d</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses],</span>
+                <span style="color: #E6DB74">&quot;icd10_codes&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[d</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">d</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses],</span>
+            <span style="color: #F8F8F2">}</span>
+        <span style="color: #F8F8F2">)</span>
+    <span style="color: #66D9EF">except</span> <span style="color: #A6E22E">Exception</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Error: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">0.5</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">results_df</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(results)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Successfully extracted {</span><span style="color: #F8F8F2">len(results)</span><span style="color: #E6DB74">}/10 notes&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(results_df)</span>
+</pre></div>
+<div class="cell-output"><pre>Extracting note 1/10: EGD With Photos &amp; Biopsies.
+Extracting note 2/10: Tubal Fulguration - Laparoscopic
+Extracting note 3/10: Colonoscopy Template - 4
+Extracting note 4/10: Adenoidectomy
+Extracting note 5/10: Anterior Cervical Discectomy - 2
+Extracting note 6/10: Ash Split Venous Port
+Extracting note 7/10: Leaking ET tube
+Extracting note 8/10: Blepharoplasty - Lower Lid
+Extracting note 9/10: Blepharoplasty
+Extracting note 10/10: Hypergranulation - Consult
+
+Successfully extracted 10/10 notes</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>note_id</th>
+<th>specialty</th>
+<th>sample_name</th>
+<th>n_diagnoses</th>
+<th>n_procedures</th>
+<th>n_medications</th>
+<th>chief_complaint</th>
+<th>diagnoses</th>
+<th>icd10_codes</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>874</td>
+<td> Surgery</td>
+<td>EGD With Photos &amp; Biopsies.</td>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>Difficulty swallowing, occasional choking, and odynophagia</td>
+<td>[Odynophagia, Dysphagia, Gastroesophageal reflux disease, Antral gastritis, Hiatal hernia]</td>
+<td>[R13.13, R13.10, K21.9, K29.30, K44.9]</td>
+</tr>
+<tr>
+<td>230</td>
+<td> Surgery</td>
+<td>Tubal Fulguration - Laparoscopic</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>Procedure note (no chief complaint listed)</td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>986</td>
+<td> Surgery</td>
+<td>Colonoscopy Template - 4</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td><span class="null">null</span></td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>1270</td>
+<td> Surgery</td>
+<td>Adenoidectomy</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td><span class="null">null</span></td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>1254</td>
+<td> Surgery</td>
+<td>Anterior Cervical Discectomy - 2</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+<td>Neck pain and right arm pain</td>
+<td>[Right C5-C6 herniated nucleus pulposus, Degenerative disk disease at C5-6, Right arm pain, Numbness in fingers]</td>
+<td>[M50.22, M50.30, M79.3, R20.2]</td>
+</tr>
+<tr>
+<td>1202</td>
+<td> Surgery</td>
+<td>Ash Split Venous Port</td>
+<td>0</td>
+<td>5</td>
+<td>3</td>
+<td><span class="null">null</span></td>
+<td>[]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>607</td>
+<td> Surgery</td>
+<td>Leaking ET tube</td>
+<td>1</td>
+<td>4</td>
+<td>2</td>
+<td>Reintubation due to leaking tube</td>
+<td>[Leaking endotracheal tube]</td>
+<td>[T58.199A]</td>
+</tr>
+<tr>
+<td>1158</td>
+<td> Surgery</td>
+<td>Blepharoplasty - Lower Lid</td>
+<td>1</td>
+<td>7</td>
+<td>0</td>
+<td><span class="null">null</span></td>
+<td>[Herniated periorbital fat]</td>
+<td>[H05.999]</td>
+</tr>
+<tr>
+<td>1168</td>
+<td> Surgery</td>
+<td>Blepharoplasty</td>
+<td>1</td>
+<td>6</td>
+<td>5</td>
+<td><span class="null">null</span></td>
+<td>[Redundant upper eyelid skin]</td>
+<td>[H02.401]</td>
+</tr>
+<tr>
+<td>721</td>
+<td> Surgery</td>
+<td>Hypergranulation - Consult</td>
+<td>4</td>
+<td>5</td>
+<td>2</td>
+<td>Non-healing surgical wound to the left posterior thigh.</td>
+<td>[Hypergranulation tissue of left posterior leg, Left posterior thigh traumatic injury with fractures, Non-healing surgical wound, History of Clostridioides difficile infection]</td>
+<td>[L89.90, S82.90, T81.89, Z87.891]</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><hr />
+<h2>Stage 3: ICD-10 Code Validation</h2>
+<p>Cross-reference Claude's ICD-10 suggestions against the CMS 2025 code table
+using exact lookup and rapidfuzz description matching.</p></div>
+<div class="cell cell-md"><h3>Download &amp; Load CMS ICD-10-CM 2025 Codes</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[11]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">1.2s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> urllib.request</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> zipfile</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> os</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> tempfile</span>
+
+<span style="color: #F8F8F2">icd10_url</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;https://www.cms.gov/files/zip/2025-code-descriptions-tabular-order.zip&quot;</span>
+<span style="color: #F8F8F2">tmp_dir</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">tempfile</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mkdtemp()</span>
+<span style="color: #F8F8F2">zip_path</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">path</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">join(tmp_dir,</span> <span style="color: #E6DB74">&quot;icd10cm_2025.zip&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Downloading CMS ICD-10-CM 2025 code table...&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">urllib</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">request</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">urlretrieve(icd10_url,</span> <span style="color: #F8F8F2">zip_path)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Downloaded to {</span><span style="color: #F8F8F2">zip_path</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Extract the txt file</span>
+<span style="color: #66D9EF">with</span> <span style="color: #F8F8F2">zipfile</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">ZipFile(zip_path,</span> <span style="color: #E6DB74">&quot;r&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">zf:</span>
+    <span style="color: #F8F8F2">txt_files</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[f</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">f</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">zf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">namelist()</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">f</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">endswith(</span><span style="color: #E6DB74">&quot;.txt&quot;</span><span style="color: #F8F8F2">)]</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Files in zip: {</span><span style="color: #F8F8F2">txt_files</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">zf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extractall(tmp_dir)</span>
+
+<span style="color: #959077"># Find the code descriptions file</span>
+<span style="color: #F8F8F2">txt_path</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">f</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">txt_files:</span>
+    <span style="color: #F8F8F2">full</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">path</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">join(tmp_dir,</span> <span style="color: #F8F8F2">f)</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">path</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">exists(full):</span>
+        <span style="color: #F8F8F2">txt_path</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">full</span>
+        <span style="color: #66D9EF">break</span>
+
+<span style="color: #66D9EF">assert</span> <span style="color: #F8F8F2">txt_path</span> <span style="color: #FF4689">is</span> <span style="color: #FF4689">not</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">f&quot;Could not find ICD-10 txt file in {</span><span style="color: #F8F8F2">txt_files</span><span style="color: #E6DB74">}&quot;</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Using: {</span><span style="color: #F8F8F2">txt_path</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Parse the CMS fixed-width format into a dict: code -&gt; description</span>
+<span style="color: #F8F8F2">icd10_codes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{}</span>
+<span style="color: #66D9EF">with</span> <span style="color: #F8F8F2">open(txt_path,</span> <span style="color: #F8F8F2">encoding</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;utf-8&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">f:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">line</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">f:</span>
+        <span style="color: #F8F8F2">line</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">rstrip(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">len(line)</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">8</span><span style="color: #F8F8F2">:</span>
+            <span style="color: #66D9EF">continue</span>
+        <span style="color: #F8F8F2">code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line[:</span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+        <span style="color: #F8F8F2">description</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line[</span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">:]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">code</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">description:</span>
+            <span style="color: #F8F8F2">icd10_codes[code</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(</span><span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">description</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Loaded {</span><span style="color: #F8F8F2">len(icd10_codes)</span><span style="color: #E6DB74">} ICD-10-CM codes&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Show a few examples</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">i,</span> <span style="color: #F8F8F2">(code,</span> <span style="color: #F8F8F2">desc)</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">enumerate(list(icd10_codes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items())[:</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">]):</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">code</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">desc</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Downloading CMS ICD-10-CM 2025 code table...
+Downloaded to /tmp/tmpmqhu31pm/icd10cm_2025.zip
+Files in zip: [&#x27;icd10cm_codes_2025.txt&#x27;, &#x27;icd10cm_codes_addenda_2025.txt&#x27;, &#x27;icd10cm_order_2025.txt&#x27;, &#x27;icd10cm_order_addenda_2025.txt&#x27;]
+Using: /tmp/tmpmqhu31pm/icd10cm_codes_2025.txt
+Loaded 74260 ICD-10-CM codes
+  A000: Cholera due to Vibrio cholerae 01, biovar cholerae
+  A001: Cholera due to Vibrio cholerae 01, biovar eltor
+  A009: Cholera, unspecified
+  A0100: Typhoid fever, unspecified
+  A0101: Typhoid meningitis</pre></div>
+</div>
+<div class="cell cell-md"><h3>Match Extracted Codes Against CMS Table</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[12]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">2.1s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> rapidfuzz </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">fuzz,</span> <span style="color: #F8F8F2">process</span>
+
+<span style="color: #F8F8F2">PARTIAL_MATCH_THRESHOLD</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">80</span>
+
+<span style="color: #F8F8F2">match_results</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">extraction</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extractions:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">dx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses:</span>
+        <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion</span> <span style="color: #FF4689">or</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(</span><span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;none&quot;</span>
+        <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #F8F8F2">matched_desc</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #F8F8F2">score</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0.0</span>
+
+        <span style="color: #959077"># Try exact code match</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">icd10_codes:</span>
+            <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;exact&quot;</span>
+            <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">suggested</span>
+            <span style="color: #F8F8F2">matched_desc</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">icd10_codes[suggested]</span>
+            <span style="color: #F8F8F2">score</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">100.0</span>
+        <span style="color: #959077"># Try fuzzy description matching</span>
+        <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">icd10_codes:</span>
+            <span style="color: #F8F8F2">result</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">process</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extractOne(</span>
+                <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+                <span style="color: #F8F8F2">icd10_codes,</span>
+                <span style="color: #F8F8F2">scorer</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">fuzz</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">WRatio,</span>
+                <span style="color: #F8F8F2">score_cutoff</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">PARTIAL_MATCH_THRESHOLD,</span>
+            <span style="color: #F8F8F2">)</span>
+            <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">result</span> <span style="color: #FF4689">is</span> <span style="color: #FF4689">not</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+                <span style="color: #F8F8F2">matched_desc,</span> <span style="color: #F8F8F2">score,</span> <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">result</span>
+                <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;partial&quot;</span>
+
+        <span style="color: #F8F8F2">match_results</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append(</span>
+            <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">note_id,</span>
+                <span style="color: #E6DB74">&quot;diagnosis&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+                <span style="color: #E6DB74">&quot;suggested_code&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion,</span>
+                <span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">match_type,</span>
+                <span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">matched_code,</span>
+                <span style="color: #E6DB74">&quot;matched_description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">matched_desc,</span>
+                <span style="color: #E6DB74">&quot;score&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">round(score,</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">),</span>
+            <span style="color: #F8F8F2">}</span>
+        <span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">match_df</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(match_results)</span>
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">match_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">empty:</span>
+    <span style="color: #F8F8F2">display(match_df)</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;No diagnoses with ICD-10 codes to validate.&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>note_id</th>
+<th>diagnosis</th>
+<th>suggested_code</th>
+<th>match_type</th>
+<th>matched_code</th>
+<th>matched_description</th>
+<th>score</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>874</td>
+<td>Odynophagia</td>
+<td>R13.13</td>
+<td>exact</td>
+<td>R1313</td>
+<td>Dysphagia, pharyngeal phase</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>874</td>
+<td>Dysphagia</td>
+<td>R13.10</td>
+<td>exact</td>
+<td>R1310</td>
+<td>Dysphagia, unspecified</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>874</td>
+<td>Gastroesophageal reflux disease</td>
+<td>K21.9</td>
+<td>exact</td>
+<td>K219</td>
+<td>Gastro-esophageal reflux disease without esophagitis</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>874</td>
+<td>Antral gastritis</td>
+<td>K29.30</td>
+<td>exact</td>
+<td>K2930</td>
+<td>Chronic superficial gastritis without bleeding</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>874</td>
+<td>Hiatal hernia</td>
+<td>K44.9</td>
+<td>exact</td>
+<td>K449</td>
+<td>Diaphragmatic hernia without obstruction or gangrene</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Right C5-C6 herniated nucleus pulposus</td>
+<td>M50.22</td>
+<td>partial</td>
+<td>I450</td>
+<td>Right fascicular block</td>
+<td>85.5</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Degenerative disk disease at C5-6</td>
+<td>M50.30</td>
+<td>exact</td>
+<td>M5030</td>
+<td>Other cervical disc degeneration, unspecified cervical region</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Right arm pain</td>
+<td>M79.3</td>
+<td>exact</td>
+<td>M793</td>
+<td>Panniculitis, unspecified</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Numbness in fingers</td>
+<td>R20.2</td>
+<td>exact</td>
+<td>R202</td>
+<td>Paresthesia of skin</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>607</td>
+<td>Leaking endotracheal tube</td>
+<td>T58.199A</td>
+<td>partial</td>
+<td>C5700</td>
+<td>Malignant neoplasm of unspecified fallopian tube</td>
+<td>85.5</td>
+</tr>
+<tr>
+<td>1158</td>
+<td>Herniated periorbital fat</td>
+<td>H05.999</td>
+<td>partial</td>
+<td>L97102</td>
+<td>Non-pressure chronic ulcer of unspecified thigh with fat layer exposed</td>
+<td>85.5</td>
+</tr>
+<tr>
+<td>1168</td>
+<td>Redundant upper eyelid skin</td>
+<td>H02.401</td>
+<td>exact</td>
+<td>H02401</td>
+<td>Unspecified ptosis of right eyelid</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>721</td>
+<td>Hypergranulation tissue of left posterior leg</td>
+<td>L89.90</td>
+<td>exact</td>
+<td>L8990</td>
+<td>Pressure ulcer of unspecified site, unspecified stage</td>
+<td>100.0</td>
+</tr>
+<tr>
+<td>721</td>
+<td>Left posterior thigh traumatic injury with fractures</td>
+<td>S82.90</td>
+<td>partial</td>
+<td>A380</td>
+<td>Scarlet fever with otitis media</td>
+<td>85.5</td>
+</tr>
+<tr>
+<td>721</td>
+<td>Non-healing surgical wound</td>
+<td>T81.89</td>
+<td>partial</td>
+<td>H0550</td>
+<td>Retained (old) foreign body following penetrating wound of unspecified orbit</td>
+<td>85.5</td>
+</tr>
+<tr>
+<td>721</td>
+<td>History of Clostridioides difficile infection</td>
+<td>Z87.891</td>
+<td>exact</td>
+<td>Z87891</td>
+<td>Personal history of nicotine dependence</td>
+<td>100.0</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><h3>Extraction Quality Summary</h3></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[13]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">730ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">total_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(results)</span>
+<span style="color: #F8F8F2">total_diagnoses</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_diagnoses&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+<span style="color: #F8F8F2">total_procedures</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_procedures&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+<span style="color: #F8F8F2">total_medications</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_medications&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">60</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;EXTRACTION QUALITY SUMMARY&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">60</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Notes processed:      {</span><span style="color: #F8F8F2">total_notes</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Total diagnoses:      {</span><span style="color: #F8F8F2">total_diagnoses</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Total procedures:     {</span><span style="color: #F8F8F2">total_procedures</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Total medications:    {</span><span style="color: #F8F8F2">total_medications</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print()</span>
+
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">match_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">empty:</span>
+    <span style="color: #F8F8F2">total_codes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(match_df)</span>
+    <span style="color: #F8F8F2">exact</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(match_df[match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;exact&quot;</span><span style="color: #F8F8F2">])</span>
+    <span style="color: #F8F8F2">partial</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(match_df[match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;partial&quot;</span><span style="color: #F8F8F2">])</span>
+    <span style="color: #F8F8F2">none_</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(match_df[match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;none&quot;</span><span style="color: #F8F8F2">])</span>
+
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;ICD-10 Code Validation:&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Total codes checked: {</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Exact matches:       {</span><span style="color: #F8F8F2">exact</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">exact</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">:.1%})&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Partial matches:     {</span><span style="color: #F8F8F2">partial</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">partial</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">:.1%})&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  No match:            {</span><span style="color: #F8F8F2">none_</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">none_</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">:.1%})&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Any match rate:      {</span><span style="color: #F8F8F2">(exact</span><span style="color: #FF4689">+</span><span style="color: #F8F8F2">partial)</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">:.1%}&quot;</span><span style="color: #F8F8F2">)</span>
+
+    <span style="color: #F8F8F2">exact_pct</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">exact</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_codes</span><span style="color: #E6DB74">:.0%}&quot;</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">total_codes</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">0</span> <span style="color: #66D9EF">else</span> <span style="color: #E6DB74">&quot;N/A&quot;</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">exact_pct</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;N/A&quot;</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;ICD-10 Code Validation: No codes to validate.&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Summary table as DataFrame</span>
+<span style="color: #F8F8F2">summary_data</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Notes processed&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(total_notes)},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Total diagnoses&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(total_diagnoses)},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Total procedures&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(total_procedures)},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Total medications&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(total_medications)},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Avg diagnoses/note&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">total_diagnoses</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_notes</span><span style="color: #E6DB74">:.1f}&quot;</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">total_notes</span> <span style="color: #66D9EF">else</span> <span style="color: #E6DB74">&quot;0&quot;</span><span style="color: #F8F8F2">},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Avg procedures/note&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">total_procedures</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_notes</span><span style="color: #E6DB74">:.1f}&quot;</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">total_notes</span> <span style="color: #66D9EF">else</span> <span style="color: #E6DB74">&quot;0&quot;</span><span style="color: #F8F8F2">},</span>
+    <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;Metric&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Avg medications/note&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Value&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">total_medications</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">total_notes</span><span style="color: #E6DB74">:.1f}&quot;</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">total_notes</span> <span style="color: #66D9EF">else</span> <span style="color: #E6DB74">&quot;0&quot;</span><span style="color: #F8F8F2">},</span>
+<span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">display(pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(summary_data))</span>
+</pre></div>
+<div class="cell-output"><pre>============================================================
+EXTRACTION QUALITY SUMMARY
+============================================================
+Notes processed:      10
+Total diagnoses:      16
+Total procedures:     46
+Total medications:    15
+
+ICD-10 Code Validation:
+  Total codes checked: 16
+  Exact matches:       11 (68.8%)
+  Partial matches:     5 (31.2%)
+  No match:            0 (0.0%)
+  Any match rate:      100.0%</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>Metric</th>
+<th>Value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Notes processed</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Total diagnoses</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Total procedures</td>
+<td>46</td>
+</tr>
+<tr>
+<td>Total medications</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Avg diagnoses/note</td>
+<td>1.6</td>
+</tr>
+<tr>
+<td>Avg procedures/note</td>
+<td>4.6</td>
+</tr>
+<tr>
+<td>Avg medications/note</td>
+<td>1.5</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><hr />
+<h2>Pipeline Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Status</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PySpark Ingestion</td>
+<td>Complete</td>
+<td>Delta table with cleaned &amp; deduplicated notes</td>
+</tr>
+<tr>
+<td>Claude Extraction</td>
+<td>Complete</td>
+<td>10 notes extracted (diagnoses, procedures, medications)</td>
+</tr>
+<tr>
+<td>ICD-10 Validation</td>
+<td>Complete</td>
+<td>Code match rates shown above</td>
+</tr>
+<tr>
+<td>HITL Review</td>
+<td>Streamlit dashboard (local)</td>
+<td>Approve/reject interface</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>MIMIC-IV ground truth (local)</td>
+<td>F1: Dx=81.5%, Proc=55.8%, Rx=47.5%</td>
+</tr>
+</tbody>
+</table>
+<h3>Next Steps</h3>
+<ul>
+<li><strong>Scale extraction</strong>: Use the Anthropic Batch API to process all notes at lower cost.</li>
+<li><strong>HITL review</strong>: Launch <code>streamlit run streamlit_app/app.py</code> locally to approve/reject extractions.</li>
+<li><strong>Evaluation</strong>: Run <code>python -m clinical_pipeline.evaluation.run_eval</code> against MIMIC-IV ground truth.</li>
+</ul></div>
+</div>
+</body>
+</html>
