@@ -2,6 +2,7 @@
 
 import json
 import os
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -21,7 +22,7 @@ DATABRICKS_HOST = os.environ.get("DATABRICKS_HOST", _env_vars.get("DATABRICKS_HO
 DATABRICKS_TOKEN = os.environ.get("DATABRICKS_TOKEN", _env_vars.get("DATABRICKS_TOKEN", ""))
 DATABRICKS_WAREHOUSE_ID = os.environ.get("DATABRICKS_WAREHOUSE_ID", _env_vars.get("DATABRICKS_WAREHOUSE_ID", ""))
 
-DELTA_TABLE = "delta.`/Volumes/workspace/default/raw-data/mtsamples_clean`"
+DELTA_TABLE = 'delta.`/Volumes/workspace/default/raw-data/mtsamples_clean`'
 
 
 def is_configured() -> bool:
@@ -29,23 +30,45 @@ def is_configured() -> bool:
 
 
 def _execute_sql(sql: str) -> dict:
-    """Execute a SQL statement via the Databricks SQL Statement API."""
+    """Execute a SQL statement via the Databricks SQL Statement API with polling."""
     url = f"{DATABRICKS_HOST}/api/2.0/sql/statements"
+    headers = {
+        "Authorization": f"Bearer {DATABRICKS_TOKEN}",
+        "Content-Type": "application/json",
+    }
+
     resp = requests.post(
         url,
-        headers={
-            "Authorization": f"Bearer {DATABRICKS_TOKEN}",
-            "Content-Type": "application/json",
-        },
+        headers=headers,
         json={
             "warehouse_id": DATABRICKS_WAREHOUSE_ID,
             "statement": sql,
-            "wait_timeout": "30s",
+            "wait_timeout": "50s",
         },
         timeout=60,
     )
     resp.raise_for_status()
-    return resp.json()
+    result = resp.json()
+
+    state = result.get("status", {}).get("state")
+
+    # Poll if still running (warehouse may be cold-starting)
+    if state in ("PENDING", "RUNNING"):
+        stmt_id = result["statement_id"]
+        for _ in range(12):  # Up to 60s of polling
+            time.sleep(5)
+            poll = requests.get(
+                f"{DATABRICKS_HOST}/api/2.0/sql/statements/{stmt_id}",
+                headers={"Authorization": f"Bearer {DATABRICKS_TOKEN}"},
+                timeout=30,
+            )
+            poll.raise_for_status()
+            result = poll.json()
+            state = result.get("status", {}).get("state")
+            if state in ("SUCCEEDED", "FAILED", "CANCELED", "CLOSED"):
+                break
+
+    return result
 
 
 @st.cache_data(ttl=60)
@@ -53,8 +76,9 @@ def query_databricks(sql: str) -> pd.DataFrame:
     """Execute SQL and return a DataFrame."""
     result = _execute_sql(sql)
 
-    if result.get("status", {}).get("state") != "SUCCEEDED":
-        error = result.get("status", {}).get("error", {}).get("message", "Unknown error")
+    state = result.get("status", {}).get("state")
+    if state != "SUCCEEDED":
+        error = result.get("status", {}).get("error", {}).get("message", f"Query state: {state}")
         raise RuntimeError(f"Databricks query failed: {error}")
 
     manifest = result.get("manifest", {})

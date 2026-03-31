@@ -8,6 +8,8 @@ import streamlit as st
 from db import execute, query_df
 from tooltips import TOOLTIP_CSS, tt
 
+from clinical_pipeline.feedback.feedback_store import FeedbackItem, FeedbackStore
+
 # Inject tooltip CSS once
 st.markdown(TOOLTIP_CSS, unsafe_allow_html=True)
 
@@ -40,6 +42,38 @@ def _load_icd10_descriptions() -> dict[str, str]:
 
 
 _icd10_descriptions = _load_icd10_descriptions()
+
+# ---------------------------------------------------------------------------
+# Feedback store
+# ---------------------------------------------------------------------------
+FEEDBACK_PATH = (
+    Path(__file__).resolve().parent.parent.parent
+    / "data" / "feedback" / "corrections.json"
+)
+_feedback_store = FeedbackStore(FEEDBACK_PATH)
+
+
+def _record_feedback(
+    note_id: str,
+    entity_type: str,
+    action: str,
+    original: dict,
+    corrected: dict | None,
+    snippet: str,
+) -> None:
+    """Write a feedback item and show confirmation."""
+    item = FeedbackItem(
+        note_id=str(note_id),
+        entity_type=entity_type,
+        action=action,
+        original_value=original,
+        corrected_value=corrected,
+        note_snippet=snippet[:500],
+        timestamp=datetime.now(UTC).isoformat(),
+        reviewer="dashboard_user",
+    )
+    _feedback_store.add(item)
+
 
 st.title("Note Detail")
 st.caption(
@@ -254,10 +288,12 @@ def _icd10_badge(code: str) -> str:
 
 
 with right:
+    snippet = (transcription or "")[:500]
+
     # --- Diagnoses ---
     st.subheader(f"Diagnoses ({len(dx_df)})")
     if not dx_df.empty:
-        for _, d in dx_df.iterrows():
+        for idx, d in dx_df.iterrows():
             icd = d["icd10_matched"] or d["icd10_suggested"] or "N/A"
             icd_html = _icd10_badge(icd) if icd != "N/A" else "<code>N/A</code>"
             score_text = ""
@@ -270,16 +306,52 @@ with right:
                 f"<small style='color:#777'>Evidence: \"{d['evidence_span']}\"</small>",
                 unsafe_allow_html=True,
             )
+            btn_col1, btn_col2 = st.columns(2)
+            with btn_col1:
+                with st.popover("Edit", use_container_width=True):
+                    new_name = st.text_input("Name", value=d["name"], key=f"dx_name_{idx}")
+                    icd_val = icd if icd != "N/A" else ""
+                    new_icd = st.text_input(
+                        "ICD-10", value=icd_val, key=f"dx_icd_{idx}"
+                    )
+                    if st.button("Save", key=f"dx_save_{idx}"):
+                        original = {
+                            "name": d["name"],
+                            "icd10_suggestion": icd,
+                        }
+                        corrected = {
+                            "name": new_name,
+                            "icd10_suggestion": new_icd,
+                        }
+                        _record_feedback(
+                            note_id, "diagnosis", "corrected",
+                            original, corrected, snippet,
+                        )
+                        st.success("Feedback captured")
+            with btn_col2:
+                if st.button("Remove", key=f"dx_rm_{idx}", use_container_width=True):
+                    original = {"name": d["name"], "icd10_suggestion": icd}
+                    _record_feedback(note_id, "diagnosis", "removed", original, None, snippet)
+                    st.success("Feedback captured")
             st.markdown("")
     else:
         st.caption("No diagnoses extracted.")
+
+    with st.expander("Add Missing Diagnosis"):
+        add_dx_name = st.text_input("Diagnosis name", key="add_dx_name")
+        add_dx_icd = st.text_input("ICD-10 code", key="add_dx_icd")
+        if st.button("Add", key="add_dx_btn"):
+            if add_dx_name:
+                corrected = {"name": add_dx_name, "icd10_suggestion": add_dx_icd}
+                _record_feedback(note_id, "diagnosis", "added", {}, corrected, snippet)
+                st.success("Feedback captured")
 
     st.divider()
 
     # --- Procedures ---
     st.subheader(f"Procedures ({len(px_df)})")
     if not px_df.empty:
-        for _, p in px_df.iterrows():
+        for idx, p in px_df.iterrows():
             cpt = p["cpt_suggestion"] or "N/A"
             st.markdown(
                 f"**{p['name']}** &mdash; CPT `{cpt}` "
@@ -287,16 +359,52 @@ with right:
                 f"<small style='color:#777'>Evidence: \"{p['evidence_span']}\"</small>",
                 unsafe_allow_html=True,
             )
+            btn_col1, btn_col2 = st.columns(2)
+            with btn_col1:
+                with st.popover("Edit", use_container_width=True):
+                    new_px_name = st.text_input("Name", value=p["name"], key=f"px_name_{idx}")
+                    cpt_val = cpt if cpt != "N/A" else ""
+                    new_cpt = st.text_input(
+                        "CPT", value=cpt_val, key=f"px_cpt_{idx}"
+                    )
+                    if st.button("Save", key=f"px_save_{idx}"):
+                        original = {
+                            "name": p["name"],
+                            "cpt_suggestion": cpt,
+                        }
+                        corrected = {
+                            "name": new_px_name,
+                            "cpt_suggestion": new_cpt,
+                        }
+                        _record_feedback(
+                            note_id, "procedure", "corrected",
+                            original, corrected, snippet,
+                        )
+                        st.success("Feedback captured")
+            with btn_col2:
+                if st.button("Remove", key=f"px_rm_{idx}", use_container_width=True):
+                    original = {"name": p["name"], "cpt_suggestion": cpt}
+                    _record_feedback(note_id, "procedure", "removed", original, None, snippet)
+                    st.success("Feedback captured")
             st.markdown("")
     else:
         st.caption("No procedures extracted.")
+
+    with st.expander("Add Missing Procedure"):
+        add_px_name = st.text_input("Procedure name", key="add_px_name")
+        add_px_cpt = st.text_input("CPT code", key="add_px_cpt")
+        if st.button("Add", key="add_px_btn"):
+            if add_px_name:
+                corrected = {"name": add_px_name, "cpt_suggestion": add_px_cpt}
+                _record_feedback(note_id, "procedure", "added", {}, corrected, snippet)
+                st.success("Feedback captured")
 
     st.divider()
 
     # --- Medications ---
     st.subheader(f"Medications ({len(rx_df)})")
     if not rx_df.empty:
-        for _, m in rx_df.iterrows():
+        for idx, m in rx_df.iterrows():
             details = " | ".join(
                 filter(None, [m["dosage"], m["frequency"], m["route"]])
             )
@@ -306,9 +414,52 @@ with right:
                 f"<small style='color:#777'>Evidence: \"{m['evidence_span']}\"</small>",
                 unsafe_allow_html=True,
             )
+            btn_col1, btn_col2 = st.columns(2)
+            with btn_col1:
+                with st.popover("Edit", use_container_width=True):
+                    new_rx_name = st.text_input("Name", value=m["name"], key=f"rx_name_{idx}")
+                    new_dosage = st.text_input(
+                        "Dosage", value=m["dosage"] or "",
+                        key=f"rx_dose_{idx}",
+                    )
+                    new_route = st.text_input(
+                        "Route", value=m["route"] or "",
+                        key=f"rx_route_{idx}",
+                    )
+                    if st.button("Save", key=f"rx_save_{idx}"):
+                        original = {
+                            "name": m["name"],
+                            "dosage": m["dosage"],
+                            "route": m["route"],
+                        }
+                        corrected = {
+                            "name": new_rx_name,
+                            "dosage": new_dosage,
+                            "route": new_route,
+                        }
+                        _record_feedback(
+                            note_id, "medication", "corrected",
+                            original, corrected, snippet,
+                        )
+                        st.success("Feedback captured")
+            with btn_col2:
+                if st.button("Remove", key=f"rx_rm_{idx}", use_container_width=True):
+                    original = {"name": m["name"], "dosage": m["dosage"], "route": m["route"]}
+                    _record_feedback(note_id, "medication", "removed", original, None, snippet)
+                    st.success("Feedback captured")
             st.markdown("")
     else:
         st.caption("No medications extracted.")
+
+    with st.expander("Add Missing Medication"):
+        add_rx_name = st.text_input("Medication name", key="add_rx_name")
+        add_rx_dose = st.text_input("Dosage", key="add_rx_dose")
+        add_rx_route = st.text_input("Route", key="add_rx_route")
+        if st.button("Add", key="add_rx_btn"):
+            if add_rx_name:
+                corrected = {"name": add_rx_name, "dosage": add_rx_dose, "route": add_rx_route}
+                _record_feedback(note_id, "medication", "added", {}, corrected, snippet)
+                st.success("Feedback captured")
 
 # ---------------------------------------------------------------------------
 # HITL Review controls

@@ -48,9 +48,20 @@ imaging = st.Page(
 notebooks = st.Page(
     "pages/10_notebooks.py", title="Notebooks", icon=":material/code:"
 )
+databricks_live = st.Page(
+    "pages/11_databricks_live.py", title="Databricks Live", icon=":material/cloud:"
+)
+feedback = st.Page(
+    "pages/12_feedback.py", title="Feedback", icon=":material/rate_review:"
+)
+optimization = st.Page(
+    "pages/13_optimization.py", title="Optimization", icon=":material/auto_fix_high:"
+)
 
 pg = st.navigation([
-    overview, dashboard, review_queue, note_detail, analytics, failed, evaluation, experiments, documentation, imaging, notebooks,
+    overview, dashboard, review_queue, note_detail, analytics, failed,
+    evaluation, experiments, documentation, imaging, notebooks,
+    databricks_live, feedback, optimization,
 ])
 
 st.sidebar.markdown("---")
