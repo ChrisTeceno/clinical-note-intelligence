@@ -14,53 +14,127 @@ st.title("Medical Imaging Analysis")
 
 st.info(
     "**About this module:** Chest X-ray images from the NIH ChestX-ray14 sample dataset "
-    "are classified using a DenseNet-121 model (TorchXRayVision) pretrained on NIH data. "
-    "Predictions for 14 pathology classes are evaluated against the dataset's ground-truth "
-    "labels.",
+    "are classified using TorchXRayVision models pretrained on various clinical datasets. "
+    "Predictions for up to 18 pathology classes are evaluated against ground-truth labels. "
+    "Use the model selector to compare performance across architectures and training data.",
     icon=":material/image:",
 )
 
 # ---------------------------------------------------------------------------
-# Load results
+# Discover available model results
 # ---------------------------------------------------------------------------
 DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "imaging"
-RESULTS_PATH = DATA_DIR / "results" / "evaluation_results.json"
+RESULTS_DIR = DATA_DIR / "results"
 IMAGES_DIR = DATA_DIR / "sample" / "images"
 
-# Fallback if images are in a flat structure
 if not IMAGES_DIR.exists():
     IMAGES_DIR = DATA_DIR / "images"
 
-if not RESULTS_PATH.exists():
+# Find all model result directories
+available_models: dict[str, Path] = {}
+if RESULTS_DIR.exists():
+    for d in sorted(RESULTS_DIR.iterdir()):
+        if d.is_dir() and (d / "evaluation_results.json").exists():
+            available_models[d.name] = d / "evaluation_results.json"
+
+# Also check the root results file
+root_results = RESULTS_DIR / "evaluation_results.json"
+if root_results.exists() and not available_models:
+    available_models["default"] = root_results
+
+if not available_models:
     st.warning(
         "No imaging results found. Run the imaging pipeline first:\n\n"
-        "```\n"
-        "PYTHONPATH=src python -m clinical_pipeline.imaging.run_imaging\n"
-        "```"
+        "```\nPYTHONPATH=src python -m clinical_pipeline.imaging.run_imaging\n```"
     )
     st.stop()
 
-with open(RESULTS_PATH) as f:
+# ---------------------------------------------------------------------------
+# Model selector
+# ---------------------------------------------------------------------------
+MODEL_LABELS = {
+    "densenet121-res224-all": "DenseNet-121 All Datasets (18 pathologies)",
+    "densenet121-res224-nih": "DenseNet-121 NIH (14 pathologies)",
+    "densenet121-res224-chex": "DenseNet-121 CheXpert (11 pathologies)",
+    "densenet121-res224-mimic_nb": "DenseNet-121 MIMIC NoBrainer (11 pathologies)",
+    "densenet121-res224-mimic_ch": "DenseNet-121 MIMIC CheXpert (11 pathologies)",
+    "densenet121-res224-pc": "DenseNet-121 PadChest (15 pathologies)",
+    "densenet121-res224-rsna": "DenseNet-121 RSNA (2 pathologies)",
+    "resnet50-res512-all": "ResNet-50 All Datasets (18 pathologies)",
+}
+
+model_keys = list(available_models.keys())
+selected_model = st.selectbox(
+    "Select Model",
+    options=model_keys,
+    format_func=lambda k: MODEL_LABELS.get(k, k),
+)
+
+# ---------------------------------------------------------------------------
+# Load selected model results
+# ---------------------------------------------------------------------------
+with open(available_models[selected_model]) as f:
     results = json.load(f)
 
 per_class = results.get("per_class", {})
 macro = results.get("macro", {})
 micro = results.get("micro", {})
 n_images = results.get("n_images", 0)
-model_name = results.get("model", "unknown")
+model_name = results.get("model", selected_model)
 per_image = results.get("per_image", [])
 threshold = results.get("threshold", 0.5)
 
 # ---------------------------------------------------------------------------
-# Overview KPIs
+# Model comparison summary (always visible)
 # ---------------------------------------------------------------------------
-st.subheader("Overview")
+st.subheader("Model Comparison")
 
-kpi_cols = st.columns(4)
-kpi_cols[0].metric("Images Processed", f"{n_images:,}")
-kpi_cols[1].metric("Model", model_name.split("-")[0].title())
-kpi_cols[2].metric("Macro F1", f"{macro.get('f1', 0):.1%}")
-kpi_cols[3].metric("Micro F1", f"{micro.get('f1', 0):.1%}")
+comparison_rows = []
+for mk, mp in available_models.items():
+    with open(mp) as f:
+        mr = json.load(f)
+    mc_per_class = mr.get("per_class", {})
+    aucs = [v["auc"] for v in mc_per_class.values() if v.get("auc") is not None]
+    mean_auc = sum(aucs) / len(aucs) if aucs else 0
+    comparison_rows.append({
+        "Model": MODEL_LABELS.get(mk, mk),
+        "Images": mr.get("n_images", 0),
+        "Pathologies": len(mc_per_class),
+        "Mean AUC": mean_auc,
+        "Macro F1": mr.get("macro", {}).get("f1", 0),
+        "Macro Precision": mr.get("macro", {}).get("precision", 0),
+        "Macro Recall": mr.get("macro", {}).get("recall", 0),
+    })
+
+comp_df = pd.DataFrame(comparison_rows).sort_values("Mean AUC", ascending=False)
+st.dataframe(
+    comp_df,
+    column_config={
+        "Mean AUC": st.column_config.ProgressColumn("Mean AUC", min_value=0, max_value=1, format="%.3f"),
+        "Macro F1": st.column_config.ProgressColumn("Macro F1", min_value=0, max_value=1, format="%.3f"),
+        "Macro Precision": st.column_config.NumberColumn(format="%.3f"),
+        "Macro Recall": st.column_config.NumberColumn(format="%.3f"),
+    },
+    hide_index=True,
+    use_container_width=True,
+)
+
+st.divider()
+
+# ---------------------------------------------------------------------------
+# Overview KPIs for selected model
+# ---------------------------------------------------------------------------
+st.subheader(f"Selected: {MODEL_LABELS.get(selected_model, selected_model)}")
+
+aucs = [v["auc"] for v in per_class.values() if v.get("auc") is not None]
+mean_auc = sum(aucs) / len(aucs) if aucs else 0
+
+kpi_cols = st.columns(5)
+kpi_cols[0].metric("Images", f"{n_images:,}")
+kpi_cols[1].metric("Pathologies", len(per_class))
+kpi_cols[2].metric("Mean AUC", f"{mean_auc:.3f}")
+kpi_cols[3].metric("Macro F1", f"{macro.get('f1', 0):.1%}")
+kpi_cols[4].metric("Macro Precision", f"{macro.get('precision', 0):.1%}")
 
 st.divider()
 
@@ -116,7 +190,7 @@ for pathology, metrics in per_class.items():
     })
 
 if table_rows:
-    table_df = pd.DataFrame(table_rows).sort_values("F1", ascending=False)
+    table_df = pd.DataFrame(table_rows).sort_values("AUC", ascending=False)
     st.dataframe(
         table_df,
         column_config={
@@ -141,10 +215,9 @@ st.caption(
 )
 
 if not per_image:
-    st.info("No per-image data available.")
+    st.info("No per-image data available for this model.")
     st.stop()
 
-# Build a display-friendly list
 image_options = [item["image"] for item in per_image]
 selected_idx = st.selectbox(
     "Select image",
@@ -175,11 +248,8 @@ with pred_col:
 
     st.markdown("**Predicted Pathologies**")
 
-    # Sort predictions by probability descending
     sorted_preds = sorted(preds.items(), key=lambda x: x[1], reverse=True)
-
     gt_set = set(gt_labels)
-    predicted_positive = {name for name, prob in sorted_preds if prob >= threshold}
 
     for name, prob in sorted_preds:
         is_predicted = prob >= threshold
@@ -195,7 +265,7 @@ with pred_col:
             color = "orange"
             tag = "FN"
         else:
-            continue  # True negatives — skip for brevity
+            continue
 
         bar_width = int(prob * 100)
         st.markdown(
@@ -205,7 +275,6 @@ with pred_col:
             unsafe_allow_html=True,
         )
 
-    # Show any true negatives with high probability as a note
     high_tn = [
         (name, prob) for name, prob in sorted_preds
         if prob < threshold and name not in gt_set and prob > 0.3
@@ -218,7 +287,7 @@ with pred_col:
 st.divider()
 
 # ---------------------------------------------------------------------------
-# Confusion examples: highest-confidence FP and FN
+# Confusion examples
 # ---------------------------------------------------------------------------
 st.subheader("Confusion Examples")
 st.caption("Highest-confidence false positives and false negatives across all evaluated images.")
@@ -247,20 +316,11 @@ fp_col, fn_col = st.columns(2)
 with fp_col:
     st.markdown("**False Positives** (predicted but not in ground truth)")
     if fp_examples:
-        fp_df = (
-            pd.DataFrame(fp_examples)
-            .sort_values("Confidence", ascending=False)
-            .head(20)
-        )
+        fp_df = pd.DataFrame(fp_examples).sort_values("Confidence", ascending=False).head(20)
         st.dataframe(
             fp_df,
-            column_config={
-                "Confidence": st.column_config.ProgressColumn(
-                    min_value=0, max_value=1, format="%.3f"
-                ),
-            },
-            hide_index=True,
-            use_container_width=True,
+            column_config={"Confidence": st.column_config.ProgressColumn(min_value=0, max_value=1, format="%.3f")},
+            hide_index=True, use_container_width=True,
         )
     else:
         st.success("No false positives found.")
@@ -268,20 +328,11 @@ with fp_col:
 with fn_col:
     st.markdown("**False Negatives** (missed ground-truth labels)")
     if fn_examples:
-        fn_df = (
-            pd.DataFrame(fn_examples)
-            .sort_values("Confidence", ascending=False)
-            .head(20)
-        )
+        fn_df = pd.DataFrame(fn_examples).sort_values("Confidence", ascending=False).head(20)
         st.dataframe(
             fn_df,
-            column_config={
-                "Confidence": st.column_config.ProgressColumn(
-                    min_value=0, max_value=1, format="%.3f"
-                ),
-            },
-            hide_index=True,
-            use_container_width=True,
+            column_config={"Confidence": st.column_config.ProgressColumn(min_value=0, max_value=1, format="%.3f")},
+            hide_index=True, use_container_width=True,
         )
     else:
         st.success("No false negatives found.")
