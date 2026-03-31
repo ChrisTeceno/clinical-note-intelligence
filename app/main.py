@@ -15,8 +15,11 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+overview = st.Page(
+    "pages/00_overview.py", title="Overview", icon=":material/home:", default=True
+)
 dashboard = st.Page(
-    "pages/01_dashboard.py", title="Dashboard", icon=":material/dashboard:", default=True
+    "pages/01_dashboard.py", title="Dashboard", icon=":material/dashboard:"
 )
 review_queue = st.Page(
     "pages/02_review_queue.py", title="Review Queue", icon=":material/checklist:"
@@ -47,7 +50,7 @@ notebooks = st.Page(
 )
 
 pg = st.navigation([
-    dashboard, review_queue, note_detail, analytics, failed, evaluation, experiments, documentation, imaging, notebooks,
+    overview, dashboard, review_queue, note_detail, analytics, failed, evaluation, experiments, documentation, imaging, notebooks,
 ])
 
 st.sidebar.markdown("---")
