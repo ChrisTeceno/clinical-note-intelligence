@@ -61,6 +61,7 @@ MODEL_LABELS = {
     "densenet121-res224-pc": "DenseNet-121 PadChest (15 pathologies)",
     "densenet121-res224-rsna": "DenseNet-121 RSNA (2 pathologies)",
     "resnet50-res512-all": "ResNet-50 All Datasets (18 pathologies)",
+    "claude-haiku-vision": "Claude Haiku 4.5 Vision (14 pathologies)",
 }
 
 model_keys = list(available_models.keys())
