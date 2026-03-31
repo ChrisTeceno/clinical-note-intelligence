@@ -1,5 +1,6 @@
 # Databricks notebook source
 
+
 # COMMAND ----------
 
 # MAGIC %md
@@ -8,7 +9,7 @@
 
 # COMMAND ----------
 
-# MAGIC %pip install anthropic rapidfuzz "pydantic>=2.0"
+# MAGIC %pip install anthropic rapidfuzz pydantic>=2.0
 # MAGIC dbutils.library.restartPython()
 
 # COMMAND ----------

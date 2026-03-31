@@ -1,0 +1,16 @@
+[
+  {
+    "name": "03_full_pipeline_databricks",
+    "path": "/Users/chris.teceno@gmail.com/03_full_pipeline_databricks",
+    "source_file": "03_full_pipeline_databricks.py",
+    "html_file": "03_full_pipeline_databricks.html",
+    "language": "PYTHON"
+  },
+  {
+    "name": "02_spark_ingestion_databricks",
+    "path": "/Users/chris.teceno@gmail.com/02_spark_ingestion_databricks",
+    "source_file": "02_spark_ingestion_databricks.py",
+    "html_file": "02_spark_ingestion_databricks.html",
+    "language": "PYTHON"
+  }
+]

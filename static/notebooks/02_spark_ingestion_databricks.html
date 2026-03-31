@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>02_spark_ingestion_databricks — Databricks Notebook</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1b1b2f;
+  color: #e0e0e8;
+  line-height: 1.6;
+}
+.nb-header {
+  background: #2d2d44;
+  border-bottom: 2px solid #3a3a55;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nb-header .logo {
+  font-weight: 800;
+  color: #ff6f61;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nb-header .sep { color: #555; font-size: 18px; }
+.nb-header .name { color: #ccc; font-size: 14px; font-weight: 500; }
+.nb-header .badge {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+.nb-header .cell-count {
+  color: #888;
+  font-size: 12px;
+}
+.nb-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+/* Markdown cells */
+.cell-md {
+  padding: 20px 28px;
+  margin-bottom: 8px;
+}
+.cell-md h1 { font-size: 26px; font-weight: 700; color: #fff; margin: 16px 0 10px; }
+.cell-md h2 { font-size: 21px; font-weight: 600; color: #ddd; margin: 20px 0 8px; border-bottom: 1px solid #3a3a55; padding-bottom: 6px; }
+.cell-md h3 { font-size: 17px; font-weight: 600; color: #ccc; margin: 14px 0 6px; }
+.cell-md p { color: #bbb; margin-bottom: 8px; }
+.cell-md ul, .cell-md ol { color: #bbb; margin-left: 24px; margin-bottom: 8px; }
+.cell-md li { margin-bottom: 3px; }
+.cell-md strong { color: #e0e0e8; }
+.cell-md code { background: #2d2d44; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #e8b86d; }
+.cell-md a { color: #64b5f6; }
+.cell-md hr { border: none; border-top: 1px solid #3a3a55; margin: 16px 0; }
+.cell-md table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.cell-md th { background: #2d2d44; color: #aaa; text-align: left; padding: 8px 14px; border: 1px solid #3a3a55; font-size: 13px; font-weight: 600; }
+.cell-md td { padding: 8px 14px; border: 1px solid #3a3a55; color: #ccc; font-size: 13px; }
+/* Code cells */
+.cell-code {
+  background: #1e1e32;
+  border: 1px solid #3a3a55;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.cell-toolbar {
+  background: #262640;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #3a3a55;
+  font-size: 12px;
+}
+.cell-num {
+  color: #666;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  min-width: 32px;
+}
+.cell-lang {
+  color: #888;
+  font-size: 11px;
+  margin-left: auto;
+  background: #2d2d44;
+  padding: 2px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.cell-duration { color: #888; font-size: 11px; }
+.status-ok { color: #2ecc71; font-size: 14px; }
+.status-err { color: #e74c3c; font-size: 14px; }
+.status-none { color: #555; }
+.cell-source {
+  padding: 0;
+}
+.cell-source pre {
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: transparent;
+  white-space: pre;
+  tab-size: 4;
+}
+/* Output cells */
+.cell-output {
+  border-top: 1px solid #3a3a55;
+  background: #191930;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.cell-output pre {
+  padding: 12px 20px;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aaa;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.cell-output-table {
+  padding: 0;
+  overflow-x: auto;
+}
+.cell-output-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+.cell-output-table th {
+  background: #232340;
+  color: #aaa;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid #3a3a55;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+.cell-output-table td {
+  padding: 6px 12px;
+  border: 1px solid #2d2d44;
+  color: #ccc;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cell-output-table tr:nth-child(even) td { background: #1d1d35; }
+.cell-output-table tr:hover td { background: #252545; }
+.cell-output-table .truncated { color: #666; font-style: italic; text-align: center; }
+.cell-output-table .null { color: #666; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="nb-header">
+  <span class="logo">Databricks</span>
+  <span class="sep">/</span>
+  <span class="name">02_spark_ingestion_databricks</span>
+  <span class="cell-count">21 cells</span>
+  <span class="badge">Serverless</span>
+</div>
+<div class="nb-container">
+<div class="cell cell-md"><h1>Clinical Note Intelligence -- PySpark Ingestion Pipeline</h1>
+<p>Pipeline that ingests MTSamples clinical transcriptions, cleans text,
+deduplicates, runs quality checks, and writes to partitioned Delta tables.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[1]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">127ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #959077"># Configuration</span>
+<span style="color: #F8F8F2">RAW_DATA_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/raw-data/mtsamples.csv&quot;</span>
+<span style="color: #F8F8F2">OUTPUT_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/raw-data/mtsamples_clean&quot;</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h2>Schema Definition</h2>
+<p>Enforce types on read to catch malformed rows early.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[2]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">182ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">IntegerType,</span> <span style="color: #F8F8F2">StringType,</span> <span style="color: #F8F8F2">StructField,</span> <span style="color: #F8F8F2">StructType</span>
+
+<span style="color: #F8F8F2">MTSAMPLES_SCHEMA</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">StructType(</span>
+    <span style="color: #F8F8F2">[</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">IntegerType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">False</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">)</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h2>Read CSV</h2>
+<p>Load the raw MTSamples CSV with the enforced schema.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[3]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">2.4s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">df_raw</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;header&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;multiLine&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;escape&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">schema(MTSAMPLES_SCHEMA)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">csv(RAW_DATA_PATH)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">raw_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Raw row count: {</span><span style="color: #F8F8F2">raw_count</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">))</span>
+</pre></div>
+<div class="cell-output"><pre>Raw row count: 4999</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>description</th>
+<th>medical_specialty</th>
+<th>sample_name</th>
+<th>transcription</th>
+<th>keywords</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td> A 23-year-old white female presents with complaint of allergies.</td>
+<td> Allergy / Immunology</td>
+<td> Allergic Rhinitis </td>
+<td>SUBJECTIVE:,  This 23-year-old white female presents with complaint of allergies.  She used to have allergies when she lived in Seattle but she thi...</td>
+<td>allergy / immunology, allergic rhinitis, allergies, asthma, nasal sprays, rhinitis, nasal, erythematous, allegra, sprays, allergic,</td>
+</tr>
+<tr>
+<td>1</td>
+<td> Consult for laparoscopic gastric bypass.</td>
+<td> Bariatrics</td>
+<td> Laparoscopic Gastric Bypass Consult - 2 </td>
+<td>PAST MEDICAL HISTORY:, He has difficulty climbing stairs, difficulty with airline seats, tying shoes, used to public seating, and lifting objects o...</td>
+<td>bariatrics, laparoscopic gastric bypass, weight loss programs, gastric bypass, atkin&#x27;s diet, weight watcher&#x27;s, body weight, laparoscopic gastric, w...</td>
+</tr>
+<tr>
+<td>2</td>
+<td> Consult for laparoscopic gastric bypass.</td>
+<td> Bariatrics</td>
+<td> Laparoscopic Gastric Bypass Consult - 1 </td>
+<td>HISTORY OF PRESENT ILLNESS: , I have seen ABC today.  He is a very pleasant gentleman who is 42 years old, 344 pounds.  He is 5&#x27;9&quot;.  He has a BMI o...</td>
+<td>bariatrics, laparoscopic gastric bypass, heart attacks, body weight, pulmonary embolism, potential complications, sleep study, weight loss, gastric...</td>
+</tr>
+<tr>
+<td>3</td>
+<td> 2-D M-Mode. Doppler.  </td>
+<td> Cardiovascular / Pulmonary</td>
+<td> 2-D Echocardiogram - 1 </td>
+<td>2-D M-MODE: , ,1.  Left atrial enlargement with left atrial diameter of 4.7 cm.,2.  Normal size right and left ventricle.,3.  Normal LV systolic fu...</td>
+<td>cardiovascular / pulmonary, 2-d m-mode, doppler, aortic valve, atrial enlargement, diastolic function, ejection fraction, mitral, mitral valve, per...</td>
+</tr>
+<tr>
+<td>4</td>
+<td> 2-D Echocardiogram</td>
+<td> Cardiovascular / Pulmonary</td>
+<td> 2-D Echocardiogram - 2 </td>
+<td>1.  The left ventricular cavity size and wall thickness appear normal.  The wall motion and left ventricular systolic function appears hyperdynamic...</td>
+<td>cardiovascular / pulmonary, 2-d, doppler, echocardiogram, annular, aortic root, aortic valve, atrial, atrium, calcification, cavity, ejection fract...</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><h2>Text Cleaning Functions</h2>
+<p>Self-contained cleaning pipeline: strip HTML, fix encoding artifacts,
+and normalize whitespace. Registered as PySpark UDFs.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[4]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">450ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> html</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> re</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> unicodedata</span>
+
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">functions</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">F</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">StringType</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">strip_html_tags</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Remove HTML tags and decode HTML entities.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;&lt;[^&gt;]+&gt;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">html</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">unescape(text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">normalize_whitespace</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Collapse runs of whitespace into single spaces and strip edges.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;\s+&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">fix_encoding</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Normalize Unicode and replace common smart-quote / dash artifacts.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">unicodedata</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">normalize(</span><span style="color: #E6DB74">&quot;NFKD&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #F8F8F2">replacements</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2019</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># right single quote</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2018</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># left single quote</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201c</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># left double quote</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201d</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># right double quote</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2013</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># en dash</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2014</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># em dash</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2026</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;...&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #959077"># ellipsis</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u00a0</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span>   <span style="color: #959077"># non-breaking space</span>
+    <span style="color: #F8F8F2">}</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">src,</span> <span style="color: #F8F8F2">dst</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">replacements</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items():</span>
+        <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">text</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(src,</span> <span style="color: #F8F8F2">dst)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">clean_text</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Full cleaning pipeline: HTML removal, encoding fix, whitespace normalization.&quot;&quot;&quot;</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">strip_html_tags(text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">fix_encoding(text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">normalize_whitespace(text)</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #F8F8F2">clean_text_udf</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">udf(clean_text,</span> <span style="color: #F8F8F2">StringType())</span>
+</pre></div>
+</div>
+<div class="cell cell-md"><h2>Apply Cleaning</h2>
+<p>Run <code>clean_text</code> over all free-text columns.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[5]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">10.2s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">TEXT_COLUMNS</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">]</span>
+
+<span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">TEXT_COLUMNS:</span>
+    <span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(col_name,</span> <span style="color: #F8F8F2">clean_text_udf(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)))</span>
+
+<span style="color: #959077"># Show before/after for a single row</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=== BEFORE cleaning (raw) ===&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">))</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=== AFTER cleaning ===&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">))</span>
+</pre></div>
+<div class="cell-output"><pre>=== BEFORE cleaning (raw) ===</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>transcription</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>SUBJECTIVE:,  This 23-year-old white female presents with complaint of allergies.  She used to have allergies when she lived in Seattle but she thi...</td>
+</tr>
+</tbody></table></div>
+<div class="cell-output"><pre>=== AFTER cleaning ===</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>transcription</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>SUBJECTIVE:, This 23-year-old white female presents with complaint of allergies. She used to have allergies when she lived in Seattle but she think...</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-md"><h2>Deduplication</h2>
+<p>Drop exact duplicates on the transcription column.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[6]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">6.5s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">count_before</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">df_dedup</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">dropDuplicates([</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span>
+<span style="color: #F8F8F2">count_after</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Before dedup: {</span><span style="color: #F8F8F2">count_before</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;After dedup:  {</span><span style="color: #F8F8F2">count_after</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Removed:      {</span><span style="color: #F8F8F2">count_before </span><span style="color: #FF4689">-</span><span style="color: #F8F8F2"> count_after</span><span style="color: #E6DB74">} duplicate rows&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Before dedup: 4999
+After dedup:  2358
+Removed:      2641 duplicate rows</pre></div>
+</div>
+<div class="cell cell-md"><h2>Data Quality Report</h2>
+<p>Null rates, specialty distribution, and transcription length statistics.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[7]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">21.1s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #959077"># --- Total row count ---</span>
+<span style="color: #F8F8F2">total</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Total rows: {</span><span style="color: #F8F8F2">total</span><span style="color: #E6DB74">}</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># --- Null rates per column ---</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Null rates:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">columns:</span>
+    <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">where(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">isNull())</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #F8F8F2">rate</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">total</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">total</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">0</span> <span style="color: #66D9EF">else</span> <span style="color: #AE81FF">0.0</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">col_name</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">rate</span><span style="color: #E6DB74">:.2%} ({</span><span style="color: #F8F8F2">null_count</span><span style="color: #E6DB74">} nulls)&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># --- Top 15 specialty distribution (bar chart) ---</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Specialty distribution (top 15):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">df_specialty</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">groupBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">orderBy(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">desc(</span><span style="color: #E6DB74">&quot;count&quot;</span><span style="color: #F8F8F2">))</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">15</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(df_specialty)</span>
+
+<span style="color: #959077"># --- Transcription length statistics ---</span>
+<span style="color: #F8F8F2">df_with_len</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">length(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)))</span>
+<span style="color: #F8F8F2">length_stats</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_with_len</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">agg(</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">min(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;min_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;max_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mean(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;mean_length&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">expr(</span><span style="color: #E6DB74">&quot;percentile_approx(transcription_length, 0.5)&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;median_length&quot;</span><span style="color: #F8F8F2">),</span>
+<span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Transcription length statistics:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Min:    {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;min_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Max:    {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;max_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Mean:   {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;mean_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">:.0f}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  Median: {</span><span style="color: #F8F8F2">length_stats[</span><span style="color: #E6DB74">&#39;median_length&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Total rows: 2358
+
+Null rates:
+  id: 0.00% (0 nulls)
+  description: 0.00% (0 nulls)
+  medical_specialty: 0.00% (0 nulls)
+  sample_name: 0.00% (0 nulls)
+  transcription: 0.04% (1 nulls)
+  keywords: 21.12% (498 nulls)
+
+Specialty distribution (top 15):</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>medical_specialty</th>
+<th>count</th>
+</tr></thead>
+<tbody>
+<tr>
+<td> Surgery</td>
+<td>976</td>
+</tr>
+<tr>
+<td> Radiology</td>
+<td>248</td>
+</tr>
+<tr>
+<td> Urology</td>
+<td>157</td>
+</tr>
+<tr>
+<td> General Medicine</td>
+<td>157</td>
+</tr>
+<tr>
+<td> SOAP / Chart / Progress Notes</td>
+<td>144</td>
+</tr>
+<tr>
+<td> Neurology</td>
+<td>67</td>
+</tr>
+<tr>
+<td> Orthopedic</td>
+<td>56</td>
+</tr>
+<tr>
+<td> Consult - History and Phy.</td>
+<td>55</td>
+</tr>
+<tr>
+<td> Pediatrics - Neonatal</td>
+<td>52</td>
+</tr>
+<tr>
+<td> Psychiatry / Psychology</td>
+<td>51</td>
+</tr>
+<tr>
+<td> Pain Management</td>
+<td>45</td>
+</tr>
+<tr>
+<td> Office Notes</td>
+<td>41</td>
+</tr>
+<tr>
+<td> Hematology - Oncology</td>
+<td>31</td>
+</tr>
+<tr>
+<td> Gastroenterology</td>
+<td>31</td>
+</tr>
+<tr>
+<td> Obstetrics / Gynecology</td>
+<td>26</td>
+</tr>
+</tbody></table></div>
+<div class="cell-output"><pre>Transcription length statistics:
+  Min:    11
+  Max:    18422
+  Mean:   2975
+  Median: 2579</pre></div>
+</div>
+<div class="cell cell-md"><h2>Write to Delta</h2>
+<p>Persist the cleaned, deduplicated data as a Delta table partitioned by specialty.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[8]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">10.4s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">repartition(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">partitionBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(OUTPUT_PATH)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Delta table written to {</span><span style="color: #F8F8F2">OUTPUT_PATH</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Delta table written to /Volumes/workspace/default/raw-data/mtsamples_clean</pre></div>
+</div>
+<div class="cell cell-md"><h2>Verify Output</h2>
+<p>Read the Delta table back and confirm the data is intact.</p></div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[9]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">1.1s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #959077"># Verify file output</span>
+<span style="color: #F8F8F2">dbutils</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">fs</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">ls(OUTPUT_PATH)</span>
+</pre></div>
+<div class="cell-output"><pre>{&#x27;text/plain&#x27;: &quot;[FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/_delta_log/&#x27;, name=&#x27;_delta_log/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Allergy %2F Immunology/&#x27;, name=&#x27;medical_specialty= Allergy %2F Immunology/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Autopsy/&#x27;, name=&#x27;medical_specialty= Autopsy/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Bariatrics/&#x27;, name=&#x27;medical_specialty= Bariatrics/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Cardiovascular %2F Pulmonary/&#x27;, name=&#x27;medical_specialty= Cardiovascular %2F Pulmonary/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Chiropractic/&#x27;, name=&#x27;medical_specialty= Chiropractic/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Consult - History and Phy./&#x27;, name=&#x27;medical_specialty= Consult - History and Phy./&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Cosmetic %2F Plastic Surgery/&#x27;, name=&#x27;medical_specialty= Cosmetic %2F Plastic Surgery/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Dentistry/&#x27;, name=&#x27;medical_specialty= Dentistry/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Dermatology/&#x27;, name=&#x27;medical_specialty= Dermatology/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Discharge Summary/&#x27;, name=&#x27;medical_specialty= Discharge Summary/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= ENT - Otolaryngology/&#x27;, name=&#x27;medical_specialty= ENT - Otolaryngology/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Emergency Room Reports/&#x27;, name=&#x27;medical_specialty= Emergency Room Reports/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Endocrinology/&#x27;, name=&#x27;medical_specialty= Endocrinology/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Gastroenterology/&#x27;, name=&#x27;medical_specialty= Gastroenterology/&#x27;, size=0, modificationTime=1774966965872),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= General Medicine/&#x27;, name=&#x27;medical_specialty= General Medicine/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Hematology - Oncology/&#x27;, name=&#x27;medical_specialty= Hematology - Oncology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Hospice - Palliative Care/&#x27;, name=&#x27;medical_specialty= Hospice - Palliative Care/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= IME-QME-Work Comp etc./&#x27;, name=&#x27;medical_specialty= IME-QME-Work Comp etc./&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Lab Medicine - Pathology/&#x27;, name=&#x27;medical_specialty= Lab Medicine - Pathology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Letters/&#x27;, name=&#x27;medical_specialty= Letters/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Nephrology/&#x27;, name=&#x27;medical_specialty= Nephrology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Neurology/&#x27;, name=&#x27;medical_specialty= Neurology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Neurosurgery/&#x27;, name=&#x27;medical_specialty= Neurosurgery/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Obstetrics %2F Gynecology/&#x27;, name=&#x27;medical_specialty= Obstetrics %2F Gynecology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Office Notes/&#x27;, name=&#x27;medical_specialty= Office Notes/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Ophthalmology/&#x27;, name=&#x27;medical_specialty= Ophthalmology/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Orthopedic/&#x27;, name=&#x27;medical_specialty= Orthopedic/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Pain Management/&#x27;, name=&#x27;medical_specialty= Pain Management/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Pediatrics - Neonatal/&#x27;, name=&#x27;medical_specialty= Pediatrics - Neonatal/&#x27;, size=0, modificationTime=1774966965873),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Physical Medicine - Rehab/&#x27;, name=&#x27;medical_specialty= Physical Medicine - Rehab/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Podiatry/&#x27;, name=&#x27;medical_specialty= Podiatry/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Psychiatry %2F Psychology/&#x27;, name=&#x27;medical_specialty= Psychiatry %2F Psychology/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Radiology/&#x27;, name=&#x27;medical_specialty= Radiology/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Rheumatology/&#x27;, name=&#x27;medical_specialty= Rheumatology/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= SOAP %2F Chart %2F Progress Notes/&#x27;, name=&#x27;medical_specialty= SOAP %2F Chart %2F Progress Notes/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Sleep Medicine/&#x27;, name=&#x27;medical_specialty= Sleep Medicine/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Speech - Language/&#x27;, name=&#x27;medical_specialty= Speech - Language/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Surgery/&#x27;, name=&#x27;medical_specialty= Surgery/&#x27;, size=0, modificationTime=1774966965874),\n FileInfo(path=&#x27;dbfs:/Volumes/workspace/default/raw-data/mtsamples_clean/medical_specialty= Urology/&#x27;, name=&#x27;medical_specialty= Urology/&#x27;, size=0, modificationTime=1774966965874)]&quot;}</pre></div>
+</div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[10]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">2.5s</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #F8F8F2">df_verify</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(OUTPUT_PATH)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Verified row count: {</span><span style="color: #F8F8F2">df_verify</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">df_verify</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">printSchema()</span>
+
+<span style="color: #959077"># Query a sample by specialty</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Sample rows from &#39;Surgery&#39;:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">display(</span>
+    <span style="color: #F8F8F2">df_verify</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">where(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot; Surgery&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">)</span>
+</pre></div>
+<div class="cell-output"><pre>Verified row count: 2358
+root
+ |-- id: integer (nullable = true)
+ |-- description: string (nullable = true)
+ |-- medical_specialty: string (nullable = true)
+ |-- sample_name: string (nullable = true)
+ |-- transcription: string (nullable = true)
+ |-- keywords: string (nullable = true)
+
+
+Sample rows from &#x27;Surgery&#x27;:</pre></div>
+<div class="cell-output cell-output-table"><table>
+<thead><tr>
+<th>id</th>
+<th>sample_name</th>
+<th>medical_specialty</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>874</td>
+<td>EGD With Photos &amp; Biopsies.</td>
+<td> Surgery</td>
+</tr>
+<tr>
+<td>230</td>
+<td>Tubal Fulguration - Laparoscopic</td>
+<td> Surgery</td>
+</tr>
+<tr>
+<td>986</td>
+<td>Colonoscopy Template - 4</td>
+<td> Surgery</td>
+</tr>
+<tr>
+<td>1270</td>
+<td>Adenoidectomy</td>
+<td> Surgery</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Anterior Cervical Discectomy - 2</td>
+<td> Surgery</td>
+</tr>
+</tbody></table></div>
+</div>
+<div class="cell cell-code">
+  <div class="cell-toolbar">
+    <span class="cell-num">[11]</span>
+    <span class="status-ok">&#10003;</span>
+    <span class="cell-duration">675ms</span>
+    <span class="cell-lang">python</span>
+  </div>
+  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> urllib.request</span>                                                                
+<span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>                                                                                 
+      <span style="color: #F8F8F2">resp</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">urllib</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">request</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">urlopen(</span><span style="color: #E6DB74">&quot;https://api.anthropic.com/v1/messages&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">timeout</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">5</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">urllib</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">error</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">HTTPError</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>                                                  
+      <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;API reachable! (got HTTP {</span><span style="color: #F8F8F2">e</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">code</span><span style="color: #E6DB74">} — expected, no auth header)&quot;</span><span style="color: #F8F8F2">)</span>          
+<span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">urllib</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">error</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">URLError</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>                                                   
+      <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;BLOCKED: {</span><span style="color: #F8F8F2">e</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">reason</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>                                                    
+<span style="color: #66D9EF">except</span> <span style="color: #A6E22E">Exception</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>                                                               
+      <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Error: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>  
+</pre></div>
+<div class="cell-output"><pre>API reachable! (got HTTP 405 — expected, no auth header)</pre></div>
+</div>
+<div class="cell cell-md"><h2>Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw rows loaded</td>
+<td><em>see output above</em></td>
+</tr>
+<tr>
+<td>Rows after dedup</td>
+<td><em>see output above</em></td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>Delta (partitioned by <code>medical_specialty</code>)</td>
+</tr>
+<tr>
+<td>Output path</td>
+<td><code>/FileStore/tables/clinical_pipeline/mtsamples_clean</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Next Steps</h3>
+<ol>
+<li><strong>Extraction pipeline</strong> -- run locally with Claude API (Haiku 4.5 via Batch API)
+   to extract structured clinical variables (diagnoses, procedures, medications, ICD-10 codes).</li>
+<li><strong>ICD-10 mapping</strong> -- cross-reference extracted codes against CMS code tables.</li>
+<li><strong>HITL validation</strong> -- review extracted data through the Streamlit dashboard.</li>
+</ol></div>
+</div>
+</body>
+</html>

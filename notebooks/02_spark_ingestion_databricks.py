@@ -1,5 +1,6 @@
 # Databricks notebook source
 
+
 # COMMAND ----------
 
 # MAGIC %md
@@ -240,6 +241,18 @@ display(
     .select("id", "sample_name", "medical_specialty")
     .limit(5)
 )
+
+# COMMAND ----------
+
+import urllib.request                                                                
+try:                                                                                 
+      resp = urllib.request.urlopen("https://api.anthropic.com/v1/messages", timeout=5)
+except urllib.error.HTTPError as e:                                                  
+      print(f"API reachable! (got HTTP {e.code} — expected, no auth header)")          
+except urllib.error.URLError as e:                                                   
+      print(f"BLOCKED: {e.reason}")                                                    
+except Exception as e:                                                               
+      print(f"Error: {e}")  
 
 # COMMAND ----------
 
