@@ -1,0 +1,157 @@
+{
+  "note_id": "29281842",
+  "diagnoses": [
+    {
+      "name": "Amyotrophic lateral sclerosis (ALS)",
+      "icd10_suggestion": "G12.21",
+      "confidence": "high",
+      "evidence_span": "Patient is a gentleman with known amyotrophic lateral sclerosis (ALS)"
+    },
+    {
+      "name": "Respiratory failure",
+      "icd10_suggestion": "J96.90",
+      "confidence": "high",
+      "evidence_span": "acute decompensation requiring intubation and mechanical ventilation. He has dependence on a ventilator with underlying chronic respiratory failure"
+    },
+    {
+      "name": "Chronic respiratory failure",
+      "icd10_suggestion": "J96.10",
+      "confidence": "high",
+      "evidence_span": "He has dependence on a ventilator with underlying chronic respiratory failure"
+    },
+    {
+      "name": "Ventilator-associated pneumonia (VAP)",
+      "icd10_suggestion": "J95.851",
+      "confidence": "high",
+      "evidence_span": "During this admission, he developed ventilator-associated pneumonia (VAP) complicated by Pseudomonas aeruginosa and E. coli organisms cultured from respiratory secretions"
+    },
+    {
+      "name": "Pseudomonas aeruginosa infection",
+      "icd10_suggestion": "B96.5",
+      "confidence": "high",
+      "evidence_span": "ventilator-associated pneumonia (VAP) complicated by Pseudomonas aeruginosa and E. coli organisms cultured from respiratory secretions"
+    },
+    {
+      "name": "E. coli infection",
+      "icd10_suggestion": "B96.20",
+      "confidence": "high",
+      "evidence_span": "ventilator-associated pneumonia (VAP) complicated by Pseudomonas aeruginosa and E. coli organisms cultured from respiratory secretions"
+    },
+    {
+      "name": "Non-ST elevation myocardial infarction (NSTEMI)",
+      "icd10_suggestion": "I21.02",
+      "confidence": "high",
+      "evidence_span": "the patient suffered a non-ST elevation myocardial infarction (NSTEMI) during his hospital course, likely related to demand ischemia in the setting of acute illness"
+    },
+    {
+      "name": "Acute kidney injury",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "He experienced acute kidney failure, attributed in part to nephropathy induced by medications"
+    },
+    {
+      "name": "Medication-induced nephropathy",
+      "icd10_suggestion": "N14.2",
+      "confidence": "high",
+      "evidence_span": "acute kidney failure, attributed in part to nephropathy induced by medications"
+    },
+    {
+      "name": "Acute pyelonephritis",
+      "icd10_suggestion": "N10",
+      "confidence": "high",
+      "evidence_span": "with concurrent acute pyelonephritis and urinary tract infection secondary to E. coli"
+    },
+    {
+      "name": "Urinary tract infection",
+      "icd10_suggestion": "N39.0",
+      "confidence": "high",
+      "evidence_span": "concurrent acute pyelonephritis and urinary tract infection secondary to E. coli"
+    },
+    {
+      "name": "Encephalopathy",
+      "icd10_suggestion": "G93.41",
+      "confidence": "high",
+      "evidence_span": "The patient also developed altered mental status consistent with encephalopathy of unclear etiology"
+    },
+    {
+      "name": "Metabolic alkalosis",
+      "icd10_suggestion": "E87.3",
+      "confidence": "high",
+      "evidence_span": "Laboratory studies revealed metabolic alkalosis"
+    },
+    {
+      "name": "Eosinophilia",
+      "icd10_suggestion": "D72.1",
+      "confidence": "high",
+      "evidence_span": "Laboratory studies revealed metabolic alkalosis and eosinophilia"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "His underlying type 2 diabetes mellitus was managed throughout admission"
+    },
+    {
+      "name": "Schizoaffective disorder, unspecified",
+      "icd10_suggestion": "F25.9",
+      "confidence": "high",
+      "evidence_span": "He has a long-standing history of schizoaffective disorder, unspecified"
+    },
+    {
+      "name": "Adverse effect from penicillins",
+      "icd10_suggestion": "T36.0X5A",
+      "confidence": "high",
+      "evidence_span": "He developed a rash consistent with adverse effect from penicillins which occurred early in his hospital stay"
+    },
+    {
+      "name": "Epilepsy, unspecified, not intractable",
+      "icd10_suggestion": "G40.909",
+      "confidence": "high",
+      "evidence_span": "Epilepsy, unspecified, not intractable"
+    },
+    {
+      "name": "Overweight",
+      "icd10_suggestion": "E66.9",
+      "confidence": "high",
+      "evidence_span": "BMI 29.2 (overweight range)"
+    },
+    {
+      "name": "Demand ischemia",
+      "icd10_suggestion": "I25.89",
+      "confidence": "medium",
+      "evidence_span": "likely related to demand ischemia in the setting of acute illness"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Intubation and mechanical ventilation",
+      "cpt_suggestion": "31500",
+      "confidence": "high",
+      "evidence_span": "Patient was intubated and placed on mechanical ventilation for greater than 96 consecutive hours due to respiratory failure"
+    },
+    {
+      "name": "Percutaneous central venous catheter insertion",
+      "cpt_suggestion": "36569",
+      "confidence": "high",
+      "evidence_span": "A percutaneous central venous catheter was inserted into the superior vena cava for reliable vascular access and medication administration"
+    },
+    {
+      "name": "Tracheostomy care",
+      "cpt_suggestion": "31502",
+      "confidence": "high",
+      "evidence_span": "Tracheostomy care was provided with attention to proper tube positioning and management"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": null,
+      "frequency": "chronic/long-term",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Chronic aspirin use documented; patient on long-term aspirin therapy"
+    }
+  ],
+  "chief_complaint": "Respiratory failure requiring mechanical ventilation",
+  "medical_specialty": "Critical Care / Pulmonology"
+}

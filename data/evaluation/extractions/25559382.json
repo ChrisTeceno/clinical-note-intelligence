@@ -1,0 +1,201 @@
+{
+  "note_id": "25559382",
+  "diagnoses": [
+    {
+      "name": "Unstable angina pectoris",
+      "icd10_suggestion": "I20.0",
+      "confidence": "high",
+      "evidence_span": "presented with chest discomfort concerning for unstable angina pectoris"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary arteries",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "extensive past medical history of atherosclerotic heart disease of native coronary arteries"
+    },
+    {
+      "name": "Hypertensive heart disease with heart failure",
+      "icd10_suggestion": "I11.9",
+      "confidence": "high",
+      "evidence_span": "His hypertensive heart disease with heart failure and chronic systolic congestive heart failure were optimized"
+    },
+    {
+      "name": "Chronic systolic congestive heart failure",
+      "icd10_suggestion": "I50.20",
+      "confidence": "high",
+      "evidence_span": "chronic systolic congestive heart failure were optimized with careful monitoring of fluid status and vital signs"
+    },
+    {
+      "name": "Paroxysmal atrial flutter",
+      "icd10_suggestion": "I48.92",
+      "confidence": "high",
+      "evidence_span": "His atrial flutter remained paroxysmal without hemodynamic compromise; rate control was maintained with his current diltiazem regimen"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "The patient's hyperlipidemia was addressed with continuation of his statin and niacin therapy"
+    },
+    {
+      "name": "Asthma",
+      "icd10_suggestion": "J45.9",
+      "confidence": "medium",
+      "evidence_span": "His unspecified asthma remained stable and well-controlled on current medications without exacerbation during admission"
+    },
+    {
+      "name": "Mottled rash",
+      "icd10_suggestion": "R21",
+      "confidence": "medium",
+      "evidence_span": "A mottled rash of unclear etiology appeared on the patient's trunk on hospital day 2, which remained nonpruritic and stable throughout his stay"
+    },
+    {
+      "name": "Transient ischemic attack",
+      "icd10_suggestion": "G45.9",
+      "confidence": "high",
+      "evidence_span": "The patient's significant cerebrovascular history—including a prior transient ischemic attack and cerebral infarction"
+    },
+    {
+      "name": "Cerebral infarction",
+      "icd10_suggestion": "I63.9",
+      "confidence": "high",
+      "evidence_span": "a prior transient ischemic attack and cerebral infarction, which fortunately resolved without residual neurologic deficits"
+    },
+    {
+      "name": "Hemodynamically significant occlusion and stenosis of left carotid artery",
+      "icd10_suggestion": "I65.21",
+      "confidence": "high",
+      "evidence_span": "He also has hemodynamically significant occlusion and stenosis of his left carotid artery, which has been managed medically"
+    },
+    {
+      "name": "Prosthetic heart valve",
+      "icd10_suggestion": "Z95.2",
+      "confidence": "high",
+      "evidence_span": "His prosthetic heart valve continues to function appropriately without evidence of dysfunction or infection"
+    },
+    {
+      "name": "Hodgkin lymphoma",
+      "icd10_suggestion": "C81.9",
+      "confidence": "high",
+      "evidence_span": "past medical history of Hodgkin lymphoma treated with chemotherapy and radiation, as well as prior malignant neoplasm of the prostate treated with surgery, both of which remain in remission"
+    },
+    {
+      "name": "Malignant neoplasm of the prostate",
+      "icd10_suggestion": "C61",
+      "confidence": "high",
+      "evidence_span": "prior malignant neoplasm of the prostate treated with surgery, both of which remain in remission"
+    },
+    {
+      "name": "Nicotine dependence",
+      "icd10_suggestion": "F17.200",
+      "confidence": "high",
+      "evidence_span": "He is a former smoker with significant history of nicotine dependence but reports abstinence for several years"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Aortocoronary bypass graft placement",
+      "cpt_suggestion": "33533",
+      "confidence": "high",
+      "evidence_span": "prior revascularization, including placement of an aortocoronary bypass graft"
+    },
+    {
+      "name": "Coronary angioplasty with stent implant",
+      "cpt_suggestion": "92928",
+      "confidence": "high",
+      "evidence_span": "coronary angioplasty with stent implant"
+    },
+    {
+      "name": "Telemetry monitoring",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "the patient was admitted for telemetry monitoring and further cardiac assessment"
+    },
+    {
+      "name": "Electrocardiography (EKG)",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "EKG showed no acute ST changes"
+    },
+    {
+      "name": "Cardiac enzyme testing",
+      "cpt_suggestion": "82550",
+      "confidence": "high",
+      "evidence_span": "Cardiac enzymes were obtained and were negative for acute myocardial infarction"
+    },
+    {
+      "name": "Troponin testing",
+      "cpt_suggestion": "84484",
+      "confidence": "high",
+      "evidence_span": "Repeat troponin remained negative"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Aspirin 81 mg once daily by mouth"
+    },
+    {
+      "name": "Clopidogrel",
+      "dosage": "75 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Clopidogrel 75 mg once daily by mouth"
+    },
+    {
+      "name": "Diltiazem extended-release",
+      "dosage": "120 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Diltiazem extended-release 120 mg once daily by mouth"
+    },
+    {
+      "name": "Isosorbide mononitrate extended-release",
+      "dosage": "30 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Isosorbide mononitrate extended-release 30 mg once daily by mouth"
+    },
+    {
+      "name": "Niacin",
+      "dosage": "1000 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Niacin 1000 mg once daily by mouth"
+    },
+    {
+      "name": "Fish oil (omega-3)",
+      "dosage": "1000 mg",
+      "frequency": "once daily",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Fish oil (omega-3) 1000 mg once daily by mouth"
+    },
+    {
+      "name": "Ramelteon",
+      "dosage": "8 mg",
+      "frequency": "at bedtime as needed",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Ramelteon 8 mg at bedtime by mouth as needed for sleep"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "500-1000 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "by mouth",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 500-1000 mg every 6 hours as needed for pain by mouth"
+    }
+  ],
+  "chief_complaint": "Chest discomfort concerning for unstable angina pectoris",
+  "medical_specialty": "Cardiology"
+}

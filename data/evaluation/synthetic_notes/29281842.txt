@@ -1,0 +1,45 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [REDACTED]
+**ADMISSION DATE:** [REDACTED]
+**DISCHARGE DATE:** [REDACTED]
+**LENGTH OF STAY:** 18 days
+
+---
+
+**CHIEF COMPLAINT:**
+Respiratory failure requiring mechanical ventilation.
+
+**HISTORY OF PRESENT ILLNESS:**
+Patient is a gentleman with known amyotrophic lateral sclerosis (ALS) who presented with acute decompensation requiring intubation and mechanical ventilation. He has dependence on a ventilator with underlying chronic respiratory failure. During this admission, he developed ventilator-associated pneumonia (VAP) complicated by Pseudomonas aeruginosa and E. coli organisms cultured from respiratory secretions. Additionally, the patient suffered a non-ST elevation myocardial infarction (NSTEMI) during his hospital course, likely related to demand ischemia in the setting of acute illness. He experienced acute kidney failure, attributed in part to nephropathy induced by medications, with concurrent acute pyelonephritis and urinary tract infection secondary to E. coli. His renal function declined significantly over the hospitalization despite aggressive supportive measures.
+
+The patient also developed altered mental status consistent with encephalopathy of unclear etiology, though infectious and metabolic etiologies were considered. Laboratory studies revealed metabolic alkalosis and eosinophilia. His underlying type 2 diabetes mellitus was managed throughout admission. The patient has a long-standing history of schizoaffective disorder, unspecified, which complicated his hospital course, requiring physical restraint for safety on one occasion. He developed a rash consistent with adverse effect from penicillins which occurred early in his hospital stay.
+
+**PAST MEDICAL HISTORY:**
+- Amyotrophic lateral sclerosis (ALS) with ventilator dependence
+- Chronic respiratory failure
+- Type 2 diabetes mellitus
+- Schizoaffective disorder
+- Epilepsy, unspecified, not intractable
+- BMI 29.2 (overweight range)
+- Gastrostomy status
+
+**MEDICATIONS ON ADMISSION:**
+Chronic aspirin use documented; patient on long-term aspirin therapy.
+
+**HOSPITAL COURSE:**
+Patient was intubated and placed on mechanical ventilation for greater than 96 consecutive hours due to respiratory failure. A percutaneous central venous catheter was inserted into the superior vena cava for reliable vascular access and medication administration. Respiratory secretions grew Pseudomonas aeruginosa and E. coli; empiric antibiotics were initiated but subsequently modified due to development of adverse penicillin reaction. Tracheostomy care was provided with attention to proper tube positioning and management. Devices including ventilator settings and other specified respiratory equipment were fitted and adjusted multiple times throughout the stay. His gastrostomy tube remained in place for nutritional support.
+
+Peak troponin level of 0.82 ng/mL confirmed NSTEMI; EKG changes were noted and cardiac enzymes trended appropriately. Acute kidney failure required careful fluid management and electrolyte monitoring; creatinine peaked at 3.4 mg/dL. Metabolic alkalosis was documented with pH 7.52 and was managed conservatively. Eosinophilia was noted on CBC differential. Mental status gradually improved with supportive care, though encephalopathy persisted at discharge.
+
+**VITAL SIGNS AT DISCHARGE:**
+BP 128/74, HR 88, RR 18 (ventilator-dependent), Temp 37.2°C, O2 sat 94% on ventilator settings.
+
+**LABORATORY VALUES AT DISCHARGE:**
+Creatinine 2.8 mg/dL (improved from peak), WBC 8.2 with 6% eosinophils, pH 7.48.
+
+**MEDICATIONS AT DISCHARGE:**
+No medications prescribed at time of discharge; previous medications held pending outpatient follow-up due to adverse reactions and acute illness severity.
+
+**DISPOSITION:**
+Patient discharged to acute care facility with continued mechanical ventilation support, tracheostomy care, and gastrostomy tube management. Outpatient cardiology and nephrology follow-up arranged.

@@ -1,0 +1,77 @@
+{
+  "hadm_id": 27504040,
+  "diagnoses": [
+    {
+      "icd_code": "I120",
+      "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "N186",
+      "description": "End stage renal disease",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "Z992",
+      "description": "Dependence on renal dialysis",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "K7030",
+      "description": "Alcoholic cirrhosis of liver without ascites",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "K7010",
+      "description": "Alcoholic hepatitis without ascites",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "K767",
+      "description": "Hepatorenal syndrome",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "J45909",
+      "description": "Unspecified asthma, uncomplicated",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "D631",
+      "description": "Anemia in chronic kidney disease",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "M109",
+      "description": "Gout, unspecified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "K861",
+      "description": "Other chronic pancreatitis",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Z86718",
+      "description": "Personal history of other venous thrombosis and embolism",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "F17210",
+      "description": "Nicotine dependence, cigarettes, uncomplicated",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "D696",
+      "description": "Thrombocytopenia, unspecified",
+      "seq_num": 14
+    }
+  ],
+  "procedures": [],
+  "medications": []
+}

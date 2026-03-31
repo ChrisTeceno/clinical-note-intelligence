@@ -1,0 +1,41 @@
+# DISCHARGE SUMMARY
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 4 days
+
+---
+
+## REASON FOR ADMISSION
+
+The patient is a male with significant cardiac history who presented with chest discomfort concerning for unstable angina pectoris. He reports a several-day history of exertional chest pressure radiating to the left arm, associated with mild dyspnea. Given his extensive past medical history of atherosclerotic heart disease of native coronary arteries with prior revascularization, including placement of an aortocoronary bypass graft and coronary angioplasty with stent implant, acute coronary syndrome was a significant concern and warranted urgent evaluation.
+
+## HOSPITAL COURSE
+
+On admission, vital signs were stable with BP 142/88 mmHg, HR 78 bpm, RR 16, temp 36.8°C, and oxygen saturation 96% on room air. Cardiac enzymes were obtained and were negative for acute myocardial infarction. EKG showed no acute ST changes. Given the clinical presentation and risk factors, the patient was admitted for telemetry monitoring and further cardiac assessment.
+
+The patient's chronic medical conditions were managed throughout his stay. His hypertensive heart disease with heart failure and chronic systolic congestive heart failure were optimized with careful monitoring of fluid status and vital signs. His atrial flutter remained paroxysmal without hemodynamic compromise; rate control was maintained with his current diltiazem regimen. The patient's hyperlipidemia was addressed with continuation of his statin and niacin therapy. His unspecified asthma remained stable and well-controlled on current medications without exacerbation during admission.
+
+A mottled rash of unclear etiology appeared on the patient's trunk on hospital day 2, which remained nonpruritic and stable throughout his stay. This required monitoring but was not deemed to represent a serious systemic process.
+
+The patient's significant cerebrovascular history—including a prior transient ischemic attack and cerebral infarction, which fortunately resolved without residual neurologic deficits—continues to necessitate aggressive antiplatelet therapy. He also has hemodynamically significant occlusion and stenosis of his left carotid artery, which has been managed medically. His prosthetic heart valve continues to function appropriately without evidence of dysfunction or infection.
+
+Notably, the patient has a past medical history of Hodgkin lymphoma treated with chemotherapy and radiation, as well as prior malignant neoplasm of the prostate treated with surgery, both of which remain in remission. He is a former smoker with significant history of nicotine dependence but reports abstinence for several years. Strong family history of ischemic heart disease and other circulatory diseases underscores the importance of aggressive preventive management.
+
+Laboratory studies during admission revealed stable renal and hepatic function. Repeat troponin remained negative. The patient was discharged on hospital day 4 in stable condition with chest discomfort resolved and no acute complications.
+
+## DISCHARGE MEDICATIONS
+
+1. Aspirin 81 mg once daily by mouth
+2. Clopidogrel 75 mg once daily by mouth
+3. Diltiazem extended-release 120 mg once daily by mouth
+4. Isosorbide mononitrate extended-release 30 mg once daily by mouth
+5. Niacin 1000 mg once daily by mouth
+6. Fish oil (omega-3) 1000 mg once daily by mouth
+7. Ramelteon 8 mg at bedtime by mouth as needed for sleep
+8. Acetaminophen 500-1000 mg every 6 hours as needed for pain by mouth
+
+## DISCHARGE INSTRUCTIONS
+
+The patient is instructed to follow up with cardiology within 1 week and with his primary care physician within 1 week. He should monitor for recurrence of chest pain, dyspnea, palpitations, or neurologic symptoms and seek immediate care if these develop. Continued smoking cessation is strongly encouraged. He should maintain a heart-healthy, low-sodium diet and continue regular light exercise as tolerated. All home medications should be continued as listed above.

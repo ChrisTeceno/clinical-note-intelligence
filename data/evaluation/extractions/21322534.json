@@ -1,0 +1,199 @@
+{
+  "note_id": "21322534",
+  "diagnoses": [
+    {
+      "name": "End stage renal disease",
+      "icd10_suggestion": "N18.6",
+      "confidence": "high",
+      "evidence_span": "The pt has known end stage renal disease requiring hemodialysis three times weekly"
+    },
+    {
+      "name": "Atrial fibrillation, unspecified",
+      "icd10_suggestion": "I48.91",
+      "confidence": "high",
+      "evidence_span": "the patient has a history of unspecified atrial fibrillation"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic heart disease of native coronary artery without angina pectoris"
+    },
+    {
+      "name": "Aortic stenosis",
+      "icd10_suggestion": "I35.0",
+      "confidence": "high",
+      "evidence_span": "nonrheumatic aortic stenosis"
+    },
+    {
+      "name": "Mitral insufficiency",
+      "icd10_suggestion": "I34.0",
+      "confidence": "high",
+      "evidence_span": "nonrheumatic mitral insufficiency"
+    },
+    {
+      "name": "Pneumonia of unspecified organism",
+      "icd10_suggestion": "J18.9",
+      "confidence": "high",
+      "evidence_span": "Chest imaging and clinical evaluation revealed evidence of pneumonia of unspecified organism"
+    },
+    {
+      "name": "Chronic obstructive pulmonary disease",
+      "icd10_suggestion": "J44.9",
+      "confidence": "high",
+      "evidence_span": "The patient also reports chronic obstructive pulmonary disease"
+    },
+    {
+      "name": "Dorsalgia",
+      "icd10_suggestion": "M54.9",
+      "confidence": "high",
+      "evidence_span": "chronic dorsalgia and left shoulder pain"
+    },
+    {
+      "name": "Left shoulder pain",
+      "icd10_suggestion": "M25.511",
+      "confidence": "high",
+      "evidence_span": "left shoulder pain"
+    },
+    {
+      "name": "Anemia secondary to chronic kidney disease",
+      "icd10_suggestion": "D63.1",
+      "confidence": "high",
+      "evidence_span": "anemia secondary to chronic kidney disease"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "hypothyroidism"
+    },
+    {
+      "name": "Acute ischemic heart disease",
+      "icd10_suggestion": "I24.9",
+      "confidence": "high",
+      "evidence_span": "other forms of acute ischemic heart disease"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Hemodialysis",
+      "cpt_suggestion": "90945",
+      "confidence": "high",
+      "evidence_span": "the patient underwent performance of urinary filtration (hemodialysis) on multiple occasions to manage volume status and electrolytes given end stage renal disease"
+    },
+    {
+      "name": "Pneumococcal 23-valent polysaccharide vaccine administration",
+      "cpt_suggestion": "90732",
+      "confidence": "high",
+      "evidence_span": "The patient received pneumococcal 23-valent polysaccharide vaccine during admission"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Methadone",
+      "dosage": "5 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Methadone 5 mg PO daily"
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "100 mg and 300 mg",
+      "frequency": "twice daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Gabapentin 100 mg and 300 mg PO twice daily"
+    },
+    {
+      "name": "Metoprolol Tartrate",
+      "dosage": "6.25 mg",
+      "frequency": "twice daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Metoprolol Tartrate 6.25 mg PO twice daily"
+    },
+    {
+      "name": "Rosuvastatin Calcium",
+      "dosage": "20 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Rosuvastatin Calcium 20 mg PO daily"
+    },
+    {
+      "name": "Levothyroxine Sodium",
+      "dosage": "100 mcg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Levothyroxine Sodium 100 mcg PO daily"
+    },
+    {
+      "name": "Levofloxacin",
+      "dosage": "500 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Levofloxacin 500 mg PO daily (complete full course)"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "650 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 650 mg PO every 6 hours as needed"
+    },
+    {
+      "name": "Docusate Sodium",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Docusate Sodium 100 mg PO daily"
+    },
+    {
+      "name": "Nephrocaps",
+      "dosage": "1 capsule",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Nephrocaps 1 capsule PO daily"
+    },
+    {
+      "name": "Albuterol",
+      "dosage": "0.083%",
+      "frequency": "one treatment as needed",
+      "route": "nebulized",
+      "confidence": "high",
+      "evidence_span": "Albuterol 0.083% nebulized solution one treatment as needed"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "5000 units",
+      "frequency": "twice daily",
+      "route": "SC",
+      "confidence": "high",
+      "evidence_span": "Heparin SC 5000 units twice daily (bridge therapy until anticoagulation established)"
+    },
+    {
+      "name": "Ferric Gluconate",
+      "dosage": "125 mg",
+      "frequency": "at next hemodialysis session",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ferric Gluconate 125 mg IV at next hemodialysis session"
+    },
+    {
+      "name": "Heparin drip",
+      "dosage": "750-1500 units",
+      "frequency": "with dosing adjustments",
+      "route": "IV",
+      "confidence": "medium",
+      "evidence_span": "The patient's atrial fibrillation was managed with anticoagulation via heparin drip (with dosing adjustments between 750-1500 units IV)"
+    }
+  ],
+  "chief_complaint": "Shortness of breath and chest discomfort",
+  "medical_specialty": "Cardiology/Internal Medicine"
+}

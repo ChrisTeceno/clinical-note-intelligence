@@ -1,0 +1,56 @@
+**HOSPITAL DISCHARGE SUMMARY**
+
+**PATIENT INFORMATION:**
+Name: [REDACTED] | MRN: [REDACTED] | DOB: [REDACTED]
+Admission Date: [DATE] | Discharge Date: [DATE]
+Length of Stay: [X] days
+
+---
+
+**CHIEF COMPLAINT:**
+Abdominal pain and nausea
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [AGE]-year-old admitted with acute onset abdominal pain, distension, and emesis. Patient reports recent viral illness prior to symptom onset. Imaging and clinical presentation were consistent with intestinal obstruction secondary to adhesive bands, likely from prior infection. The patient has a significant medical history including alcoholic cirrhosis of the liver with ascites, which complicated his clinical course during this admission.
+
+**PAST MEDICAL HISTORY:**
+The patient carries several chronic diagnoses including alcoholic cirrhosis with associated portal hypertension and significant ascites. He has documented secondary esophageal varices without active bleeding but at risk for hemorrhage. Portal vein thrombosis was identified on prior imaging. Additionally, the patient has known hepatitis C infection without hepatic coma. He reports long-standing nicotine dependence with cigarette use. Body mass index is 23.5, which falls within the normal range, though the patient demonstrates signs of severe protein-calorie malnutrition given his liver disease and poor intake.
+
+**HOSPITAL COURSE:**
+Patient was admitted for conservative management of the bowel obstruction. IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered. Electrolyte repletion was provided with potassium chloride 40 mEq and magnesium sulfate (both 2 gm and 4 gm doses) via IV route. Heparin 5000 units was given subcutaneously for thromboembolism prophylaxis given the portal vein thrombosis history.
+
+Gastrointestinal support included pantoprazole and famotidine for acid suppression, ondansetron for antiemesis, and bisacodyl (both 10 mg PO and 10 mg PR) for bowel motility. Diuresis was managed with furosemide 20 mg IV given the ascites. Pain control was achieved with oxycodone 10 mg PO/NG and hydromorphone 0.25-0.5 mg IV titrated as needed for comfort.
+
+The patient's obstruction gradually resolved with conservative management. Vital signs stabilized, and he tolerated advancing diet without recurrent symptoms. Laboratory values trended appropriately, though hepatic function remained consistent with cirrhosis. IV lines were maintained with sodium chloride 0.9% flushes. The patient was counseled extensively regarding the risk of variceal bleeding and advised on signs requiring emergent evaluation.
+
+**PHYSICAL EXAMINATION AT DISCHARGE:**
+Vital signs stable. Abdomen soft, non-distended without acute tenderness. No peripheral edema noted. Alert and oriented, speaking clearly.
+
+**DISCHARGE DIAGNOSES:**
+1. Intestinal adhesions with obstruction (postinfection)
+2. Alcoholic cirrhosis of liver with ascites
+3. Secondary esophageal varices without bleeding
+4. Portal hypertension
+5. Nicotine dependence, cigarettes
+6. Body mass index 23.0-23.9, adult
+7. Hepatitis C without hepatic coma
+8. Portal vein thrombosis
+9. Severe protein-calorie malnutrition
+
+**DISCHARGE MEDICATIONS:**
+- Furosemide 20 mg IV daily
+- Pantoprazole 40 mg IV daily
+- Famotidine 20 mg IV BID
+- Ondansetron 4 mg IV as needed for nausea
+- Oxycodone 10 mg PO every 6 hours as needed for pain
+- Hydromorphone 0.25-0.5 mg IV every 4-6 hours as needed
+- Bisacodyl 10 mg PO daily
+- Potassium chloride supplementation as directed
+- Magnesium sulfate as tolerated
+- Heparin 5000 units SC daily
+
+**FOLLOW-UP:**
+Patient should follow up with hepatology within 1 week for management of cirrhosis and portal hypertension. GI follow-up recommended for varices surveillance. Patient instructed to seek immediate evaluation for hematemesis, melena, increasing abdominal distension, or recurrent obstruction symptoms.
+
+**DISPOSITION:**
+Patient discharged to home in stable condition.

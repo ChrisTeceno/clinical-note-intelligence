@@ -1,0 +1,579 @@
+{
+  "hadm_id": 25933959,
+  "diagnoses": [
+    {
+      "icd_code": "E11621",
+      "description": "Type 2 diabetes mellitus with foot ulcer",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "L03116",
+      "description": "Cellulitis of left lower limb",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "L97529",
+      "description": "Non-pressure chronic ulcer of other part of left foot with unspecified severity",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "E1122",
+      "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "I130",
+      "description": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "I509",
+      "description": "Heart failure, unspecified",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I7789",
+      "description": "Other specified disorders of arteries and arterioles",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "E11649",
+      "description": "Type 2 diabetes mellitus with hypoglycemia without coma",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "N183",
+      "description": "Chronic kidney disease, stage 3 (moderate)",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "I252",
+      "description": "Old myocardial infarction",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "Z7902",
+      "description": "Long term (current) use of antithrombotics/antiplatelets",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "E669",
+      "description": "Obesity, unspecified",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "Z6830",
+      "description": "Body mass index (BMI) 30.0-30.9, adult",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "M109",
+      "description": "Gout, unspecified",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "D649",
+      "description": "Anemia, unspecified",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "I701",
+      "description": "Atherosclerosis of renal artery",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "I4891",
+      "description": "Unspecified atrial fibrillation",
+      "seq_num": 24
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "0LBW0ZZ",
+      "description": "Excision of Left Foot Tendon, Open Approach"
+    },
+    {
+      "icd_code": "06BQ0ZZ",
+      "description": "Excision of Left Saphenous Vein, Open Approach"
+    },
+    {
+      "icd_code": "041L09L",
+      "description": "Bypass Left Femoral Artery to Popliteal Artery with Autologous Venous Tissue, Open Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "FoLIC Acid",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "CefTAZidime",
+      "dose_val": "1 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ezetimibe",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Febuxostat",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Isosorbide Dinitrate",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Miconazole Powder 2%",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Omeprazole",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Prasugrel",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "BuPROPion (Sustained Release)",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Calcium Carbonate",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ciprofloxacin HCl",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.125 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ferrous Sulfate",
+      "dose_val": "325 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Polystyrene Sulfonate",
+      "dose_val": "15 gm",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "112 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "MetroNIDAZOLE",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "15 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "12 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "6 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "11 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "30 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "4 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "5 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lidocaine 1% (For PICC/Midline Insertions)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "750 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ciprofloxacin IV",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "MetroNIDAZOLE",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Blue CADD Cassette",
+      "dose_val": "1 CADD",
+      "dose_unit": "",
+      "route": "PERIPHNERVE"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ropivacaine 0.2%",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "PERIPHNERVE"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Methylprednisolone",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Polystyrene Sulfonate",
+      "dose_val": "30 gm",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Metoprolol Succinate XL",
+      "dose_val": "200 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Vitamin D",
+      "dose_val": "2000 UNIT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "20 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Torsemide",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "2 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Morphine Sulfate",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "DiphenhydrAMINE",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "DiphenhydrAMINE",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "NS",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "150 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "10-15 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Nystatin Cream",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Albuterol Inhaler",
+      "dose_val": "2 PUFF",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "Fluticasone Propionate 110mcg",
+      "dose_val": "2 PUFF",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.125 mg",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

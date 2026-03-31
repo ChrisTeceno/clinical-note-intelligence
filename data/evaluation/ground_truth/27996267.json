@@ -1,0 +1,900 @@
+{
+  "hadm_id": 27996267,
+  "diagnoses": [
+    {
+      "icd_code": "T814XXA",
+      "description": "Infection following a procedure, initial encounter",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I5033",
+      "description": "Acute on chronic diastolic (congestive) heart failure",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "N184",
+      "description": "Chronic kidney disease, stage 4 (severe)",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "D62",
+      "description": "Acute posthemorrhagic anemia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E1152",
+      "description": "Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "F05",
+      "description": "Delirium due to known physiological condition",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "T8119XA",
+      "description": "Other postprocedural shock, initial encounter",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "T8131XA",
+      "description": "Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "I130",
+      "description": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Y832",
+      "description": "Surgical operation with anastomosis, bypass or graft as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "Y929",
+      "description": "Unspecified place or not applicable",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "E1122",
+      "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "Z66",
+      "description": "Do not resuscitate",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z515",
+      "description": "Encounter for palliative care",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "Z781",
+      "description": "Physical restraint status",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "R791",
+      "description": "Abnormal coagulation profile",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "B952",
+      "description": "Enterococcus as the cause of diseases classified elsewhere",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "Z1621",
+      "description": "Resistance to vancomycin",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "B9689",
+      "description": "Other specified bacterial agents as the cause of diseases classified elsewhere",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "Z1623",
+      "description": "Resistance to quinolones and fluoroquinolones",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "B954",
+      "description": "Other streptococcus as the cause of diseases classified elsewhere",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "L89899",
+      "description": "Pressure ulcer of other site, unspecified stage",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 24
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 25
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 26
+    },
+    {
+      "icd_code": "M109",
+      "description": "Gout, unspecified",
+      "seq_num": 27
+    },
+    {
+      "icd_code": "I4891",
+      "description": "Unspecified atrial fibrillation",
+      "seq_num": 28
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 29
+    },
+    {
+      "icd_code": "J449",
+      "description": "Chronic obstructive pulmonary disease, unspecified",
+      "seq_num": 30
+    },
+    {
+      "icd_code": "K219",
+      "description": "Gastro-esophageal reflux disease without esophagitis",
+      "seq_num": 31
+    },
+    {
+      "icd_code": "E11621",
+      "description": "Type 2 diabetes mellitus with foot ulcer",
+      "seq_num": 32
+    },
+    {
+      "icd_code": "L97529",
+      "description": "Non-pressure chronic ulcer of other part of left foot with unspecified severity",
+      "seq_num": 33
+    },
+    {
+      "icd_code": "R159",
+      "description": "Full incontinence of feces",
+      "seq_num": 34
+    },
+    {
+      "icd_code": "R197",
+      "description": "Diarrhea, unspecified",
+      "seq_num": 35
+    },
+    {
+      "icd_code": "R748",
+      "description": "Abnormal levels of other serum enzymes",
+      "seq_num": 36
+    },
+    {
+      "icd_code": "K5903",
+      "description": "Drug induced constipation",
+      "seq_num": 37
+    },
+    {
+      "icd_code": "T402X5A",
+      "description": "Adverse effect of other opioids, initial encounter",
+      "seq_num": 38
+    },
+    {
+      "icd_code": "Y92230",
+      "description": "Patient room in hospital as the place of occurrence of the external cause",
+      "seq_num": 39
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "0LBW0ZZ",
+      "description": "Excision of Left Foot Tendon, Open Approach"
+    },
+    {
+      "icd_code": "0JBP0ZZ",
+      "description": "Excision of Left Lower Leg Subcutaneous Tissue and Fascia, Open Approach"
+    },
+    {
+      "icd_code": "0JDM0ZZ",
+      "description": "Extraction of Left Upper Leg Subcutaneous Tissue and Fascia, Open Approach"
+    },
+    {
+      "icd_code": "0JDM0ZZ",
+      "description": "Extraction of Left Upper Leg Subcutaneous Tissue and Fascia, Open Approach"
+    },
+    {
+      "icd_code": "02HV33Z",
+      "description": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0JDP0ZZ",
+      "description": "Extraction of Left Lower Leg Subcutaneous Tissue and Fascia, Open Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Tiotropium Bromide",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Multivitamins W/minerals",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Albuterol 0.083% Neb Soln",
+      "dose_val": "1 NEB",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "BuPROPion",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ezetimibe",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Febuxostat",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Isosorbide Mononitrate",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metolazone",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Morphine Sulfate",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Omeprazole",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "OxyCODONE SR (OxyconTIN)",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Prasugrel",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Simethicone",
+      "dose_val": "80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "BuPROPion (Sustained Release)",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Digox",
+      "dose_val": "125 mcg",
+      "dose_unit": "",
+      "route": "ORAL"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.125 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Gabapentin",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "irbesartan",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "ORAL"
+    },
+    {
+      "drug": "Iso-Osmotic Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "112 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Linezolid",
+      "dose_val": "600 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Zinc Sulfate",
+      "dose_val": "220 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "NG"
+    },
+    {
+      "drug": "Albumin 5% (12.5g / 250mL)",
+      "dose_val": "12.5 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "15 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Lidocaine 1% (For PICC/Midline Insertions)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Meropenem",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen IV",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Orthopedic Solution",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Ciprofloxacin IV",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "MetroNIDAZOLE",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "200 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Soln",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "NORepinephrine",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phytonadione",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Methylprednisolone",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "17.2 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ascorbic Acid",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Gabapentin",
+      "dose_val": "200 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dexmedetomidine",
+      "dose_val": "0.4 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "20 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Torsemide",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Syringe (0.9% Sodium Chloride)",
+      "dose_val": "4 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "MethylPREDNISolone Sod Succ",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "PHENYLEPHrine",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Daptomycin",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "4 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "8 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Haloperidol",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "MethylPREDNISolone Sodium Succ",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "2 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.0625 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "325-650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10-20 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-15 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Torsemide",
+      "dose_val": "30 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "NS",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "10-15 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Collagenase Ointment",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Fluticasone Propionate 110mcg",
+      "dose_val": "2 PUFF",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "56 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Midazolam",
+      "dose_val": "1.5 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 5%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "D5 1/2NS",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

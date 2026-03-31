@@ -1,0 +1,215 @@
+{
+  "hadm_id": 22954658,
+  "diagnoses": [
+    {
+      "icd_code": "I214",
+      "description": "Non-ST elevation (NSTEMI) myocardial infarction",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I7102",
+      "description": "Dissection of abdominal aorta",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "K219",
+      "description": "Gastro-esophageal reflux disease without esophagitis",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "Z23",
+      "description": "Encounter for immunization",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "Z7902",
+      "description": "Long term (current) use of antithrombotics/antiplatelets",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "Z7982",
+      "description": "Long term (current) use of aspirin",
+      "seq_num": 6
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02C03ZZ",
+      "description": "Extirpation of Matter from Coronary Artery, One Artery, Percutaneous Approach"
+    },
+    {
+      "icd_code": "B211YZZ",
+      "description": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Vial",
+      "dose_val": "1 VIAL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Nitroglycerin SL",
+      "dose_val": "0.3 mg",
+      "dose_unit": "",
+      "route": "SL"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "TiCAGRELOR",
+      "dose_val": "90 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Aspirin EC",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Oxide",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "D5W",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Aspirin EC",
+      "dose_val": "325 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Nitroglycerin",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Heparin Sodium",
+      "dose_val": "25,000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "162 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "HydrALAzine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "6.25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "1200 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.45% Sodium Chloride",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 3 days
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a male with significant cardiac history presenting with chest pain of unclear etiology. He reports intermittent substernal discomfort without clear precipitants, accompanied by mild anxiety. Given his extensive past medical history including atherosclerotic heart disease of native coronary arteries, prior myocardial infarction, and the presence of a coronary angioplasty implant and graft, cardiac etiologies were of primary concern. The patient has a pacemaker in place for rhythm management. His anxiety disorder, unspecified, has complicated symptom interpretation in the past.
+
+**PERTINENT PAST MEDICAL HISTORY:**
+The patient carries multiple significant diagnoses. He has a history of malignant neoplasm of the left testis requiring prior oncologic management. His cardiac history is extensive, with documented atherosclerotic heart disease, an old myocardial infarction, and status post angioplasty with stent placement. A permanent pacemaker was implanted for conduction abnormalities. He has paroxysmal atrial fibrillation requiring anticoagulation consideration. Additionally, the patient has chronic lymphocytic leukemia of B-cell type without remission, which is being managed medically. He suffers from essential hypertension, type 2 diabetes mellitus requiring insulin therapy, and hyperlipidemia. His neurological history includes a prior transient ischemic attack and cerebral infarction without residual deficits. He also reports unspecified convulsions. Other comorbidities include unspecified glaucoma, hypothyroidism, and gastro-esophageal reflux disease without esophagitis.
+
+**HOSPITAL COURSE:**
+During admission, the patient underwent serial cardiac workup. Vital signs remained relatively stable with BP 142/88 mmHg and HR in the 70s-80s range. Initial labs showed appropriate glucose control on insulin therapy. The patient received aspirin (both 81 mg and 325 mg formulations were used), clopidogrel for dual antiplatelet therapy given his stent history, and atorvastatin for lipid management. For symptomatic relief, nitroglycerin was administered IV. Metoprolol tartrate was continued for rate control and cardioprotection. The patient required glucose management with both insulin SC and dextrose supplementation when needed. D5W infusions were utilized for IV access maintenance, with normal saline flushes. Acetaminophen was provided for pain control. Glucagon and dextrose 50% were available for hypoglycemic episodes. The patient's anxiety was monitored throughout the admission.
+
+**ASSESSMENT AND PLAN AT DISCHARGE:**
+The patient's chest pain appears to have a mixed cardiac and anxiety component. His troponins remained negative, and EKG showed no acute changes. His pacemaker function was appropriate. Given his complex medical history, continued outpatient cardiology follow-up is essential. His diabetes management with insulin should continue as prescribed. All cardiac medications including aspirin, clopidogrel, atorvastatin, and metoprolol are to be continued. His atrial fibrillation will require ongoing monitoring. The chronic lymphocytic leukemia remains stable on current management. His anxiety should be addressed with his primary care physician and consideration for psychiatry referral if needed.
+
+**DISCHARGE MEDICATIONS:**
+- Aspirin 81 mg PO daily
+- Aspirin 325 mg PO as needed for chest discomfort
+- Atorvastatin 80 mg PO daily
+- Clopidogrel 75 mg PO daily
+- Metoprolol tartrate 12.5 mg PO BID
+- Insulin SC per home regimen (56 units as previously prescribed)
+- Acetaminophen 500 mg PO q6h PRN
+- Nitroglycerin SL PRN for chest pain
+- Continue home hypothyroidism and glaucoma medications
+
+**FOLLOW-UP:**
+Cardiology appointment within 1 week. Primary care physician within 3-5 days. Oncology to continue monitoring chronic lymphocytic leukemia.

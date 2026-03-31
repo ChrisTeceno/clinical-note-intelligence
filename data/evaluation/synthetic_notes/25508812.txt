@@ -1,0 +1,33 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [REDACTED]  
+**ADMISSION DATE:** [REDACTED]  
+**DISCHARGE DATE:** [REDACTED]  
+**LENGTH OF STAY:** 5 days
+
+---
+
+**CHIEF COMPLAINT:**
+Dyspnea and hypoxemia
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [AGE]-year-old with significant past medical history including chronic obstructive pulmonary disease, myelodysplastic syndrome, and chronic pulmonary edema who presented with acute dyspnea and hypoxemia requiring hospitalization. On arrival, the pt was found to have low oxygen saturation in the setting of known pleural effusion and atelectasis. Given his complex pulmonary pathology, imaging and diagnostic procedures were pursued to better characterize the extent of his lung involvement and guide therapeutic intervention.
+
+**PAST MEDICAL HISTORY:**
+Notable for COPD, myelodysplastic syndrome on hydroxyurea therapy, type 2 diabetes mellitus, chronic pulmonary edema, hypothyroidism, major depressive disorder (single episode), history of breast malignancy (s/p prior treatment), hyperuricemia without tophaceous disease, and a remote history of nicotine dependence. The pt also has a history of splenic infarction. A do-not-resuscitate order is in place per pt/family wishes.
+
+**HOSPITAL COURSE:**
+During admission, the patient underwent diagnostic bronchoscopic drainage procedures of the left lower lung lobe and right middle lung lobe to evaluate the pleural effusions and atelectatic segments contributing to his hypoxemia. The procedures were tolerated reasonably well. Respiratory status improved modestly with drainage and aggressive pulmonary hygiene. Furosemide was administered (both IV 20 mg and 40 mg dosing) to help mobilize fluid given his chronic pulmonary edema. 
+
+Given his underlying myelodysplastic syndrome, the pt continued on hydroxyurea at varying doses (500 mg, 1000 mg, and 1500 mg PO) for disease management. Rasburicase was administered IV at doses of 3 mg and 6 mg to address hyperuricemia. Glucose management was addressed with insulin dosing and supplemental glucose gel and dextrose 50% IV as needed. Pain was managed with oxycodone 5 mg PO and tramadol 50 mg PO.
+
+Supportive medications were continued including tiotropium bromide inhaled, albuterol nebulizer therapy, pantoprazole for GI protection, levothyroxine for hypothyroidism, and escitalopram for mood support. Bowel regimen with polyethylene glycol, docusate, and senna was utilized. Statin therapy (simvastatin 5 mg) and vitamin supplementation (multivitamins, vitamin D 2000 units) rounded out the medication profile. Normal saline flushes and IV hydration with 0.9% sodium chloride were provided as needed. Glucagon was available for hypoglycemic management.
+
+**DISPOSITION:**
+The pt is discharged in stable condition with improved oxygenation compared to admission. Close outpatient follow-up is essential given his complex medical needs.
+
+**DISCHARGE MEDICATIONS:**
+Multivitamins, tiotropium bromide inhaled, oxycodone 5 mg PO, albuterol nebulizer solution, levothyroxine sodium 88 mcg PO, pantoprazole 40 mg PO, tramadol 50 mg PO, docusate sodium 100 mg PO, furosemide 40 mg IV, hydroxyurea (doses per oncology/hematology), rasburicase IV, escitalopram oxalate 5 mg PO, simvastatin 5 mg PO, vitamin D 2000 units PO, polyethylene glycol, senna, glucose gel PRN.
+
+**FOLLOW-UP:**
+Pt to follow up with pulmonology, hematology/oncology, and primary care within 1-2 weeks. DNR status to remain in effect.

@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files — raw and processed data should not be committed
+data/raw/*
+data/processed/*
+data/imaging/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/imaging/.gitkeep
+
+# CSV files in data directories
+data/**/*.csv
+
+# Parquet files
+*.parquet
+data/**/*.parquet
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# mypy
+.mypy_cache/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Alembic
+alembic/versions/__pycache__/
+*.db
+.claude/
+# Keep evaluation data out of repo
+Certs/
+data/evaluation/synthetic_notes/
+data/evaluation/selected_hadm_ids.json
+data/evaluation/run_history.json
+data/processed/

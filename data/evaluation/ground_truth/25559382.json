@@ -1,0 +1,153 @@
+{
+  "hadm_id": 25559382,
+  "diagnoses": [
+    {
+      "icd_code": "I25110",
+      "description": "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "Z951",
+      "description": "Presence of aortocoronary bypass graft",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "I110",
+      "description": "Hypertensive heart disease with heart failure",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "I5022",
+      "description": "Chronic systolic (congestive) heart failure",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "Z8673",
+      "description": "Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "Z7902",
+      "description": "Long term (current) use of antithrombotics/antiplatelets",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "R21",
+      "description": "Rash and other nonspecific skin eruption",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "J45909",
+      "description": "Unspecified asthma, uncomplicated",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "I4892",
+      "description": "Unspecified atrial flutter",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "I6522",
+      "description": "Occlusion and stenosis of left carotid artery",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "Z952",
+      "description": "Presence of prosthetic heart valve",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "Z8571",
+      "description": "Personal history of Hodgkin lymphoma",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z8546",
+      "description": "Personal history of malignant neoplasm of prostate",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "Z8249",
+      "description": "Family history of ischemic heart disease and other diseases of the circulatory system",
+      "seq_num": 17
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ramelteon",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Clopidogrel",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Isosorbide Mononitrate (Extended Release)",
+      "dose_val": "30 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Diltiazem Extended-Release",
+      "dose_val": "120 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Fish Oil (Omega 3)",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Niacin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "500-1000 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3-10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

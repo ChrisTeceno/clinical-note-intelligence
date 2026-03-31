@@ -1,0 +1,50 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [REDACTED]  
+**DISCHARGE DATE:** [REDACTED]  
+**LENGTH OF STAY:** 14 days
+
+---
+
+**PRINCIPAL DIAGNOSES & CLINICAL COURSE:**
+
+This is a complex case involving a patient with advanced amyotrophic lateral sclerosis (ALS) who presented with altered mental status and was found to have acute non-ST elevation myocardial infarction (NSTEMI). The patient has significant comorbidities including other frontotemporal dementia, schizoaffective disorder, essential hypertension, type 2 diabetes mellitus, and atherosclerotic heart disease of native coronary arteries. Additionally, the patient is ventilator-dependent given his advanced ALS with respiratory compromise, requiring long-term mechanical support.
+
+During this admission, the patient developed ventilator-associated pneumonia while on mechanical ventilation through his established tracheostomy. He also experienced unspecified convulsions requiring management with antiepileptic therapy. A foreign object was identified in the respiratory tract and required emergent intervention. The patient suffered from hypotension requiring vasopressor support and demonstrated evidence of pericardial disease noted on imaging. A urinary tract infection was diagnosed and treated. The altered mental status likely resulted from a combination of his acute cardiac event, infection, metabolic derangements, and underlying neuropsychiatric conditions.
+
+**VITAL SIGNS AT DISCHARGE:**  
+BP 128/76 mmHg, HR 82 bpm, RR 18, O₂ saturation 94% on supplemental oxygen via trach collar, Temperature 37.2°C.
+
+**LABORATORY VALUES (Final):**  
+WBC 7.2 K/μL, Hemoglobin 10.8 g/dL, Platelets 215 K/μL, Creatinine 1.1 mg/dL, BUN 22 mg/dL, Glucose 142 mg/dL, Potassium 4.3 mEq/L, Magnesium 2.0 mg/dL, Troponin I peaked at 2.4 ng/mL on day 2 of admission.
+
+---
+
+**PROCEDURES PERFORMED:**
+
+1. **Extirpation of Matter from Left Lower Lobe Bronchus via Natural or Artificial Opening Endoscopic** – Performed to clear obstructing material and manage aspiration risk.
+
+2. **Extirpation of Matter from Right Lower Lung Lobe via Natural or Artificial Opening Endoscopic** – Complementary bronchoscopic intervention to clear bilateral lower lobe involvement.
+
+3. **Respiratory Ventilation, 24-96 Consecutive Hours** – Mechanical ventilation support provided throughout hospitalization given ventilator dependence from progressive ALS and the acute infectious/cardiac complications.
+
+---
+
+**HOSPITAL COURSE SUMMARY:**
+
+The patient was admitted through the emergency department with acute altered mental status. Workup revealed NSTEMI with elevated cardiac biomarkers, EKG changes consistent with acute ischemia, and subsequent echocardiography showing pericardial effusion consistent with pericardial disease. Cardiac catheterization was deferred given the patient's overall clinical status and goals of care discussion with family.
+
+Antimicrobial coverage was initiated for ventilator-associated pneumonia with CefTAZidime IV. Dual antiplatelet and anticoagulation therapy was started for NSTEMI management using aspirin and heparin. The patient required aggressive fluid resuscitation and brief vasopressor support for hypotension management. Seizure activity occurred and was controlled with levetiracetam dosing. Magnesium sulfate and calcium gluconate supplementation was necessary due to electrolyte disturbances.
+
+Recurrent aspiration led to foreign body obstruction of the respiratory tract requiring bilateral bronchoscopic clearance procedures. Urinary tract infection was treated with appropriate IV antibiotics. Sedation management during mechanical ventilation included midazolam and lorazepam. Pain control utilized fentanyl citrate as needed. The patient's schizoaffective disorder was managed with quetiapine and sertraline. Blood glucose management involved insulin dosing, with glucagon and dextrose available for hypoglycemic episodes.
+
+GI protection was provided with lansoprazole and omeprazole. Bowel regimen included polyethylene glycol, docusate sodium, and guaifenesin for secretion clearance. Iron supplementation addressed anemia with ferrous sulfate liquid formulation. Beta-blockade with metoprolol tartrate and labetalol IV supported cardiac recovery and blood pressure management.
+
+---
+
+**DISCHARGE MEDICATIONS:**
+
+Insulin (variable dosing via subcutaneous injection per sliding scale), Aspirin 81 mg daily, Atorvastatin 80 mg daily, Metoprolol Tartrate 12.5 mg twice daily, Heparin 5000 UNIT subcutaneous twice daily, Levetiracetam 750 mg IV, Sertraline 150 mg daily, Quetiapine Fumarate 12.5 mg daily, Lansoprazole 30 mg daily, Omeprazole 40 mg daily, Docusate Sodium 100 mg daily, Ferrous Sulfate 300 mg daily, Polyethylene Glycol 17 g daily, Acetaminophen 1000 mg IV as needed, Guaifenesin 5-10 mL as needed, Acetylcysteine 20% 6-10 mL nebulized as needed, and IV fluid/electrolyte support per protocol.
+
+**DISPOSITION:** Patient discharged to inpatient rehabilitation facility with continued mechanical ventilation support, tracheostomy management, and 24-hour nursing care.

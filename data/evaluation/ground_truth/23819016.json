@@ -1,0 +1,358 @@
+{
+  "hadm_id": 23819016,
+  "diagnoses": [
+    {
+      "icd_code": "A4189",
+      "description": "Other specified sepsis",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "K859",
+      "description": "Acute pancreatitis, unspecified",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "R6521",
+      "description": "Severe sepsis with septic shock",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "R64",
+      "description": "Cachexia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E46",
+      "description": "Unspecified protein-calorie malnutrition",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "E872",
+      "description": "Acidosis",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "E5112",
+      "description": "Wet beriberi",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "G629",
+      "description": "Polyneuropathy, unspecified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "F1020",
+      "description": "Alcohol dependence, uncomplicated",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "K7010",
+      "description": "Alcoholic hepatitis without ascites",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "I129",
+      "description": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "N189",
+      "description": "Chronic kidney disease, unspecified",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z720",
+      "description": "Tobacco use",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "J45909",
+      "description": "Unspecified asthma, uncomplicated",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "M109",
+      "description": "Gout, unspecified",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "D649",
+      "description": "Anemia, unspecified",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "R410",
+      "description": "Disorientation, unspecified",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "Z86718",
+      "description": "Personal history of other venous thrombosis and embolism",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "Z9884",
+      "description": "Bariatric surgery status",
+      "seq_num": 21
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02HV33Z",
+      "description": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "FoLIC Acid",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Multivitamins W/minerals",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Sarna Lotion",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Vitamin B Complex",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "HydrOXYzine",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Allopurinol",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ciprofloxacin HCl",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Diazepam",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Oxide",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Thiamine",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "CefTRIAXone",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "TraZODone",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Piperacillin-Tazobactam",
+      "dose_val": "2.25 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "NORepinephrine",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Readi-Cat 2 (Barium Sulfate 2% Suspension)",
+      "dose_val": "900 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Thiamine",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "1 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "62.5 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Haloperidol",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Fluticasone Propionate NASAL",
+      "dose_val": "1 SPRY",
+      "dose_unit": "",
+      "route": "NU"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "1-2 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Artificial Tears",
+      "dose_val": "1-2 DROP",
+      "dose_unit": "",
+      "route": "BOTH EYES"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25-0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

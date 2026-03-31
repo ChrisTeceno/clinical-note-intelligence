@@ -1,0 +1,1112 @@
+{
+  "hadm_id": 22987108,
+  "diagnoses": [
+    {
+      "icd_code": "K7469",
+      "description": "Other cirrhosis of liver",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "K767",
+      "description": "Hepatorenal syndrome",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "J9600",
+      "description": "Acute respiratory failure, unspecified whether with hypoxia or hypercapnia",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "A4151",
+      "description": "Sepsis due to Escherichia coli [E. coli]",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "K661",
+      "description": "Hemoperitoneum",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "R571",
+      "description": "Hypovolemic shock",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "R6521",
+      "description": "Severe sepsis with septic shock",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "K659",
+      "description": "Peritonitis, unspecified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "N183",
+      "description": "Chronic kidney disease, stage 3 (moderate)",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "E43",
+      "description": "Unspecified severe protein-calorie malnutrition",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "K7201",
+      "description": "Acute and subacute hepatic failure with coma",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "T8119XA",
+      "description": "Other postprocedural shock, initial encounter",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "K7200",
+      "description": "Acute and subacute hepatic failure without coma",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "D684",
+      "description": "Acquired coagulation factor deficiency",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "J95851",
+      "description": "Ventilator associated pneumonia",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "R188",
+      "description": "Other ascites",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "D62",
+      "description": "Acute posthemorrhagic anemia",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "I4892",
+      "description": "Unspecified atrial flutter",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "K766",
+      "description": "Portal hypertension",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "E871",
+      "description": "Hypo-osmolality and hyponatremia",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "N390",
+      "description": "Urinary tract infection, site not specified",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "K567",
+      "description": "Ileus, unspecified",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "E872",
+      "description": "Acidosis",
+      "seq_num": 24
+    },
+    {
+      "icd_code": "J9811",
+      "description": "Atelectasis",
+      "seq_num": 25
+    },
+    {
+      "icd_code": "I97610",
+      "description": "Postprocedural hemorrhage of a circulatory system organ or structure following a cardiac catheterization",
+      "seq_num": 26
+    },
+    {
+      "icd_code": "T80219A",
+      "description": "Unspecified infection due to central venous catheter, initial encounter",
+      "seq_num": 27
+    },
+    {
+      "icd_code": "K7581",
+      "description": "Nonalcoholic steatohepatitis (NASH)",
+      "seq_num": 28
+    },
+    {
+      "icd_code": "I129",
+      "description": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+      "seq_num": 29
+    },
+    {
+      "icd_code": "D638",
+      "description": "Anemia in other chronic diseases classified elsewhere",
+      "seq_num": 30
+    },
+    {
+      "icd_code": "I25118",
+      "description": "Atherosclerotic heart disease of native coronary artery with other forms of angina pectoris",
+      "seq_num": 31
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 32
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 33
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 34
+    },
+    {
+      "icd_code": "R627",
+      "description": "Adult failure to thrive",
+      "seq_num": 35
+    },
+    {
+      "icd_code": "I4891",
+      "description": "Unspecified atrial fibrillation",
+      "seq_num": 36
+    },
+    {
+      "icd_code": "B9689",
+      "description": "Other specified bacterial agents as the cause of diseases classified elsewhere",
+      "seq_num": 37
+    },
+    {
+      "icd_code": "B9561",
+      "description": "Methicillin susceptible Staphylococcus aureus infection as the cause of diseases classified elsewhere",
+      "seq_num": 38
+    },
+    {
+      "icd_code": "Y848",
+      "description": "Other medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "seq_num": 39
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02H633Z",
+      "description": "Insertion of Infusion Device into Right Atrium, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0BH17EZ",
+      "description": "Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening"
+    },
+    {
+      "icd_code": "B211YZZ",
+      "description": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast"
+    },
+    {
+      "icd_code": "3E0G76Z",
+      "description": "Introduction of Nutritional Substance into Upper GI, Via Natural or Artificial Opening"
+    },
+    {
+      "icd_code": "0BCH8ZZ",
+      "description": "Extirpation of Matter from Lung Lingula, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "02HV33Z",
+      "description": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach"
+    },
+    {
+      "icd_code": "3E0436Z",
+      "description": "Introduction of Nutritional Substance into Central Vein, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0BCJ8ZZ",
+      "description": "Extirpation of Matter from Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "03LP3DZ",
+      "description": "Occlusion of Right Vertebral Artery with Intraluminal Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "B518YZA",
+      "description": "Fluoroscopy of Superior Vena Cava using Other Contrast, Guidance"
+    },
+    {
+      "icd_code": "0BC78ZZ",
+      "description": "Extirpation of Matter from Left Main Bronchus, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "04LK3DZ",
+      "description": "Occlusion of Right Femoral Artery with Intraluminal Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0W9G3ZX",
+      "description": "Drainage of Peritoneal Cavity, Percutaneous Approach, Diagnostic"
+    },
+    {
+      "icd_code": "0W9G3ZZ",
+      "description": "Drainage of Peritoneal Cavity, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0B968ZX",
+      "description": "Drainage of Right Lower Lobe Bronchus, Via Natural or Artificial Opening Endoscopic, Diagnostic"
+    },
+    {
+      "icd_code": "B214YZZ",
+      "description": "Fluoroscopy of Right Heart using Other Contrast"
+    },
+    {
+      "icd_code": "0BCJ8ZZ",
+      "description": "Extirpation of Matter from Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "5A1D60Z",
+      "description": "Performance of Urinary Filtration, Multiple"
+    },
+    {
+      "icd_code": "0W9G3ZZ",
+      "description": "Drainage of Peritoneal Cavity, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0BCJ8ZZ",
+      "description": "Extirpation of Matter from Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "0W9G3ZX",
+      "description": "Drainage of Peritoneal Cavity, Percutaneous Approach, Diagnostic"
+    },
+    {
+      "icd_code": "5A1955Z",
+      "description": "Respiratory Ventilation, Greater than 96 Consecutive Hours"
+    },
+    {
+      "icd_code": "0BC78ZZ",
+      "description": "Extirpation of Matter from Left Main Bronchus, Via Natural or Artificial Opening Endoscopic"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Multivitamins",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Tuberculin Protein",
+      "dose_val": "0.1 mL",
+      "dose_unit": "",
+      "route": "ID"
+    },
+    {
+      "drug": "Vial",
+      "dose_val": "1 VIAL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "FoLIC Acid",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lidocaine Jelly 2% (Urojet)",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Midodrine",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Phytonadione",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Albumin 25% (12.5g / 50mL)",
+      "dose_val": "12.5 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Aztreonam",
+      "dose_val": "2000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "CefePIME",
+      "dose_val": "1 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "CefePIME",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fenofibrate",
+      "dose_val": "48 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "50 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Heparin (CRRT Machine Priming)",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "DIALYS"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Meropenem",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoclopramide",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Midodrine",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Omeprazole",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Albumin 25% (12.5g / 50mL)",
+      "dose_val": "25 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Chlorhexidine Gluconate 0.12% Oral Rinse",
+      "dose_val": "15 mL",
+      "dose_unit": "",
+      "route": "ORAL"
+    },
+    {
+      "drug": "Diltiazem",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Fenofibrate",
+      "dose_val": "145 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Fleet Enema",
+      "dose_val": "1 Enema",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Lactulose",
+      "dose_val": "30 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Methylnaltrexone",
+      "dose_val": "12 mg",
+      "dose_unit": "",
+      "route": "SUBCUT"
+    },
+    {
+      "drug": "Metoclopramide",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Neomycin-Polymyxin-Bacitracin",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "PNEUMOcoccal 23-valent polysaccharide vaccine",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Rifaximin",
+      "dose_val": "550 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Bicarbonate",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Thiamine",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Diltiazem",
+      "dose_val": "125 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Docusate Sodium (Liquid)",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Fish Oil (Omega 3)",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Lidocaine 1% (For PICC/Midline Insertions)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Meropenem",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Micafungin",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Octreotide Acetate",
+      "dose_val": "100 mcg",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Pancrelipase 5000",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "0 MD to order daily dose",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Vitamin D",
+      "dose_val": "1000 UNIT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "5000 mL",
+      "dose_unit": "",
+      "route": "REPLACE"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "5000 mL",
+      "dose_unit": "",
+      "route": "DIALYS"
+    },
+    {
+      "drug": "Amiodarone",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Ciprofloxacin IV",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Lactulose Enema",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Morphine Sulfate",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Naloxone",
+      "dose_val": "0.04 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Soln",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "NORepinephrine",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium CITRATE 4%",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "DWELL"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Prismasate (B32 K2)",
+      "dose_val": "5000 mL",
+      "dose_unit": "",
+      "route": "DIALYS"
+    },
+    {
+      "drug": "Prismasate (B32 K2)",
+      "dose_val": "5000 mL",
+      "dose_unit": "",
+      "route": "REPLACE"
+    },
+    {
+      "drug": "Midodrine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Albumin 25% (12.5g / 50mL)",
+      "dose_val": "50 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phosphorus",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "sevelamer CARBONATE",
+      "dose_val": "1600 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Vasopressin",
+      "dose_val": "40 UNIT",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "20 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Methimazole",
+      "dose_val": "15 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Midodrine",
+      "dose_val": "15 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "NORepinephrine",
+      "dose_val": "16 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Albumin 25% (12.5g / 50mL)",
+      "dose_val": "100 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Amiodarone",
+      "dose_val": "600 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Albumin 25% (12.5g / 50mL)",
+      "dose_val": "62.5 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "PHENYLEPHrine",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "EPINEPHrine",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "PHENYLEPHrine",
+      "dose_val": "240 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Syringe",
+      "dose_val": "0.4 mL",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Diltiazem",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Octreotide Acetate",
+      "dose_val": "200 mcg",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "2 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium CITRATE 4%",
+      "dose_val": "1.2 mL",
+      "dose_unit": "",
+      "route": "DWELL"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "25 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Midazolam",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoclopramide",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ranitidine",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "10 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "SW",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "20 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Tobramycin Sulfate",
+      "dose_val": "180 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose (EXCEL BAG)",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Nystatin Cream",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "10 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "20 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Lorazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Tobramycin Sulfate",
+      "dose_val": "130 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "12 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Simethicone",
+      "dose_val": "40-80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Artificial Tear Ointment",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "BOTH EYES"
+    },
+    {
+      "drug": "Heparin Dwell (1000 Units/mL)",
+      "dose_val": "2000-8000 UNIT",
+      "dose_unit": "",
+      "route": "DWELL"
+    }
+  ]
+}

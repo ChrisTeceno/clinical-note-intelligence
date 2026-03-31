@@ -1,0 +1,47 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**MRN:** [Medical Record Number]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** 4 days  
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain with EKG changes
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [age]-year-old who presented to the emergency department with acute onset substernal chest pain radiating to the left arm, associated with dyspnea and diaphoresis. Initial 12-lead EKG demonstrated ST segment depressions in the anterolateral leads. Troponin I was elevated at 2.8 ng/mL, consistent with acute myocardial injury. The clinical presentation and biomarkers were consistent with a non-ST elevation myocardial infarction (NSTEMI). Notably, during initial imaging workup, the patient was found to have a concerning finding of dissection of the abdominal aorta on CT angiography, which complicated the acute coronary management strategy.
+
+**PAST MEDICAL HISTORY:**
+The patient carries a significant cardiac history with long-term use of antithrombotic and antiplatelet agents, specifically aspirin, which the patient had been taking chronically prior to admission. Additionally, the patient has a history of gastro-esophageal reflux disease without esophagitis, which has been managed medically.
+
+**PHYSICAL EXAMINATION:**
+Vital signs on admission: BP 168/92 mmHg, HR 102 bpm, RR 18, O2 sat 94% on room air. Patient appeared anxious and diaphoretic. Cardiovascular exam revealed tachycardia with regular rhythm, no murmurs. Lungs clear to auscultation bilaterally. Abdomen soft, nontender.
+
+**LABORATORY & IMAGING:**
+Troponin I peaked at 3.1 ng/mL on day 2. Electrolytes stable throughout admission. Magnesium 1.8 mEq/L. EKG showed persistent ST depressions. Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery with significant thrombus burden. CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery; vascular surgery consultation recommended conservative management with close hemodynamic monitoring given the acute MI.
+
+**HOSPITAL COURSE:**
+The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach. The procedure was successful with restoration of TIMI 3 flow. Given the dual pathology of acute NSTEMI and aortic dissection, the management strategy emphasized optimization of blood pressure control and heart rate reduction to minimize aortic stress while ensuring adequate coronary perfusion. The patient received IV nitroglycerin infusion, IV hydralazine for blood pressure management, IV magnesium sulfate for cardioprotection, and IV heparin for anticoagulation. Metoprolol tartrate was initiated for beta-blockade. The patient tolerated the procedures well without complications.
+
+Regarding the aortic dissection, vascular surgery determined that conservative medical management was appropriate given the Type B classification and hemodynamic stability. The patient remained stable throughout the hospital stay with no evidence of dissection progression or end-organ ischemia.
+
+As part of preventive care during this admission, the patient received the quadrivalent influenza vaccine.
+
+**MEDICATIONS AT DISCHARGE:**
+- Aspirin 81 mg PO daily (enteric-coated)
+- Aspirin EC 325 mg PO daily
+- Ticagrelor 90 mg PO BID
+- Atorvastatin 80 mg PO daily
+- Metoprolol tartrate 6.25 mg PO BID
+- Nitroglycerin 0.3 mg sublingual as needed for chest pain
+- Pantoprazole 40 mg PO daily (for reflux disease management)
+- Docusate sodium 100 mg PO daily
+- Magnesium oxide 400 mg PO daily
+- Senna 8.6 mg PO daily
+- Potassium chloride 40 mEq PO daily
+
+**DISPOSITION:**
+The patient is discharged in stable condition with outpatient follow-up arranged with cardiology and vascular surgery. Patient instructed on strict blood pressure control, activity limitations, and symptoms requiring urgent evaluation (recurrent chest pain, back pain, leg weakness).

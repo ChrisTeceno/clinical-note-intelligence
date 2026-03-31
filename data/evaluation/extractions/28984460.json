@@ -1,0 +1,95 @@
+{
+  "note_id": "28984460",
+  "diagnoses": [
+    {
+      "name": "Acute kidney injury, unspecified",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "Acute kidney injury, unspecified — Likely multifactorial etiology including volume depletion and hyperglycemic hyperosmolar state. Creatinine elevated acutely with corresponding rise in BUN."
+    },
+    {
+      "name": "Hyponatremia with hypo-osmolality",
+      "icd10_suggestion": "E87.1",
+      "confidence": "high",
+      "evidence_span": "Hyponatremia with hypo-osmolality — Severe hyponatremia (118 mEq/L) contributing significantly to altered mental status. Likely SIADH or euvolemic hyponatremia given clinical presentation."
+    },
+    {
+      "name": "Type 2 diabetes mellitus with hyperglycemia",
+      "icd10_suggestion": "E11.65",
+      "confidence": "high",
+      "evidence_span": "Type 2 diabetes mellitus with hyperglycemia — Poorly controlled glucose at 312 mg/dL on admission; patient on insulin therapy with suboptimal glycemic control."
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "Hypothyroidism — Stable; TSH within normal range on current levothyroxine dosing."
+    },
+    {
+      "name": "Sarcoidosis",
+      "icd10_suggestion": "D86.9",
+      "confidence": "high",
+      "evidence_span": "Sarcoidosis — Chronic condition, appears stable without acute pulmonary decompensation."
+    },
+    {
+      "name": "Hypercholesterolemia",
+      "icd10_suggestion": "E78.0",
+      "confidence": "high",
+      "evidence_span": "Hypercholesterolemia — Noted on recent lab work; not acutely contributing to current presentation."
+    },
+    {
+      "name": "Epilepsy, unspecified, not intractable",
+      "icd10_suggestion": "G40.909",
+      "confidence": "high",
+      "evidence_span": "Epilepsy, unspecified, not intractable — No seizure activity documented during admission; patient remained seizure-free."
+    }
+  ],
+  "procedures": [
+    {
+      "name": "IV hydration",
+      "cpt_suggestion": "96360",
+      "confidence": "high",
+      "evidence_span": "During hospitalization, the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia."
+    },
+    {
+      "name": "Serial sodium monitoring",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Sodium levels were monitored serially to avoid overcorrection."
+    },
+    {
+      "name": "Chest X-ray",
+      "cpt_suggestion": "71046",
+      "confidence": "high",
+      "evidence_span": "Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies."
+    }
+  ],
+  "medications": [
+    {
+      "name": "Insulin",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "the patient has a significant past medical history including type 2 diabetes mellitus for which he has been on insulin therapy"
+    },
+    {
+      "name": "Levothyroxine",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "hypothyroidism managed with levothyroxine"
+    },
+    {
+      "name": "Antiepileptic medications",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "epilepsy which has been controlled on current antiepileptic regimen"
+    }
+  ],
+  "chief_complaint": "Acute onset of altered mental status and fatigue",
+  "medical_specialty": "Internal Medicine / Hospitalist"
+}

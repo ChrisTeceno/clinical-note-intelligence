@@ -1,0 +1,56 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT INFORMATION:**
+Admission Date: [Date]
+Discharge Date: [Date]
+Length of Stay: [X] days
+
+---
+
+**CHIEF COMPLAINT:**
+Left lower extremity swelling and pain
+
+**HISTORY OF PRESENT ILLNESS:**
+Patient presented to the hospital with acute onset left lower extremity edema and pain. Imaging studies revealed acute embolism and thrombosis of the left iliac vein with associated vein compression. Given the acute nature of the thrombosis and the patient's clinical deterioration, the decision was made to pursue emergent endovascular intervention. Unfortunately, during the initial catheter-based procedure, an accidental puncture and laceration of a circulatory system organ occurred, which prompted immediate corrective intervention. The complication was managed acutely, and the patient's condition was felt to be directly related to the operative intervention itself rather than any misadventure. The patient remained hemodynamically stable throughout the hospital course despite this intraoperative complication.
+
+**PAST MEDICAL HISTORY:**
+Hypothyroidism, depression, dysuria
+
+**HOSPITAL COURSE:**
+The patient underwent several percutaneous endovascular procedures to address the left iliac venous thrombosis and associated compression. Initial therapy included dilation of the left common iliac vein with placement of an intraluminal device via percutaneous approach. Thrombolytic therapy was introduced via peripheral vein access, and extirpation of thrombus was performed from both the left femoral vein and left common iliac vein (procedure repeated to ensure complete clearance). An intraluminal device was placed into the inferior vena cava percutaneously for additional thrombotic protection. Finally, the left external iliac vein was dilated with placement of another intraluminal device.
+
+Anticoagulation was initiated with intravenous heparin sodium and alteplase infusions, with doses titrated based on coagulation studies. The patient also received enoxaparin sodium subcutaneously and was transitioned to warfarin with apixaban for long-term anticoagulation coverage. Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions, with acetaminophen used as adjunctive therapy. Clonazepam was administered for anxiety management. The patient received levothyroxine sodium for thyroid replacement at 75 mcg daily. Gastrointestinal protection was maintained with ranitidine, and bowel function was supported with polyethylene glycol and docusate sodium. Electrolyte repletion included potassium chloride (both oral and intravenous) and magnesium sulfate. Phenazopyridine was given for dysuria symptoms. Duloxetine was continued at 120 mg daily for depression management. Appropriate fluid resuscitation was provided with normal saline, lactated Ringer's solution, and dextrose-containing intravenous fluids.
+
+Vital signs remained stable throughout the admission, with appropriate pain control achieved. The patient tolerated oral intake by discharge and demonstrated good functional recovery.
+
+**DISCHARGE DIAGNOSES:**
+1. Acute embolism and thrombosis of left iliac vein
+2. Compression of left iliac vein
+3. Iatrogenic vascular injury during circulatory system procedure
+4. Complication of surgical procedure
+
+**PROCEDURES PERFORMED:**
+- Percutaneous dilation of left common iliac vein with intraluminal device placement
+- Percutaneous introduction of thrombolytic agent via peripheral vein
+- Percutaneous extirpation of thrombus from left femoral vein
+- Percutaneous insertion of intraluminal device into inferior vena cava
+- Percutaneous extirpation of matter from left common iliac vein (x2)
+- Percutaneous dilation of left external iliac vein with intraluminal device placement
+
+**DISCHARGE MEDICATIONS:**
+- Warfarin 5 mg orally once daily
+- Apixaban 10 mg orally twice daily
+- Enoxaparin sodium 90 mg subcutaneously daily
+- Levothyroxine sodium 75 mcg orally once daily
+- Duloxetine 120 mg orally once daily
+- Oxycodone immediate release 5–10 mg orally every 4–6 hours as needed for pain
+- Acetaminophen 650 mg orally every 6 hours as needed
+- Clonazepam 0.5 mg orally twice daily
+- Ranitidine 150 mg orally twice daily
+- Docusate sodium 100 mg orally twice daily
+- Polyethylene glycol 17 g orally once daily
+- Phenazopyridine 100 mg orally three times daily with food
+- Potassium chloride 20 mEq orally once daily
+
+**FOLLOW-UP INSTRUCTIONS:**
+Patient should follow up with Vascular Surgery in 2 weeks for wound check and vascular assessment. Anticoagulation labs (INR) should be drawn 3–5 days post-discharge. Patient to report any signs of bleeding, increased leg swelling, or chest pain immediately to the emergency department.

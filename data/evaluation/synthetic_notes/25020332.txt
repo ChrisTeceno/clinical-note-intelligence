@@ -1,0 +1,40 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 6 days
+
+---
+
+**CHIEF COMPLAINT:**
+Shortness of breath and hemoptysis
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [age]-year-old with significant pulmonary pathology who presented with progressive dyspnea and recurrent hemoptysis. Imaging and bronchoscopic evaluation revealed malignant neoplasms involving both the left main bronchus and right main bronchus, necessitating urgent intervention. The patient reports a long-standing history of cigarette use with nicotine dependence, which has contributed substantially to his underlying pulmonary disease. Additionally, he has experienced recurrent episodes of pneumonia historically. His clinical presentation was further complicated by dysphagia, making oral intake increasingly difficult, and an opportunistic candidiasis infection. Notably, the patient carries diagnoses of major depressive disorder, single episode unspecified, and anxiety disorder, unspecified, which required attention during this acute hospitalization. He also suffers from fibromyalgia and sciatica, both of which impact his functional status and pain management requirements.
+
+**HOSPITAL COURSE:**
+During the admission, the patient underwent a series of endoscopic bronchial procedures. Under direct visualization via bronchoscopy, inspection of the tracheobronchial tree was performed to assess the extent of disease. Diagnostic excisions were obtained from both the left main bronchus and right main bronchus to confirm malignancy. Therapeutic intervention included dilation of the left main bronchus with placement of an intraluminal device to restore airway patency, followed by destruction of malignant tissue at this site. Similar therapeutic measures were applied to the right main bronchus, which also received dilation with intraluminal device placement and destruction of diseased tissue via endoscopic approach.
+
+Vital signs remained relatively stable throughout hospitalization, with oxygen saturation maintained in the low-to-mid 90s on supplemental oxygen. The patient was initiated on broad-spectrum antimicrobial coverage with IV ampicillin-sulbactam given the infectious concerns. His candidiasis was treated with miconazole nitrate vaginal cream. Respiratory support included nebulized albuterol, ipratropium-albuterol combination nebulizer treatments, and guaifenesin-based cough suppressants to facilitate clearance of secretions. Pain management was achieved with morphine SR and PRN morphine liquid formulation, supplemented by lidocaine patches for localized musculoskeletal discomfort from his fibromyalgia and sciatica. Psychiatric medications were optimized, including escitalopram for depression, alprazolam for anxiety symptom management, and buspirone for additional anxiolytic coverage. Gabapentin was continued for neuropathic pain components. The patient received influenza vaccine during this encounter. Nicotine replacement via transdermal patch was provided to address his ongoing nicotine dependence while hospitalized. DVT prophylaxis was maintained with subcutaneous heparin.
+
+**DISCHARGE MEDICATIONS:**
+- Morphine SR 30 mg PO once daily
+- Morphine oral solution 5-10 mg PO/NG q2-3h as needed for breakthrough pain
+- Alprazolam 2 mg PO/NG daily for anxiety
+- Escitalopram 20 mg PO/NG daily
+- Buspirone 15 mg PO daily
+- Gabapentin 200 mg PO/NG daily
+- Acetaminophen 1000 mg PO/NG q6h
+- Guaifenesin ER 600-1200 mg PO BID
+- Guaifenesin-dextromethorphan 10 mL PO/NG q4-6h as needed
+- Albuterol 0.083% nebulizer solution 1 neb IH q4-6h
+- Ipratropium-albuterol 1 neb q6h
+- Lidocaine 5% patch 1 patch TD daily
+- Nicotine patch 21 mg TD daily
+- Ampicillin-sulbactam 3 g IV q6h (continue 7-day course)
+- Miconazole nitrate 2% vaginal cream as directed
+- Heparin 5000 units SC BID
+
+**DISPOSITION:**
+The patient is discharged to home with close oncology follow-up arranged. He will require continued pulmonary care and monitoring of his airway patency given the bilateral bronchial malignancies and recent interventions. Mental health support through psychiatry is strongly encouraged given his depression and anxiety diagnoses. He should avoid smoking and continue nicotine replacement as prescribed.

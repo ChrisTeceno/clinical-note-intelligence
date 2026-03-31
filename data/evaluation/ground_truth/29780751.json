@@ -1,0 +1,459 @@
+{
+  "hadm_id": 29780751,
+  "diagnoses": [
+    {
+      "icd_code": "B348",
+      "description": "Other viral infections of unspecified site",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "C9110",
+      "description": "Chronic lymphocytic leukemia of B-cell type not having achieved remission",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "E1136",
+      "description": "Type 2 diabetes mellitus with diabetic cataract",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "D6481",
+      "description": "Anemia due to antineoplastic chemotherapy",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "E871",
+      "description": "Hypo-osmolality and hyponatremia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "C6292",
+      "description": "Malignant neoplasm of left testis, unspecified whether descended or undescended",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "Z8673",
+      "description": "Personal history of transient ischemic attack (TIA), and cerebral infarction without residual deficits",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "I10",
+      "description": "Essential (primary) hypertension",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "Z9884",
+      "description": "Bariatric surgery status",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "G8929",
+      "description": "Other chronic pain",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "F419",
+      "description": "Anxiety disorder, unspecified",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "H409",
+      "description": "Unspecified glaucoma",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "Z950",
+      "description": "Presence of cardiac pacemaker",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "R002",
+      "description": "Palpitations",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "M7989",
+      "description": "Other specified soft tissue disorders",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "E669",
+      "description": "Obesity, unspecified",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "Z6834",
+      "description": "Body mass index (BMI) 34.0-34.9, adult",
+      "seq_num": 23
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sucralfate",
+      "dose_val": "1 gm",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "CloNIDine",
+      "dose_val": "0.1 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Clopidogrel",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "25 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Prochlorperazine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "FLUoxetine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Rivaroxaban",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "ZIPRASidone Hydrochloride",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acyclovir",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Prochlorperazine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Losartan Potassium",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Fenofibrate",
+      "dose_val": "145 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Gabapentin",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Oxide",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "56 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "OLANZapine (Disintegrating Tablet)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Divalproex (EXTended Release)",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Divalproex (EXTended Release)",
+      "dose_val": "250 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Heparin Flush (100 units/ml)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Cepacol (Sore Throat Lozenge)",
+      "dose_val": "2 LOZ",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "243 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Clindamycin",
+      "dose_val": "450 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "TraZODone",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Guaifenesin-Dextromethorphan",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "150 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

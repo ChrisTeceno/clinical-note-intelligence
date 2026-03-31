@@ -1,0 +1,321 @@
+Revise from: A7741   Ehrlichiosis chafeensis [E. chafeensis]
+Revise to:   A7741   Ehrlichiosis chaffeensis [E. chaffeensis]
+Add:         C810A   Nodular lymphocyte predominant Hodgkin lymphoma, in remission
+Add:         C811A   Nodular sclerosis Hodgkin lymphoma, in remission
+Add:         C812A   Mixed cellularity Hodgkin lymphoma, in remission
+Add:         C813A   Lymphocyte depleted Hodgkin lymphoma, in remission
+Add:         C814A   Lymphocyte-rich Hodgkin lymphoma, in remission
+Add:         C817A   Other Hodgkin lymphoma, in remission
+Add:         C819A   Hodgkin lymphoma, unspecified, in remission
+Add:         C820A   Follicular lymphoma grade I, in remission
+Add:         C821A   Follicular lymphoma grade II, in remission
+Add:         C822A   Follicular lymphoma grade III, unspecified, in remission
+Add:         C823A   Follicular lymphoma grade IIIa, in remission
+Add:         C824A   Follicular lymphoma grade IIIb, in remission
+Add:         C825A   Diffuse follicle center lymphoma, in remission
+Add:         C826A   Cutaneous follicle center lymphoma, in remission
+Add:         C828A   Other types of follicular lymphoma, in remission
+Add:         C829A   Follicular lymphoma, unspecified, in remission
+Add:         C830A   Small cell B-cell lymphoma, in remission
+Add:         C831A   Mantle cell lymphoma, in remission
+Delete:      C8339   Diffuse large B-cell lymphoma, extranodal and solid organ sites
+Add:         C83390  Primary central nervous system lymphoma
+Add:         C83398  Diffuse large B-cell lymphoma of other extranodal and solid organ sites
+Add:         C833A   Diffuse large B-cell lymphoma, in remission
+Add:         C835A   Lymphoblastic (diffuse) lymphoma, in remission
+Add:         C837A   Burkitt lymphoma, in remission
+Add:         C838A   Other non-follicular lymphoma, in remission
+Add:         C839A   Non-follicular (diffuse) lymphoma, unspecified, in remission
+Add:         C840A   Mycosis fungoides, in remission
+Add:         C841A   Sezary disease, in remission
+Add:         C844A   Peripheral T-cell lymphoma, not elsewhere classified, in remission
+Add:         C846A   Anaplastic large cell lymphoma, ALK-positive, in remission
+Add:         C847B   Anaplastic large cell lymphoma, ALK-negative, in remission
+Add:         C849A   Mature T/NK-cell lymphomas, unspecified, in remission
+Add:         C84AA   Cutaneous T-cell lymphoma, unspecified, in remission
+Add:         C84ZA   Other mature T/NK-cell lymphomas, in remission
+Add:         C851A   Unspecified B-cell lymphoma, in remission
+Add:         C852A   Mediastinal (thymic) large B-cell lymphoma, in remission
+Add:         C858A   Other specified types of non-Hodgkin lymphoma, in remission
+Add:         C859A   Non-Hodgkin lymphoma, unspecified, in remission
+Delete:      C860    Extranodal NK/T-cell lymphoma, nasal type
+Add:         C8600   Extranodal NK/T-cell lymphoma, nasal type not having achieved remission
+Add:         C8601   Extranodal NK/T-cell lymphoma, nasal type, in remission
+Delete:      C861    Hepatosplenic T-cell lymphoma
+Add:         C8610   Hepatosplenic T-cell lymphoma not having achieved remission
+Add:         C8611   Hepatosplenic T-cell lymphoma, in remission
+Delete:      C862    Enteropathy-type (intestinal) T-cell lymphoma
+Add:         C8620   Enteropathy-type (intestinal) T-cell lymphoma not having achieved remission
+Add:         C8621   Enteropathy-type (intestinal) T-cell lymphoma, in remission
+Delete:      C863    Subcutaneous panniculitis-like T-cell lymphoma
+Add:         C8630   Subcutaneous panniculitis-like T-cell lymphoma not having achieved remission
+Add:         C8631   Subcutaneous panniculitis-like T-cell lymphoma, in remission
+Delete:      C864    Blastic NK-cell lymphoma
+Add:         C8640   Blastic NK-cell lymphoma not having achieved remission
+Add:         C8641   Blastic NK-cell lymphoma, in remission
+Delete:      C865    Angioimmunoblastic T-cell lymphoma
+Add:         C8650   Angioimmunoblastic T-cell lymphoma not having achieved remission
+Add:         C8651   Angioimmunoblastic T-cell lymphoma, in remission
+Delete:      C866    Primary cutaneous CD30-positive T-cell proliferations
+Add:         C8660   Primary cutaneous CD30-positive T-cell proliferations not having achieved remission
+Add:         C8661   Primary cutaneous CD30-positive T-cell proliferations, in remission
+Delete:      C880    Waldenstrom macroglobulinemia
+Add:         C8800   Waldenstrom macroglobulinemia not having achieved remission
+Add:         C8801   Waldenstrom macroglobulinemia, in remission
+Delete:      C882    Heavy chain disease
+Add:         C8820   Heavy chain disease not having achieved remission
+Add:         C8821   Heavy chain disease, in remission
+Delete:      C883    Immunoproliferative small intestinal disease
+Add:         C8830   Immunoproliferative small intestinal disease not having achieved remission
+Add:         C8831   Immunoproliferative small intestinal disease, in remission
+Delete:      C884    Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma]
+Add:         C8840   Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma] not having achieved remission
+Add:         C8841   Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma], in remission
+Delete:      C888    Other malignant immunoproliferative diseases
+Add:         C8880   Other malignant immunoproliferative diseases not having achieved remission
+Add:         C8881   Other malignant immunoproliferative diseases, in remission
+Delete:      C889    Malignant immunoproliferative disease, unspecified
+Add:         C8890   Malignant immunoproliferative disease, unspecified not having achieved remission
+Add:         C8891   Malignant immunoproliferative disease, unspecified, in remission
+Add:         D6103   Fanconi anemia
+Add:         E10A0   Type 1 diabetes mellitus, presymptomatic, unspecified
+Add:         E10A1   Type 1 diabetes mellitus, presymptomatic, Stage 1
+Add:         E10A2   Type 1 diabetes mellitus, presymptomatic, Stage 2
+Add:         E16A1   Hypoglycemia level 1
+Add:         E16A2   Hypoglycemia level 2
+Add:         E16A3   Hypoglycemia level 3
+Delete:      E340    Carcinoid syndrome
+Add:         E3400   Carcinoid syndrome, unspecified
+Add:         E3401   Carcinoid heart syndrome
+Add:         E3409   Other carcinoid syndrome
+Delete:      E668    Other obesity
+Add:         E66811  Obesity, class 1
+Add:         E66812  Obesity, class 2
+Add:         E66813  Obesity, class 3
+Add:         E6689   Other obesity not elsewhere classified
+Add:         E74820  SLC13A5 Citrate Transporter Disorder
+Add:         E74829  Other disorders of citrate metabolism
+Add:         E8882   Obesity due to disruption of MC4R pathway
+Delete:      F5001   Anorexia nervosa, restricting type
+Add:         F50010  Anorexia nervosa, restricting type, mild
+Add:         F50011  Anorexia nervosa, restricting type, moderate
+Add:         F50012  Anorexia nervosa, restricting type, severe
+Add:         F50013  Anorexia nervosa, restricting type, extreme
+Add:         F50014  Anorexia nervosa, restricting type, in remission
+Add:         F50019  Anorexia nervosa, restricting type, unspecified
+Delete:      F5002   Anorexia nervosa, binge eating/purging type
+Add:         F50020  Anorexia nervosa, binge eating/purging type, mild
+Add:         F50021  Anorexia nervosa, binge eating/purging type, moderate
+Add:         F50022  Anorexia nervosa, binge eating/purging type, severe
+Add:         F50023  Anorexia nervosa, binge eating/purging type, extreme
+Add:         F50024  Anorexia nervosa, binge eating/purging type, in remission
+Add:         F50029  Anorexia nervosa, binge eating/purging type, unspecified
+Delete:      F502    Bulimia nervosa
+Add:         F5020   Bulimia nervosa, unspecified
+Add:         F5021   Bulimia nervosa, mild
+Add:         F5022   Bulimia nervosa, moderate
+Add:         F5023   Bulimia nervosa, severe
+Add:         F5024   Bulimia nervosa, extreme
+Add:         F5025   Bulimia nervosa, in remission
+Delete:      F5081   Binge eating disorder
+Add:         F50810  Binge eating disorder, mild
+Add:         F50811  Binge eating disorder, moderate
+Add:         F50812  Binge eating disorder, severe
+Add:         F50813  Binge eating disorder, extreme
+Add:         F50814  Binge eating disorder, in remission
+Add:         F50819  Binge eating disorder, unspecified
+Add:         F5083   Pica in adults
+Add:         F5084   Rumination disorder in adults
+Revise from: F9821   Rumination disorder of infancy
+Revise to:   F9821   Rumination disorder of infancy and childhood
+Add:         G40841  KCNQ2-related epilepsy, not intractable, with status epilepticus
+Add:         G40842  KCNQ2-related epilepsy, not intractable, without status epilepticus
+Add:         G40843  KCNQ2-related epilepsy, intractable, with status epilepticus
+Add:         G40844  KCNQ2-related epilepsy, intractable, without status epilepticus
+Delete:      G908    Other disorders of autonomic nervous system
+Add:         G9081   Serotonin syndrome
+Add:         G9089   Other disorders of autonomic nervous system
+Revise from: G9342   Megaloencephalic leukoencephalopathy with subcortical cysts
+Revise to:   G9342   Megalencephalic leukoencephalopathy with subcortical cysts
+Add:         G9345   Developmental and epileptic encephalopathy
+Revise from: H442A3  Degenerative myopia with choroidal neovascularization, bilateral eye
+Revise to:   H442A3  Degenerative myopia with choroidal neovascularization, bilateral
+Revise from: H442B3  Degenerative myopia with macular hole, bilateral eye
+Revise to:   H442B3  Degenerative myopia with macular hole, bilateral
+Revise from: H442C3  Degenerative myopia with retinal detachment, bilateral eye
+Revise to:   H442C3  Degenerative myopia with retinal detachment, bilateral
+Revise from: H442D3  Degenerative myopia with foveoschisis, bilateral eye
+Revise to:   H442D3  Degenerative myopia with foveoschisis, bilateral
+Revise from: H442E3  Degenerative myopia with other maculopathy, bilateral eye
+Revise to:   H442E3  Degenerative myopia with other maculopathy, bilateral
+Add:         I2603   Cement embolism of pulmonary artery with acute cor pulmonale
+Add:         I2604   Fat embolism of pulmonary artery with acute cor pulmonale
+Revise from: I2693   Single subsegmental pulmonary embolism without acute cor pulmonale
+Revise to:   I2693   Single subsegmental thrombotic pulmonary embolism without acute cor pulmonale
+Revise from: I2694   Multiple subsegmental pulmonary emboli without acute cor pulmonale
+Revise to:   I2694   Multiple subsegmental thrombotic pulmonary emboli without acute cor pulmonale
+Add:         I2695   Cement embolism of pulmonary artery without acute cor pulmonale
+Add:         I2696   Fat embolism of pulmonary artery without acute cor pulmonale
+Add:         J348200 Internal nasal valve collapse, unspecified
+Add:         J348201 Internal nasal valve collapse, static
+Add:         J348202 Internal nasal valve collapse, dynamic
+Add:         J348210 External nasal valve collapse, unspecified
+Add:         J348211 External nasal valve collapse, static
+Add:         J348212 External nasal valve collapse, dynamic
+Add:         J34829  Nasal valve collapse, unspecified
+Revise from: K589    Irritable bowel syndrome without diarrhea
+Revise to:   K589    Irritable bowel syndrome, unspecified
+Delete:      K603    Anal fistula
+Add:         K6030   Anal fistula, unspecified
+Add:         K60311  Anal fistula, simple, initial
+Add:         K60312  Anal fistula, simple, persistent
+Add:         K60313  Anal fistula, simple, recurrent
+Add:         K60319  Anal fistula, simple, unspecified
+Add:         K60321  Anal fistula, complex, initial
+Add:         K60322  Anal fistula, complex, persistent
+Add:         K60323  Anal fistula, complex, recurrent
+Add:         K60329  Anal fistula, complex, unspecified
+Delete:      K604    Rectal fistula
+Add:         K6040   Rectal fistula, unspecified
+Add:         K60411  Rectal fistula, simple, initial
+Add:         K60412  Rectal fistula, simple, persistent
+Add:         K60413  Rectal fistula, simple, recurrent
+Add:         K60419  Rectal fistula, simple, unspecified
+Add:         K60421  Rectal fistula, complex, initial
+Add:         K60422  Rectal fistula, complex, persistent
+Add:         K60423  Rectal fistula, complex, recurrent
+Add:         K60429  Rectal fistula, complex, unspecified
+Delete:      K605    Anorectal fistula
+Add:         K6050   Anorectal fistula, unspecified
+Add:         K60511  Anorectal fistula, simple, initial
+Add:         K60512  Anorectal fistula, simple, persistent
+Add:         K60513  Anorectal fistula, simple, recurrent
+Add:         K60519  Anorectal fistula, simple, unspecified
+Add:         K60521  Anorectal fistula, complex, initial
+Add:         K60522  Anorectal fistula, complex, persistent
+Add:         K60523  Anorectal fistula, complex, recurrent
+Add:         K60529  Anorectal fistula, complex, unspecified
+Delete:      L298    Other pruritus
+Add:         L2981   Cholestatic pruritus
+Add:         L2989   Other pruritus
+Delete:      L661    Lichen planopilaris
+Add:         L6610   Lichen planopilaris, unspecified
+Add:         L6611   Classic lichen planopilaris
+Add:         L6612   Frontal fibrosing alopecia
+Add:         L6619   Other lichen planopilaris
+Delete:      L668    Other cicatricial alopecia
+Add:         L6681   Central centrifugal cicatricial alopecia
+Add:         L6689   Other cicatricial alopecia
+Delete:      M5136   Other intervertebral disc degeneration, lumbar region
+Add:         M51360  Other intervertebral disc degeneration, lumbar region with discogenic back pain only
+Add:         M51361  Other intervertebral disc degeneration, lumbar region with lower extremity pain only
+Add:         M51362  Other intervertebral disc degeneration, lumbar region with discogenic back pain and lower extremity pain
+Add:         M51369  Other intervertebral disc degeneration, lumbar region without mention of lumbar back pain or lower extremity pain
+Delete:      M5137   Other intervertebral disc degeneration, lumbosacral region
+Add:         M51370  Other intervertebral disc degeneration, lumbosacral region with discogenic back pain only
+Add:         M51371  Other intervertebral disc degeneration, lumbosacral region with lower extremity pain only
+Add:         M51372  Other intervertebral disc degeneration, lumbosacral region with discogenic back pain and lower extremity pain
+Add:         M51379  Other intervertebral disc degeneration, lumbosacral region without mention of lumbar back pain or lower extremity pain
+Add:         M6285   Dysfunction of the multifidus muscles, lumbar region
+Delete:      M659    Synovitis and tenosynovitis, unspecified
+Add:         M6590   Unspecified synovitis and tenosynovitis, unspecified site
+Add:         M65911  Unspecified synovitis and tenosynovitis, right shoulder
+Add:         M65912  Unspecified synovitis and tenosynovitis, left shoulder
+Add:         M65919  Unspecified synovitis and tenosynovitis, unspecified shoulder
+Add:         M65921  Unspecified synovitis and tenosynovitis, right upper arm
+Add:         M65922  Unspecified synovitis and tenosynovitis, left upper arm
+Add:         M65929  Unspecified synovitis and tenosynovitis, unspecified upper arm
+Add:         M65931  Unspecified synovitis and tenosynovitis, right forearm
+Add:         M65932  Unspecified synovitis and tenosynovitis, left forearm
+Add:         M65939  Unspecified synovitis and tenosynovitis, unspecified forearm
+Add:         M65941  Unspecified synovitis and tenosynovitis, right hand
+Add:         M65942  Unspecified synovitis and tenosynovitis, left hand
+Add:         M65949  Unspecified synovitis and tenosynovitis, unspecified hand
+Add:         M65951  Unspecified synovitis and tenosynovitis, right thigh
+Add:         M65952  Unspecified synovitis and tenosynovitis, left thigh
+Add:         M65959  Unspecified synovitis and tenosynovitis, unspecified thigh
+Add:         M65961  Unspecified synovitis and tenosynovitis, right lower leg
+Add:         M65962  Unspecified synovitis and tenosynovitis, left lower leg
+Add:         M65969  Unspecified synovitis and tenosynovitis, unspecified lower leg
+Add:         M65971  Unspecified synovitis and tenosynovitis, right ankle and foot
+Add:         M65972  Unspecified synovitis and tenosynovitis, left ankle and foot
+Add:         M65979  Unspecified synovitis and tenosynovitis, unspecified ankle and foot
+Add:         M6598   Unspecified synovitis and tenosynovitis, other site
+Add:         M6599   Unspecified synovitis and tenosynovitis, multiple sites
+Revise from: Q1381   Rieger's anomaly
+Revise to:   Q1381   Rieger anomaly
+Delete:      Q238    Other congenital malformations of aortic and mitral valves
+Add:         Q2381   Bicuspid aortic valve
+Add:         Q2382   Congenital mitral valve cleft leaflet
+Add:         Q2388   Other congenital malformations of aortic and mitral valves
+Add:         Q8786   Kleefstra syndrome
+Add:         R4185   Anosognosia
+Add:         T45AX1A Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), initial encounter
+Add:         T45AX1D Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), subsequent encounter
+Add:         T45AX1S Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), sequela
+Add:         T45AX2A Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, initial encounter
+Add:         T45AX2D Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, subsequent encounter
+Add:         T45AX2S Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, sequela
+Add:         T45AX3A Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, initial encounter
+Add:         T45AX3D Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, subsequent encounter
+Add:         T45AX3S Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, sequela
+Add:         T45AX4A Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, initial encounter
+Add:         T45AX4D Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, subsequent encounter
+Add:         T45AX4S Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, sequela
+Add:         T45AX5A Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, initial encounter
+Add:         T45AX5D Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, subsequent encounter
+Add:         T45AX5S Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, sequela
+Add:         T45AX6A Underdosing of immune checkpoint inhibitors and immunostimulant drugs, initial encounter
+Add:         T45AX6D Underdosing of immune checkpoint inhibitors and immunostimulant drugs, subsequent encounter
+Add:         T45AX6S Underdosing of immune checkpoint inhibitors and immunostimulant drugs, sequela
+Add:         T81320A Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, initial encounter
+Add:         T81320D Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, subsequent encounter
+Add:         T81320S Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, sequela
+Add:         T81321A Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, initial encounter
+Add:         T81321D Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, subsequent encounter
+Add:         T81321S Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, sequela
+Add:         T81328A Disruption or dehiscence of closure of other specified internal operation (surgical) wound, initial encounter
+Add:         T81328D Disruption or dehiscence of closure of other specified internal operation (surgical) wound, subsequent encounter
+Add:         T81328S Disruption or dehiscence of closure of other specified internal operation (surgical) wound, sequela
+Add:         T81329A Deep disruption or dehiscence of operation wound, unspecified, initial encounter
+Add:         T81329D Deep disruption or dehiscence of operation wound, unspecified, subsequent encounter
+Add:         T81329S Deep disruption or dehiscence of operation wound, unspecified, sequela
+Delete:      T8132XA Disruption of internal operation (surgical) wound, not elsewhere classified, initial encounter
+Delete:      T8132XD Disruption of internal operation (surgical) wound, not elsewhere classified, subsequent encounter
+Delete:      T8132XS Disruption of internal operation (surgical) wound, not elsewhere classified, sequela
+Add:         Z151    Genetic susceptibility to epilepsy and neurodevelopmental disorders
+Add:         Z152    Genetic susceptibility to obesity
+Add:         Z1721   Progesterone receptor positive status
+Add:         Z1722   Progesterone receptor negative status
+Add:         Z1731   Human epidermal growth factor receptor 2 positive status
+Add:         Z1732   Human epidermal growth factor receptor 2 negative status
+Add:         Z17410  Hormone receptor positive with human epidermal growth factor receptor 2 positive status
+Add:         Z17411  Hormone receptor positive with human epidermal growth factor receptor 2 negative status
+Add:         Z17420  Hormone receptor negative with human epidermal growth factor receptor 2 positive status
+Add:         Z17421  Hormone receptor negative with human epidermal growth factor receptor 2 negative status
+Add:         Z51A    Encounter for sepsis aftercare
+Delete:      Z597    Insufficient social insurance and welfare support
+Add:         Z5971   Insufficient health insurance coverage
+Add:         Z5972   Insufficient welfare support
+Add:         Z67A1   Duffy null
+Add:         Z67A2   Duffy a positive
+Add:         Z67A3   Duffy b positive
+Add:         Z67A4   Duffy a and b positive
+Revise from: Z6854   Body mass index [BMI] pediatric, greater than or equal to 95th percentile for age
+Revise to:   Z6854   Body mass index [BMI] pediatric, 95th percentile for age to less than 120% of the 95th percentile for age
+Add:         Z6855   Body mass index [BMI] pediatric, 120% of the 95th percentile for age to less than 140% of the 95th percentile for age
+Add:         Z6856   Body mass index [BMI] pediatric, greater than or equal to 140% of the 95th percentile for age
+Add:         Z8372   Family history of familial adenomatous polyposis
+Delete:      Z86010  Personal history of colonic polyps
+Add:         Z860100 Personal history of colon polyps, unspecified
+Add:         Z860101 Personal history of adenomatous and serrated colon polyps
+Add:         Z860102 Personal history of hyperplastic colon polyps
+Add:         Z860109 Personal history of other colon polyps
+Add:         Z9226   Personal history of immune checkpoint inhibitor therapy
+
+Codes
+  74044 codes in icd10cm_order_2024.txt
+  74260 codes in icd10cm_order_2025.txt
+    252 additions
+     36 deletions
+     13 revisions

@@ -1,0 +1,61 @@
+# DISCHARGE SUMMARY
+
+**PATIENT:** [Admitted Date] – [Discharge Date]
+
+---
+
+## SUBJECTIVE
+
+Patient is a [age]-year-old male with significant past medical history including alcohol dependence complicated by hepatitis, chronic kidney disease, and prior bariatric surgery who presented to the hospital acutely ill. Patient reported abdominal pain and was found to be in severe distress. History of tobacco use and asthma also documented. Patient has had prior venous thromboembolic events. Given extensive comorbidities including hypothyroidism and gout, clinical assessment was complicated. Patient displayed disorientation upon admission.
+
+---
+
+## OBJECTIVE
+
+**Vital Signs on Admission:** Temperature 39.2°C, BP 78/45 mmHg, HR 118 bpm, RR 24, O2 sat 91% on RA
+
+**Labs:** WBC 22.1, lactate 6.8, creatinine 3.2 (baseline ~1.8), amylase 1,240, lipase 2,180, albumin 1.9, Hgb 7.2 g/dL (anemia noted), potassium 3.1, magnesium 1.4, phosphate 8.9
+
+**Imaging:** CT abdomen/pelvis revealed acute pancreatitis with peripancreatic fluid collection. No evidence of pseudoaneurysm or walled-off necrosis.
+
+**Clinical Course:** Patient rapidly deteriorated with hemodynamic instability requiring vasopressor support. Severe sepsis with septic shock developed secondary to gram-negative infection. Acute kidney injury progressed requiring careful fluid management and electrolyte repletion. Metabolic acidosis was present with pH 7.21 and base deficit of -8. Patient exhibited profound cachexia and protein-calorie malnutrition consistent with chronic alcohol use and underlying hepatic dysfunction. Findings consistent with wet beriberi (thiamine deficiency) and polyneuropathy were noted on examination. Alcoholic hepatitis without ascites documented on clinical and laboratory grounds. History of asthma remained uncomplicated during admission.
+
+---
+
+## ASSESSMENT
+
+54-year-old male admitted with other specified sepsis progressing to severe sepsis with septic shock secondary to acute pancreatitis. Patient with multiple complicating factors: acute kidney failure unspecified, cachexia with unspecified protein-calorie malnutrition, metabolic acidosis, and evidence of wet beriberi with polyneuropathy related to chronic alcohol dependence. Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout, and history of prior thromboembolism. Anemia requiring transfusion support. Disorientation resolved with treatment. Prior bariatric surgery status relevant to nutritional needs.
+
+---
+
+## PLAN
+
+**Procedures:** Percutaneous central venous catheter (Infusion Device into Superior Vena Cava) placed for hemodynamic monitoring and medication administration.
+
+**Medications on Discharge:**
+- Vancomycin 1 gm IV q12h (infection coverage)
+- Piperacillin-tazobactam 2.25 gm IV q6h (continued)
+- Ciprofloxacin HCl 500 mg PO/NG BID
+- Ceftriaxone 2 gm IV q12h
+- Heparin 5,000 units SC BID (VTE prophylaxis given history)
+- Levothyroxine sodium 62.5 mcg PO/NG daily
+- Thiamine 100 mg PO daily and thiamine 500 mg IV daily (beriberi treatment)
+- Folic acid 1 mg PO daily
+- Vitamin B complex 1 cap PO/NG daily
+- Multivitamins with minerals 1 tab PO daily
+- Magnesium oxide 400 mg PO/NG daily and magnesium sulfate 4 gm IV (repletion)
+- Potassium chloride 20 mEq PO daily
+- Allopurinol 100 mg PO/NG daily (gout)
+- Lorazepam 1-0.5 mg PO/NG for anxiety/alcohol withdrawal
+- Diazepam 10 mg IV prn
+- Haloperidol 2.5 mg PO daily (disorientation management)
+- Trazodone 25 mg PO/NG qhs
+- Hydroxyzine 25 mg PO/NG q6h prn
+- Hydromorphone 0.25-0.5 mg IV or 1-2 mg PO/NG q4-6h prn pain
+- Acetaminophen 650 mg PO q6h prn
+- Ondansetron 4 mg IV q8h prn nausea
+- Sarna lotion apply topically prn
+- Fluticasone propionate nasal spray 1 spray each nostril daily
+- Artificial tears 1-2 drops to both eyes TID prn
+
+**Discharge Instructions:** Continue aggressive fluid resuscitation and electrolyte repletion. Monitor renal function closely. Refer to addiction medicine and hepatology follow-up. Nutritional support essential given malnutrition and prior bariatric surgery. Monitor for complications of pancreatitis. Continue respiratory support for asthma as needed. DVT prophylaxis important given prior thromboembolism history.

@@ -1,0 +1,141 @@
+{
+  "hadm_id": 29281842,
+  "diagnoses": [
+    {
+      "icd_code": "J95851",
+      "description": "Ventilator associated pneumonia",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I214",
+      "description": "Non-ST elevation (NSTEMI) myocardial infarction",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "G9340",
+      "description": "Encephalopathy, unspecified",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "G1221",
+      "description": "Amyotrophic lateral sclerosis",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "N10",
+      "description": "Acute pyelonephritis",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "E873",
+      "description": "Alkalosis",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "D721",
+      "description": "Eosinophilia",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "J9610",
+      "description": "Chronic respiratory failure, unspecified whether with hypoxia or hypercapnia",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "Z9911",
+      "description": "Dependence on respirator [ventilator] status",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "N390",
+      "description": "Urinary tract infection, site not specified",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "B965",
+      "description": "Pseudomonas (aeruginosa) (mallei) (pseudomallei) as the cause of diseases classified elsewhere",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "Z430",
+      "description": "Encounter for attention to tracheostomy",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "Z4689",
+      "description": "Encounter for fitting and adjustment of other specified devices",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z931",
+      "description": "Gastrostomy status",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "B9620",
+      "description": "Unspecified Escherichia coli [E. coli] as the cause of diseases classified elsewhere",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "Z7982",
+      "description": "Long term (current) use of aspirin",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "N141",
+      "description": "Nephropathy induced by other drugs, medicaments and biological substances",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "T360X5A",
+      "description": "Adverse effect of penicillins, initial encounter",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "Y92230",
+      "description": "Patient room in hospital as the place of occurrence of the external cause",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "F259",
+      "description": "Schizoaffective disorder, unspecified",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "Z6829",
+      "description": "Body mass index (BMI) 29.0-29.9, adult",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "Z781",
+      "description": "Physical restraint status",
+      "seq_num": 24
+    },
+    {
+      "icd_code": "G40909",
+      "description": "Epilepsy, unspecified, not intractable, without status epilepticus",
+      "seq_num": 25
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02HV33Z",
+      "description": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach"
+    },
+    {
+      "icd_code": "5A1955Z",
+      "description": "Respiratory Ventilation, Greater than 96 Consecutive Hours"
+    }
+  ],
+  "medications": []
+}

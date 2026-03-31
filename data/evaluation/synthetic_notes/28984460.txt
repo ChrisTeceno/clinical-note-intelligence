@@ -1,0 +1,52 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [NAME] | **MRN:** [MRN] | **AGE:** [AGE]
+**ADMISSION DATE:** [DATE] | **DISCHARGE DATE:** [DATE]
+**ATTENDING PHYSICIAN:** [PHYSICIAN NAME]
+
+---
+
+## SUBJECTIVE
+
+Patient is a [age]-year-old individual admitted with acute onset of altered mental status and fatigue. Per collateral history, the patient had been experiencing progressive malaise over the preceding week, with recent complaints of nausea and decreased oral intake. The patient has a significant past medical history including type 2 diabetes mellitus for which he has been on insulin therapy, hypothyroidism managed with levothyroxine, sarcoidosis diagnosed several years prior, and epilepsy which has been controlled on current antiepileptic regimen. Additionally, the patient carries a diagnosis of hypercholesterolemia. Family reports no recent illness exposures or medication changes prior to admission.
+
+## OBJECTIVE
+
+**Vital Signs on Admission:** Temperature 36.8°C, BP 142/88 mmHg, HR 96 bpm, RR 18, O2 sat 97% RA
+
+**Physical Examination:** Patient appeared lethargic with delayed responses to questioning. HEENT examination was unremarkable. Cardiovascular exam revealed regular rate and rhythm without murmurs. Lungs were clear to auscultation bilaterally. Extremities showed no edema. Neurological exam was notable for mild confusion and lethargy but no focal deficits.
+
+**Laboratory Data on Admission:**
+- Sodium 118 mEq/L (critically low)
+- Osmolality 256 mOsm/kg (low)
+- Creatinine 3.2 mg/dL (baseline ~1.0)
+- BUN 58 mg/dL
+- Glucose 312 mg/dL
+- TSH 2.1 mIU/L (stable on current thyroid replacement)
+- Total cholesterol 248 mg/dL
+
+**Imaging:** Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies.
+
+## ASSESSMENT
+
+1. **Acute kidney injury, unspecified** — Likely multifactorial etiology including volume depletion and hyperglycemic hyperosmolar state. Creatinine elevated acutely with corresponding rise in BUN.
+
+2. **Hyponatremia with hypo-osmolality** — Severe hyponatremia (118 mEq/L) contributing significantly to altered mental status. Likely SIADH or euvolemic hyponatremia given clinical presentation.
+
+3. **Type 2 diabetes mellitus with hyperglycemia** — Poorly controlled glucose at 312 mg/dL on admission; patient on insulin therapy with suboptimal glycemic control.
+
+4. **Hypothyroidism** — Stable; TSH within normal range on current levothyroxine dosing.
+
+5. **Sarcoidosis** — Chronic condition, appears stable without acute pulmonary decompensation.
+
+6. **Hypercholesterolemia** — Noted on recent lab work; not acutely contributing to current presentation.
+
+7. **Epilepsy, unspecified, not intractable** — No seizure activity documented during admission; patient remained seizure-free.
+
+8. **Long-term insulin use** — Patient insulin-dependent for glycemic management.
+
+## PLAN
+
+During hospitalization, the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia. Sodium levels were monitored serially to avoid overcorrection. Insulin dosing was optimized with both basal and bolus adjustments to better control hyperglycemia. The patient's mental status improved significantly as sodium normalized and glucose came under better control. By discharge, creatinine had trended down to 1.8 mg/dL, sodium was 132 mEq/L, and glucose was in the 180–220 range. No seizures occurred during hospitalization.
+
+Patient is discharged in stable condition with instructions to follow up with nephrology regarding residual renal function, endocrinology for diabetes optimization, and primary care. Patient should continue current antiepileptic medications and thyroid replacement. Strict adherence to fluid restriction (1 L per day) is advised given hyponatremia risk. Patient counseled on signs of hyponatremia recurrence including headache, confusion, and seizure activity, with instruction to seek immediate evaluation if these occur.

@@ -1,0 +1,148 @@
+{
+  "note_id": "27996267",
+  "diagnoses": [
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
+    },
+    {
+      "name": "Diabetic peripheral angiopathy",
+      "icd10_suggestion": "E11.51",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
+    },
+    {
+      "name": "Gangrene",
+      "icd10_suggestion": "R02.9",
+      "confidence": "high",
+      "evidence_span": "diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
+    },
+    {
+      "name": "Diabetic foot ulcer",
+      "icd10_suggestion": "E11.621",
+      "confidence": "high",
+      "evidence_span": "diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
+    },
+    {
+      "name": "Chronic obstructive pulmonary disease",
+      "icd10_suggestion": "J44.9",
+      "confidence": "high",
+      "evidence_span": "chronic obstructive pulmonary disease"
+    },
+    {
+      "name": "Atrial fibrillation",
+      "icd10_suggestion": "I48.91",
+      "confidence": "high",
+      "evidence_span": "atrial fibrillation"
+    },
+    {
+      "name": "Advanced chronic kidney disease stage 4",
+      "icd10_suggestion": "N18.3",
+      "confidence": "high",
+      "evidence_span": "advanced chronic kidney disease (stage 4 severe)"
+    },
+    {
+      "name": "Hypertensive heart disease with chronic kidney disease",
+      "icd10_suggestion": "I13.10",
+      "confidence": "high",
+      "evidence_span": "hypertensive heart disease with chronic kidney disease"
+    },
+    {
+      "name": "Acute on chronic diastolic heart failure",
+      "icd10_suggestion": "I50.32",
+      "confidence": "high",
+      "evidence_span": "acute on chronic diastolic heart failure"
+    },
+    {
+      "name": "Acute kidney failure",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "acute kidney failure in the setting of baseline CKD stage 4"
+    },
+    {
+      "name": "Acute posthemorrhagic anemia",
+      "icd10_suggestion": "D62",
+      "confidence": "high",
+      "evidence_span": "acute posthemorrhagic anemia requiring transfusion support"
+    },
+    {
+      "name": "Postprocedural infection",
+      "icd10_suggestion": "T81.4",
+      "confidence": "high",
+      "evidence_span": "patient developed a postprocedural infection complicated by enterococcal and other bacterial pathogens"
+    },
+    {
+      "name": "Enterococcal infection",
+      "icd10_suggestion": "B95.2",
+      "confidence": "high",
+      "evidence_span": "postprocedural infection complicated by enterococcal and other bacterial pathogens"
+    },
+    {
+      "name": "Vancomycin resistant infection",
+      "icd10_suggestion": "Z16.21",
+      "confidence": "high",
+      "evidence_span": "resistance to vancomycin and fluoroquinolone antibiotics"
+    },
+    {
+      "name": "Postprocedural shock",
+      "icd10_suggestion": "T81.12",
+      "confidence": "high",
+      "evidence_span": "This infection was further complicated by postprocedural shock"
+    },
+    {
+      "name": "Wound disruption",
+      "icd10_suggestion": "T81.31",
+      "confidence": "high",
+      "evidence_span": "postprocedural shock, wound disruption"
+    },
+    {
+      "name": "Delirium",
+      "icd10_suggestion": "F05",
+      "confidence": "high",
+      "evidence_span": "delirium secondary to the acute physiological derangements"
+    },
+    {
+      "name": "Abnormal coagulation profile",
+      "icd10_suggestion": "D68.9",
+      "confidence": "high",
+      "evidence_span": "abnormal coagulation profile"
+    },
+    {
+      "name": "Pressure ulcer",
+      "icd10_suggestion": "L89.90",
+      "confidence": "high",
+      "evidence_span": "development of pressure ulcers"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Open excision of left foot tendon",
+      "cpt_suggestion": "20206",
+      "confidence": "high",
+      "evidence_span": "open excision of left foot tendon"
+    },
+    {
+      "name": "Open excision of left lower leg subcutaneous tissue and fascia",
+      "cpt_suggestion": "11010",
+      "confidence": "high",
+      "evidence_span": "open excision of left lower leg subcutaneous tissue and fascia"
+    },
+    {
+      "name": "Bilateral extraction of left upper leg subcutaneous tissue and fascia",
+      "cpt_suggestion": "11010",
+      "confidence": "medium",
+      "evidence_span": "bilateral extraction of left upper leg subcutaneous tissue and fascia"
+    },
+    {
+      "name": "Central venous catheter insertion into superior vena cava via percutaneous approach",
+      "cpt_suggestion": "36556",
+      "confidence": "high",
+      "evidence_span": "A central venous catheter (infusion device) was inserted into the superior vena cava via percutaneous approach"
+    }
+  ],
+  "medications": [],
+  "chief_complaint": "Left lower extremity gangrene with foot ulceration.",
+  "medical_specialty": null
+}

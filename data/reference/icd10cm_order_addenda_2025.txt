@@ -1,0 +1,410 @@
+Revise from: 1 A7741   Ehrlichiosis chafeensis [E. chafeensis]                      Ehrlichiosis chafeensis [E. chafeensis]
+Revise to:   1 A7741   Ehrlichiosis chaffeensis [E. chaffeensis]                    Ehrlichiosis chaffeensis [E. chaffeensis]
+Add:         1 C810A   Nodular lymphocyte predom Hodgkin lymphoma, in remission     Nodular lymphocyte predominant Hodgkin lymphoma, in remission
+Add:         1 C811A   Nodular sclerosis Hodgkin lymphoma, in remission             Nodular sclerosis Hodgkin lymphoma, in remission
+Add:         1 C812A   Mixed cellularity Hodgkin lymphoma, in remission             Mixed cellularity Hodgkin lymphoma, in remission
+Add:         1 C813A   Lymphocyte depleted Hodgkin lymphoma, in remission           Lymphocyte depleted Hodgkin lymphoma, in remission
+Add:         1 C814A   Lymphocyte-rich Hodgkin lymphoma, in remission               Lymphocyte-rich Hodgkin lymphoma, in remission
+Add:         1 C817A   Other Hodgkin lymphoma, in remission                         Other Hodgkin lymphoma, in remission
+Add:         1 C819A   Hodgkin lymphoma, unspecified, in remission                  Hodgkin lymphoma, unspecified, in remission
+Add:         1 C820A   Follicular lymphoma grade I, in remission                    Follicular lymphoma grade I, in remission
+Add:         1 C821A   Follicular lymphoma grade II, in remission                   Follicular lymphoma grade II, in remission
+Add:         1 C822A   Follicular lymphoma grade III, unspecified, in remission     Follicular lymphoma grade III, unspecified, in remission
+Add:         1 C823A   Follicular lymphoma grade IIIa, in remission                 Follicular lymphoma grade IIIa, in remission
+Add:         1 C824A   Follicular lymphoma grade IIIb, in remission                 Follicular lymphoma grade IIIb, in remission
+Add:         1 C825A   Diffuse follicle center lymphoma, in remission               Diffuse follicle center lymphoma, in remission
+Add:         1 C826A   Cutaneous follicle center lymphoma, in remission             Cutaneous follicle center lymphoma, in remission
+Add:         1 C828A   Other types of follicular lymphoma, in remission             Other types of follicular lymphoma, in remission
+Add:         1 C829A   Follicular lymphoma, unspecified, in remission               Follicular lymphoma, unspecified, in remission
+Add:         1 C830A   Small cell B-cell lymphoma, in remission                     Small cell B-cell lymphoma, in remission
+Add:         1 C831A   Mantle cell lymphoma, in remission                           Mantle cell lymphoma, in remission
+Delete:      1 C8339   Diffuse large B-cell lymphoma, extrnod and solid organ sites Diffuse large B-cell lymphoma, extranodal and solid organ sites
+Add:         0 C8339   Diffuse large B-cell lymphoma, extrnod and solid organ sites Diffuse large B-cell lymphoma, extranodal and solid organ sites
+Add:         1 C83390  Primary central nervous system lymphoma                      Primary central nervous system lymphoma
+Add:         1 C83398  Diffuse large B-cell lymph of extrnod and solid organ sites  Diffuse large B-cell lymphoma of other extranodal and solid organ sites
+Add:         1 C833A   Diffuse large B-cell lymphoma, in remission                  Diffuse large B-cell lymphoma, in remission
+Add:         1 C835A   Lymphoblastic (diffuse) lymphoma, in remission               Lymphoblastic (diffuse) lymphoma, in remission
+Add:         1 C837A   Burkitt lymphoma, in remission                               Burkitt lymphoma, in remission
+Add:         1 C838A   Other non-follicular lymphoma, in remission                  Other non-follicular lymphoma, in remission
+Add:         1 C839A   Non-follicular (diffuse) lymphoma, unspecified, in remission Non-follicular (diffuse) lymphoma, unspecified, in remission
+Add:         1 C840A   Mycosis fungoides, in remission                              Mycosis fungoides, in remission
+Add:         1 C841A   Sezary disease, in remission                                 Sezary disease, in remission
+Add:         1 C844A   Peripheral T-cell lymphoma, NEC, in remission                Peripheral T-cell lymphoma, not elsewhere classified, in remission
+Add:         1 C846A   Anaplastic large cell lymphoma, ALK-positive, in remission   Anaplastic large cell lymphoma, ALK-positive, in remission
+Add:         1 C847B   Anaplastic large cell lymphoma, ALK-negative, in remission   Anaplastic large cell lymphoma, ALK-negative, in remission
+Add:         1 C849A   Mature T/NK-cell lymphomas, unspecified, in remission        Mature T/NK-cell lymphomas, unspecified, in remission
+Add:         1 C84AA   Cutaneous T-cell lymphoma, unspecified, in remission         Cutaneous T-cell lymphoma, unspecified, in remission
+Add:         1 C84ZA   Other mature T/NK-cell lymphomas, in remission               Other mature T/NK-cell lymphomas, in remission
+Add:         1 C851A   Unspecified B-cell lymphoma, in remission                    Unspecified B-cell lymphoma, in remission
+Add:         1 C852A   Mediastinal (thymic) large B-cell lymphoma, in remission     Mediastinal (thymic) large B-cell lymphoma, in remission
+Add:         1 C858A   Other specified types of non-Hodgkin lymphoma, in remission  Other specified types of non-Hodgkin lymphoma, in remission
+Add:         1 C859A   Non-Hodgkin lymphoma, unspecified, in remission              Non-Hodgkin lymphoma, unspecified, in remission
+Delete:      1 C860    Extranodal NK/T-cell lymphoma, nasal type                    Extranodal NK/T-cell lymphoma, nasal type
+Add:         0 C860    Extranodal NK/T-cell lymphoma, nasal type                    Extranodal NK/T-cell lymphoma, nasal type
+Add:         1 C8600   Extranodal NK/T-cell lymphoma, nasal type not remission      Extranodal NK/T-cell lymphoma, nasal type not having achieved remission
+Add:         1 C8601   Extranodal NK/T-cell lymphoma, nasal type, in remission      Extranodal NK/T-cell lymphoma, nasal type, in remission
+Delete:      1 C861    Hepatosplenic T-cell lymphoma                                Hepatosplenic T-cell lymphoma
+Add:         0 C861    Hepatosplenic T-cell lymphoma                                Hepatosplenic T-cell lymphoma
+Add:         1 C8610   Hepatosplenic T-cell lymphoma not having achieved remission  Hepatosplenic T-cell lymphoma not having achieved remission
+Add:         1 C8611   Hepatosplenic T-cell lymphoma, in remission                  Hepatosplenic T-cell lymphoma, in remission
+Delete:      1 C862    Enteropathy-type (intestinal) T-cell lymphoma                Enteropathy-type (intestinal) T-cell lymphoma
+Add:         0 C862    Enteropathy-type (intestinal) T-cell lymphoma                Enteropathy-type (intestinal) T-cell lymphoma
+Add:         1 C8620   Enteropathy-type (intestinal) T-cell lymphoma not remission  Enteropathy-type (intestinal) T-cell lymphoma not having achieved remission
+Add:         1 C8621   Enteropathy-type (intestinal) T-cell lymphoma, in remission  Enteropathy-type (intestinal) T-cell lymphoma, in remission
+Delete:      1 C863    Subcutaneous panniculitis-like T-cell lymphoma               Subcutaneous panniculitis-like T-cell lymphoma
+Add:         0 C863    Subcutaneous panniculitis-like T-cell lymphoma               Subcutaneous panniculitis-like T-cell lymphoma
+Add:         1 C8630   Subcutaneous panniculitis-like T-cell lymphoma not remission Subcutaneous panniculitis-like T-cell lymphoma not having achieved remission
+Add:         1 C8631   Subcutaneous panniculitis-like T-cell lymphoma, in remission Subcutaneous panniculitis-like T-cell lymphoma, in remission
+Delete:      1 C864    Blastic NK-cell lymphoma                                     Blastic NK-cell lymphoma
+Add:         0 C864    Blastic NK-cell lymphoma                                     Blastic NK-cell lymphoma
+Add:         1 C8640   Blastic NK-cell lymphoma not having achieved remission       Blastic NK-cell lymphoma not having achieved remission
+Add:         1 C8641   Blastic NK-cell lymphoma, in remission                       Blastic NK-cell lymphoma, in remission
+Delete:      1 C865    Angioimmunoblastic T-cell lymphoma                           Angioimmunoblastic T-cell lymphoma
+Add:         0 C865    Angioimmunoblastic T-cell lymphoma                           Angioimmunoblastic T-cell lymphoma
+Add:         1 C8650   Angioimmunoblastic T-cell lymphoma not achieve remission     Angioimmunoblastic T-cell lymphoma not having achieved remission
+Add:         1 C8651   Angioimmunoblastic T-cell lymphoma, in remission             Angioimmunoblastic T-cell lymphoma, in remission
+Delete:      1 C866    Primary cutaneous CD30-positive T-cell proliferations        Primary cutaneous CD30-positive T-cell proliferations
+Add:         0 C866    Primary cutaneous CD30-positive T-cell proliferations        Primary cutaneous CD30-positive T-cell proliferations
+Add:         1 C8660   Primary cutaneous CD30-positive T-cell prolif not remission  Primary cutaneous CD30-positive T-cell proliferations not having achieved remission
+Add:         1 C8661   Primary cutaneous CD30-positive T-cell prolif, in remission  Primary cutaneous CD30-positive T-cell proliferations, in remission
+Delete:      1 C880    Waldenstrom macroglobulinemia                                Waldenstrom macroglobulinemia
+Add:         0 C880    Waldenstrom macroglobulinemia                                Waldenstrom macroglobulinemia
+Add:         1 C8800   Waldenstrom macroglobulinemia not having achieved remission  Waldenstrom macroglobulinemia not having achieved remission
+Add:         1 C8801   Waldenstrom macroglobulinemia, in remission                  Waldenstrom macroglobulinemia, in remission
+Delete:      1 C882    Heavy chain disease                                          Heavy chain disease
+Add:         0 C882    Heavy chain disease                                          Heavy chain disease
+Add:         1 C8820   Heavy chain disease not having achieved remission            Heavy chain disease not having achieved remission
+Add:         1 C8821   Heavy chain disease, in remission                            Heavy chain disease, in remission
+Delete:      1 C883    Immunoproliferative small intestinal disease                 Immunoproliferative small intestinal disease
+Add:         0 C883    Immunoproliferative small intestinal disease                 Immunoproliferative small intestinal disease
+Add:         1 C8830   Immunoproliferative small intestinal disease not remission   Immunoproliferative small intestinal disease not having achieved remission
+Add:         1 C8831   Immunoproliferative small intestinal disease, in remission   Immunoproliferative small intestinal disease, in remission
+Delete:      1 C884    Extrnod mrgnl zn B-cell lymph of mucosa-assoc lymphoid tiss  Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma]
+Add:         0 C884    Extrnod mrgnl zn B-cell lymph of mucosa-assoc lymphoid tiss  Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma]
+Add:         1 C8840   Extrnod mrgnl B-cell lymph mucosa-assoc lym tiss not remis   Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma] not having achieved remission
+Add:         1 C8841   Extrnod mrgnl B-cell lymph mucosa-assoc lym tiss, in remis   Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue [MALT-lymphoma], in remission
+Delete:      1 C888    Other malignant immunoproliferative diseases                 Other malignant immunoproliferative diseases
+Add:         0 C888    Other malignant immunoproliferative diseases                 Other malignant immunoproliferative diseases
+Add:         1 C8880   Other malignant immunoproliferative diseases not remission   Other malignant immunoproliferative diseases not having achieved remission
+Add:         1 C8881   Other malignant immunoproliferative diseases, in remission   Other malignant immunoproliferative diseases, in remission
+Delete:      1 C889    Malignant immunoproliferative disease, unspecified           Malignant immunoproliferative disease, unspecified
+Add:         0 C889    Malignant immunoproliferative disease, unspecified           Malignant immunoproliferative disease, unspecified
+Add:         1 C8890   Malignant immunoproliferative disease, unsp not remission    Malignant immunoproliferative disease, unspecified not having achieved remission
+Add:         1 C8891   Malignant immunoproliferative disease, unsp, in remission    Malignant immunoproliferative disease, unspecified, in remission
+Add:         1 D6103   Fanconi anemia                                               Fanconi anemia
+Add:         0 E10A    Type 1 diabetes mellitus, presymptomatic                     Type 1 diabetes mellitus, presymptomatic
+Add:         1 E10A0   Type 1 diabetes mellitus, presymptomatic, unspecified        Type 1 diabetes mellitus, presymptomatic, unspecified
+Add:         1 E10A1   Type 1 diabetes mellitus, presymptomatic, Stage 1            Type 1 diabetes mellitus, presymptomatic, Stage 1
+Add:         1 E10A2   Type 1 diabetes mellitus, presymptomatic, Stage 2            Type 1 diabetes mellitus, presymptomatic, Stage 2
+Add:         0 E16A    Hypoglycemia level                                           Hypoglycemia level
+Add:         1 E16A1   Hypoglycemia level 1                                         Hypoglycemia level 1
+Add:         1 E16A2   Hypoglycemia level 2                                         Hypoglycemia level 2
+Add:         1 E16A3   Hypoglycemia level 3                                         Hypoglycemia level 3
+Delete:      1 E340    Carcinoid syndrome                                           Carcinoid syndrome
+Add:         0 E340    Carcinoid syndrome                                           Carcinoid syndrome
+Add:         1 E3400   Carcinoid syndrome, unspecified                              Carcinoid syndrome, unspecified
+Add:         1 E3401   Carcinoid heart syndrome                                     Carcinoid heart syndrome
+Add:         1 E3409   Other carcinoid syndrome                                     Other carcinoid syndrome
+Delete:      1 E668    Other obesity                                                Other obesity
+Add:         0 E668    Other obesity                                                Other obesity
+Add:         0 E6681   Obesity class                                                Obesity class
+Add:         1 E66811  Obesity, class 1                                             Obesity, class 1
+Add:         1 E66812  Obesity, class 2                                             Obesity, class 2
+Add:         1 E66813  Obesity, class 3                                             Obesity, class 3
+Add:         1 E6689   Other obesity not elsewhere classified                       Other obesity not elsewhere classified
+Add:         0 E7482   Disorders of citrate metabolism                              Disorders of citrate metabolism
+Add:         1 E74820  SLC13A5 Citrate Transporter Disorder                         SLC13A5 Citrate Transporter Disorder
+Add:         1 E74829  Other disorders of citrate metabolism                        Other disorders of citrate metabolism
+Add:         1 E8882   Obesity due to disruption of MC4R pathway                    Obesity due to disruption of MC4R pathway
+Delete:      1 F5001   Anorexia nervosa, restricting type                           Anorexia nervosa, restricting type
+Add:         0 F5001   Anorexia nervosa, restricting type                           Anorexia nervosa, restricting type
+Add:         1 F50010  Anorexia nervosa, restricting type, mild                     Anorexia nervosa, restricting type, mild
+Add:         1 F50011  Anorexia nervosa, restricting type, moderate                 Anorexia nervosa, restricting type, moderate
+Add:         1 F50012  Anorexia nervosa, restricting type, severe                   Anorexia nervosa, restricting type, severe
+Add:         1 F50013  Anorexia nervosa, restricting type, extreme                  Anorexia nervosa, restricting type, extreme
+Add:         1 F50014  Anorexia nervosa, restricting type, in remission             Anorexia nervosa, restricting type, in remission
+Add:         1 F50019  Anorexia nervosa, restricting type, unspecified              Anorexia nervosa, restricting type, unspecified
+Delete:      1 F5002   Anorexia nervosa, binge eating/purging type                  Anorexia nervosa, binge eating/purging type
+Add:         0 F5002   Anorexia nervosa, binge eating/purging type                  Anorexia nervosa, binge eating/purging type
+Add:         1 F50020  Anorexia nervosa, binge eating/purging type, mild            Anorexia nervosa, binge eating/purging type, mild
+Add:         1 F50021  Anorexia nervosa, binge eating/purging type, moderate        Anorexia nervosa, binge eating/purging type, moderate
+Add:         1 F50022  Anorexia nervosa, binge eating/purging type, severe          Anorexia nervosa, binge eating/purging type, severe
+Add:         1 F50023  Anorexia nervosa, binge eating/purging type, extreme         Anorexia nervosa, binge eating/purging type, extreme
+Add:         1 F50024  Anorexia nervosa, binge eating/purging type, in remission    Anorexia nervosa, binge eating/purging type, in remission
+Add:         1 F50029  Anorexia nervosa, binge eating/purging type, unspecified     Anorexia nervosa, binge eating/purging type, unspecified
+Delete:      1 F502    Bulimia nervosa                                              Bulimia nervosa
+Add:         0 F502    Bulimia nervosa                                              Bulimia nervosa
+Add:         1 F5020   Bulimia nervosa, unspecified                                 Bulimia nervosa, unspecified
+Add:         1 F5021   Bulimia nervosa, mild                                        Bulimia nervosa, mild
+Add:         1 F5022   Bulimia nervosa, moderate                                    Bulimia nervosa, moderate
+Add:         1 F5023   Bulimia nervosa, severe                                      Bulimia nervosa, severe
+Add:         1 F5024   Bulimia nervosa, extreme                                     Bulimia nervosa, extreme
+Add:         1 F5025   Bulimia nervosa, in remission                                Bulimia nervosa, in remission
+Delete:      1 F5081   Binge eating disorder                                        Binge eating disorder
+Add:         0 F5081   Binge eating disorder                                        Binge eating disorder
+Add:         1 F50810  Binge eating disorder, mild                                  Binge eating disorder, mild
+Add:         1 F50811  Binge eating disorder, moderate                              Binge eating disorder, moderate
+Add:         1 F50812  Binge eating disorder, severe                                Binge eating disorder, severe
+Add:         1 F50813  Binge eating disorder, extreme                               Binge eating disorder, extreme
+Add:         1 F50814  Binge eating disorder, in remission                          Binge eating disorder, in remission
+Add:         1 F50819  Binge eating disorder, unspecified                           Binge eating disorder, unspecified
+Add:         1 F5083   Pica in adults                                               Pica in adults
+Add:         1 F5084   Rumination disorder in adults                                Rumination disorder in adults
+Revise from: 1 F9821   Rumination disorder of infancy                               Rumination disorder of infancy
+Revise to:   1 F9821   Rumination disorder of infancy and childhood                 Rumination disorder of infancy and childhood
+Add:         0 G4084   KCNQ2-related epilepsy                                       KCNQ2-related epilepsy
+Add:         1 G40841  KCNQ2-related epilepsy, not intractable, with stat epi       KCNQ2-related epilepsy, not intractable, with status epilepticus
+Add:         1 G40842  KCNQ2-related epilepsy, not intractable, without stat epi    KCNQ2-related epilepsy, not intractable, without status epilepticus
+Add:         1 G40843  KCNQ2-related epilepsy, intractable, with status epilepticus KCNQ2-related epilepsy, intractable, with status epilepticus
+Add:         1 G40844  KCNQ2-related epilepsy, intractable, without stat epi        KCNQ2-related epilepsy, intractable, without status epilepticus
+Delete:      1 G908    Other disorders of autonomic nervous system                  Other disorders of autonomic nervous system
+Add:         0 G908    Other disorders of autonomic nervous system                  Other disorders of autonomic nervous system
+Add:         1 G9081   Serotonin syndrome                                           Serotonin syndrome
+Add:         1 G9089   Other disorders of autonomic nervous system                  Other disorders of autonomic nervous system
+Revise from: 1 G9342   Megaloencephalic leukoencephalopathy with subcortical cysts  Megaloencephalic leukoencephalopathy with subcortical cysts
+Revise to:   1 G9342   Megalencephalic leukoencephalopathy with subcortical cysts   Megalencephalic leukoencephalopathy with subcortical cysts
+Add:         1 G9345   Developmental and epileptic encephalopathy                   Developmental and epileptic encephalopathy
+Revise from: 1 H442A3  Degeneratv myopia with choroidal neovascularization, bi eye  Degenerative myopia with choroidal neovascularization, bilateral eye
+Revise to:   1 H442A3  Degeneratv myopia with choroidal neovascularization, bi      Degenerative myopia with choroidal neovascularization, bilateral
+Revise from: 1 H442B3  Degenerative myopia with macular hole, bilateral eye         Degenerative myopia with macular hole, bilateral eye
+Revise to:   1 H442B3  Degenerative myopia with macular hole, bilateral             Degenerative myopia with macular hole, bilateral
+Revise from: 1 H442C3  Degenerative myopia with retinal detachment, bilateral eye   Degenerative myopia with retinal detachment, bilateral eye
+Revise to:   1 H442C3  Degenerative myopia with retinal detachment, bilateral       Degenerative myopia with retinal detachment, bilateral
+Revise from: 1 H442D3  Degenerative myopia with foveoschisis, bilateral eye         Degenerative myopia with foveoschisis, bilateral eye
+Revise to:   1 H442D3  Degenerative myopia with foveoschisis, bilateral             Degenerative myopia with foveoschisis, bilateral
+Revise from: 1 H442E3  Degenerative myopia with other maculopathy, bilateral eye    Degenerative myopia with other maculopathy, bilateral eye
+Revise to:   1 H442E3  Degenerative myopia with other maculopathy, bilateral        Degenerative myopia with other maculopathy, bilateral
+Add:         1 I2603   Cement embolism of pulmonary artery with acute cor pulmonale Cement embolism of pulmonary artery with acute cor pulmonale
+Add:         1 I2604   Fat embolism of pulmonary artery with acute cor pulmonale    Fat embolism of pulmonary artery with acute cor pulmonale
+Revise from: 1 I2693   Single subsegmental pulmon emblsm w/o acute cor pulmonale    Single subsegmental pulmonary embolism without acute cor pulmonale
+Revise to:   1 I2693   Sing subsegmental throm pulm emblsm w/o acute cor pulmonale  Single subsegmental thrombotic pulmonary embolism without acute cor pulmonale
+Revise from: 1 I2694   Mult subsegmental pulmon emboli without acute cor pulmonale  Multiple subsegmental pulmonary emboli without acute cor pulmonale
+Revise to:   1 I2694   Mult subsegmental throm pulm emboli w/o acute cor pulmonale  Multiple subsegmental thrombotic pulmonary emboli without acute cor pulmonale
+Add:         1 I2695   Cement embolism of pulm artery without acute cor pulmonale   Cement embolism of pulmonary artery without acute cor pulmonale
+Add:         1 I2696   Fat embolism of pulmonary artery without acute cor pulmonale Fat embolism of pulmonary artery without acute cor pulmonale
+Add:         0 J3482   Nasal valve collapse                                         Nasal valve collapse
+Add:         0 J34820  Internal nasal valve collapse                                Internal nasal valve collapse
+Add:         1 J348200 Internal nasal valve collapse, unspecified                   Internal nasal valve collapse, unspecified
+Add:         1 J348201 Internal nasal valve collapse, static                        Internal nasal valve collapse, static
+Add:         1 J348202 Internal nasal valve collapse, dynamic                       Internal nasal valve collapse, dynamic
+Add:         0 J34821  External nasal valve collapse                                External nasal valve collapse
+Add:         1 J348210 External nasal valve collapse, unspecified                   External nasal valve collapse, unspecified
+Add:         1 J348211 External nasal valve collapse, static                        External nasal valve collapse, static
+Add:         1 J348212 External nasal valve collapse, dynamic                       External nasal valve collapse, dynamic
+Add:         1 J34829  Nasal valve collapse, unspecified                            Nasal valve collapse, unspecified
+Revise from: 1 K589    Irritable bowel syndrome without diarrhea                    Irritable bowel syndrome without diarrhea
+Revise to:   1 K589    Irritable bowel syndrome, unspecified                        Irritable bowel syndrome, unspecified
+Delete:      1 K603    Anal fistula                                                 Anal fistula
+Add:         0 K603    Anal fistula                                                 Anal fistula
+Add:         1 K6030   Anal fistula, unspecified                                    Anal fistula, unspecified
+Add:         0 K6031   Anal fistula, simple                                         Anal fistula, simple
+Add:         1 K60311  Anal fistula, simple, initial                                Anal fistula, simple, initial
+Add:         1 K60312  Anal fistula, simple, persistent                             Anal fistula, simple, persistent
+Add:         1 K60313  Anal fistula, simple, recurrent                              Anal fistula, simple, recurrent
+Add:         1 K60319  Anal fistula, simple, unspecified                            Anal fistula, simple, unspecified
+Add:         0 K6032   Anal fistula, complex                                        Anal fistula, complex
+Add:         1 K60321  Anal fistula, complex, initial                               Anal fistula, complex, initial
+Add:         1 K60322  Anal fistula, complex, persistent                            Anal fistula, complex, persistent
+Add:         1 K60323  Anal fistula, complex, recurrent                             Anal fistula, complex, recurrent
+Add:         1 K60329  Anal fistula, complex, unspecified                           Anal fistula, complex, unspecified
+Delete:      1 K604    Rectal fistula                                               Rectal fistula
+Add:         0 K604    Rectal fistula                                               Rectal fistula
+Add:         1 K6040   Rectal fistula, unspecified                                  Rectal fistula, unspecified
+Add:         0 K6041   Rectal fistula, simple                                       Rectal fistula, simple
+Add:         1 K60411  Rectal fistula, simple, initial                              Rectal fistula, simple, initial
+Add:         1 K60412  Rectal fistula, simple, persistent                           Rectal fistula, simple, persistent
+Add:         1 K60413  Rectal fistula, simple, recurrent                            Rectal fistula, simple, recurrent
+Add:         1 K60419  Rectal fistula, simple, unspecified                          Rectal fistula, simple, unspecified
+Add:         0 K6042   Rectal fistula, complex                                      Rectal fistula, complex
+Add:         1 K60421  Rectal fistula, complex, initial                             Rectal fistula, complex, initial
+Add:         1 K60422  Rectal fistula, complex, persistent                          Rectal fistula, complex, persistent
+Add:         1 K60423  Rectal fistula, complex, recurrent                           Rectal fistula, complex, recurrent
+Add:         1 K60429  Rectal fistula, complex, unspecified                         Rectal fistula, complex, unspecified
+Delete:      1 K605    Anorectal fistula                                            Anorectal fistula
+Add:         0 K605    Anorectal fistula                                            Anorectal fistula
+Add:         1 K6050   Anorectal fistula, unspecified                               Anorectal fistula, unspecified
+Add:         0 K6051   Anorectal fistula, simple                                    Anorectal fistula, simple
+Add:         1 K60511  Anorectal fistula, simple, initial                           Anorectal fistula, simple, initial
+Add:         1 K60512  Anorectal fistula, simple, persistent                        Anorectal fistula, simple, persistent
+Add:         1 K60513  Anorectal fistula, simple, recurrent                         Anorectal fistula, simple, recurrent
+Add:         1 K60519  Anorectal fistula, simple, unspecified                       Anorectal fistula, simple, unspecified
+Add:         0 K6052   Anorectal fistula, complex                                   Anorectal fistula, complex
+Add:         1 K60521  Anorectal fistula, complex, initial                          Anorectal fistula, complex, initial
+Add:         1 K60522  Anorectal fistula, complex, persistent                       Anorectal fistula, complex, persistent
+Add:         1 K60523  Anorectal fistula, complex, recurrent                        Anorectal fistula, complex, recurrent
+Add:         1 K60529  Anorectal fistula, complex, unspecified                      Anorectal fistula, complex, unspecified
+Delete:      1 L298    Other pruritus                                               Other pruritus
+Add:         0 L298    Other pruritus                                               Other pruritus
+Add:         1 L2981   Cholestatic pruritus                                         Cholestatic pruritus
+Add:         1 L2989   Other pruritus                                               Other pruritus
+Delete:      1 L661    Lichen planopilaris                                          Lichen planopilaris
+Add:         0 L661    Lichen planopilaris                                          Lichen planopilaris
+Add:         1 L6610   Lichen planopilaris, unspecified                             Lichen planopilaris, unspecified
+Add:         1 L6611   Classic lichen planopilaris                                  Classic lichen planopilaris
+Add:         1 L6612   Frontal fibrosing alopecia                                   Frontal fibrosing alopecia
+Add:         1 L6619   Other lichen planopilaris                                    Other lichen planopilaris
+Delete:      1 L668    Other cicatricial alopecia                                   Other cicatricial alopecia
+Add:         0 L668    Other cicatricial alopecia                                   Other cicatricial alopecia
+Add:         1 L6681   Central centrifugal cicatricial alopecia                     Central centrifugal cicatricial alopecia
+Add:         1 L6689   Other cicatricial alopecia                                   Other cicatricial alopecia
+Delete:      1 M5136   Other intervertebral disc degeneration, lumbar region        Other intervertebral disc degeneration, lumbar region
+Add:         0 M5136   Other intervertebral disc degeneration, lumbar region        Other intervertebral disc degeneration, lumbar region
+Add:         1 M51360  Other intvrt disc degen, lum rgn with discog back pain only  Other intervertebral disc degeneration, lumbar region with discogenic back pain only
+Add:         1 M51361  Other intvrt disc degen, lum region with low extrm pain only Other intervertebral disc degeneration, lumbar region with lower extremity pain only
+Add:         1 M51362  Oth intvrt disc degen, lum rgn w discog bck & lw extrm pain  Other intervertebral disc degeneration, lumbar region with discogenic back pain and lower extremity pain
+Add:         1 M51369  Oth intvrt disc degen, lum rgn w/o lum bck or lw extrm pain  Other intervertebral disc degeneration, lumbar region without mention of lumbar back pain or lower extremity pain
+Delete:      1 M5137   Other intervertebral disc degeneration, lumbosacral region   Other intervertebral disc degeneration, lumbosacral region
+Add:         0 M5137   Other intervertebral disc degeneration, lumbosacral region   Other intervertebral disc degeneration, lumbosacral region
+Add:         1 M51370  Oth intvrt disc degen, lumbosacr rgn w discog bck pain only  Other intervertebral disc degeneration, lumbosacral region with discogenic back pain only
+Add:         1 M51371  Oth intvrt disc degen, lumbosacr rgn w low extrm pain only   Other intervertebral disc degeneration, lumbosacral region with lower extremity pain only
+Add:         1 M51372  Oth intvrt disc degen, lumbosacr w discog bck & lw extrm pn  Other intervertebral disc degeneration, lumbosacral region with discogenic back pain and lower extremity pain
+Add:         1 M51379  Oth intvrt disc degen, lumbosacr w/o lum bck or lw extrm pn  Other intervertebral disc degeneration, lumbosacral region without mention of lumbar back pain or lower extremity pain
+Add:         1 M6285   Dysfunction of the multifidus muscles, lumbar region         Dysfunction of the multifidus muscles, lumbar region
+Delete:      1 M659    Synovitis and tenosynovitis, unspecified                     Synovitis and tenosynovitis, unspecified
+Add:         0 M659    Synovitis and tenosynovitis, unspecified                     Synovitis and tenosynovitis, unspecified
+Add:         1 M6590   Unspecified synovitis and tenosynovitis, unspecified site    Unspecified synovitis and tenosynovitis, unspecified site
+Add:         0 M6591   Unspecified synovitis and tenosynovitis, shoulder            Unspecified synovitis and tenosynovitis, shoulder
+Add:         1 M65911  Unspecified synovitis and tenosynovitis, right shoulder      Unspecified synovitis and tenosynovitis, right shoulder
+Add:         1 M65912  Unspecified synovitis and tenosynovitis, left shoulder       Unspecified synovitis and tenosynovitis, left shoulder
+Add:         1 M65919  Unsp synovitis and tenosynovitis, unspecified shoulder       Unspecified synovitis and tenosynovitis, unspecified shoulder
+Add:         0 M6592   Unspecified synovitis and tenosynovitis, upper arm           Unspecified synovitis and tenosynovitis, upper arm
+Add:         1 M65921  Unspecified synovitis and tenosynovitis, right upper arm     Unspecified synovitis and tenosynovitis, right upper arm
+Add:         1 M65922  Unspecified synovitis and tenosynovitis, left upper arm      Unspecified synovitis and tenosynovitis, left upper arm
+Add:         1 M65929  Unsp synovitis and tenosynovitis, unspecified upper arm      Unspecified synovitis and tenosynovitis, unspecified upper arm
+Add:         0 M6593   Unspecified synovitis and tenosynovitis, forearm             Unspecified synovitis and tenosynovitis, forearm
+Add:         1 M65931  Unspecified synovitis and tenosynovitis, right forearm       Unspecified synovitis and tenosynovitis, right forearm
+Add:         1 M65932  Unspecified synovitis and tenosynovitis, left forearm        Unspecified synovitis and tenosynovitis, left forearm
+Add:         1 M65939  Unspecified synovitis and tenosynovitis, unspecified forearm Unspecified synovitis and tenosynovitis, unspecified forearm
+Add:         0 M6594   Unspecified synovitis and tenosynovitis, hand                Unspecified synovitis and tenosynovitis, hand
+Add:         1 M65941  Unspecified synovitis and tenosynovitis, right hand          Unspecified synovitis and tenosynovitis, right hand
+Add:         1 M65942  Unspecified synovitis and tenosynovitis, left hand           Unspecified synovitis and tenosynovitis, left hand
+Add:         1 M65949  Unspecified synovitis and tenosynovitis, unspecified hand    Unspecified synovitis and tenosynovitis, unspecified hand
+Add:         0 M6595   Unspecified synovitis and tenosynovitis, thigh               Unspecified synovitis and tenosynovitis, thigh
+Add:         1 M65951  Unspecified synovitis and tenosynovitis, right thigh         Unspecified synovitis and tenosynovitis, right thigh
+Add:         1 M65952  Unspecified synovitis and tenosynovitis, left thigh          Unspecified synovitis and tenosynovitis, left thigh
+Add:         1 M65959  Unspecified synovitis and tenosynovitis, unspecified thigh   Unspecified synovitis and tenosynovitis, unspecified thigh
+Add:         0 M6596   Unspecified synovitis and tenosynovitis, lower leg           Unspecified synovitis and tenosynovitis, lower leg
+Add:         1 M65961  Unspecified synovitis and tenosynovitis, right lower leg     Unspecified synovitis and tenosynovitis, right lower leg
+Add:         1 M65962  Unspecified synovitis and tenosynovitis, left lower leg      Unspecified synovitis and tenosynovitis, left lower leg
+Add:         1 M65969  Unsp synovitis and tenosynovitis, unspecified lower leg      Unspecified synovitis and tenosynovitis, unspecified lower leg
+Add:         0 M6597   Unspecified synovitis and tenosynovitis, ankle and foot      Unspecified synovitis and tenosynovitis, ankle and foot
+Add:         1 M65971  Unspecified synovitis and tenosynovitis, right ank/ft        Unspecified synovitis and tenosynovitis, right ankle and foot
+Add:         1 M65972  Unspecified synovitis and tenosynovitis, left ankle and foot Unspecified synovitis and tenosynovitis, left ankle and foot
+Add:         1 M65979  Unspecified synovitis and tenosynovitis, unspecified ank/ft  Unspecified synovitis and tenosynovitis, unspecified ankle and foot
+Add:         1 M6598   Unspecified synovitis and tenosynovitis, other site          Unspecified synovitis and tenosynovitis, other site
+Add:         1 M6599   Unspecified synovitis and tenosynovitis, multiple sites      Unspecified synovitis and tenosynovitis, multiple sites
+Revise from: 1 Q1381   Rieger's anomaly                                             Rieger's anomaly
+Revise to:   1 Q1381   Rieger anomaly                                               Rieger anomaly
+Delete:      1 Q238    Other congenital malformations of aortic and mitral valves   Other congenital malformations of aortic and mitral valves
+Add:         0 Q238    Other congenital malformations of aortic and mitral valves   Other congenital malformations of aortic and mitral valves
+Add:         1 Q2381   Bicuspid aortic valve                                        Bicuspid aortic valve
+Add:         1 Q2382   Congenital mitral valve cleft leaflet                        Congenital mitral valve cleft leaflet
+Add:         1 Q2388   Other congenital malformations of aortic and mitral valves   Other congenital malformations of aortic and mitral valves
+Add:         1 Q8786   Kleefstra syndrome                                           Kleefstra syndrome
+Add:         1 R4185   Anosognosia                                                  Anosognosia
+Add:         0 T45A    Immune checkpoint inhibitors and immunostimulant drugs       Poisoning by, adverse effect of and underdosing of immune checkpoint inhibitors and immunostimulant drugs
+Add:         0 T45AX   Immune checkpoint inhibitors and immunostimulant drugs       Poisoning by, adverse effect of and underdosing of immune checkpoint inhibitors and immunostimulant drugs
+Add:         0 T45AX1  Poisoning by immune chkpt inhibtr/immunostim drugs, acc      Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional)
+Add:         1 T45AX1A Poisn by immune chkpt inhibtr/immunostim drugs, acc, init    Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), initial encounter
+Add:         1 T45AX1D Poisn by immune chkpt inhibtr/immunostim drugs, acc, subs    Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), subsequent encounter
+Add:         1 T45AX1S Poisn by immune chkpt inhibtr/immunostim drugs, acc, sqla    Poisoning by immune checkpoint inhibitors and immunostimulant drugs, accidental (unintentional), sequela
+Add:         0 T45AX2  Poisn by immune chkpt inhibtr/immunostim drugs, self-harm    Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm
+Add:         1 T45AX2A Poisn by immune chkpt inhibtr/immunostim drugs,slf-hrm,init  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, initial encounter
+Add:         1 T45AX2D Poisn by immune chkpt inhibtr/immunostim drugs,slf-hrm,subs  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, subsequent encounter
+Add:         1 T45AX2S Poisn by immune chkpt inhibtr/immunostim drugs,slf-hrm,sqla  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, intentional self-harm, sequela
+Add:         0 T45AX3  Poisoning by immune chkpt inhibtr/immunostim drugs, assault  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault
+Add:         1 T45AX3A Poisn by immune chkpt inhibtr/immunostim drugs, asslt, init  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, initial encounter
+Add:         1 T45AX3D Poisn by immune chkpt inhibtr/immunostim drugs, asslt, subs  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, subsequent encounter
+Add:         1 T45AX3S Poisn by immune chkpt inhibtr/immunostim drugs, asslt, sqla  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, assault, sequela
+Add:         0 T45AX4  Poisoning by immune chkpt inhibtr/immunostim drugs, undet    Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined
+Add:         1 T45AX4A Poisn by immune chkpt inhibtr/immunostim drugs, undet, init  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, initial encounter
+Add:         1 T45AX4D Poisn by immune chkpt inhibtr/immunostim drugs, undet, subs  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, subsequent encounter
+Add:         1 T45AX4S Poisn by immune chkpt inhibtr/immunostim drugs, undet, sqla  Poisoning by immune checkpoint inhibitors and immunostimulant drugs, undetermined, sequela
+Add:         0 T45AX5  Adverse effect of immune checkpoint inhibtr/immunostim drugs Adverse effect of immune checkpoint inhibitors and immunostimulant drugs
+Add:         1 T45AX5A Advrs effect of immune chkpt inhibtr/immunostim drugs, init  Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, initial encounter
+Add:         1 T45AX5D Advrs effect of immune chkpt inhibtr/immunostim drugs, subs  Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, subsequent encounter
+Add:         1 T45AX5S Advrs effect of immune chkpt inhibtr/immunostim drugs, sqla  Adverse effect of immune checkpoint inhibitors and immunostimulant drugs, sequela
+Add:         0 T45AX6  Underdosing of immune checkpoint inhibtr/immunostim drugs    Underdosing of immune checkpoint inhibitors and immunostimulant drugs
+Add:         1 T45AX6A Undrdose of immune checkpoint inhibtr/immunostim drugs, init Underdosing of immune checkpoint inhibitors and immunostimulant drugs, initial encounter
+Add:         1 T45AX6D Undrdose of immune checkpoint inhibtr/immunostim drugs, subs Underdosing of immune checkpoint inhibitors and immunostimulant drugs, subsequent encounter
+Add:         1 T45AX6S Undrdose of immune chkpt inhibtr/immunostim drugs, sequela   Underdosing of immune checkpoint inhibitors and immunostimulant drugs, sequela
+Add:         0 T81320  Disrupt/dehisc of GI tract anastomosis, repair, or closure   Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure
+Add:         1 T81320A Disrupt/dehisc of GI tract anastomos, repair, or closr, init Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, initial encounter
+Add:         1 T81320D Disrupt/dehisc of GI tract anastomos, repair, or closr, subs Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, subsequent encounter
+Add:         1 T81320S Disrupt/dehisc of GI tract anastomos, repair, or closr, sqla Disruption or dehiscence of gastrointestinal tract anastomosis, repair, or closure, sequela
+Add:         0 T81321  Disrupt/dehisc of closr of int op (surg) wnd abd wl msl/fasc Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia
+Add:         1 T81321A Disrupt/dehisc closr int op (surg) wnd abd wl msl/fasc, init Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, initial encounter
+Add:         1 T81321D Disrupt/dehisc closr int op (surg) wnd abd wl msl/fasc, subs Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, subsequent encounter
+Add:         1 T81321S Disrupt/dehisc closr int op (surg) wnd abd wl msl/fasc, sqla Disruption or dehiscence of closure of internal operation (surgical) wound of abdominal wall muscle or fascia, sequela
+Add:         0 T81328  Disrupt/dehisc of closure of oth internal op (surg) wound    Disruption or dehiscence of closure of other specified internal operation (surgical) wound
+Add:         1 T81328A Disrupt/dehisc of closure of oth int op (surg) wound, init   Disruption or dehiscence of closure of other specified internal operation (surgical) wound, initial encounter
+Add:         1 T81328D Disrupt/dehisc of closure of oth int op (surg) wound, subs   Disruption or dehiscence of closure of other specified internal operation (surgical) wound, subsequent encounter
+Add:         1 T81328S Disrupt/dehisc of closr of oth int op (surg) wound, sequela  Disruption or dehiscence of closure of other specified internal operation (surgical) wound, sequela
+Add:         0 T81329  Deep Disrupt/dehisc of operation wound, unspecified          Deep disruption or dehiscence of operation wound, unspecified
+Add:         1 T81329A Deep Disrupt/dehisc of operation wound, unspecified, init    Deep disruption or dehiscence of operation wound, unspecified, initial encounter
+Add:         1 T81329D Deep Disrupt/dehisc of operation wound, unspecified, subs    Deep disruption or dehiscence of operation wound, unspecified, subsequent encounter
+Add:         1 T81329S Deep Disrupt/dehisc of operation wound, unspecified, sequela Deep disruption or dehiscence of operation wound, unspecified, sequela
+Delete:      1 T8132XA Disruption of internal operation (surgical) wound, NEC, init Disruption of internal operation (surgical) wound, not elsewhere classified, initial encounter
+Delete:      1 T8132XD Disruption of internal operation (surgical) wound, NEC, subs Disruption of internal operation (surgical) wound, not elsewhere classified, subsequent encounter
+Delete:      1 T8132XS Disrupt of internal operation (surgical) wound, NEC, sequela Disruption of internal operation (surgical) wound, not elsewhere classified, sequela
+Add:         1 Z151    Genetic susceptibility to epi and neurodevelopmental disord  Genetic susceptibility to epilepsy and neurodevelopmental disorders
+Add:         1 Z152    Genetic susceptibility to obesity                            Genetic susceptibility to obesity
+Revise from: 0 Z17     Estrogen receptor status                                     Estrogen receptor status
+Revise to:   0 Z17     Estrogen, and other hormones and factors receptor status     Estrogen, and other hormones and factors receptor status
+Add:         0 Z172    Progesterone receptor status                                 Progesterone receptor status
+Add:         1 Z1721   Progesterone receptor positive status                        Progesterone receptor positive status
+Add:         1 Z1722   Progesterone receptor negative status                        Progesterone receptor negative status
+Add:         0 Z173    Human epidermal growth factor 2 receptor                     Human epidermal growth factor 2 receptor
+Add:         1 Z1731   Human epidermal growth factor receptor 2 positive status     Human epidermal growth factor receptor 2 positive status
+Add:         1 Z1732   Human epidermal growth factor receptor 2 negative status     Human epidermal growth factor receptor 2 negative status
+Add:         0 Z174    Combined receptor status                                     Combined receptor status
+Add:         0 Z1741   Hormone receptor positive                                    Hormone receptor positive
+Add:         1 Z17410  Hormone recept pos w hmn epdrml grth fctr recept 2 pos stat  Hormone receptor positive with human epidermal growth factor receptor 2 positive status
+Add:         1 Z17411  Hormone recept pos w hmn epdrml grth fctr recept 2 neg stat  Hormone receptor positive with human epidermal growth factor receptor 2 negative status
+Add:         0 Z1742   Hormone receptor negative                                    Hormone receptor negative
+Add:         1 Z17420  Hormone recept neg w hmn epdrml grth fctr recept 2 pos stat  Hormone receptor negative with human epidermal growth factor receptor 2 positive status
+Add:         1 Z17421  Hormone recept neg w hmn epdrml grth fctr recept 2 neg stat  Hormone receptor negative with human epidermal growth factor receptor 2 negative status
+Add:         1 Z51A    Encounter for sepsis aftercare                               Encounter for sepsis aftercare
+Delete:      1 Z597    Insufficient social insurance and welfare support            Insufficient social insurance and welfare support
+Add:         0 Z597    Insufficient social insurance and welfare support            Insufficient social insurance and welfare support
+Add:         1 Z5971   Insufficient health insurance coverage                       Insufficient health insurance coverage
+Add:         1 Z5972   Insufficient welfare support                                 Insufficient welfare support
+Add:         0 Z67A    Duffy phenotype                                              Duffy phenotype
+Add:         1 Z67A1   Duffy null                                                   Duffy null
+Add:         1 Z67A2   Duffy a positive                                             Duffy a positive
+Add:         1 Z67A3   Duffy b positive                                             Duffy b positive
+Add:         1 Z67A4   Duffy a and b positive                                       Duffy a and b positive
+Revise from: 1 Z6854   Body mass index pediatric, > or equal to 95% for age         Body mass index [BMI] pediatric, greater than or equal to 95th percentile for age
+Revise to:   1 Z6854   Body mass index ped, 95% for age to < 120% of 95% for age    Body mass index [BMI] pediatric, 95th percentile for age to less than 120% of the 95th percentile for age
+Add:         1 Z6855   Body mass index ped, 120% 95% for age to < 140% 95% for age  Body mass index [BMI] pediatric, 120% of the 95th percentile for age to less than 140% of the 95th percentile for age
+Add:         1 Z6856   Body mass index ped, > or equal to 140% of the 95% for age   Body mass index [BMI] pediatric, greater than or equal to 140% of the 95th percentile for age
+Add:         1 Z8372   Family history of familial adenomatous polyposis             Family history of familial adenomatous polyposis
+Delete:      1 Z86010  Personal history of colonic polyps                           Personal history of colonic polyps
+Add:         0 Z86010  Personal history of colon polyps                             Personal history of colon polyps
+Add:         1 Z860100 Personal history of colon polyps, unspecified                Personal history of colon polyps, unspecified
+Add:         1 Z860101 Personal history of adenomatous and serrated colon polyps    Personal history of adenomatous and serrated colon polyps
+Add:         1 Z860102 Personal history of hyperplastic colon polyps                Personal history of hyperplastic colon polyps
+Add:         1 Z860109 Personal history of other colon polyps                       Personal history of other colon polyps
+Add:         1 Z9226   Personal history of immune checkpoint inhibitor therapy      Personal history of immune checkpoint inhibitor therapy
+
+Headers
+  23252 headers in icd10cm_order_2024.txt
+  23324 headers in icd10cm_order_2025.txt
+     72 additions
+      0 deletions
+      1 revisions
+of which
+      1 revisions to both long and short titles
+      0 revisions to long title only
+      0 revisions to short title only
+
+Codes
+  74044 codes in icd10cm_order_2024.txt
+  74260 codes in icd10cm_order_2025.txt
+    252 additions
+     36 deletions
+     13 revisions
+of which
+     13 revisions to both long and short titles
+      0 revisions to long title only
+      0 revisions to short title only

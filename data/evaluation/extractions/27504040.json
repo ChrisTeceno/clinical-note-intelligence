@@ -1,0 +1,129 @@
+{
+  "note_id": "27504040",
+  "diagnoses": [
+    {
+      "name": "Hypertensive chronic kidney disease with stage 5 CKD",
+      "icd10_suggestion": "I13.11",
+      "confidence": "high",
+      "evidence_span": "complicated by hypertensive chronic kidney disease with stage 5 CKD"
+    },
+    {
+      "name": "End stage renal disease",
+      "icd10_suggestion": "N18.6",
+      "confidence": "high",
+      "evidence_span": "He has end stage renal disease requiring hemodialysis"
+    },
+    {
+      "name": "Alcoholic cirrhosis",
+      "icd10_suggestion": "K70.30",
+      "confidence": "high",
+      "evidence_span": "The patient also carries a significant hepatic history, including alcoholic cirrhosis of the liver"
+    },
+    {
+      "name": "Alcoholic hepatitis",
+      "icd10_suggestion": "K70.10",
+      "confidence": "high",
+      "evidence_span": "and concurrent alcoholic hepatitis, both currently without ascites"
+    },
+    {
+      "name": "Hepatorenal syndrome",
+      "icd10_suggestion": "K76.7",
+      "confidence": "high",
+      "evidence_span": "Most concerning during this hospitalization was the development of hepatorenal syndrome, which contributed substantially to his acute clinical deterioration."
+    },
+    {
+      "name": "Hepatic encephalopathy",
+      "icd10_suggestion": "K72.90",
+      "confidence": "high",
+      "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
+    },
+    {
+      "name": "Anemia of chronic kidney disease",
+      "icd10_suggestion": "D63.1",
+      "confidence": "high",
+      "evidence_span": "Anemia secondary to chronic kidney disease"
+    },
+    {
+      "name": "Thrombocytopenia",
+      "icd10_suggestion": "D69.6",
+      "confidence": "high",
+      "evidence_span": "Thrombocytopenia"
+    },
+    {
+      "name": "Asthma",
+      "icd10_suggestion": "J45.901",
+      "confidence": "high",
+      "evidence_span": "Asthma, uncomplicated"
+    },
+    {
+      "name": "Gout",
+      "icd10_suggestion": "M10.9",
+      "confidence": "high",
+      "evidence_span": "Gout"
+    },
+    {
+      "name": "Chronic pancreatitis",
+      "icd10_suggestion": "K86.1",
+      "confidence": "high",
+      "evidence_span": "Chronic pancreatitis"
+    },
+    {
+      "name": "History of venous thromboembolism",
+      "icd10_suggestion": "Z86.711",
+      "confidence": "high",
+      "evidence_span": "History of venous thromboembolism"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "Hypothyroidism"
+    },
+    {
+      "name": "Nicotine dependence",
+      "icd10_suggestion": "F17.210",
+      "confidence": "high",
+      "evidence_span": "Nicotine dependence (active smoker)"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Hemodialysis",
+      "cpt_suggestion": "90935",
+      "confidence": "high",
+      "evidence_span": "The patient received emergent hemodialysis on hospital day one with partial resolution of uremic symptoms and electrolyte abnormalities."
+    },
+    {
+      "name": "Blood cultures",
+      "cpt_suggestion": "87040",
+      "confidence": "high",
+      "evidence_span": "infectious workup including blood cultures and ascitic fluid analysis"
+    },
+    {
+      "name": "Paracentesis",
+      "cpt_suggestion": "49080",
+      "confidence": "medium",
+      "evidence_span": "ascitic fluid analysis (paracentesis deferred given absence of clinical ascites)"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Lactulose",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
+    },
+    {
+      "name": "Rifaxomin",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
+    }
+  ],
+  "chief_complaint": "Altered mental status and acute decompensation.",
+  "medical_specialty": "Internal Medicine / Hospital Medicine"
+}

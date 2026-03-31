@@ -1,0 +1,181 @@
+{
+  "note_id": "22733922",
+  "diagnoses": [
+    {
+      "name": "Schizophrenia, unspecified",
+      "icd10_suggestion": "F20.9",
+      "confidence": "high",
+      "evidence_span": "longstanding diagnosis of schizophrenia, unspecified, which has been difficult to manage pharmacologically during periods of substance use"
+    },
+    {
+      "name": "Cocaine use disorder, uncomplicated",
+      "icd10_suggestion": "F14.10",
+      "confidence": "high",
+      "evidence_span": "recent cocaine use and continued alcohol consumption"
+    },
+    {
+      "name": "Alcohol use disorder with alcohol-induced disorder",
+      "icd10_suggestion": "F10.20",
+      "confidence": "high",
+      "evidence_span": "ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder"
+    },
+    {
+      "name": "Psychoactive substance-induced mood disorder",
+      "icd10_suggestion": "F19.94",
+      "confidence": "high",
+      "evidence_span": "psychoactive substance-induced mood disorder has created an acute crisis requiring hospitalization"
+    },
+    {
+      "name": "HIV disease",
+      "icd10_suggestion": "B20",
+      "confidence": "high",
+      "evidence_span": "HIV disease on prior antiretroviral therapy"
+    },
+    {
+      "name": "Chronic viral hepatitis C without hepatic coma",
+      "icd10_suggestion": "B18.2",
+      "confidence": "high",
+      "evidence_span": "chronic viral hepatitis C without hepatic coma"
+    },
+    {
+      "name": "History of traumatic brain injury",
+      "icd10_suggestion": "S06.9X0S",
+      "confidence": "high",
+      "evidence_span": "remote history of traumatic brain injury"
+    },
+    {
+      "name": "Former nicotine dependence",
+      "icd10_suggestion": "F17.200",
+      "confidence": "high",
+      "evidence_span": "former nicotine dependence"
+    },
+    {
+      "name": "Paranoid ideation",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "He reports feeling hopeless, paranoid, and experiencing auditory hallucinations"
+    },
+    {
+      "name": "Auditory hallucinations",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "experiencing auditory hallucinations"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Psychiatric evaluation",
+      "cpt_suggestion": "90834",
+      "confidence": "high",
+      "evidence_span": "The pt was initiated on a structured psychiatric evaluation and medical assessment"
+    },
+    {
+      "name": "Mental status exam",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations"
+    },
+    {
+      "name": "CD4 count measurement",
+      "cpt_suggestion": "86361",
+      "confidence": "high",
+      "evidence_span": "Labs on admission showed CD4 count of 285 cells/mm³"
+    },
+    {
+      "name": "Hepatic function panel",
+      "cpt_suggestion": "80076",
+      "confidence": "high",
+      "evidence_span": "Hepatic function panel was notable for elevated transaminases consistent with chronic hepatitis C"
+    },
+    {
+      "name": "Medication reconciliation",
+      "cpt_suggestion": "90862",
+      "confidence": "high",
+      "evidence_span": "A comprehensive medication reconciliation has been completed"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Quetiapine fumarate",
+      "dosage": "25 mg to 300 mg",
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "He will continue quetiapine fumarate for antipsychotic coverage at doses ranging from 25 mg to 300 mg for titration flexibility"
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "25 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "sertraline 25 mg daily for mood support"
+    },
+    {
+      "name": "Hydroxyzine",
+      "dosage": "50 mg",
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "hydroxyzine 50 mg as needed for anxiety"
+    },
+    {
+      "name": "Thiamine",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "He is prescribed thiamine 100 mg daily"
+    },
+    {
+      "name": "Folic acid",
+      "dosage": "1 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "folic acid 1 mg daily for nutritional supplementation"
+    },
+    {
+      "name": "Sulfamethoxazole-trimethoprim DS",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis given his CD4 count below 200"
+    },
+    {
+      "name": "Multivitamins",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Supportive measures including multivitamins"
+    },
+    {
+      "name": "Calcium carbonate",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "calcium carbonate supplementation"
+    },
+    {
+      "name": "Lidocaine 5% patch",
+      "dosage": "5%",
+      "frequency": null,
+      "route": "patch",
+      "confidence": "high",
+      "evidence_span": "lidocaine 5% patch"
+    },
+    {
+      "name": "Bengay cream",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Bengay cream for musculoskeletal discomfort"
+    }
+  ],
+  "chief_complaint": "Acute psychiatric decompensation in the setting of polysubstance use",
+  "medical_specialty": "Psychiatry"
+}

@@ -1,0 +1,337 @@
+{
+  "note_id": "28506150",
+  "diagnoses": [
+    {
+      "name": "Amyotrophic lateral sclerosis (ALS)",
+      "icd10_suggestion": "G12.21",
+      "confidence": "high",
+      "evidence_span": "complex case involving a patient with advanced amyotrophic lateral sclerosis (ALS)"
+    },
+    {
+      "name": "Altered mental status",
+      "icd10_suggestion": "R41.82",
+      "confidence": "high",
+      "evidence_span": "patient with advanced amyotrophic lateral sclerosis (ALS) who presented with altered mental status"
+    },
+    {
+      "name": "Acute non-ST elevation myocardial infarction (NSTEMI)",
+      "icd10_suggestion": "I21.02",
+      "confidence": "high",
+      "evidence_span": "was found to have acute non-ST elevation myocardial infarction (NSTEMI)"
+    },
+    {
+      "name": "Frontotemporal dementia",
+      "icd10_suggestion": "G31.09",
+      "confidence": "high",
+      "evidence_span": "significant comorbidities including other frontotemporal dementia"
+    },
+    {
+      "name": "Schizoaffective disorder",
+      "icd10_suggestion": "F25.9",
+      "confidence": "high",
+      "evidence_span": "schizoaffective disorder"
+    },
+    {
+      "name": "Essential hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "essential hypertension"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary arteries",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic heart disease of native coronary arteries"
+    },
+    {
+      "name": "Ventilator-associated pneumonia",
+      "icd10_suggestion": "J95.851",
+      "confidence": "high",
+      "evidence_span": "patient developed ventilator-associated pneumonia while on mechanical ventilation through his established tracheostomy"
+    },
+    {
+      "name": "Unspecified convulsions",
+      "icd10_suggestion": "R56.9",
+      "confidence": "high",
+      "evidence_span": "patient also experienced unspecified convulsions requiring management with antiepileptic therapy"
+    },
+    {
+      "name": "Foreign body in respiratory tract",
+      "icd10_suggestion": "T17.900",
+      "confidence": "high",
+      "evidence_span": "A foreign object was identified in the respiratory tract and required emergent intervention"
+    },
+    {
+      "name": "Hypotension",
+      "icd10_suggestion": "I95.9",
+      "confidence": "high",
+      "evidence_span": "patient suffered from hypotension requiring vasopressor support"
+    },
+    {
+      "name": "Pericardial disease",
+      "icd10_suggestion": "I31.9",
+      "confidence": "high",
+      "evidence_span": "demonstrated evidence of pericardial disease noted on imaging"
+    },
+    {
+      "name": "Pericardial effusion",
+      "icd10_suggestion": "I31.3",
+      "confidence": "high",
+      "evidence_span": "echocardiography showing pericardial effusion consistent with pericardial disease"
+    },
+    {
+      "name": "Urinary tract infection",
+      "icd10_suggestion": "N39.0",
+      "confidence": "high",
+      "evidence_span": "A urinary tract infection was diagnosed and treated"
+    },
+    {
+      "name": "Respiratory compromise due to ALS",
+      "icd10_suggestion": "G12.21",
+      "confidence": "high",
+      "evidence_span": "ventilator-dependent given his advanced ALS with respiratory compromise"
+    },
+    {
+      "name": "Anemia",
+      "icd10_suggestion": "D64.9",
+      "confidence": "medium",
+      "evidence_span": "Iron supplementation addressed anemia with ferrous sulfate liquid formulation"
+    },
+    {
+      "name": "Electrolyte disturbances",
+      "icd10_suggestion": "E87.8",
+      "confidence": "medium",
+      "evidence_span": "Magnesium sulfate and calcium gluconate supplementation was necessary due to electrolyte disturbances"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Extirpation of Matter from Left Lower Lobe Bronchus via Natural or Artificial Opening Endoscopic",
+      "cpt_suggestion": "31630",
+      "confidence": "high",
+      "evidence_span": "Extirpation of Matter from Left Lower Lobe Bronchus via Natural or Artificial Opening Endoscopic – Performed to clear obstructing material and manage aspiration risk"
+    },
+    {
+      "name": "Extirpation of Matter from Right Lower Lung Lobe via Natural or Artificial Opening Endoscopic",
+      "cpt_suggestion": "31630",
+      "confidence": "high",
+      "evidence_span": "Extirpation of Matter from Right Lower Lung Lobe via Natural or Artificial Opening Endoscopic – Complementary bronchoscopic intervention to clear bilateral lower lobe involvement"
+    },
+    {
+      "name": "Respiratory Ventilation, 24-96 Consecutive Hours",
+      "cpt_suggestion": "94002",
+      "confidence": "high",
+      "evidence_span": "Respiratory Ventilation, 24-96 Consecutive Hours – Mechanical ventilation support provided throughout hospitalization given ventilator dependence from progressive ALS and the acute infectious/cardiac complications"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Insulin",
+      "dosage": "variable dosing per sliding scale",
+      "frequency": null,
+      "route": "subcutaneous injection",
+      "confidence": "high",
+      "evidence_span": "Insulin (variable dosing via subcutaneous injection per sliding scale)"
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Aspirin 81 mg daily"
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "80 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Atorvastatin 80 mg daily"
+    },
+    {
+      "name": "Metoprolol Tartrate",
+      "dosage": "12.5 mg",
+      "frequency": "twice daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Metoprolol Tartrate 12.5 mg twice daily"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "5000 UNIT",
+      "frequency": "twice daily",
+      "route": "subcutaneous",
+      "confidence": "high",
+      "evidence_span": "Heparin 5000 UNIT subcutaneous twice daily"
+    },
+    {
+      "name": "Levetiracetam",
+      "dosage": "750 mg",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Levetiracetam 750 mg IV"
+    },
+    {
+      "name": "Sertraline",
+      "dosage": "150 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Sertraline 150 mg daily"
+    },
+    {
+      "name": "Quetiapine Fumarate",
+      "dosage": "12.5 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Quetiapine Fumarate 12.5 mg daily"
+    },
+    {
+      "name": "Lansoprazole",
+      "dosage": "30 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Lansoprazole 30 mg daily"
+    },
+    {
+      "name": "Omeprazole",
+      "dosage": "40 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Omeprazole 40 mg daily"
+    },
+    {
+      "name": "Docusate Sodium",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Docusate Sodium 100 mg daily"
+    },
+    {
+      "name": "Ferrous Sulfate",
+      "dosage": "300 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Ferrous Sulfate 300 mg daily"
+    },
+    {
+      "name": "Polyethylene Glycol",
+      "dosage": "17 g",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Polyethylene Glycol 17 g daily"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "1000 mg",
+      "frequency": "as needed",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 1000 mg IV as needed"
+    },
+    {
+      "name": "Guaifenesin",
+      "dosage": "5-10 mL",
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Guaifenesin 5-10 mL as needed"
+    },
+    {
+      "name": "Acetylcysteine",
+      "dosage": "20% 6-10 mL",
+      "frequency": "as needed",
+      "route": "nebulized",
+      "confidence": "high",
+      "evidence_span": "Acetylcysteine 20% 6-10 mL nebulized as needed"
+    },
+    {
+      "name": "CefTAZidime",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Antimicrobial coverage was initiated for ventilator-associated pneumonia with CefTAZidime IV"
+    },
+    {
+      "name": "Midazolam",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Sedation management during mechanical ventilation included midazolam and lorazepam"
+    },
+    {
+      "name": "Lorazepam",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Sedation management during mechanical ventilation included midazolam and lorazepam"
+    },
+    {
+      "name": "Fentanyl citrate",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Pain control utilized fentanyl citrate as needed"
+    },
+    {
+      "name": "Magnesium sulfate",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Magnesium sulfate and calcium gluconate supplementation was necessary due to electrolyte disturbances"
+    },
+    {
+      "name": "Calcium gluconate",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Magnesium sulfate and calcium gluconate supplementation was necessary due to electrolyte disturbances"
+    },
+    {
+      "name": "Glucagon",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "glucagon and dextrose available for hypoglycemic episodes"
+    },
+    {
+      "name": "Dextrose",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "glucagon and dextrose available for hypoglycemic episodes"
+    },
+    {
+      "name": "Labetalol",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Beta-blockade with metoprolol tartrate and labetalol IV supported cardiac recovery and blood pressure management"
+    }
+  ],
+  "chief_complaint": "Altered mental status",
+  "medical_specialty": "Internal Medicine/Critical Care Medicine"
+}

@@ -1,0 +1,197 @@
+{
+  "note_id": "22954658",
+  "diagnoses": [
+    {
+      "name": "Non-ST elevation myocardial infarction (NSTEMI)",
+      "icd10_suggestion": "I21.02",
+      "confidence": "high",
+      "evidence_span": "The clinical presentation and biomarkers were consistent with a non-ST elevation myocardial infarction (NSTEMI)."
+    },
+    {
+      "name": "Type B dissection of the abdominal aorta",
+      "icd10_suggestion": "I71.02",
+      "confidence": "high",
+      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery"
+    },
+    {
+      "name": "Acute myocardial injury",
+      "icd10_suggestion": "I21.9",
+      "confidence": "high",
+      "evidence_span": "Troponin I was elevated at 2.8 ng/mL, consistent with acute myocardial injury."
+    },
+    {
+      "name": "Gastro-esophageal reflux disease without esophagitis",
+      "icd10_suggestion": "K21.9",
+      "confidence": "high",
+      "evidence_span": "the patient has a history of gastro-esophageal reflux disease without esophagitis"
+    },
+    {
+      "name": "Critical stenosis of left anterior descending artery",
+      "icd10_suggestion": "I25.12",
+      "confidence": "high",
+      "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery with significant thrombus burden."
+    },
+    {
+      "name": "Hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "medium",
+      "evidence_span": "BP 168/92 mmHg on admission; vascular surgery determined that conservative medical management was appropriate given...emphasis on optimization of blood pressure control"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Emergent coronary intervention with thrombectomy of left anterior descending artery",
+      "cpt_suggestion": "92975",
+      "confidence": "high",
+      "evidence_span": "The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach."
+    },
+    {
+      "name": "Coronary angiography",
+      "cpt_suggestion": "93454",
+      "confidence": "high",
+      "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery"
+    },
+    {
+      "name": "CT angiography",
+      "cpt_suggestion": "71275",
+      "confidence": "high",
+      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta"
+    },
+    {
+      "name": "12-lead EKG",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "Initial 12-lead EKG demonstrated ST segment depressions in the anterolateral leads."
+    },
+    {
+      "name": "Quadrivalent influenza vaccine",
+      "cpt_suggestion": "90686",
+      "confidence": "high",
+      "evidence_span": "the patient received the quadrivalent influenza vaccine"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Aspirin 81 mg PO daily (enteric-coated)"
+    },
+    {
+      "name": "Aspirin EC",
+      "dosage": "325 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Aspirin EC 325 mg PO daily"
+    },
+    {
+      "name": "Ticagrelor",
+      "dosage": "90 mg",
+      "frequency": "BID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Ticagrelor 90 mg PO BID"
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "80 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Atorvastatin 80 mg PO daily"
+    },
+    {
+      "name": "Metoprolol tartrate",
+      "dosage": "6.25 mg",
+      "frequency": "BID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Metoprolol tartrate 6.25 mg PO BID"
+    },
+    {
+      "name": "Nitroglycerin",
+      "dosage": "0.3 mg",
+      "frequency": "as needed for chest pain",
+      "route": "sublingual",
+      "confidence": "high",
+      "evidence_span": "Nitroglycerin 0.3 mg sublingual as needed for chest pain"
+    },
+    {
+      "name": "Pantoprazole",
+      "dosage": "40 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Pantoprazole 40 mg PO daily (for reflux disease management)"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Docusate sodium 100 mg PO daily"
+    },
+    {
+      "name": "Magnesium oxide",
+      "dosage": "400 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Magnesium oxide 400 mg PO daily"
+    },
+    {
+      "name": "Senna",
+      "dosage": "8.6 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Senna 8.6 mg PO daily"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "40 mEq",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Potassium chloride 40 mEq PO daily"
+    },
+    {
+      "name": "IV nitroglycerin infusion",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "The patient received IV nitroglycerin infusion"
+    },
+    {
+      "name": "IV hydralazine",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "IV hydralazine for blood pressure management"
+    },
+    {
+      "name": "IV magnesium sulfate",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "IV magnesium sulfate for cardioprotection"
+    },
+    {
+      "name": "IV heparin",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "IV heparin for anticoagulation"
+    }
+  ],
+  "chief_complaint": "Chest pain with EKG changes",
+  "medical_specialty": "Cardiology"
+}

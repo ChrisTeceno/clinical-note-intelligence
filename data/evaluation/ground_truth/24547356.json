@@ -1,0 +1,359 @@
+{
+  "hadm_id": 24547356,
+  "diagnoses": [
+    {
+      "icd_code": "S0262XA",
+      "description": "Fracture of subcondylar process of mandible, initial encounter for closed fracture",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "S25512A",
+      "description": "Laceration of intercostal blood vessels, left side, initial encounter",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "S36892A",
+      "description": "Contusion of other intra-abdominal organs, initial encounter",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "D696",
+      "description": "Thrombocytopenia, unspecified",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "S030XXA",
+      "description": "Dislocation of jaw, initial encounter",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "D649",
+      "description": "Anemia, unspecified",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "F1010",
+      "description": "Alcohol abuse, uncomplicated",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "Y040XXA",
+      "description": "Assault by unarmed brawl or fight, initial encounter",
+      "seq_num": 8
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "0NST04Z",
+      "description": "Reposition Right Mandible with Internal Fixation Device, Open Approach"
+    },
+    {
+      "icd_code": "0NSS35Z",
+      "description": "Reposition Left Maxilla with External Fixation Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "0NSV35Z",
+      "description": "Reposition Left Mandible with External Fixation Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "03QY0ZZ",
+      "description": "Repair Upper Artery, Open Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Milk of Magnesia",
+      "dose_val": "30 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IVPCA"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "TraZODone",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ampicillin-Sulbactam",
+      "dose_val": "3 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Chlorhexidine Gluconate 0.12% Oral Rinse",
+      "dose_val": "15 mL",
+      "dose_unit": "",
+      "route": "ORAL"
+    },
+    {
+      "drug": "Iso-Osmotic Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phosphorus",
+      "dose_val": "250 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen (Liquid)",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Docusate Sodium (Liquid)",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen IV",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Soln",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IVPCA"
+    },
+    {
+      "drug": "Neutra-Phos",
+      "dose_val": "2 PKT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Pseudoephedrine",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "DiphenhydrAMINE",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "OxycoDONE Liquid",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "1-2 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "150 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "100-200 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dexamethasone Ophthalmic Susp 0.1%",
+      "dose_val": "2 DROP",
+      "dose_unit": "",
+      "route": "LEFT EAR"
+    },
+    {
+      "drug": "Ciprofloxacin 0.3% Ophth Soln",
+      "dose_val": "2 DROP",
+      "dose_unit": "",
+      "route": "LEFT EAR"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "D5 1/2NS",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "25-100 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Oxymetazoline",
+      "dose_val": "1 SPRY",
+      "dose_unit": "",
+      "route": "NU"
+    },
+    {
+      "drug": "Sodium Chloride Nasal",
+      "dose_val": "1-2 SPRY",
+      "dose_unit": "",
+      "route": "NU"
+    }
+  ]
+}

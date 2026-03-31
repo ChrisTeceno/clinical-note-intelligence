@@ -1,0 +1,306 @@
+{
+  "hadm_id": 26529390,
+  "diagnoses": [
+    {
+      "icd_code": "D735",
+      "description": "Infarction of spleen",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "J9601",
+      "description": "Acute respiratory failure with hypoxia",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "I5033",
+      "description": "Acute on chronic diastolic (congestive) heart failure",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "E883",
+      "description": "Tumor lysis syndrome",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "J60",
+      "description": "Coalworker's pneumoconiosis",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "J9811",
+      "description": "Atelectasis",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "J811",
+      "description": "Chronic pulmonary edema",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "M351",
+      "description": "Other overlap syndromes",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "D6959",
+      "description": "Other secondary thrombocytopenia",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "D630",
+      "description": "Anemia in neoplastic disease",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "J449",
+      "description": "Chronic obstructive pulmonary disease, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "D469",
+      "description": "Myelodysplastic syndrome, unspecified",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "E790",
+      "description": "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "G893",
+      "description": "Neoplasm related pain (acute) (chronic)",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "R109",
+      "description": "Unspecified abdominal pain",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "I110",
+      "description": "Hypertensive heart disease with heart failure",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "Z853",
+      "description": "Personal history of malignant neoplasm of breast",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "Z66",
+      "description": "Do not resuscitate",
+      "seq_num": 24
+    },
+    {
+      "icd_code": "N390",
+      "description": "Urinary tract infection, site not specified",
+      "seq_num": 25
+    },
+    {
+      "icd_code": "R161",
+      "description": "Splenomegaly, not elsewhere classified",
+      "seq_num": 26
+    },
+    {
+      "icd_code": "E8339",
+      "description": "Other disorders of phosphorus metabolism",
+      "seq_num": 27
+    },
+    {
+      "icd_code": "K7581",
+      "description": "Nonalcoholic steatohepatitis (NASH)",
+      "seq_num": 28
+    },
+    {
+      "icd_code": "F419",
+      "description": "Anxiety disorder, unspecified",
+      "seq_num": 29
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02HV33Z",
+      "description": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach"
+    },
+    {
+      "icd_code": "07DR3ZX",
+      "description": "Extraction of Iliac Bone Marrow, Percutaneous Approach, Diagnostic"
+    },
+    {
+      "icd_code": "0B9J8ZX",
+      "description": "Drainage of Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic"
+    },
+    {
+      "icd_code": "D7021ZZ",
+      "description": "Beam Radiation of Spleen using Photons 1 - 10 MeV"
+    },
+    {
+      "icd_code": "0B9D8ZX",
+      "description": "Drainage of Right Middle Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Multivitamins",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Tiotropium Bromide",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "88 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "TraMADol",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Hydroxyurea",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Lidocaine 2%",
+      "dose_val": "20 mL",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Hydroxyurea",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Vitamin D",
+      "dose_val": "2000 UNIT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Rasburicase",
+      "dose_val": "6 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Escitalopram Oxalate",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3-10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

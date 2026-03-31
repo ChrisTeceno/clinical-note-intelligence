@@ -1,0 +1,178 @@
+{
+  "note_id": "29780751",
+  "diagnoses": [
+    {
+      "name": "Viral infection of unspecified site",
+      "icd10_suggestion": "B99",
+      "confidence": "high",
+      "evidence_span": "presented with signs and symptoms consistent with a viral infection of unspecified site"
+    },
+    {
+      "name": "Chronic lymphocytic leukemia of B-cell type",
+      "icd10_suggestion": "C91.10",
+      "confidence": "high",
+      "evidence_span": "The patient has chronic lymphocytic leukemia of B-cell type that has not achieved remission"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic cataract"
+    },
+    {
+      "name": "Diabetic cataract",
+      "icd10_suggestion": "E11.36",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic cataract"
+    },
+    {
+      "name": "Essential hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "essential hypertension"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary artery",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic heart disease of native coronary artery without angina pectoris"
+    },
+    {
+      "name": "Transient ischemic attack",
+      "icd10_suggestion": "G45.9",
+      "confidence": "high",
+      "evidence_span": "personal history of transient ischemic attack"
+    },
+    {
+      "name": "Cerebral infarction",
+      "icd10_suggestion": "I63.9",
+      "confidence": "high",
+      "evidence_span": "cerebral infarction without residual neurologic deficits"
+    },
+    {
+      "name": "Malignant neoplasm of left testis",
+      "icd10_suggestion": "C62.92",
+      "confidence": "high",
+      "evidence_span": "malignant neoplasm of the left testis (unspecified descent status)"
+    },
+    {
+      "name": "Obesity",
+      "icd10_suggestion": "E66.9",
+      "confidence": "high",
+      "evidence_span": "currently has obesity with BMI in the 34.0-34.9 range"
+    },
+    {
+      "name": "Unspecified glaucoma",
+      "icd10_suggestion": "H40.9",
+      "confidence": "high",
+      "evidence_span": "unspecified glaucoma"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "hypothyroidism requiring supplementation"
+    },
+    {
+      "name": "Major depressive disorder, single episode, unspecified",
+      "icd10_suggestion": "F32.9",
+      "confidence": "high",
+      "evidence_span": "major depressive disorder (single episode, unspecified)"
+    },
+    {
+      "name": "Generalized anxiety disorder",
+      "icd10_suggestion": "F41.1",
+      "confidence": "high",
+      "evidence_span": "generalized anxiety disorder"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "hyperlipidemia"
+    },
+    {
+      "name": "Hyponatremia",
+      "icd10_suggestion": "E87.1",
+      "confidence": "high",
+      "evidence_span": "developed hypo-osmolality with significant hyponatremia"
+    },
+    {
+      "name": "Anemia attributed to prior antineoplastic chemotherapy",
+      "icd10_suggestion": "D64.1",
+      "confidence": "high",
+      "evidence_span": "anemia attributed to prior antineoplastic chemotherapy"
+    },
+    {
+      "name": "Chronic pain",
+      "icd10_suggestion": "M79.7",
+      "confidence": "high",
+      "evidence_span": "chronic pain managed with analgesic medications"
+    },
+    {
+      "name": "Fever",
+      "icd10_suggestion": "R50.9",
+      "confidence": "high",
+      "evidence_span": "the patient exhibited fever and malaise"
+    },
+    {
+      "name": "Malaise",
+      "icd10_suggestion": "R53.83",
+      "confidence": "high",
+      "evidence_span": "the patient exhibited fever and malaise"
+    },
+    {
+      "name": "Palpitations",
+      "icd10_suggestion": "R00.2",
+      "confidence": "medium",
+      "evidence_span": "The patient's palpitations were monitored given his underlying heart disease"
+    },
+    {
+      "name": "Hypoglycemic episodes",
+      "icd10_suggestion": "E16.2",
+      "confidence": "high",
+      "evidence_span": "The patient received dextrose 50% and glucagon for hypoglycemic episodes"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Coronary angioplasty with stent placement",
+      "cpt_suggestion": "92924",
+      "confidence": "high",
+      "evidence_span": "prior coronary angioplasty with stent placement"
+    },
+    {
+      "name": "Cardiac pacemaker placement",
+      "cpt_suggestion": "33208",
+      "confidence": "high",
+      "evidence_span": "wears a cardiac pacemaker for rate control"
+    },
+    {
+      "name": "Bariatric surgery",
+      "cpt_suggestion": "43644",
+      "confidence": "high",
+      "evidence_span": "underwent bariatric surgery in the past"
+    },
+    {
+      "name": "IV fluid administration",
+      "cpt_suggestion": "96360",
+      "confidence": "high",
+      "evidence_span": "IV fluids were initiated"
+    },
+    {
+      "name": "Potassium supplementation",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "aggressive potassium and magnesium supplementation was provided both orally and intravenously"
+    },
+    {
+      "name": "Magnesium supplementation",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "aggressive potassium and magnesium supplementation was provided both orally and intravenously"
+    }
+  ],
+  "medications": [],
+  "chief_complaint": "Viral illness with constitutional symptoms and metabolic derangement.",
+  "medical_specialty": "Internal Medicine"
+}

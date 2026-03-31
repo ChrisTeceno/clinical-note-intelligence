@@ -1,0 +1,60 @@
+DISCHARGE SUMMARY
+
+PATIENT: [Name]
+ADMISSION DATE: [Date]
+DISCHARGE DATE: [Date]
+LENGTH OF STAY: [Days]
+
+CHIEF COMPLAINT:
+Viral illness with constitutional symptoms and metabolic derangement.
+
+HISTORY OF PRESENT ILLNESS:
+This is a complex medical patient with extensive past medical history who presented with signs and symptoms consistent with a viral infection of unspecified site. The patient has chronic lymphocytic leukemia of B-cell type that has not achieved remission, which places him at higher risk for opportunistic and systemic infections. At presentation, the patient exhibited fever and malaise. Given his immunocompromised status and ongoing hematologic malignancy, there was heightened concern for progression of his underlying disease as well as secondary infections.
+
+PAST MEDICAL HISTORY:
+The patient carries a significant medical burden including type 2 diabetes mellitus complicated by diabetic cataract, essential hypertension, and atherosclerotic heart disease of native coronary artery without angina pectoris. He has a history of prior coronary angioplasty with stent placement and wears a cardiac pacemaker for rate control. Notably, he has a personal history of transient ischemic attack and cerebral infarction without residual neurologic deficits. Additionally, he has a malignant neoplasm of the left testis (unspecified descent status). The patient underwent bariatric surgery in the past and currently has obesity with BMI in the 34.0-34.9 range. He suffers from unspecified glaucoma and hypothyroidism requiring supplementation. He experiences chronic pain managed with analgesic medications and has diagnoses of major depressive disorder (single episode, unspecified) and generalized anxiety disorder. He has hyperlipidemia and takes long-term insulin therapy for glycemic control.
+
+HOSPITAL COURSE:
+During hospitalization, the patient developed hypo-osmolality with significant hyponatremia requiring careful fluid management and electrolyte repletion. He also experienced anemia attributed to prior antineoplastic chemotherapy. The patient's palpitations were monitored given his underlying heart disease and pacemaker. Management focused on treating the viral infection, correcting electrolyte abnormalities, managing his chronic conditions, and supporting his hemodynamic status.
+
+IV fluids were initiated, and aggressive potassium and magnesium supplementation was provided both orally and intravenously to address critical electrolyte deficiencies. The patient received dextrose 50% and glucagon for hypoglycemic episodes given his insulin-dependent diabetes. Antiemetic medications including ondansetron and prochlorperazine were administered as needed. Anticoagulation was maintained with heparin and rivaroxaban given his cardiac history.
+
+PHYSICAL EXAMINATION AT DISCHARGE:
+Vital signs stable. Cardiovascular: Regular rate and rhythm, pacemaker intact. Abdomen: Soft, post-bariatric surgery changes noted. Extremities: No edema.
+
+LABORATORY VALUES AT DISCHARGE:
+Electrolytes improved with sodium normalized. Hemoglobin reflective of chemotherapy-induced anemia. Glucose control adequate on current insulin regimen.
+
+DISCHARGE MEDICATIONS:
+The patient is discharged on a comprehensive medication regimen including:
+- Aspirin 243 mg PO daily
+- Atorvastatin 80 mg PO daily
+- Clopidogrel 75 mg PO daily
+- Rivaroxaban 10 mg PO daily
+- Metoprolol Tartrate 12.5 mg PO daily
+- Losartan Potassium 50 mg PO daily
+- Insulin 56 units SC daily (with 0 units as backup)
+- Levothyroxine Sodium 25 mcg PO daily
+- Fluorescein 20 mg PO daily
+- Sertraline (Zolpidem) 300 mg PO at bedtime
+- Ziprasidone Hydrochloride 40 mg PO daily
+- Olanzapine 5 mg PO daily
+- Divalproex ER 500-250 mg PO daily (divided dosing)
+- Gabapentin 300 mg PO three times daily
+- Oxycodone immediate release 5 mg PO as needed for pain
+- Clonidine 0.1 mg PO daily
+- Lorazepam 0.5 mg PO as needed for anxiety
+- Pantoprazole 40 mg PO daily
+- Sucralfate 1 gm PO daily
+- Docusate 100 mg PO daily, Senna 8.6 mg, Magnesium Oxide 400 mg, Polyethylene glycol 17 g
+- Acyclovir 400 mg PO daily
+- Heparin 5000 units SC daily
+- Fenofibrate 145 mg PO daily
+- Potassium chloride supplementation as directed
+- Magnesium supplementation as tolerated
+
+FOLLOW-UP:
+Patient instructed to follow up with oncology for management of chronic lymphocytic leukemia, cardiology for pacemaker evaluation, endocrinology for diabetes management, and psychiatry for mood disorder optimization. Primary care should monitor electrolytes closely given recent derangements.
+
+DISCHARGE DISPOSITION:
+Home with services.

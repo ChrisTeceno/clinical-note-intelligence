@@ -1,0 +1,178 @@
+{
+  "note_id": "26228185",
+  "diagnoses": [
+    {
+      "name": "Acute kidney injury",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "presenting with acute kidney failure of unspecified etiology"
+    },
+    {
+      "name": "Urinary tract infection",
+      "icd10_suggestion": "N39.0",
+      "confidence": "high",
+      "evidence_span": "urinary tract infection. The pt was found to have significantly elevated creatinine on routine labs and endorsed dysuria and frequency"
+    },
+    {
+      "name": "Dysuria",
+      "icd10_suggestion": "R30.0",
+      "confidence": "high",
+      "evidence_span": "endorsed dysuria and frequency"
+    },
+    {
+      "name": "Chronic lymphocytic leukemia of B-cell type not in remission",
+      "icd10_suggestion": "C91.10",
+      "confidence": "high",
+      "evidence_span": "chronic lymphocytic leukemia of B-cell type not in remission"
+    },
+    {
+      "name": "Cerebral infarction with left-sided hemiparesis",
+      "icd10_suggestion": "I69.351",
+      "confidence": "high",
+      "evidence_span": "prior cerebral infarction with resulting left-sided hemiparesis"
+    },
+    {
+      "name": "Sick sinus syndrome",
+      "icd10_suggestion": "I49.5",
+      "confidence": "high",
+      "evidence_span": "pacemaker for sick sinus syndrome"
+    },
+    {
+      "name": "Paroxysmal atrial fibrillation",
+      "icd10_suggestion": "I48.01",
+      "confidence": "high",
+      "evidence_span": "paroxysmal atrial fibrillation managed on anticoagulation"
+    },
+    {
+      "name": "Atherosclerotic coronary artery disease",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic coronary artery disease s/p angioplasty implant"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "his type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence"
+    },
+    {
+      "name": "Diabetic polyneuropathy",
+      "icd10_suggestion": "E11.42",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus with diabetic polyneuropathy"
+    },
+    {
+      "name": "Morbid obesity",
+      "icd10_suggestion": "E66.01",
+      "confidence": "high",
+      "evidence_span": "morbid obesity s/p bariatric surgery"
+    },
+    {
+      "name": "Obstructive sleep apnea",
+      "icd10_suggestion": "G47.33",
+      "confidence": "high",
+      "evidence_span": "obstructive sleep apnea"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "hypothyroidism"
+    },
+    {
+      "name": "Anxiety disorder",
+      "icd10_suggestion": "F41.9",
+      "confidence": "high",
+      "evidence_span": "anxiety disorder"
+    },
+    {
+      "name": "Major depressive disorder",
+      "icd10_suggestion": "F32.9",
+      "confidence": "high",
+      "evidence_span": "major depressive disorder"
+    },
+    {
+      "name": "Hypovolemia",
+      "icd10_suggestion": "R58.9",
+      "confidence": "high",
+      "evidence_span": "pt presented with signs of hypovolemia and acute kidney injury"
+    },
+    {
+      "name": "Hematuria",
+      "icd10_suggestion": "R31.9",
+      "confidence": "high",
+      "evidence_span": "Labs revealed elevated BUN and creatinine with hematuria noted on UA"
+    },
+    {
+      "name": "Gastrojejunal ulcer",
+      "icd10_suggestion": "K28.9",
+      "confidence": "high",
+      "evidence_span": "his history of gastrojejunal ulcer and urinary retention"
+    },
+    {
+      "name": "Urinary retention",
+      "icd10_suggestion": "R33.9",
+      "confidence": "high",
+      "evidence_span": "history of gastrojejunal ulcer and urinary retention"
+    },
+    {
+      "name": "Thrombocytopenia",
+      "icd10_suggestion": "D69.9",
+      "confidence": "high",
+      "evidence_span": "Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission"
+    },
+    {
+      "name": "Iron deficiency anemia",
+      "icd10_suggestion": "D50.9",
+      "confidence": "high",
+      "evidence_span": "thrombocytopenia and iron deficiency anemia documented on admission"
+    },
+    {
+      "name": "Hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "losartan potassium 50 mg for hypertension"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "atorvastatin 80 mg for his hyperlipidemia"
+    },
+    {
+      "name": "Gout",
+      "icd10_suggestion": "M10.9",
+      "confidence": "high",
+      "evidence_span": "allopurinol 100 mg for gout management"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Pacemaker placement",
+      "cpt_suggestion": "33208",
+      "confidence": "high",
+      "evidence_span": "pacemaker for sick sinus syndrome"
+    },
+    {
+      "name": "Coronary angioplasty with stent implant",
+      "cpt_suggestion": "92928",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic coronary artery disease s/p angioplasty implant"
+    },
+    {
+      "name": "Bariatric surgery",
+      "cpt_suggestion": "43645",
+      "confidence": "high",
+      "evidence_span": "morbid obesity s/p bariatric surgery"
+    },
+    {
+      "name": "IV hydration with 0.9% sodium chloride and lactated Ringers",
+      "cpt_suggestion": "96360",
+      "confidence": "high",
+      "evidence_span": "treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component"
+    }
+  ],
+  "medications": [],
+  "chief_complaint": "Acute kidney failure and dysuria.",
+  "medical_specialty": null
+}

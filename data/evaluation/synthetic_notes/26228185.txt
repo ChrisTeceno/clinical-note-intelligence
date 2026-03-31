@@ -1,0 +1,43 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]
+**MRN:** [REDACTED]
+**ADMISSION DATE:** [DATE]
+**DISCHARGE DATE:** [DATE]
+**ATTENDING PHYSICIAN:** [REDACTED]
+
+---
+
+**CHIEF COMPLAINT:**
+Acute kidney failure and dysuria.
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a heavily comorbid gentleman presenting with acute kidney failure of unspecified etiology and urinary tract infection. The pt was found to have significantly elevated creatinine on routine labs and endorsed dysuria and frequency. Given his complex medical history including chronic lymphocytic leukemia of B-cell type not in remission, prior cerebral infarction with resulting left-sided hemiparesis, and multiple cardiac comorbidities including a pacemaker for sick sinus syndrome, paroxysmal atrial fibrillation managed on anticoagulation, and atherosclerotic coronary artery disease s/p angioplasty implant, the clinical picture suggested possible volume depletion contributing to his renal dysfunction. Additionally, his type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence may have complicated his metabolic status. The patient also carries a significant burden of other chronic conditions including morbid obesity s/p bariatric surgery, obstructive sleep apnea, hypothyroidism, anxiety disorder, and major depressive disorder.
+
+**HOSPITAL COURSE:**
+Upon admission, the pt presented with signs of hypovolemia and acute kidney injury. Labs revealed elevated BUN and creatinine with hematuria noted on UA. Urinalysis cultures were obtained and grew organisms consistent with urinary tract infection. The patient was treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component. A course of ceftriaxone 1 gm IV was initiated for the UTI. 
+
+The patient's multiple medication regimen was carefully reconciled given his polypharmacy. His insulin dosing (80, 30, 50, and 70 unit regimens) was optimized during admission with point-of-care glucose monitoring and dextrose 50% administration as needed for hypoglycemia. Glucagon 1 mg IM was available for severe hypoglycemic events. His rivaroxaban anticoagulation was continued for atrial fibrillation management, though monitoring remained close given the acute kidney injury.
+
+Pain management presented a challenge given adverse effects from opioids previously documented. The pt was managed with a multimodal approach including tramadol 50 mg, hydromorphone 0.5 mg IV judiciously, and oxycodone 5-10 mg PO as needed. Gabapentin 100 mg was continued for his diabetic polyneuropathy, and lidocaine 5% patches were applied. For his chronic pain, acetaminophen 500 mg was employed when appropriate.
+
+Given his history of gastrojejunal ulcer and urinary retention, careful monitoring of GI tolerance and urine output was maintained. Sucralfate 1 gm was continued for gastroprotection, and pantoprazole 40 mg was given for additional acid suppression. Docusate sodium 100 mg, bisacodyl 10 mg, senna 8.6 mg, polyethylene glycol 17 g, magnesium citrate 300 mL, and lactulose 30 mL were utilized to address constipation secondary to opioid use.
+
+His chronic lymphocytic leukemia was monitored; venetoclax 400 mg was continued as part of his malignancy management. Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission; however, no transfusions were required during this hospitalization.
+
+Psychiatric medications were continued: escitalopram 20 mg for depression, risperidone 3 mg, lorazepam 0.5-1 mg PO and 0.5 mg IV as needed for anxiety, hydroxyzine 10 mg, topiramate 50 mg, and amitriptyline 10 mg for mood support.
+
+Cardiovascular management included metoprolol succinate XL 150 mg, losartan potassium 50 mg for hypertension (though hypotension episodes required monitoring), atorvastatin 80 mg for his hyperlipidemia, and aspirin 81 mg. Levothyroxine sodium 125 mcg was continued for hypothyroidism management.
+
+Additional supportive care included nystatin-triamcinolone cream and lidocaine 2% jelly topically, ondansetron 4-8 mg IV for nausea, prochlorperazine 5 mg for antiemesis, acyclovir 400 mg, allopurinol 100 mg for gout management, and carbamide peroxide 6.5% otic drops. IV flushes with both heparin (10 and 100 units/ml) and normal saline maintained vascular access.
+
+By discharge, renal function had begun to improve with appropriate hydration and infection treatment. The patient was tolerating oral intake and pain was adequately controlled.
+
+**DISPOSITION:**
+Discharged to home with close outpatient follow-up.
+
+**DISCHARGE MEDICATIONS:**
+(See reconciled medication list above—all inpatient medications to be continued per outpatient regimen or as directed by primary care and specialist physicians.)
+
+**FOLLOW-UP:**
+Pending: Urine culture final results. Patient to follow up with primary care within 1 week, nephrology for AKI resolution and renal function monitoring, oncology for CLL management, and cardiology for pacemaker/AF surveillance.

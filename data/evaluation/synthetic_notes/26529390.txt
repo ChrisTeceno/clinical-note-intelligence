@@ -1,0 +1,62 @@
+# DISCHARGE SUMMARY
+
+**PATIENT:** [REDACTED]  
+**ADMISSION DATE:** [REDACTED]  
+**DISCHARGE DATE:** [REDACTED]  
+**LENGTH OF STAY:** 12 days
+
+---
+
+## SUBJECTIVE
+
+Patient is a [AGE]-year-old with significant past medical history including myelodysplastic syndrome, COPD with coalworker's pneumoconiosis, prior breast cancer, and hypertensive heart disease who presented to the hospital with acute decompensation. Patient reported progressive dyspnea, abdominal pain, and constitutional symptoms. Given her complex medical background and multiple comorbidities, she was admitted for comprehensive evaluation and management. Patient has established DNR status per prior advance directives.
+
+---
+
+## OBJECTIVE
+
+**Vital Signs on Discharge:** BP 142/88, HR 88, RR 24, O2 sat 91% on 2L NC, Temp 36.8°C
+
+**Labs (Final):** WBC 3.2, Hgb 7.4 (anemia in neoplastic disease), Plt 85 (secondary thrombocytopenia), Cr 2.1 (acute kidney failure), BUN 48, K+ 5.2 (managed with potassium binders), Uric acid 9.8 (hyperuricemia), Glucose 168, TSH 2.1 (on levothyroxine for hypothyroidism), Albumin 2.8, ALT 67, AST 82 (consistent with NASH)
+
+**Imaging:** CT abdomen revealed splenic infarction with associated splenomegaly. CXR demonstrated chronic changes consistent with coalworker's pneumoconiosis with areas of atelectasis bilaterally and evidence of chronic pulmonary edema. Some improvement noted in right middle and left lower lobe infiltrates post-drainage procedures.
+
+---
+
+## ASSESSMENT
+
+Patient is a complex medical case with multiple acute and chronic conditions requiring multidisciplinary management. Primary problems include:
+
+1. **Splenic infarction** with massive splenomegaly requiring beam radiation therapy to address pain and size reduction
+2. **Acute respiratory failure with hypoxia** secondary to underlying COPD, coalworker's pneumoconiosis, chronic pulmonary edema, and atelectasis; managed with drainage of right middle and left lower lung lobes for diagnostic purposes and therapeutic relief
+3. **Acute on chronic diastolic heart failure** exacerbated by hypertensive heart disease; diuresis initiated with close monitoring
+4. **Tumor lysis syndrome** from myelodysplastic syndrome, managed with aggressive hydration, rasburicase, and allopurinol
+5. **Acute kidney injury** likely multifactorial from sepsis (UTI identified), dehydration, and tumor lysis; creatinine peaked at 2.4, trending toward baseline
+6. **Myelodysplastic syndrome** with associated anemia and thrombocytopenia; bone marrow biopsy obtained for evaluation
+7. **Neoplasm-related pain (acute and chronic)** from splenic involvement managed with tramadol
+8. **Urinary tract infection** treated with appropriate antibiotics
+9. **Type 2 diabetes**, **hyperlipidemia**, **hypothyroidism**, **hyperuricemia**, **NASH**, **anxiety disorder**, and **major depressive disorder**—all addressed medically
+
+---
+
+## PLAN & DISCHARGE
+
+Patient is stable enough for discharge to home with close outpatient follow-up. A percutaneous central venous catheter was placed for future infusion access given anticipated ongoing therapeutic needs. Phosphorus metabolism disturbances managed with supplementation and monitoring.
+
+**Discharge Medications:**
+- Levothyroxine sodium 88 mcg PO daily
+- Tiotropium bromide 1 cap IH daily
+- Pantoprazole 40 mg PO daily
+- Tramadol 50 mg PO q6h PRN pain
+- Hydroxyurea 500–1000 mg PO daily (per oncology protocol)
+- Rasburicase 6 mg IV per protocol for uric acid management
+- Escitalopram 5 mg PO daily
+- Magnesium sulfate 2 gm IV per protocol
+- Potassium chloride 60–80 mEq PO divided dosing
+- Sodium chloride 0.9% flush for central line
+- Multivitamins 1 tab PO daily
+- Vitamin D 2000 UNIT PO daily
+- Glucose gel 15 g PO PRN hypoglycemia
+- Dextrose 50% IV access PRN severe hypoglycemia
+
+**Follow-up:** Oncology (myelodysplastic syndrome management), Cardiology (heart failure), Pulmonology (respiratory status), Nephrology (renal function), and primary care within 1 week. Patient counseled on DNR status, pain management, fluid restrictions, and when to seek emergency care.

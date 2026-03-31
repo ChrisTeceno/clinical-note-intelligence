@@ -1,0 +1,29 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 8 days
+
+---
+
+**CHIEF COMPLAINT:**
+Left foot ulcer with cellulitis and vascular compromise
+
+**HISTORY OF PRESENT ILLNESS:**
+Patient is a [age]-year-old with extensive medical history including type 2 diabetes mellitus, chronic kidney disease stage 3, atrial fibrillation, and prior coronary artery disease s/p percutaneous intervention who presented with acute worsening of a chronic non-pressure ulcer involving the left foot. The pt noted increasing erythema, warmth, and drainage from the foot wound over several days, consistent with cellulitis of the left lower limb. Given his type 2 diabetes with associated complications including diabetic chronic kidney disease and hypertensive heart disease with heart failure, urgent vascular and surgical evaluation was obtained. Initial vital signs were T 38.2°C, HR 92, BP 148/84, RR 18, O2 sat 96% on room air. Exam revealed significant erythema and swelling of the left foot with purulent drainage from the ulcer site.
+
+**PAST MEDICAL HISTORY:**
+Significant for type 2 diabetes mellitus on insulin therapy, stage 3 chronic kidney disease, heart failure with preserved ejection fraction, hypertensive heart and chronic kidney disease, atherosclerotic heart disease of native coronary artery without angina, history of old myocardial infarction with coronary stent placement, unspecified atrial fibrillation, atherosclerosis of renal artery, hypothyroidism, hyperlipidemia, obesity (BMI 30.5), gout, anemia, major depressive disorder, and former nicotine dependence. Pt requires long-term antithrombotic and antiplatelet therapy due to cardiovascular history.
+
+**HOSPITAL COURSE:**
+Patient underwent urgent surgical intervention with excision of left foot tendon and left saphenous vein under open approach, followed by bypass of left femoral artery to popliteal artery using autologous venous tissue to restore distal perfusion. Perioperative antibiotics included ceftazidime, vancomycin, ciprofloxacin, and metronidazole targeting polymicrobial cellulitis. Pain was managed with IV hydromorphone and oral oxycodone. Labs on admission showed elevated creatinine at 1.8 mg/dL consistent with his known CKD stage 3, potassium of 5.2 mEq/L, and hemoglobin of 9.2 g/dL reflecting underlying anemia. Glucose management required careful insulin titration given his type 2 diabetes and risk of hypoglycemia; pt experienced one episode of hypoglycemia without coma that was managed with dextrose 50% IV and glucose gel. Diuretic therapy with IV furosemide and oral torsemide was administered for management of his heart failure. Electrolyte abnormalities were addressed with potassium chloride supplementation and sodium polystyrene sulfonate. Post-operative course was uncomplicated, with improved wound appearance and resolution of systemic signs of infection by hospital day 7.
+
+**MEDICATIONS AT DISCHARGE:**
+Aspirin 81 mg PO daily, prasugrel 10 mg PO daily, digoxin 0.125 mg PO daily, metoprolol succinate XL 200 mg PO daily, hydralazine 20 mg PO daily, isosorbide dinitrate 20 mg PO daily, torsemide 60 mg PO daily, levothyroxine sodium 112 mcg PO daily, omeprazole 20 mg PO daily, folic acid 1 mg PO daily, calcium carbonate 500 mg PO daily, vitamin D 2000 UNITS PO daily, ferrous sulfate 325 mg PO daily, insulin SC per sliding scale with basal insulin, febuxostat 40 mg PO daily for gout management, ezetimibe 10 mg PO daily, bupropion SR 150 mg PO daily for depression, ciprofloxacin 500 mg PO BID to complete 7-day course, metronidazole 500 mg PO TID to complete course, oxycodone 5-10 mg PO Q6H PRN pain, acetaminophen 650 mg PO Q6H PRN, docusate 100 mg PO daily, senna 8.6 mg PO at bedtime, bisacodyl PR PRN constipation, diphenhydramine 25 mg PO at bedtime PRN, subcutaneous heparin 5000 units daily, miconazole powder 2% topical to foot, and nystatin cream topical.
+
+**DISPOSITION:**
+Patient discharged to home with VNA services for daily wound care and monitoring. Follow-up appointments arranged with cardiology for management of heart failure and atrial fibrillation, endocrinology for diabetes optimization, nephrology for CKD management, and vascular surgery for post-operative assessment in 1-2 weeks.
+
+**DISCHARGE DIAGNOSIS:**
+As noted above with primary focus on left foot diabetic ulcer with cellulitis now s/p surgical revascularization and debridement.

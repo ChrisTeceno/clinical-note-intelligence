@@ -1,0 +1,72 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [Redacted]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [LOS] days
+
+---
+
+**CHIEF COMPLAINT:**
+
+Altered mental status and abdominal pain.
+
+**HISTORY OF PRESENT ILLNESS:**
+
+This is a [age]-year-old male with a complex medical history including alcoholic cirrhosis of the liver with ascites, alcohol-induced acute pancreatitis without necrosis or infection, and chronic pancreatitis who presented with progressive jaundice, confusion, and severe abdominal distension. The patient has active alcohol dependence and a remote history of bariatric surgery. On arrival, vital signs showed hypoxemia with oxygen saturation of 88% on room air, requiring supplemental oxygen. Laboratory evaluation revealed markedly elevated transaminases, elevated bilirubin consistent with hepatic failure without coma, coagulopathy with prolonged PT/INR, acute kidney failure superimposed on stage 4 chronic kidney disease with evidence of hepatorenal syndrome, and acute posthemorrhagic anemia. The patient was found to have secondary esophageal varices without active bleeding on upper endoscopy. Additionally, he manifested signs of hepatopulmonary syndrome with dyspnea and hypoxemia. Ascites was tense and required drainage. Severe protein-calorie malnutrition was evident from anthropometric and laboratory data.
+
+**HOSPITAL COURSE:**
+
+The pt was admitted to the ICU where aggressive supportive care was initiated. Diagnostic paracentesis was performed percutaneously on multiple occasions revealing ascitic fluid consistent with cirrhosis. A second drainage was performed for therapeutic purposes. Upper endoscopic inspection of the intestinal tract was completed, confirming secondary esophageal varices without hemorrhage.
+
+Due to declining clinical status and poor nutritional intake, a jejunal feeding tube was placed endoscopically via natural opening, and nutritional support via the lower GI tract was begun immediately. A central line was inserted into the right atrium percutaneously to facilitate aggressive fluid and medication administration, as well as for monitoring.
+
+The patient developed pneumonia of unspecified organism during hospitalization, treated with ceftriaxone and levofloxacin. Intermittent dialysis (less than 6 hours per day) was initiated for management of acute kidney failure in the setting of hepatorenal syndrome and stage 4 chronic kidney disease with concurrent hypertensive component.
+
+Albumin infusions (totaling 200 g IV) were administered to support oncotic pressure and renal perfusion. Octreotide was given subcutaneously to reduce portal venous pressure. Midodrine was titrated up to 20 mg PO for systemic vasoconstriction to support renal perfusion in hepatorenal syndrome. Lactulose and rifaximin were used for hepatic encephalopathy prophylaxis. The coagulation defect and secondary thrombocytopenia were monitored; heparin prophylaxis was maintained. Epoetin alfa was administered for acute posthemorrhagic anemia.
+
+The patient's other chronic conditions were managed appropriately: levothyroxine for hypothyroidism, allopurinol for gout, and vitamin supplementation (thiamine, pyridoxine, folic acid, cyanocobalamin, ascorbic acid, vitamin E, and vitamin D) addressing malnutrition and known deficiencies from chronic liver disease and prior bariatric surgery.
+
+Medications for symptom management included hydromorphone and oxycodone for pain, diazepam for anxiety, ondansetron for nausea, and loratadine for pruritus (with Sarna lotion topically). Nicotine dependence was addressed during stay. The patient received influenza vaccination. Given the severe prognosis of end-stage liver disease with multiorgan failure, a Do Not Resuscitate order was placed per patient/family discussion.
+
+---
+
+**DISCHARGE MEDICATIONS:**
+
+1. Folic Acid 1 mg PO daily
+2. Hydromorphone 0.125–0.25 mg IV as needed for pain
+3. Midodrine 20 mg PO three times daily
+4. Multivitamins with minerals 1 tablet PO daily via feeding tube
+5. Nephrocaps 1 capsule PO daily via feeding tube
+6. Oxycodone 5 mg PO/NG as needed for pain
+7. Sarna Lotion topical as needed for pruritus
+8. Albuterol 0.083% nebulized solution as needed
+9. Ceftriaxone 2 g IV as directed
+10. Diazepam 10 mg PO/NG as needed
+11. Heparin 2500–5000 units SC twice daily and 1000–4000 units dwell
+12. Levofloxacin 250–500 mg PO/NG daily
+13. Loratadine 10 mg PO daily
+14. Albumin 25% IV as directed
+15. Allopurinol 100 mg PO/NG daily
+16. Ascorbic Acid 500 mg PO/NG daily
+17. Lactulose 30 mL PO/NG three times daily
+18. Ondansetron 4 mg IV as needed
+19. Rifaximin 550 mg PO/NG three times daily
+20. Sodium Bicarbonate 1300–650 mg PO/NG daily
+21. Thiamine 500 mg PO/NG daily
+22. Vitamin E 400 units PO/NG daily
+23. Octreotide Acetate 100–200 mcg SC twice daily
+24. Vitamin D 1000 units PO/NG daily
+25. Pyridoxine 100 mg PO/NG daily
+26. Potassium Chloride 30 mEq PO as needed
+27. Cyanocobalamin 50 mcg PO/NG monthly
+28. Levothyroxine Sodium 62.5 mcg PO daily
+29. Fluticasone Propionate nasal spray as needed
+30. Epoetin Alfa 2000–4000 units IV as directed
+31. Sodium Chloride 0.9% IV flush as needed
+
+---
+
+**DISPOSITION:**
+
+Patient is being discharged to [facility/home] with home health support. Close outpatient follow-up with hepatology, nephrology, and pulmonology is essential given the severity of his multiorgan dysfunction.

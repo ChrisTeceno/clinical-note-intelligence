@@ -1,0 +1,62 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [X] days
+
+---
+
+**CHIEF COMPLAINT:**
+Left lower extremity gangrene with foot ulceration.
+
+**HISTORY OF PRESENT ILLNESS:**
+This is an elderly patient with significant past medical history including type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer, chronic obstructive pulmonary disease, atrial fibrillation, and advanced chronic kidney disease (stage 4 severe) who was admitted for surgical management of progressive left foot gangrene. The patient also carries diagnoses of hypertensive heart disease with chronic kidney disease and acute on chronic diastolic heart failure. Upon presentation, the patient was noted to have acute kidney failure in the setting of baseline CKD stage 4, as well as acute posthemorrhagic anemia requiring transfusion support.
+
+During the hospitalization, the patient developed a postprocedural infection complicated by enterococcal and other bacterial pathogens demonstrating resistance to vancomycin and fluoroquinolone antibiotics. This infection was further complicated by postprocedural shock, wound disruption, and delirium secondary to the acute physiological derangements. The patient's hospital course was additionally marked by abnormal coagulation profile and development of pressure ulcers. Given the complexity of the clinical picture and poor prognosis, a comprehensive discussion with family was held regarding goals of care, and the patient was placed on a do-not-resuscitate status and transitioned to palliative care focus.
+
+**HOSPITAL COURSE:**
+The patient underwent multiple procedures including open excision of left foot tendon, open excision of left lower leg subcutaneous tissue and fascia, and bilateral extraction of left upper leg subcutaneous tissue and fascia for definitive management of the gangrenous tissue. A central venous catheter (infusion device) was inserted into the superior vena cava via percutaneous approach for hemodynamic support and medication administration.
+
+Postoperatively, the patient developed significant complications. Infection developed at the surgical site with cultures growing enterococcus species, other streptococcus species, and additional bacterial pathogens. Resistance patterns included vancomycin resistance and fluoroquinolone resistance, necessitating treatment with linezolid, daptomycin, meropenem, metronidazole, and ciprofloxacin. The patient progressed to postprocedural shock requiring vasopressor support with norepinephrine and phenylephrine. Critical care management included sedation with propofol and dexmedetomidine, mechanical ventilation support, and continuous hemodynamic monitoring.
+
+The patient's acute kidney failure was managed with fluid resuscitation and diuretics, though function remained significantly impaired given baseline severe CKD. Acute posthemorrhagic anemia was treated with blood product transfusions and albumin administration. Electrolyte abnormalities including hypokalemia and hypocalcemia were corrected with IV supplementation. The patient's diastolic heart failure was managed with furosemide, torsemide, metolazone, and afterload reduction with hydralazine and isosorbide mononitrate. Digoxin was continued for rate control in atrial fibrillation. Type 2 diabetes was managed with subcutaneous insulin given altered oral intake.
+
+Delirium developed during the acute illness and was managed with haloperidol and lorazepam as needed. The patient required physical restraint status due to agitation. Wound care with collagenase ointment and orthopedic dressing solutions was provided for the surgical sites and pressure ulcers that developed during hospitalization.
+
+Given the overall clinical trajectory and multiple organ system involvement, the family elected for palliative care approach with focus on comfort measures.
+
+**DISCHARGE MEDICATIONS:**
+- Linezolid 600 mg PO/NG BID
+- Daptomycin 300 mg IV daily
+- Metoprolol tartrate 50 mg PO BID
+- Furosemide 40-60 mg IV daily
+- Torsemide 30-60 mg PO daily
+- Metolazone 2.5 mg PO daily
+- Isosorbide mononitrate 20 mg PO daily
+- Digoxin 0.125 mg PO daily
+- Irbesartan 150 mg PO daily
+- Levothyroxine 112 mcg PO daily
+- Gabapentin 100-200 mg PO TID
+- Tiotropium 1 CAP IH daily
+- Albuterol 0.083% neb solution TID
+- Fluticasone propionate 110 mcg 2 puffs IH BID
+- Aspirin 81 mg PO daily
+- Prasugrel 10 mg PO daily
+- Simvastatin and ezetimibe 10 mg PO daily
+- Febuxostat 40 mg PO daily
+- Omeprazole 20 mg PO daily
+- Famotidine 20 mg IV BID
+- Acetaminophen 650-1000 mg PO/NG Q6H PRN
+- Oxycodone immediate release 5-15 mg PO/NG Q4-6H PRN
+- Oxycodone SR 20 mg PO BID
+- Lorazepam 0.5 mg PO BID PRN
+- Bupropion 75 mg and sustained release 150 mg PO daily
+- Insulin SC per sliding scale
+- Heparin 5000 units SC BID
+- Morphine IV PRN for pain
+- Senna and bisacodyl for bowel regimen
+- Polyethylene glycol for constipation management
+
+**DISCHARGE DISPOSITION:**
+Patient discharged to inpatient palliative care/hospice facility with continued focus on comfort-directed care given DNR status and poor prognosis.

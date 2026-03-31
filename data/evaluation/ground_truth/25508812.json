@@ -1,0 +1,248 @@
+{
+  "hadm_id": 25508812,
+  "diagnoses": [
+    {
+      "icd_code": "R0902",
+      "description": "Hypoxemia",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "J90",
+      "description": "Pleural effusion, not elsewhere classified",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "J9811",
+      "description": "Atelectasis",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "J811",
+      "description": "Chronic pulmonary edema",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "D469",
+      "description": "Myelodysplastic syndrome, unspecified",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "E790",
+      "description": "Hyperuricemia without signs of inflammatory arthritis and tophaceous disease",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "D735",
+      "description": "Infarction of spleen",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "J449",
+      "description": "Chronic obstructive pulmonary disease, unspecified",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "Z66",
+      "description": "Do not resuscitate",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z853",
+      "description": "Personal history of malignant neoplasm of breast",
+      "seq_num": 15
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "0B9J8ZX",
+      "description": "Drainage of Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic"
+    },
+    {
+      "icd_code": "0B9D8ZX",
+      "description": "Drainage of Right Middle Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Multivitamins",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Tiotropium Bromide",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Albuterol 0.083% Neb Soln",
+      "dose_val": "1 NEB",
+      "dose_unit": "",
+      "route": "IH"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "88 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "TraMADol",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Hydroxyurea",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Hydroxyurea",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Rasburicase",
+      "dose_val": "3 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Vitamin D",
+      "dose_val": "2000 UNIT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Hydroxyurea",
+      "dose_val": "1500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Rasburicase",
+      "dose_val": "6 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Escitalopram Oxalate",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Simvastatin",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3-10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

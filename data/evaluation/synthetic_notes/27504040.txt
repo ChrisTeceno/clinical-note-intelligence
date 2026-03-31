@@ -1,0 +1,63 @@
+# HOSPITAL DISCHARGE SUMMARY
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 4 days
+
+---
+
+## CHIEF COMPLAINT
+Altered mental status and acute decompensation.
+
+## HISTORY OF PRESENT ILLNESS
+Patient is a male with an extensive medical history who presented to the emergency department with confusion, lethargy, and general malaise. He has end stage renal disease requiring hemodialysis, complicated by hypertensive chronic kidney disease with stage 5 CKD. His renal function has been declining progressively, necessitating thrice-weekly dialysis sessions. The patient also carries a significant hepatic history, including alcoholic cirrhosis of the liver and concurrent alcoholic hepatitis, both currently without ascites. Most concerning during this hospitalization was the development of hepatorenal syndrome, which contributed substantially to his acute clinical deterioration. 
+
+The pt reports poor medication adherence and recent missed dialysis sessions. He denies abdominal pain, hemoptysis, or frank hematochezia, though he has noted dark stools intermittently. His wife reports increased alcohol use over the past two weeks despite previous counseling regarding his liver disease.
+
+## PAST MEDICAL HISTORY
+- Hypertensive chronic kidney disease with ESRD on hemodialysis
+- Alcoholic cirrhosis and alcoholic hepatitis
+- Hepatorenal syndrome (new/worsening this admission)
+- Asthma, uncomplicated
+- Anemia secondary to chronic kidney disease
+- Gout
+- Chronic pancreatitis
+- History of venous thromboembolism
+- Hypothyroidism
+- Thrombocytopenia
+- Nicotine dependence (active smoker)
+
+## PHYSICAL EXAMINATION
+**Vitals:** BP 156/92, HR 88, RR 18, Temp 37.1°C, O2 sat 94% RA  
+**General:** Lethargic but arousable, oriented to person and place only  
+**HEENT:** Icteric sclera, dry mucous membranes  
+**Cardiovascular:** Regular rate and rhythm, no murmurs appreciated  
+**Pulmonary:** Clear to auscultation bilaterally  
+**Abdomen:** Soft, mildly tender epigastrium, no rebound, no guarding, no ascites appreciated  
+**Extremities:** No edema; asterixis present  
+**Neuro:** Confused, slowed responses, cranial nerves II-XII grossly intact
+
+## LABORATORY AND IMAGING FINDINGS
+Admission labs revealed BUN 72 mg/dL, creatinine 9.2 mg/dL (baseline elevated due to ESRD), potassium 6.1 mEq/L, phosphorus 7.8 mg/dL. Albumin was 2.1 g/dL reflecting chronic liver disease. Total bilirubin was elevated at 4.2 mg/dL with predominantly direct hyperbilirubinemia. AST and ALT were mildly elevated at 98 and 67 U/L respectively. Hemoglobin was 7.8 g/dL, consistent with anemia of chronic kidney disease. Platelet count was 89,000/μL. INR was mildly prolonged at 1.4. Ammonia level was 128 μmol/L, supporting hepatic encephalopathy.
+
+## HOSPITAL COURSE
+The patient received emergent hemodialysis on hospital day one with partial resolution of uremic symptoms and electrolyte abnormalities. Mental status improved somewhat following dialysis, though remained globally depressed. His hepatorenal syndrome was managed conservatively with careful fluid balance and hemodynamic monitoring. Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy. Given his significant liver dysfunction and cirrhosis, infectious workup including blood cultures and ascitic fluid analysis (paracentesis deferred given absence of clinical ascites) was negative. The patient was counseled extensively regarding alcohol cessation, medication adherence, and the critical importance of maintaining dialysis schedule compliance.
+
+## DISCHARGE DIAGNOSES
+1. Hypertensive chronic kidney disease with stage 5 CKD/ESRD
+2. End stage renal disease on hemodialysis
+3. Alcoholic cirrhosis and alcoholic hepatitis
+4. Hepatorenal syndrome
+5. Hepatic encephalopathy
+6. Anemia of chronic kidney disease
+7. Thrombocytopenia
+8. Asthma
+9. Gout
+10. Chronic pancreatitis
+11. History of venous thromboembolism
+12. Hypothyroidism
+13. Nicotine dependence
+
+## DISCHARGE INSTRUCTIONS
+Patient is discharged with close outpatient follow-up arranged with nephrology, hepatology, and primary care. He is instructed to attend all scheduled hemodialysis sessions without exception. Strict fluid restriction of 1 liter daily is recommended. The patient was counseled to abstain from alcohol completely given his advanced cirrhosis. A social work referral was placed for substance abuse support resources.

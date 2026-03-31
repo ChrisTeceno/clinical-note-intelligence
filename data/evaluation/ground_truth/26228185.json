@@ -1,0 +1,490 @@
+{
+  "hadm_id": 26228185,
+  "diagnoses": [
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "N390",
+      "description": "Urinary tract infection, site not specified",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "C9110",
+      "description": "Chronic lymphocytic leukemia of B-cell type not having achieved remission",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "I69354",
+      "description": "Hemiplegia and hemiparesis following cerebral infarction affecting left non-dominant side",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "Z950",
+      "description": "Presence of cardiac pacemaker",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "E1142",
+      "description": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "I480",
+      "description": "Paroxysmal atrial fibrillation",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Z7901",
+      "description": "Long term (current) use of anticoagulants",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "E6601",
+      "description": "Morbid (severe) obesity due to excess calories",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "G4733",
+      "description": "Obstructive sleep apnea (adult) (pediatric)",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "F419",
+      "description": "Anxiety disorder, unspecified",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "Z9884",
+      "description": "Bariatric surgery status",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "I10",
+      "description": "Essential (primary) hypertension",
+      "seq_num": 18
+    },
+    {
+      "icd_code": "G8929",
+      "description": "Other chronic pain",
+      "seq_num": 19
+    },
+    {
+      "icd_code": "D696",
+      "description": "Thrombocytopenia, unspecified",
+      "seq_num": 20
+    },
+    {
+      "icd_code": "D509",
+      "description": "Iron deficiency anemia, unspecified",
+      "seq_num": 21
+    },
+    {
+      "icd_code": "F329",
+      "description": "Major depressive disorder, single episode, unspecified",
+      "seq_num": 22
+    },
+    {
+      "icd_code": "I495",
+      "description": "Sick sinus syndrome",
+      "seq_num": 23
+    },
+    {
+      "icd_code": "M109",
+      "description": "Gout, unspecified",
+      "seq_num": 24
+    },
+    {
+      "icd_code": "K289",
+      "description": "Gastrojejunal ulcer, unspecified as acute or chronic, without hemorrhage or perforation",
+      "seq_num": 25
+    },
+    {
+      "icd_code": "R339",
+      "description": "Retention of urine, unspecified",
+      "seq_num": 26
+    },
+    {
+      "icd_code": "I959",
+      "description": "Hypotension, unspecified",
+      "seq_num": 27
+    },
+    {
+      "icd_code": "Z8547",
+      "description": "Personal history of malignant neoplasm of testis",
+      "seq_num": 28
+    },
+    {
+      "icd_code": "R319",
+      "description": "Hematuria, unspecified",
+      "seq_num": 29
+    },
+    {
+      "icd_code": "R740",
+      "description": "Nonspecific elevation of levels of transaminase and lactic acid dehydrogenase [LDH]",
+      "seq_num": 30
+    },
+    {
+      "icd_code": "R5383",
+      "description": "Other fatigue",
+      "seq_num": 31
+    },
+    {
+      "icd_code": "T402X5A",
+      "description": "Adverse effect of other opioids, initial encounter",
+      "seq_num": 32
+    },
+    {
+      "icd_code": "K5900",
+      "description": "Constipation, unspecified",
+      "seq_num": 33
+    },
+    {
+      "icd_code": "E861",
+      "description": "Hypovolemia",
+      "seq_num": 34
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Vial",
+      "dose_val": "1 VIAL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sucralfate",
+      "dose_val": "1 gm",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Prochlorperazine",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Amitriptyline",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "CefTRIAXone",
+      "dose_val": "1 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "HydrOXYzine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "80 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "30 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "50 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "70 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Nystatin-Triamcinolone Cream",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Rivaroxaban",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "TraMADol",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acyclovir",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Allopurinol",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Losartan Potassium",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Gabapentin",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lactulose",
+      "dose_val": "30 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "125 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lidocaine Jelly 2% (Glydo)",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Magnesium Citrate",
+      "dose_val": "300 mL",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Iohexol 240",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin Flush (10 units/ml)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Heparin Flush (100 units/ml)",
+      "dose_val": "5 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Escitalopram Oxalate",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Topiramate (Topamax)",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "RisperiDONE",
+      "dose_val": "3 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Lidocaine 5% Patch",
+      "dose_val": "3 PTCH",
+      "dose_unit": "",
+      "route": "TD"
+    },
+    {
+      "drug": "Metoprolol Succinate XL",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Venetoclax",
+      "dose_val": "400 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5-1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Carbamide Peroxide 6.5%",
+      "dose_val": "5-10 DROP",
+      "dose_unit": "",
+      "route": "BOTH EARS"
+    }
+  ]
+}

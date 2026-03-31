@@ -1,0 +1,132 @@
+{
+  "hadm_id": 22733922,
+  "diagnoses": [
+    {
+      "icd_code": "F1994",
+      "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced mood disorder",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "B20",
+      "description": "Human immunodeficiency virus [HIV] disease",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "F1490",
+      "description": "Cocaine use, unspecified, uncomplicated",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "F1099",
+      "description": "Alcohol use, unspecified with unspecified alcohol-induced disorder",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "F209",
+      "description": "Schizophrenia, unspecified",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "Z87820",
+      "description": "Personal history of traumatic brain injury",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "B1920",
+      "description": "Unspecified viral hepatitis C without hepatic coma",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 8
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Multivitamins",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "FoLIC Acid",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sulfameth/Trimethoprim DS",
+      "dose_val": "1 TAB",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lidocaine 5% Patch",
+      "dose_val": "1 PTCH",
+      "dose_unit": "",
+      "route": "TD"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sertraline",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Calcium Carbonate",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "200 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Thiamine",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "HydrOXYzine",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bengay Cream",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**MRN:** [Number]  
+**DATE OF ADMISSION:** [Date]  
+**DATE OF DISCHARGE:** [Date]  
+**LENGTH OF STAY:** 4 days
+
+---
+
+**SUBJECTIVE:**
+
+Patient is a [age]-year-old with a complex medical history including chronic pulmonary edema, heart failure, hypertensive heart disease with heart failure, atherosclerotic heart disease of native coronary artery without angina pectoris, type 2 diabetes mellitus, and pure hypercholesterolemia who presented to the hospital with acute dyspnea and orthopnea. Pt reports waking at night with significant shortness of breath and noted increased lower extremity edema over the past week. Denies chest pain or palpitations. States compliance has been challenging with home medications due to cost and transportation barriers.
+
+---
+
+**OBJECTIVE:**
+
+**Vital Signs on Admission:** BP 156/92, HR 98, RR 22, O2 sat 88% on RA, Temp 37.1°C
+
+**Physical Exam:** Pt in mild respiratory distress. Bilateral crackles noted in lung bases. JVD present at 8 cm. 2+ pitting edema bilateral lower extremities. S3 gallop appreciated on cardiac auscultation.
+
+**Labs:**
+- BNP: 892 pg/mL (elevated)
+- Creatinine: 1.4 mg/dL (baseline ~1.3)
+- Glucose: 184 mg/dL
+- Total cholesterol: 248 mg/dL
+- LDL: 156 mg/dL
+- EF on echo: 40% (unchanged from prior)
+
+**Imaging:** CXR demonstrated bilateral pulmonary edema without acute pneumonia.
+
+---
+
+**ASSESSMENT:**
+
+Patient with multiple comorbidities primarily hypertensive heart disease with heart failure and underlying atherosclerotic coronary disease, presenting with acute exacerbation of chronic pulmonary edema. Contributing factors include suboptimal blood pressure control and medication non-adherence related to socioeconomic constraints. Uncontrolled type 2 diabetes mellitus and elevated lipid panel further compound cardiovascular risk. Patient required diuresis and optimization of cardiac regimen during this admission.
+
+---
+
+**PLAN/DISCHARGE INSTRUCTIONS:**
+
+Patient was managed with IV diuretics during hospitalization with significant clinical improvement. Respiratory status improved to baseline, orthopnea resolved, and lower extremity edema decreased substantially. O2 saturation normalized to >95% on room air by discharge. Given the complexity of managing heart failure alongside diabetes and hypercholesterolemia, discharge planning included referral to social work for medication assistance programs and transportation resources.
+
+**Follow-up:**
+- Cardiology: 1-2 weeks
+- Primary Care: 1 week
+- Home health nursing for medication education and compliance monitoring
+
+**Discharge Medications:** Patient to continue home regimen (specifics reconciled by pharmacy at discharge). Patient requires ongoing long-term insulin use for glycemic control and should attend diabetes education classes.
+
+**Activity:** As tolerated, encourage walking.
+
+**Diet:** Sodium-restricted diet (2g/day) given heart failure and hypertension.
+
+**Monitoring:** Daily weights with notification of provider if weight gain >3 lbs in one day or >5 lbs in one week.
+
+Pt and family educated on importance of medication adherence for managing heart failure, atherosclerotic heart disease, hypertension, and diabetes to prevent future exacerbations. Discussed warning signs including increasing dyspnea, orthopnea, leg swelling, or chest discomfort.

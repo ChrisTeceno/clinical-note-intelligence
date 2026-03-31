@@ -1,0 +1,487 @@
+{
+  "hadm_id": 23786647,
+  "diagnoses": [
+    {
+      "icd_code": "I671",
+      "description": "Cerebral aneurysm, nonruptured",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "G936",
+      "description": "Cerebral edema",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "I5031",
+      "description": "Acute diastolic (congestive) heart failure",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "R4701",
+      "description": "Aphasia",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "D62",
+      "description": "Acute posthemorrhagic anemia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "I97618",
+      "description": "Postprocedural hemorrhage of a circulatory system organ or structure following other circulatory system procedure",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "J942",
+      "description": "Hemothorax",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I97131",
+      "description": "Postprocedural heart failure following other surgery",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "I9752",
+      "description": "Accidental puncture and laceration of a circulatory system organ or structure during other procedure",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "I10",
+      "description": "Essential (primary) hypertension",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Z853",
+      "description": "Personal history of malignant neoplasm of breast",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "I9581",
+      "description": "Postprocedural hypotension",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "R079",
+      "description": "Chest pain, unspecified",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Y834",
+      "description": "Other reconstructive surgery as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "Y92230",
+      "description": "Patient room in hospital as the place of occurrence of the external cause",
+      "seq_num": 16
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "03VL3DZ",
+      "description": "Restriction of Left Internal Carotid Artery with Intraluminal Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "03VG3DZ",
+      "description": "Restriction of Intracranial Artery with Intraluminal Device, Percutaneous Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "amLODIPine",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dexamethasone",
+      "dose_val": "2 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Dexamethasone",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "amLODIPine",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "325 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atenolol",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atenolol",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dexamethasone",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Iso-Osmotic Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "LevETIRAcetam",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phosphorus",
+      "dose_val": "250 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "PNEUMOcoccal 23-valent polysaccharide vaccine",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "NiCARdipine IV",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Acetaminophen IV",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.83% Sodium Chloride",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "amLODIPine",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Atenolol",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Enalapril Maleate",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "17.2 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Atenolol",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Enalapril Maleate",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "LevETIRAcetam",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Haloperidol",
+      "dose_val": "2 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "325-650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "amLODIPine",
+      "dose_val": "7.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dexamethasone",
+      "dose_val": "3 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "SW",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Labetalol",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HydrALAZINE",
+      "dose_val": "10-20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

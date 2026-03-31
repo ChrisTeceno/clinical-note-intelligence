@@ -1,0 +1,42 @@
+{
+  "hadm_id": 26332470,
+  "diagnoses": [
+    {
+      "icd_code": "J811",
+      "description": "Chronic pulmonary edema",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I509",
+      "description": "Heart failure, unspecified",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "E7800",
+      "description": "Pure hypercholesterolemia, unspecified",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "I110",
+      "description": "Hypertensive heart disease with heart failure",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 7
+    }
+  ],
+  "procedures": [],
+  "medications": []
+}

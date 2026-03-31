@@ -1,0 +1,41 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [Patient ID]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [X days]
+
+---
+
+**CHIEF COMPLAINT:**  
+Facial trauma and left-sided chest injury sustained during altercation.
+
+**HISTORY OF PRESENT ILLNESS:**  
+The patient is a [age]-year-old individual admitted following assault by unarmed brawl or fight. The incident resulted in significant facial and thoracic trauma. On presentation, the pt was found to have a closed fracture of the subcondylar process of the mandible with associated dislocation of the jaw. Imaging also revealed a laceration of intercostal blood vessels on the left side. Additionally, the patient sustained a contusion of other intra-abdominal organs from blunt trauma. The pt has a known history of alcohol abuse, uncomplicated, which was relevant to both the circumstances of the assault and perioperative management.
+
+On initial laboratory evaluation, the patient demonstrated thrombocytopenia of unspecified etiology and anemia, unspecified, both requiring careful monitoring throughout the hospitalization. Vital signs on admission were notable for mild tachycardia, and the patient reported significant pain with swelling to the face and left chest wall.
+
+**HOSPITAL COURSE:**  
+The pt underwent urgent surgical intervention given the vascular compromise from the intercostal laceration and mandibular instability. The right mandible was repositioned with internal fixation device using an open approach to address the subcondylar fracture. Simultaneously, the left maxilla and left mandible were repositioned with external fixation devices via percutaneous approach to stabilize the facial skeleton. An upper artery repair was performed via open approach to control hemorrhage from the lacerated intercostal vessels.
+
+Postoperatively, the patient was managed in the intensive care setting with careful hemodynamic monitoring. Pain was controlled with a combination of fentanyl citrate drip, propofol infusion for sedation, hydromorphone via patient-controlled analgesia, and IV acetaminophen. Antibiotic coverage was provided with ampicillin-sulbactam to prevent surgical site infection. Electrolyte abnormalities were addressed with IV potassium chloride, calcium gluconate, magnesium sulfate, and phosphorus supplementation. The pt received aggressive fluid resuscitation with normal saline and D5 1/2NS given the trauma and hemorrhage.
+
+Anticoagulation prophylaxis included subcutaneous heparin. Gastrointestinal support included famotidine for ulcer prophylaxis, ondansetron for nausea management, and bowel regimen with docusate sodium, senna, and milk of magnesia given limited oral intake and opioid use. Oral hygiene was maintained with chlorhexidine gluconate rinse. The patient received influenza vaccination during hospitalization. Pseudoephedrine and oxymetazoline nasal spray were used for congestion management, and oxycodone liquid was available for breakthrough pain control once the patient transitioned from intensive care. Diphenhydramine was administered as needed for anxiety and sleep. Dexamethasone ophthalmic suspension and ciprofloxacin ophthalmic solution were instilled to the left ear for local inflammatory control.
+
+The patient's anemia and thrombocytopenia were monitored closely, though neither required transfusion. By discharge, the pt demonstrated appropriate wound healing, stable vital signs, and adequate oral intake. Pain was well-controlled on the prescribed regimen.
+
+**DISCHARGE MEDICATIONS:**
+- Oxycodone liquid 5-10 mg PO Q4-6H PRN pain
+- Hydromorphone 1-2 mg IV Q2-3H PRN breakthrough pain
+- Acetaminophen 1000 mg PO TID
+- Ampicillin-sulbactam 3 g IV BID for 7 additional days
+- Docusate sodium 100 mg PO daily
+- Senna 8.6 mg PO daily
+- Famotidine 20 mg IV daily
+- Ondansetron 4 mg IV Q6H PRN nausea
+- Trazodone 50 mg PO QHS PRN sleep
+- Chlorhexidine gluconate 0.12% oral rinse 15 mL BID
+- Sodium chloride nasal spray 1-2 sprays each nostril BID
+
+**DISPOSITION:**  
+The patient is discharged to home with close outpatient orthognathic and oral surgery follow-up. The external fixation devices on the maxilla and mandible will require regular clinical assessment and anticipated removal in 4-6 weeks. The pt is strongly counseled regarding alcohol cessation and referred to substance abuse counseling services.

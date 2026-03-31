@@ -1,0 +1,331 @@
+{
+  "note_id": "23819016",
+  "diagnoses": [
+    {
+      "name": "Sepsis with septic shock",
+      "icd10_suggestion": "R65.21",
+      "confidence": "high",
+      "evidence_span": "Patient rapidly deteriorated with hemodynamic instability requiring vasopressor support. Severe sepsis with septic shock developed secondary to gram-negative infection."
+    },
+    {
+      "name": "Acute pancreatitis",
+      "icd10_suggestion": "K85.90",
+      "confidence": "high",
+      "evidence_span": "CT abdomen/pelvis revealed acute pancreatitis with peripancreatic fluid collection. No evidence of pseudoaneurysm or walled-off necrosis."
+    },
+    {
+      "name": "Acute kidney injury",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "Acute kidney injury progressed requiring careful fluid management and electrolyte repletion."
+    },
+    {
+      "name": "Metabolic acidosis",
+      "icd10_suggestion": "E87.2",
+      "confidence": "high",
+      "evidence_span": "Metabolic acidosis was present with pH 7.21 and base deficit of -8."
+    },
+    {
+      "name": "Cachexia with protein-calorie malnutrition",
+      "icd10_suggestion": "E46",
+      "confidence": "high",
+      "evidence_span": "Patient exhibited profound cachexia and protein-calorie malnutrition consistent with chronic alcohol use and underlying hepatic dysfunction."
+    },
+    {
+      "name": "Wet beriberi (thiamine deficiency)",
+      "icd10_suggestion": "E51.12",
+      "confidence": "high",
+      "evidence_span": "Findings consistent with wet beriberi (thiamine deficiency) and polyneuropathy were noted on examination."
+    },
+    {
+      "name": "Polyneuropathy",
+      "icd10_suggestion": "G62.9",
+      "confidence": "high",
+      "evidence_span": "Findings consistent with wet beriberi (thiamine deficiency) and polyneuropathy were noted on examination."
+    },
+    {
+      "name": "Alcoholic hepatitis",
+      "icd10_suggestion": "K70.10",
+      "confidence": "high",
+      "evidence_span": "Alcoholic hepatitis without ascites documented on clinical and laboratory grounds."
+    },
+    {
+      "name": "Chronic kidney disease with hypertension",
+      "icd10_suggestion": "I12.9",
+      "confidence": "high",
+      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease"
+    },
+    {
+      "name": "Alcohol dependence",
+      "icd10_suggestion": "F10.20",
+      "confidence": "high",
+      "evidence_span": "Patient is a [age]-year-old male with significant past medical history including alcohol dependence"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout, and history of prior thromboembolism."
+    },
+    {
+      "name": "Gout",
+      "icd10_suggestion": "M10.9",
+      "confidence": "high",
+      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout, and history of prior thromboembolism."
+    },
+    {
+      "name": "History of venous thromboembolism",
+      "icd10_suggestion": "I82.90",
+      "confidence": "high",
+      "evidence_span": "Patient has had prior venous thromboembolic events."
+    },
+    {
+      "name": "Anemia",
+      "icd10_suggestion": "D64.9",
+      "confidence": "high",
+      "evidence_span": "Hgb 7.2 g/dL (anemia noted)"
+    },
+    {
+      "name": "Asthma",
+      "icd10_suggestion": "J45.9",
+      "confidence": "high",
+      "evidence_span": "History of tobacco use and asthma also documented."
+    },
+    {
+      "name": "History of bariatric surgery",
+      "icd10_suggestion": "Z98.84",
+      "confidence": "high",
+      "evidence_span": "prior bariatric surgery"
+    },
+    {
+      "name": "Disorientation",
+      "icd10_suggestion": "R41.0",
+      "confidence": "medium",
+      "evidence_span": "Patient displayed disorientation upon admission."
+    },
+    {
+      "name": "Tobacco use disorder",
+      "icd10_suggestion": "F17.200",
+      "confidence": "medium",
+      "evidence_span": "History of tobacco use and asthma also documented."
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Percutaneous central venous catheter placement (Infusion Device into Superior Vena Cava)",
+      "cpt_suggestion": "36556",
+      "confidence": "high",
+      "evidence_span": "Percutaneous central venous catheter (Infusion Device into Superior Vena Cava) placed for hemodynamic monitoring and medication administration."
+    },
+    {
+      "name": "CT abdomen/pelvis",
+      "cpt_suggestion": "74177",
+      "confidence": "high",
+      "evidence_span": "CT abdomen/pelvis revealed acute pancreatitis with peripancreatic fluid collection."
+    }
+  ],
+  "medications": [
+    {
+      "name": "Vancomycin",
+      "dosage": "1 gm",
+      "frequency": "q12h",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Vancomycin 1 gm IV q12h (infection coverage)"
+    },
+    {
+      "name": "Piperacillin-tazobactam",
+      "dosage": "2.25 gm",
+      "frequency": "q6h",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Piperacillin-tazobactam 2.25 gm IV q6h (continued)"
+    },
+    {
+      "name": "Ciprofloxacin HCl",
+      "dosage": "500 mg",
+      "frequency": "BID",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Ciprofloxacin HCl 500 mg PO/NG BID"
+    },
+    {
+      "name": "Ceftriaxone",
+      "dosage": "2 gm",
+      "frequency": "q12h",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ceftriaxone 2 gm IV q12h"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "5,000 units",
+      "frequency": "BID",
+      "route": "SC",
+      "confidence": "high",
+      "evidence_span": "Heparin 5,000 units SC BID (VTE prophylaxis given history)"
+    },
+    {
+      "name": "Levothyroxine sodium",
+      "dosage": "62.5 mcg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Levothyroxine sodium 62.5 mcg PO/NG daily"
+    },
+    {
+      "name": "Thiamine",
+      "dosage": "100 mg PO and 500 mg IV",
+      "frequency": "daily",
+      "route": "PO and IV",
+      "confidence": "high",
+      "evidence_span": "Thiamine 100 mg PO daily and thiamine 500 mg IV daily (beriberi treatment)"
+    },
+    {
+      "name": "Folic acid",
+      "dosage": "1 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Folic acid 1 mg PO daily"
+    },
+    {
+      "name": "Vitamin B complex",
+      "dosage": "1 cap",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Vitamin B complex 1 cap PO/NG daily"
+    },
+    {
+      "name": "Multivitamins with minerals",
+      "dosage": "1 tab",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Multivitamins with minerals 1 tab PO daily"
+    },
+    {
+      "name": "Magnesium oxide",
+      "dosage": "400 mg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Magnesium oxide 400 mg PO/NG daily and magnesium sulfate 4 gm IV (repletion)"
+    },
+    {
+      "name": "Magnesium sulfate",
+      "dosage": "4 gm",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Magnesium oxide 400 mg PO/NG daily and magnesium sulfate 4 gm IV (repletion)"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "20 mEq",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Potassium chloride 20 mEq PO daily"
+    },
+    {
+      "name": "Allopurinol",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Allopurinol 100 mg PO/NG daily (gout)"
+    },
+    {
+      "name": "Lorazepam",
+      "dosage": "1-0.5 mg",
+      "frequency": null,
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Lorazepam 1-0.5 mg PO/NG for anxiety/alcohol withdrawal"
+    },
+    {
+      "name": "Diazepam",
+      "dosage": "10 mg",
+      "frequency": "prn",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Diazepam 10 mg IV prn"
+    },
+    {
+      "name": "Haloperidol",
+      "dosage": "2.5 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Haloperidol 2.5 mg PO daily (disorientation management)"
+    },
+    {
+      "name": "Trazodone",
+      "dosage": "25 mg",
+      "frequency": "qhs",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Trazodone 25 mg PO/NG qhs"
+    },
+    {
+      "name": "Hydroxyzine",
+      "dosage": "25 mg",
+      "frequency": "q6h prn",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Hydroxyzine 25 mg PO/NG q6h prn"
+    },
+    {
+      "name": "Hydromorphone",
+      "dosage": "0.25-0.5 mg IV or 1-2 mg PO/NG",
+      "frequency": "q4-6h prn",
+      "route": "IV or PO/NG",
+      "confidence": "high",
+      "evidence_span": "Hydromorphone 0.25-0.5 mg IV or 1-2 mg PO/NG q4-6h prn pain"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "650 mg",
+      "frequency": "q6h prn",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 650 mg PO q6h prn"
+    },
+    {
+      "name": "Ondansetron",
+      "dosage": "4 mg",
+      "frequency": "q8h prn",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ondansetron 4 mg IV q8h prn nausea"
+    },
+    {
+      "name": "Sarna lotion",
+      "dosage": null,
+      "frequency": "prn",
+      "route": "topical",
+      "confidence": "high",
+      "evidence_span": "Sarna lotion apply topically prn"
+    },
+    {
+      "name": "Fluticasone propionate nasal spray",
+      "dosage": "1 spray each nostril",
+      "frequency": "daily",
+      "route": "nasal",
+      "confidence": "high",
+      "evidence_span": "Fluticasone propionate nasal spray 1 spray each nostril daily"
+    },
+    {
+      "name": "Artificial tears",
+      "dosage": "1-2 drops",
+      "frequency": "TID prn",
+      "route": "ophthalmic",
+      "confidence": "high",
+      "evidence_span": "Artificial tears 1-2 drops to both eyes TID prn"
+    }
+  ],
+  "chief_complaint": "Abdominal pain with acute illness and severe distress",
+  "medical_specialty": "Internal Medicine/Acute Care Medicine"
+}

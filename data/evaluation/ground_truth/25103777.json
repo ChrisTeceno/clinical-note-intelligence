@@ -1,0 +1,354 @@
+{
+  "hadm_id": 25103777,
+  "diagnoses": [
+    {
+      "icd_code": "T827XXA",
+      "description": "Infection and inflammatory reaction due to other cardiac and vascular devices, implants and grafts, initial encounter",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "A4102",
+      "description": "Sepsis due to Methicillin resistant Staphylococcus aureus",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "I330",
+      "description": "Acute and subacute infective endocarditis",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "N186",
+      "description": "End stage renal disease",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "I120",
+      "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E1122",
+      "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "E1121",
+      "description": "Type 2 diabetes mellitus with diabetic nephropathy",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "E875",
+      "description": "Hyperkalemia",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "E8770",
+      "description": "Fluid overload, unspecified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "K5900",
+      "description": "Constipation, unspecified",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "D631",
+      "description": "Anemia in chronic kidney disease",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "L851",
+      "description": "Acquired keratosis [keratoderma] palmaris et plantaris",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "Z992",
+      "description": "Dependence on renal dialysis",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z89421",
+      "description": "Acquired absence of other right toe(s)",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "Z87891",
+      "description": "Personal history of nicotine dependence",
+      "seq_num": 17
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "02PAX3Z",
+      "description": "Removal of Infusion Device from Heart, External Approach"
+    },
+    {
+      "icd_code": "5A1D70Z",
+      "description": "Performance of Urinary Filtration, Intermittent, Less than 6 Hours Per Day"
+    },
+    {
+      "icd_code": "0JPTXXZ",
+      "description": "Removal of Tunneled Vascular Access Device from Trunk Subcutaneous Tissue and Fascia, External Approach"
+    },
+    {
+      "icd_code": "0JH63XZ",
+      "description": "Insertion of Tunneled Vascular Access Device into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach"
+    },
+    {
+      "icd_code": "02H633Z",
+      "description": "Insertion of Infusion Device into Right Atrium, Percutaneous Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Vancomycin",
+      "dose_val": "0 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lisinopril",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Nephrocaps",
+      "dose_val": "1 CAP",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Calcitriol",
+      "dose_val": "0.25 mcg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Calcium Carbonate",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "25 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Neomycin-Polymyxin-Bacitracin",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "sevelamer CARBONATE",
+      "dose_val": "800 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Hydrocerin",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "TP"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "6 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "8 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Polystyrene Sulfonate",
+      "dose_val": "30 gm",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Vitamin D",
+      "dose_val": "2000 UNIT",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin (Regular) for Hyperkalemia",
+      "dose_val": "10 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Dextrose",
+      "dose_val": "200 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3-10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin Dwell (1000 Units/mL)",
+      "dose_val": "1000-4000 UNIT",
+      "dose_unit": "",
+      "route": "DWELL"
+    }
+  ]
+}

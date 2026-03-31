@@ -1,0 +1,530 @@
+{
+  "hadm_id": 20297618,
+  "diagnoses": [
+    {
+      "icd_code": "I25110",
+      "description": "Atherosclerotic heart disease of native coronary artery with unstable angina pectoris",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "E669",
+      "description": "Obesity, unspecified",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "E785",
+      "description": "Hyperlipidemia, unspecified",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "Z955",
+      "description": "Presence of coronary angioplasty implant and graft",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "F17200",
+      "description": "Nicotine dependence, unspecified, uncomplicated",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "Z6832",
+      "description": "Body mass index (BMI) 32.0-32.9, adult",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "F419",
+      "description": "Anxiety disorder, unspecified",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "Z7902",
+      "description": "Long term (current) use of antithrombotics/antiplatelets",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "Z8249",
+      "description": "Family history of ischemic heart disease and other diseases of the circulatory system",
+      "seq_num": 9
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "5A1221Z",
+      "description": "Performance of Cardiac Output, Continuous"
+    },
+    {
+      "icd_code": "02100Z9",
+      "description": "Bypass Coronary Artery, One Artery from Left Internal Mammary, Open Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "NG"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Diazepam",
+      "dose_val": "2 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Diazepam",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Clopidogrel",
+      "dose_val": "75 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Fexofenadine",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Insulin Human Regular",
+      "dose_val": "100 UNIT",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Lidocaine 5% Patch",
+      "dose_val": "1 PTCH",
+      "dose_unit": "",
+      "route": "TD"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Milk of Magnesia",
+      "dose_val": "30 mL",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Nitroglycerin SL",
+      "dose_val": "0.3 mg",
+      "dose_unit": "",
+      "route": "SL"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Aspirin EC",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Chlorhexidine Gluconate 0.12% Oral Rinse",
+      "dose_val": "15 mL",
+      "dose_unit": "",
+      "route": "ORAL"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Gabapentin",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ketorolac",
+      "dose_val": "15 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ketorolac",
+      "dose_val": "30 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lactulose",
+      "dose_val": "30 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Metoclopramide",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Nicotine Patch",
+      "dose_val": "21 mg",
+      "dose_unit": "",
+      "route": "TD"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "D5W",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ranitidine",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Dexmedetomidine",
+      "dose_val": "0.4 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Nitroglycerin",
+      "dose_val": "8 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Nitroglycerin",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Acetaminophen IV",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin Sodium",
+      "dose_val": "25,000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "PHENYLEPHrine",
+      "dose_val": "12 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Propofol",
+      "dose_val": "200 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Rosuvastatin Calcium",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ibuprofen",
+      "dose_val": "800 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Vancomycin",
+      "dose_val": "1500 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "PHENYLEPHrine",
+      "dose_val": "60 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Syringe (Iso-Osmotic Dextrose)",
+      "dose_val": "20 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Syringe (Iso-Osmotic Dextrose)",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sterile Water",
+      "dose_val": "50 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "10 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Mupirocin Ointment 2%",
+      "dose_val": "1 Appl",
+      "dose_unit": "",
+      "route": "NU"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "1500 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "6.25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "4000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "2-4 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "10 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "1400 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Dextrose 5%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "12.5-50 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "0-10 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Insulin Glargine  (CVICU Protocol)",
+      "dose_val": "0-50 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    }
+  ]
+}

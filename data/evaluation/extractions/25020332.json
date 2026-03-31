@@ -1,0 +1,265 @@
+{
+  "note_id": "25020332",
+  "diagnoses": [
+    {
+      "name": "Malignant neoplasm of left main bronchus",
+      "icd10_suggestion": "C78.0",
+      "confidence": "high",
+      "evidence_span": "malignant neoplasms involving both the left main bronchus and right main bronchus"
+    },
+    {
+      "name": "Malignant neoplasm of right main bronchus",
+      "icd10_suggestion": "C78.0",
+      "confidence": "high",
+      "evidence_span": "malignant neoplasms involving both the left main bronchus and right main bronchus"
+    },
+    {
+      "name": "Dyspnea",
+      "icd10_suggestion": "R06.02",
+      "confidence": "high",
+      "evidence_span": "progressive dyspnea"
+    },
+    {
+      "name": "Hemoptysis",
+      "icd10_suggestion": "R04.2",
+      "confidence": "high",
+      "evidence_span": "recurrent hemoptysis"
+    },
+    {
+      "name": "Nicotine dependence",
+      "icd10_suggestion": "F17.200",
+      "confidence": "high",
+      "evidence_span": "long-standing history of cigarette use with nicotine dependence"
+    },
+    {
+      "name": "Recurrent pneumonia",
+      "icd10_suggestion": "J18.9",
+      "confidence": "high",
+      "evidence_span": "recurrent episodes of pneumonia historically"
+    },
+    {
+      "name": "Dysphagia",
+      "icd10_suggestion": "R13.10",
+      "confidence": "high",
+      "evidence_span": "further complicated by dysphagia"
+    },
+    {
+      "name": "Candidiasis",
+      "icd10_suggestion": "B37.9",
+      "confidence": "high",
+      "evidence_span": "opportunistic candidiasis infection"
+    },
+    {
+      "name": "Major depressive disorder, single episode unspecified",
+      "icd10_suggestion": "F32.9",
+      "confidence": "high",
+      "evidence_span": "diagnoses of major depressive disorder, single episode unspecified"
+    },
+    {
+      "name": "Anxiety disorder, unspecified",
+      "icd10_suggestion": "F41.9",
+      "confidence": "high",
+      "evidence_span": "anxiety disorder, unspecified"
+    },
+    {
+      "name": "Fibromyalgia",
+      "icd10_suggestion": "M79.7",
+      "confidence": "high",
+      "evidence_span": "suffers from fibromyalgia"
+    },
+    {
+      "name": "Sciatica",
+      "icd10_suggestion": "M54.30",
+      "confidence": "high",
+      "evidence_span": "sciatica"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Bronchoscopy",
+      "cpt_suggestion": "31622",
+      "confidence": "high",
+      "evidence_span": "Under direct visualization via bronchoscopy"
+    },
+    {
+      "name": "Inspection of tracheobronchial tree",
+      "cpt_suggestion": "31622",
+      "confidence": "high",
+      "evidence_span": "inspection of the tracheobronchial tree was performed"
+    },
+    {
+      "name": "Diagnostic excision from left main bronchus",
+      "cpt_suggestion": "31625",
+      "confidence": "high",
+      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus"
+    },
+    {
+      "name": "Diagnostic excision from right main bronchus",
+      "cpt_suggestion": "31625",
+      "confidence": "high",
+      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus and right main bronchus"
+    },
+    {
+      "name": "Dilation of left main bronchus with intraluminal device placement",
+      "cpt_suggestion": "31636",
+      "confidence": "high",
+      "evidence_span": "dilation of the left main bronchus with placement of an intraluminal device"
+    },
+    {
+      "name": "Destruction of malignant tissue at left main bronchus",
+      "cpt_suggestion": "31641",
+      "confidence": "high",
+      "evidence_span": "destruction of malignant tissue at this site"
+    },
+    {
+      "name": "Dilation of right main bronchus with intraluminal device placement",
+      "cpt_suggestion": "31636",
+      "confidence": "high",
+      "evidence_span": "right main bronchus, which also received dilation with intraluminal device placement"
+    },
+    {
+      "name": "Destruction of malignant tissue at right main bronchus",
+      "cpt_suggestion": "31641",
+      "confidence": "high",
+      "evidence_span": "destruction of diseased tissue via endoscopic approach"
+    },
+    {
+      "name": "Influenza vaccine",
+      "cpt_suggestion": "90756",
+      "confidence": "high",
+      "evidence_span": "The patient received influenza vaccine during this encounter"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Morphine SR",
+      "dosage": "30 mg",
+      "frequency": "once daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Morphine SR 30 mg PO once daily"
+    },
+    {
+      "name": "Morphine oral solution",
+      "dosage": "5-10 mg",
+      "frequency": "every 2-3 hours as needed",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Morphine oral solution 5-10 mg PO/NG q2-3h as needed for breakthrough pain"
+    },
+    {
+      "name": "Alprazolam",
+      "dosage": "2 mg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Alprazolam 2 mg PO/NG daily for anxiety"
+    },
+    {
+      "name": "Escitalopram",
+      "dosage": "20 mg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Escitalopram 20 mg PO/NG daily"
+    },
+    {
+      "name": "Buspirone",
+      "dosage": "15 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Buspirone 15 mg PO daily"
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "200 mg",
+      "frequency": "daily",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Gabapentin 200 mg PO/NG daily"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "1000 mg",
+      "frequency": "every 6 hours",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 1000 mg PO/NG q6h"
+    },
+    {
+      "name": "Guaifenesin ER",
+      "dosage": "600-1200 mg",
+      "frequency": "twice daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Guaifenesin ER 600-1200 mg PO BID"
+    },
+    {
+      "name": "Guaifenesin-dextromethorphan",
+      "dosage": "10 mL",
+      "frequency": "every 4-6 hours as needed",
+      "route": "PO/NG",
+      "confidence": "high",
+      "evidence_span": "Guaifenesin-dextromethorphan 10 mL PO/NG q4-6h as needed"
+    },
+    {
+      "name": "Albuterol nebulizer solution",
+      "dosage": "0.083%",
+      "frequency": "every 4-6 hours",
+      "route": "nebulized",
+      "confidence": "high",
+      "evidence_span": "Albuterol 0.083% nebulizer solution 1 neb IH q4-6h"
+    },
+    {
+      "name": "Ipratropium-albuterol",
+      "dosage": null,
+      "frequency": "every 6 hours",
+      "route": "nebulized",
+      "confidence": "high",
+      "evidence_span": "Ipratropium-albuterol 1 neb q6h"
+    },
+    {
+      "name": "Lidocaine patch",
+      "dosage": "5%",
+      "frequency": "daily",
+      "route": "transdermal",
+      "confidence": "high",
+      "evidence_span": "Lidocaine 5% patch 1 patch TD daily"
+    },
+    {
+      "name": "Nicotine patch",
+      "dosage": "21 mg",
+      "frequency": "daily",
+      "route": "transdermal",
+      "confidence": "high",
+      "evidence_span": "Nicotine patch 21 mg TD daily"
+    },
+    {
+      "name": "Ampicillin-sulbactam",
+      "dosage": "3 g",
+      "frequency": "every 6 hours",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ampicillin-sulbactam 3 g IV q6h (continue 7-day course)"
+    },
+    {
+      "name": "Miconazole nitrate vaginal cream",
+      "dosage": "2%",
+      "frequency": "as directed",
+      "route": "vaginal",
+      "confidence": "high",
+      "evidence_span": "Miconazole nitrate 2% vaginal cream as directed"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "5000 units",
+      "frequency": "twice daily",
+      "route": "subcutaneous",
+      "confidence": "high",
+      "evidence_span": "Heparin 5000 units SC BID"
+    }
+  ],
+  "chief_complaint": "Shortness of breath and hemoptysis",
+  "medical_specialty": "Pulmonology/Oncology"
+}

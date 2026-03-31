@@ -1,0 +1,208 @@
+{
+  "note_id": "25864431",
+  "diagnoses": [
+    {
+      "name": "Alcoholic cirrhosis of the liver with ascites",
+      "icd10_suggestion": "K70.30",
+      "confidence": "high",
+      "evidence_span": "alcoholic cirrhosis of the liver with ascites"
+    },
+    {
+      "name": "Alcohol-induced acute pancreatitis without necrosis or infection",
+      "icd10_suggestion": "K85.20",
+      "confidence": "high",
+      "evidence_span": "alcohol-induced acute pancreatitis without necrosis or infection"
+    },
+    {
+      "name": "Chronic pancreatitis",
+      "icd10_suggestion": "K86.1",
+      "confidence": "high",
+      "evidence_span": "chronic pancreatitis"
+    },
+    {
+      "name": "Active alcohol dependence",
+      "icd10_suggestion": "F10.20",
+      "confidence": "high",
+      "evidence_span": "The patient has active alcohol dependence"
+    },
+    {
+      "name": "Progressive jaundice",
+      "icd10_suggestion": "R17",
+      "confidence": "high",
+      "evidence_span": "presented with progressive jaundice"
+    },
+    {
+      "name": "Confusion",
+      "icd10_suggestion": "R41.0",
+      "confidence": "high",
+      "evidence_span": "confusion"
+    },
+    {
+      "name": "Severe abdominal distension",
+      "icd10_suggestion": "R14.0",
+      "confidence": "high",
+      "evidence_span": "severe abdominal distension"
+    },
+    {
+      "name": "Hypoxemia",
+      "icd10_suggestion": "R06.02",
+      "confidence": "high",
+      "evidence_span": "vital signs showed hypoxemia with oxygen saturation of 88% on room air"
+    },
+    {
+      "name": "Hepatic failure without coma",
+      "icd10_suggestion": "K72.90",
+      "confidence": "high",
+      "evidence_span": "hepatic failure without coma"
+    },
+    {
+      "name": "Coagulopathy with prolonged PT/INR",
+      "icd10_suggestion": "D68.9",
+      "confidence": "high",
+      "evidence_span": "coagulopathy with prolonged PT/INR"
+    },
+    {
+      "name": "Acute kidney failure",
+      "icd10_suggestion": "N17.9",
+      "confidence": "high",
+      "evidence_span": "acute kidney failure superimposed on stage 4 chronic kidney disease"
+    },
+    {
+      "name": "Stage 4 chronic kidney disease",
+      "icd10_suggestion": "N18.4",
+      "confidence": "high",
+      "evidence_span": "acute kidney failure superimposed on stage 4 chronic kidney disease"
+    },
+    {
+      "name": "Hepatorenal syndrome",
+      "icd10_suggestion": "K76.7",
+      "confidence": "high",
+      "evidence_span": "evidence of hepatorenal syndrome"
+    },
+    {
+      "name": "Acute posthemorrhagic anemia",
+      "icd10_suggestion": "D62",
+      "confidence": "high",
+      "evidence_span": "acute posthemorrhagic anemia"
+    },
+    {
+      "name": "Secondary esophageal varices without active bleeding",
+      "icd10_suggestion": "I98.8",
+      "confidence": "high",
+      "evidence_span": "secondary esophageal varices without active bleeding on upper endoscopy"
+    },
+    {
+      "name": "Hepatopulmonary syndrome",
+      "icd10_suggestion": "K76.8",
+      "confidence": "high",
+      "evidence_span": "hepatopulmonary syndrome with dyspnea and hypoxemia"
+    },
+    {
+      "name": "Dyspnea",
+      "icd10_suggestion": "R06.02",
+      "confidence": "high",
+      "evidence_span": "dyspnea and hypoxemia"
+    },
+    {
+      "name": "Severe protein-calorie malnutrition",
+      "icd10_suggestion": "E44.1",
+      "confidence": "high",
+      "evidence_span": "Severe protein-calorie malnutrition was evident from anthropometric and laboratory data"
+    },
+    {
+      "name": "Pneumonia of unspecified organism",
+      "icd10_suggestion": "J18.9",
+      "confidence": "high",
+      "evidence_span": "The patient developed pneumonia of unspecified organism during hospitalization"
+    },
+    {
+      "name": "Hepatic encephalopathy",
+      "icd10_suggestion": "K72.91",
+      "confidence": "medium",
+      "evidence_span": "Lactulose and rifaximin were used for hepatic encephalopathy prophylaxis"
+    },
+    {
+      "name": "Secondary thrombocytopenia",
+      "icd10_suggestion": "D69.59",
+      "confidence": "medium",
+      "evidence_span": "secondary thrombocytopenia were monitored"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "levothyroxine for hypothyroidism"
+    },
+    {
+      "name": "Gout",
+      "icd10_suggestion": "M10.9",
+      "confidence": "high",
+      "evidence_span": "allopurinol for gout"
+    },
+    {
+      "name": "End-stage liver disease with multiorgan failure",
+      "icd10_suggestion": "K72.90",
+      "confidence": "high",
+      "evidence_span": "Given the severe prognosis of end-stage liver disease with multiorgan failure"
+    },
+    {
+      "name": "Nicotine dependence",
+      "icd10_suggestion": "F17.200",
+      "confidence": "medium",
+      "evidence_span": "Nicotine dependence was addressed during stay"
+    },
+    {
+      "name": "Pruritus",
+      "icd10_suggestion": "L29.9",
+      "confidence": "high",
+      "evidence_span": "loratadine for pruritus (with Sarna lotion topically)"
+    },
+    {
+      "name": "Nausea",
+      "icd10_suggestion": "R11.0",
+      "confidence": "high",
+      "evidence_span": "ondansetron for nausea"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Diagnostic paracentesis",
+      "cpt_suggestion": "49082",
+      "confidence": "high",
+      "evidence_span": "Diagnostic paracentesis was performed percutaneously on multiple occasions"
+    },
+    {
+      "name": "Therapeutic paracentesis",
+      "cpt_suggestion": "49083",
+      "confidence": "high",
+      "evidence_span": "A second drainage was performed for therapeutic purposes"
+    },
+    {
+      "name": "Upper endoscopy",
+      "cpt_suggestion": "43235",
+      "confidence": "high",
+      "evidence_span": "Upper endoscopic inspection of the intestinal tract was completed"
+    },
+    {
+      "name": "Jejunal feeding tube placement",
+      "cpt_suggestion": "44373",
+      "confidence": "high",
+      "evidence_span": "a jejunal feeding tube was placed endoscopically via natural opening"
+    },
+    {
+      "name": "Central line insertion",
+      "cpt_suggestion": "36556",
+      "confidence": "high",
+      "evidence_span": "A central line was inserted into the right atrium percutaneously"
+    },
+    {
+      "name": "Intermittent dialysis",
+      "cpt_suggestion": "90935",
+      "confidence": "high",
+      "evidence_span": "Intermittent dialysis (less than 6 hours per day) was initiated"
+    }
+  ],
+  "medications": [],
+  "chief_complaint": "Altered mental status and abdominal pain.",
+  "medical_specialty": "Gastroenterology / Hepatology"
+}

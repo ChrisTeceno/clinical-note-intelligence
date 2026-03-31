@@ -1,0 +1,248 @@
+{
+  "hadm_id": 20199380,
+  "diagnoses": [
+    {
+      "icd_code": "I82422",
+      "description": "Acute embolism and thrombosis of left iliac vein",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I871",
+      "description": "Compression of vein",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "I9751",
+      "description": "Accidental puncture and laceration of a circulatory system organ or structure during a circulatory system procedure",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "Y838",
+      "description": "Other surgical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "Y92234",
+      "description": "Operating room of hospital as the place of occurrence of the external cause",
+      "seq_num": 5
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "067D3DZ",
+      "description": "Dilation of Left Common Iliac Vein with Intraluminal Device, Percutaneous Approach"
+    },
+    {
+      "icd_code": "3E03317",
+      "description": "Introduction of Other Thrombolytic into Peripheral Vein, Percutaneous Approach"
+    },
+    {
+      "icd_code": "06CN3ZZ",
+      "description": "Extirpation of Matter from Left Femoral Vein, Percutaneous Approach"
+    },
+    {
+      "icd_code": "06H03DZ",
+      "description": "Insertion of Intraluminal Device into Inferior Vena Cava, Percutaneous Approach"
+    },
+    {
+      "icd_code": "06CD3ZZ",
+      "description": "Extirpation of Matter from Left Common Iliac Vein, Percutaneous Approach"
+    },
+    {
+      "icd_code": "06CD3ZZ",
+      "description": "Extirpation of Matter from Left Common Iliac Vein, Percutaneous Approach"
+    },
+    {
+      "icd_code": "067G3DZ",
+      "description": "Dilation of Left External Iliac Vein with Intraluminal Device, Percutaneous Approach"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "ClonazePAM",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Warfarin",
+      "dose_val": "1 dose",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Warfarin",
+      "dose_val": "5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Levothyroxine Sodium",
+      "dose_val": "75 mcg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Phenazopyridine",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Ranitidine",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin Sodium",
+      "dose_val": "25,000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Apixaban",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Acetaminophen",
+      "dose_val": "650 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "DULoxetine",
+      "dose_val": "120 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Alteplase",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Alteplase",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Enoxaparin Sodium",
+      "dose_val": "90 mg",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "5-10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV DRIP"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Lactated Ringers",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "25-50 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25-0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

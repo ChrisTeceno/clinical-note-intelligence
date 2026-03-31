@@ -1,0 +1,46 @@
+# DISCHARGE SUMMARY
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 8 days
+
+---
+
+## SUBJECTIVE
+
+Patient is a middle-aged adult with significant cardiac history presenting with unstable angina pectoris. The pt reported acute chest discomfort that was unresponsive to rest and sublingual nitroglycerin at home, prompting emergent evaluation. The patient has known atherosclerotic heart disease of native coronary arteries and strong family history of ischemic heart disease and other circulatory disorders. He carries diagnoses of obesity, hyperlipidemia, and anxiety disorder, which have complicated his medical management. The pt is an active smoker with nicotine dependence and has struggled with smoking cessation despite counseling. He reports significant anxiety about his cardiac condition and ongoing symptoms.
+
+---
+
+## OBJECTIVE
+
+**Vital Signs on Admission:** BP 148/92 mmHg, HR 102 bpm, RR 18, O2 sat 94% on room air, Temp 36.8°C
+
+**Physical Exam:** Obese male in mild distress. Cardiac auscultation reveals regular rate and rhythm with no acute murmurs. Lungs clear bilaterally. Extremities without edema.
+
+**Labs:** Troponin elevated at 0.8 ng/mL; BNP 385 pg/mL. Lipid panel demonstrates elevated total cholesterol and LDL consistent with uncontrolled hyperlipidemia. BMI documented at 32.4 (obesity range). Glucose initially 168 mg/dL; managed with insulin infusion protocol.
+
+**Imaging & Procedures:** Cardiac catheterization confirmed significant coronary artery stenosis. Coronary artery bypass grafting was performed with left internal mammary artery to left anterior descending artery via open surgical approach. Continuous cardiac output monitoring was maintained perioperatively to assess hemodynamic status and guide fluid and vasopressor management.
+
+---
+
+## ASSESSMENT
+
+This is a 54-year-old male with unstable angina pectoris secondary to atherosclerotic native coronary artery disease, now s/p CABG with LIMA-to-LAD bypass. Patient has multiple cardiac risk factors including obesity (BMI 32.0-32.9), uncontrolled hyperlipidemia, nicotine dependence, and significant anxiety disorder. He is on long-term antithrombotic and antiplatelet therapy as evidenced by requirement for dual antiplatelet and anticoagulation regimens. Strong family history of ischemic heart disease places him at elevated ongoing risk. Post-operative course was complicated by need for vasopressor support, sedation, and aggressive pain management. Glucose control required insulin supplementation given perioperative stress response.
+
+---
+
+## PLAN & DISCHARGE
+
+**Cardiac:** Pt tolerating PO intake well post-operatively. Continue aspirin 81 mg daily and clopidogrel 75 mg daily for dual antiplatelet therapy given coronary graft. Beta-blocker management with metoprolol titrated to HR 60-70 bpm and SBP >100 mmHg. Sublingual nitroglycerin available for anginal symptoms. Rosuvastatin 40 mg daily for aggressive lipid management.
+
+**Pain/Anxiety:** Continue acetaminophen and opioid analgesics (oxycodone, hydromorphone) as needed for post-operative pain. Diazepam incorporated for anxiety management given documented anxiety disorder. Gabapentin 300 mg daily for neuropathic symptom relief.
+
+**GI Prophylaxis:** Ranitidine 150 mg daily. Continue bowel regimen including docusate, senna, lactulose, and polyethylene glycol given opioid use.
+
+**Smoking Cessation:** Nicotine patch 21 mg transdermal daily to address nicotine dependence. Strongly counseled on importance of complete cessation post-operatively.
+
+**Medications Reconciled:** All inpatient medications reviewed. Patient discharged on simplified regimen prioritizing cardiac medications, pain control, and supportive therapies.
+
+**Follow-up:** Cardiothoracic surgery follow-up in 2 weeks. Cardiology follow-up in 1 week for stress testing when appropriate. Primary care within 1 week. Patient instructed on wound care, activity restrictions, and when to seek emergent care. Educated on importance of medication adherence, smoking cessation, dietary modification, and weight loss program given obesity.

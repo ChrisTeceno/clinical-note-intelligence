@@ -1,0 +1,294 @@
+{
+  "hadm_id": 27993466,
+  "diagnoses": [
+    {
+      "icd_code": "I2699",
+      "description": "Other pulmonary embolism without acute cor pulmonale",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I472",
+      "description": "Ventricular tachycardia",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "C9000",
+      "description": "Multiple myeloma not having achieved remission",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "I5022",
+      "description": "Chronic systolic (congestive) heart failure",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "I82412",
+      "description": "Acute embolism and thrombosis of left femoral vein",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "I82432",
+      "description": "Acute embolism and thrombosis of left popliteal vein",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "Z951",
+      "description": "Presence of aortocoronary bypass graft",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I4891",
+      "description": "Unspecified atrial fibrillation",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "D472",
+      "description": "Monoclonal gammopathy",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "Z7982",
+      "description": "Long term (current) use of aspirin",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "Z7901",
+      "description": "Long term (current) use of anticoagulants",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "I272",
+      "description": "Other secondary pulmonary hypertension",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "Z9181",
+      "description": "History of falling",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "R141",
+      "description": "Gas pain",
+      "seq_num": 14
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Warfarin",
+      "dose_val": "2 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Senna",
+      "dose_val": "8.6 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.125 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Docusate Sodium",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phosphorus",
+      "dose_val": "250 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "PNEUMOcoccal 23-valent polysaccharide vaccine",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Heparin Sodium",
+      "dose_val": "25,000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Influenza Vaccine Quadrivalent",
+      "dose_val": "0.5 mL",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Phosphorus",
+      "dose_val": "500 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "20 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Potassium Chloride Replacement (Critical Care and Oncology)",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "1000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "2.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Digoxin",
+      "dose_val": "0.25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "250 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Simethicone",
+      "dose_val": "40-80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Enoxaparin Sodium",
+      "dose_val": "50 mg",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "800-1000 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "800-1500 UNIT",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}

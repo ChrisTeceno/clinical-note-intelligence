@@ -1,0 +1,60 @@
+**HOSPITAL DISCHARGE SUMMARY**
+
+**PATIENT INFORMATION:**
+DOB: [Redacted]
+MRN: [Redacted]
+Admission Date: [Redacted]
+Discharge Date: [Redacted]
+Attending Physician: [Redacted]
+
+---
+
+**CHIEF COMPLAINT:**
+Fever and malaise
+
+**HISTORY OF PRESENT ILLNESS:**
+Patient is a long-term dialysis-dependent individual with end-stage renal disease who presented with fever, chills, and general malaise. The patient has a significant medical history notable for type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease, as well as hypertensive chronic kidney disease with stage 5 CKD. The patient has been dialyzing for several years due to dependence on renal dialysis. On evaluation, blood cultures were obtained and empiric broad-spectrum coverage was initiated. Cultures subsequently grew Methicillin-resistant Staphylococcus aureus (MRSA), confirming sepsis. Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis, likely seeded through the patient's vascular access. An infection and inflammatory reaction due to the cardiac infusion device was identified.
+
+**PAST MEDICAL HISTORY:**
+- End-stage renal disease on hemodialysis
+- Hypertensive chronic kidney disease with stage 5 CKD
+- Type 2 diabetes mellitus on insulin therapy
+- Diabetic nephropathy and diabetic chronic kidney disease
+- Hyperlipidemia
+- History of nicotine dependence
+- Acquired keratosis palmaris et plantaris
+- Acquired absence of right toe(s)
+
+**HOSPITAL COURSE:**
+The patient underwent removal of the external cardiac infusion device given the infected implant. Subsequently, a new tunneled vascular access device was inserted into the chest subcutaneous tissue via percutaneous approach. An infusion device was placed into the right atrium percutaneously for continued medication administration. The old tunneled vascular access device from the trunk was removed using external approach. During hospitalization, the patient required intermittent urinary filtration for less than 6 hours per day given the acute fluid overload state superimposed on chronic kidney disease. 
+
+Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate. The patient's constipation, a chronic issue exacerbated by medications and dietary restrictions of end-stage renal disease, was addressed with polyethylene glycol, docusate sodium, and senna. Anemia of chronic kidney disease was monitored; supplementation with calcitriol and vitamin D was continued. 
+
+Antimicrobial therapy with vancomycin was administered intravenously throughout the admission. The patient's diabetes was managed with subcutaneous insulin dosing. Aspirin was continued for cardiovascular protection. Lisinopril was used cautiously given the stage 5 chronic kidney disease. Furosemide was titrated both orally and intravenously for fluid management. Atorvastatin was continued for hyperlipidemia management. Sevelamer carbonate was used as a phosphate binder. Subcutaneous heparin was provided for thromboprophylaxis. The patient received an influenza vaccine during the hospital stay. Topical neomycin-polymyxin-bacitracin and hydrocerin were applied for skin care, particularly given the acquired keratoderma of the palms and soles. Lorazepam was used as needed for anxiety management.
+
+Vital signs stabilized with appropriate antibiotic coverage and source control. The patient's renal function remained stable on the current dialysis regimen, and electrolytes were normalized.
+
+**DISCHARGE MEDICATIONS:**
+1. Vancomycin 1000 mg IV (continue per ID recommendations)
+2. Aspirin 81 mg PO daily
+3. Lisinopril 5 mg PO daily
+4. Lorazepam 0.5 mg PO as needed
+5. Nephrocaps 1 capsule PO daily
+6. Atorvastatin 20 mg PO daily
+7. Calcitriol 0.25 mcg PO daily
+8. Furosemide 20 mg PO daily and 40-100 mg IV post-dialysis as needed
+9. Polyethylene glycol 17 g PO daily
+10. Heparin 5000 units SC daily
+11. Calcium carbonate 500 mg PO with meals
+12. Docusate sodium 100 mg PO daily
+13. Neomycin-polymyxin-bacitracin ointment topical as directed
+14. Sevelamer carbonate 800 mg PO with meals
+15. Senna 8.6 mg PO daily as needed
+16. Hydrocerin topical as needed
+17. Insulin per home regimen (6 and 8 units SC as previously established)
+18. Sodium polystyrene sulfonate 30 gm PO as needed for hyperkalemia
+19. Vitamin D 2000 units PO daily
+20. Acetaminophen 650 mg PO as needed for pain
+
+**DISPOSITION:**
+Patient discharged to home in stable condition with close outpatient follow-up arranged with cardiology, nephrology, and infectious disease.

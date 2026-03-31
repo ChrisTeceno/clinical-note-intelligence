@@ -1,0 +1,233 @@
+{
+  "note_id": "20199380",
+  "diagnoses": [
+    {
+      "name": "Acute embolism and thrombosis of left iliac vein",
+      "icd10_suggestion": "I82.421",
+      "confidence": "high",
+      "evidence_span": "Imaging studies revealed acute embolism and thrombosis of the left iliac vein"
+    },
+    {
+      "name": "Compression of left iliac vein",
+      "icd10_suggestion": "I87.1",
+      "confidence": "high",
+      "evidence_span": "acute embolism and thrombosis of the left iliac vein with associated vein compression"
+    },
+    {
+      "name": "Iatrogenic vascular injury during circulatory system procedure",
+      "icd10_suggestion": "I97.890",
+      "confidence": "high",
+      "evidence_span": "an accidental puncture and laceration of a circulatory system organ occurred"
+    },
+    {
+      "name": "Complication of surgical procedure",
+      "icd10_suggestion": "T81.9",
+      "confidence": "high",
+      "evidence_span": "during the initial catheter-based procedure, an accidental puncture and laceration of a circulatory system organ occurred"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "Hypothyroidism"
+    },
+    {
+      "name": "Depression",
+      "icd10_suggestion": "F32.9",
+      "confidence": "high",
+      "evidence_span": "depression"
+    },
+    {
+      "name": "Dysuria",
+      "icd10_suggestion": "R30.0",
+      "confidence": "high",
+      "evidence_span": "dysuria"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Percutaneous dilation of left common iliac vein with intraluminal device placement",
+      "cpt_suggestion": "37248",
+      "confidence": "high",
+      "evidence_span": "Initial therapy included dilation of the left common iliac vein with placement of an intraluminal device via percutaneous approach"
+    },
+    {
+      "name": "Percutaneous introduction of thrombolytic agent via peripheral vein",
+      "cpt_suggestion": "37211",
+      "confidence": "high",
+      "evidence_span": "Thrombolytic therapy was introduced via peripheral vein access"
+    },
+    {
+      "name": "Percutaneous extirpation of thrombus from left femoral vein",
+      "cpt_suggestion": "37184",
+      "confidence": "high",
+      "evidence_span": "extirpation of thrombus was performed from both the left femoral vein and left common iliac vein"
+    },
+    {
+      "name": "Percutaneous insertion of intraluminal device into inferior vena cava",
+      "cpt_suggestion": "37238",
+      "confidence": "high",
+      "evidence_span": "An intraluminal device was placed into the inferior vena cava percutaneously"
+    },
+    {
+      "name": "Percutaneous extirpation of thrombus from left common iliac vein",
+      "cpt_suggestion": "37184",
+      "confidence": "high",
+      "evidence_span": "extirpation of thrombus was performed from both the left femoral vein and left common iliac vein (procedure repeated to ensure complete clearance)"
+    },
+    {
+      "name": "Percutaneous dilation of left external iliac vein with intraluminal device placement",
+      "cpt_suggestion": "37248",
+      "confidence": "high",
+      "evidence_span": "the left external iliac vein was dilated with placement of another intraluminal device"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Heparin sodium",
+      "dosage": null,
+      "frequency": null,
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "Anticoagulation was initiated with intravenous heparin sodium"
+    },
+    {
+      "name": "Alteplase",
+      "dosage": null,
+      "frequency": "infusion",
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "intravenous heparin sodium and alteplase infusions, with doses titrated based on coagulation studies"
+    },
+    {
+      "name": "Enoxaparin sodium",
+      "dosage": "90 mg",
+      "frequency": "daily",
+      "route": "subcutaneous",
+      "confidence": "high",
+      "evidence_span": "The patient also received enoxaparin sodium subcutaneously"
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5 mg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "transitioned to warfarin with apixaban for long-term anticoagulation coverage"
+    },
+    {
+      "name": "Apixaban",
+      "dosage": "10 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "transitioned to warfarin with apixaban for long-term anticoagulation coverage"
+    },
+    {
+      "name": "Oxycodone immediate release",
+      "dosage": "5–10 mg",
+      "frequency": "every 4–6 hours as needed for pain",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
+    },
+    {
+      "name": "Hydromorphone",
+      "dosage": null,
+      "frequency": "infusion",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
+    },
+    {
+      "name": "Fentanyl",
+      "dosage": null,
+      "frequency": "infusion",
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "650 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "with acetaminophen used as adjunctive therapy"
+    },
+    {
+      "name": "Clonazepam",
+      "dosage": "0.5 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Clonazepam was administered for anxiety management"
+    },
+    {
+      "name": "Levothyroxine sodium",
+      "dosage": "75 mcg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "The patient received levothyroxine sodium for thyroid replacement at 75 mcg daily"
+    },
+    {
+      "name": "Ranitidine",
+      "dosage": "150 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Gastrointestinal protection was maintained with ranitidine"
+    },
+    {
+      "name": "Polyethylene glycol",
+      "dosage": "17 g",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "bowel function was supported with polyethylene glycol and docusate sodium"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "bowel function was supported with polyethylene glycol and docusate sodium"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "20 mEq",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Electrolyte repletion included potassium chloride (both oral and intravenous)"
+    },
+    {
+      "name": "Magnesium sulfate",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Electrolyte repletion included potassium chloride (both oral and intravenous) and magnesium sulfate"
+    },
+    {
+      "name": "Phenazopyridine",
+      "dosage": "100 mg",
+      "frequency": "three times daily with food",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Phenazopyridine was given for dysuria symptoms"
+    },
+    {
+      "name": "Duloxetine",
+      "dosage": "120 mg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Duloxetine was continued at 120 mg daily for depression management"
+    }
+  ],
+  "chief_complaint": "Left lower extremity swelling and pain",
+  "medical_specialty": "Vascular Surgery"
+}

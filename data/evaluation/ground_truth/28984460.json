@@ -1,0 +1,47 @@
+{
+  "hadm_id": 28984460,
+  "diagnoses": [
+    {
+      "icd_code": "N179",
+      "description": "Acute kidney failure, unspecified",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "E1165",
+      "description": "Type 2 diabetes mellitus with hyperglycemia",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "D869",
+      "description": "Sarcoidosis, unspecified",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "E039",
+      "description": "Hypothyroidism, unspecified",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "E871",
+      "description": "Hypo-osmolality and hyponatremia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "E7800",
+      "description": "Pure hypercholesterolemia, unspecified",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "G40909",
+      "description": "Epilepsy, unspecified, not intractable, without status epilepticus",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 8
+    }
+  ],
+  "procedures": [],
+  "medications": []
+}

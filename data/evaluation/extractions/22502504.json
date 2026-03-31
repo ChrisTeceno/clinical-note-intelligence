@@ -1,0 +1,201 @@
+{
+  "note_id": "22502504",
+  "diagnoses": [
+    {
+      "name": "Atherosclerotic heart disease of native coronary arteries",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "atherosclerotic heart disease of native coronary arteries"
+    },
+    {
+      "name": "Old myocardial infarction",
+      "icd10_suggestion": "I25.2",
+      "confidence": "high",
+      "evidence_span": "prior myocardial infarction"
+    },
+    {
+      "name": "Status post coronary angioplasty with stent placement",
+      "icd10_suggestion": "Z95.5",
+      "confidence": "high",
+      "evidence_span": "status post angioplasty with stent placement"
+    },
+    {
+      "name": "Permanent pacemaker implant",
+      "icd10_suggestion": "Z95.0",
+      "confidence": "high",
+      "evidence_span": "A permanent pacemaker was implanted for conduction abnormalities"
+    },
+    {
+      "name": "Paroxysmal atrial fibrillation",
+      "icd10_suggestion": "I48.11",
+      "confidence": "high",
+      "evidence_span": "paroxysmal atrial fibrillation requiring anticoagulation consideration"
+    },
+    {
+      "name": "Chronic lymphocytic leukemia of B-cell type without remission",
+      "icd10_suggestion": "C91.10",
+      "confidence": "high",
+      "evidence_span": "chronic lymphocytic leukemia of B-cell type without remission"
+    },
+    {
+      "name": "Essential hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "essential hypertension"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus requiring insulin therapy"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "hyperlipidemia"
+    },
+    {
+      "name": "Prior transient ischemic attack",
+      "icd10_suggestion": "Z86.73",
+      "confidence": "high",
+      "evidence_span": "prior transient ischemic attack"
+    },
+    {
+      "name": "Cerebral infarction",
+      "icd10_suggestion": "Z86.73",
+      "confidence": "high",
+      "evidence_span": "cerebral infarction without residual deficits"
+    },
+    {
+      "name": "Unspecified convulsions",
+      "icd10_suggestion": "R56.9",
+      "confidence": "high",
+      "evidence_span": "unspecified convulsions"
+    },
+    {
+      "name": "Unspecified glaucoma",
+      "icd10_suggestion": "H40.9",
+      "confidence": "high",
+      "evidence_span": "unspecified glaucoma"
+    },
+    {
+      "name": "Hypothyroidism",
+      "icd10_suggestion": "E03.9",
+      "confidence": "high",
+      "evidence_span": "hypothyroidism"
+    },
+    {
+      "name": "Gastro-esophageal reflux disease without esophagitis",
+      "icd10_suggestion": "K21.9",
+      "confidence": "high",
+      "evidence_span": "gastro-esophageal reflux disease without esophagitis"
+    },
+    {
+      "name": "Anxiety disorder, unspecified",
+      "icd10_suggestion": "F41.9",
+      "confidence": "high",
+      "evidence_span": "anxiety disorder, unspecified"
+    },
+    {
+      "name": "Malignant neoplasm of the left testis",
+      "icd10_suggestion": "C62.9",
+      "confidence": "high",
+      "evidence_span": "malignant neoplasm of the left testis requiring prior oncologic management"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Serial cardiac workup",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "the patient underwent serial cardiac workup"
+    },
+    {
+      "name": "EKG",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "EKG showed no acute changes"
+    },
+    {
+      "name": "Pacemaker function check",
+      "cpt_suggestion": "93741",
+      "confidence": "medium",
+      "evidence_span": "His pacemaker function was appropriate"
+    },
+    {
+      "name": "Troponin measurement",
+      "cpt_suggestion": "84484",
+      "confidence": "medium",
+      "evidence_span": "His troponins remained negative"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Aspirin 81 mg PO daily"
+    },
+    {
+      "name": "Aspirin",
+      "dosage": "325 mg",
+      "frequency": "as needed for chest discomfort",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Aspirin 325 mg PO as needed for chest discomfort"
+    },
+    {
+      "name": "Atorvastatin",
+      "dosage": "80 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Atorvastatin 80 mg PO daily"
+    },
+    {
+      "name": "Clopidogrel",
+      "dosage": "75 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Clopidogrel 75 mg PO daily"
+    },
+    {
+      "name": "Metoprolol tartrate",
+      "dosage": "12.5 mg",
+      "frequency": "BID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Metoprolol tartrate 12.5 mg PO BID"
+    },
+    {
+      "name": "Insulin",
+      "dosage": "56 units",
+      "frequency": "per home regimen",
+      "route": "SC",
+      "confidence": "high",
+      "evidence_span": "Insulin SC per home regimen (56 units as previously prescribed)"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "500 mg",
+      "frequency": "q6h PRN",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 500 mg PO q6h PRN"
+    },
+    {
+      "name": "Nitroglycerin",
+      "dosage": null,
+      "frequency": "PRN for chest pain",
+      "route": "SL",
+      "confidence": "high",
+      "evidence_span": "Nitroglycerin SL PRN for chest pain"
+    }
+  ],
+  "chief_complaint": "Chest pain",
+  "medical_specialty": "Cardiology"
+}

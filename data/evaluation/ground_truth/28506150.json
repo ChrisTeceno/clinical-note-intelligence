@@ -1,0 +1,369 @@
+{
+  "hadm_id": 28506150,
+  "diagnoses": [
+    {
+      "icd_code": "R4182",
+      "description": "Altered mental status, unspecified",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "I214",
+      "description": "Non-ST elevation (NSTEMI) myocardial infarction",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "G1221",
+      "description": "Amyotrophic lateral sclerosis",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "Z9911",
+      "description": "Dependence on respirator [ventilator] status",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "J95851",
+      "description": "Ventilator associated pneumonia",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "Z930",
+      "description": "Tracheostomy status",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "I959",
+      "description": "Hypotension, unspecified",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I319",
+      "description": "Disease of pericardium, unspecified",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "N390",
+      "description": "Urinary tract infection, site not specified",
+      "seq_num": 9
+    },
+    {
+      "icd_code": "E119",
+      "description": "Type 2 diabetes mellitus without complications",
+      "seq_num": 10
+    },
+    {
+      "icd_code": "G3109",
+      "description": "Other frontotemporal dementia",
+      "seq_num": 11
+    },
+    {
+      "icd_code": "F259",
+      "description": "Schizoaffective disorder, unspecified",
+      "seq_num": 12
+    },
+    {
+      "icd_code": "T17990A",
+      "description": "Other foreign object in respiratory tract, part unspecified in causing asphyxiation, initial encounter",
+      "seq_num": 13
+    },
+    {
+      "icd_code": "Y92230",
+      "description": "Patient room in hospital as the place of occurrence of the external cause",
+      "seq_num": 14
+    },
+    {
+      "icd_code": "Z794",
+      "description": "Long term (current) use of insulin",
+      "seq_num": 15
+    },
+    {
+      "icd_code": "I10",
+      "description": "Essential (primary) hypertension",
+      "seq_num": 16
+    },
+    {
+      "icd_code": "R569",
+      "description": "Unspecified convulsions",
+      "seq_num": 17
+    },
+    {
+      "icd_code": "I2510",
+      "description": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
+      "seq_num": 18
+    }
+  ],
+  "procedures": [
+    {
+      "icd_code": "0BCB8ZZ",
+      "description": "Extirpation of Matter from Left Lower Lobe Bronchus, Via Natural or Artificial Opening Endoscopic"
+    },
+    {
+      "icd_code": "5A1945Z",
+      "description": "Respiratory Ventilation, 24-96 Consecutive Hours"
+    },
+    {
+      "icd_code": "0BCF8ZZ",
+      "description": "Extirpation of Matter from Right Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic"
+    }
+  ],
+  "medications": [
+    {
+      "drug": "Insulin",
+      "dose_val": "0 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Aspirin",
+      "dose_val": "81 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Atorvastatin",
+      "dose_val": "80 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "CefTAZidime",
+      "dose_val": "1 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucagon",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IM"
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "dose_val": "17 g",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Docusate Sodium (Liquid)",
+      "dose_val": "100 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Ferrous Sulfate (Liquid)",
+      "dose_val": "300 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Lansoprazole Oral Disintegrating Tab",
+      "dose_val": "30 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetaminophen IV",
+      "dose_val": "1000 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Glucose Gel",
+      "dose_val": "15 g",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "0.9% Sodium Chloride (Mini Bag Plus)",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "2 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Midazolam",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV BOLUS"
+    },
+    {
+      "drug": "Omeprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Calcium Gluconate",
+      "dose_val": "4 g",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sertraline",
+      "dose_val": "150 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Labetalol",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "LORazepam",
+      "dose_val": "1 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "QUEtiapine Fumarate",
+      "dose_val": "12.5 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Dextrose 50%",
+      "dose_val": "12.5 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Metoprolol Tartrate",
+      "dose_val": "6.25 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "10-20 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "0.9% Sodium Chloride",
+      "dose_val": "100 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Fentanyl Citrate",
+      "dose_val": "100-200 mcg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "SW",
+      "dose_val": "400 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "60 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "SW",
+      "dose_val": "600 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "LevETIRAcetam",
+      "dose_val": "750 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "80 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "SW",
+      "dose_val": "800 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Insulin",
+      "dose_val": "10 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "GuaiFENesin",
+      "dose_val": "5-10 mL",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Acetylcysteine 20%",
+      "dose_val": "6-10 mL",
+      "dose_unit": "",
+      "route": "NEB"
+    }
+  ]
+}

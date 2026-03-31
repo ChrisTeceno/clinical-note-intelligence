@@ -1,0 +1,41 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** [X] days
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain and dyspnea
+
+**HISTORY OF PRESENT ILLNESS:**
+This is a [AGE]-year-old patient with a significant past medical history who presented to the emergency department with acute onset chest discomfort and shortness of breath. The patient has multiple comorbidities including chronic systolic congestive heart failure, unspecified atrial fibrillation managed medically, and prior coronary artery disease s/p aortocoronary bypass graft. Additionally, the patient carries a diagnosis of multiple myeloma not having achieved remission with associated monoclonal gammopathy, which has complicated his clinical course. On admission, imaging studies revealed acute pulmonary embolism without acute cor pulmonale as well as deep venous thrombosis involving the left femoral vein and left popliteal vein, representing acute embolic and thrombotic events requiring immediate anticoagulation.
+
+**HOSPITAL COURSE:**
+During this admission, the patient experienced several significant cardiac events. He developed ventricular tachycardia that required urgent rate and rhythm control. His underlying secondary pulmonary hypertension, likely multifactorial in etiology related to his cardiac and thromboembolic disease, contributed to his respiratory compromise. Electrolyte abnormalities were identified and treated aggressively, including hypokalemia, hypomagnesemia, and hypophosphatemia. The patient received IV fluid resuscitation with normal saline and dextrose-containing solutions. Calcium supplementation via IV calcium gluconate was administered to stabilize the cardiac membrane in the setting of electrolyte derangements.
+
+Anticoagulation was initiated and optimized with intravenous heparin infusions at varying doses (800-1500 units/hour), overlapped with warfarin 2 mg daily via PO, and enoxaparin 50 mg subcutaneously. The patient continued on his long-term aspirin 81 mg daily for coronary protection given his prior bypass graft. Rate control of atrial fibrillation was achieved with metoprolol tartrate initiated at 25 mg BID, titrated down to 12.5 mg and 2.5 mg IV dosing as clinical status evolved. Digoxin was administered both IV (0.5 mg and 0.25 mg doses) and PO (0.125 mg daily) for additional rate control and inotropic support given his systolic heart failure.
+
+The patient reported symptoms consistent with gas pain, which was managed with simethicone 40-80 mg PO and docusate sodium 100 mg daily to optimize bowel function. Senna was also provided for constipation prophylaxis. A history of falling was documented in his record, prompting safety precautions during hospitalization.
+
+Magnesium sulfate was administered IV at 2 gm and 4 gm doses for electrolyte repletion. Phosphorus supplementation was given both IV and PO (250 mg and 500 mg PO doses). Potassium chloride replacement was administered in critical care dosing regimens, with multiple supplementation rounds (40 mEq, 60 mEq, and 80 mEq) along with standard 20 mEq and 40 mEq doses PO.
+
+Preventive care was addressed during admission; the patient received pneumococcal 23-valent polysaccharide vaccine and influenza vaccine quadrivalent as appropriate for his age and immune status.
+
+**DISCHARGE MEDICATIONS:**
+- Aspirin 81 mg PO daily
+- Warfarin 2 mg PO daily
+- Metoprolol Tartrate 25 mg PO BID
+- Digoxin 0.125 mg PO daily
+- Docusate Sodium 100 mg PO daily
+- Senna 8.6 mg PO daily
+- Simethicone 40-80 mg PO as needed
+- Enoxaparin Sodium 50 mg SC [frequency per protocol]
+- Potassium Chloride supplementation as directed
+- Phosphorus supplementation as directed
+- Magnesium supplementation as directed
+
+**DISPOSITION:**
+Patient discharged to [location] in stable condition with close outpatient follow-up arranged.

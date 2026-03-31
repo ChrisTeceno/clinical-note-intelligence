@@ -1,0 +1,40 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 6 days
+
+---
+
+**CHIEF COMPLAINT:**
+Shortness of breath and chest discomfort
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [age]-year-old with significant past medical history who presented to the emergency department with acute onset dyspnea and substernal chest pain. The pt has known end stage renal disease requiring hemodialysis three times weekly and is currently awaiting organ transplant. Additionally, the patient has a history of unspecified atrial fibrillation, atherosclerotic heart disease of native coronary artery without angina pectoris, and aortic stenosis with mitral insufficiency. Upon arrival, vital signs revealed an irregular heart rate consistent with atrial fibrillation, and initial assessment was concerning for acute ischemic heart disease. Chest imaging and clinical evaluation revealed evidence of pneumonia of unspecified organism, likely contributing to respiratory compromise. The patient also reports chronic obstructive pulmonary disease and has been managing chronic dorsalgia and left shoulder pain with long-term opiate analgesic therapy (methadone).
+
+**PAST MEDICAL HISTORY:**
+Significant for end stage renal disease on dialysis dependence, unspecified atrial fibrillation, other forms of acute ischemic heart disease, atherosclerotic disease, nonrheumatic aortic stenosis, nonrheumatic mitral insufficiency, chronic obstructive pulmonary disease, anemia secondary to chronic kidney disease, hypothyroidism, chronic pain with dorsalgia, left shoulder pain, and long-term use of opioid analgesics.
+
+**HOSPITAL COURSE:**
+During this admission, the patient underwent performance of urinary filtration (hemodialysis) on multiple occasions to manage volume status and electrolytes given end stage renal disease. Empiric antimicrobial therapy with levofloxacin was initiated for pneumonia coverage. The patient's atrial fibrillation was managed with anticoagulation via heparin drip (with dosing adjustments between 750-1500 units IV), with bridging anticipated on discharge. Rate control was achieved using metoprolol tartrate in both IV and oral formulations. For cardiac risk stratification, rosuvastatin calcium was continued for atherosclerotic disease management. The patient's chronic pain regimen including methadone and gabapentin was maintained and optimized. Supplemental iron via ferric gluconate IV was administered to address anemia of chronic kidney disease. Pulmonary function was supported with albuterol nebulized therapy for chronic obstructive pulmonary disease. Thyroid replacement with levothyroxine sodium was continued for hypothyroidism. Subcutaneous heparin prophylaxis was also provided. The patient received pneumococcal 23-valent polysaccharide vaccine during admission. Supportive care including IV fluids, acetaminophen for discomfort, and docusate for bowel regimen completed the treatment plan. The patient showed clinical improvement with resolution of acute respiratory symptoms and stabilization of cardiac rhythm.
+
+**DISCHARGE MEDICATIONS:**
+- Methadone 5 mg PO daily
+- Gabapentin 100 mg and 300 mg PO twice daily
+- Metoprolol Tartrate 6.25 mg PO twice daily
+- Rosuvastatin Calcium 20 mg PO daily
+- Levothyroxine Sodium 100 mcg PO daily
+- Levofloxacin 500 mg PO daily (complete full course)
+- Acetaminophen 650 mg PO every 6 hours as needed
+- Docusate Sodium 100 mg PO daily
+- Nephrocaps 1 capsule PO daily
+- Albuterol 0.083% nebulized solution one treatment as needed
+- Heparin SC 5000 units twice daily (bridge therapy until anticoagulation established)
+- Ferric Gluconate 125 mg IV at next hemodialysis session
+
+**FOLLOW-UP:**
+Patient to follow up with cardiology regarding atrial fibrillation management and consideration of rate or rhythm control strategies. Nephrology follow-up for end stage renal disease and transplant coordination. Primary care provider to monitor hypothyroidism and chronic pain management. Patient should continue scheduled hemodialysis sessions.
+
+**DISPOSITION:**
+Patient discharged to home in stable condition.

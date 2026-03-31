@@ -1,0 +1,27 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [Patient Name]  
+**MRN:** [Medical Record Number]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [X] days
+
+---
+
+**SUBJECTIVE:**
+
+Patient is a [age]-year-old male presenting with acute psychiatric decompensation in the setting of polysubstance use. The pt reports recent cocaine use and continued alcohol consumption, noting that his mood has been significantly depressed and his thinking increasingly disorganized. He admits to active cocaine use, unspecified, uncomplicated, and acknowledges ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder. The patient also carries a longstanding diagnosis of schizophrenia, unspecified, which has been difficult to manage pharmacologically during periods of substance use. Additionally, the pt has a significant past medical history including HIV disease on prior antiretroviral therapy, chronic viral hepatitis C without hepatic coma, a remote history of traumatic brain injury, and former nicotine dependence. He reports feeling hopeless, paranoid, and experiencing auditory hallucinations. The combination of his underlying psychiatric condition, active substance use—particularly cocaine—and psychoactive substance-induced mood disorder has created an acute crisis requiring hospitalization for stabilization and safety.
+
+**OBJECTIVE:**
+
+On admission, vital signs were: BP 148/92, HR 102, RR 20, Temp 98.6°F, O2 sat 96% on room air. The pt appeared disheveled, with poor hygiene and limited eye contact. Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations. Labs on admission showed CD4 count of 285 cells/mm³, indicating need for close HIV monitoring. Hepatic function panel was notable for elevated transaminases consistent with chronic hepatitis C. The pt was initiated on a structured psychiatric evaluation and medical assessment to address his multiple comorbidities.
+
+**ASSESSMENT:**
+
+[Age]-year-old male with multiple acute and chronic psychiatric and medical conditions admitted for crisis stabilization. Primary presentation involves acute decompensation of schizophrenia, unspecified, complicated by active polysubstance use including cocaine use and alcohol use disorder with alcohol-induced disorder. The acute mood disturbance is felt to be multifactorial—both primary to his schizophrenia and secondarily related to psychoactive substance-induced mood disorder. Patient's HIV disease requiring ongoing management, combined with chronic viral hepatitis C and history of traumatic brain injury, further complicates his clinical picture. The pt is currently abstinent from substances during hospitalization and responded favorably to psychiatric medication adjustment and supportive care.
+
+**PLAN & DISCHARGE:**
+
+The patient is being discharged to [disposition] in stable psychiatric condition. A comprehensive medication reconciliation has been completed. He will continue quetiapine fumarate for antipsychotic coverage at doses ranging from 25 mg to 300 mg for titration flexibility, sertraline 25 mg daily for mood support, and hydroxyzine 50 mg as needed for anxiety. He is prescribed thiamine 100 mg daily and folic acid 1 mg daily for nutritional supplementation given his substance use history. Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis given his CD4 count below 200. Supportive measures including multivitamins, calcium carbonate supplementation, lidocaine 5% patch, and Bengay cream for musculoskeletal discomfort complete the medication regimen.
+
+The pt is strongly encouraged to engage in outpatient psychiatry, substance abuse treatment programming, and HIV/hepatitis C specialty care. Close follow-up with his primary care provider within one week is essential. He has been counseled extensively regarding the dangers of continued substance use, particularly cocaine, and the importance of medication adherence. Referrals have been placed for addiction medicine, hepatology, and infectious disease consultation on an outpatient basis. The patient expresses understanding and willingness to follow up with recommended services.

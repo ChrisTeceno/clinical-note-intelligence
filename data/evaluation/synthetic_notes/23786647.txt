@@ -1,0 +1,60 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [Redacted]  
+**MRN:** [Redacted]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** 14 days
+
+---
+
+**REASON FOR ADMISSION:**
+
+The patient presented to our institution following detection of a nonruptured cerebral aneurysm on imaging studies. The pt required interventional neuroradiology procedures for vessel restriction and management of subsequent complications that arose during hospitalization.
+
+---
+
+**HOSPITAL COURSE:**
+
+This patient with a significant past medical history including essential hypertension, hyperlipidemia, and prior malignant neoplasm of the breast was admitted for elective treatment of a cerebral aneurysm. During the index admission, the pt underwent percutaneous restriction of the left internal carotid artery and intracranial artery using intraluminal devices. 
+
+Unfortunately, the procedures were complicated by several adverse events. The patient developed a postprocedural hemorrhage of a circulatory system organ following the endovascular intervention, with an associated accidental puncture and laceration of a circulatory structure that occurred during the procedure. These complications led to development of hemothorax requiring close monitoring and management. The hemorrhage resulted in acute posthemorrhagic anemia necessitating transfusion support.
+
+Additionally, the pt developed significant cerebral edema in the immediate postoperative period, which was managed with dexamethasone therapy and careful fluid management. The patient also experienced postprocedural hypotension requiring vasopressor and antihypertensive agent titration. Notably, the pt developed postprocedural heart failure following the surgical intervention, compounded by preexisting acute diastolic congestive heart failure, necessitating diuretic use and careful hemodynamic monitoring throughout the stay.
+
+Speech evaluation revealed aphasia related to the cerebrovascular event and swelling. The patient also complained of chest pain during hospitalization, which was appropriately evaluated. Electrolyte disturbances, particularly hypokalemia and hypomagnesemia, were identified and corrected with supplemental repletion. The pt received appropriate seizure prophylaxis with levetiracetam given the risk profile.
+
+Vital signs at discharge were stable with BP ranging 120-140 mmHg systolic, HR 60-75 bpm regular, and O2 saturation on room air at 96%.
+
+---
+
+**PROCEDURES:**
+
+1. Restriction of left internal carotid artery with intraluminal device via percutaneous approach
+2. Restriction of intracranial artery with intraluminal device via percutaneous approach
+
+---
+
+**DISCHARGE MEDICATIONS:**
+
+- Atenolol 50 mg PO daily
+- Enalapril maleate 20 mg PO BID
+- Amlodipine 5 mg PO daily
+- Hydralazine 10 mg PO QID
+- Furosemide 10 mg IV daily (or as needed for volume status)
+- Aspirin 325 mg PO daily
+- Levetiracetam 500 mg PO BID
+- Dexamethasone 2 mg PO daily (taper per neurosurgery recommendations)
+- Famotidine 20 mg PO BID
+- Docusate sodium 100 mg PO daily
+- Senna 17.2 mg PO daily
+- Bisacodyl 10 mg PO at bedtime as needed
+- Acetaminophen 325-650 mg PO Q6H as needed for pain
+- Potassium chloride 40 mEq PO daily (recheck K+ in 3-5 days)
+- Magnesium sulfate supplementation as directed by primary team
+
+---
+
+**DISPOSITION:**
+
+The pt is discharged to [inpatient rehabilitation facility/home with services] in stable condition. Close neurovascular follow-up is essential given the recent interventions and complications. The patient should follow up with neurosurgery within 1 week, cardiology within 2 weeks, and primary care within 1 week. Speech therapy is recommended on an outpatient basis to address residual aphasia. Strict blood pressure control is critical to prevent rebleeding or further complications.

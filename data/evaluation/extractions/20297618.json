@@ -1,0 +1,229 @@
+{
+  "note_id": "20297618",
+  "diagnoses": [
+    {
+      "name": "Unstable angina pectoris",
+      "icd10_suggestion": "I20.0",
+      "confidence": "high",
+      "evidence_span": "Patient is a middle-aged adult with significant cardiac history presenting with unstable angina pectoris"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary arteries",
+      "icd10_suggestion": "I25.10",
+      "confidence": "high",
+      "evidence_span": "The patient has known atherosclerotic heart disease of native coronary arteries"
+    },
+    {
+      "name": "Coronary artery stenosis",
+      "icd10_suggestion": "I25.1",
+      "confidence": "high",
+      "evidence_span": "Cardiac catheterization confirmed significant coronary artery stenosis"
+    },
+    {
+      "name": "Obesity",
+      "icd10_suggestion": "E66.9",
+      "confidence": "high",
+      "evidence_span": "He carries diagnoses of obesity, hyperlipidemia, and anxiety disorder"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "He carries diagnoses of obesity, hyperlipidemia, and anxiety disorder"
+    },
+    {
+      "name": "Anxiety disorder",
+      "icd10_suggestion": "F41.9",
+      "confidence": "high",
+      "evidence_span": "He carries diagnoses of obesity, hyperlipidemia, and anxiety disorder"
+    },
+    {
+      "name": "Nicotine dependence",
+      "icd10_suggestion": "F17.210",
+      "confidence": "high",
+      "evidence_span": "The pt is an active smoker with nicotine dependence"
+    },
+    {
+      "name": "Family history of ischemic heart disease",
+      "icd10_suggestion": "Z82.49",
+      "confidence": "high",
+      "evidence_span": "strong family history of ischemic heart disease and other circulatory disorders"
+    },
+    {
+      "name": "Elevated troponin",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Troponin elevated at 0.8 ng/mL"
+    },
+    {
+      "name": "Elevated BNP",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "BNP 385 pg/mL"
+    },
+    {
+      "name": "Uncontrolled hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "Lipid panel demonstrates elevated total cholesterol and LDL consistent with uncontrolled hyperlipidemia"
+    },
+    {
+      "name": "Hyperglycemia",
+      "icd10_suggestion": "R73.9",
+      "confidence": "high",
+      "evidence_span": "Glucose initially 168 mg/dL; managed with insulin infusion protocol"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Cardiac catheterization",
+      "cpt_suggestion": "93454",
+      "confidence": "high",
+      "evidence_span": "Cardiac catheterization confirmed significant coronary artery stenosis"
+    },
+    {
+      "name": "Coronary artery bypass grafting (CABG) with LIMA-to-LAD bypass",
+      "cpt_suggestion": "33510",
+      "confidence": "high",
+      "evidence_span": "Coronary artery bypass grafting was performed with left internal mammary artery to left anterior descending artery via open surgical approach"
+    },
+    {
+      "name": "Continuous cardiac output monitoring",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "Continuous cardiac output monitoring was maintained perioperatively to assess hemodynamic status and guide fluid and vasopressor management"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Continue aspirin 81 mg daily"
+    },
+    {
+      "name": "Clopidogrel",
+      "dosage": "75 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Continue clopidogrel 75 mg daily"
+    },
+    {
+      "name": "Metoprolol",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Beta-blocker management with metoprolol titrated to HR 60-70 bpm and SBP >100 mmHg"
+    },
+    {
+      "name": "Sublingual nitroglycerin",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": "sublingual",
+      "confidence": "high",
+      "evidence_span": "Sublingual nitroglycerin available for anginal symptoms"
+    },
+    {
+      "name": "Rosuvastatin",
+      "dosage": "40 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Rosuvastatin 40 mg daily for aggressive lipid management"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Continue acetaminophen and opioid analgesics"
+    },
+    {
+      "name": "Oxycodone",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "opioid analgesics (oxycodone, hydromorphone) as needed for post-operative pain"
+    },
+    {
+      "name": "Hydromorphone",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "opioid analgesics (oxycodone, hydromorphone) as needed for post-operative pain"
+    },
+    {
+      "name": "Diazepam",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Diazepam incorporated for anxiety management given documented anxiety disorder"
+    },
+    {
+      "name": "Gabapentin",
+      "dosage": "300 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Gabapentin 300 mg daily for neuropathic symptom relief"
+    },
+    {
+      "name": "Ranitidine",
+      "dosage": "150 mg",
+      "frequency": "daily",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Ranitidine 150 mg daily"
+    },
+    {
+      "name": "Docusate",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "bowel regimen including docusate, senna, lactulose, and polyethylene glycol"
+    },
+    {
+      "name": "Senna",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "bowel regimen including docusate, senna, lactulose, and polyethylene glycol"
+    },
+    {
+      "name": "Lactulose",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "bowel regimen including docusate, senna, lactulose, and polyethylene glycol"
+    },
+    {
+      "name": "Polyethylene glycol",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "bowel regimen including docusate, senna, lactulose, and polyethylene glycol"
+    },
+    {
+      "name": "Nicotine patch",
+      "dosage": "21 mg",
+      "frequency": "daily",
+      "route": "transdermal",
+      "confidence": "high",
+      "evidence_span": "Nicotine patch 21 mg transdermal daily"
+    }
+  ],
+  "chief_complaint": "Unstable angina pectoris with acute chest discomfort unresponsive to rest and sublingual nitroglycerin",
+  "medical_specialty": "Cardiothoracic Surgery / Cardiology"
+}

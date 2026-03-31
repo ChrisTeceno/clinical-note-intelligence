@@ -1,0 +1,59 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [Redacted]  
+**ADMISSION DATE:** [Redacted]  
+**DISCHARGE DATE:** [Redacted]  
+**LENGTH OF STAY:** 32 days
+
+---
+
+**CHIEF COMPLAINT:**
+Altered mental status and abdominal pain
+
+**HISTORY OF PRESENT ILLNESS:**
+This is a [age]-year-old male with a complex medical history including other cirrhosis of the liver secondary to nonalcoholic steatohepatitis (NASH), portal hypertension, and hypertensive chronic kidney disease who presented via emergency department with altered mental status, severe abdominal distention, and hemodynamic instability. The patient had undergone recent cardiac catheterization with coronary angiography given his atherosclerotic heart disease of the native coronary artery with angina pectoris and prior coronary angioplasty implants. Shortly after the procedure, he developed acute postprocedural shock complicated by postprocedural hemorrhage of a circulatory system organ.
+
+On presentation, the patient was found to have hemoperitoneum, peritonitis, and acute and subacute hepatic failure with coma. Laboratory evaluation revealed acute kidney failure on top of his baseline moderate chronic kidney disease stage 3, hepatorenal syndrome, and acquired coagulation factor deficiency. Blood cultures subsequently grew E. coli, and the clinical picture was consistent with sepsis progressing to severe sepsis with septic shock. Additionally, he developed secondary infections including ventilator-associated pneumonia and an unspecified central venous catheter infection with methicillin-susceptible Staphylococcus aureus. Urinary tract infection was also documented. The patient's acute presentation was further complicated by acute respiratory failure requiring intubation, ileus, atelectasis, hypovolemic shock, and severe protein-calorie malnutrition.
+
+---
+
+**PAST MEDICAL HISTORY:**
+- Other cirrhosis of liver with portal hypertension
+- Nonalcoholic steatohepatitis (NASH)
+- Type 2 diabetes mellitus (on insulin)
+- Hypertensive chronic kidney disease with stage 3 CKD
+- Coronary artery disease with prior angioplasty and stent placement
+- Angina pectoris
+- Atrial fibrillation and atrial flutter
+- Anemia in chronic disease
+- Adult failure to thrive
+
+**MEDICATIONS AT ADMISSION:**
+Home insulin regimen and cardiac medications including metoprolol.
+
+---
+
+**HOSPITAL COURSE:**
+
+The patient required immediate aggressive ICU-level management. A percutaneous central venous catheter was placed in the right atrium, and a superior vena cava infusion device was inserted for hemodynamic support. The patient was intubated via endotracheal airway placement for acute respiratory failure. Initial diagnostic paracentesis of the peritoneal cavity revealed hemoperitoneum; subsequently, multiple therapeutic peritoneal drainages were performed percutaneously.
+
+Coronary fluoroscopy of both multiple coronary arteries and the right heart was performed using contrast for further evaluation. Vascular intervention was required, including occlusion of the right vertebral artery and right femoral artery with intraluminal devices via percutaneous approach.
+
+The patient required prolonged mechanical ventilation for greater than 96 consecutive hours. Aggressive airway management included multiple bronchoscopic procedures with extirpation of matter from the left lower lobe and left main bronchus. Diagnostic drainage of the right lower lobe bronchus was also performed.
+
+Continuous renal replacement therapy (CRRT) was initiated given acute kidney failure superimposed on chronic kidney disease and hepatorenal syndrome. Multiple sessions of hemodialysis with urinary filtration were performed using both heparin-based and citrate-based anticoagulation protocols.
+
+The patient received broad-spectrum antimicrobial coverage including vancomycin, meropenem, cefepime, aztreonam, ciprofloxacin, and tobramycin for documented E. coli sepsis and secondary bacterial infections. Antifungal coverage with micafungin was added. Antibiotics were tailored based on culture results and clinical response.
+
+Supportive care was extensive, including vasopressor therapy with norepinephrine, phenylephrine, epinephrine, and vasopressin for management of septic shock and hypovolemic shock. Nutritional support was provided via both enteral feeds introduced into the upper GI tract through a natural or artificial opening as well as central venous nutritional supplementation. Multiple infusions of albumin (25% solution at varying volumes) and blood products were administered for severe protein-calorie malnutrition and acute posthemorrhagic anemia.
+
+Management of hepatic failure included lactulose enemas and oral/NG administration, rifaximin for hepatic encephalopathy, and octreotide for portal hypertensive bleeding prophylaxis. Coagulopathy was treated with phytonadione and fresh frozen plasma products. Electrolyte abnormalities including hypo-osmolality and hyponatremia were corrected with sodium chloride, potassium chloride, calcium gluconate, magnesium sulfate, and phosphorus supplementation. Acidosis was managed with sodium bicarbonate.
+
+Cardiac rhythm management included amiodarone and diltiazem boluses and drips for atrial fibrillation and atrial flutter; metoprolol was reintroduced when hemodynamically tolerated. Pain and anxiety management required fentanyl infusions, morphine drips, propofol, lorazepam, and midazolam.
+
+Throughout admission, the patient received stress ulcer prophylaxis with pantoprazole and famotidine, bowel regimen support with senna, bisacodyl, and methylnaltrexone, antiemetic coverage with ondansetron and metoclopramide, and vitamin supplementation including thiamine, folic acid, and vitamin D. Influenza and pneumococcal vaccines were administered.
+
+---
+
+**DISPOSITION:**
+The patient remains hospitalized pending continued hemodynamic stabilization and ongoing multidisciplinary ICU care. Close follow-up with hepatology, nephrology, and cardiology is essential given the complexity of his underlying cirrhosis, cardiac disease, and renal dysfunction.

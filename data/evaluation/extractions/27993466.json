@@ -1,0 +1,227 @@
+{
+  "note_id": "27993466",
+  "diagnoses": [
+    {
+      "name": "Acute pulmonary embolism",
+      "icd10_suggestion": "I26.99",
+      "confidence": "high",
+      "evidence_span": "imaging studies revealed acute pulmonary embolism without acute cor pulmonale"
+    },
+    {
+      "name": "Deep venous thrombosis of left femoral vein",
+      "icd10_suggestion": "I82.521",
+      "confidence": "high",
+      "evidence_span": "deep venous thrombosis involving the left femoral vein and left popliteal vein"
+    },
+    {
+      "name": "Deep venous thrombosis of left popliteal vein",
+      "icd10_suggestion": "I82.531",
+      "confidence": "high",
+      "evidence_span": "deep venous thrombosis involving the left femoral vein and left popliteal vein"
+    },
+    {
+      "name": "Chronic systolic congestive heart failure",
+      "icd10_suggestion": "I50.23",
+      "confidence": "high",
+      "evidence_span": "chronic systolic congestive heart failure"
+    },
+    {
+      "name": "Atrial fibrillation",
+      "icd10_suggestion": "I48.91",
+      "confidence": "high",
+      "evidence_span": "unspecified atrial fibrillation managed medically"
+    },
+    {
+      "name": "Coronary artery disease s/p aortocoronary bypass graft",
+      "icd10_suggestion": "I25.810",
+      "confidence": "high",
+      "evidence_span": "prior coronary artery disease s/p aortocoronary bypass graft"
+    },
+    {
+      "name": "Multiple myeloma not in remission",
+      "icd10_suggestion": "C90.00",
+      "confidence": "high",
+      "evidence_span": "multiple myeloma not having achieved remission with associated monoclonal gammopathy"
+    },
+    {
+      "name": "Ventricular tachycardia",
+      "icd10_suggestion": "I47.2",
+      "confidence": "high",
+      "evidence_span": "He developed ventricular tachycardia that required urgent rate and rhythm control"
+    },
+    {
+      "name": "Secondary pulmonary hypertension",
+      "icd10_suggestion": "I27.24",
+      "confidence": "high",
+      "evidence_span": "His underlying secondary pulmonary hypertension, likely multifactorial in etiology related to his cardiac and thromboembolic disease"
+    },
+    {
+      "name": "Hypokalemia",
+      "icd10_suggestion": "E87.6",
+      "confidence": "high",
+      "evidence_span": "Electrolyte abnormalities were identified and treated aggressively, including hypokalemia"
+    },
+    {
+      "name": "Hypomagnesemia",
+      "icd10_suggestion": "E61.2",
+      "confidence": "high",
+      "evidence_span": "Electrolyte abnormalities were identified and treated aggressively, including hypomagnesemia"
+    },
+    {
+      "name": "Hypophosphatemia",
+      "icd10_suggestion": "E83.39",
+      "confidence": "high",
+      "evidence_span": "Electrolyte abnormalities were identified and treated aggressively, including hypophosphatemia"
+    },
+    {
+      "name": "Monoclonal gammopathy",
+      "icd10_suggestion": "D47.2",
+      "confidence": "high",
+      "evidence_span": "associated monoclonal gammopathy"
+    },
+    {
+      "name": "History of falls",
+      "icd10_suggestion": "R29.6",
+      "confidence": "high",
+      "evidence_span": "A history of falling was documented in his record"
+    }
+  ],
+  "procedures": [
+    {
+      "name": "Pneumococcal 23-valent polysaccharide vaccine",
+      "cpt_suggestion": "90756",
+      "confidence": "high",
+      "evidence_span": "the patient received pneumococcal 23-valent polysaccharide vaccine"
+    },
+    {
+      "name": "Influenza vaccine quadrivalent",
+      "cpt_suggestion": "90658",
+      "confidence": "high",
+      "evidence_span": "influenza vaccine quadrivalent"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dosage": "81 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "The patient continued on his long-term aspirin 81 mg daily"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "800-1500 units",
+      "frequency": "per hour",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "intravenous heparin infusions at varying doses (800-1500 units/hour)"
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "2 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "overlapped with warfarin 2 mg daily via PO"
+    },
+    {
+      "name": "Enoxaparin",
+      "dosage": "50 mg",
+      "frequency": null,
+      "route": "SC",
+      "confidence": "high",
+      "evidence_span": "enoxaparin 50 mg subcutaneously"
+    },
+    {
+      "name": "Metoprolol tartrate",
+      "dosage": "25 mg, 12.5 mg, 2.5 mg",
+      "frequency": "BID or IV dosing",
+      "route": "PO/IV",
+      "confidence": "high",
+      "evidence_span": "metoprolol tartrate initiated at 25 mg BID, titrated down to 12.5 mg and 2.5 mg IV dosing"
+    },
+    {
+      "name": "Digoxin",
+      "dosage": "0.5 mg, 0.25 mg, 0.125 mg",
+      "frequency": "daily",
+      "route": "IV/PO",
+      "confidence": "high",
+      "evidence_span": "Digoxin was administered both IV (0.5 mg and 0.25 mg doses) and PO (0.125 mg daily)"
+    },
+    {
+      "name": "Simethicone",
+      "dosage": "40-80 mg",
+      "frequency": null,
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "managed with simethicone 40-80 mg PO"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "docusate sodium 100 mg daily"
+    },
+    {
+      "name": "Senna",
+      "dosage": null,
+      "frequency": null,
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Senna was also provided for constipation prophylaxis"
+    },
+    {
+      "name": "Magnesium sulfate",
+      "dosage": "2 gm, 4 gm",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Magnesium sulfate was administered IV at 2 gm and 4 gm doses"
+    },
+    {
+      "name": "Phosphorus supplementation",
+      "dosage": "250 mg, 500 mg",
+      "frequency": null,
+      "route": "IV/PO",
+      "confidence": "high",
+      "evidence_span": "Phosphorus supplementation was given both IV and PO (250 mg and 500 mg PO doses)"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "20-80 mEq",
+      "frequency": null,
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Potassium chloride replacement was administered in critical care dosing regimens, with multiple supplementation rounds (40 mEq, 60 mEq, and 80 mEq) along with standard 20 mEq and 40 mEq doses PO"
+    },
+    {
+      "name": "Calcium gluconate",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Calcium supplementation via IV calcium gluconate was administered"
+    },
+    {
+      "name": "Normal saline",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "The patient received IV fluid resuscitation with normal saline"
+    },
+    {
+      "name": "Dextrose-containing solutions",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "The patient received IV fluid resuscitation with normal saline and dextrose-containing solutions"
+    }
+  ],
+  "chief_complaint": "Chest pain and dyspnea",
+  "medical_specialty": "Cardiology"
+}

@@ -1,0 +1,43 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 5 days
+
+---
+
+**CHIEF COMPLAINT:**  
+Right leg pain and swelling following a fall.
+
+**HISTORY OF PRESENT ILLNESS:**  
+The patient is a resident of a residential care facility who presented to the emergency department after a fall on the same level at her place of residence. She sustained a displaced comminuted fracture of the shaft of the right tibia. The patient reports having tripped while ambulating within the facility. Given the severity of the fracture with significant comminution and displacement, she was taken to the operating room for definitive fixation.
+
+The patient has a significant past medical history including epilepsy, which is currently unspecified and not intractable without documented status epilepticus. She also carries a diagnosis of legal blindness as defined in the USA, which likely contributed to her fall risk. Additionally, she has an unspecified mental disorder due to a known physiological condition, for which she has been on psychiatric medications.
+
+**PHYSICAL EXAMINATION ON ADMISSION:**  
+Vital signs on presentation: BP 138/82, HR 94, RR 18, O2 sat 96% on room air, Temp 36.8°C. The patient was alert but somewhat anxious. Right lower extremity showed significant swelling, ecchymosis, and deformity consistent with an acute tibia fracture. Neurologically, the patient was oriented to person and place; cranial nerves grossly intact. Visual acuity limited due to documented legal blindness. No acute focal deficits noted.
+
+**HOSPITAL COURSE:**  
+The patient underwent operative reposition of the right tibia with open approach and intramedullary internal fixation device placement on hospital day 1. The procedure was performed without intraoperative complications. She received perioperative antibiotic prophylaxis with cefazolin. Postoperatively, pain was managed with a combination of oxycodone immediate release, morphine sulfate IV as needed, and ketorolac. Prophylactic enoxaparin was administered for thromboembolism prevention.
+
+Given her psychiatric history, her trazodone, citalopram, and quetiapine were continued and titrated during the admission. Divalproex was maintained for seizure management. She remained seizure-free during hospitalization. The patient received appropriate bowel regimen including docusate sodium to prevent narcotic-induced constipation. Antiemetics with ondansetron were used as needed. IV fluid support with dextrose and normal saline was provided, along with potassium supplementation. Acetaminophen was administered for additional analgesic coverage.
+
+Physical therapy and occupational therapy evaluated the patient on postoperative days 2-3, and she demonstrated appropriate progress with weight-bearing restrictions. By discharge, she was tolerating diet well and pain was adequately controlled on the current regimen.
+
+**DISCHARGE MEDICATIONS:**  
+- Multivitamins 1 tablet PO daily
+- Oxycodone immediate release 5-10 mg PO every 4-6 hours as needed for pain
+- Morphine sulfate 2-4 mg IV as needed for breakthrough pain (limited supply provided)
+- Trazodone 50 mg PO at bedtime and 100 mg PO at bedtime (dosing per psychiatry recommendations)
+- Divalproex delayed release 500 mg PO BID
+- Docusate sodium 100 mg PO BID
+- Ketorolac 15 mg IV every 6 hours as needed (short-term use only)
+- Enoxaparin sodium 40 mg SC daily for 14 days post-discharge
+- Citalopram 40 mg PO daily
+- Quetiapine fumarate 150-300 mg PO at bedtime (per psychiatric regimen)
+- Acetaminophen 1000 mg PO every 6 hours as needed
+- Cefazolin completed per protocol
+
+**DISCHARGE INSTRUCTIONS:**  
+The patient is discharged to her residential facility with strict non-weight-bearing precautions on the right lower extremity. She should use crutches or a walker as appropriate. Follow-up orthopedic surgery appointment scheduled for 2 weeks post-discharge for fracture reassessment. Psychiatry and neurology outpatient follow-up also arranged. The facility should ensure seizure precautions remain in place and staff is aware of medication administration times.

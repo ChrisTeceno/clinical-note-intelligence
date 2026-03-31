@@ -1,0 +1,57 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 5 days
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain and shortness of breath
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [AGE]-year-old with a past medical history significant for discoid lupus erythematosus, essential hypertension, and hyperlipidemia who presented to the emergency department with acute onset chest pain, dyspnea, and palpitations. Initial evaluation revealed findings consistent with acute pericarditis with associated pericardial effusion. On admission, the patient was febrile and tachycardic with vital signs notable for blood pressure ranging 92-108/58-72 mmHg, reflecting other hypotension. Laboratory studies demonstrated acute kidney failure with creatinine elevation to 2.1 mg/dL (baseline unknown), along with significant electrolyte derangements including hypo-osmolality and hyponatremia with sodium levels as low as 128 mEq/L. The patient also presented with clinical signs of dehydration despite initial fluid intake concerns. Imaging revealed pleural effusion bilaterally and left basilar atelectasis on chest radiograph.
+
+**HOSPITAL COURSE:**
+The patient was admitted to the ICU for close hemodynamic monitoring. Given the clinical presentation of acute pericarditis with concern for tamponade physiology, a percutaneous drainage of the pericardial cavity was performed on hospital day 2, which yielded approximately 800 mL of serosanguineous fluid. This procedure provided symptomatic relief with improvement in chest discomfort and resolution of significant tachycardia.
+
+Management focused on aggressive electrolyte repletion given the severe hyponatremia and hypo-osmolality. The patient received multiple doses of intravenous normal saline, potassium chloride supplementation (administered in divided doses of 40, 60, and 80 mEq), magnesium sulfate replacement (both 2 gm and 4 gm dosing), and calcium gluconate support. IV fluid resuscitation was continued with 0.9% sodium chloride bags to address the underlying dehydration and support renal perfusion.
+
+Renal function gradually improved with hydration, though acute kidney failure remained the primary concern throughout the stay. The pleural effusion and atelectasis were managed conservatively with pulmonary toilet and incentive spirometry. Hypertension was controlled with amlodipine and metoprolol (both succinate extended-release and tartrate formulations). Lipid management was continued with atorvastatin 20 mg daily. For symptom management, the patient received acetaminophen for pain control, lorazepam for anxiety, and trazodone for sleep support.
+
+Preventive care was addressed with administration of pneumococcal 23-valent polysaccharide vaccine and influenza vaccine quadrivalent during hospitalization.
+
+**DIAGNOSES AT DISCHARGE:**
+1. Acute pericarditis (treated with percutaneous drainage)
+2. Bilateral pleural effusion
+3. Acute kidney failure (improved but not fully resolved)
+4. Hyponatremia and hypo-osmolality (corrected)
+5. Dehydration (resolved)
+6. Other hypotension (improved)
+7. Left basilar atelectasis
+8. Tachycardia (resolved post-procedure)
+9. Essential hypertension
+10. Hyperlipidemia
+11. Discoid lupus erythematosus
+12. Palpitations (resolved)
+13. History of traumatic fracture
+14. History of endocrine/metabolic disease
+15. History of nicotine dependence
+
+**PROCEDURES:**
+Percutaneous drainage of pericardial cavity on hospital day 2.
+
+**DISCHARGE MEDICATIONS:**
+- Amlodipine 5 mg PO daily
+- Metoprolol succinate XL 50 mg PO daily
+- Metoprolol tartrate 12.5 mg PO BID
+- Atorvastatin 20 mg PO daily
+- Potassium chloride 20 mEq PO daily
+- Magnesium supplementation as needed
+- Lorazepam 0.5-1 mg PO daily as needed for anxiety
+- Trazodone 25 mg PO at bedtime
+- Acetaminophen 650 mg PO Q6H as needed for pain
+
+**DISCHARGE INSTRUCTIONS:**
+Follow up with cardiology in 1-2 weeks for post-pericardiocentesis evaluation. Nephrology follow-up in 3-5 days for monitoring of renal function. Patient to maintain strict fluid and sodium intake restrictions per nephrology recommendations. Continue home medications as prescribed. Report any recurrent chest pain, shortness of breath, or signs of reaccumulation of pericardial fluid to the emergency department immediately.

@@ -1,0 +1,179 @@
+{
+  "hadm_id": 23514107,
+  "diagnoses": [
+    {
+      "icd_code": "K565",
+      "description": "Intestinal adhesions [bands] with obstruction (postinfection)",
+      "seq_num": 1
+    },
+    {
+      "icd_code": "K7031",
+      "description": "Alcoholic cirrhosis of liver with ascites",
+      "seq_num": 2
+    },
+    {
+      "icd_code": "I8510",
+      "description": "Secondary esophageal varices without bleeding",
+      "seq_num": 3
+    },
+    {
+      "icd_code": "K766",
+      "description": "Portal hypertension",
+      "seq_num": 4
+    },
+    {
+      "icd_code": "F17210",
+      "description": "Nicotine dependence, cigarettes, uncomplicated",
+      "seq_num": 5
+    },
+    {
+      "icd_code": "Z6823",
+      "description": "Body mass index (BMI) 23.0-23.9, adult",
+      "seq_num": 6
+    },
+    {
+      "icd_code": "B1920",
+      "description": "Unspecified viral hepatitis C without hepatic coma",
+      "seq_num": 7
+    },
+    {
+      "icd_code": "I81",
+      "description": "Portal vein thrombosis",
+      "seq_num": 8
+    },
+    {
+      "icd_code": "E43",
+      "description": "Unspecified severe protein-calorie malnutrition",
+      "seq_num": 9
+    }
+  ],
+  "procedures": [],
+  "medications": [
+    {
+      "drug": "Vial",
+      "dose_val": "1 VIAL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Heparin",
+      "dose_val": "5000 UNIT",
+      "dose_unit": "",
+      "route": "SC"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "2 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PR"
+    },
+    {
+      "drug": "Furosemide",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Iso-Osmotic Sodium Chloride",
+      "dose_val": "1 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Ondansetron",
+      "dose_val": "4 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Pantoprazole",
+      "dose_val": "40 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Famotidine",
+      "dose_val": "20 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chl 20 mEq / 1000 mL D5 1/2 NS",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bag",
+      "dose_val": "2 BAG",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Bisacodyl",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO"
+    },
+    {
+      "drug": "OxyCODONE (Immediate Release)",
+      "dose_val": "10 mg",
+      "dose_unit": "",
+      "route": "PO/NG"
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "dose_val": "4 gm",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Potassium Chloride",
+      "dose_val": "40 mEq",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "Sodium Chloride 0.9%  Flush",
+      "dose_val": "3 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "5% Dextrose",
+      "dose_val": "500 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25 mg",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "D5 1/2NS",
+      "dose_val": "1000 mL",
+      "dose_unit": "",
+      "route": "IV"
+    },
+    {
+      "drug": "HYDROmorphone (Dilaudid)",
+      "dose_val": "0.25-0.5 mg",
+      "dose_unit": "",
+      "route": "IV"
+    }
+  ]
+}
