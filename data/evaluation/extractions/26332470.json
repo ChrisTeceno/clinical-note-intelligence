@@ -2,28 +2,22 @@
   "note_id": "26332470",
   "diagnoses": [
     {
-      "name": "Chronic pulmonary edema",
-      "icd10_suggestion": "J81.1",
-      "confidence": "high",
-      "evidence_span": "complex medical history including chronic pulmonary edema"
-    },
-    {
-      "name": "Heart failure",
-      "icd10_suggestion": "I50.9",
-      "confidence": "high",
-      "evidence_span": "heart failure"
-    },
-    {
       "name": "Hypertensive heart disease with heart failure",
-      "icd10_suggestion": "I11.0",
+      "icd10_suggestion": "I110",
       "confidence": "high",
-      "evidence_span": "hypertensive heart disease with heart failure"
+      "evidence_span": "chronic pulmonary edema, heart failure, hypertensive heart disease with heart failure"
     },
     {
       "name": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
-      "icd10_suggestion": "I25.10",
+      "icd10_suggestion": "I2510",
       "confidence": "high",
       "evidence_span": "atherosclerotic heart disease of native coronary artery without angina pectoris"
+    },
+    {
+      "name": "Acute exacerbation of chronic pulmonary edema",
+      "icd10_suggestion": "J811",
+      "confidence": "high",
+      "evidence_span": "presenting with acute exacerbation of chronic pulmonary edema"
     },
     {
       "name": "Type 2 diabetes mellitus",
@@ -32,48 +26,68 @@
       "evidence_span": "type 2 diabetes mellitus"
     },
     {
-      "name": "Pure hypercholesterolemia",
-      "icd10_suggestion": "E78.00",
+      "name": "Hypercholesterolemia",
+      "icd10_suggestion": "E78.0",
       "confidence": "high",
       "evidence_span": "pure hypercholesterolemia"
     },
     {
-      "name": "Acute exacerbation of chronic pulmonary edema",
-      "icd10_suggestion": "J81.1",
+      "name": "Orthopnea",
+      "icd10_suggestion": "R0601",
       "confidence": "high",
-      "evidence_span": "presenting with acute exacerbation of chronic pulmonary edema"
+      "evidence_span": "acute dyspnea and orthopnea"
+    },
+    {
+      "name": "Bilateral lower extremity edema",
+      "icd10_suggestion": "R60.9",
+      "confidence": "high",
+      "evidence_span": "2+ pitting edema bilateral lower extremities"
+    },
+    {
+      "name": "Hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "hypertensive heart disease with heart failure"
     }
   ],
   "procedures": [
     {
-      "name": "IV diuretics administration",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "Patient was managed with IV diuretics during hospitalization"
-    },
-    {
       "name": "Echocardiogram",
-      "cpt_suggestion": "93306",
+      "cpt_suggestion": "93000",
       "confidence": "high",
       "evidence_span": "EF on echo: 40% (unchanged from prior)"
     },
     {
       "name": "Chest X-ray",
-      "cpt_suggestion": "71046",
+      "cpt_suggestion": "71045",
       "confidence": "high",
       "evidence_span": "CXR demonstrated bilateral pulmonary edema without acute pneumonia"
+    },
+    {
+      "name": "IV diuretics administration",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Patient was managed with IV diuretics during hospitalization"
     }
   ],
   "medications": [
     {
-      "name": "Insulin",
+      "name": "Long-term insulin",
       "dosage": null,
-      "frequency": "long-term",
+      "frequency": null,
       "route": null,
       "confidence": "high",
       "evidence_span": "Patient requires ongoing long-term insulin use for glycemic control"
+    },
+    {
+      "name": "IV diuretics",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Patient was managed with IV diuretics during hospitalization"
     }
   ],
-  "chief_complaint": "acute dyspnea and orthopnea",
+  "chief_complaint": "Acute dyspnea and orthopnea",
   "medical_specialty": "Cardiology"
 }

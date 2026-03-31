@@ -2,132 +2,144 @@
   "note_id": "29281842",
   "diagnoses": [
     {
-      "name": "Amyotrophic lateral sclerosis",
-      "icd10_suggestion": "G12.21",
+      "name": "Amyotrophic lateral sclerosis (ALS)",
+      "icd10_suggestion": "G1221",
       "confidence": "high",
       "evidence_span": "Patient is a gentleman with known amyotrophic lateral sclerosis (ALS)"
     },
     {
-      "name": "Respiratory failure",
-      "icd10_suggestion": "J96.90",
+      "name": "Acute respiratory failure with hypoxia",
+      "icd10_suggestion": "J9601",
       "confidence": "high",
-      "evidence_span": "Respiratory failure requiring mechanical ventilation"
+      "evidence_span": "presented with acute decompensation requiring intubation and mechanical ventilation"
     },
     {
       "name": "Chronic respiratory failure",
-      "icd10_suggestion": "J44.1",
+      "icd10_suggestion": "J9611",
       "confidence": "high",
       "evidence_span": "He has dependence on a ventilator with underlying chronic respiratory failure"
     },
     {
-      "name": "Ventilator-associated pneumonia",
-      "icd10_suggestion": "J95.851",
+      "name": "Ventilator-associated pneumonia (VAP)",
+      "icd10_suggestion": "J95851",
       "confidence": "high",
       "evidence_span": "During this admission, he developed ventilator-associated pneumonia (VAP)"
     },
     {
-      "name": "Non-ST elevation myocardial infarction",
-      "icd10_suggestion": "I21.4",
+      "name": "Pneumonia due to Pseudomonas",
+      "icd10_suggestion": "J151",
       "confidence": "high",
-      "evidence_span": "the patient suffered a non-ST elevation myocardial infarction (NSTEMI) during his hospital course"
+      "evidence_span": "ventilator-associated pneumonia (VAP) complicated by Pseudomonas aeruginosa and E. coli organisms cultured from respiratory secretions"
+    },
+    {
+      "name": "Non-ST elevation myocardial infarction (NSTEMI)",
+      "icd10_suggestion": "I214",
+      "confidence": "high",
+      "evidence_span": "the patient suffered a non-ST elevation myocardial infarction (NSTEMI) during his hospital course, likely related to demand ischemia"
     },
     {
       "name": "Acute kidney failure",
-      "icd10_suggestion": "N17.9",
+      "icd10_suggestion": "N179",
       "confidence": "high",
       "evidence_span": "He experienced acute kidney failure, attributed in part to nephropathy induced by medications"
     },
     {
       "name": "Acute pyelonephritis",
-      "icd10_suggestion": "N10",
+      "icd10_suggestion": "N100",
       "confidence": "high",
-      "evidence_span": "with concurrent acute pyelonephritis and urinary tract infection secondary to E. coli"
+      "evidence_span": "concurrent acute pyelonephritis and urinary tract infection secondary to E. coli"
     },
     {
-      "name": "Urinary tract infection",
-      "icd10_suggestion": "N39.0",
+      "name": "Urinary tract infection secondary to E. coli",
+      "icd10_suggestion": "B96209",
       "confidence": "high",
-      "evidence_span": "with concurrent acute pyelonephritis and urinary tract infection secondary to E. coli"
+      "evidence_span": "urinary tract infection secondary to E. coli"
     },
     {
-      "name": "Encephalopathy",
-      "icd10_suggestion": "G93.1",
+      "name": "Metabolic encephalopathy",
+      "icd10_suggestion": "G9341",
       "confidence": "high",
-      "evidence_span": "The patient also developed altered mental status consistent with encephalopathy of unclear etiology"
+      "evidence_span": "The patient also developed altered mental status consistent with encephalopathy of unclear etiology, though infectious and metabolic etiologies were considered"
     },
     {
       "name": "Metabolic alkalosis",
-      "icd10_suggestion": "E87.3",
+      "icd10_suggestion": "E873",
       "confidence": "high",
       "evidence_span": "Laboratory studies revealed metabolic alkalosis"
     },
     {
-      "name": "Eosinophilia",
-      "icd10_suggestion": "D72.1",
-      "confidence": "high",
-      "evidence_span": "Laboratory studies revealed metabolic alkalosis and eosinophilia"
-    },
-    {
       "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
+      "icd10_suggestion": "E1190",
       "confidence": "high",
       "evidence_span": "His underlying type 2 diabetes mellitus was managed throughout admission"
     },
     {
-      "name": "Schizoaffective disorder",
-      "icd10_suggestion": "F25.9",
+      "name": "Schizoaffective disorder, unspecified",
+      "icd10_suggestion": "F259",
       "confidence": "high",
-      "evidence_span": "He has a long-standing history of schizoaffective disorder, unspecified"
+      "evidence_span": "long-standing history of schizoaffective disorder, unspecified, which complicated his hospital course"
     },
     {
       "name": "Adverse effect of penicillins",
-      "icd10_suggestion": "T36.0X5A",
+      "icd10_suggestion": "T36015A",
       "confidence": "high",
-      "evidence_span": "He developed a rash consistent with adverse effect from penicillins"
+      "evidence_span": "He developed a rash consistent with adverse effect from penicillins which occurred early in his hospital stay"
     },
     {
-      "name": "Epilepsy",
-      "icd10_suggestion": "G40.909",
+      "name": "Epilepsy, unspecified, not intractable",
+      "icd10_suggestion": "G4089",
       "confidence": "high",
       "evidence_span": "Epilepsy, unspecified, not intractable"
+    },
+    {
+      "name": "Ventilator dependence",
+      "icd10_suggestion": "Z9911",
+      "confidence": "high",
+      "evidence_span": "Amyotrophic lateral sclerosis (ALS) with ventilator dependence"
+    },
+    {
+      "name": "Gastrostomy status",
+      "icd10_suggestion": "Z931",
+      "confidence": "high",
+      "evidence_span": "Gastrostomy status"
     }
   ],
   "procedures": [
     {
-      "name": "Mechanical ventilation",
-      "cpt_suggestion": "94002",
-      "confidence": "high",
-      "evidence_span": "Patient was intubated and placed on mechanical ventilation for greater than 96 consecutive hours"
-    },
-    {
-      "name": "Intubation",
+      "name": "Intubation and mechanical ventilation",
       "cpt_suggestion": "31500",
       "confidence": "high",
-      "evidence_span": "Patient was intubated and placed on mechanical ventilation"
+      "evidence_span": "Patient was intubated and placed on mechanical ventilation for greater than 96 consecutive hours due to respiratory failure"
     },
     {
-      "name": "Percutaneous central venous catheter insertion",
-      "cpt_suggestion": "36556",
+      "name": "Percutaneous central venous catheter insertion into superior vena cava",
+      "cpt_suggestion": "36569",
       "confidence": "high",
-      "evidence_span": "A percutaneous central venous catheter was inserted into the superior vena cava"
+      "evidence_span": "A percutaneous central venous catheter was inserted into the superior vena cava for reliable vascular access and medication administration"
     },
     {
       "name": "Tracheostomy care",
       "cpt_suggestion": "31502",
       "confidence": "high",
       "evidence_span": "Tracheostomy care was provided with attention to proper tube positioning and management"
+    },
+    {
+      "name": "Ventilator adjustment and management",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Devices including ventilator settings and other specified respiratory equipment were fitted and adjusted multiple times throughout the stay"
     }
   ],
   "medications": [
     {
       "name": "Aspirin",
       "dosage": null,
-      "frequency": "long-term",
+      "frequency": null,
       "route": null,
       "confidence": "high",
       "evidence_span": "Chronic aspirin use documented; patient on long-term aspirin therapy"
     }
   ],
-  "chief_complaint": "Respiratory failure requiring mechanical ventilation",
-  "medical_specialty": "Internal Medicine"
+  "chief_complaint": "Respiratory failure requiring mechanical ventilation.",
+  "medical_specialty": "Pulmonology/Critical Care Medicine (ICU)"
 }

@@ -147,3 +147,19 @@ EXTRACTION_TOOL = {
 def build_extraction_prompt(transcription: str) -> str:
     """Build the user message for a single note extraction."""
     return f"Extract structured clinical data from this note:\n\n{transcription}"
+
+
+def build_rag_extraction_prompt(
+    transcription: str, relevant_codes: list[tuple[str, str]]
+) -> str:
+    """Build extraction prompt with RAG context of relevant ICD-10 codes."""
+    codes_text = "\n".join(f"  {code}: {desc}" for code, desc in relevant_codes[:50])
+    return (
+        f"The following ICD-10-CM codes may be relevant to this clinical note. "
+        f"Use these as a reference when suggesting ICD-10 codes — prefer codes from "
+        f"this list when they match the clinical findings, but you may suggest other "
+        f"codes if needed.\n\n"
+        f"Potentially relevant ICD-10 codes:\n{codes_text}\n\n"
+        f"---\n\n"
+        f"Extract structured clinical data from this note:\n\n{transcription}"
+    )

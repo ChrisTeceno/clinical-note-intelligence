@@ -72,6 +72,7 @@ def run_evaluation(
     settings: Settings | None = None,
     description: str = "",
     model: str | None = None,
+    use_rag: bool = False,
 ) -> EvaluationSummary:
     """Run the full evaluation pipeline.
 
@@ -134,10 +135,20 @@ def run_evaluation(
     # Step 3: Run extraction on each note
     logger.info("Running extraction pipeline on %d notes...", len(notes))
     cost_tracker = CostTracker(is_batch=False)
+
+    retriever = None
+    if use_rag:
+        from clinical_pipeline.extraction.icd10_rag import ICD10Retriever
+
+        code_table_path = settings.reference_dir / "icd10cm_codes_2025.txt"
+        logger.info("Building ICD-10 retriever from %s...", code_table_path)
+        retriever = ICD10Retriever(code_table_path)
+
     extractor = ClinicalExtractor(
         api_key=settings.anthropic_api_key,
         model=model or DEFAULT_MODEL,
         cost_tracker=cost_tracker,
+        retriever=retriever,
     )
 
     extractions: dict[int, ClinicalExtraction] = {}
@@ -278,11 +289,22 @@ if __name__ == "__main__":
         default=None,
         help="Model to use for extraction (e.g. 'claude-sonnet-4-5-20241022')",
     )
+    parser.add_argument(
+        "--use-rag",
+        action="store_true",
+        help="Enable RAG with ICD-10 codebook for grounded code suggestions",
+    )
     args = parser.parse_args()
+
+    description = args.description
+    if not description and args.use_rag:
+        model_name = (args.model or DEFAULT_MODEL).split("-")[1].capitalize()
+        description = f"{model_name} + ICD-10 RAG"
 
     run_evaluation(
         mimic_path=args.mimic_path,
         n_admissions=args.n_admissions,
-        description=args.description,
+        description=description,
         model=args.model,
+        use_rag=args.use_rag,
     )

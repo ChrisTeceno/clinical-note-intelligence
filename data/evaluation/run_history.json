@@ -64,5 +64,38 @@
     },
     "total_cost_usd": 0.0,
     "duration_seconds": 726.19
+  },
+  {
+    "run_id": "f29a54815f81",
+    "timestamp": "2026-03-31T21:47:07.521158+00:00",
+    "model": "claude-haiku-4-5-20251001",
+    "n_admissions": 30,
+    "description": "Haiku + ICD-10 RAG (TF-IDF top-50)",
+    "diagnoses": {
+      "precision": 0.8627,
+      "recall": 0.6979,
+      "f1": 0.7716,
+      "tp": 358,
+      "fp": 57,
+      "fn": 155
+    },
+    "procedures": {
+      "precision": 0.4914,
+      "recall": 0.6404,
+      "f1": 0.5561,
+      "tp": 57,
+      "fp": 59,
+      "fn": 32
+    },
+    "medications": {
+      "precision": 0.9341,
+      "recall": 0.3516,
+      "f1": 0.5109,
+      "tp": 411,
+      "fp": 29,
+      "fn": 758
+    },
+    "total_cost_usd": 0.4226176,
+    "duration_seconds": 449.59
   }
 ]

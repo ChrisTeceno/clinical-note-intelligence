@@ -3,197 +3,87 @@
   "diagnoses": [
     {
       "name": "Acute embolism and thrombosis of left iliac vein",
-      "icd10_suggestion": "I82.521",
+      "icd10_suggestion": "I82422",
       "confidence": "high",
-      "evidence_span": "1. Acute embolism and thrombosis of left iliac vein"
+      "evidence_span": "Imaging studies revealed acute embolism and thrombosis of the left iliac vein with associated vein compression."
     },
     {
       "name": "Compression of left iliac vein",
-      "icd10_suggestion": "I87.1",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "2. Compression of left iliac vein"
+      "evidence_span": "acute embolism and thrombosis of the left iliac vein with associated vein compression"
     },
     {
       "name": "Iatrogenic vascular injury during circulatory system procedure",
-      "icd10_suggestion": "T81.71XA",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "3. Iatrogenic vascular injury during circulatory system procedure"
-    },
-    {
-      "name": "Complication of surgical procedure",
-      "icd10_suggestion": "T81.9XXA",
-      "confidence": "high",
-      "evidence_span": "4. Complication of surgical procedure"
+      "evidence_span": "during the initial catheter-based procedure, an accidental puncture and laceration of a circulatory system organ occurred, which prompted immediate corrective intervention."
     },
     {
       "name": "Hypothyroidism",
       "icd10_suggestion": "E03.9",
       "confidence": "high",
-      "evidence_span": "Hypothyroidism, depression, dysuria"
+      "evidence_span": "PAST MEDICAL HISTORY: Hypothyroidism"
     },
     {
       "name": "Depression",
       "icd10_suggestion": "F32.9",
       "confidence": "high",
-      "evidence_span": "Hypothyroidism, depression, dysuria"
+      "evidence_span": "PAST MEDICAL HISTORY: Hypothyroidism, depression, dysuria"
     },
     {
       "name": "Dysuria",
       "icd10_suggestion": "R30.0",
       "confidence": "high",
-      "evidence_span": "Hypothyroidism, depression, dysuria"
+      "evidence_span": "PAST MEDICAL HISTORY: Hypothyroidism, depression, dysuria"
     }
   ],
   "procedures": [
     {
       "name": "Percutaneous dilation of left common iliac vein with intraluminal device placement",
-      "cpt_suggestion": "37220",
+      "cpt_suggestion": "37248",
       "confidence": "high",
-      "evidence_span": "Percutaneous dilation of left common iliac vein with intraluminal device placement"
+      "evidence_span": "Initial therapy included dilation of the left common iliac vein with placement of an intraluminal device via percutaneous approach."
     },
     {
       "name": "Percutaneous introduction of thrombolytic agent via peripheral vein",
-      "cpt_suggestion": "37187",
+      "cpt_suggestion": "37211",
       "confidence": "high",
-      "evidence_span": "Percutaneous introduction of thrombolytic agent via peripheral vein"
+      "evidence_span": "Thrombolytic therapy was introduced via peripheral vein access"
     },
     {
       "name": "Percutaneous extirpation of thrombus from left femoral vein",
-      "cpt_suggestion": "37187",
+      "cpt_suggestion": "37184",
       "confidence": "high",
-      "evidence_span": "Percutaneous extirpation of thrombus from left femoral vein"
+      "evidence_span": "extirpation of thrombus was performed from both the left femoral vein and left common iliac vein"
     },
     {
       "name": "Percutaneous insertion of intraluminal device into inferior vena cava",
-      "cpt_suggestion": "37191",
+      "cpt_suggestion": "37248",
       "confidence": "high",
-      "evidence_span": "Percutaneous insertion of intraluminal device into inferior vena cava"
+      "evidence_span": "An intraluminal device was placed into the inferior vena cava percutaneously for additional thrombotic protection."
     },
     {
       "name": "Percutaneous extirpation of matter from left common iliac vein",
-      "cpt_suggestion": "37187",
+      "cpt_suggestion": "37184",
       "confidence": "high",
-      "evidence_span": "Percutaneous extirpation of matter from left common iliac vein (x2)"
+      "evidence_span": "extirpation of thrombus was performed from both the left femoral vein and left common iliac vein (procedure repeated to ensure complete clearance)"
     },
     {
       "name": "Percutaneous dilation of left external iliac vein with intraluminal device placement",
-      "cpt_suggestion": "37220",
+      "cpt_suggestion": "37248",
       "confidence": "high",
-      "evidence_span": "Percutaneous dilation of left external iliac vein with intraluminal device placement"
+      "evidence_span": "Finally, the left external iliac vein was dilated with placement of another intraluminal device."
     }
   ],
   "medications": [
-    {
-      "name": "Warfarin",
-      "dosage": "5 mg",
-      "frequency": "once daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Warfarin 5 mg orally once daily"
-    },
-    {
-      "name": "Apixaban",
-      "dosage": "10 mg",
-      "frequency": "twice daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Apixaban 10 mg orally twice daily"
-    },
-    {
-      "name": "Enoxaparin sodium",
-      "dosage": "90 mg",
-      "frequency": "daily",
-      "route": "subcutaneously",
-      "confidence": "high",
-      "evidence_span": "Enoxaparin sodium 90 mg subcutaneously daily"
-    },
-    {
-      "name": "Levothyroxine sodium",
-      "dosage": "75 mcg",
-      "frequency": "once daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Levothyroxine sodium 75 mcg orally once daily"
-    },
-    {
-      "name": "Duloxetine",
-      "dosage": "120 mg",
-      "frequency": "once daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Duloxetine 120 mg orally once daily"
-    },
-    {
-      "name": "Oxycodone immediate release",
-      "dosage": "5-10 mg",
-      "frequency": "every 4-6 hours as needed",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Oxycodone immediate release 5–10 mg orally every 4–6 hours as needed for pain"
-    },
-    {
-      "name": "Acetaminophen",
-      "dosage": "650 mg",
-      "frequency": "every 6 hours as needed",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Acetaminophen 650 mg orally every 6 hours as needed"
-    },
-    {
-      "name": "Clonazepam",
-      "dosage": "0.5 mg",
-      "frequency": "twice daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Clonazepam 0.5 mg orally twice daily"
-    },
-    {
-      "name": "Ranitidine",
-      "dosage": "150 mg",
-      "frequency": "twice daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Ranitidine 150 mg orally twice daily"
-    },
-    {
-      "name": "Docusate sodium",
-      "dosage": "100 mg",
-      "frequency": "twice daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Docusate sodium 100 mg orally twice daily"
-    },
-    {
-      "name": "Polyethylene glycol",
-      "dosage": "17 g",
-      "frequency": "once daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Polyethylene glycol 17 g orally once daily"
-    },
-    {
-      "name": "Phenazopyridine",
-      "dosage": "100 mg",
-      "frequency": "three times daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Phenazopyridine 100 mg orally three times daily with food"
-    },
-    {
-      "name": "Potassium chloride",
-      "dosage": "20 mEq",
-      "frequency": "once daily",
-      "route": "orally",
-      "confidence": "high",
-      "evidence_span": "Potassium chloride 20 mEq orally once daily"
-    },
     {
       "name": "Heparin sodium",
       "dosage": null,
       "frequency": null,
       "route": "intravenous",
       "confidence": "high",
-      "evidence_span": "intravenous heparin sodium and alteplase infusions"
+      "evidence_span": "Anticoagulation was initiated with intravenous heparin sodium and alteplase infusions"
     },
     {
       "name": "Alteplase",
@@ -201,7 +91,39 @@
       "frequency": null,
       "route": "intravenous",
       "confidence": "high",
-      "evidence_span": "intravenous heparin sodium and alteplase infusions"
+      "evidence_span": "Anticoagulation was initiated with intravenous heparin sodium and alteplase infusions"
+    },
+    {
+      "name": "Enoxaparin sodium",
+      "dosage": "90 mg",
+      "frequency": "daily",
+      "route": "subcutaneous",
+      "confidence": "high",
+      "evidence_span": "The patient also received enoxaparin sodium subcutaneously and was transitioned to warfarin with apixaban"
+    },
+    {
+      "name": "Warfarin",
+      "dosage": "5 mg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "was transitioned to warfarin with apixaban for long-term anticoagulation coverage"
+    },
+    {
+      "name": "Apixaban",
+      "dosage": "10 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "was transitioned to warfarin with apixaban for long-term anticoagulation coverage"
+    },
+    {
+      "name": "Oxycodone immediate release",
+      "dosage": "5–10 mg",
+      "frequency": "every 4–6 hours as needed for pain",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
     },
     {
       "name": "Hydromorphone",
@@ -209,15 +131,71 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "hydromorphone, and fentanyl infusions"
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
     },
     {
       "name": "Fentanyl",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "intravenous",
       "confidence": "high",
-      "evidence_span": "hydromorphone, and fentanyl infusions"
+      "evidence_span": "Pain control was achieved with oxycodone immediate release, hydromorphone, and fentanyl infusions"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "650 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "with acetaminophen used as adjunctive therapy"
+    },
+    {
+      "name": "Clonazepam",
+      "dosage": "0.5 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Clonazepam was administered for anxiety management"
+    },
+    {
+      "name": "Levothyroxine sodium",
+      "dosage": "75 mcg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "The patient received levothyroxine sodium for thyroid replacement at 75 mcg daily"
+    },
+    {
+      "name": "Ranitidine",
+      "dosage": "150 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Gastrointestinal protection was maintained with ranitidine"
+    },
+    {
+      "name": "Polyethylene glycol",
+      "dosage": "17 g",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "bowel function was supported with polyethylene glycol and docusate sodium"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "twice daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "bowel function was supported with polyethylene glycol and docusate sodium"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "20 mEq",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Electrolyte repletion included potassium chloride (both oral and intravenous)"
     },
     {
       "name": "Magnesium sulfate",
@@ -225,7 +203,47 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "magnesium sulfate"
+      "evidence_span": "Electrolyte repletion included potassium chloride (both oral and intravenous) and magnesium sulfate"
+    },
+    {
+      "name": "Phenazopyridine",
+      "dosage": "100 mg",
+      "frequency": "three times daily with food",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Phenazopyridine was given for dysuria symptoms"
+    },
+    {
+      "name": "Duloxetine",
+      "dosage": "120 mg",
+      "frequency": "once daily",
+      "route": "orally",
+      "confidence": "high",
+      "evidence_span": "Duloxetine was continued at 120 mg daily for depression management"
+    },
+    {
+      "name": "Normal saline",
+      "dosage": null,
+      "frequency": null,
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "Appropriate fluid resuscitation was provided with normal saline, lactated Ringer's solution, and dextrose-containing intravenous fluids."
+    },
+    {
+      "name": "Lactated Ringer's solution",
+      "dosage": null,
+      "frequency": null,
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "Appropriate fluid resuscitation was provided with normal saline, lactated Ringer's solution, and dextrose-containing intravenous fluids."
+    },
+    {
+      "name": "Dextrose-containing intravenous fluids",
+      "dosage": null,
+      "frequency": null,
+      "route": "intravenous",
+      "confidence": "high",
+      "evidence_span": "Appropriate fluid resuscitation was provided with normal saline, lactated Ringer's solution, and dextrose-containing intravenous fluids."
     }
   ],
   "chief_complaint": "Left lower extremity swelling and pain",

@@ -2,52 +2,46 @@
   "note_id": "25864431",
   "diagnoses": [
     {
-      "name": "Alcoholic cirrhosis of the liver with ascites",
-      "icd10_suggestion": "K70.31",
+      "name": "Alcoholic cirrhosis of liver with ascites",
+      "icd10_suggestion": "K7031",
       "confidence": "high",
-      "evidence_span": "alcoholic cirrhosis of the liver with ascites"
+      "evidence_span": "complex medical history including alcoholic cirrhosis of the liver with ascites"
     },
     {
       "name": "Alcohol-induced acute pancreatitis without necrosis or infection",
-      "icd10_suggestion": "K85.20",
+      "icd10_suggestion": "K8520",
       "confidence": "high",
       "evidence_span": "alcohol-induced acute pancreatitis without necrosis or infection"
     },
     {
       "name": "Chronic pancreatitis",
-      "icd10_suggestion": "K86.1",
+      "icd10_suggestion": "K860",
       "confidence": "high",
-      "evidence_span": "chronic pancreatitis"
-    },
-    {
-      "name": "Alcohol dependence",
-      "icd10_suggestion": "F10.20",
-      "confidence": "high",
-      "evidence_span": "active alcohol dependence"
+      "evidence_span": "and chronic pancreatitis who presented"
     },
     {
       "name": "Hepatic failure without coma",
-      "icd10_suggestion": "K72.90",
+      "icd10_suggestion": "K7290",
       "confidence": "high",
-      "evidence_span": "elevated bilirubin consistent with hepatic failure without coma"
+      "evidence_span": "Laboratory evaluation revealed markedly elevated transaminases, elevated bilirubin consistent with hepatic failure without coma"
     },
     {
       "name": "Acute kidney failure",
-      "icd10_suggestion": "N17.9",
+      "icd10_suggestion": "N179",
       "confidence": "high",
       "evidence_span": "acute kidney failure superimposed on stage 4 chronic kidney disease"
     },
     {
-      "name": "Stage 4 chronic kidney disease",
-      "icd10_suggestion": "N18.4",
+      "name": "Chronic kidney disease, stage 4",
+      "icd10_suggestion": "N184",
       "confidence": "high",
-      "evidence_span": "stage 4 chronic kidney disease"
+      "evidence_span": "acute kidney failure superimposed on stage 4 chronic kidney disease"
     },
     {
       "name": "Hepatorenal syndrome",
-      "icd10_suggestion": "K76.7",
+      "icd10_suggestion": "K767",
       "confidence": "high",
-      "evidence_span": "evidence of hepatorenal syndrome"
+      "evidence_span": "with evidence of hepatorenal syndrome"
     },
     {
       "name": "Acute posthemorrhagic anemia",
@@ -57,15 +51,15 @@
     },
     {
       "name": "Secondary esophageal varices without bleeding",
-      "icd10_suggestion": "I85.10",
+      "icd10_suggestion": "I8510",
       "confidence": "high",
-      "evidence_span": "secondary esophageal varices without active bleeding"
+      "evidence_span": "secondary esophageal varices without active bleeding on upper endoscopy"
     },
     {
       "name": "Hepatopulmonary syndrome",
-      "icd10_suggestion": "K76.81",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "hepatopulmonary syndrome with dyspnea and hypoxemia"
+      "evidence_span": "he manifested signs of hepatopulmonary syndrome with dyspnea and hypoxemia"
     },
     {
       "name": "Severe protein-calorie malnutrition",
@@ -75,45 +69,57 @@
     },
     {
       "name": "Pneumonia of unspecified organism",
-      "icd10_suggestion": "J18.9",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "pneumonia of unspecified organism"
+      "evidence_span": "The patient developed pneumonia of unspecified organism during hospitalization"
     },
     {
-      "name": "Secondary thrombocytopenia",
-      "icd10_suggestion": "D69.59",
+      "name": "Hypoxemia",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "coagulation defect and secondary thrombocytopenia"
+      "evidence_span": "vital signs showed hypoxemia with oxygen saturation of 88% on room air"
+    },
+    {
+      "name": "Coagulopathy",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "coagulopathy with prolonged PT/INR"
     },
     {
       "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "levothyroxine for hypothyroidism"
     },
     {
       "name": "Gout",
-      "icd10_suggestion": "M10.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "allopurinol for gout"
     },
     {
-      "name": "Nicotine dependence",
-      "icd10_suggestion": "F17.210",
+      "name": "Active alcohol dependence",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Nicotine dependence was addressed during stay"
+      "evidence_span": "The patient has active alcohol dependence"
+    },
+    {
+      "name": "Ascorbic acid deficiency",
+      "icd10_suggestion": "E54",
+      "confidence": "medium",
+      "evidence_span": "vitamin supplementation (thiamine, pyridoxine, folic acid, cyanocobalamin, ascorbic acid, vitamin E, and vitamin D) addressing malnutrition and known deficiencies from chronic liver disease"
     }
   ],
   "procedures": [
     {
       "name": "Diagnostic paracentesis",
-      "cpt_suggestion": "49082",
+      "cpt_suggestion": "49081",
       "confidence": "high",
       "evidence_span": "Diagnostic paracentesis was performed percutaneously on multiple occasions"
     },
     {
       "name": "Therapeutic paracentesis",
-      "cpt_suggestion": "49083",
+      "cpt_suggestion": "49081",
       "confidence": "high",
       "evidence_span": "A second drainage was performed for therapeutic purposes"
     },
@@ -121,34 +127,28 @@
       "name": "Upper endoscopy",
       "cpt_suggestion": "43235",
       "confidence": "high",
-      "evidence_span": "Upper endoscopic inspection of the intestinal tract was completed"
+      "evidence_span": "Upper endoscopic inspection of the intestinal tract was completed, confirming secondary esophageal varices without hemorrhage"
     },
     {
-      "name": "Endoscopic jejunal feeding tube placement",
-      "cpt_suggestion": "44015",
+      "name": "Jejunal feeding tube placement",
+      "cpt_suggestion": "44372",
       "confidence": "high",
       "evidence_span": "a jejunal feeding tube was placed endoscopically via natural opening"
     },
     {
-      "name": "Central line insertion",
+      "name": "Central venous catheter insertion",
       "cpt_suggestion": "36556",
       "confidence": "high",
       "evidence_span": "A central line was inserted into the right atrium percutaneously"
     },
     {
-      "name": "Intermittent dialysis",
+      "name": "Intermittent hemodialysis",
       "cpt_suggestion": "90935",
       "confidence": "high",
       "evidence_span": "Intermittent dialysis (less than 6 hours per day) was initiated"
-    },
-    {
-      "name": "Influenza vaccination",
-      "cpt_suggestion": "90686",
-      "confidence": "high",
-      "evidence_span": "The patient received influenza vaccination"
     }
   ],
   "medications": [],
-  "chief_complaint": "Altered mental status and abdominal pain",
-  "medical_specialty": "Internal Medicine"
+  "chief_complaint": "Altered mental status and abdominal pain.",
+  "medical_specialty": "Hepatology/Internal Medicine"
 }

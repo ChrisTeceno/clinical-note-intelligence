@@ -2,60 +2,97 @@
   "note_id": "22733922",
   "diagnoses": [
     {
-      "name": "Schizophrenia, unspecified",
-      "icd10_suggestion": "F20.9",
-      "confidence": "high",
-      "evidence_span": "patient also carries a longstanding diagnosis of schizophrenia, unspecified"
-    },
-    {
       "name": "Cocaine use, unspecified, uncomplicated",
-      "icd10_suggestion": "F14.10",
+      "icd10_suggestion": "F1990",
       "confidence": "high",
-      "evidence_span": "He admits to active cocaine use, unspecified, uncomplicated"
+      "evidence_span": "The pt reports recent cocaine use"
     },
     {
-      "name": "Alcohol use disorder with unspecified alcohol-induced disorder",
-      "icd10_suggestion": "F10.99",
+      "name": "Alcohol use disorder with alcohol-induced disorder",
+      "icd10_suggestion": "F1099",
       "confidence": "high",
-      "evidence_span": "acknowledges ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder"
+      "evidence_span": "continued alcohol consumption, noting that his mood has been significantly depressed and his thinking increasingly disorganized. He admits to active cocaine use, unspecified, uncomplicated, and acknowledges ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder"
     },
     {
       "name": "Psychoactive substance-induced mood disorder",
-      "icd10_suggestion": "F19.94",
+      "icd10_suggestion": "F1994",
       "confidence": "high",
-      "evidence_span": "psychoactive substance-induced mood disorder has created an acute crisis requiring hospitalization"
+      "evidence_span": "The combination of his underlying psychiatric condition, active substance use—particularly cocaine—and psychoactive substance-induced mood disorder has created an acute crisis"
+    },
+    {
+      "name": "Schizophrenia, unspecified",
+      "icd10_suggestion": "F2089",
+      "confidence": "high",
+      "evidence_span": "The patient also carries a longstanding diagnosis of schizophrenia, unspecified, which has been difficult to manage pharmacologically during periods of substance use"
+    },
+    {
+      "name": "Auditory hallucinations",
+      "icd10_suggestion": "R4401",
+      "confidence": "high",
+      "evidence_span": "He reports feeling hopeless, paranoid, and experiencing auditory hallucinations. The pt appeared disheveled, with poor hygiene and limited eye contact. Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations."
     },
     {
       "name": "HIV disease",
       "icd10_suggestion": "B20",
       "confidence": "high",
-      "evidence_span": "pt has a significant past medical history including HIV disease on prior antiretroviral therapy"
+      "evidence_span": "the pt has a significant past medical history including HIV disease on prior antiretroviral therapy"
     },
     {
-      "name": "Chronic viral hepatitis C without hepatic coma",
+      "name": "Chronic viral hepatitis C",
       "icd10_suggestion": "B18.2",
       "confidence": "high",
       "evidence_span": "chronic viral hepatitis C without hepatic coma"
     },
     {
-      "name": "Traumatic brain injury",
-      "icd10_suggestion": "S06.9",
+      "name": "History of traumatic brain injury",
+      "icd10_suggestion": "S0690XS",
       "confidence": "high",
       "evidence_span": "a remote history of traumatic brain injury"
     },
     {
       "name": "Former nicotine dependence",
-      "icd10_suggestion": "Z87.891",
+      "icd10_suggestion": "F1721",
       "confidence": "high",
       "evidence_span": "former nicotine dependence"
+    },
+    {
+      "name": "Paranoid ideation",
+      "icd10_suggestion": "F2089",
+      "confidence": "high",
+      "evidence_span": "He reports feeling hopeless, paranoid, and experiencing auditory hallucinations. Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations."
     }
   ],
-  "procedures": [],
+  "procedures": [
+    {
+      "name": "Psychiatric evaluation",
+      "cpt_suggestion": "90791",
+      "confidence": "high",
+      "evidence_span": "The pt was initiated on a structured psychiatric evaluation and medical assessment to address his multiple comorbidities"
+    },
+    {
+      "name": "Medical assessment",
+      "cpt_suggestion": "99205",
+      "confidence": "high",
+      "evidence_span": "The pt was initiated on a structured psychiatric evaluation and medical assessment to address his multiple comorbidities"
+    },
+    {
+      "name": "Mental status examination",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations"
+    },
+    {
+      "name": "Laboratory testing including CD4 count and hepatic function panel",
+      "cpt_suggestion": "80053",
+      "confidence": "high",
+      "evidence_span": "Labs on admission showed CD4 count of 285 cells/mm³, indicating need for close HIV monitoring. Hepatic function panel was notable for elevated transaminases consistent with chronic hepatitis C"
+    }
+  ],
   "medications": [
     {
       "name": "Quetiapine fumarate",
       "dosage": "25 mg to 300 mg",
-      "frequency": "for titration flexibility",
+      "frequency": null,
       "route": null,
       "confidence": "high",
       "evidence_span": "He will continue quetiapine fumarate for antipsychotic coverage at doses ranging from 25 mg to 300 mg for titration flexibility"
@@ -82,7 +119,7 @@
       "frequency": "daily",
       "route": null,
       "confidence": "high",
-      "evidence_span": "He is prescribed thiamine 100 mg daily"
+      "evidence_span": "He is prescribed thiamine 100 mg daily and folic acid 1 mg daily for nutritional supplementation given his substance use history"
     },
     {
       "name": "Folic acid",
@@ -90,7 +127,7 @@
       "frequency": "daily",
       "route": null,
       "confidence": "high",
-      "evidence_span": "folic acid 1 mg daily for nutritional supplementation"
+      "evidence_span": "He is prescribed thiamine 100 mg daily and folic acid 1 mg daily for nutritional supplementation given his substance use history"
     },
     {
       "name": "Sulfamethoxazole-trimethoprim DS",
@@ -98,7 +135,7 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis"
+      "evidence_span": "Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis given his CD4 count below 200"
     },
     {
       "name": "Multivitamins",
@@ -106,7 +143,7 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Supportive measures including multivitamins"
+      "evidence_span": "Supportive measures including multivitamins, calcium carbonate supplementation, lidocaine 5% patch, and Bengay cream for musculoskeletal discomfort"
     },
     {
       "name": "Calcium carbonate",
@@ -114,25 +151,25 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "calcium carbonate supplementation"
+      "evidence_span": "Supportive measures including multivitamins, calcium carbonate supplementation, lidocaine 5% patch, and Bengay cream for musculoskeletal discomfort"
     },
     {
       "name": "Lidocaine 5% patch",
       "dosage": "5%",
       "frequency": null,
-      "route": "topical",
+      "route": "patch",
       "confidence": "high",
-      "evidence_span": "lidocaine 5% patch"
+      "evidence_span": "Supportive measures including multivitamins, calcium carbonate supplementation, lidocaine 5% patch, and Bengay cream for musculoskeletal discomfort"
     },
     {
       "name": "Bengay cream",
       "dosage": null,
       "frequency": null,
-      "route": "topical",
+      "route": null,
       "confidence": "high",
-      "evidence_span": "Bengay cream for musculoskeletal discomfort"
+      "evidence_span": "Supportive measures including multivitamins, calcium carbonate supplementation, lidocaine 5% patch, and Bengay cream for musculoskeletal discomfort"
     }
   ],
-  "chief_complaint": "acute psychiatric decompensation in the setting of polysubstance use",
+  "chief_complaint": "Acute psychiatric decompensation in the setting of polysubstance use",
   "medical_specialty": "Psychiatry"
 }

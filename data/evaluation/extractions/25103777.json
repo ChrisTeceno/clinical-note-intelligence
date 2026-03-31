@@ -2,8 +2,32 @@
   "note_id": "25103777",
   "diagnoses": [
     {
-      "name": "MRSA sepsis",
-      "icd10_suggestion": "A41.02",
+      "name": "End-stage renal disease",
+      "icd10_suggestion": "N186",
+      "confidence": "high",
+      "evidence_span": "Patient is a long-term dialysis-dependent individual with end-stage renal disease"
+    },
+    {
+      "name": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "icd10_suggestion": "E1122",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
+    },
+    {
+      "name": "Hypertensive chronic kidney disease with stage 5 CKD",
+      "icd10_suggestion": "I120",
+      "confidence": "high",
+      "evidence_span": "hypertensive chronic kidney disease with stage 5 CKD"
+    },
+    {
+      "name": "Diabetic nephropathy",
+      "icd10_suggestion": "E1121",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy"
+    },
+    {
+      "name": "Sepsis due to Methicillin-resistant Staphylococcus aureus",
+      "icd10_suggestion": "A4102",
       "confidence": "high",
       "evidence_span": "Cultures subsequently grew Methicillin-resistant Staphylococcus aureus (MRSA), confirming sepsis"
     },
@@ -14,133 +38,115 @@
       "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis"
     },
     {
-      "name": "End-stage renal disease",
-      "icd10_suggestion": "N18.6",
+      "name": "Dependence on renal dialysis",
+      "icd10_suggestion": "Z992",
       "confidence": "high",
-      "evidence_span": "Patient is a long-term dialysis-dependent individual with end-stage renal disease"
-    },
-    {
-      "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
-      "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
-    },
-    {
-      "name": "Diabetic nephropathy",
-      "icd10_suggestion": "E11.21",
-      "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
-    },
-    {
-      "name": "Diabetic chronic kidney disease",
-      "icd10_suggestion": "E11.22",
-      "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
-    },
-    {
-      "name": "Hypertensive chronic kidney disease with stage 5 CKD",
-      "icd10_suggestion": "I12.0",
-      "confidence": "high",
-      "evidence_span": "hypertensive chronic kidney disease with stage 5 CKD"
-    },
-    {
-      "name": "Infection and inflammatory reaction due to cardiac infusion device",
-      "icd10_suggestion": "T82.7XXA",
-      "confidence": "high",
-      "evidence_span": "An infection and inflammatory reaction due to the cardiac infusion device was identified"
-    },
-    {
-      "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
-      "confidence": "high",
-      "evidence_span": "Hyperlipidemia"
-    },
-    {
-      "name": "History of nicotine dependence",
-      "icd10_suggestion": "Z87.891",
-      "confidence": "high",
-      "evidence_span": "History of nicotine dependence"
-    },
-    {
-      "name": "Acquired keratosis palmaris et plantaris",
-      "icd10_suggestion": "L85.1",
-      "confidence": "high",
-      "evidence_span": "Acquired keratosis palmaris et plantaris"
-    },
-    {
-      "name": "Acquired absence of right toe(s)",
-      "icd10_suggestion": "Z89.422",
-      "confidence": "high",
-      "evidence_span": "Acquired absence of right toe(s)"
+      "evidence_span": "The patient has been dialyzing for several years due to dependence on renal dialysis"
     },
     {
       "name": "Hyperkalemia",
-      "icd10_suggestion": "E87.5",
+      "icd10_suggestion": "E876",
       "confidence": "high",
       "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
     },
     {
       "name": "Anemia of chronic kidney disease",
-      "icd10_suggestion": "D63.1",
+      "icd10_suggestion": "D631",
       "confidence": "high",
-      "evidence_span": "Anemia of chronic kidney disease was monitored"
+      "evidence_span": "Anemia of chronic kidney disease was monitored; supplementation with calcitriol and vitamin D was continued"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E785",
+      "confidence": "high",
+      "evidence_span": "Hyperlipidemia"
+    },
+    {
+      "name": "History of nicotine dependence",
+      "icd10_suggestion": "F1710",
+      "confidence": "high",
+      "evidence_span": "History of nicotine dependence"
+    },
+    {
+      "name": "Acquired keratosis palmaris et plantaris",
+      "icd10_suggestion": "L851",
+      "confidence": "high",
+      "evidence_span": "Acquired keratosis palmaris et plantaris"
+    },
+    {
+      "name": "Acquired absence of right toe(s)",
+      "icd10_suggestion": "Z905",
+      "confidence": "high",
+      "evidence_span": "Acquired absence of right toe(s)"
+    },
+    {
+      "name": "Constipation",
+      "icd10_suggestion": "K590",
+      "confidence": "high",
+      "evidence_span": "The patient's constipation, a chronic issue exacerbated by medications and dietary restrictions of end-stage renal disease"
+    },
+    {
+      "name": "Acute fluid overload",
+      "icd10_suggestion": "E870",
+      "confidence": "high",
+      "evidence_span": "the patient required intermittent urinary filtration for less than 6 hours per day given the acute fluid overload state superimposed on chronic kidney disease"
+    },
+    {
+      "name": "Infection and inflammatory reaction due to cardiac infusion device",
+      "icd10_suggestion": "T8281XA",
+      "confidence": "high",
+      "evidence_span": "An infection and inflammatory reaction due to the cardiac infusion device was identified"
     }
   ],
   "procedures": [
     {
       "name": "Removal of external cardiac infusion device",
-      "cpt_suggestion": null,
+      "cpt_suggestion": "33238",
       "confidence": "high",
       "evidence_span": "The patient underwent removal of the external cardiac infusion device given the infected implant"
     },
     {
-      "name": "Insertion of tunneled vascular access device into chest subcutaneous tissue via percutaneous approach",
-      "cpt_suggestion": "36558",
+      "name": "Insertion of new tunneled vascular access device",
+      "cpt_suggestion": "36557",
       "confidence": "high",
-      "evidence_span": "Subsequently, a new tunneled vascular access device was inserted into the chest subcutaneous tissue via percutaneous approach"
+      "evidence_span": "a new tunneled vascular access device was inserted into the chest subcutaneous tissue via percutaneous approach"
     },
     {
-      "name": "Percutaneous placement of infusion device into right atrium",
-      "cpt_suggestion": null,
+      "name": "Placement of infusion device into right atrium",
+      "cpt_suggestion": "36555",
       "confidence": "high",
       "evidence_span": "An infusion device was placed into the right atrium percutaneously for continued medication administration"
     },
     {
-      "name": "Removal of old tunneled vascular access device from trunk using external approach",
-      "cpt_suggestion": "36590",
+      "name": "Removal of old tunneled vascular access device from trunk",
+      "cpt_suggestion": "36566",
       "confidence": "high",
       "evidence_span": "The old tunneled vascular access device from the trunk was removed using external approach"
     },
     {
-      "name": "Blood cultures",
-      "cpt_suggestion": "87040",
-      "confidence": "high",
-      "evidence_span": "On evaluation, blood cultures were obtained"
-    },
-    {
       "name": "Transesophageal echocardiography",
-      "cpt_suggestion": "93318",
+      "cpt_suggestion": "93355",
       "confidence": "high",
       "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis"
     },
     {
       "name": "Intermittent urinary filtration",
       "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "During hospitalization, the patient required intermittent urinary filtration for less than 6 hours per day given the acute fluid overload state superimposed on chronic kidney disease"
+      "confidence": "medium",
+      "evidence_span": "the patient required intermittent urinary filtration for less than 6 hours per day"
     },
     {
-      "name": "Influenza vaccine administration",
-      "cpt_suggestion": "90688",
+      "name": "Blood cultures",
+      "cpt_suggestion": "87040",
       "confidence": "high",
-      "evidence_span": "The patient received an influenza vaccine during the hospital stay"
+      "evidence_span": "blood cultures were obtained"
     }
   ],
   "medications": [
     {
       "name": "Vancomycin",
       "dosage": "1000 mg",
-      "frequency": "continue per ID recommendations",
+      "frequency": "per ID recommendations",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Vancomycin 1000 mg IV (continue per ID recommendations)"
@@ -197,7 +203,7 @@
       "name": "Furosemide",
       "dosage": "20 mg PO daily and 40-100 mg IV",
       "frequency": "daily and post-dialysis as needed",
-      "route": "PO and IV",
+      "route": "PO/IV",
       "confidence": "high",
       "evidence_span": "Furosemide 20 mg PO daily and 40-100 mg IV post-dialysis as needed"
     },
@@ -302,7 +308,7 @@
       "dosage": null,
       "frequency": null,
       "route": null,
-      "confidence": "medium",
+      "confidence": "high",
       "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
     },
     {
@@ -310,10 +316,10 @@
       "dosage": null,
       "frequency": null,
       "route": null,
-      "confidence": "medium",
+      "confidence": "high",
       "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
     }
   ],
   "chief_complaint": "Fever and malaise",
-  "medical_specialty": "Internal Medicine"
+  "medical_specialty": "Nephrology"
 }

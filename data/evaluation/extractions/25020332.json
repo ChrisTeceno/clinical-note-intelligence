@@ -3,111 +3,105 @@
   "diagnoses": [
     {
       "name": "Malignant neoplasm of left main bronchus",
-      "icd10_suggestion": "C34.02",
+      "icd10_suggestion": "C3402",
       "confidence": "high",
       "evidence_span": "malignant neoplasms involving both the left main bronchus and right main bronchus"
     },
     {
       "name": "Malignant neoplasm of right main bronchus",
-      "icd10_suggestion": "C34.01",
+      "icd10_suggestion": "C3401",
       "confidence": "high",
       "evidence_span": "malignant neoplasms involving both the left main bronchus and right main bronchus"
     },
     {
-      "name": "Nicotine dependence",
-      "icd10_suggestion": "F17.210",
+      "name": "Hemoptysis",
+      "icd10_suggestion": "R042",
+      "confidence": "high",
+      "evidence_span": "recurrent hemoptysis"
+    },
+    {
+      "name": "Nicotine dependence, cigarettes",
+      "icd10_suggestion": "F17200",
       "confidence": "high",
       "evidence_span": "long-standing history of cigarette use with nicotine dependence"
     },
     {
-      "name": "Major depressive disorder, single episode, unspecified",
-      "icd10_suggestion": "F32.9",
+      "name": "Pulmonary candidiasis",
+      "icd10_suggestion": "B371",
       "confidence": "high",
-      "evidence_span": "major depressive disorder, single episode unspecified"
+      "evidence_span": "opportunistic candidiasis infection"
+    },
+    {
+      "name": "Major depressive disorder, single episode, unspecified",
+      "icd10_suggestion": "F329",
+      "confidence": "high",
+      "evidence_span": "diagnoses of major depressive disorder, single episode unspecified"
     },
     {
       "name": "Anxiety disorder, unspecified",
-      "icd10_suggestion": "F41.9",
+      "icd10_suggestion": "F419",
       "confidence": "high",
       "evidence_span": "anxiety disorder, unspecified"
     },
     {
       "name": "Fibromyalgia",
-      "icd10_suggestion": "M79.3",
+      "icd10_suggestion": "M797",
       "confidence": "high",
-      "evidence_span": "He also suffers from fibromyalgia"
+      "evidence_span": "suffers from fibromyalgia and sciatica"
     },
     {
-      "name": "Sciatica",
-      "icd10_suggestion": "M54.3",
+      "name": "Dependence on supplemental oxygen",
+      "icd10_suggestion": "Z9981",
       "confidence": "high",
-      "evidence_span": "He also suffers from fibromyalgia and sciatica"
-    },
-    {
-      "name": "Candidiasis",
-      "icd10_suggestion": "B37.9",
-      "confidence": "high",
-      "evidence_span": "opportunistic candidiasis infection"
-    },
-    {
-      "name": "Dysphagia",
-      "icd10_suggestion": "R13.10",
-      "confidence": "high",
-      "evidence_span": "His clinical presentation was further complicated by dysphagia"
-    },
-    {
-      "name": "Recurrent pneumonia",
-      "icd10_suggestion": "J18.9",
-      "confidence": "medium",
-      "evidence_span": "he has experienced recurrent episodes of pneumonia historically"
+      "evidence_span": "oxygen saturation maintained in the low-to-mid 90s on supplemental oxygen"
     }
   ],
   "procedures": [
     {
       "name": "Bronchoscopy with inspection of tracheobronchial tree",
-      "cpt_suggestion": "31622",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Under direct visualization via bronchoscopy, inspection of the tracheobronchial tree was performed"
+      "evidence_span": "Under direct visualization via bronchoscopy, inspection of the tracheobronchial tree was performed to assess the extent of disease"
     },
     {
       "name": "Diagnostic excision from left main bronchus",
-      "cpt_suggestion": "31625",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus and right main bronchus"
+      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus and right main bronchus to confirm malignancy"
     },
     {
       "name": "Diagnostic excision from right main bronchus",
-      "cpt_suggestion": "31625",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus and right main bronchus"
+      "evidence_span": "Diagnostic excisions were obtained from both the left main bronchus and right main bronchus to confirm malignancy"
     },
     {
       "name": "Dilation of left main bronchus with intraluminal device placement",
-      "cpt_suggestion": "31631",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "dilation of the left main bronchus with placement of an intraluminal device"
+      "evidence_span": "dilation of the left main bronchus with placement of an intraluminal device to restore airway patency"
     },
     {
-      "name": "Destruction of malignant tissue in left main bronchus",
-      "cpt_suggestion": "31641",
+      "name": "Destruction of malignant tissue of left main bronchus",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "destruction of malignant tissue at this site"
     },
     {
       "name": "Dilation of right main bronchus with intraluminal device placement",
-      "cpt_suggestion": "31631",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "right main bronchus, which also received dilation with intraluminal device placement"
+      "evidence_span": "Similar therapeutic measures were applied to the right main bronchus, which also received dilation with intraluminal device placement"
     },
     {
-      "name": "Endoscopic destruction of diseased tissue in right main bronchus",
-      "cpt_suggestion": "31641",
+      "name": "Destruction of malignant tissue of right main bronchus",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "destruction of diseased tissue via endoscopic approach"
     },
     {
-      "name": "Influenza vaccination",
-      "cpt_suggestion": "90688",
+      "name": "Influenza vaccine",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "The patient received influenza vaccine during this encounter"
     }
@@ -187,7 +181,7 @@
     },
     {
       "name": "Albuterol nebulizer solution",
-      "dosage": "0.083% 1 neb",
+      "dosage": "0.083%, 1 neb",
       "frequency": "q4-6h",
       "route": "IH",
       "confidence": "high",
@@ -197,13 +191,13 @@
       "name": "Ipratropium-albuterol",
       "dosage": "1 neb",
       "frequency": "q6h",
-      "route": "IH",
+      "route": "inhaled",
       "confidence": "high",
       "evidence_span": "Ipratropium-albuterol 1 neb q6h"
     },
     {
       "name": "Lidocaine patch",
-      "dosage": "5% 1 patch",
+      "dosage": "5%, 1 patch",
       "frequency": "daily",
       "route": "TD",
       "confidence": "high",
@@ -229,7 +223,7 @@
       "name": "Miconazole nitrate vaginal cream",
       "dosage": "2%",
       "frequency": "as directed",
-      "route": "vaginal",
+      "route": "topical/vaginal",
       "confidence": "high",
       "evidence_span": "Miconazole nitrate 2% vaginal cream as directed"
     },
@@ -243,5 +237,5 @@
     }
   ],
   "chief_complaint": "Shortness of breath and hemoptysis",
-  "medical_specialty": "Pulmonology/Oncology"
+  "medical_specialty": "Oncology / Pulmonology"
 }

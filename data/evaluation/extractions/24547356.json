@@ -2,22 +2,28 @@
   "note_id": "24547356",
   "diagnoses": [
     {
-      "name": "Closed fracture of the subcondylar process of the mandible with dislocation",
-      "icd10_suggestion": "S02.62XA",
+      "name": "Closed fracture of subcondylar process of mandible",
+      "icd10_suggestion": "S02620A",
       "confidence": "high",
-      "evidence_span": "closed fracture of the subcondylar process of the mandible with associated dislocation of the jaw"
+      "evidence_span": "closed fracture of the subcondylar process of the mandible"
     },
     {
-      "name": "Laceration of intercostal blood vessels",
-      "icd10_suggestion": "S25.509A",
+      "name": "Dislocation of the jaw",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "with associated dislocation of the jaw"
+    },
+    {
+      "name": "Laceration of intercostal blood vessels, left side",
+      "icd10_suggestion": "S25512A",
       "confidence": "high",
       "evidence_span": "laceration of intercostal blood vessels on the left side"
     },
     {
-      "name": "Contusion of other intra-abdominal organs from blunt trauma",
-      "icd10_suggestion": "S36.899A",
+      "name": "Contusion of other intra-abdominal organs",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "contusion of other intra-abdominal organs from blunt trauma"
+      "evidence_span": "patient sustained a contusion of other intra-abdominal organs from blunt trauma"
     },
     {
       "name": "Alcohol abuse, uncomplicated",
@@ -38,43 +44,49 @@
       "evidence_span": "anemia, unspecified"
     },
     {
-      "name": "Assault by unarmed brawl or fight",
-      "icd10_suggestion": "Y04.0XXA",
-      "confidence": "high",
-      "evidence_span": "assault by unarmed brawl or fight"
+      "name": "Facial pain",
+      "icd10_suggestion": null,
+      "confidence": "medium",
+      "evidence_span": "significant pain with swelling to the face"
+    },
+    {
+      "name": "Chest wall pain",
+      "icd10_suggestion": "R0782",
+      "confidence": "medium",
+      "evidence_span": "significant pain with swelling to the face and left chest wall"
     }
   ],
   "procedures": [
     {
       "name": "Open reduction with internal fixation of right mandible subcondylar fracture",
-      "cpt_suggestion": "21470",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "The right mandible was repositioned with internal fixation device using an open approach to address the subcondylar fracture"
+      "evidence_span": "right mandible was repositioned with internal fixation device using an open approach to address the subcondylar fracture"
     },
     {
-      "name": "Percutaneous external fixation of left maxilla and left mandible",
-      "cpt_suggestion": "21454",
+      "name": "External fixation of left maxilla and left mandible via percutaneous approach",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "the left maxilla and left mandible were repositioned with external fixation devices via percutaneous approach"
+      "evidence_span": "left maxilla and left mandible were repositioned with external fixation devices via percutaneous approach"
     },
     {
-      "name": "Open repair of upper artery (intercostal vessels)",
-      "cpt_suggestion": "35226",
+      "name": "Repair of intercostal blood vessels via open approach",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "An upper artery repair was performed via open approach to control hemorrhage from the lacerated intercostal vessels"
+      "evidence_span": "upper artery repair was performed via open approach to control hemorrhage from the lacerated intercostal vessels"
     },
     {
       "name": "Influenza vaccination",
-      "cpt_suggestion": "90688",
+      "cpt_suggestion": "90658",
       "confidence": "high",
-      "evidence_span": "The patient received influenza vaccination during hospitalization"
+      "evidence_span": "patient received influenza vaccination during hospitalization"
     }
   ],
   "medications": [
     {
       "name": "Fentanyl citrate",
       "dosage": null,
-      "frequency": "continuous drip",
+      "frequency": "continuous",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "fentanyl citrate drip"
@@ -82,24 +94,24 @@
     {
       "name": "Propofol",
       "dosage": null,
-      "frequency": "continuous infusion",
+      "frequency": "continuous",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "propofol infusion for sedation"
     },
     {
       "name": "Hydromorphone",
-      "dosage": "1-2 mg",
-      "frequency": "Q2-3H PRN",
+      "dosage": null,
+      "frequency": "PRN",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "hydromorphone via patient-controlled analgesia"
     },
     {
       "name": "Acetaminophen",
-      "dosage": "1000 mg",
-      "frequency": "TID",
-      "route": "PO",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
       "confidence": "high",
       "evidence_span": "IV acetaminophen"
     },
@@ -109,10 +121,10 @@
       "frequency": "BID",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Antibiotic coverage was provided with ampicillin-sulbactam"
+      "evidence_span": "Ampicillin-sulbactam 3 g IV BID for 7 additional days"
     },
     {
-      "name": "Potassium chloride",
+      "name": "IV potassium chloride",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -136,7 +148,7 @@
       "evidence_span": "magnesium sulfate"
     },
     {
-      "name": "Phosphorus",
+      "name": "Phosphorus supplementation",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -152,7 +164,7 @@
       "evidence_span": "aggressive fluid resuscitation with normal saline"
     },
     {
-      "name": "D5 1/2NS",
+      "name": "D5 1/2 NS",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -169,33 +181,33 @@
     },
     {
       "name": "Famotidine",
-      "dosage": "20 mg",
-      "frequency": "daily",
-      "route": "IV",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
       "confidence": "high",
       "evidence_span": "famotidine for ulcer prophylaxis"
     },
     {
       "name": "Ondansetron",
-      "dosage": "4 mg",
-      "frequency": "Q6H PRN",
-      "route": "IV",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
       "confidence": "high",
       "evidence_span": "ondansetron for nausea management"
     },
     {
       "name": "Docusate sodium",
-      "dosage": "100 mg",
-      "frequency": "daily",
-      "route": "PO",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
       "confidence": "high",
       "evidence_span": "docusate sodium"
     },
     {
       "name": "Senna",
-      "dosage": "8.6 mg",
-      "frequency": "daily",
-      "route": "PO",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
       "confidence": "high",
       "evidence_span": "senna"
     },
@@ -203,14 +215,14 @@
       "name": "Milk of magnesia",
       "dosage": null,
       "frequency": null,
-      "route": "PO",
+      "route": null,
       "confidence": "high",
       "evidence_span": "milk of magnesia"
     },
     {
-      "name": "Chlorhexidine gluconate",
-      "dosage": "0.12%",
-      "frequency": "BID",
+      "name": "Chlorhexidine gluconate rinse",
+      "dosage": null,
+      "frequency": null,
       "route": "oral rinse",
       "confidence": "high",
       "evidence_span": "chlorhexidine gluconate rinse"
@@ -219,7 +231,7 @@
       "name": "Pseudoephedrine",
       "dosage": null,
       "frequency": null,
-      "route": "PO",
+      "route": null,
       "confidence": "high",
       "evidence_span": "Pseudoephedrine"
     },
@@ -232,12 +244,12 @@
       "evidence_span": "oxymetazoline nasal spray"
     },
     {
-      "name": "Oxycodone",
-      "dosage": "5-10 mg",
-      "frequency": "Q4-6H PRN",
-      "route": "PO",
+      "name": "Oxycodone liquid",
+      "dosage": null,
+      "frequency": "PRN",
+      "route": "oral",
       "confidence": "high",
-      "evidence_span": "oxycodone liquid"
+      "evidence_span": "oxycodone liquid was available for breakthrough pain control"
     },
     {
       "name": "Diphenhydramine",
@@ -264,6 +276,62 @@
       "evidence_span": "ciprofloxacin ophthalmic solution"
     },
     {
+      "name": "Oxycodone liquid",
+      "dosage": "5-10 mg",
+      "frequency": "Q4-6H PRN",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Oxycodone liquid 5-10 mg PO Q4-6H PRN pain"
+    },
+    {
+      "name": "Hydromorphone",
+      "dosage": "1-2 mg",
+      "frequency": "Q2-3H PRN",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Hydromorphone 1-2 mg IV Q2-3H PRN breakthrough pain"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "1000 mg",
+      "frequency": "TID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 1000 mg PO TID"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Docusate sodium 100 mg PO daily"
+    },
+    {
+      "name": "Senna",
+      "dosage": "8.6 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Senna 8.6 mg PO daily"
+    },
+    {
+      "name": "Famotidine",
+      "dosage": "20 mg",
+      "frequency": "daily",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Famotidine 20 mg IV daily"
+    },
+    {
+      "name": "Ondansetron",
+      "dosage": "4 mg",
+      "frequency": "Q6H PRN",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ondansetron 4 mg IV Q6H PRN nausea"
+    },
+    {
       "name": "Trazodone",
       "dosage": "50 mg",
       "frequency": "QHS PRN",
@@ -272,14 +340,22 @@
       "evidence_span": "Trazodone 50 mg PO QHS PRN sleep"
     },
     {
+      "name": "Chlorhexidine gluconate oral rinse",
+      "dosage": "0.12% 15 mL",
+      "frequency": "BID",
+      "route": "oral rinse",
+      "confidence": "high",
+      "evidence_span": "Chlorhexidine gluconate 0.12% oral rinse 15 mL BID"
+    },
+    {
       "name": "Sodium chloride nasal spray",
-      "dosage": "1-2 sprays each nostril",
+      "dosage": "1-2 sprays",
       "frequency": "BID",
       "route": "nasal",
       "confidence": "high",
       "evidence_span": "Sodium chloride nasal spray 1-2 sprays each nostril BID"
     }
   ],
-  "chief_complaint": "Facial trauma and left-sided chest injury sustained during altercation",
+  "chief_complaint": "Facial trauma and left-sided chest injury sustained during altercation.",
   "medical_specialty": "Trauma Surgery / Oral and Maxillofacial Surgery"
 }

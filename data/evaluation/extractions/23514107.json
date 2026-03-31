@@ -2,82 +2,108 @@
   "note_id": "23514107",
   "diagnoses": [
     {
-      "name": "Intestinal adhesions with obstruction (postinfection)",
-      "icd10_suggestion": "K56.50",
-      "confidence": "high",
-      "evidence_span": "Intestinal adhesions with obstruction (postinfection)"
-    },
-    {
       "name": "Alcoholic cirrhosis of liver with ascites",
-      "icd10_suggestion": "K70.31",
+      "icd10_suggestion": "K7031",
       "confidence": "high",
-      "evidence_span": "Alcoholic cirrhosis of liver with ascites"
+      "evidence_span": "The patient has a significant medical history including alcoholic cirrhosis of the liver with ascites"
     },
     {
       "name": "Secondary esophageal varices without bleeding",
-      "icd10_suggestion": "I85.10",
+      "icd10_suggestion": "I8510",
       "confidence": "high",
-      "evidence_span": "Secondary esophageal varices without bleeding"
+      "evidence_span": "He has documented secondary esophageal varices without active bleeding but at risk for hemorrhage"
     },
     {
       "name": "Portal hypertension",
-      "icd10_suggestion": "K76.6",
+      "icd10_suggestion": "K766",
       "confidence": "high",
-      "evidence_span": "Portal hypertension"
-    },
-    {
-      "name": "Nicotine dependence, cigarettes",
-      "icd10_suggestion": "F17.210",
-      "confidence": "high",
-      "evidence_span": "Nicotine dependence, cigarettes"
-    },
-    {
-      "name": "Body mass index 23.0-23.9, adult",
-      "icd10_suggestion": "Z68.23",
-      "confidence": "high",
-      "evidence_span": "Body mass index 23.0-23.9, adult"
-    },
-    {
-      "name": "Hepatitis C without hepatic coma",
-      "icd10_suggestion": "B18.2",
-      "confidence": "high",
-      "evidence_span": "Hepatitis C without hepatic coma"
+      "evidence_span": "The patient carries several chronic diagnoses including alcoholic cirrhosis with associated portal hypertension"
     },
     {
       "name": "Portal vein thrombosis",
       "icd10_suggestion": "I81",
       "confidence": "high",
-      "evidence_span": "Portal vein thrombosis"
+      "evidence_span": "Portal vein thrombosis was identified on prior imaging"
+    },
+    {
+      "name": "Hepatitis C without hepatic coma",
+      "icd10_suggestion": "B1920",
+      "confidence": "high",
+      "evidence_span": "Additionally, the patient has known hepatitis C infection without hepatic coma"
     },
     {
       "name": "Severe protein-calorie malnutrition",
       "icd10_suggestion": "E43",
       "confidence": "high",
-      "evidence_span": "Severe protein-calorie malnutrition"
+      "evidence_span": "the patient demonstrates signs of severe protein-calorie malnutrition given his liver disease and poor intake"
+    },
+    {
+      "name": "Intestinal adhesions with obstruction",
+      "icd10_suggestion": "K5681",
+      "confidence": "high",
+      "evidence_span": "Imaging and clinical presentation were consistent with intestinal obstruction secondary to adhesive bands, likely from prior infection"
+    },
+    {
+      "name": "Nicotine dependence, cigarettes",
+      "icd10_suggestion": "F1720",
+      "confidence": "high",
+      "evidence_span": "He reports long-standing nicotine dependence with cigarette use"
+    },
+    {
+      "name": "Ascites",
+      "icd10_suggestion": "R188",
+      "confidence": "high",
+      "evidence_span": "which complicated his clinical course during this admission"
     }
   ],
   "procedures": [
     {
-      "name": "IV fluid administration",
-      "cpt_suggestion": "96365",
+      "name": "Imaging (to evaluate bowel obstruction)",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered"
-    },
-    {
-      "name": "Electrolyte repletion",
-      "cpt_suggestion": "96365",
-      "confidence": "high",
-      "evidence_span": "Electrolyte repletion was provided with potassium chloride 40 mEq and magnesium sulfate (both 2 gm and 4 gm doses) via IV route"
+      "evidence_span": "Imaging and clinical presentation were consistent with intestinal obstruction secondary to adhesive bands"
     }
   ],
   "medications": [
     {
-      "name": "Furosemide",
-      "dosage": "20 mg",
-      "frequency": "daily",
+      "name": "Sodium chloride (isotonic/0.9%)",
+      "dosage": null,
+      "frequency": null,
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Furosemide 20 mg IV daily"
+      "evidence_span": "IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered"
+    },
+    {
+      "name": "Dextrose 5%",
+      "dosage": "5%",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered"
+    },
+    {
+      "name": "Potassium chloride",
+      "dosage": "40 mEq",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Electrolyte repletion was provided with potassium chloride 40 mEq"
+    },
+    {
+      "name": "Magnesium sulfate",
+      "dosage": "2 gm and 4 gm",
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "and magnesium sulfate (both 2 gm and 4 gm doses) via IV route"
+    },
+    {
+      "name": "Heparin",
+      "dosage": "5000 units",
+      "frequency": "daily",
+      "route": "subcutaneous",
+      "confidence": "high",
+      "evidence_span": "Heparin 5000 units was given subcutaneously for thromboembolism prophylaxis"
     },
     {
       "name": "Pantoprazole",
@@ -85,7 +111,7 @@
       "frequency": "daily",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Pantoprazole 40 mg IV daily"
+      "evidence_span": "Gastrointestinal support included pantoprazole and famotidine for acid suppression"
     },
     {
       "name": "Famotidine",
@@ -93,7 +119,7 @@
       "frequency": "BID",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Famotidine 20 mg IV BID"
+      "evidence_span": "Gastrointestinal support included pantoprazole and famotidine for acid suppression"
     },
     {
       "name": "Ondansetron",
@@ -101,15 +127,31 @@
       "frequency": "as needed for nausea",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Ondansetron 4 mg IV as needed for nausea"
+      "evidence_span": "ondansetron for antiemesis"
+    },
+    {
+      "name": "Bisacodyl",
+      "dosage": "10 mg",
+      "frequency": "daily",
+      "route": "PO/PR",
+      "confidence": "high",
+      "evidence_span": "bisacodyl (both 10 mg PO and 10 mg PR) for bowel motility"
+    },
+    {
+      "name": "Furosemide",
+      "dosage": "20 mg",
+      "frequency": "daily",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Diuresis was managed with furosemide 20 mg IV given the ascites"
     },
     {
       "name": "Oxycodone",
       "dosage": "10 mg",
       "frequency": "every 6 hours as needed for pain",
-      "route": "PO",
+      "route": "PO/NG",
       "confidence": "high",
-      "evidence_span": "Oxycodone 10 mg PO every 6 hours as needed for pain"
+      "evidence_span": "Pain control was achieved with oxycodone 10 mg PO/NG"
     },
     {
       "name": "Hydromorphone",
@@ -117,57 +159,9 @@
       "frequency": "every 4-6 hours as needed",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Hydromorphone 0.25-0.5 mg IV every 4-6 hours as needed"
-    },
-    {
-      "name": "Bisacodyl",
-      "dosage": "10 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "Bisacodyl 10 mg PO daily"
-    },
-    {
-      "name": "Potassium chloride",
-      "dosage": null,
-      "frequency": "as directed",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Potassium chloride supplementation as directed"
-    },
-    {
-      "name": "Magnesium sulfate",
-      "dosage": null,
-      "frequency": "as tolerated",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Magnesium sulfate as tolerated"
-    },
-    {
-      "name": "Heparin",
-      "dosage": "5000 units",
-      "frequency": "daily",
-      "route": "SC",
-      "confidence": "high",
-      "evidence_span": "Heparin 5000 units SC daily"
-    },
-    {
-      "name": "Sodium chloride",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered"
-    },
-    {
-      "name": "5% dextrose",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "IV fluids including iso-osmotic sodium chloride and 5% dextrose solutions were administered"
+      "evidence_span": "and hydromorphone 0.25-0.5 mg IV titrated as needed for comfort"
     }
   ],
   "chief_complaint": "Abdominal pain and nausea",
-  "medical_specialty": "Gastroenterology"
+  "medical_specialty": "Gastroenterology/Hepatology"
 }

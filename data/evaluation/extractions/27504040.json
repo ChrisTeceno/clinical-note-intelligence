@@ -2,86 +2,86 @@
   "note_id": "27504040",
   "diagnoses": [
     {
-      "name": "Hypertensive chronic kidney disease with stage 5 CKD/ESRD",
-      "icd10_suggestion": "I12.0",
+      "name": "Hypertensive chronic kidney disease with stage 5 CKD",
+      "icd10_suggestion": "I120",
       "confidence": "high",
-      "evidence_span": "Hypertensive chronic kidney disease with stage 5 CKD/ESRD"
+      "evidence_span": "hypertensive chronic kidney disease with stage 5 CKD"
     },
     {
-      "name": "End stage renal disease on hemodialysis",
-      "icd10_suggestion": "N18.6",
+      "name": "End stage renal disease",
+      "icd10_suggestion": "N186",
       "confidence": "high",
-      "evidence_span": "End stage renal disease on hemodialysis"
+      "evidence_span": "end stage renal disease requiring hemodialysis"
     },
     {
-      "name": "Alcoholic cirrhosis",
-      "icd10_suggestion": "K70.30",
+      "name": "Alcoholic cirrhosis of the liver without ascites",
+      "icd10_suggestion": "K7030",
       "confidence": "high",
-      "evidence_span": "Alcoholic cirrhosis and alcoholic hepatitis"
+      "evidence_span": "alcoholic cirrhosis of the liver and concurrent alcoholic hepatitis, both currently without ascites"
     },
     {
-      "name": "Alcoholic hepatitis",
-      "icd10_suggestion": "K70.10",
+      "name": "Alcoholic hepatitis without ascites",
+      "icd10_suggestion": "K7010",
       "confidence": "high",
-      "evidence_span": "Alcoholic cirrhosis and alcoholic hepatitis"
+      "evidence_span": "alcoholic cirrhosis of the liver and concurrent alcoholic hepatitis, both currently without ascites"
     },
     {
       "name": "Hepatorenal syndrome",
-      "icd10_suggestion": "K76.7",
+      "icd10_suggestion": "K767",
       "confidence": "high",
-      "evidence_span": "Hepatorenal syndrome"
+      "evidence_span": "the development of hepatorenal syndrome, which contributed substantially to his acute clinical deterioration"
     },
     {
       "name": "Hepatic encephalopathy",
-      "icd10_suggestion": "K72.90",
+      "icd10_suggestion": "K7682",
       "confidence": "high",
-      "evidence_span": "Hepatic encephalopathy"
+      "evidence_span": "Ammonia level was 128 μmol/L, supporting hepatic encephalopathy. Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
     },
     {
       "name": "Anemia of chronic kidney disease",
-      "icd10_suggestion": "D63.1",
+      "icd10_suggestion": "D631",
       "confidence": "high",
-      "evidence_span": "Anemia of chronic kidney disease"
+      "evidence_span": "Anemia secondary to chronic kidney disease. Hemoglobin was 7.8 g/dL, consistent with anemia of chronic kidney disease"
     },
     {
       "name": "Thrombocytopenia",
-      "icd10_suggestion": "D69.6",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Thrombocytopenia"
+      "evidence_span": "Platelet count was 89,000/μL. Thrombocytopenia"
     },
     {
       "name": "Asthma",
-      "icd10_suggestion": "J45.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "Asthma, uncomplicated"
     },
     {
       "name": "Gout",
-      "icd10_suggestion": "M10.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "Gout"
     },
     {
       "name": "Chronic pancreatitis",
-      "icd10_suggestion": "K86.1",
+      "icd10_suggestion": "K860",
       "confidence": "high",
       "evidence_span": "Chronic pancreatitis"
     },
     {
       "name": "History of venous thromboembolism",
-      "icd10_suggestion": "Z87.891",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "History of venous thromboembolism"
     },
     {
       "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "Hypothyroidism"
     },
     {
       "name": "Nicotine dependence",
-      "icd10_suggestion": "F17.210",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "Nicotine dependence (active smoker)"
     }
@@ -91,7 +91,13 @@
       "name": "Hemodialysis",
       "cpt_suggestion": "90935",
       "confidence": "high",
-      "evidence_span": "The patient received emergent hemodialysis on hospital day one"
+      "evidence_span": "end stage renal disease requiring hemodialysis. The patient received emergent hemodialysis on hospital day one"
+    },
+    {
+      "name": "Paracentesis",
+      "cpt_suggestion": "49082",
+      "confidence": "medium",
+      "evidence_span": "ascitic fluid analysis (paracentesis deferred given absence of clinical ascites)"
     }
   ],
   "medications": [
@@ -104,7 +110,7 @@
       "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
     },
     {
-      "name": "Rifaximin",
+      "name": "Rifaxomicin",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -113,5 +119,5 @@
     }
   ],
   "chief_complaint": "Altered mental status and acute decompensation",
-  "medical_specialty": "Internal Medicine"
+  "medical_specialty": "Internal Medicine / Hepatology / Nephrology"
 }

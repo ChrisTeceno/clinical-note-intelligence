@@ -9,25 +9,25 @@
     },
     {
       "name": "Hyponatremia with hypo-osmolality",
-      "icd10_suggestion": "E87.1",
+      "icd10_suggestion": "E871",
       "confidence": "high",
       "evidence_span": "Hyponatremia with hypo-osmolality — Severe hyponatremia (118 mEq/L) contributing significantly to altered mental status. Likely SIADH or euvolemic hyponatremia given clinical presentation."
     },
     {
       "name": "Type 2 diabetes mellitus with hyperglycemia",
-      "icd10_suggestion": "E11.65",
+      "icd10_suggestion": "E1165",
       "confidence": "high",
       "evidence_span": "Type 2 diabetes mellitus with hyperglycemia — Poorly controlled glucose at 312 mg/dL on admission; patient on insulin therapy with suboptimal glycemic control."
     },
     {
-      "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "name": "Hypothyroidism, unspecified",
+      "icd10_suggestion": "E039",
       "confidence": "high",
       "evidence_span": "Hypothyroidism — Stable; TSH within normal range on current levothyroxine dosing."
     },
     {
-      "name": "Sarcoidosis",
-      "icd10_suggestion": "D86.9",
+      "name": "Sarcoidosis, unspecified",
+      "icd10_suggestion": "D869",
       "confidence": "high",
       "evidence_span": "Sarcoidosis — Chronic condition, appears stable without acute pulmonary decompensation."
     },
@@ -44,10 +44,10 @@
       "evidence_span": "Epilepsy, unspecified, not intractable — No seizure activity documented during admission; patient remained seizure-free."
     },
     {
-      "name": "Long-term insulin use",
-      "icd10_suggestion": "Z79.4",
+      "name": "Altered mental status",
+      "icd10_suggestion": "R4182",
       "confidence": "high",
-      "evidence_span": "Long-term insulin use — Patient insulin-dependent for glycemic management."
+      "evidence_span": "Patient is a [age]-year-old individual admitted with acute onset of altered mental status and fatigue."
     }
   ],
   "procedures": [
@@ -55,30 +55,30 @@
       "name": "IV hydration with sodium repletion",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia"
+      "evidence_span": "During hospitalization, the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia."
     },
     {
-      "name": "Serial sodium level monitoring",
+      "name": "Serial sodium monitoring",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Sodium levels were monitored serially to avoid overcorrection"
+      "evidence_span": "Sodium levels were monitored serially to avoid overcorrection."
     },
     {
       "name": "Insulin dosing optimization",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Insulin dosing was optimized with both basal and bolus adjustments to better control hyperglycemia"
+      "evidence_span": "Insulin dosing was optimized with both basal and bolus adjustments to better control hyperglycemia."
     },
     {
       "name": "Chest X-ray",
-      "cpt_suggestion": "71020",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies"
+      "evidence_span": "Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies."
     }
   ],
   "medications": [
     {
-      "name": "insulin",
+      "name": "Insulin",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -86,7 +86,7 @@
       "evidence_span": "type 2 diabetes mellitus for which he has been on insulin therapy"
     },
     {
-      "name": "levothyroxine",
+      "name": "Levothyroxine",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -94,7 +94,7 @@
       "evidence_span": "hypothyroidism managed with levothyroxine"
     },
     {
-      "name": "antiepileptic medications",
+      "name": "Antiepileptic medications",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -102,6 +102,6 @@
       "evidence_span": "epilepsy which has been controlled on current antiepileptic regimen"
     }
   ],
-  "chief_complaint": "acute onset of altered mental status and fatigue",
-  "medical_specialty": "Internal Medicine"
+  "chief_complaint": "Acute onset of altered mental status and fatigue",
+  "medical_specialty": "Internal Medicine/Hospitalist"
 }

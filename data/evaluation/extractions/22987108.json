@@ -2,100 +2,100 @@
   "note_id": "22987108",
   "diagnoses": [
     {
-      "name": "Other cirrhosis of the liver secondary to nonalcoholic steatohepatitis (NASH)",
-      "icd10_suggestion": "K74.69",
+      "name": "Other cirrhosis of liver",
+      "icd10_suggestion": "K7460",
       "confidence": "high",
-      "evidence_span": "complex medical history including other cirrhosis of the liver secondary to nonalcoholic steatohepatitis (NASH)"
+      "evidence_span": "complex medical history including other cirrhosis of the liver secondary to nonalcoholic steatohepatitis (NASH), portal hypertension"
+    },
+    {
+      "name": "Nonalcoholic steatohepatitis (NASH)",
+      "icd10_suggestion": "K7581",
+      "confidence": "high",
+      "evidence_span": "other cirrhosis of the liver secondary to nonalcoholic steatohepatitis (NASH)"
     },
     {
       "name": "Portal hypertension",
-      "icd10_suggestion": "K76.6",
+      "icd10_suggestion": "K7611",
       "confidence": "high",
       "evidence_span": "portal hypertension"
     },
     {
-      "name": "Hypertensive chronic kidney disease",
-      "icd10_suggestion": "I12.9",
+      "name": "Hypertensive chronic kidney disease with stage 3 CKD",
+      "icd10_suggestion": "I129",
       "confidence": "high",
-      "evidence_span": "hypertensive chronic kidney disease"
+      "evidence_span": "hypertensive chronic kidney disease who presented via emergency department"
     },
     {
-      "name": "Atherosclerotic heart disease of the native coronary artery with angina pectoris",
-      "icd10_suggestion": "I25.119",
+      "name": "Atherosclerotic heart disease of native coronary artery with angina pectoris",
+      "icd10_suggestion": "I25119",
       "confidence": "high",
       "evidence_span": "atherosclerotic heart disease of the native coronary artery with angina pectoris"
     },
     {
-      "name": "Acute postprocedural shock complicated by postprocedural hemorrhage of a circulatory system organ",
-      "icd10_suggestion": "T81.19XA",
+      "name": "Acute postprocedural shock",
+      "icd10_suggestion": "R571",
       "confidence": "high",
-      "evidence_span": "acute postprocedural shock complicated by postprocedural hemorrhage of a circulatory system organ"
+      "evidence_span": "Shortly after the procedure, he developed acute postprocedural shock complicated by postprocedural hemorrhage of a circulatory system organ"
     },
     {
       "name": "Hemoperitoneum",
-      "icd10_suggestion": "K66.1",
+      "icd10_suggestion": "K6591",
       "confidence": "high",
-      "evidence_span": "found to have hemoperitoneum"
+      "evidence_span": "patient was found to have hemoperitoneum, peritonitis, and acute and subacute hepatic failure"
     },
     {
       "name": "Peritonitis",
-      "icd10_suggestion": "K65.9",
+      "icd10_suggestion": "K6590",
       "confidence": "high",
-      "evidence_span": "peritonitis"
+      "evidence_span": "patient was found to have hemoperitoneum, peritonitis, and acute and subacute hepatic failure"
     },
     {
       "name": "Acute and subacute hepatic failure with coma",
-      "icd10_suggestion": "K72.00",
+      "icd10_suggestion": "K7201",
       "confidence": "high",
-      "evidence_span": "acute and subacute hepatic failure with coma"
+      "evidence_span": "patient was found to have hemoperitoneum, peritonitis, and acute and subacute hepatic failure with coma"
     },
     {
       "name": "Acute kidney failure",
-      "icd10_suggestion": "N17.9",
+      "icd10_suggestion": "N179",
       "confidence": "high",
-      "evidence_span": "acute kidney failure on top of his baseline moderate chronic kidney disease stage 3"
-    },
-    {
-      "name": "Chronic kidney disease stage 3",
-      "icd10_suggestion": "N18.3",
-      "confidence": "high",
-      "evidence_span": "moderate chronic kidney disease stage 3"
+      "evidence_span": "Laboratory evaluation revealed acute kidney failure on top of his baseline moderate chronic kidney disease stage 3"
     },
     {
       "name": "Hepatorenal syndrome",
-      "icd10_suggestion": "K76.7",
+      "icd10_suggestion": "K7671",
       "confidence": "high",
-      "evidence_span": "hepatorenal syndrome"
+      "evidence_span": "Laboratory evaluation revealed acute kidney failure on top of his baseline moderate chronic kidney disease stage 3, hepatorenal syndrome"
     },
     {
       "name": "Acquired coagulation factor deficiency",
-      "icd10_suggestion": "D68.4",
+      "icd10_suggestion": "D6859",
       "confidence": "high",
-      "evidence_span": "acquired coagulation factor deficiency"
+      "evidence_span": "Laboratory evaluation revealed acute kidney failure on top of his baseline moderate chronic kidney disease stage 3, hepatorenal syndrome, and acquired coagulation factor deficiency"
     },
     {
-      "name": "Sepsis",
-      "icd10_suggestion": "A41.9",
+      "name": "Sepsis due to E. coli",
+      "icd10_suggestion": "A41.51",
       "confidence": "high",
-      "evidence_span": "clinical picture was consistent with sepsis progressing to severe sepsis with septic shock"
+      "evidence_span": "Blood cultures subsequently grew E. coli, and the clinical picture was consistent with sepsis"
     },
     {
       "name": "Severe sepsis with septic shock",
-      "icd10_suggestion": "R65.21",
+      "icd10_suggestion": "R6521",
       "confidence": "high",
-      "evidence_span": "sepsis progressing to severe sepsis with septic shock"
+      "evidence_span": "the clinical picture was consistent with sepsis progressing to severe sepsis with septic shock"
     },
     {
       "name": "Ventilator-associated pneumonia",
-      "icd10_suggestion": "J95.851",
+      "icd10_suggestion": "J1596",
       "confidence": "high",
-      "evidence_span": "ventilator-associated pneumonia"
+      "evidence_span": "he developed secondary infections including ventilator-associated pneumonia"
     },
     {
       "name": "Central venous catheter infection with methicillin-susceptible Staphylococcus aureus",
-      "icd10_suggestion": "T80.211A",
+      "icd10_suggestion": "T8061XA",
       "confidence": "high",
-      "evidence_span": "unspecified central venous catheter infection with methicillin-susceptible Staphylococcus aureus"
+      "evidence_span": "he developed secondary infections including ventilator-associated pneumonia and an unspecified central venous catheter infection with methicillin-susceptible Staphylococcus aureus"
     },
     {
       "name": "Urinary tract infection",
@@ -105,33 +105,33 @@
     },
     {
       "name": "Acute respiratory failure",
-      "icd10_suggestion": "J96.00",
+      "icd10_suggestion": "J9600",
       "confidence": "high",
-      "evidence_span": "acute respiratory failure requiring intubation"
+      "evidence_span": "The patient's acute presentation was further complicated by acute respiratory failure requiring intubation"
     },
     {
       "name": "Ileus",
-      "icd10_suggestion": "K56.7",
+      "icd10_suggestion": "K5689",
       "confidence": "high",
-      "evidence_span": "ileus"
+      "evidence_span": "The patient's acute presentation was further complicated by acute respiratory failure requiring intubation, ileus, atelectasis"
     },
     {
       "name": "Atelectasis",
-      "icd10_suggestion": "J98.11",
+      "icd10_suggestion": "J9833",
       "confidence": "high",
-      "evidence_span": "atelectasis"
+      "evidence_span": "The patient's acute presentation was further complicated by acute respiratory failure requiring intubation, ileus, atelectasis"
     },
     {
       "name": "Hypovolemic shock",
-      "icd10_suggestion": "R57.1",
+      "icd10_suggestion": "R571",
       "confidence": "high",
-      "evidence_span": "hypovolemic shock"
+      "evidence_span": "The patient's acute presentation was further complicated by acute respiratory failure requiring intubation, ileus, atelectasis, hypovolemic shock"
     },
     {
       "name": "Severe protein-calorie malnutrition",
       "icd10_suggestion": "E43",
       "confidence": "high",
-      "evidence_span": "severe protein-calorie malnutrition"
+      "evidence_span": "The patient's acute presentation was further complicated by acute respiratory failure requiring intubation, ileus, atelectasis, hypovolemic shock, and severe protein-calorie malnutrition"
     },
     {
       "name": "Type 2 diabetes mellitus",
@@ -140,123 +140,135 @@
       "evidence_span": "Type 2 diabetes mellitus (on insulin)"
     },
     {
-      "name": "Coronary artery disease",
-      "icd10_suggestion": "I25.10",
+      "name": "Atrial fibrillation",
+      "icd10_suggestion": "I4820",
       "confidence": "high",
-      "evidence_span": "Coronary artery disease with prior angioplasty and stent placement"
+      "evidence_span": "Atrial fibrillation and atrial flutter"
     },
     {
-      "name": "Angina pectoris",
-      "icd10_suggestion": "I20.9",
-      "confidence": "high",
-      "evidence_span": "Angina pectoris"
-    },
-    {
-      "name": "Atrial fibrillation and atrial flutter",
-      "icd10_suggestion": "I48.92",
+      "name": "Atrial flutter",
+      "icd10_suggestion": "I4892",
       "confidence": "high",
       "evidence_span": "Atrial fibrillation and atrial flutter"
     },
     {
       "name": "Anemia in chronic disease",
-      "icd10_suggestion": "D63.1",
+      "icd10_suggestion": "D631",
       "confidence": "high",
       "evidence_span": "Anemia in chronic disease"
     },
     {
       "name": "Adult failure to thrive",
-      "icd10_suggestion": "R62.7",
+      "icd10_suggestion": "R6189",
       "confidence": "high",
       "evidence_span": "Adult failure to thrive"
+    },
+    {
+      "name": "Postprocedural hemorrhage of circulatory system organ",
+      "icd10_suggestion": "I978",
+      "confidence": "high",
+      "evidence_span": "he developed acute postprocedural shock complicated by postprocedural hemorrhage of a circulatory system organ"
+    },
+    {
+      "name": "Altered mental status",
+      "icd10_suggestion": "R409",
+      "confidence": "high",
+      "evidence_span": "presented via emergency department with altered mental status, severe abdominal distention, and hemodynamic instability"
+    },
+    {
+      "name": "Hyponatremia",
+      "icd10_suggestion": "E8710",
+      "confidence": "medium",
+      "evidence_span": "Electrolyte abnormalities including hypo-osmolality and hyponatremia were corrected"
     }
   ],
   "procedures": [
     {
       "name": "Cardiac catheterization with coronary angiography",
-      "cpt_suggestion": "93458",
+      "cpt_suggestion": "93000",
       "confidence": "high",
-      "evidence_span": "undergone recent cardiac catheterization with coronary angiography"
+      "evidence_span": "had undergone recent cardiac catheterization with coronary angiography"
     },
     {
-      "name": "Percutaneous central venous catheter placement in the right atrium",
-      "cpt_suggestion": "36556",
+      "name": "Percutaneous central venous catheter placement in right atrium",
+      "cpt_suggestion": "36555",
       "confidence": "high",
       "evidence_span": "A percutaneous central venous catheter was placed in the right atrium"
     },
     {
       "name": "Superior vena cava infusion device insertion",
-      "cpt_suggestion": "36560",
+      "cpt_suggestion": "36010",
       "confidence": "high",
-      "evidence_span": "superior vena cava infusion device was inserted"
+      "evidence_span": "a superior vena cava infusion device was inserted for hemodynamic support"
     },
     {
       "name": "Endotracheal intubation",
       "cpt_suggestion": "31500",
       "confidence": "high",
-      "evidence_span": "intubated via endotracheal airway placement"
+      "evidence_span": "The patient was intubated via endotracheal airway placement for acute respiratory failure"
     },
     {
-      "name": "Diagnostic paracentesis of the peritoneal cavity",
+      "name": "Diagnostic paracentesis",
       "cpt_suggestion": "49082",
       "confidence": "high",
-      "evidence_span": "Initial diagnostic paracentesis of the peritoneal cavity"
+      "evidence_span": "Initial diagnostic paracentesis of the peritoneal cavity revealed hemoperitoneum"
     },
     {
       "name": "Therapeutic peritoneal drainage",
-      "cpt_suggestion": "49083",
+      "cpt_suggestion": "49406",
       "confidence": "high",
-      "evidence_span": "multiple therapeutic peritoneal drainages were performed percutaneously"
+      "evidence_span": "subsequently, multiple therapeutic peritoneal drainages were performed percutaneously"
     },
     {
-      "name": "Coronary fluoroscopy of multiple coronary arteries and right heart",
-      "cpt_suggestion": "93454",
+      "name": "Coronary fluoroscopy with contrast",
+      "cpt_suggestion": "93563",
       "confidence": "high",
-      "evidence_span": "Coronary fluoroscopy of both multiple coronary arteries and the right heart was performed using contrast"
+      "evidence_span": "Coronary fluoroscopy of both multiple coronary arteries and the right heart was performed using contrast for further evaluation"
     },
     {
-      "name": "Occlusion of the right vertebral artery with intraluminal devices",
-      "cpt_suggestion": "37241",
+      "name": "Occlusion of right vertebral artery with intraluminal devices",
+      "cpt_suggestion": "37204",
       "confidence": "high",
-      "evidence_span": "occlusion of the right vertebral artery and right femoral artery with intraluminal devices via percutaneous approach"
+      "evidence_span": "Vascular intervention was required, including occlusion of the right vertebral artery and right femoral artery with intraluminal devices via percutaneous approach"
     },
     {
-      "name": "Occlusion of the right femoral artery with intraluminal devices",
-      "cpt_suggestion": "37224",
+      "name": "Occlusion of right femoral artery with intraluminal devices",
+      "cpt_suggestion": "37204",
       "confidence": "high",
-      "evidence_span": "occlusion of the right vertebral artery and right femoral artery with intraluminal devices via percutaneous approach"
+      "evidence_span": "Vascular intervention was required, including occlusion of the right vertebral artery and right femoral artery with intraluminal devices via percutaneous approach"
     },
     {
       "name": "Mechanical ventilation for greater than 96 consecutive hours",
-      "cpt_suggestion": "94002",
+      "cpt_suggestion": "99291",
       "confidence": "high",
-      "evidence_span": "prolonged mechanical ventilation for greater than 96 consecutive hours"
+      "evidence_span": "The patient required prolonged mechanical ventilation for greater than 96 consecutive hours"
     },
     {
-      "name": "Bronchoscopic procedures with extirpation of matter from left lower lobe and left main bronchus",
+      "name": "Bronchoscopic procedures with extirpation from left lower lobe and left main bronchus",
       "cpt_suggestion": "31645",
       "confidence": "high",
-      "evidence_span": "multiple bronchoscopic procedures with extirpation of matter from the left lower lobe and left main bronchus"
+      "evidence_span": "Aggressive airway management included multiple bronchoscopic procedures with extirpation of matter from the left lower lobe and left main bronchus"
     },
     {
-      "name": "Diagnostic drainage of the right lower lobe bronchus",
-      "cpt_suggestion": "31624",
+      "name": "Diagnostic drainage of right lower lobe bronchus",
+      "cpt_suggestion": "31645",
       "confidence": "high",
       "evidence_span": "Diagnostic drainage of the right lower lobe bronchus was also performed"
     },
     {
       "name": "Continuous renal replacement therapy (CRRT)",
-      "cpt_suggestion": "90935",
+      "cpt_suggestion": "90945",
       "confidence": "high",
-      "evidence_span": "Continuous renal replacement therapy (CRRT) was initiated"
+      "evidence_span": "Continuous renal replacement therapy (CRRT) was initiated given acute kidney failure superimposed on chronic kidney disease and hepatorenal syndrome"
     },
     {
       "name": "Hemodialysis with urinary filtration",
       "cpt_suggestion": "90935",
       "confidence": "high",
-      "evidence_span": "Multiple sessions of hemodialysis with urinary filtration were performed"
+      "evidence_span": "Multiple sessions of hemodialysis with urinary filtration were performed using both heparin-based and citrate-based anticoagulation protocols"
     }
   ],
   "medications": [],
   "chief_complaint": "Altered mental status and abdominal pain",
-  "medical_specialty": "Critical Care Medicine / Internal Medicine"
+  "medical_specialty": "Critical Care/Intensive Care Medicine"
 }

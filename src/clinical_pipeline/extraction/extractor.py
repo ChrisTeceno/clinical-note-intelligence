@@ -12,10 +12,12 @@ from clinical_pipeline.extraction.prompts import (
     EXTRACTION_TOOL,
     SYSTEM_PROMPT,
     build_extraction_prompt,
+    build_rag_extraction_prompt,
 )
 
 if TYPE_CHECKING:
     from clinical_pipeline.extraction.cost_tracker import CostTracker
+    from clinical_pipeline.extraction.icd10_rag import ICD10Retriever
 
 logger = logging.getLogger(__name__)
 
@@ -36,11 +38,13 @@ class ClinicalExtractor:
         model: str = DEFAULT_MODEL,
         cost_tracker: CostTracker | None = None,
         max_retries: int = 3,
+        retriever: ICD10Retriever | None = None,
     ) -> None:
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         self.cost_tracker = cost_tracker
         self.max_retries = max_retries
+        self.retriever = retriever
 
     def extract(self, note_id: str, transcription: str) -> ClinicalExtraction:
         """Extract clinical data from a single note.
@@ -48,7 +52,11 @@ class ClinicalExtractor:
         Uses Claude's tool_use to guarantee structured JSON output.
         Retries on transient API errors.
         """
-        user_message = build_extraction_prompt(transcription)
+        if self.retriever is not None:
+            relevant_codes = self.retriever.retrieve(transcription, top_k=50)
+            user_message = build_rag_extraction_prompt(transcription, relevant_codes)
+        else:
+            user_message = build_extraction_prompt(transcription)
         messages = [
             {"role": "user", "content": user_message},
         ]

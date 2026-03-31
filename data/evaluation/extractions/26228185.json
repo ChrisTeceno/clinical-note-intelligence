@@ -2,136 +2,136 @@
   "note_id": "26228185",
   "diagnoses": [
     {
-      "name": "Acute kidney failure",
-      "icd10_suggestion": "N17.9",
+      "name": "Acute kidney failure, unspecified",
+      "icd10_suggestion": "N179",
       "confidence": "high",
-      "evidence_span": "Acute kidney failure and dysuria"
+      "evidence_span": "presenting with acute kidney failure of unspecified etiology"
     },
     {
-      "name": "Urinary tract infection",
-      "icd10_suggestion": "N39.0",
+      "name": "Dysuria",
+      "icd10_suggestion": "R300",
       "confidence": "high",
-      "evidence_span": "urinary tract infection. The pt was found to have significantly elevated creatinine on routine labs and endorsed dysuria and frequency"
+      "evidence_span": "endorsed dysuria and frequency"
     },
     {
-      "name": "Chronic lymphocytic leukemia of B-cell type",
-      "icd10_suggestion": "C91.10",
+      "name": "Urinary tract infection, site not specified",
+      "icd10_suggestion": "N390",
+      "confidence": "high",
+      "evidence_span": "urinary tract infection. Labs revealed elevated BUN and creatinine with hematuria noted on UA. Urinalysis cultures were obtained and grew organisms consistent with urinary tract infection."
+    },
+    {
+      "name": "Hypovolemia",
+      "icd10_suggestion": "E861",
+      "confidence": "high",
+      "evidence_span": "Upon admission, the pt presented with signs of hypovolemia and acute kidney injury"
+    },
+    {
+      "name": "Chronic lymphocytic leukemia of B-cell type not having achieved remission",
+      "icd10_suggestion": "C9110",
       "confidence": "high",
       "evidence_span": "chronic lymphocytic leukemia of B-cell type not in remission"
     },
     {
-      "name": "Prior cerebral infarction with left-sided hemiparesis",
-      "icd10_suggestion": "I69.354",
-      "confidence": "high",
-      "evidence_span": "prior cerebral infarction with resulting left-sided hemiparesis"
-    },
-    {
-      "name": "Sick sinus syndrome",
-      "icd10_suggestion": "I49.5",
-      "confidence": "high",
-      "evidence_span": "pacemaker for sick sinus syndrome"
-    },
-    {
       "name": "Paroxysmal atrial fibrillation",
-      "icd10_suggestion": "I48.0",
+      "icd10_suggestion": "I480",
       "confidence": "high",
       "evidence_span": "paroxysmal atrial fibrillation managed on anticoagulation"
     },
     {
-      "name": "Atherosclerotic coronary artery disease with angioplasty implant",
-      "icd10_suggestion": "I25.10",
+      "name": "Type 2 diabetes mellitus with diabetic polyneuropathy",
+      "icd10_suggestion": "E1142",
+      "confidence": "high",
+      "evidence_span": "his type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence"
+    },
+    {
+      "name": "Atherosclerotic coronary artery disease",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "atherosclerotic coronary artery disease s/p angioplasty implant"
     },
     {
-      "name": "Type 2 diabetes mellitus with diabetic polyneuropathy",
-      "icd10_suggestion": "E11.42",
+      "name": "Sick sinus syndrome",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence"
+      "evidence_span": "a pacemaker for sick sinus syndrome"
     },
     {
-      "name": "Morbid obesity status post bariatric surgery",
-      "icd10_suggestion": "Z98.84",
+      "name": "Prior cerebral infarction with left-sided hemiparesis",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "prior cerebral infarction with resulting left-sided hemiparesis"
+    },
+    {
+      "name": "Morbid obesity s/p bariatric surgery",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "morbid obesity s/p bariatric surgery"
     },
     {
       "name": "Obstructive sleep apnea",
-      "icd10_suggestion": "G47.33",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "obstructive sleep apnea"
     },
     {
       "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "hypothyroidism"
     },
     {
       "name": "Anxiety disorder",
-      "icd10_suggestion": "F41.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "anxiety disorder"
     },
     {
       "name": "Major depressive disorder",
-      "icd10_suggestion": "F32.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "major depressive disorder"
     },
     {
-      "name": "Hypovolemia",
-      "icd10_suggestion": "E86.1",
-      "confidence": "high",
-      "evidence_span": "the pt presented with signs of hypovolemia and acute kidney injury"
-    },
-    {
-      "name": "Hematuria",
-      "icd10_suggestion": "R31.9",
-      "confidence": "high",
-      "evidence_span": "hematuria noted on UA"
-    },
-    {
-      "name": "Gastrojejunal ulcer",
-      "icd10_suggestion": "K28.9",
-      "confidence": "high",
-      "evidence_span": "Given his history of gastrojejunal ulcer"
-    },
-    {
-      "name": "Urinary retention",
-      "icd10_suggestion": "R33.9",
-      "confidence": "high",
-      "evidence_span": "Given his history of gastrojejunal ulcer and urinary retention"
-    },
-    {
       "name": "Thrombocytopenia",
-      "icd10_suggestion": "D69.6",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "given thrombocytopenia and iron deficiency anemia documented on admission"
+      "evidence_span": "Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission"
     },
     {
       "name": "Iron deficiency anemia",
-      "icd10_suggestion": "D50.9",
+      "icd10_suggestion": "D500",
       "confidence": "high",
-      "evidence_span": "given thrombocytopenia and iron deficiency anemia documented on admission"
-    },
-    {
-      "name": "Hypertension",
-      "icd10_suggestion": "I10",
-      "confidence": "high",
-      "evidence_span": "losartan potassium 50 mg for hypertension"
+      "evidence_span": "thrombocytopenia and iron deficiency anemia documented on admission"
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "atorvastatin 80 mg for his hyperlipidemia"
     },
     {
       "name": "Gout",
-      "icd10_suggestion": "M10.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "allopurinol 100 mg for gout management"
+    },
+    {
+      "name": "Chronic pain",
+      "icd10_suggestion": "G8929",
+      "confidence": "high",
+      "evidence_span": "For his chronic pain, acetaminophen 500 mg was employed when appropriate"
+    },
+    {
+      "name": "Gastrojejunal ulcer",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Given his history of gastrojejunal ulcer"
+    },
+    {
+      "name": "Urinary retention",
+      "icd10_suggestion": "R339",
+      "confidence": "high",
+      "evidence_span": "Given his history of gastrojejunal ulcer and urinary retention"
     }
   ],
   "procedures": [
@@ -139,40 +139,22 @@
       "name": "IV hydration with 0.9% sodium chloride and lactated Ringers",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "The patient was treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component"
+      "evidence_span": "The patient was treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component."
     },
     {
-      "name": "Urinalysis cultures",
-      "cpt_suggestion": "87086",
-      "confidence": "high",
-      "evidence_span": "Urinalysis cultures were obtained and grew organisms consistent with urinary tract infection"
-    },
-    {
-      "name": "Point-of-care glucose monitoring",
-      "cpt_suggestion": "82962",
-      "confidence": "high",
-      "evidence_span": "His insulin dosing (80, 30, 50, and 70 unit regimens) was optimized during admission with point-of-care glucose monitoring"
-    },
-    {
-      "name": "Complete blood count trending",
-      "cpt_suggestion": "85025",
-      "confidence": "high",
-      "evidence_span": "Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission"
-    },
-    {
-      "name": "Lidocaine patches application",
+      "name": "Urinalysis",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "lidocaine 5% patches were applied"
+      "evidence_span": "Labs revealed elevated BUN and creatinine with hematuria noted on UA. Urinalysis cultures were obtained"
     },
     {
-      "name": "IV flushes with heparin and normal saline",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "IV flushes with both heparin (10 and 100 units/ml) and normal saline maintained vascular access"
+      "name": "Pacemaker management",
+      "cpt_suggestion": "Z45018",
+      "confidence": "medium",
+      "evidence_span": "a pacemaker for sick sinus syndrome"
     }
   ],
   "medications": [],
-  "chief_complaint": "Acute kidney failure and dysuria",
-  "medical_specialty": "Internal Medicine"
+  "chief_complaint": "Acute kidney failure and dysuria.",
+  "medical_specialty": null
 }

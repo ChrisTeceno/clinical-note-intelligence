@@ -3,113 +3,113 @@
   "diagnoses": [
     {
       "name": "Nonruptured cerebral aneurysm",
-      "icd10_suggestion": "I67.1",
+      "icd10_suggestion": "I671",
       "confidence": "high",
-      "evidence_span": "detection of a nonruptured cerebral aneurysm on imaging studies"
+      "evidence_span": "The patient presented to our institution following detection of a nonruptured cerebral aneurysm on imaging studies."
     },
     {
-      "name": "Essential hypertension",
+      "name": "Essential (primary) hypertension",
       "icd10_suggestion": "I10",
       "confidence": "high",
-      "evidence_span": "significant past medical history including essential hypertension"
+      "evidence_span": "patient with a significant past medical history including essential hypertension"
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "significant past medical history including essential hypertension, hyperlipidemia"
+      "evidence_span": "patient with a significant past medical history including essential hypertension, hyperlipidemia"
     },
     {
       "name": "Prior malignant neoplasm of the breast",
-      "icd10_suggestion": "Z85.3",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "significant past medical history including essential hypertension, hyperlipidemia, and prior malignant neoplasm of the breast"
+      "evidence_span": "patient with a significant past medical history including essential hypertension, hyperlipidemia, and prior malignant neoplasm of the breast"
     },
     {
-      "name": "Postprocedural hemorrhage of a circulatory system organ",
-      "icd10_suggestion": "T81.0",
+      "name": "Postprocedural hemorrhage of a circulatory system organ or structure",
+      "icd10_suggestion": "I97618",
       "confidence": "high",
-      "evidence_span": "The patient developed a postprocedural hemorrhage of a circulatory system organ following the endovascular intervention"
+      "evidence_span": "the patient developed a postprocedural hemorrhage of a circulatory system organ following the endovascular intervention"
     },
     {
-      "name": "Accidental puncture and laceration of a circulatory structure",
-      "icd10_suggestion": "T81.31",
+      "name": "Accidental puncture and laceration of a circulatory system organ or structure during procedure",
+      "icd10_suggestion": "I9752",
       "confidence": "high",
       "evidence_span": "with an associated accidental puncture and laceration of a circulatory structure that occurred during the procedure"
     },
     {
       "name": "Hemothorax",
-      "icd10_suggestion": "J94.2",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "These complications led to development of hemothorax requiring close monitoring and management"
+      "evidence_span": "These complications led to development of hemothorax requiring close monitoring and management."
     },
     {
       "name": "Acute posthemorrhagic anemia",
-      "icd10_suggestion": "D62",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "The hemorrhage resulted in acute posthemorrhagic anemia necessitating transfusion support"
+      "evidence_span": "The hemorrhage resulted in acute posthemorrhagic anemia necessitating transfusion support."
     },
     {
       "name": "Cerebral edema",
-      "icd10_suggestion": "G93.1",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "the pt developed significant cerebral edema in the immediate postoperative period"
     },
     {
       "name": "Postprocedural hypotension",
-      "icd10_suggestion": "I95.81",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "The patient also experienced postprocedural hypotension requiring vasopressor and antihypertensive agent titration"
+      "evidence_span": "The patient also experienced postprocedural hypotension requiring vasopressor and antihypertensive agent titration."
     },
     {
-      "name": "Postprocedural heart failure",
-      "icd10_suggestion": "I97.130",
+      "name": "Postprocedural heart failure following surgical intervention",
+      "icd10_suggestion": "I97130",
       "confidence": "high",
       "evidence_span": "the pt developed postprocedural heart failure following the surgical intervention"
     },
     {
-      "name": "Acute diastolic congestive heart failure",
-      "icd10_suggestion": "I50.30",
+      "name": "Acute diastolic (congestive) heart failure",
+      "icd10_suggestion": "I5031",
       "confidence": "high",
       "evidence_span": "compounded by preexisting acute diastolic congestive heart failure"
     },
     {
-      "name": "Aphasia",
-      "icd10_suggestion": "R47.01",
+      "name": "Aphasia related to cerebrovascular event",
+      "icd10_suggestion": "I69820",
       "confidence": "high",
-      "evidence_span": "Speech evaluation revealed aphasia related to the cerebrovascular event and swelling"
+      "evidence_span": "Speech evaluation revealed aphasia related to the cerebrovascular event and swelling."
     },
     {
       "name": "Chest pain",
-      "icd10_suggestion": "R06.02",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "The patient also complained of chest pain during hospitalization"
+      "evidence_span": "The patient also complained of chest pain during hospitalization, which was appropriately evaluated."
     },
     {
       "name": "Hypokalemia",
-      "icd10_suggestion": "E87.6",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia"
+      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia, were identified and corrected"
     },
     {
       "name": "Hypomagnesemia",
-      "icd10_suggestion": "E83.42",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia"
+      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia, were identified and corrected"
     }
   ],
   "procedures": [
     {
       "name": "Restriction of left internal carotid artery with intraluminal device via percutaneous approach",
-      "cpt_suggestion": "37215",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Restriction of left internal carotid artery with intraluminal device via percutaneous approach"
+      "evidence_span": "the pt underwent percutaneous restriction of the left internal carotid artery and intracranial artery using intraluminal devices"
     },
     {
       "name": "Restriction of intracranial artery with intraluminal device via percutaneous approach",
-      "cpt_suggestion": "61624",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Restriction of intracranial artery with intraluminal device via percutaneous approach"
+      "evidence_span": "the pt underwent percutaneous restriction of the left internal carotid artery and intracranial artery using intraluminal devices"
     }
   ],
   "medications": [
@@ -234,6 +234,6 @@
       "evidence_span": "Magnesium sulfate supplementation as directed by primary team"
     }
   ],
-  "chief_complaint": "detection of a nonruptured cerebral aneurysm on imaging studies",
-  "medical_specialty": "Neurosurgery"
+  "chief_complaint": "Nonruptured cerebral aneurysm requiring interventional neuroradiology procedures",
+  "medical_specialty": "Neurosurgery/Neurovascular Surgery"
 }

@@ -3,95 +3,95 @@
   "diagnoses": [
     {
       "name": "Chronic obstructive pulmonary disease",
-      "icd10_suggestion": "J44.1",
+      "icd10_suggestion": "J449",
       "confidence": "high",
-      "evidence_span": "chronic obstructive pulmonary disease"
+      "evidence_span": "chronic obstructive pulmonary disease, myelodysplastic syndrome, and chronic pulmonary edema who presented with acute dyspnea and hypoxemia"
     },
     {
       "name": "Myelodysplastic syndrome",
-      "icd10_suggestion": "D46.9",
+      "icd10_suggestion": "D469",
       "confidence": "high",
-      "evidence_span": "myelodysplastic syndrome"
+      "evidence_span": "myelodysplastic syndrome on hydroxyurea therapy"
     },
     {
       "name": "Chronic pulmonary edema",
-      "icd10_suggestion": "J81.1",
+      "icd10_suggestion": "J811",
       "confidence": "high",
-      "evidence_span": "chronic pulmonary edema"
+      "evidence_span": "chronic obstructive pulmonary disease, myelodysplastic syndrome, and chronic pulmonary edema who presented with acute dyspnea and hypoxemia"
+    },
+    {
+      "name": "Hypoxemia",
+      "icd10_suggestion": "R0902",
+      "confidence": "high",
+      "evidence_span": "presented with acute dyspnea and hypoxemia requiring hospitalization. On arrival, the pt was found to have low oxygen saturation"
     },
     {
       "name": "Pleural effusion",
-      "icd10_suggestion": "J94.8",
+      "icd10_suggestion": "J90",
       "confidence": "high",
-      "evidence_span": "known pleural effusion"
+      "evidence_span": "known pleural effusion and atelectasis"
     },
     {
       "name": "Atelectasis",
-      "icd10_suggestion": "J98.11",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "atelectasis"
+      "evidence_span": "known pleural effusion and atelectasis"
     },
     {
       "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus"
+      "evidence_span": "Notable for COPD, myelodysplastic syndrome on hydroxyurea therapy, type 2 diabetes mellitus"
     },
     {
       "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "icd10_suggestion": "E039",
       "confidence": "high",
-      "evidence_span": "hypothyroidism"
+      "evidence_span": "Notable for COPD, myelodysplastic syndrome on hydroxyurea therapy, type 2 diabetes mellitus, chronic pulmonary edema, hypothyroidism"
     },
     {
       "name": "Major depressive disorder, single episode",
-      "icd10_suggestion": "F32.9",
+      "icd10_suggestion": "F329",
       "confidence": "high",
       "evidence_span": "major depressive disorder (single episode)"
     },
     {
       "name": "History of breast malignancy",
-      "icd10_suggestion": "Z85.3",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "history of breast malignancy (s/p prior treatment)"
     },
     {
       "name": "Hyperuricemia without tophaceous disease",
-      "icd10_suggestion": "E79.0",
+      "icd10_suggestion": "E790",
       "confidence": "high",
       "evidence_span": "hyperuricemia without tophaceous disease"
     },
     {
-      "name": "History of nicotine dependence",
-      "icd10_suggestion": "Z87.891",
-      "confidence": "high",
-      "evidence_span": "remote history of nicotine dependence"
-    },
-    {
       "name": "History of splenic infarction",
-      "icd10_suggestion": "Z87.89",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "history of splenic infarction"
+      "evidence_span": "The pt also has a history of splenic infarction"
     },
     {
-      "name": "Hypoxemia",
-      "icd10_suggestion": "R06.03",
+      "name": "Dyspnea",
+      "icd10_suggestion": "R0600",
       "confidence": "high",
-      "evidence_span": "acute dyspnea and hypoxemia"
+      "evidence_span": "presented with acute dyspnea and hypoxemia requiring hospitalization"
     }
   ],
   "procedures": [
     {
-      "name": "Bronchoscopic drainage of left lower lung lobe",
-      "cpt_suggestion": "31624",
+      "name": "Diagnostic bronchoscopic drainage of left lower lung lobe",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "diagnostic bronchoscopic drainage procedures of the left lower lung lobe"
+      "evidence_span": "underwent diagnostic bronchoscopic drainage procedures of the left lower lung lobe and right middle lung lobe"
     },
     {
-      "name": "Bronchoscopic drainage of right middle lung lobe",
-      "cpt_suggestion": "31624",
+      "name": "Diagnostic bronchoscopic drainage of right middle lung lobe",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "diagnostic bronchoscopic drainage procedures of the right middle lung lobe"
+      "evidence_span": "underwent diagnostic bronchoscopic drainage procedures of the left lower lung lobe and right middle lung lobe"
     }
   ],
   "medications": [
@@ -109,7 +109,7 @@
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "continued on hydroxyurea at varying doses (500 mg, 1000 mg, and 1500 mg PO)"
+      "evidence_span": "myelodysplastic syndrome on hydroxyurea therapy, the pt continued on hydroxyurea at varying doses (500 mg, 1000 mg, and 1500 mg PO)"
     },
     {
       "name": "Rasburicase",
@@ -120,12 +120,36 @@
       "evidence_span": "Rasburicase was administered IV at doses of 3 mg and 6 mg"
     },
     {
+      "name": "Insulin",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Glucose management was addressed with insulin dosing and supplemental glucose gel and dextrose 50% IV"
+    },
+    {
+      "name": "Glucose gel",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "supplemental glucose gel and dextrose 50% IV as needed"
+    },
+    {
+      "name": "Dextrose 50%",
+      "dosage": "50%",
+      "frequency": "as needed",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "supplemental glucose gel and dextrose 50% IV as needed"
+    },
+    {
       "name": "Oxycodone",
       "dosage": "5 mg",
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "oxycodone 5 mg PO"
+      "evidence_span": "Pain was managed with oxycodone 5 mg PO and tramadol 50 mg PO"
     },
     {
       "name": "Tramadol",
@@ -133,7 +157,7 @@
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "tramadol 50 mg PO"
+      "evidence_span": "Pain was managed with oxycodone 5 mg PO and tramadol 50 mg PO"
     },
     {
       "name": "Tiotropium bromide",
@@ -141,7 +165,7 @@
       "frequency": null,
       "route": "inhaled",
       "confidence": "high",
-      "evidence_span": "tiotropium bromide inhaled"
+      "evidence_span": "Supportive medications were continued including tiotropium bromide inhaled"
     },
     {
       "name": "Albuterol",
@@ -153,11 +177,11 @@
     },
     {
       "name": "Pantoprazole",
-      "dosage": "40 mg",
+      "dosage": null,
       "frequency": null,
-      "route": "PO",
+      "route": null,
       "confidence": "high",
-      "evidence_span": "pantoprazole 40 mg PO"
+      "evidence_span": "pantoprazole for GI protection"
     },
     {
       "name": "Levothyroxine",
@@ -165,7 +189,7 @@
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "levothyroxine sodium 88 mcg PO"
+      "evidence_span": "levothyroxine for hypothyroidism"
     },
     {
       "name": "Escitalopram",
@@ -173,23 +197,7 @@
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "escitalopram oxalate 5 mg PO"
-    },
-    {
-      "name": "Simvastatin",
-      "dosage": "5 mg",
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "simvastatin 5 mg"
-    },
-    {
-      "name": "Vitamin D",
-      "dosage": "2000 units",
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "vitamin D 2000 units"
+      "evidence_span": "escitalopram for mood support"
     },
     {
       "name": "Polyethylene glycol",
@@ -197,7 +205,7 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Bowel regimen with polyethylene glycol"
+      "evidence_span": "Bowel regimen with polyethylene glycol, docusate, and senna"
     },
     {
       "name": "Docusate",
@@ -205,7 +213,7 @@
       "frequency": null,
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "docusate sodium 100 mg PO"
+      "evidence_span": "Bowel regimen with polyethylene glycol, docusate, and senna"
     },
     {
       "name": "Senna",
@@ -213,7 +221,15 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "senna"
+      "evidence_span": "Bowel regimen with polyethylene glycol, docusate, and senna"
+    },
+    {
+      "name": "Simvastatin",
+      "dosage": "5 mg",
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Statin therapy (simvastatin 5 mg)"
     },
     {
       "name": "Multivitamins",
@@ -221,49 +237,41 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Multivitamins"
+      "evidence_span": "vitamin supplementation (multivitamins, vitamin D 2000 units)"
     },
     {
-      "name": "Insulin",
-      "dosage": null,
+      "name": "Vitamin D",
+      "dosage": "2000 units",
       "frequency": null,
-      "route": null,
-      "confidence": "medium",
-      "evidence_span": "Glucose management was addressed with insulin dosing"
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "vitamin supplementation (multivitamins, vitamin D 2000 units)"
     },
     {
-      "name": "Dextrose 50%",
-      "dosage": "50%",
+      "name": "Normal saline",
+      "dosage": null,
       "frequency": "as needed",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "dextrose 50% IV as needed"
-    },
-    {
-      "name": "Glucose gel",
-      "dosage": null,
-      "frequency": "PRN",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "glucose gel PRN"
-    },
-    {
-      "name": "Glucagon",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "medium",
-      "evidence_span": "Glucagon was available for hypoglycemic management"
+      "evidence_span": "Normal saline flushes and IV hydration with 0.9% sodium chloride were provided as needed"
     },
     {
       "name": "Sodium chloride 0.9%",
       "dosage": "0.9%",
-      "frequency": null,
+      "frequency": "as needed",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "IV hydration with 0.9% sodium chloride"
+      "evidence_span": "IV hydration with 0.9% sodium chloride were provided as needed"
+    },
+    {
+      "name": "Glucagon",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Glucagon was available for hypoglycemic management"
     }
   ],
   "chief_complaint": "Dyspnea and hypoxemia",
-  "medical_specialty": "Internal Medicine"
+  "medical_specialty": "Pulmonology/Internal Medicine"
 }

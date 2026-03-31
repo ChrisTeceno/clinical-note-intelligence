@@ -3,143 +3,89 @@
   "diagnoses": [
     {
       "name": "Viral infection of unspecified site",
-      "icd10_suggestion": "B34.9",
+      "icd10_suggestion": "B349",
       "confidence": "high",
       "evidence_span": "presented with signs and symptoms consistent with a viral infection of unspecified site"
     },
     {
-      "name": "Chronic lymphocytic leukemia of B-cell type",
-      "icd10_suggestion": "C91.10",
+      "name": "Chronic lymphocytic leukemia of B-cell type not having achieved remission",
+      "icd10_suggestion": "C9110",
       "confidence": "high",
-      "evidence_span": "chronic lymphocytic leukemia of B-cell type that has not achieved remission"
+      "evidence_span": "The patient has chronic lymphocytic leukemia of B-cell type that has not achieved remission"
     },
     {
-      "name": "Type 2 diabetes mellitus complicated by diabetic cataract",
-      "icd10_suggestion": "E11.36",
+      "name": "Type 2 diabetes mellitus with diabetic cataract",
+      "icd10_suggestion": "E0836",
       "confidence": "high",
       "evidence_span": "type 2 diabetes mellitus complicated by diabetic cataract"
     },
     {
       "name": "Essential hypertension",
-      "icd10_suggestion": "I10",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "essential hypertension"
     },
     {
       "name": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
-      "icd10_suggestion": "I25.10",
+      "icd10_suggestion": "I2510",
       "confidence": "high",
       "evidence_span": "atherosclerotic heart disease of native coronary artery without angina pectoris"
     },
     {
-      "name": "History of transient ischemic attack",
-      "icd10_suggestion": "Z87.891",
+      "name": "Presence of cardiac pacemaker",
+      "icd10_suggestion": "Z950",
       "confidence": "high",
-      "evidence_span": "personal history of transient ischemic attack"
+      "evidence_span": "wears a cardiac pacemaker for rate control"
     },
     {
-      "name": "History of cerebral infarction without residual deficits",
-      "icd10_suggestion": "Z87.891",
+      "name": "Personal history of transient ischemic attack and cerebral infarction without residual deficits",
+      "icd10_suggestion": "Z8673",
       "confidence": "high",
-      "evidence_span": "cerebral infarction without residual neurologic deficits"
+      "evidence_span": "personal history of transient ischemic attack and cerebral infarction without residual neurologic deficits"
     },
     {
-      "name": "Malignant neoplasm of left testis",
-      "icd10_suggestion": "C62.12",
+      "name": "Bariatric surgery status",
+      "icd10_suggestion": "Z9884",
       "confidence": "high",
-      "evidence_span": "malignant neoplasm of the left testis (unspecified descent status)"
+      "evidence_span": "The patient underwent bariatric surgery in the past"
     },
     {
-      "name": "Obesity",
-      "icd10_suggestion": "E66.01",
+      "name": "Hypo-osmolality and hyponatremia",
+      "icd10_suggestion": "E871",
       "confidence": "high",
-      "evidence_span": "obesity with BMI in the 34.0-34.9 range"
+      "evidence_span": "the patient developed hypo-osmolality with significant hyponatremia requiring careful fluid management and electrolyte repletion"
     },
     {
-      "name": "Unspecified glaucoma",
-      "icd10_suggestion": "H40.9",
+      "name": "Anemia due to antineoplastic chemotherapy",
+      "icd10_suggestion": "D6481",
       "confidence": "high",
-      "evidence_span": "unspecified glaucoma"
-    },
-    {
-      "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
-      "confidence": "high",
-      "evidence_span": "hypothyroidism requiring supplementation"
+      "evidence_span": "He also experienced anemia attributed to prior antineoplastic chemotherapy"
     },
     {
       "name": "Major depressive disorder, single episode, unspecified",
-      "icd10_suggestion": "F32.9",
+      "icd10_suggestion": "F329",
       "confidence": "high",
       "evidence_span": "major depressive disorder (single episode, unspecified)"
     },
     {
       "name": "Generalized anxiety disorder",
-      "icd10_suggestion": "F41.1",
+      "icd10_suggestion": "F411",
       "confidence": "high",
       "evidence_span": "generalized anxiety disorder"
     },
     {
-      "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
+      "name": "Long term (current) use of insulin",
+      "icd10_suggestion": "Z794",
       "confidence": "high",
-      "evidence_span": "hyperlipidemia"
-    },
-    {
-      "name": "Hyponatremia",
-      "icd10_suggestion": "E87.1",
-      "confidence": "high",
-      "evidence_span": "hypo-osmolality with significant hyponatremia"
-    },
-    {
-      "name": "Anemia due to antineoplastic chemotherapy",
-      "icd10_suggestion": "D64.81",
-      "confidence": "high",
-      "evidence_span": "anemia attributed to prior antineoplastic chemotherapy"
-    },
-    {
-      "name": "Palpitations",
-      "icd10_suggestion": "R00.2",
-      "confidence": "high",
-      "evidence_span": "The patient's palpitations were monitored"
-    },
-    {
-      "name": "History of bariatric surgery",
-      "icd10_suggestion": "Z98.84",
-      "confidence": "high",
-      "evidence_span": "underwent bariatric surgery in the past"
-    },
-    {
-      "name": "History of coronary angioplasty with stent",
-      "icd10_suggestion": "Z95.5",
-      "confidence": "high",
-      "evidence_span": "history of prior coronary angioplasty with stent placement"
-    },
-    {
-      "name": "Cardiac pacemaker in situ",
-      "icd10_suggestion": "Z95.0",
-      "confidence": "high",
-      "evidence_span": "wears a cardiac pacemaker for rate control"
-    },
-    {
-      "name": "Chronic pain",
-      "icd10_suggestion": "G89.29",
-      "confidence": "high",
-      "evidence_span": "chronic pain managed with analgesic medications"
+      "evidence_span": "currently has obesity with BMI in the 34.0-34.9 range. He suffers from unspecified glaucoma and hypothyroidism requiring supplementation. He experiences chronic pain managed with analgesic medications and has diagnoses of major depressive disorder (single episode, unspecified) and generalized anxiety disorder. He has hyperlipidemia and takes long-term insulin therapy for glycemic control"
     }
   ],
   "procedures": [
     {
-      "name": "IV fluid administration",
+      "name": "Coronary angioplasty with stent placement",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "IV fluids were initiated"
-    },
-    {
-      "name": "Electrolyte repletion",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "aggressive potassium and magnesium supplementation was provided both orally and intravenously"
+      "evidence_span": "He has a history of prior coronary angioplasty with stent placement"
     }
   ],
   "medications": [
@@ -216,11 +162,11 @@
       "evidence_span": "Fluorescein 20 mg PO daily"
     },
     {
-      "name": "Sertraline (Zolpidem)",
+      "name": "Sertraline",
       "dosage": "300 mg",
       "frequency": "at bedtime",
       "route": "PO",
-      "confidence": "high",
+      "confidence": "medium",
       "evidence_span": "Sertraline (Zolpidem) 300 mg PO at bedtime"
     },
     {
@@ -242,7 +188,7 @@
     {
       "name": "Divalproex ER",
       "dosage": "500-250 mg",
-      "frequency": "daily (divided dosing)",
+      "frequency": "daily",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Divalproex ER 500-250 mg PO daily (divided dosing)"
@@ -301,31 +247,31 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Docusate 100 mg PO daily"
+      "evidence_span": "Docusate 100 mg PO daily, Senna 8.6 mg, Magnesium Oxide 400 mg, Polyethylene glycol 17 g"
     },
     {
       "name": "Senna",
       "dosage": "8.6 mg",
       "frequency": null,
-      "route": null,
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "Senna 8.6 mg"
+      "evidence_span": "Docusate 100 mg PO daily, Senna 8.6 mg, Magnesium Oxide 400 mg, Polyethylene glycol 17 g"
     },
     {
       "name": "Magnesium Oxide",
       "dosage": "400 mg",
       "frequency": null,
-      "route": null,
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "Magnesium Oxide 400 mg"
+      "evidence_span": "Docusate 100 mg PO daily, Senna 8.6 mg, Magnesium Oxide 400 mg, Polyethylene glycol 17 g"
     },
     {
       "name": "Polyethylene glycol",
       "dosage": "17 g",
       "frequency": null,
-      "route": null,
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "Polyethylene glycol 17 g"
+      "evidence_span": "Docusate 100 mg PO daily, Senna 8.6 mg, Magnesium Oxide 400 mg, Polyethylene glycol 17 g"
     },
     {
       "name": "Acyclovir",
@@ -401,5 +347,5 @@
     }
   ],
   "chief_complaint": "Viral illness with constitutional symptoms and metabolic derangement",
-  "medical_specialty": "Internal Medicine"
+  "medical_specialty": "Internal Medicine / Hematology-Oncology"
 }

@@ -2,54 +2,90 @@
   "note_id": "22954658",
   "diagnoses": [
     {
-      "name": "Non-ST elevation myocardial infarction (NSTEMI)",
-      "icd10_suggestion": "I21.4",
+      "name": "Non-ST elevation (NSTEMI) myocardial infarction",
+      "icd10_suggestion": "I214",
       "confidence": "high",
       "evidence_span": "The clinical presentation and biomarkers were consistent with a non-ST elevation myocardial infarction (NSTEMI)"
     },
     {
-      "name": "Type B dissection of the abdominal aorta",
-      "icd10_suggestion": "I71.03",
+      "name": "Dissection of abdominal aorta",
+      "icd10_suggestion": "I7102",
       "confidence": "high",
       "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery"
     },
     {
-      "name": "Critical stenosis in the left anterior descending artery",
-      "icd10_suggestion": "I25.111",
+      "name": "Coronary artery stenosis of left anterior descending artery",
+      "icd10_suggestion": "I2542",
       "confidence": "high",
       "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery with significant thrombus burden"
     },
     {
-      "name": "Gastro-esophageal reflux disease",
-      "icd10_suggestion": "K21.9",
+      "name": "Acute myocardial injury",
+      "icd10_suggestion": "I219",
+      "confidence": "high",
+      "evidence_span": "Troponin I was elevated at 2.8 ng/mL, consistent with acute myocardial injury"
+    },
+    {
+      "name": "Gastro-esophageal reflux disease without esophagitis",
+      "icd10_suggestion": "K219",
       "confidence": "high",
       "evidence_span": "the patient has a history of gastro-esophageal reflux disease without esophagitis"
+    },
+    {
+      "name": "Dyspnea",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "presented to the emergency department with acute onset substernal chest pain radiating to the left arm, associated with dyspnea and diaphoresis"
+    },
+    {
+      "name": "Diaphoresis",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "associated with dyspnea and diaphoresis"
+    },
+    {
+      "name": "Hypertension",
+      "icd10_suggestion": null,
+      "confidence": "medium",
+      "evidence_span": "Vital signs on admission: BP 168/92 mmHg"
+    },
+    {
+      "name": "Tachycardia",
+      "icd10_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "HR 102 bpm"
     }
   ],
   "procedures": [
     {
-      "name": "Percutaneous coronary intervention with thrombectomy",
-      "cpt_suggestion": "92928",
-      "confidence": "high",
-      "evidence_span": "The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach"
-    },
-    {
       "name": "Coronary angiography",
-      "cpt_suggestion": "93458",
+      "cpt_suggestion": "93454",
       "confidence": "high",
       "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery"
     },
     {
       "name": "CT angiography",
-      "cpt_suggestion": "74174",
+      "cpt_suggestion": "71275",
       "confidence": "high",
-      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery"
+      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta"
     },
     {
-      "name": "Quadrivalent influenza vaccination",
-      "cpt_suggestion": "90686",
+      "name": "Percutaneous coronary intervention with thrombectomy",
+      "cpt_suggestion": "92973",
       "confidence": "high",
-      "evidence_span": "the patient received the quadrivalent influenza vaccine"
+      "evidence_span": "The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach"
+    },
+    {
+      "name": "EKG",
+      "cpt_suggestion": "93000",
+      "confidence": "high",
+      "evidence_span": "Initial 12-lead EKG demonstrated ST segment depressions in the anterolateral leads"
+    },
+    {
+      "name": "Influenza vaccination (quadrivalent)",
+      "cpt_suggestion": "90656",
+      "confidence": "high",
+      "evidence_span": "As part of preventive care during this admission, the patient received the quadrivalent influenza vaccine"
     }
   ],
   "medications": [
@@ -96,7 +132,7 @@
     {
       "name": "Nitroglycerin",
       "dosage": "0.3 mg",
-      "frequency": "as needed",
+      "frequency": "as needed for chest pain",
       "route": "sublingual",
       "confidence": "high",
       "evidence_span": "Nitroglycerin 0.3 mg sublingual as needed for chest pain"
@@ -142,7 +178,7 @@
       "evidence_span": "Potassium chloride 40 mEq PO daily"
     },
     {
-      "name": "Nitroglycerin",
+      "name": "IV nitroglycerin infusion",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -150,7 +186,7 @@
       "evidence_span": "The patient received IV nitroglycerin infusion"
     },
     {
-      "name": "Hydralazine",
+      "name": "IV hydralazine",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -158,7 +194,7 @@
       "evidence_span": "IV hydralazine for blood pressure management"
     },
     {
-      "name": "Magnesium sulfate",
+      "name": "IV magnesium sulfate",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -166,7 +202,7 @@
       "evidence_span": "IV magnesium sulfate for cardioprotection"
     },
     {
-      "name": "Heparin",
+      "name": "IV heparin",
       "dosage": null,
       "frequency": null,
       "route": "IV",

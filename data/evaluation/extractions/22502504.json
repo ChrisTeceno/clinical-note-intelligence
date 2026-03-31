@@ -2,106 +2,100 @@
   "note_id": "22502504",
   "diagnoses": [
     {
-      "name": "Atherosclerotic heart disease of native coronary arteries",
-      "icd10_suggestion": "I25.10",
+      "name": "Chest pain",
+      "icd10_suggestion": "R079",
       "confidence": "high",
-      "evidence_span": "atherosclerotic heart disease of native coronary arteries"
+      "evidence_span": "Chief Complaint: Chest pain"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary artery",
+      "icd10_suggestion": "I2510",
+      "confidence": "high",
+      "evidence_span": "with documented atherosclerotic heart disease of native coronary arteries"
     },
     {
       "name": "Old myocardial infarction",
-      "icd10_suggestion": "I25.2",
+      "icd10_suggestion": "I252",
       "confidence": "high",
-      "evidence_span": "prior myocardial infarction"
+      "evidence_span": "prior myocardial infarction, and status post angioplasty with stent placement"
     },
     {
-      "name": "Status post coronary angioplasty with stent",
-      "icd10_suggestion": "Z95.5",
+      "name": "Presence of coronary angioplasty implant and graft",
+      "icd10_suggestion": "Z955",
       "confidence": "high",
-      "evidence_span": "coronary angioplasty implant and graft"
-    },
-    {
-      "name": "Anxiety disorder, unspecified",
-      "icd10_suggestion": "F41.9",
-      "confidence": "high",
-      "evidence_span": "His anxiety disorder, unspecified"
-    },
-    {
-      "name": "Malignant neoplasm of left testis",
-      "icd10_suggestion": "C62.12",
-      "confidence": "high",
-      "evidence_span": "malignant neoplasm of the left testis"
+      "evidence_span": "the presence of a coronary angioplasty implant and graft"
     },
     {
       "name": "Paroxysmal atrial fibrillation",
-      "icd10_suggestion": "I48.0",
+      "icd10_suggestion": "I480",
       "confidence": "high",
-      "evidence_span": "paroxysmal atrial fibrillation"
+      "evidence_span": "paroxysmal atrial fibrillation requiring anticoagulation consideration"
     },
     {
-      "name": "Chronic lymphocytic leukemia of B-cell type",
-      "icd10_suggestion": "C91.10",
+      "name": "Presence of cardiac pacemaker",
+      "icd10_suggestion": "Z950",
       "confidence": "high",
-      "evidence_span": "chronic lymphocytic leukemia of B-cell type without remission"
+      "evidence_span": "The patient has a pacemaker in place for rhythm management. A permanent pacemaker was implanted for conduction abnormalities."
     },
     {
-      "name": "Essential hypertension",
+      "name": "Chronic lymphocytic leukemia of B-cell type not having achieved remission",
+      "icd10_suggestion": "C9110",
+      "confidence": "high",
+      "evidence_span": "the patient carries multiple significant diagnoses. He has chronic lymphocytic leukemia of B-cell type without remission"
+    },
+    {
+      "name": "Essential (primary) hypertension",
       "icd10_suggestion": "I10",
       "confidence": "high",
       "evidence_span": "essential hypertension"
     },
     {
       "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "type 2 diabetes mellitus requiring insulin therapy"
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "hyperlipidemia"
     },
     {
-      "name": "Prior transient ischemic attack",
-      "icd10_suggestion": "Z87.891",
+      "name": "Personal history of transient ischemic attack and cerebral infarction without residual deficits",
+      "icd10_suggestion": "Z8673",
       "confidence": "high",
-      "evidence_span": "prior transient ischemic attack"
-    },
-    {
-      "name": "Cerebral infarction",
-      "icd10_suggestion": "I63.9",
-      "confidence": "high",
-      "evidence_span": "cerebral infarction without residual deficits"
+      "evidence_span": "His neurological history includes a prior transient ischemic attack and cerebral infarction without residual deficits"
     },
     {
       "name": "Unspecified convulsions",
-      "icd10_suggestion": "R56.9",
+      "icd10_suggestion": null,
       "confidence": "high",
-      "evidence_span": "unspecified convulsions"
+      "evidence_span": "He also reports unspecified convulsions"
     },
     {
       "name": "Unspecified glaucoma",
-      "icd10_suggestion": "H40.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "unspecified glaucoma"
     },
     {
       "name": "Hypothyroidism",
-      "icd10_suggestion": "E03.9",
+      "icd10_suggestion": null,
       "confidence": "high",
       "evidence_span": "hypothyroidism"
     },
     {
       "name": "Gastro-esophageal reflux disease without esophagitis",
-      "icd10_suggestion": "K21.9",
+      "icd10_suggestion": "K219",
       "confidence": "high",
       "evidence_span": "gastro-esophageal reflux disease without esophagitis"
     },
     {
-      "name": "Presence of cardiac pacemaker",
-      "icd10_suggestion": "Z95.0",
+      "name": "Anxiety disorder, unspecified",
+      "icd10_suggestion": "F419",
       "confidence": "high",
-      "evidence_span": "He has a pacemaker in place for rhythm management"
+      "evidence_span": "His anxiety disorder, unspecified, has complicated symptom interpretation in the past. The patient's anxiety was monitored throughout the admission."
     }
   ],
   "procedures": [
@@ -109,25 +103,13 @@
       "name": "Serial cardiac workup",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "the patient underwent serial cardiac workup"
+      "evidence_span": "During admission, the patient underwent serial cardiac workup."
     },
     {
       "name": "EKG",
       "cpt_suggestion": "93000",
       "confidence": "high",
       "evidence_span": "EKG showed no acute changes"
-    },
-    {
-      "name": "Troponin testing",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "His troponins remained negative"
-    },
-    {
-      "name": "Pacemaker function assessment",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "His pacemaker function was appropriate"
     }
   ],
   "medications": [
@@ -142,7 +124,7 @@
     {
       "name": "Aspirin",
       "dosage": "325 mg",
-      "frequency": "as needed",
+      "frequency": "as needed for chest discomfort",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Aspirin 325 mg PO as needed for chest discomfort"
@@ -190,42 +172,10 @@
     {
       "name": "Nitroglycerin",
       "dosage": null,
-      "frequency": "PRN",
+      "frequency": "PRN for chest pain",
       "route": "SL",
       "confidence": "high",
       "evidence_span": "Nitroglycerin SL PRN for chest pain"
-    },
-    {
-      "name": "Dextrose 50%",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "medium",
-      "evidence_span": "Glucagon and dextrose 50% were available for hypoglycemic episodes"
-    },
-    {
-      "name": "Glucagon",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "medium",
-      "evidence_span": "Glucagon and dextrose 50% were available for hypoglycemic episodes"
-    },
-    {
-      "name": "D5W",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "medium",
-      "evidence_span": "D5W infusions were utilized for IV access maintenance"
-    },
-    {
-      "name": "Normal saline",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "medium",
-      "evidence_span": "normal saline flushes"
     }
   ],
   "chief_complaint": "Chest pain",
