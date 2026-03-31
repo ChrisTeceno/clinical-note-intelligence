@@ -14,25 +14,31 @@
       "evidence_span": "prior myocardial infarction"
     },
     {
-      "name": "Status post coronary angioplasty with stent placement",
+      "name": "Status post coronary angioplasty with stent",
       "icd10_suggestion": "Z95.5",
       "confidence": "high",
-      "evidence_span": "status post angioplasty with stent placement"
+      "evidence_span": "coronary angioplasty implant and graft"
     },
     {
-      "name": "Permanent pacemaker implant",
-      "icd10_suggestion": "Z95.0",
+      "name": "Anxiety disorder, unspecified",
+      "icd10_suggestion": "F41.9",
       "confidence": "high",
-      "evidence_span": "A permanent pacemaker was implanted for conduction abnormalities"
+      "evidence_span": "His anxiety disorder, unspecified"
+    },
+    {
+      "name": "Malignant neoplasm of left testis",
+      "icd10_suggestion": "C62.12",
+      "confidence": "high",
+      "evidence_span": "malignant neoplasm of the left testis"
     },
     {
       "name": "Paroxysmal atrial fibrillation",
-      "icd10_suggestion": "I48.11",
+      "icd10_suggestion": "I48.0",
       "confidence": "high",
-      "evidence_span": "paroxysmal atrial fibrillation requiring anticoagulation consideration"
+      "evidence_span": "paroxysmal atrial fibrillation"
     },
     {
-      "name": "Chronic lymphocytic leukemia of B-cell type without remission",
+      "name": "Chronic lymphocytic leukemia of B-cell type",
       "icd10_suggestion": "C91.10",
       "confidence": "high",
       "evidence_span": "chronic lymphocytic leukemia of B-cell type without remission"
@@ -57,13 +63,13 @@
     },
     {
       "name": "Prior transient ischemic attack",
-      "icd10_suggestion": "Z86.73",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
       "evidence_span": "prior transient ischemic attack"
     },
     {
       "name": "Cerebral infarction",
-      "icd10_suggestion": "Z86.73",
+      "icd10_suggestion": "I63.9",
       "confidence": "high",
       "evidence_span": "cerebral infarction without residual deficits"
     },
@@ -92,22 +98,16 @@
       "evidence_span": "gastro-esophageal reflux disease without esophagitis"
     },
     {
-      "name": "Anxiety disorder, unspecified",
-      "icd10_suggestion": "F41.9",
+      "name": "Presence of cardiac pacemaker",
+      "icd10_suggestion": "Z95.0",
       "confidence": "high",
-      "evidence_span": "anxiety disorder, unspecified"
-    },
-    {
-      "name": "Malignant neoplasm of the left testis",
-      "icd10_suggestion": "C62.9",
-      "confidence": "high",
-      "evidence_span": "malignant neoplasm of the left testis requiring prior oncologic management"
+      "evidence_span": "He has a pacemaker in place for rhythm management"
     }
   ],
   "procedures": [
     {
       "name": "Serial cardiac workup",
-      "cpt_suggestion": "93000",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "the patient underwent serial cardiac workup"
     },
@@ -118,16 +118,16 @@
       "evidence_span": "EKG showed no acute changes"
     },
     {
-      "name": "Pacemaker function check",
-      "cpt_suggestion": "93741",
-      "confidence": "medium",
-      "evidence_span": "His pacemaker function was appropriate"
+      "name": "Troponin testing",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "His troponins remained negative"
     },
     {
-      "name": "Troponin measurement",
-      "cpt_suggestion": "84484",
-      "confidence": "medium",
-      "evidence_span": "His troponins remained negative"
+      "name": "Pacemaker function assessment",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "His pacemaker function was appropriate"
     }
   ],
   "medications": [
@@ -142,7 +142,7 @@
     {
       "name": "Aspirin",
       "dosage": "325 mg",
-      "frequency": "as needed for chest discomfort",
+      "frequency": "as needed",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Aspirin 325 mg PO as needed for chest discomfort"
@@ -190,10 +190,42 @@
     {
       "name": "Nitroglycerin",
       "dosage": null,
-      "frequency": "PRN for chest pain",
+      "frequency": "PRN",
       "route": "SL",
       "confidence": "high",
       "evidence_span": "Nitroglycerin SL PRN for chest pain"
+    },
+    {
+      "name": "Dextrose 50%",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "Glucagon and dextrose 50% were available for hypoglycemic episodes"
+    },
+    {
+      "name": "Glucagon",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "Glucagon and dextrose 50% were available for hypoglycemic episodes"
+    },
+    {
+      "name": "D5W",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "medium",
+      "evidence_span": "D5W infusions were utilized for IV access maintenance"
+    },
+    {
+      "name": "Normal saline",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "normal saline flushes"
     }
   ],
   "chief_complaint": "Chest pain",

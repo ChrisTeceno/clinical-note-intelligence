@@ -2,16 +2,22 @@
   "note_id": "25933959",
   "diagnoses": [
     {
+      "name": "Left foot diabetic ulcer with cellulitis",
+      "icd10_suggestion": "E11.621",
+      "confidence": "high",
+      "evidence_span": "left foot diabetic ulcer with cellulitis now s/p surgical revascularization and debridement"
+    },
+    {
       "name": "Type 2 diabetes mellitus",
       "icd10_suggestion": "E11.9",
       "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus on insulin therapy"
+      "evidence_span": "type 2 diabetes mellitus"
     },
     {
       "name": "Chronic kidney disease stage 3",
       "icd10_suggestion": "N18.3",
       "confidence": "high",
-      "evidence_span": "stage 3 chronic kidney disease"
+      "evidence_span": "chronic kidney disease stage 3"
     },
     {
       "name": "Atrial fibrillation",
@@ -20,22 +26,34 @@
       "evidence_span": "unspecified atrial fibrillation"
     },
     {
-      "name": "Atherosclerotic heart disease of native coronary artery",
+      "name": "Heart failure with preserved ejection fraction",
+      "icd10_suggestion": "I50.30",
+      "confidence": "high",
+      "evidence_span": "heart failure with preserved ejection fraction"
+    },
+    {
+      "name": "Atherosclerotic heart disease of native coronary artery without angina",
       "icd10_suggestion": "I25.10",
       "confidence": "high",
       "evidence_span": "atherosclerotic heart disease of native coronary artery without angina"
     },
     {
-      "name": "Heart failure with preserved ejection fraction",
-      "icd10_suggestion": "I50.21",
-      "confidence": "high",
-      "evidence_span": "heart failure with preserved ejection fraction"
-    },
-    {
-      "name": "Old myocardial infarction",
+      "name": "History of old myocardial infarction",
       "icd10_suggestion": "I25.2",
       "confidence": "high",
       "evidence_span": "history of old myocardial infarction with coronary stent placement"
+    },
+    {
+      "name": "Hypertensive heart and chronic kidney disease",
+      "icd10_suggestion": "I13.10",
+      "confidence": "high",
+      "evidence_span": "hypertensive heart and chronic kidney disease"
+    },
+    {
+      "name": "Atherosclerosis of renal artery",
+      "icd10_suggestion": "I70.1",
+      "confidence": "high",
+      "evidence_span": "atherosclerosis of renal artery"
     },
     {
       "name": "Hypothyroidism",
@@ -45,7 +63,7 @@
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.9",
+      "icd10_suggestion": "E78.5",
       "confidence": "high",
       "evidence_span": "hyperlipidemia"
     },
@@ -74,52 +92,40 @@
       "evidence_span": "major depressive disorder"
     },
     {
-      "name": "Left foot diabetic ulcer",
-      "icd10_suggestion": "E11.621",
+      "name": "Former nicotine dependence",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
-      "evidence_span": "Left foot ulcer with cellulitis and vascular compromise"
+      "evidence_span": "former nicotine dependence"
     },
     {
       "name": "Cellulitis of left lower limb",
-      "icd10_suggestion": "L03.115",
+      "icd10_suggestion": "L03.116",
       "confidence": "high",
       "evidence_span": "cellulitis of the left lower limb"
     },
     {
-      "name": "Hypertensive heart and chronic kidney disease",
-      "icd10_suggestion": "I13.9",
-      "confidence": "high",
-      "evidence_span": "hypertensive heart and chronic kidney disease"
-    },
-    {
-      "name": "Atherosclerosis of renal artery",
-      "icd10_suggestion": "I70.1",
-      "confidence": "high",
-      "evidence_span": "atherosclerosis of renal artery"
-    },
-    {
-      "name": "Hypoglycemia",
+      "name": "Hypoglycemia without coma",
       "icd10_suggestion": "E16.2",
       "confidence": "high",
-      "evidence_span": "pt experienced one episode of hypoglycemia without coma"
+      "evidence_span": "one episode of hypoglycemia without coma"
     },
     {
-      "name": "Former nicotine dependence",
-      "icd10_suggestion": "F17.200",
+      "name": "Diabetic chronic kidney disease",
+      "icd10_suggestion": "E11.22",
       "confidence": "high",
-      "evidence_span": "former nicotine dependence"
+      "evidence_span": "diabetic chronic kidney disease"
     }
   ],
   "procedures": [
     {
       "name": "Excision of left foot tendon",
-      "cpt_suggestion": "20200",
+      "cpt_suggestion": "28200",
       "confidence": "high",
-      "evidence_span": "excision of left foot tendon and left saphenous vein under open approach"
+      "evidence_span": "excision of left foot tendon"
     },
     {
-      "name": "Excision of left saphenous vein",
-      "cpt_suggestion": "37700",
+      "name": "Excision of left saphenous vein under open approach",
+      "cpt_suggestion": "35500",
       "confidence": "high",
       "evidence_span": "excision of left foot tendon and left saphenous vein under open approach"
     },
@@ -127,305 +133,16 @@
       "name": "Bypass of left femoral artery to popliteal artery using autologous venous tissue",
       "cpt_suggestion": "35556",
       "confidence": "high",
-      "evidence_span": "bypass of left femoral artery to popliteal artery using autologous venous tissue to restore distal perfusion"
+      "evidence_span": "bypass of left femoral artery to popliteal artery using autologous venous tissue"
     },
     {
-      "name": "Surgical revascularization and debridement of left foot",
-      "cpt_suggestion": "11012",
-      "confidence": "high",
-      "evidence_span": "primary focus on left foot diabetic ulcer with cellulitis now s/p surgical revascularization and debridement"
+      "name": "Surgical revascularization and debridement",
+      "cpt_suggestion": "35875",
+      "confidence": "medium",
+      "evidence_span": "s/p surgical revascularization and debridement"
     }
   ],
-  "medications": [
-    {
-      "name": "Aspirin",
-      "dosage": "81 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "Aspirin 81 mg PO daily"
-    },
-    {
-      "name": "Prasugrel",
-      "dosage": "10 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "prasugrel 10 mg PO daily"
-    },
-    {
-      "name": "Digoxin",
-      "dosage": "0.125 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "digoxin 0.125 mg PO daily"
-    },
-    {
-      "name": "Metoprolol succinate XL",
-      "dosage": "200 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "metoprolol succinate XL 200 mg PO daily"
-    },
-    {
-      "name": "Hydralazine",
-      "dosage": "20 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "hydralazine 20 mg PO daily"
-    },
-    {
-      "name": "Isosorbide dinitrate",
-      "dosage": "20 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "isosorbide dinitrate 20 mg PO daily"
-    },
-    {
-      "name": "Torsemide",
-      "dosage": "60 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "torsemide 60 mg PO daily"
-    },
-    {
-      "name": "Levothyroxine sodium",
-      "dosage": "112 mcg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "levothyroxine sodium 112 mcg PO daily"
-    },
-    {
-      "name": "Omeprazole",
-      "dosage": "20 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "omeprazole 20 mg PO daily"
-    },
-    {
-      "name": "Folic acid",
-      "dosage": "1 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "folic acid 1 mg PO daily"
-    },
-    {
-      "name": "Calcium carbonate",
-      "dosage": "500 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "calcium carbonate 500 mg PO daily"
-    },
-    {
-      "name": "Vitamin D",
-      "dosage": "2000 UNITS",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "vitamin D 2000 UNITS PO daily"
-    },
-    {
-      "name": "Ferrous sulfate",
-      "dosage": "325 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "ferrous sulfate 325 mg PO daily"
-    },
-    {
-      "name": "Insulin",
-      "dosage": null,
-      "frequency": "per sliding scale with basal insulin",
-      "route": "SC",
-      "confidence": "high",
-      "evidence_span": "insulin SC per sliding scale with basal insulin"
-    },
-    {
-      "name": "Febuxostat",
-      "dosage": "40 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "febuxostat 40 mg PO daily for gout management"
-    },
-    {
-      "name": "Ezetimibe",
-      "dosage": "10 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "ezetimibe 10 mg PO daily"
-    },
-    {
-      "name": "Bupropion SR",
-      "dosage": "150 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "bupropion SR 150 mg PO daily for depression"
-    },
-    {
-      "name": "Ciprofloxacin",
-      "dosage": "500 mg",
-      "frequency": "BID",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "ciprofloxacin 500 mg PO BID to complete 7-day course"
-    },
-    {
-      "name": "Metronidazole",
-      "dosage": "500 mg",
-      "frequency": "TID",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "metronidazole 500 mg PO TID to complete course"
-    },
-    {
-      "name": "Oxycodone",
-      "dosage": "5-10 mg",
-      "frequency": "Q6H PRN",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "oxycodone 5-10 mg PO Q6H PRN pain"
-    },
-    {
-      "name": "Acetaminophen",
-      "dosage": "650 mg",
-      "frequency": "Q6H PRN",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "acetaminophen 650 mg PO Q6H PRN"
-    },
-    {
-      "name": "Docusate",
-      "dosage": "100 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "docusate 100 mg PO daily"
-    },
-    {
-      "name": "Senna",
-      "dosage": "8.6 mg",
-      "frequency": "at bedtime",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "senna 8.6 mg PO at bedtime"
-    },
-    {
-      "name": "Bisacodyl",
-      "dosage": null,
-      "frequency": "PRN",
-      "route": "PR",
-      "confidence": "high",
-      "evidence_span": "bisacodyl PR PRN constipation"
-    },
-    {
-      "name": "Diphenhydramine",
-      "dosage": "25 mg",
-      "frequency": "at bedtime PRN",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "diphenhydramine 25 mg PO at bedtime PRN"
-    },
-    {
-      "name": "Subcutaneous heparin",
-      "dosage": "5000 units",
-      "frequency": "daily",
-      "route": "SC",
-      "confidence": "high",
-      "evidence_span": "subcutaneous heparin 5000 units daily"
-    },
-    {
-      "name": "Miconazole powder",
-      "dosage": "2%",
-      "frequency": null,
-      "route": "topical",
-      "confidence": "high",
-      "evidence_span": "miconazole powder 2% topical to foot"
-    },
-    {
-      "name": "Nystatin cream",
-      "dosage": null,
-      "frequency": null,
-      "route": "topical",
-      "confidence": "high",
-      "evidence_span": "nystatin cream topical"
-    },
-    {
-      "name": "Ceftazidime",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Perioperative antibiotics included ceftazidime, vancomycin, ciprofloxacin, and metronidazole"
-    },
-    {
-      "name": "Vancomycin",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Perioperative antibiotics included ceftazidime, vancomycin, ciprofloxacin, and metronidazole"
-    },
-    {
-      "name": "IV hydromorphone",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Pain was managed with IV hydromorphone and oral oxycodone"
-    },
-    {
-      "name": "Dextrose 50%",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "managed with dextrose 50% IV and glucose gel"
-    },
-    {
-      "name": "Glucose gel",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "managed with dextrose 50% IV and glucose gel"
-    },
-    {
-      "name": "IV furosemide",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "Diuretic therapy with IV furosemide and oral torsemide"
-    },
-    {
-      "name": "Potassium chloride",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Electrolyte abnormalities were addressed with potassium chloride supplementation"
-    },
-    {
-      "name": "Sodium polystyrene sulfonate",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Electrolyte abnormalities were addressed with potassium chloride supplementation and sodium polystyrene sulfonate"
-    }
-  ],
+  "medications": [],
   "chief_complaint": "Left foot ulcer with cellulitis and vascular compromise",
-  "medical_specialty": "General Surgery / Vascular Surgery"
+  "medical_specialty": "Internal Medicine"
 }

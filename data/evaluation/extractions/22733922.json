@@ -5,19 +5,19 @@
       "name": "Schizophrenia, unspecified",
       "icd10_suggestion": "F20.9",
       "confidence": "high",
-      "evidence_span": "longstanding diagnosis of schizophrenia, unspecified, which has been difficult to manage pharmacologically during periods of substance use"
+      "evidence_span": "patient also carries a longstanding diagnosis of schizophrenia, unspecified"
     },
     {
-      "name": "Cocaine use disorder, uncomplicated",
+      "name": "Cocaine use, unspecified, uncomplicated",
       "icd10_suggestion": "F14.10",
       "confidence": "high",
-      "evidence_span": "recent cocaine use and continued alcohol consumption"
+      "evidence_span": "He admits to active cocaine use, unspecified, uncomplicated"
     },
     {
-      "name": "Alcohol use disorder with alcohol-induced disorder",
-      "icd10_suggestion": "F10.20",
+      "name": "Alcohol use disorder with unspecified alcohol-induced disorder",
+      "icd10_suggestion": "F10.99",
       "confidence": "high",
-      "evidence_span": "ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder"
+      "evidence_span": "acknowledges ongoing struggles with alcohol use disorder with an unspecified alcohol-induced disorder"
     },
     {
       "name": "Psychoactive substance-induced mood disorder",
@@ -29,7 +29,7 @@
       "name": "HIV disease",
       "icd10_suggestion": "B20",
       "confidence": "high",
-      "evidence_span": "HIV disease on prior antiretroviral therapy"
+      "evidence_span": "pt has a significant past medical history including HIV disease on prior antiretroviral therapy"
     },
     {
       "name": "Chronic viral hepatitis C without hepatic coma",
@@ -38,67 +38,24 @@
       "evidence_span": "chronic viral hepatitis C without hepatic coma"
     },
     {
-      "name": "History of traumatic brain injury",
-      "icd10_suggestion": "S06.9X0S",
+      "name": "Traumatic brain injury",
+      "icd10_suggestion": "S06.9",
       "confidence": "high",
-      "evidence_span": "remote history of traumatic brain injury"
+      "evidence_span": "a remote history of traumatic brain injury"
     },
     {
       "name": "Former nicotine dependence",
-      "icd10_suggestion": "F17.200",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
       "evidence_span": "former nicotine dependence"
-    },
-    {
-      "name": "Paranoid ideation",
-      "icd10_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "He reports feeling hopeless, paranoid, and experiencing auditory hallucinations"
-    },
-    {
-      "name": "Auditory hallucinations",
-      "icd10_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "experiencing auditory hallucinations"
     }
   ],
-  "procedures": [
-    {
-      "name": "Psychiatric evaluation",
-      "cpt_suggestion": "90834",
-      "confidence": "high",
-      "evidence_span": "The pt was initiated on a structured psychiatric evaluation and medical assessment"
-    },
-    {
-      "name": "Mental status exam",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "Mental status exam revealed disorganized speech, paranoid ideation, and auditory hallucinations"
-    },
-    {
-      "name": "CD4 count measurement",
-      "cpt_suggestion": "86361",
-      "confidence": "high",
-      "evidence_span": "Labs on admission showed CD4 count of 285 cells/mm³"
-    },
-    {
-      "name": "Hepatic function panel",
-      "cpt_suggestion": "80076",
-      "confidence": "high",
-      "evidence_span": "Hepatic function panel was notable for elevated transaminases consistent with chronic hepatitis C"
-    },
-    {
-      "name": "Medication reconciliation",
-      "cpt_suggestion": "90862",
-      "confidence": "high",
-      "evidence_span": "A comprehensive medication reconciliation has been completed"
-    }
-  ],
+  "procedures": [],
   "medications": [
     {
       "name": "Quetiapine fumarate",
       "dosage": "25 mg to 300 mg",
-      "frequency": null,
+      "frequency": "for titration flexibility",
       "route": null,
       "confidence": "high",
       "evidence_span": "He will continue quetiapine fumarate for antipsychotic coverage at doses ranging from 25 mg to 300 mg for titration flexibility"
@@ -141,7 +98,7 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis given his CD4 count below 200"
+      "evidence_span": "Sulfamethoxazole-trimethoprim DS is continued for PCP prophylaxis"
     },
     {
       "name": "Multivitamins",
@@ -163,7 +120,7 @@
       "name": "Lidocaine 5% patch",
       "dosage": "5%",
       "frequency": null,
-      "route": "patch",
+      "route": "topical",
       "confidence": "high",
       "evidence_span": "lidocaine 5% patch"
     },
@@ -171,11 +128,11 @@
       "name": "Bengay cream",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "topical",
       "confidence": "high",
       "evidence_span": "Bengay cream for musculoskeletal discomfort"
     }
   ],
-  "chief_complaint": "Acute psychiatric decompensation in the setting of polysubstance use",
+  "chief_complaint": "acute psychiatric decompensation in the setting of polysubstance use",
   "medical_specialty": "Psychiatry"
 }

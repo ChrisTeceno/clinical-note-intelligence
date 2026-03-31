@@ -20,56 +20,56 @@
       "evidence_span": "significant past medical history including essential hypertension, hyperlipidemia"
     },
     {
-      "name": "Malignant neoplasm of the breast",
-      "icd10_suggestion": "C50.9",
+      "name": "Prior malignant neoplasm of the breast",
+      "icd10_suggestion": "Z85.3",
       "confidence": "high",
-      "evidence_span": "prior malignant neoplasm of the breast"
+      "evidence_span": "significant past medical history including essential hypertension, hyperlipidemia, and prior malignant neoplasm of the breast"
     },
     {
       "name": "Postprocedural hemorrhage of a circulatory system organ",
-      "icd10_suggestion": "I97.610",
+      "icd10_suggestion": "T81.0",
       "confidence": "high",
-      "evidence_span": "pt developed a postprocedural hemorrhage of a circulatory system organ following the endovascular intervention"
+      "evidence_span": "The patient developed a postprocedural hemorrhage of a circulatory system organ following the endovascular intervention"
     },
     {
-      "name": "Accidental puncture and laceration of a circulatory structure during procedure",
-      "icd10_suggestion": "I97.211",
+      "name": "Accidental puncture and laceration of a circulatory structure",
+      "icd10_suggestion": "T81.31",
       "confidence": "high",
-      "evidence_span": "accidental puncture and laceration of a circulatory structure that occurred during the procedure"
+      "evidence_span": "with an associated accidental puncture and laceration of a circulatory structure that occurred during the procedure"
     },
     {
       "name": "Hemothorax",
-      "icd10_suggestion": "J94.8",
+      "icd10_suggestion": "J94.2",
       "confidence": "high",
       "evidence_span": "These complications led to development of hemothorax requiring close monitoring and management"
     },
     {
       "name": "Acute posthemorrhagic anemia",
-      "icd10_suggestion": "D50.0",
+      "icd10_suggestion": "D62",
       "confidence": "high",
       "evidence_span": "The hemorrhage resulted in acute posthemorrhagic anemia necessitating transfusion support"
     },
     {
       "name": "Cerebral edema",
-      "icd10_suggestion": "G93.6",
+      "icd10_suggestion": "G93.1",
       "confidence": "high",
-      "evidence_span": "pt developed significant cerebral edema in the immediate postoperative period"
+      "evidence_span": "the pt developed significant cerebral edema in the immediate postoperative period"
     },
     {
       "name": "Postprocedural hypotension",
-      "icd10_suggestion": "I97.89",
+      "icd10_suggestion": "I95.81",
       "confidence": "high",
-      "evidence_span": "patient also experienced postprocedural hypotension requiring vasopressor and antihypertensive agent titration"
+      "evidence_span": "The patient also experienced postprocedural hypotension requiring vasopressor and antihypertensive agent titration"
     },
     {
       "name": "Postprocedural heart failure",
       "icd10_suggestion": "I97.130",
       "confidence": "high",
-      "evidence_span": "pt developed postprocedural heart failure following the surgical intervention"
+      "evidence_span": "the pt developed postprocedural heart failure following the surgical intervention"
     },
     {
       "name": "Acute diastolic congestive heart failure",
-      "icd10_suggestion": "I50.31",
+      "icd10_suggestion": "I50.30",
       "confidence": "high",
       "evidence_span": "compounded by preexisting acute diastolic congestive heart failure"
     },
@@ -81,35 +81,35 @@
     },
     {
       "name": "Chest pain",
-      "icd10_suggestion": "R07.9",
+      "icd10_suggestion": "R06.02",
       "confidence": "high",
-      "evidence_span": "patient also complained of chest pain during hospitalization"
+      "evidence_span": "The patient also complained of chest pain during hospitalization"
     },
     {
       "name": "Hypokalemia",
       "icd10_suggestion": "E87.6",
       "confidence": "high",
-      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia, were identified and corrected"
+      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia"
     },
     {
       "name": "Hypomagnesemia",
-      "icd10_suggestion": "E61.2",
+      "icd10_suggestion": "E83.42",
       "confidence": "high",
-      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia, were identified and corrected"
+      "evidence_span": "Electrolyte disturbances, particularly hypokalemia and hypomagnesemia"
     }
   ],
   "procedures": [
     {
       "name": "Restriction of left internal carotid artery with intraluminal device via percutaneous approach",
-      "cpt_suggestion": "37217",
+      "cpt_suggestion": "37215",
       "confidence": "high",
-      "evidence_span": "pt underwent percutaneous restriction of the left internal carotid artery and intracranial artery using intraluminal devices"
+      "evidence_span": "Restriction of left internal carotid artery with intraluminal device via percutaneous approach"
     },
     {
       "name": "Restriction of intracranial artery with intraluminal device via percutaneous approach",
-      "cpt_suggestion": "61645",
+      "cpt_suggestion": "61624",
       "confidence": "high",
-      "evidence_span": "pt underwent percutaneous restriction of the left internal carotid artery and intracranial artery using intraluminal devices"
+      "evidence_span": "Restriction of intracranial artery with intraluminal device via percutaneous approach"
     }
   ],
   "medications": [
@@ -148,7 +148,7 @@
     {
       "name": "Furosemide",
       "dosage": "10 mg",
-      "frequency": "daily or as needed",
+      "frequency": "daily (or as needed for volume status)",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Furosemide 10 mg IV daily (or as needed for volume status)"
@@ -172,7 +172,7 @@
     {
       "name": "Dexamethasone",
       "dosage": "2 mg",
-      "frequency": "daily",
+      "frequency": "daily (taper per neurosurgery recommendations)",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Dexamethasone 2 mg PO daily (taper per neurosurgery recommendations)"
@@ -212,7 +212,7 @@
     {
       "name": "Acetaminophen",
       "dosage": "325-650 mg",
-      "frequency": "Q6H as needed",
+      "frequency": "Q6H as needed for pain",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Acetaminophen 325-650 mg PO Q6H as needed for pain"
@@ -220,20 +220,20 @@
     {
       "name": "Potassium chloride",
       "dosage": "40 mEq",
-      "frequency": "daily",
+      "frequency": "daily (recheck K+ in 3-5 days)",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Potassium chloride 40 mEq PO daily"
+      "evidence_span": "Potassium chloride 40 mEq PO daily (recheck K+ in 3-5 days)"
     },
     {
       "name": "Magnesium sulfate",
       "dosage": null,
-      "frequency": "as directed",
+      "frequency": "as directed by primary team",
       "route": null,
       "confidence": "high",
       "evidence_span": "Magnesium sulfate supplementation as directed by primary team"
     }
   ],
-  "chief_complaint": "Nonruptured cerebral aneurysm requiring interventional neuroradiology procedures",
-  "medical_specialty": "Neurosurgery/Interventional Neuroradiology"
+  "chief_complaint": "detection of a nonruptured cerebral aneurysm on imaging studies",
+  "medical_specialty": "Neurosurgery"
 }

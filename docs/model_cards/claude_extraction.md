@@ -12,7 +12,7 @@
 
 | Field | Value |
 |-------|-------|
-| Model | Claude Haiku 4.5 (`claude-haiku-4-5-20251001`) |
+| Models Evaluated | Claude Haiku 4.5 (`claude-haiku-4-5-20251001`), Claude Sonnet 4 (`claude-4-sonnet-20250514`) |
 | Provider | Anthropic |
 | Output mechanism | `tool_use` with forced tool choice (`extract_clinical_data`) |
 | Structured output validation | Pydantic v2 (`ClinicalExtraction`) |
@@ -103,7 +103,7 @@ The primary medication recall gap reflects a structural mismatch: the ground tru
 
 Evaluated on 30 MIMIC-IV demo admissions (see Evaluation Data section). Confidence intervals use the normal approximation to the binomial proportion.
 
-### Overall Performance
+### Overall Performance — Claude Haiku 4.5
 
 | Entity Type | Precision | Recall | F1 | 95% CI (Precision) | 95% CI (Recall) |
 |-------------|-----------|--------|----|--------------------|-----------------|
@@ -111,7 +111,17 @@ Evaluated on 30 MIMIC-IV demo admissions (see Evaluation Data section). Confiden
 | Procedures | 0.476 | 0.674 | 0.558 | ±0.087 | ±0.097 |
 | Medications | 0.932 | 0.319 | 0.475 | ±0.025 | ±0.027 |
 
-### Raw Counts
+### Overall Performance — Claude Sonnet 4
+
+| Entity Type | Precision | Recall | F1 | Delta vs Haiku |
+|-------------|-----------|--------|----|----|
+| Diagnoses | 0.935 | 0.731 | 0.821 | F1 +0.6% |
+| Procedures | 0.472 | 0.663 | 0.551 | F1 -0.7% |
+| Medications | 0.952 | 0.308 | 0.465 | F1 -1.0% |
+
+**Key finding:** Sonnet achieves higher precision across all entity types (+6.5% for diagnoses, +2.0% for medications) at the cost of slightly lower recall. This indicates Sonnet is more conservative — it extracts fewer entities but those it extracts are more likely correct. For coding support workflows where false positives create audit risk, Sonnet's precision advantage may justify the higher cost.
+
+### Raw Counts (Haiku)
 
 | Entity Type | TP | FP | FN |
 |-------------|----|----|-----|

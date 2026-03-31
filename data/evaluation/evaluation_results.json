@@ -2,28 +2,28 @@
   "n_admissions": 30,
   "overall": {
     "diagnoses": {
-      "precision": 0.8695,
-      "recall": 0.7661,
-      "f1": 0.8145,
-      "tp": 393,
-      "fp": 59,
-      "fn": 120
+      "precision": 0.9352,
+      "recall": 0.731,
+      "f1": 0.8206,
+      "tp": 375,
+      "fp": 26,
+      "fn": 138
     },
     "procedures": {
-      "precision": 0.4762,
-      "recall": 0.6742,
-      "f1": 0.5581,
-      "tp": 60,
+      "precision": 0.472,
+      "recall": 0.6629,
+      "f1": 0.5514,
+      "tp": 59,
       "fp": 66,
-      "fn": 29
+      "fn": 30
     },
     "medications": {
-      "precision": 0.9325,
-      "recall": 0.3191,
-      "f1": 0.4755,
-      "tp": 373,
-      "fp": 27,
-      "fn": 796
+      "precision": 0.9524,
+      "recall": 0.308,
+      "f1": 0.4654,
+      "tp": 360,
+      "fp": 18,
+      "fn": 809
     }
   },
   "per_admission": {
@@ -39,7 +39,7 @@
         "details": [
           {
             "ground_truth_value": "I82422",
-            "extracted_value": "I82421",
+            "extracted_value": "I82521",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -53,10 +53,10 @@
           },
           {
             "ground_truth_value": "I9751",
-            "extracted_value": "I97890",
+            "extracted_value": "Iatrogenic vascular injury during circulatory system procedure",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "fuzzy_name",
+            "score": 85.5
           },
           {
             "ground_truth_value": "Y838",
@@ -127,10 +127,10 @@
           },
           {
             "ground_truth_value": "Extirpation of Matter from Left Common Iliac Vein, Percutaneous Approach",
-            "extracted_value": "Percutaneous extirpation of thrombus from left common iliac vein",
+            "extracted_value": "Percutaneous extirpation of matter from left common iliac vein",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 83.33
+            "score": 91.01
           },
           {
             "ground_truth_value": "Dilation of Left External Iliac Vein with Intraluminal Device, Percutaneous Approach",
@@ -151,27 +151,6 @@
         "f1": 0.7347,
         "details": [
           {
-            "ground_truth_value": "Heparin Sodium",
-            "extracted_value": "Heparin sodium",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Alteplase",
-            "extracted_value": "Alteplase",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Enoxaparin Sodium",
-            "extracted_value": "Enoxaparin sodium",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "Warfarin",
             "extracted_value": "Warfarin",
             "matched": true,
@@ -186,25 +165,32 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "Enoxaparin Sodium",
+            "extracted_value": "Enoxaparin sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Levothyroxine Sodium",
+            "extracted_value": "Levothyroxine sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "DULoxetine",
+            "extracted_value": "Duloxetine",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "OxyCODONE (Immediate Release)",
             "extracted_value": "Oxycodone immediate release",
             "matched": true,
             "match_method": "drug_name",
             "score": 96.43
-          },
-          {
-            "ground_truth_value": "HYDROmorphone (Dilaudid)",
-            "extracted_value": "Hydromorphone",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Fentanyl Citrate",
-            "extracted_value": "Fentanyl",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
           },
           {
             "ground_truth_value": "Acetaminophen",
@@ -221,22 +207,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Levothyroxine Sodium",
-            "extracted_value": "Levothyroxine sodium",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "Ranitidine",
             "extracted_value": "Ranitidine",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Polyethylene Glycol",
-            "extracted_value": "Polyethylene glycol",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -249,15 +221,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Potassium Chloride",
-            "extracted_value": "Potassium chloride",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Magnesium Sulfate",
-            "extracted_value": "Magnesium sulfate",
+            "ground_truth_value": "Polyethylene Glycol",
+            "extracted_value": "Polyethylene glycol",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -270,8 +235,43 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "DULoxetine",
-            "extracted_value": "Duloxetine",
+            "ground_truth_value": "Potassium Chloride",
+            "extracted_value": "Potassium chloride",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Heparin Sodium",
+            "extracted_value": "Heparin sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Alteplase",
+            "extracted_value": "Alteplase",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "HYDROmorphone (Dilaudid)",
+            "extracted_value": "Hydromorphone",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Fentanyl Citrate",
+            "extracted_value": "Fentanyl",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Magnesium Sulfate",
+            "extracted_value": "Magnesium sulfate",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -282,11 +282,11 @@
     "20297618": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 7,
-        "false_positives": 5,
-        "false_negatives": 2,
-        "precision": 0.5833,
-        "recall": 0.7778,
+        "true_positives": 5,
+        "false_positives": 1,
+        "false_negatives": 4,
+        "precision": 0.8333,
+        "recall": 0.5556,
         "f1": 0.6667,
         "details": [
           {
@@ -302,13 +302,6 @@
             "matched": false,
             "match_method": "none",
             "score": 0.0
-          },
-          {
-            "ground_truth_value": "Z955",
-            "extracted_value": "Coronary artery stenosis",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
           },
           {
             "ground_truth_value": "E669",
@@ -337,41 +330,6 @@
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
-          },
-          {
-            "ground_truth_value": "Z8249",
-            "extracted_value": "Z8249",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Elevated troponin",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Elevated BNP",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "E785",
-            "extracted_value": "E785",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hyperglycemia",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
@@ -393,7 +351,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Coronary artery bypass grafting (CABG) with LIMA-to-LAD bypass",
+            "extracted_value": "Coronary artery bypass grafting with left internal mammary artery to left anterior descending artery",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -409,12 +367,12 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 16,
+        "true_positives": 17,
         "false_positives": 0,
-        "false_negatives": 62,
+        "false_negatives": 61,
         "precision": 1.0,
-        "recall": 0.2051,
-        "f1": 0.3404,
+        "recall": 0.2179,
+        "f1": 0.3579,
         "details": [
           {
             "ground_truth_value": "Aspirin",
@@ -438,8 +396,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Nitroglycerin",
-            "extracted_value": "Sublingual nitroglycerin",
+            "ground_truth_value": "Nitroglycerin SL",
+            "extracted_value": "Nitroglycerin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -527,6 +485,13 @@
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "Insulin",
+            "extracted_value": "Insulin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           }
         ]
       }
@@ -534,12 +499,12 @@
     "21322534": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 12,
-        "false_positives": 0,
-        "false_negatives": 4,
-        "precision": 1.0,
-        "recall": 0.75,
-        "f1": 0.8571,
+        "true_positives": 13,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "precision": 0.8667,
+        "recall": 0.8125,
+        "f1": 0.8387,
         "details": [
           {
             "ground_truth_value": "N186",
@@ -585,10 +550,10 @@
           },
           {
             "ground_truth_value": "J449",
-            "extracted_value": "J449",
+            "extracted_value": "J441",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "M5489",
@@ -599,10 +564,31 @@
           },
           {
             "ground_truth_value": "M25512",
-            "extracted_value": "M25511",
+            "extracted_value": "M25512",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I248",
+            "extracted_value": "I249",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
+          },
+          {
+            "ground_truth_value": "I350",
+            "extracted_value": "I350",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I340",
+            "extracted_value": "I340",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "D631",
@@ -619,11 +605,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "I248",
-            "extracted_value": "I249",
+            "ground_truth_value": "Z79891",
+            "extracted_value": "Z79891",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
@@ -645,7 +631,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Pneumococcal 23-valent polysaccharide vaccine administration",
+            "extracted_value": "Pneumococcal 23-valent polysaccharide vaccination",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -654,12 +640,12 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 13,
+        "true_positives": 12,
         "false_positives": 0,
-        "false_negatives": 10,
+        "false_negatives": 11,
         "precision": 1.0,
-        "recall": 0.5652,
-        "f1": 0.7222,
+        "recall": 0.5217,
+        "f1": 0.6857,
         "details": [
           {
             "ground_truth_value": "Methadone",
@@ -744,13 +730,6 @@
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "Heparin Sodium",
-            "extracted_value": "Heparin drip",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
           }
         ]
       }
@@ -758,12 +737,12 @@
     "21606243": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 15,
+        "true_positives": 14,
         "false_positives": 2,
-        "false_negatives": 0,
-        "precision": 0.8824,
-        "recall": 1.0,
-        "f1": 0.9375,
+        "false_negatives": 1,
+        "precision": 0.875,
+        "recall": 0.9333,
+        "f1": 0.9032,
         "details": [
           {
             "ground_truth_value": "I308",
@@ -771,13 +750,6 @@
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Pericardial effusion",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           },
           {
             "ground_truth_value": "J90",
@@ -801,22 +773,15 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Hypo-osmolality",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "E860",
-            "extracted_value": "E860",
+            "ground_truth_value": "E871",
+            "extracted_value": "E871",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "J9811",
-            "extracted_value": "J9811",
+            "ground_truth_value": "E860",
+            "extracted_value": "E860",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -829,15 +794,15 @@
             "score": 80.0
           },
           {
-            "ground_truth_value": "R000",
-            "extracted_value": "R000",
+            "ground_truth_value": "J9811",
+            "extracted_value": "J9811",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "R002",
-            "extracted_value": "R002",
+            "ground_truth_value": "R000",
+            "extracted_value": "R000",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -864,25 +829,32 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Z8781",
-            "extracted_value": "History of traumatic fracture",
+            "ground_truth_value": "R002",
+            "extracted_value": "R002",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "Z8639",
-            "extracted_value": "History of endocrine/metabolic disease",
+            "ground_truth_value": "Z8781",
+            "extracted_value": "Z8781",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "Z87891",
-            "extracted_value": "History of nicotine dependence",
+            "extracted_value": "Z8719",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 95.0
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "Z87891",
+            "extracted_value": "Z87891",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
@@ -920,12 +892,12 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 13,
+        "true_positives": 11,
         "false_positives": 1,
-        "false_negatives": 11,
-        "precision": 0.9286,
-        "recall": 0.5417,
-        "f1": 0.6842,
+        "false_negatives": 13,
+        "precision": 0.9167,
+        "recall": 0.4583,
+        "f1": 0.6111,
         "details": [
           {
             "ground_truth_value": "amLODIPine",
@@ -936,7 +908,7 @@
           },
           {
             "ground_truth_value": "Metoprolol Succinate XL",
-            "extracted_value": "Metoprolol succinate XL",
+            "extracted_value": "Metoprolol succinate",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -963,50 +935,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Potassium Chloride Replacement (Critical Care and Oncology)",
-            "extracted_value": "Potassium chloride",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Magnesium Sulfate",
-            "extracted_value": "Magnesium sulfate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "Magnesium Sulfate",
             "extracted_value": "Magnesium supplementation",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Calcium Gluconate",
-            "extracted_value": "Calcium gluconate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Normal saline",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "Sodium Chloride 0.9%  Flush",
-            "extracted_value": "Sodium chloride 0.9%",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Acetaminophen",
-            "extracted_value": "Acetaminophen",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -1024,6 +954,34 @@
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "Acetaminophen",
+            "extracted_value": "Acetaminophen",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Normal saline",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "Magnesium Sulfate",
+            "extracted_value": "Magnesium sulfate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Calcium Gluconate",
+            "extracted_value": "Calcium gluconate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           }
         ]
       }
@@ -1031,12 +989,12 @@
     "22342963": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 12,
+        "true_positives": 11,
         "false_positives": 0,
-        "false_negatives": 3,
+        "false_negatives": 4,
         "precision": 1.0,
-        "recall": 0.8,
-        "f1": 0.8889,
+        "recall": 0.7333,
+        "f1": 0.8462,
         "details": [
           {
             "ground_truth_value": "J810",
@@ -1060,20 +1018,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "R0902",
-            "extracted_value": "Hypoxemia",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "I959",
-            "extracted_value": "I959",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "I4891",
             "extracted_value": "I4891",
             "matched": true,
@@ -1082,9 +1026,9 @@
           },
           {
             "ground_truth_value": "D62",
-            "extracted_value": "Acute posthemorrhagic anemia",
+            "extracted_value": "D62",
             "matched": true,
-            "match_method": "fuzzy_name",
+            "match_method": "exact_code",
             "score": 100.0
           },
           {
@@ -1116,36 +1060,36 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "I9789",
-            "extracted_value": "I9789",
+            "ground_truth_value": "I959",
+            "extracted_value": "I959",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "I9789",
+            "extracted_value": "Postprocedural complications related to the circulatory system",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
           }
         ]
       },
       {
         "entity_type": "procedures",
-        "true_positives": 3,
+        "true_positives": 4,
         "false_positives": 2,
-        "false_negatives": 1,
-        "precision": 0.6,
-        "recall": 0.75,
-        "f1": 0.6667,
+        "false_negatives": 0,
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
         "details": [
           {
             "ground_truth_value": "Bypass Coronary Artery, Three Arteries from Aorta with Autologous Venous Tissue, Open Approach",
-            "extracted_value": "Cardiac output monitoring with continuous assessment",
+            "extracted_value": "Coronary artery bypass grafting via open approach",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
-          },
-          {
-            "ground_truth_value": "Bypass Coronary Artery, One Artery from Left Internal Mammary, Open Approach",
-            "extracted_value": "Coronary artery bypass grafting (CABG) via open approach",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 74.35
           },
           {
             "ground_truth_value": "",
@@ -1155,11 +1099,11 @@
             "score": 0.0
           },
           {
-            "ground_truth_value": "",
+            "ground_truth_value": "Bypass Coronary Artery, One Artery from Left Internal Mammary, Open Approach",
             "extracted_value": "Bypass to one coronary artery from the left internal mammary artery",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 82.38
           },
           {
             "ground_truth_value": "Excision of Left Saphenous Vein, Percutaneous Endoscopic Approach",
@@ -1167,17 +1111,31 @@
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 81.01
+          },
+          {
+            "ground_truth_value": "Performance of Cardiac Output, Continuous",
+            "extracted_value": "Cardiac output monitoring",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Colostomy",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "medications",
-        "true_positives": 37,
-        "false_positives": 2,
-        "false_negatives": 37,
-        "precision": 0.9487,
-        "recall": 0.5,
-        "f1": 0.6549,
+        "true_positives": 27,
+        "false_positives": 0,
+        "false_negatives": 47,
+        "precision": 1.0,
+        "recall": 0.3649,
+        "f1": 0.5347,
         "details": [
           {
             "ground_truth_value": "Aspirin",
@@ -1258,7 +1216,7 @@
           },
           {
             "ground_truth_value": "Ipratropium Bromide Neb",
-            "extracted_value": "Ipratropium bromide",
+            "extracted_value": "Ipratropium",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -1306,53 +1264,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Polyethylene Glycol",
-            "extracted_value": "Polyethylene glycol",
+            "ground_truth_value": "PHENYLEPHrine",
+            "extracted_value": "Phenylephrine",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "Senna",
-            "extracted_value": "Senna",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Bisacodyl",
-            "extracted_value": "Bisacodyl",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Docusate Sodium",
-            "extracted_value": "Docusate sodium",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Lactulose",
-            "extracted_value": "Lactulose",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Milk of Magnesia",
-            "extracted_value": "Milk of magnesia",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Potassium supplementation",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           },
           {
             "ground_truth_value": "Nitroglycerin",
@@ -1364,34 +1280,6 @@
           {
             "ground_truth_value": "Propofol",
             "extracted_value": "Propofol",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "PHENYLEPHrine",
-            "extracted_value": "Phenylephrine",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Normal saline",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "Lactated Ringers",
-            "extracted_value": "Lactated Ringer's solution",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 96.97
-          },
-          {
-            "ground_truth_value": "Albumin 25% (12.5g / 50mL)",
-            "extracted_value": "Albumin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -1418,8 +1306,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Syringe (Iso-Osmotic Dextrose)",
-            "extracted_value": "Dextrose",
+            "ground_truth_value": "Fentanyl Citrate",
+            "extracted_value": "Fentanyl",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -1434,20 +1322,6 @@
           {
             "ground_truth_value": "Metoclopramide",
             "extracted_value": "Metoclopramide",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Simethicone",
-            "extracted_value": "Simethicone",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Chlorhexidine Gluconate 0.12% Oral Rinse",
-            "extracted_value": "Chlorhexidine",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -1487,15 +1361,22 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Z950",
-            "extracted_value": "Z950",
+            "ground_truth_value": "F419",
+            "extracted_value": "F419",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
+            "ground_truth_value": "C6292",
+            "extracted_value": "C6212",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
             "ground_truth_value": "I4891",
-            "extracted_value": "I4811",
+            "extracted_value": "I480",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -1530,17 +1411,17 @@
           },
           {
             "ground_truth_value": "Z8673",
-            "extracted_value": "Z8673",
+            "extracted_value": "Prior transient ischemic attack",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "fuzzy_name",
+            "score": 85.5
           },
           {
-            "ground_truth_value": "Z8673",
-            "extracted_value": "Z8673",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "ground_truth_value": "",
+            "extracted_value": "Cerebral infarction",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           },
           {
             "ground_truth_value": "R569",
@@ -1571,18 +1452,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "F419",
-            "extracted_value": "F419",
+            "ground_truth_value": "Z950",
+            "extracted_value": "Z950",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "C6292",
-            "extracted_value": "C629",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           }
         ]
       },
@@ -1611,14 +1485,14 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Pacemaker function check",
+            "extracted_value": "Troponin testing",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Troponin measurement",
+            "extracted_value": "Pacemaker function assessment",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -1627,12 +1501,12 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 8,
-        "false_positives": 0,
-        "false_negatives": 6,
-        "precision": 1.0,
-        "recall": 0.5714,
-        "f1": 0.7273,
+        "true_positives": 11,
+        "false_positives": 1,
+        "false_negatives": 3,
+        "precision": 0.9167,
+        "recall": 0.7857,
+        "f1": 0.8462,
         "details": [
           {
             "ground_truth_value": "Aspirin",
@@ -1689,6 +1563,34 @@
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "Dextrose 50%",
+            "extracted_value": "Dextrose 50%",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Glucagon",
+            "extracted_value": "Glucagon",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "D5W",
+            "extracted_value": "D5W",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Normal saline",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       }
@@ -1697,11 +1599,11 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 8,
-        "false_positives": 2,
+        "false_positives": 0,
         "false_negatives": 0,
-        "precision": 0.8,
+        "precision": 1.0,
         "recall": 1.0,
-        "f1": 0.8889,
+        "f1": 1.0,
         "details": [
           {
             "ground_truth_value": "F209",
@@ -1719,10 +1621,10 @@
           },
           {
             "ground_truth_value": "F1099",
-            "extracted_value": "F1020",
+            "extracted_value": "F1099",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "F1994",
@@ -1747,79 +1649,29 @@
           },
           {
             "ground_truth_value": "Z87820",
-            "extracted_value": "History of traumatic brain injury",
+            "extracted_value": "Traumatic brain injury",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 95.0
+            "score": 90.0
           },
           {
             "ground_truth_value": "Z87891",
-            "extracted_value": "Former nicotine dependence",
+            "extracted_value": "Z87891",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Paranoid ideation",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Auditory hallucinations",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 5,
+        "false_positives": 0,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
-        "details": [
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Psychiatric evaluation",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Mental status exam",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "CD4 count measurement",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hepatic function panel",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Medication reconciliation",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          }
-        ]
+        "details": []
       },
       {
         "entity_type": "medications",
@@ -1906,30 +1758,30 @@
     "22954658": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 4,
-        "false_positives": 2,
-        "false_negatives": 2,
-        "precision": 0.6667,
-        "recall": 0.6667,
-        "f1": 0.6667,
+        "true_positives": 3,
+        "false_positives": 1,
+        "false_negatives": 3,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
         "details": [
           {
             "ground_truth_value": "I214",
-            "extracted_value": "I2102",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I7102",
-            "extracted_value": "I7102",
+            "extracted_value": "I214",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
+            "ground_truth_value": "I7102",
+            "extracted_value": "I7103",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
             "ground_truth_value": "",
-            "extracted_value": "Acute myocardial injury",
+            "extracted_value": "Critical stenosis in the left anterior descending artery",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -1940,35 +1792,21 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "Z7982",
-            "extracted_value": "Critical stenosis of left anterior descending artery",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hypertension",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 1,
-        "false_positives": 4,
+        "false_positives": 3,
         "false_negatives": 1,
-        "precision": 0.2,
+        "precision": 0.25,
         "recall": 0.5,
-        "f1": 0.2857,
+        "f1": 0.3333,
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Emergent coronary intervention with thrombectomy of left anterior descending artery",
+            "extracted_value": "Percutaneous coronary intervention with thrombectomy",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -1989,14 +1827,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "12-lead EKG",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Quadrivalent influenza vaccine",
+            "extracted_value": "Quadrivalent influenza vaccination",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -2091,28 +1922,28 @@
           },
           {
             "ground_truth_value": "Nitroglycerin",
-            "extracted_value": "IV nitroglycerin infusion",
+            "extracted_value": "Nitroglycerin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
           },
           {
             "ground_truth_value": "HydrALAzine",
-            "extracted_value": "IV hydralazine",
+            "extracted_value": "Hydralazine",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
           },
           {
             "ground_truth_value": "Magnesium Oxide",
-            "extracted_value": "IV magnesium sulfate",
+            "extracted_value": "Magnesium sulfate",
             "matched": true,
             "match_method": "drug_name",
-            "score": 81.43
+            "score": 100.0
           },
           {
             "ground_truth_value": "Heparin Sodium",
-            "extracted_value": "IV heparin",
+            "extracted_value": "Heparin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -2123,19 +1954,19 @@
     "22987108": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 30,
-        "false_positives": 2,
-        "false_negatives": 9,
-        "precision": 0.9375,
-        "recall": 0.7692,
-        "f1": 0.8451,
+        "true_positives": 27,
+        "false_positives": 1,
+        "false_negatives": 12,
+        "precision": 0.9643,
+        "recall": 0.6923,
+        "f1": 0.806,
         "details": [
           {
             "ground_truth_value": "K7469",
-            "extracted_value": "K746",
+            "extracted_value": "K7469",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "K766",
@@ -2159,8 +1990,8 @@
             "score": 80.0
           },
           {
-            "ground_truth_value": "Z955",
-            "extracted_value": "Z955",
+            "ground_truth_value": "T8119XA",
+            "extracted_value": "T8119XA",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -2181,10 +2012,10 @@
           },
           {
             "ground_truth_value": "K7200",
-            "extracted_value": "K7210",
+            "extracted_value": "K7200",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "N179",
@@ -2195,10 +2026,10 @@
           },
           {
             "ground_truth_value": "N183",
-            "extracted_value": "N1830",
+            "extracted_value": "N183",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "K767",
@@ -2213,6 +2044,13 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "A4151",
+            "extracted_value": "A419",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "R6521",
@@ -2230,7 +2068,7 @@
           },
           {
             "ground_truth_value": "T80219A",
-            "extracted_value": "T80212",
+            "extracted_value": "T80211A",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -2244,10 +2082,10 @@
           },
           {
             "ground_truth_value": "J9600",
-            "extracted_value": "J9690",
+            "extracted_value": "J9600",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "K567",
@@ -2271,32 +2109,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "R6521",
-            "extracted_value": "R6521",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "E43",
             "extracted_value": "E43",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "I97610",
-            "extracted_value": "I97610",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "T8119XA",
-            "extracted_value": "T8119",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           },
           {
             "ground_truth_value": "E119",
@@ -2306,18 +2123,32 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "I4891",
-            "extracted_value": "I4891",
+            "ground_truth_value": "Z955",
+            "extracted_value": "Coronary artery disease",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Angina pectoris",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "I4892",
+            "extracted_value": "I4892",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
             "ground_truth_value": "D638",
-            "extracted_value": "D638",
+            "extracted_value": "D631",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "R627",
@@ -2325,46 +2156,25 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "K7201",
-            "extracted_value": "K7290",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Portal hypertensive bleeding",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "E871",
-            "extracted_value": "E871",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "D62",
-            "extracted_value": "Acute posthemorrhagic anemia",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
-        "true_positives": 12,
-        "false_positives": 2,
-        "false_negatives": 11,
-        "precision": 0.8571,
-        "recall": 0.5217,
-        "f1": 0.6486,
+        "true_positives": 11,
+        "false_positives": 3,
+        "false_negatives": 12,
+        "precision": 0.7857,
+        "recall": 0.4783,
+        "f1": 0.5946,
         "details": [
+          {
+            "ground_truth_value": "Occlusion of Right Vertebral Artery with Intraluminal Device, Percutaneous Approach",
+            "extracted_value": "Cardiac catheterization with coronary angiography",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
+          },
           {
             "ground_truth_value": "",
             "extracted_value": "Percutaneous central venous catheter placement in the right atrium",
@@ -2381,7 +2191,7 @@
           },
           {
             "ground_truth_value": "Insertion of Endotracheal Airway into Trachea, Via Natural or Artificial Opening",
-            "extracted_value": "Endotracheal intubation for acute respiratory failure",
+            "extracted_value": "Endotracheal intubation",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -2401,36 +2211,36 @@
             "score": 85.5
           },
           {
-            "ground_truth_value": "Drainage of Peritoneal Cavity, Percutaneous Approach",
-            "extracted_value": "Coronary fluoroscopy of multiple coronary arteries and right heart with contrast",
+            "ground_truth_value": "Performance of Urinary Filtration, Multiple",
+            "extracted_value": "Coronary fluoroscopy of multiple coronary arteries and right heart",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
-            "ground_truth_value": "Occlusion of Right Vertebral Artery with Intraluminal Device, Percutaneous Approach",
-            "extracted_value": "Occlusion of the right vertebral artery with intraluminal devices via percutaneous approach",
+            "ground_truth_value": "Occlusion of Right Femoral Artery with Intraluminal Device, Percutaneous Approach",
+            "extracted_value": "Occlusion of the right vertebral artery with intraluminal devices",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 94.25
+            "score": 76.71
           },
           {
-            "ground_truth_value": "Occlusion of Right Femoral Artery with Intraluminal Device, Percutaneous Approach",
-            "extracted_value": "Occlusion of the right femoral artery with intraluminal devices via percutaneous approach",
+            "ground_truth_value": "Drainage of Right Lower Lobe Bronchus, Via Natural or Artificial Opening Endoscopic, Diagnostic",
+            "extracted_value": "Occlusion of the right femoral artery with intraluminal devices",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 94.12
+            "score": 85.5
           },
           {
             "ground_truth_value": "Respiratory Ventilation, Greater than 96 Consecutive Hours",
-            "extracted_value": "Prolonged mechanical ventilation for greater than 96 consecutive hours",
+            "extracted_value": "Mechanical ventilation for greater than 96 consecutive hours",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 78.12
+            "score": 83.05
           },
           {
             "ground_truth_value": "Fluoroscopy of Multiple Coronary Arteries using Other Contrast",
-            "extracted_value": "Bronchoscopic procedure with extirpation of matter from left lower lobe and left main bronchus",
+            "extracted_value": "Bronchoscopic procedures with extirpation of matter from left lower lobe and left main bronchus",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -2450,18 +2260,11 @@
             "score": 0.0
           },
           {
-            "ground_truth_value": "Fluoroscopy of Right Heart using Other Contrast",
-            "extracted_value": "Hemodialysis with urinary filtration using heparin-based anticoagulation",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "Performance of Urinary Filtration, Multiple",
-            "extracted_value": "Hemodialysis with urinary filtration using citrate-based anticoagulation",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "ground_truth_value": "",
+            "extracted_value": "Hemodialysis with urinary filtration",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       },
@@ -2495,16 +2298,16 @@
           },
           {
             "ground_truth_value": "K7031",
-            "extracted_value": "K7030",
+            "extracted_value": "K7031",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I8510",
-            "extracted_value": "Secondary esophageal varices without bleeding",
+            "extracted_value": "I8510",
             "matched": true,
-            "match_method": "fuzzy_name",
+            "match_method": "exact_code",
             "score": 100.0
           },
           {
@@ -2544,63 +2347,50 @@
           },
           {
             "ground_truth_value": "E43",
-            "extracted_value": "Severe protein-calorie malnutrition",
+            "extracted_value": "E43",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 95.0
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 0,
+        "false_positives": 2,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
-        "details": []
+        "details": [
+          {
+            "ground_truth_value": "",
+            "extracted_value": "IV fluid administration",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Electrolyte repletion",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          }
+        ]
       },
       {
         "entity_type": "medications",
         "true_positives": 12,
-        "false_positives": 3,
+        "false_positives": 0,
         "false_negatives": 9,
-        "precision": 0.8,
+        "precision": 1.0,
         "recall": 0.5714,
-        "f1": 0.6667,
+        "f1": 0.7273,
         "details": [
           {
-            "ground_truth_value": "Iso-Osmotic Sodium Chloride",
-            "extracted_value": "Sodium chloride",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "5% Dextrose",
-            "extracted_value": "Dextrose",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Potassium Chloride",
-            "extracted_value": "Potassium chloride",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Magnesium Sulfate",
-            "extracted_value": "Magnesium sulfate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Heparin",
-            "extracted_value": "Heparin",
+            "ground_truth_value": "Furosemide",
+            "extracted_value": "Furosemide",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -2627,20 +2417,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Bisacodyl",
-            "extracted_value": "Bisacodyl",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Furosemide",
-            "extracted_value": "Furosemide",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "OxyCODONE (Immediate Release)",
             "extracted_value": "Oxycodone",
             "matched": true,
@@ -2655,25 +2431,46 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Pantoprazole",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Bisacodyl",
+            "extracted_value": "Bisacodyl",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Famotidine",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Iso-Osmotic Sodium Chloride",
+            "extracted_value": "Potassium chloride",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Ondansetron",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Magnesium Sulfate",
+            "extracted_value": "Magnesium sulfate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Heparin",
+            "extracted_value": "Heparin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Potassium Chloride",
+            "extracted_value": "Sodium chloride",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "5% Dextrose",
+            "extracted_value": "5% dextrose",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           }
         ]
       }
@@ -2681,12 +2478,12 @@
     "23786647": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 13,
-        "false_positives": 3,
-        "false_negatives": 3,
-        "precision": 0.8125,
-        "recall": 0.8125,
-        "f1": 0.8125,
+        "true_positives": 14,
+        "false_positives": 2,
+        "false_negatives": 2,
+        "precision": 0.875,
+        "recall": 0.875,
+        "f1": 0.875,
         "details": [
           {
             "ground_truth_value": "I671",
@@ -2710,67 +2507,67 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "Z853",
+            "extracted_value": "Z853",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "I97618",
-            "extracted_value": "Malignant neoplasm of the breast",
+            "extracted_value": "Postprocedural hemorrhage of a circulatory system organ",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 90.0
+          },
+          {
+            "ground_truth_value": "I9752",
+            "extracted_value": "Accidental puncture and laceration of a circulatory structure",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
-            "ground_truth_value": "I97131",
-            "extracted_value": "I97610",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I9752",
-            "extracted_value": "I97211",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
             "ground_truth_value": "J942",
-            "extracted_value": "J948",
+            "extracted_value": "J942",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "D62",
-            "extracted_value": "Acute posthemorrhagic anemia",
+            "extracted_value": "D62",
             "matched": true,
-            "match_method": "fuzzy_name",
+            "match_method": "exact_code",
             "score": 100.0
           },
           {
             "ground_truth_value": "G936",
-            "extracted_value": "G936",
+            "extracted_value": "G931",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "I9581",
-            "extracted_value": "Postprocedural hypotension",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "I5031",
-            "extracted_value": "Postprocedural heart failure",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "I5031",
-            "extracted_value": "I5031",
+            "extracted_value": "I9581",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "I97131",
+            "extracted_value": "I97130",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "I5031",
+            "extracted_value": "I5030",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "R4701",
@@ -2781,10 +2578,10 @@
           },
           {
             "ground_truth_value": "R079",
-            "extracted_value": "R079",
+            "extracted_value": "Chest pain",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "fuzzy_name",
+            "score": 90.0
           },
           {
             "ground_truth_value": "",
@@ -2947,12 +2744,12 @@
     "23819016": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 18,
+        "true_positives": 15,
         "false_positives": 0,
-        "false_negatives": 3,
+        "false_negatives": 6,
         "precision": 1.0,
-        "recall": 0.8571,
-        "f1": 0.9231,
+        "recall": 0.7143,
+        "f1": 0.8333,
         "details": [
           {
             "ground_truth_value": "R6521",
@@ -2963,21 +2760,14 @@
           },
           {
             "ground_truth_value": "K859",
-            "extracted_value": "K8590",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "N179",
-            "extracted_value": "N179",
+            "extracted_value": "K859",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "E872",
-            "extracted_value": "E872",
+            "ground_truth_value": "N179",
+            "extracted_value": "N179",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -2990,6 +2780,13 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "E872",
+            "extracted_value": "E872",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "E5112",
             "extracted_value": "E5112",
             "matched": true,
@@ -2997,8 +2794,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "G629",
-            "extracted_value": "G629",
+            "ground_truth_value": "I129",
+            "extracted_value": "I129",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -3006,13 +2803,6 @@
           {
             "ground_truth_value": "K7010",
             "extracted_value": "K7010",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "I129",
-            "extracted_value": "I129",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -3039,13 +2829,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Z86718",
-            "extracted_value": "History of venous thromboembolism",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
             "ground_truth_value": "D649",
             "extracted_value": "D649",
             "matched": true,
@@ -3060,61 +2843,47 @@
             "score": 80.0
           },
           {
+            "ground_truth_value": "Z86718",
+            "extracted_value": "History of venous thromboembolism",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
+          },
+          {
             "ground_truth_value": "Z9884",
             "extracted_value": "Z9884",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "R410",
-            "extracted_value": "R410",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Z720",
-            "extracted_value": "Tobacco use disorder",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.0
           }
         ]
       },
       {
         "entity_type": "procedures",
-        "true_positives": 0,
-        "false_positives": 2,
-        "false_negatives": 1,
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+        "true_positives": 1,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
         "details": [
           {
-            "ground_truth_value": "",
-            "extracted_value": "Percutaneous central venous catheter placement (Infusion Device into Superior Vena Cava)",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "CT abdomen/pelvis",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Insertion of Infusion Device into Superior Vena Cava, Percutaneous Approach",
+            "extracted_value": "Percutaneous central venous catheter insertion",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
           }
         ]
       },
       {
         "entity_type": "medications",
-        "true_positives": 25,
+        "true_positives": 27,
         "false_positives": 0,
-        "false_negatives": 15,
+        "false_negatives": 13,
         "precision": 1.0,
-        "recall": 0.625,
-        "f1": 0.7692,
+        "recall": 0.675,
+        "f1": 0.806,
         "details": [
           {
             "ground_truth_value": "Vancomycin",
@@ -3154,6 +2923,13 @@
           {
             "ground_truth_value": "Levothyroxine Sodium",
             "extracted_value": "Levothyroxine sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Thiamine",
+            "extracted_value": "Thiamine",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -3257,6 +3033,13 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "HYDROmorphone (Dilaudid)",
+            "extracted_value": "Hydromorphone",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "Acetaminophen",
             "extracted_value": "Acetaminophen",
             "matched": true,
@@ -3298,36 +3081,29 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 7,
-        "false_positives": 1,
+        "false_positives": 0,
         "false_negatives": 1,
-        "precision": 0.875,
+        "precision": 1.0,
         "recall": 0.875,
-        "f1": 0.875,
+        "f1": 0.9333,
         "details": [
           {
             "ground_truth_value": "S0262XA",
-            "extracted_value": "S0261",
+            "extracted_value": "S0262XA",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "S030XXA",
-            "extracted_value": "S030",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "S25512A",
-            "extracted_value": "S2551",
+            "extracted_value": "S25509A",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
             "ground_truth_value": "S36892A",
-            "extracted_value": "S3691",
+            "extracted_value": "S36899A",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -3354,43 +3130,43 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Tachycardia",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Y040XXA",
+            "extracted_value": "Y040XXA",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
-        "true_positives": 3,
-        "false_positives": 1,
-        "false_negatives": 1,
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1": 0.75,
+        "true_positives": 2,
+        "false_positives": 2,
+        "false_negatives": 2,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
         "details": [
           {
             "ground_truth_value": "Repair Upper Artery, Open Approach",
-            "extracted_value": "Open reduction with internal fixation of right mandibular subcondylar fracture",
+            "extracted_value": "Open reduction with internal fixation of right mandible subcondylar fracture",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
             "ground_truth_value": "Reposition Left Mandible with External Fixation Device, Percutaneous Approach",
-            "extracted_value": "External fixation of left maxilla and left mandible via percutaneous approach",
+            "extracted_value": "Percutaneous external fixation of left maxilla and left mandible",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 80.56
+            "score": 81.17
           },
           {
-            "ground_truth_value": "Reposition Right Mandible with Internal Fixation Device, Open Approach",
-            "extracted_value": "Repair of intercostal artery via open approach",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "ground_truth_value": "",
+            "extracted_value": "Open repair of upper artery (intercostal vessels)",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           },
           {
             "ground_truth_value": "",
@@ -3446,8 +3222,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Potassium Chloride",
-            "extracted_value": "IV potassium chloride",
+            "ground_truth_value": "0.9% Sodium Chloride",
+            "extracted_value": "Potassium chloride",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -3468,7 +3244,7 @@
           },
           {
             "ground_truth_value": "Phosphorus",
-            "extracted_value": "Phosphorus supplementation",
+            "extracted_value": "Phosphorus",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -3552,7 +3328,7 @@
           },
           {
             "ground_truth_value": "OxycoDONE Liquid",
-            "extracted_value": "Oxycodone liquid",
+            "extracted_value": "Oxycodone",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -3599,64 +3375,29 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 10,
-        "false_positives": 2,
+        "false_positives": 0,
         "false_negatives": 1,
-        "precision": 0.8333,
+        "precision": 1.0,
         "recall": 0.9091,
-        "f1": 0.8696,
+        "f1": 0.9524,
         "details": [
           {
             "ground_truth_value": "C3402",
-            "extracted_value": "Malignant neoplasm of left main bronchus",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "C3401",
-            "extracted_value": "Malignant neoplasm of right main bronchus",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Dyspnea",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hemoptysis",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "F17210",
-            "extracted_value": "F17200",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "Z8701",
-            "extracted_value": "Recurrent pneumonia",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "R1310",
-            "extracted_value": "R1310",
+            "extracted_value": "C3402",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "B379",
-            "extracted_value": "B379",
+            "ground_truth_value": "C3401",
+            "extracted_value": "C3401",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "F17210",
+            "extracted_value": "F17210",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -3677,52 +3418,66 @@
           },
           {
             "ground_truth_value": "M797",
-            "extracted_value": "M797",
+            "extracted_value": "M793",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "M5430",
+            "extracted_value": "M543",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "B379",
+            "extracted_value": "B379",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "M5430",
-            "extracted_value": "M5430",
+            "ground_truth_value": "R1310",
+            "extracted_value": "R1310",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z8701",
+            "extracted_value": "Recurrent pneumonia",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
           }
         ]
       },
       {
         "entity_type": "procedures",
-        "true_positives": 6,
+        "true_positives": 5,
         "false_positives": 3,
-        "false_negatives": 1,
-        "precision": 0.6667,
-        "recall": 0.8571,
-        "f1": 0.75,
+        "false_negatives": 2,
+        "precision": 0.625,
+        "recall": 0.7143,
+        "f1": 0.6667,
         "details": [
           {
-            "ground_truth_value": "",
-            "extracted_value": "Bronchoscopy",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "Inspection of Tracheobronchial Tree, Via Natural or Artificial Opening Endoscopic",
-            "extracted_value": "Inspection of tracheobronchial tree",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.0
-          },
-          {
             "ground_truth_value": "Dilation of Left Main Bronchus with Intraluminal Device, Via Natural or Artificial Opening Endoscopic",
-            "extracted_value": "Diagnostic excision from left main bronchus",
+            "extracted_value": "Bronchoscopy with inspection of tracheobronchial tree",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
             "ground_truth_value": "Destruction of Right Main Bronchus, Via Natural or Artificial Opening Endoscopic",
+            "extracted_value": "Diagnostic excision from left main bronchus",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
+          },
+          {
+            "ground_truth_value": "Excision of Left Main Bronchus, Via Natural or Artificial Opening Endoscopic, Diagnostic",
             "extracted_value": "Diagnostic excision from right main bronchus",
             "matched": true,
             "match_method": "fuzzy_name",
@@ -3736,8 +3491,8 @@
             "score": 85.5
           },
           {
-            "ground_truth_value": "Excision of Left Main Bronchus, Via Natural or Artificial Opening Endoscopic, Diagnostic",
-            "extracted_value": "Destruction of malignant tissue at left main bronchus",
+            "ground_truth_value": "Inspection of Tracheobronchial Tree, Via Natural or Artificial Opening Endoscopic",
+            "extracted_value": "Destruction of malignant tissue in left main bronchus",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -3750,15 +3505,15 @@
             "score": 0.0
           },
           {
-            "ground_truth_value": "Excision of Right Main Bronchus, Via Natural or Artificial Opening Endoscopic, Diagnostic",
-            "extracted_value": "Destruction of malignant tissue at right main bronchus",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "ground_truth_value": "",
+            "extracted_value": "Endoscopic destruction of diseased tissue in right main bronchus",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Influenza vaccine",
+            "extracted_value": "Influenza vaccination",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -3892,13 +3647,27 @@
     "25103777": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 14,
+        "true_positives": 13,
         "false_positives": 1,
-        "false_negatives": 3,
-        "precision": 0.9333,
-        "recall": 0.8235,
-        "f1": 0.875,
+        "false_negatives": 4,
+        "precision": 0.9286,
+        "recall": 0.7647,
+        "f1": 0.8387,
         "details": [
+          {
+            "ground_truth_value": "A4102",
+            "extracted_value": "A4102",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I330",
+            "extracted_value": "I330",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
           {
             "ground_truth_value": "N186",
             "extracted_value": "N186",
@@ -3907,7 +3676,7 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "E1122",
+            "ground_truth_value": "E1121",
             "extracted_value": "E119",
             "matched": true,
             "match_method": "category_code",
@@ -3921,36 +3690,50 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "E1122",
+            "extracted_value": "E1122",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "I120",
-            "extracted_value": "I129",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "A4102",
-            "extracted_value": "Sepsis due to Methicillin-resistant Staphylococcus aureus (MRSA)",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 92.56
-          },
-          {
-            "ground_truth_value": "I330",
-            "extracted_value": "I330",
+            "extracted_value": "I120",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
             "ground_truth_value": "T827XXA",
-            "extracted_value": "T827",
+            "extracted_value": "T827XXA",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "E785",
-            "extracted_value": "E789",
+            "extracted_value": "E785",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z87891",
+            "extracted_value": "Z87891",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "L851",
+            "extracted_value": "L851",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z89421",
+            "extracted_value": "Z89422",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -3968,60 +3751,18 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "K5900",
-            "extracted_value": "K591",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "Z87891",
-            "extracted_value": "History of nicotine dependence",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 95.0
-          },
-          {
-            "ground_truth_value": "L851",
-            "extracted_value": "L851",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Z89421",
-            "extracted_value": "Z8942",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Acute fluid overload",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 4,
-        "false_positives": 3,
+        "false_positives": 4,
         "false_negatives": 1,
-        "precision": 0.5714,
+        "precision": 0.5,
         "recall": 0.8,
-        "f1": 0.6667,
+        "f1": 0.6154,
         "details": [
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Transesophageal echocardiography",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
           {
             "ground_truth_value": "Performance of Urinary Filtration, Intermittent, Less than 6 Hours Per Day",
             "extracted_value": "Removal of external cardiac infusion device",
@@ -4031,24 +3772,38 @@
           },
           {
             "ground_truth_value": "Insertion of Tunneled Vascular Access Device into Chest Subcutaneous Tissue and Fascia, Percutaneous Approach",
-            "extracted_value": "Insertion of tunneled vascular access device",
+            "extracted_value": "Insertion of tunneled vascular access device into chest subcutaneous tissue via percutaneous approach",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 90.0
+            "score": 95.24
           },
           {
             "ground_truth_value": "Removal of Tunneled Vascular Access Device from Trunk Subcutaneous Tissue and Fascia, External Approach",
-            "extracted_value": "Placement of infusion device in right atrium",
+            "extracted_value": "Percutaneous placement of infusion device into right atrium",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
-            "ground_truth_value": "Insertion of Infusion Device into Right Atrium, Percutaneous Approach",
-            "extracted_value": "Removal of old tunneled vascular access device",
+            "ground_truth_value": "Removal of Infusion Device from Heart, External Approach",
+            "extracted_value": "Removal of old tunneled vascular access device from trunk using external approach",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 85.5
+            "score": 79.17
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Blood cultures",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Transesophageal echocardiography",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           },
           {
             "ground_truth_value": "",
@@ -4059,7 +3814,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Influenza vaccine",
+            "extracted_value": "Influenza vaccine administration",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -4235,19 +3990,19 @@
     "25508812": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 13,
+        "true_positives": 12,
         "false_positives": 1,
-        "false_negatives": 2,
-        "precision": 0.9286,
-        "recall": 0.8667,
-        "f1": 0.8966,
+        "false_negatives": 3,
+        "precision": 0.9231,
+        "recall": 0.8,
+        "f1": 0.8571,
         "details": [
           {
             "ground_truth_value": "J449",
-            "extracted_value": "J449",
+            "extracted_value": "J441",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "D469",
@@ -4259,20 +4014,6 @@
           {
             "ground_truth_value": "J811",
             "extracted_value": "J811",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Dyspnea",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "R0902",
-            "extracted_value": "R0902",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -4328,17 +4069,24 @@
           },
           {
             "ground_truth_value": "Z87891",
-            "extracted_value": "History of nicotine dependence",
+            "extracted_value": "Z87891",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 95.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "D735",
-            "extracted_value": "Splenic infarction",
+            "ground_truth_value": "",
+            "extracted_value": "History of splenic infarction",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "R0902",
+            "extracted_value": "Hypoxemia",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 80.0
+            "score": 100.0
           }
         ]
       },
@@ -4353,14 +4101,14 @@
         "details": [
           {
             "ground_truth_value": "Drainage of Left Lower Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic",
-            "extracted_value": "Diagnostic bronchoscopic drainage of left lower lung lobe",
+            "extracted_value": "Bronchoscopic drainage of left lower lung lobe",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
           },
           {
             "ground_truth_value": "Drainage of Right Middle Lung Lobe, Via Natural or Artificial Opening Endoscopic, Diagnostic",
-            "extracted_value": "Diagnostic bronchoscopic drainage of right middle lung lobe",
+            "extracted_value": "Bronchoscopic drainage of right middle lung lobe",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -4370,11 +4118,11 @@
       {
         "entity_type": "medications",
         "true_positives": 21,
-        "false_positives": 5,
+        "false_positives": 0,
         "false_negatives": 5,
-        "precision": 0.8077,
+        "precision": 1.0,
         "recall": 0.8077,
-        "f1": 0.8077,
+        "f1": 0.8936,
         "details": [
           {
             "ground_truth_value": "Furosemide",
@@ -4393,27 +4141,6 @@
           {
             "ground_truth_value": "Rasburicase",
             "extracted_value": "Rasburicase",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Insulin",
-            "extracted_value": "Insulin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Glucose Gel",
-            "extracted_value": "Glucose gel",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Dextrose 50%",
-            "extracted_value": "Dextrose 50%",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -4468,6 +4195,20 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "Simvastatin",
+            "extracted_value": "Simvastatin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Vitamin D",
+            "extracted_value": "Vitamin D",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "Polyethylene Glycol",
             "extracted_value": "Polyethylene glycol",
             "matched": true,
@@ -4489,13 +4230,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Simvastatin",
-            "extracted_value": "Simvastatin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "Multivitamins",
             "extracted_value": "Multivitamins",
             "matched": true,
@@ -4503,22 +4237,22 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Vitamin D",
-            "extracted_value": "Vitamin D",
+            "ground_truth_value": "Insulin",
+            "extracted_value": "Insulin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Normal saline flushes",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Dextrose 50%",
+            "extracted_value": "Dextrose 50%",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "Sodium Chloride 0.9%  Flush",
-            "extracted_value": "Sodium chloride 0.9%",
+            "ground_truth_value": "Glucose Gel",
+            "extracted_value": "Glucose gel",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -4531,32 +4265,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Levothyroxine sodium",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Pantoprazole",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Docusate sodium",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Escitalopram oxalate",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Sodium Chloride 0.9%  Flush",
+            "extracted_value": "Sodium chloride 0.9%",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
           }
         ]
       }
@@ -4564,12 +4277,12 @@
     "25559382": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 14,
-        "false_positives": 1,
-        "false_negatives": 3,
-        "precision": 0.9333,
-        "recall": 0.8235,
-        "f1": 0.875,
+        "true_positives": 13,
+        "false_positives": 2,
+        "false_negatives": 4,
+        "precision": 0.8667,
+        "recall": 0.7647,
+        "f1": 0.8125,
         "details": [
           {
             "ground_truth_value": "I25110",
@@ -4587,24 +4300,24 @@
           },
           {
             "ground_truth_value": "I110",
-            "extracted_value": "I119",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I5022",
-            "extracted_value": "I5020",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I4892",
-            "extracted_value": "I4892",
+            "extracted_value": "I110",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "I5022",
+            "extracted_value": "I5022",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I4892",
+            "extracted_value": "I483",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "E785",
@@ -4628,25 +4341,25 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Z8673",
-            "extracted_value": "Transient ischemic attack",
+            "ground_truth_value": "Z87891",
+            "extracted_value": "Z87891",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Cerebral infarction",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Z87891",
+            "extracted_value": "Z87891",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I6522",
-            "extracted_value": "I6521",
+            "extracted_value": "I6522",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "Z952",
@@ -4657,24 +4370,24 @@
           },
           {
             "ground_truth_value": "Z8571",
-            "extracted_value": "Hodgkin lymphoma",
+            "extracted_value": "Z8571",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "Z8546",
-            "extracted_value": "Malignant neoplasm of the prostate",
+            "extracted_value": "Z8546",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 89.06
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "Z87891",
-            "extracted_value": "Nicotine dependence",
+            "extracted_value": "Z87891",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.0
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
@@ -4689,7 +4402,7 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Aortocoronary bypass graft placement",
+            "extracted_value": "Aortocoronary bypass graft",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -4710,7 +4423,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Electrocardiography (EKG)",
+            "extracted_value": "EKG",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -4802,19 +4515,19 @@
     "25864431": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 19,
-        "false_positives": 8,
-        "false_negatives": 7,
-        "precision": 0.7037,
-        "recall": 0.7308,
-        "f1": 0.717,
+        "true_positives": 17,
+        "false_positives": 0,
+        "false_negatives": 9,
+        "precision": 1.0,
+        "recall": 0.6538,
+        "f1": 0.7907,
         "details": [
           {
             "ground_truth_value": "K7031",
-            "extracted_value": "K7030",
+            "extracted_value": "K7031",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "K8520",
@@ -4838,43 +4551,8 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Progressive jaundice",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Confusion",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "E43",
-            "extracted_value": "Severe abdominal distension",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "R0902",
-            "extracted_value": "Hypoxemia",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "K7290",
             "extracted_value": "K7290",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "D689",
-            "extracted_value": "D689",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -4909,31 +4587,24 @@
           },
           {
             "ground_truth_value": "I8510",
-            "extracted_value": "Secondary esophageal varices without active bleeding",
+            "extracted_value": "I8510",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 95.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "K7681",
-            "extracted_value": "K768",
+            "extracted_value": "K7681",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Dyspnea",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Severe protein-calorie malnutrition",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "E43",
+            "extracted_value": "E43",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "J189",
@@ -4941,13 +4612,6 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hepatic encephalopathy",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           },
           {
             "ground_truth_value": "D6959",
@@ -4971,43 +4635,22 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "K7290",
-            "extracted_value": "K7290",
+            "ground_truth_value": "F17210",
+            "extracted_value": "F17210",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "F17210",
-            "extracted_value": "F17200",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Pruritus",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Nausea",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 4,
-        "false_positives": 2,
+        "false_positives": 3,
         "false_negatives": 4,
-        "precision": 0.6667,
+        "precision": 0.5714,
         "recall": 0.5,
-        "f1": 0.5714,
+        "f1": 0.5333,
         "details": [
           {
             "ground_truth_value": "Drainage of Peritoneal Cavity, Percutaneous Approach, Diagnostic",
@@ -5032,7 +4675,7 @@
           },
           {
             "ground_truth_value": "Insertion of Feeding Device into Jejunum, Via Natural or Artificial Opening Endoscopic",
-            "extracted_value": "Jejunal feeding tube placement",
+            "extracted_value": "Endoscopic jejunal feeding tube placement",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -5047,6 +4690,13 @@
           {
             "ground_truth_value": "",
             "extracted_value": "Intermittent dialysis",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Influenza vaccination",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -5067,13 +4717,20 @@
     "25933959": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 17,
+        "true_positives": 18,
         "false_positives": 1,
-        "false_negatives": 7,
-        "precision": 0.9444,
-        "recall": 0.7083,
-        "f1": 0.8095,
+        "false_negatives": 6,
+        "precision": 0.9474,
+        "recall": 0.75,
+        "f1": 0.8372,
         "details": [
+          {
+            "ground_truth_value": "E11621",
+            "extracted_value": "E11621",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
           {
             "ground_truth_value": "E11649",
             "extracted_value": "E119",
@@ -5096,6 +4753,13 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "I509",
+            "extracted_value": "I5030",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
             "ground_truth_value": "I2510",
             "extracted_value": "I2510",
             "matched": true,
@@ -5103,15 +4767,22 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "I509",
-            "extracted_value": "I5021",
+            "ground_truth_value": "I252",
+            "extracted_value": "I252",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I130",
+            "extracted_value": "I1310",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
-            "ground_truth_value": "I252",
-            "extracted_value": "I252",
+            "ground_truth_value": "I701",
+            "extracted_value": "I701",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -5125,10 +4796,10 @@
           },
           {
             "ground_truth_value": "E785",
-            "extracted_value": "E789",
+            "extracted_value": "E785",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "E669",
@@ -5159,46 +4830,32 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "E11621",
-            "extracted_value": "E11621",
+            "ground_truth_value": "Z87891",
+            "extracted_value": "Z87891",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
             "ground_truth_value": "L03116",
-            "extracted_value": "L03115",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I130",
-            "extracted_value": "I139",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "I701",
-            "extracted_value": "I701",
+            "extracted_value": "L03116",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Hypoglycemia",
+            "extracted_value": "Hypoglycemia without coma",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
-            "ground_truth_value": "Z87891",
-            "extracted_value": "Former nicotine dependence",
+            "ground_truth_value": "E1122",
+            "extracted_value": "E1122",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
@@ -5220,10 +4877,10 @@
           },
           {
             "ground_truth_value": "Excision of Left Saphenous Vein, Open Approach",
-            "extracted_value": "Excision of left saphenous vein",
+            "extracted_value": "Excision of left saphenous vein under open approach",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 86.67
+            "score": 92.78
           },
           {
             "ground_truth_value": "Bypass Left Femoral Artery to Popliteal Artery with Autologous Venous Tissue, Open Approach",
@@ -5234,7 +4891,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Surgical revascularization and debridement of left foot",
+            "extracted_value": "Surgical revascularization and debridement",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -5243,277 +4900,24 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 36,
+        "true_positives": 0,
         "false_positives": 0,
-        "false_negatives": 37,
-        "precision": 1.0,
-        "recall": 0.4932,
-        "f1": 0.6606,
-        "details": [
-          {
-            "ground_truth_value": "Aspirin",
-            "extracted_value": "Aspirin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Prasugrel",
-            "extracted_value": "Prasugrel",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Digoxin",
-            "extracted_value": "Digoxin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Metoprolol Succinate XL",
-            "extracted_value": "Metoprolol succinate XL",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "HydrALAZINE",
-            "extracted_value": "Hydralazine",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Isosorbide Dinitrate",
-            "extracted_value": "Isosorbide dinitrate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Torsemide",
-            "extracted_value": "Torsemide",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Levothyroxine Sodium",
-            "extracted_value": "Levothyroxine sodium",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Omeprazole",
-            "extracted_value": "Omeprazole",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "FoLIC Acid",
-            "extracted_value": "Folic acid",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Calcium Carbonate",
-            "extracted_value": "Calcium carbonate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Vitamin D",
-            "extracted_value": "Vitamin D",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Ferrous Sulfate",
-            "extracted_value": "Ferrous sulfate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Insulin",
-            "extracted_value": "Insulin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Febuxostat",
-            "extracted_value": "Febuxostat",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Ezetimibe",
-            "extracted_value": "Ezetimibe",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "BuPROPion (Sustained Release)",
-            "extracted_value": "Bupropion SR",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "Ciprofloxacin HCl",
-            "extracted_value": "Ciprofloxacin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "MetroNIDAZOLE",
-            "extracted_value": "Metronidazole",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "OxyCODONE (Immediate Release)",
-            "extracted_value": "Oxycodone",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Acetaminophen",
-            "extracted_value": "Acetaminophen",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Docusate Sodium",
-            "extracted_value": "Docusate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Senna",
-            "extracted_value": "Senna",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Bisacodyl",
-            "extracted_value": "Bisacodyl",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "DiphenhydrAMINE",
-            "extracted_value": "Diphenhydramine",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Heparin",
-            "extracted_value": "Subcutaneous heparin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Miconazole Powder 2%",
-            "extracted_value": "Miconazole powder",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Nystatin Cream",
-            "extracted_value": "Nystatin cream",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "CefTAZidime",
-            "extracted_value": "Ceftazidime",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Vancomycin",
-            "extracted_value": "Vancomycin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "HYDROmorphone (Dilaudid)",
-            "extracted_value": "IV hydromorphone",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 85.5
-          },
-          {
-            "ground_truth_value": "Dextrose 50%",
-            "extracted_value": "Dextrose 50%",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Glucose Gel",
-            "extracted_value": "Glucose gel",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Furosemide",
-            "extracted_value": "IV furosemide",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "0.9% Sodium Chloride (Mini Bag Plus)",
-            "extracted_value": "Potassium chloride",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Sodium Polystyrene Sulfonate",
-            "extracted_value": "Sodium polystyrene sulfonate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          }
-        ]
+        "false_negatives": 73,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "details": []
       }
     ],
     "26228185": [
       {
         "entity_type": "diagnoses",
         "true_positives": 22,
-        "false_positives": 2,
+        "false_positives": 0,
         "false_negatives": 12,
-        "precision": 0.9167,
+        "precision": 1.0,
         "recall": 0.6471,
-        "f1": 0.7586,
+        "f1": 0.7857,
         "details": [
           {
             "ground_truth_value": "N179",
@@ -5530,13 +4934,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Dysuria",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
             "ground_truth_value": "C9110",
             "extracted_value": "C9110",
             "matched": true,
@@ -5545,10 +4942,10 @@
           },
           {
             "ground_truth_value": "I69354",
-            "extracted_value": "I69351",
+            "extracted_value": "I69354",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I495",
@@ -5559,10 +4956,10 @@
           },
           {
             "ground_truth_value": "I480",
-            "extracted_value": "I4801",
+            "extracted_value": "I480",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I2510",
@@ -5573,21 +4970,14 @@
           },
           {
             "ground_truth_value": "E1142",
-            "extracted_value": "E119",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "E1142",
             "extracted_value": "E1142",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "E6601",
-            "extracted_value": "E6601",
+            "ground_truth_value": "Z9884",
+            "extracted_value": "Z9884",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -5622,9 +5012,9 @@
           },
           {
             "ground_truth_value": "E861",
-            "extracted_value": "Hypovolemia",
+            "extracted_value": "E861",
             "matched": true,
-            "match_method": "fuzzy_name",
+            "match_method": "exact_code",
             "score": 100.0
           },
           {
@@ -5650,10 +5040,10 @@
           },
           {
             "ground_truth_value": "D696",
-            "extracted_value": "D699",
+            "extracted_value": "D696",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "D509",
@@ -5688,7 +5078,7 @@
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 4,
+        "false_positives": 6,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
@@ -5696,28 +5086,42 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Pacemaker placement",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Coronary angioplasty with stent implant",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Bariatric surgery",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
             "extracted_value": "IV hydration with 0.9% sodium chloride and lactated Ringers",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Urinalysis cultures",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Point-of-care glucose monitoring",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Complete blood count trending",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Lidocaine patches application",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "IV flushes with heparin and normal saline",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -5739,22 +5143,29 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 6,
-        "false_positives": 3,
+        "false_positives": 1,
         "false_negatives": 1,
-        "precision": 0.6667,
+        "precision": 0.8571,
         "recall": 0.8571,
-        "f1": 0.75,
+        "f1": 0.8571,
         "details": [
           {
-            "ground_truth_value": "I110",
-            "extracted_value": "I110",
+            "ground_truth_value": "J811",
+            "extracted_value": "J811",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "J811",
-            "extracted_value": "J811",
+            "ground_truth_value": "I509",
+            "extracted_value": "I509",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "I110",
+            "extracted_value": "I110",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -5775,17 +5186,10 @@
           },
           {
             "ground_truth_value": "E7800",
-            "extracted_value": "E780",
+            "extracted_value": "E7800",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Hypertension",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "J811",
@@ -5793,20 +5197,6 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Bilateral lower extremity edema",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "I509",
-            "extracted_value": "I5022",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           }
         ]
       },
@@ -5821,21 +5211,21 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Chest X-ray",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Echocardiography",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
             "extracted_value": "IV diuretics administration",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Echocardiogram",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Chest X-ray",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -5845,7 +5235,7 @@
       {
         "entity_type": "medications",
         "true_positives": 0,
-        "false_positives": 2,
+        "false_positives": 1,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
@@ -5857,13 +5247,6 @@
             "matched": false,
             "match_method": "none",
             "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "IV diuretics",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       }
@@ -5871,13 +5254,20 @@
     "26529390": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 23,
+        "true_positives": 19,
         "false_positives": 0,
-        "false_negatives": 6,
+        "false_negatives": 10,
         "precision": 1.0,
-        "recall": 0.7931,
-        "f1": 0.8846,
+        "recall": 0.6552,
+        "f1": 0.7917,
         "details": [
+          {
+            "ground_truth_value": "D735",
+            "extracted_value": "D735",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
           {
             "ground_truth_value": "D469",
             "extracted_value": "D469",
@@ -5887,7 +5277,21 @@
           },
           {
             "ground_truth_value": "J449",
-            "extracted_value": "J449",
+            "extracted_value": "J441",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "J9601",
+            "extracted_value": "J9600",
+            "matched": true,
+            "match_method": "category_code",
+            "score": 80.0
+          },
+          {
+            "ground_truth_value": "I5033",
+            "extracted_value": "I5033",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -5895,55 +5299,6 @@
           {
             "ground_truth_value": "I110",
             "extracted_value": "I119",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "Z853",
-            "extracted_value": "Z853",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "D735",
-            "extracted_value": "Splenic infarction",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "R161",
-            "extracted_value": "R161",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "J9601",
-            "extracted_value": "J9601",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "J811",
-            "extracted_value": "J811",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "J9811",
-            "extracted_value": "J9811",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "I5033",
-            "extracted_value": "I5032",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -5964,28 +5319,21 @@
           },
           {
             "ground_truth_value": "D630",
-            "extracted_value": "D630",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "D6959",
-            "extracted_value": "D693",
+            "extracted_value": "D631",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
-            "ground_truth_value": "N390",
-            "extracted_value": "N390",
+            "ground_truth_value": "D6959",
+            "extracted_value": "D6959",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
           },
           {
-            "ground_truth_value": "E790",
-            "extracted_value": "E790",
+            "ground_truth_value": "N390",
+            "extracted_value": "N390",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -5999,14 +5347,21 @@
           },
           {
             "ground_truth_value": "E785",
-            "extracted_value": "E789",
+            "extracted_value": "E785",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "E039",
             "extracted_value": "E039",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "E790",
+            "extracted_value": "E790",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -6033,26 +5388,26 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "G893",
-            "extracted_value": "G8929",
+            "ground_truth_value": "Z853",
+            "extracted_value": "Z853",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 3,
-        "false_positives": 2,
+        "false_positives": 3,
         "false_negatives": 2,
-        "precision": 0.6,
+        "precision": 0.5,
         "recall": 0.6,
-        "f1": 0.6,
+        "f1": 0.5455,
         "details": [
           {
             "ground_truth_value": "Beam Radiation of Spleen using Photons 1 - 10 MeV",
-            "extracted_value": "Beam radiation therapy to spleen",
+            "extracted_value": "Beam radiation therapy",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
@@ -6063,13 +5418,6 @@
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 85.5
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Diuresis",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           },
           {
             "ground_truth_value": "Extraction of Iliac Bone Marrow, Percutaneous Approach, Diagnostic",
@@ -6084,17 +5432,31 @@
             "matched": false,
             "match_method": "none",
             "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "CT abdomen",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Chest X-ray",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "medications",
         "true_positives": 14,
-        "false_positives": 1,
+        "false_positives": 2,
         "false_negatives": 8,
-        "precision": 0.9333,
+        "precision": 0.875,
         "recall": 0.6364,
-        "f1": 0.7568,
+        "f1": 0.7368,
         "details": [
           {
             "ground_truth_value": "Levothyroxine Sodium",
@@ -6161,7 +5523,7 @@
           },
           {
             "ground_truth_value": "Potassium Chloride",
-            "extracted_value": "Sodium chloride 0.9% flush",
+            "extracted_value": "Sodium chloride 0.9%",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -6200,6 +5562,13 @@
             "matched": false,
             "match_method": "none",
             "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Potassium binders",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       }
@@ -6216,10 +5585,10 @@
         "details": [
           {
             "ground_truth_value": "I120",
-            "extracted_value": "Hypertensive chronic kidney disease with stage 5 CKD",
+            "extracted_value": "I120",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 88.24
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "N186",
@@ -6272,7 +5641,7 @@
           },
           {
             "ground_truth_value": "J45909",
-            "extracted_value": "J45901",
+            "extracted_value": "J459",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -6293,10 +5662,10 @@
           },
           {
             "ground_truth_value": "Z86718",
-            "extracted_value": "Z86711",
+            "extracted_value": "History of venous thromboembolism",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "fuzzy_name",
+            "score": 85.5
           },
           {
             "ground_truth_value": "E039",
@@ -6317,7 +5686,7 @@
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 3,
+        "false_positives": 1,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
@@ -6326,20 +5695,6 @@
           {
             "ground_truth_value": "",
             "extracted_value": "Hemodialysis",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Blood cultures",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Paracentesis",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -6364,7 +5719,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Rifaxomin",
+            "extracted_value": "Rifaximin",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -6376,11 +5731,11 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 10,
-        "false_positives": 4,
+        "false_positives": 3,
         "false_negatives": 4,
-        "precision": 0.7143,
+        "precision": 0.7692,
         "recall": 0.7143,
-        "f1": 0.7143,
+        "f1": 0.7407,
         "details": [
           {
             "ground_truth_value": "I2699",
@@ -6390,25 +5745,18 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "I82432",
-            "extracted_value": "I82521",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
             "ground_truth_value": "I82412",
-            "extracted_value": "I82531",
+            "extracted_value": "I82412",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I5022",
-            "extracted_value": "I5023",
+            "extracted_value": "I5022",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I4891",
@@ -6418,15 +5766,22 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Coronary artery disease s/p aortocoronary bypass graft",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Z951",
+            "extracted_value": "Z951",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "C9000",
             "extracted_value": "C9000",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "D472",
+            "extracted_value": "D472",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
@@ -6440,10 +5795,10 @@
           },
           {
             "ground_truth_value": "I272",
-            "extracted_value": "I2724",
+            "extracted_value": "I272",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "",
@@ -6467,25 +5822,18 @@
             "score": 0.0
           },
           {
-            "ground_truth_value": "D472",
-            "extracted_value": "D472",
+            "ground_truth_value": "Z9181",
+            "extracted_value": "Z9181",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "Z9181",
-            "extracted_value": "History of falls",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 88.24
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 2,
+        "false_positives": 3,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
@@ -6493,14 +5841,21 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Pneumococcal 23-valent polysaccharide vaccine",
+            "extracted_value": "IV fluid resuscitation with normal saline and dextrose-containing solutions",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Influenza vaccine quadrivalent",
+            "extracted_value": "Pneumococcal 23-valent polysaccharide vaccine administration",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Influenza vaccine quadrivalent administration",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -6510,19 +5865,12 @@
       {
         "entity_type": "medications",
         "true_positives": 13,
-        "false_positives": 2,
+        "false_positives": 0,
         "false_negatives": 23,
-        "precision": 0.8667,
+        "precision": 1.0,
         "recall": 0.3611,
-        "f1": 0.5098,
+        "f1": 0.5306,
         "details": [
-          {
-            "ground_truth_value": "Aspirin",
-            "extracted_value": "Aspirin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
           {
             "ground_truth_value": "Heparin Sodium",
             "extracted_value": "Heparin",
@@ -6540,6 +5888,13 @@
           {
             "ground_truth_value": "Enoxaparin Sodium",
             "extracted_value": "Enoxaparin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Aspirin",
+            "extracted_value": "Aspirin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -6587,8 +5942,15 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "Calcium Gluconate",
+            "extracted_value": "Calcium gluconate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "Phosphorus",
-            "extracted_value": "Phosphorus supplementation",
+            "extracted_value": "Phosphorus",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -6599,27 +5961,6 @@
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "Calcium Gluconate",
-            "extracted_value": "Calcium gluconate",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Normal saline",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Dextrose-containing solutions",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       }
@@ -6627,33 +5968,26 @@
     "27996267": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 17,
-        "false_positives": 2,
-        "false_negatives": 22,
-        "precision": 0.8947,
-        "recall": 0.4359,
-        "f1": 0.5862,
+        "true_positives": 15,
+        "false_positives": 1,
+        "false_negatives": 24,
+        "precision": 0.9375,
+        "recall": 0.3846,
+        "f1": 0.5455,
         "details": [
           {
-            "ground_truth_value": "E11621",
+            "ground_truth_value": "E1152",
             "extracted_value": "E119",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
-            "ground_truth_value": "E1122",
-            "extracted_value": "E1151",
+            "ground_truth_value": "E1152",
+            "extracted_value": "E1152",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Gangrene",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "E11621",
@@ -6678,10 +6012,10 @@
           },
           {
             "ground_truth_value": "N184",
-            "extracted_value": "N183",
+            "extracted_value": "N184",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "I130",
@@ -6692,10 +6026,10 @@
           },
           {
             "ground_truth_value": "I5033",
-            "extracted_value": "I5032",
+            "extracted_value": "I5033",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "N179",
@@ -6713,35 +6047,21 @@
           },
           {
             "ground_truth_value": "T8119XA",
-            "extracted_value": "T814",
+            "extracted_value": "T8140XA",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
-            "ground_truth_value": "B952",
-            "extracted_value": "B952",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Z1621",
-            "extracted_value": "Z1621",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "T8131XA",
-            "extracted_value": "T8112",
+            "extracted_value": "T8110XA",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
           },
           {
             "ground_truth_value": "T814XXA",
-            "extracted_value": "T8131",
+            "extracted_value": "T8130XA",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -6823,11 +6143,11 @@
       {
         "entity_type": "diagnoses",
         "true_positives": 14,
-        "false_positives": 4,
+        "false_positives": 1,
         "false_negatives": 4,
-        "precision": 0.7778,
+        "precision": 0.9333,
         "recall": 0.7778,
-        "f1": 0.7778,
+        "f1": 0.8485,
         "details": [
           {
             "ground_truth_value": "G1221",
@@ -6837,25 +6157,18 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "R4182",
-            "extracted_value": "R4182",
+            "ground_truth_value": "I214",
+            "extracted_value": "I214",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "I214",
-            "extracted_value": "I2102",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           },
           {
             "ground_truth_value": "G3109",
-            "extracted_value": "G3109",
+            "extracted_value": "Frontotemporal dementia",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "fuzzy_name",
+            "score": 95.0
           },
           {
             "ground_truth_value": "F259",
@@ -6901,7 +6214,7 @@
           },
           {
             "ground_truth_value": "T17990A",
-            "extracted_value": "T17900",
+            "extracted_value": "T17908A",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -6921,13 +6234,6 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Pericardial effusion",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
             "ground_truth_value": "N390",
             "extracted_value": "N390",
             "matched": true,
@@ -6935,36 +6241,29 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "G1221",
-            "extracted_value": "G1221",
+            "ground_truth_value": "",
+            "extracted_value": "Respiratory failure with ventilator dependence",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "R4182",
+            "extracted_value": "R4182",
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Anemia",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Electrolyte disturbances",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 3,
-        "false_positives": 0,
+        "false_positives": 2,
         "false_negatives": 0,
-        "precision": 1.0,
+        "precision": 0.6,
         "recall": 1.0,
-        "f1": 1.0,
+        "f1": 0.75,
         "details": [
           {
             "ground_truth_value": "Extirpation of Matter from Left Lower Lobe Bronchus, Via Natural or Artificial Opening Endoscopic",
@@ -6986,6 +6285,20 @@
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Cardiac catheterization",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Echocardiography",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           }
         ]
       },
@@ -7179,12 +6492,12 @@
     "28984460": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 7,
+        "true_positives": 8,
         "false_positives": 0,
-        "false_negatives": 1,
+        "false_negatives": 0,
         "precision": 1.0,
-        "recall": 0.875,
-        "f1": 0.9333,
+        "recall": 1.0,
+        "f1": 1.0,
         "details": [
           {
             "ground_truth_value": "N179",
@@ -7234,13 +6547,20 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z794",
+            "extracted_value": "Z794",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 3,
+        "false_positives": 4,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
@@ -7248,14 +6568,21 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "IV hydration",
+            "extracted_value": "IV hydration with sodium repletion",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Serial sodium monitoring",
+            "extracted_value": "Serial sodium level monitoring",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Insulin dosing optimization",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -7280,21 +6607,21 @@
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Insulin",
+            "extracted_value": "insulin",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Levothyroxine",
+            "extracted_value": "levothyroxine",
             "matched": false,
             "match_method": "none",
             "score": 0.0
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Antiepileptic medications",
+            "extracted_value": "antiepileptic medications",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -7305,16 +6632,16 @@
     "29026789": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 5,
+        "true_positives": 4,
         "false_positives": 0,
-        "false_negatives": 1,
+        "false_negatives": 2,
         "precision": 1.0,
-        "recall": 0.8333,
-        "f1": 0.9091,
+        "recall": 0.6667,
+        "f1": 0.8,
         "details": [
           {
             "ground_truth_value": "S82251A",
-            "extracted_value": "S82224A",
+            "extracted_value": "S82201A",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -7328,24 +6655,17 @@
           },
           {
             "ground_truth_value": "H548",
-            "extracted_value": "H540",
+            "extracted_value": "H548",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "F09",
-            "extracted_value": "Mental disorder due to a known physiological condition",
+            "extracted_value": "Unspecified mental disorder due to known physiological condition",
             "matched": true,
             "match_method": "fuzzy_name",
-            "score": 93.21
-          },
-          {
-            "ground_truth_value": "W1830XA",
-            "extracted_value": "Fall on the same level",
-            "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 85.5
+            "score": 100.0
           }
         ]
       },
@@ -7377,8 +6697,8 @@
         "f1": 0.7222,
         "details": [
           {
-            "ground_truth_value": "CeFAZolin",
-            "extracted_value": "Cefazolin",
+            "ground_truth_value": "Multivitamins",
+            "extracted_value": "Multivitamins",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -7398,6 +6718,27 @@
             "score": 100.0
           },
           {
+            "ground_truth_value": "TraZODone",
+            "extracted_value": "Trazodone",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Divalproex (DELayed Release)",
+            "extracted_value": "Divalproex delayed release",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 96.3
+          },
+          {
+            "ground_truth_value": "Docusate Sodium",
+            "extracted_value": "Docusate sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
             "ground_truth_value": "Ketorolac",
             "extracted_value": "Ketorolac",
             "matched": true,
@@ -7406,14 +6747,7 @@
           },
           {
             "ground_truth_value": "Enoxaparin Sodium",
-            "extracted_value": "Enoxaparin",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "TraZODone",
-            "extracted_value": "Trazodone",
+            "extracted_value": "Enoxaparin sodium",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -7433,15 +6767,15 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "Divalproex (DELayed Release)",
-            "extracted_value": "Divalproex",
+            "ground_truth_value": "Acetaminophen",
+            "extracted_value": "Acetaminophen",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
           },
           {
-            "ground_truth_value": "Docusate Sodium",
-            "extracted_value": "Docusate sodium",
+            "ground_truth_value": "CeFAZolin",
+            "extracted_value": "Cefazolin",
             "matched": true,
             "match_method": "drug_name",
             "score": 100.0
@@ -7466,20 +6800,6 @@
             "matched": false,
             "match_method": "none",
             "score": 0.0
-          },
-          {
-            "ground_truth_value": "Acetaminophen",
-            "extracted_value": "Acetaminophen",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "Multivitamins",
-            "extracted_value": "Multivitamins",
-            "matched": true,
-            "match_method": "drug_name",
-            "score": 100.0
           }
         ]
       }
@@ -7487,12 +6807,12 @@
     "29281842": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 17,
-        "false_positives": 3,
-        "false_negatives": 8,
-        "precision": 0.85,
-        "recall": 0.68,
-        "f1": 0.7556,
+        "true_positives": 14,
+        "false_positives": 1,
+        "false_negatives": 11,
+        "precision": 0.9333,
+        "recall": 0.56,
+        "f1": 0.7,
         "details": [
           {
             "ground_truth_value": "G1221",
@@ -7509,11 +6829,11 @@
             "score": 80.0
           },
           {
-            "ground_truth_value": "J9610",
-            "extracted_value": "J9610",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "ground_truth_value": "",
+            "extracted_value": "Chronic respiratory failure",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
           },
           {
             "ground_truth_value": "J95851",
@@ -7523,25 +6843,11 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "B965",
-            "extracted_value": "B965",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
-            "ground_truth_value": "B9620",
-            "extracted_value": "B9620",
-            "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
-          },
-          {
             "ground_truth_value": "I214",
-            "extracted_value": "I2102",
+            "extracted_value": "I214",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "N179",
@@ -7549,13 +6855,6 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "N141",
-            "extracted_value": "N142",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           },
           {
             "ground_truth_value": "N10",
@@ -7573,7 +6872,7 @@
           },
           {
             "ground_truth_value": "G9340",
-            "extracted_value": "G9341",
+            "extracted_value": "G931",
             "matched": true,
             "match_method": "category_code",
             "score": 80.0
@@ -7619,35 +6918,28 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Overweight",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Demand ischemia",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 1,
-        "false_positives": 2,
+        "false_positives": 3,
         "false_negatives": 1,
-        "precision": 0.3333,
+        "precision": 0.25,
         "recall": 0.5,
-        "f1": 0.4,
+        "f1": 0.3333,
         "details": [
           {
             "ground_truth_value": "",
-            "extracted_value": "Intubation and mechanical ventilation",
+            "extracted_value": "Mechanical ventilation",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Intubation",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -7690,19 +6982,19 @@
     "29780751": [
       {
         "entity_type": "diagnoses",
-        "true_positives": 17,
-        "false_positives": 5,
-        "false_negatives": 6,
-        "precision": 0.7727,
-        "recall": 0.7391,
-        "f1": 0.7556,
+        "true_positives": 21,
+        "false_positives": 0,
+        "false_negatives": 2,
+        "precision": 1.0,
+        "recall": 0.913,
+        "f1": 0.9545,
         "details": [
           {
             "ground_truth_value": "B348",
-            "extracted_value": "Viral infection of unspecified site",
+            "extracted_value": "B349",
             "matched": true,
-            "match_method": "fuzzy_name",
-            "score": 90.91
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "C9110",
@@ -7710,13 +7002,6 @@
             "matched": true,
             "match_method": "exact_code",
             "score": 100.0
-          },
-          {
-            "ground_truth_value": "E1136",
-            "extracted_value": "E119",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
           },
           {
             "ground_truth_value": "E1136",
@@ -7741,31 +7026,31 @@
           },
           {
             "ground_truth_value": "Z8673",
-            "extracted_value": "Transient ischemic attack",
+            "extracted_value": "History of transient ischemic attack",
             "matched": true,
             "match_method": "fuzzy_name",
             "score": 90.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Cerebral infarction",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Z794",
+            "extracted_value": "History of cerebral infarction without residual deficits",
+            "matched": true,
+            "match_method": "fuzzy_name",
+            "score": 85.5
           },
           {
             "ground_truth_value": "C6292",
-            "extracted_value": "C6292",
+            "extracted_value": "C6212",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "E669",
-            "extracted_value": "E669",
+            "extracted_value": "E6601",
             "matched": true,
-            "match_method": "exact_code",
-            "score": 100.0
+            "match_method": "category_code",
+            "score": 80.0
           },
           {
             "ground_truth_value": "H409",
@@ -7811,31 +7096,10 @@
           },
           {
             "ground_truth_value": "D6481",
-            "extracted_value": "D641",
+            "extracted_value": "D6481",
             "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "M7989",
-            "extracted_value": "M797",
-            "matched": true,
-            "match_method": "category_code",
-            "score": 80.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Fever",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Malaise",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "match_method": "exact_code",
+            "score": 100.0
           },
           {
             "ground_truth_value": "R002",
@@ -7845,44 +7109,44 @@
             "score": 100.0
           },
           {
-            "ground_truth_value": "",
-            "extracted_value": "Hypoglycemic episodes",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
+            "ground_truth_value": "Z9884",
+            "extracted_value": "Z9884",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z955",
+            "extracted_value": "Z955",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Z950",
+            "extracted_value": "Z950",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "G8929",
+            "extracted_value": "G8929",
+            "matched": true,
+            "match_method": "exact_code",
+            "score": 100.0
           }
         ]
       },
       {
         "entity_type": "procedures",
         "true_positives": 0,
-        "false_positives": 6,
+        "false_positives": 2,
         "false_negatives": 0,
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
         "details": [
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Coronary angioplasty with stent placement",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Cardiac pacemaker placement",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Bariatric surgery",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
           {
             "ground_truth_value": "",
             "extracted_value": "IV fluid administration",
@@ -7892,14 +7156,7 @@
           },
           {
             "ground_truth_value": "",
-            "extracted_value": "Potassium supplementation",
-            "matched": false,
-            "match_method": "none",
-            "score": 0.0
-          },
-          {
-            "ground_truth_value": "",
-            "extracted_value": "Magnesium supplementation",
+            "extracted_value": "Electrolyte repletion",
             "matched": false,
             "match_method": "none",
             "score": 0.0
@@ -7908,13 +7165,238 @@
       },
       {
         "entity_type": "medications",
-        "true_positives": 0,
-        "false_positives": 0,
-        "false_negatives": 56,
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "details": []
+        "true_positives": 30,
+        "false_positives": 2,
+        "false_negatives": 26,
+        "precision": 0.9375,
+        "recall": 0.5357,
+        "f1": 0.6818,
+        "details": [
+          {
+            "ground_truth_value": "Aspirin",
+            "extracted_value": "Aspirin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Atorvastatin",
+            "extracted_value": "Atorvastatin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Clopidogrel",
+            "extracted_value": "Clopidogrel",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Rivaroxaban",
+            "extracted_value": "Rivaroxaban",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Metoprolol Tartrate",
+            "extracted_value": "Metoprolol Tartrate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Losartan Potassium",
+            "extracted_value": "Losartan Potassium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Insulin",
+            "extracted_value": "Insulin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Levothyroxine Sodium",
+            "extracted_value": "Levothyroxine Sodium",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Fluorescein",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "",
+            "extracted_value": "Sertraline (Zolpidem)",
+            "matched": false,
+            "match_method": "none",
+            "score": 0.0
+          },
+          {
+            "ground_truth_value": "ZIPRASidone Hydrochloride",
+            "extracted_value": "Ziprasidone Hydrochloride",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "OLANZapine (Disintegrating Tablet)",
+            "extracted_value": "Olanzapine",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Divalproex (EXTended Release)",
+            "extracted_value": "Divalproex ER",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 85.5
+          },
+          {
+            "ground_truth_value": "Gabapentin",
+            "extracted_value": "Gabapentin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "OxyCODONE (Immediate Release)",
+            "extracted_value": "Oxycodone immediate release",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 96.43
+          },
+          {
+            "ground_truth_value": "CloNIDine",
+            "extracted_value": "Clonidine",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "LORazepam",
+            "extracted_value": "Lorazepam",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Pantoprazole",
+            "extracted_value": "Pantoprazole",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Sucralfate",
+            "extracted_value": "Sucralfate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Docusate Sodium",
+            "extracted_value": "Docusate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Senna",
+            "extracted_value": "Senna",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Magnesium Sulfate",
+            "extracted_value": "Magnesium Oxide",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Polyethylene Glycol",
+            "extracted_value": "Polyethylene glycol",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Acyclovir",
+            "extracted_value": "Acyclovir",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Heparin",
+            "extracted_value": "Heparin",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Fenofibrate",
+            "extracted_value": "Fenofibrate",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Sodium Chloride 0.9%  Flush",
+            "extracted_value": "Potassium chloride",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Magnesium Sulfate",
+            "extracted_value": "Magnesium supplementation",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Ondansetron",
+            "extracted_value": "Ondansetron",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Prochlorperazine",
+            "extracted_value": "Prochlorperazine",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Dextrose 50%",
+            "extracted_value": "Dextrose 50%",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          },
+          {
+            "ground_truth_value": "Glucagon",
+            "extracted_value": "Glucagon",
+            "matched": true,
+            "match_method": "drug_name",
+            "score": 100.0
+          }
+        ]
       }
     ]
   },

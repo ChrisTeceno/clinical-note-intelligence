@@ -36,9 +36,15 @@ evaluation = st.Page(
 experiments = st.Page(
     "pages/07_experiments.py", title="Experiments", icon=":material/labs:"
 )
+documentation = st.Page(
+    "pages/08_documentation.py", title="Documentation", icon=":material/menu_book:"
+)
+imaging = st.Page(
+    "pages/09_imaging.py", title="Imaging", icon=":material/image:"
+)
 
 pg = st.navigation([
-    dashboard, review_queue, note_detail, analytics, failed, evaluation, experiments,
+    dashboard, review_queue, note_detail, analytics, failed, evaluation, experiments, documentation, imaging,
 ])
 
 st.sidebar.markdown("---")

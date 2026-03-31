@@ -2,16 +2,16 @@
   "note_id": "21322534",
   "diagnoses": [
     {
-      "name": "End stage renal disease",
+      "name": "End stage renal disease requiring hemodialysis",
       "icd10_suggestion": "N18.6",
       "confidence": "high",
-      "evidence_span": "The pt has known end stage renal disease requiring hemodialysis three times weekly"
+      "evidence_span": "end stage renal disease requiring hemodialysis three times weekly"
     },
     {
-      "name": "Atrial fibrillation, unspecified",
+      "name": "Unspecified atrial fibrillation",
       "icd10_suggestion": "I48.91",
       "confidence": "high",
-      "evidence_span": "the patient has a history of unspecified atrial fibrillation"
+      "evidence_span": "unspecified atrial fibrillation"
     },
     {
       "name": "Atherosclerotic heart disease of native coronary artery without angina pectoris",
@@ -23,37 +23,55 @@
       "name": "Aortic stenosis",
       "icd10_suggestion": "I35.0",
       "confidence": "high",
-      "evidence_span": "nonrheumatic aortic stenosis"
+      "evidence_span": "aortic stenosis with mitral insufficiency"
     },
     {
       "name": "Mitral insufficiency",
       "icd10_suggestion": "I34.0",
       "confidence": "high",
-      "evidence_span": "nonrheumatic mitral insufficiency"
+      "evidence_span": "aortic stenosis with mitral insufficiency"
     },
     {
       "name": "Pneumonia of unspecified organism",
       "icd10_suggestion": "J18.9",
       "confidence": "high",
-      "evidence_span": "Chest imaging and clinical evaluation revealed evidence of pneumonia of unspecified organism"
+      "evidence_span": "pneumonia of unspecified organism"
     },
     {
       "name": "Chronic obstructive pulmonary disease",
-      "icd10_suggestion": "J44.9",
+      "icd10_suggestion": "J44.1",
       "confidence": "high",
-      "evidence_span": "The patient also reports chronic obstructive pulmonary disease"
+      "evidence_span": "chronic obstructive pulmonary disease"
     },
     {
-      "name": "Dorsalgia",
+      "name": "Chronic dorsalgia",
       "icd10_suggestion": "M54.9",
       "confidence": "high",
       "evidence_span": "chronic dorsalgia and left shoulder pain"
     },
     {
       "name": "Left shoulder pain",
-      "icd10_suggestion": "M25.511",
+      "icd10_suggestion": "M25.512",
       "confidence": "high",
-      "evidence_span": "left shoulder pain"
+      "evidence_span": "chronic dorsalgia and left shoulder pain"
+    },
+    {
+      "name": "Other forms of acute ischemic heart disease",
+      "icd10_suggestion": "I24.9",
+      "confidence": "high",
+      "evidence_span": "other forms of acute ischemic heart disease"
+    },
+    {
+      "name": "Nonrheumatic aortic stenosis",
+      "icd10_suggestion": "I35.0",
+      "confidence": "high",
+      "evidence_span": "nonrheumatic aortic stenosis"
+    },
+    {
+      "name": "Nonrheumatic mitral insufficiency",
+      "icd10_suggestion": "I34.0",
+      "confidence": "high",
+      "evidence_span": "nonrheumatic mitral insufficiency"
     },
     {
       "name": "Anemia secondary to chronic kidney disease",
@@ -68,21 +86,21 @@
       "evidence_span": "hypothyroidism"
     },
     {
-      "name": "Acute ischemic heart disease",
-      "icd10_suggestion": "I24.9",
+      "name": "Long-term use of opioid analgesics",
+      "icd10_suggestion": "Z79.891",
       "confidence": "high",
-      "evidence_span": "other forms of acute ischemic heart disease"
+      "evidence_span": "long-term use of opioid analgesics"
     }
   ],
   "procedures": [
     {
       "name": "Hemodialysis",
-      "cpt_suggestion": "90945",
+      "cpt_suggestion": "90935",
       "confidence": "high",
-      "evidence_span": "the patient underwent performance of urinary filtration (hemodialysis) on multiple occasions to manage volume status and electrolytes given end stage renal disease"
+      "evidence_span": "performance of urinary filtration (hemodialysis) on multiple occasions"
     },
     {
-      "name": "Pneumococcal 23-valent polysaccharide vaccine administration",
+      "name": "Pneumococcal 23-valent polysaccharide vaccination",
       "cpt_suggestion": "90732",
       "confidence": "high",
       "evidence_span": "The patient received pneumococcal 23-valent polysaccharide vaccine during admission"
@@ -164,7 +182,7 @@
     {
       "name": "Albuterol",
       "dosage": "0.083%",
-      "frequency": "one treatment as needed",
+      "frequency": "as needed",
       "route": "nebulized",
       "confidence": "high",
       "evidence_span": "Albuterol 0.083% nebulized solution one treatment as needed"
@@ -184,16 +202,8 @@
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Ferric Gluconate 125 mg IV at next hemodialysis session"
-    },
-    {
-      "name": "Heparin drip",
-      "dosage": "750-1500 units",
-      "frequency": "with dosing adjustments",
-      "route": "IV",
-      "confidence": "medium",
-      "evidence_span": "The patient's atrial fibrillation was managed with anticoagulation via heparin drip (with dosing adjustments between 750-1500 units IV)"
     }
   ],
   "chief_complaint": "Shortness of breath and chest discomfort",
-  "medical_specialty": "Cardiology/Internal Medicine"
+  "medical_specialty": "Internal Medicine"
 }

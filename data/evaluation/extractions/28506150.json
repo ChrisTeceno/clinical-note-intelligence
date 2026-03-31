@@ -2,28 +2,22 @@
   "note_id": "28506150",
   "diagnoses": [
     {
-      "name": "Amyotrophic lateral sclerosis (ALS)",
+      "name": "Amyotrophic lateral sclerosis",
       "icd10_suggestion": "G12.21",
       "confidence": "high",
-      "evidence_span": "complex case involving a patient with advanced amyotrophic lateral sclerosis (ALS)"
+      "evidence_span": "advanced amyotrophic lateral sclerosis (ALS)"
     },
     {
-      "name": "Altered mental status",
-      "icd10_suggestion": "R41.82",
+      "name": "Non-ST elevation myocardial infarction",
+      "icd10_suggestion": "I21.4",
       "confidence": "high",
-      "evidence_span": "patient with advanced amyotrophic lateral sclerosis (ALS) who presented with altered mental status"
-    },
-    {
-      "name": "Acute non-ST elevation myocardial infarction (NSTEMI)",
-      "icd10_suggestion": "I21.02",
-      "confidence": "high",
-      "evidence_span": "was found to have acute non-ST elevation myocardial infarction (NSTEMI)"
+      "evidence_span": "acute non-ST elevation myocardial infarction (NSTEMI)"
     },
     {
       "name": "Frontotemporal dementia",
-      "icd10_suggestion": "G31.09",
+      "icd10_suggestion": "F02.80",
       "confidence": "high",
-      "evidence_span": "significant comorbidities including other frontotemporal dementia"
+      "evidence_span": "other frontotemporal dementia"
     },
     {
       "name": "Schizoaffective disorder",
@@ -53,17 +47,17 @@
       "name": "Ventilator-associated pneumonia",
       "icd10_suggestion": "J95.851",
       "confidence": "high",
-      "evidence_span": "patient developed ventilator-associated pneumonia while on mechanical ventilation through his established tracheostomy"
+      "evidence_span": "developed ventilator-associated pneumonia while on mechanical ventilation"
     },
     {
       "name": "Unspecified convulsions",
       "icd10_suggestion": "R56.9",
       "confidence": "high",
-      "evidence_span": "patient also experienced unspecified convulsions requiring management with antiepileptic therapy"
+      "evidence_span": "unspecified convulsions requiring management with antiepileptic therapy"
     },
     {
-      "name": "Foreign body in respiratory tract",
-      "icd10_suggestion": "T17.900",
+      "name": "Foreign object in respiratory tract",
+      "icd10_suggestion": "T17.908A",
       "confidence": "high",
       "evidence_span": "A foreign object was identified in the respiratory tract and required emergent intervention"
     },
@@ -71,7 +65,7 @@
       "name": "Hypotension",
       "icd10_suggestion": "I95.9",
       "confidence": "high",
-      "evidence_span": "patient suffered from hypotension requiring vasopressor support"
+      "evidence_span": "suffered from hypotension requiring vasopressor support"
     },
     {
       "name": "Pericardial disease",
@@ -80,46 +74,34 @@
       "evidence_span": "demonstrated evidence of pericardial disease noted on imaging"
     },
     {
-      "name": "Pericardial effusion",
-      "icd10_suggestion": "I31.3",
-      "confidence": "high",
-      "evidence_span": "echocardiography showing pericardial effusion consistent with pericardial disease"
-    },
-    {
       "name": "Urinary tract infection",
       "icd10_suggestion": "N39.0",
       "confidence": "high",
       "evidence_span": "A urinary tract infection was diagnosed and treated"
     },
     {
-      "name": "Respiratory compromise due to ALS",
-      "icd10_suggestion": "G12.21",
+      "name": "Respiratory failure with ventilator dependence",
+      "icd10_suggestion": "J96.10",
       "confidence": "high",
-      "evidence_span": "ventilator-dependent given his advanced ALS with respiratory compromise"
+      "evidence_span": "ventilator-dependent given his advanced ALS with respiratory compromise, requiring long-term mechanical support"
     },
     {
-      "name": "Anemia",
-      "icd10_suggestion": "D64.9",
-      "confidence": "medium",
-      "evidence_span": "Iron supplementation addressed anemia with ferrous sulfate liquid formulation"
-    },
-    {
-      "name": "Electrolyte disturbances",
-      "icd10_suggestion": "E87.8",
-      "confidence": "medium",
-      "evidence_span": "Magnesium sulfate and calcium gluconate supplementation was necessary due to electrolyte disturbances"
+      "name": "Altered mental status",
+      "icd10_suggestion": "R41.82",
+      "confidence": "high",
+      "evidence_span": "presented with altered mental status"
     }
   ],
   "procedures": [
     {
       "name": "Extirpation of Matter from Left Lower Lobe Bronchus via Natural or Artificial Opening Endoscopic",
-      "cpt_suggestion": "31630",
+      "cpt_suggestion": "31645",
       "confidence": "high",
       "evidence_span": "Extirpation of Matter from Left Lower Lobe Bronchus via Natural or Artificial Opening Endoscopic – Performed to clear obstructing material and manage aspiration risk"
     },
     {
       "name": "Extirpation of Matter from Right Lower Lung Lobe via Natural or Artificial Opening Endoscopic",
-      "cpt_suggestion": "31630",
+      "cpt_suggestion": "31645",
       "confidence": "high",
       "evidence_span": "Extirpation of Matter from Right Lower Lung Lobe via Natural or Artificial Opening Endoscopic – Complementary bronchoscopic intervention to clear bilateral lower lobe involvement"
     },
@@ -128,13 +110,25 @@
       "cpt_suggestion": "94002",
       "confidence": "high",
       "evidence_span": "Respiratory Ventilation, 24-96 Consecutive Hours – Mechanical ventilation support provided throughout hospitalization given ventilator dependence from progressive ALS and the acute infectious/cardiac complications"
+    },
+    {
+      "name": "Cardiac catheterization",
+      "cpt_suggestion": null,
+      "confidence": "medium",
+      "evidence_span": "Cardiac catheterization was deferred given the patient's overall clinical status and goals of care discussion with family"
+    },
+    {
+      "name": "Echocardiography",
+      "cpt_suggestion": "93306",
+      "confidence": "high",
+      "evidence_span": "subsequent echocardiography showing pericardial effusion consistent with pericardial disease"
     }
   ],
   "medications": [
     {
       "name": "Insulin",
-      "dosage": "variable dosing per sliding scale",
-      "frequency": null,
+      "dosage": "variable dosing",
+      "frequency": "per sliding scale",
       "route": "subcutaneous injection",
       "confidence": "high",
       "evidence_span": "Insulin (variable dosing via subcutaneous injection per sliding scale)"
@@ -253,7 +247,7 @@
     },
     {
       "name": "Acetylcysteine",
-      "dosage": "20% 6-10 mL",
+      "dosage": "6-10 mL",
       "frequency": "as needed",
       "route": "nebulized",
       "confidence": "high",
@@ -313,7 +307,7 @@
       "frequency": null,
       "route": null,
       "confidence": "medium",
-      "evidence_span": "glucagon and dextrose available for hypoglycemic episodes"
+      "evidence_span": "with glucagon and dextrose available for hypoglycemic episodes"
     },
     {
       "name": "Dextrose",
@@ -321,7 +315,7 @@
       "frequency": null,
       "route": null,
       "confidence": "medium",
-      "evidence_span": "glucagon and dextrose available for hypoglycemic episodes"
+      "evidence_span": "with glucagon and dextrose available for hypoglycemic episodes"
     },
     {
       "name": "Labetalol",
@@ -332,6 +326,6 @@
       "evidence_span": "Beta-blockade with metoprolol tartrate and labetalol IV supported cardiac recovery and blood pressure management"
     }
   ],
-  "chief_complaint": "Altered mental status",
-  "medical_specialty": "Internal Medicine/Critical Care Medicine"
+  "chief_complaint": "altered mental status",
+  "medical_specialty": "Internal Medicine"
 }

@@ -8,22 +8,16 @@
       "evidence_span": "type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
     },
     {
-      "name": "Diabetic peripheral angiopathy",
-      "icd10_suggestion": "E11.51",
+      "name": "Diabetic peripheral angiopathy with gangrene",
+      "icd10_suggestion": "E11.52",
       "confidence": "high",
       "evidence_span": "type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
-    },
-    {
-      "name": "Gangrene",
-      "icd10_suggestion": "R02.9",
-      "confidence": "high",
-      "evidence_span": "diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
     },
     {
       "name": "Diabetic foot ulcer",
       "icd10_suggestion": "E11.621",
       "confidence": "high",
-      "evidence_span": "diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic peripheral angiopathy with gangrene and diabetic foot ulcer"
     },
     {
       "name": "Chronic obstructive pulmonary disease",
@@ -38,8 +32,8 @@
       "evidence_span": "atrial fibrillation"
     },
     {
-      "name": "Advanced chronic kidney disease stage 4",
-      "icd10_suggestion": "N18.3",
+      "name": "Advanced chronic kidney disease (stage 4 severe)",
+      "icd10_suggestion": "N18.4",
       "confidence": "high",
       "evidence_span": "advanced chronic kidney disease (stage 4 severe)"
     },
@@ -51,7 +45,7 @@
     },
     {
       "name": "Acute on chronic diastolic heart failure",
-      "icd10_suggestion": "I50.32",
+      "icd10_suggestion": "I50.33",
       "confidence": "high",
       "evidence_span": "acute on chronic diastolic heart failure"
     },
@@ -69,33 +63,21 @@
     },
     {
       "name": "Postprocedural infection",
-      "icd10_suggestion": "T81.4",
-      "confidence": "high",
-      "evidence_span": "patient developed a postprocedural infection complicated by enterococcal and other bacterial pathogens"
-    },
-    {
-      "name": "Enterococcal infection",
-      "icd10_suggestion": "B95.2",
+      "icd10_suggestion": "T81.40XA",
       "confidence": "high",
       "evidence_span": "postprocedural infection complicated by enterococcal and other bacterial pathogens"
     },
     {
-      "name": "Vancomycin resistant infection",
-      "icd10_suggestion": "Z16.21",
-      "confidence": "high",
-      "evidence_span": "resistance to vancomycin and fluoroquinolone antibiotics"
-    },
-    {
       "name": "Postprocedural shock",
-      "icd10_suggestion": "T81.12",
+      "icd10_suggestion": "T81.10XA",
       "confidence": "high",
-      "evidence_span": "This infection was further complicated by postprocedural shock"
+      "evidence_span": "postprocedural shock"
     },
     {
       "name": "Wound disruption",
-      "icd10_suggestion": "T81.31",
+      "icd10_suggestion": "T81.30XA",
       "confidence": "high",
-      "evidence_span": "postprocedural shock, wound disruption"
+      "evidence_span": "wound disruption"
     },
     {
       "name": "Delirium",
@@ -106,11 +88,11 @@
     {
       "name": "Abnormal coagulation profile",
       "icd10_suggestion": "D68.9",
-      "confidence": "high",
+      "confidence": "medium",
       "evidence_span": "abnormal coagulation profile"
     },
     {
-      "name": "Pressure ulcer",
+      "name": "Pressure ulcers",
       "icd10_suggestion": "L89.90",
       "confidence": "high",
       "evidence_span": "development of pressure ulcers"
@@ -119,30 +101,30 @@
   "procedures": [
     {
       "name": "Open excision of left foot tendon",
-      "cpt_suggestion": "20206",
+      "cpt_suggestion": "28200",
       "confidence": "high",
       "evidence_span": "open excision of left foot tendon"
     },
     {
       "name": "Open excision of left lower leg subcutaneous tissue and fascia",
-      "cpt_suggestion": "11010",
+      "cpt_suggestion": "27604",
       "confidence": "high",
       "evidence_span": "open excision of left lower leg subcutaneous tissue and fascia"
     },
     {
       "name": "Bilateral extraction of left upper leg subcutaneous tissue and fascia",
-      "cpt_suggestion": "11010",
-      "confidence": "medium",
+      "cpt_suggestion": "27327",
+      "confidence": "high",
       "evidence_span": "bilateral extraction of left upper leg subcutaneous tissue and fascia"
     },
     {
       "name": "Central venous catheter insertion into superior vena cava via percutaneous approach",
       "cpt_suggestion": "36556",
       "confidence": "high",
-      "evidence_span": "A central venous catheter (infusion device) was inserted into the superior vena cava via percutaneous approach"
+      "evidence_span": "central venous catheter (infusion device) was inserted into the superior vena cava via percutaneous approach"
     }
   ],
   "medications": [],
   "chief_complaint": "Left lower extremity gangrene with foot ulceration.",
-  "medical_specialty": null
+  "medical_specialty": "Internal Medicine"
 }

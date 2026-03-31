@@ -2,46 +2,46 @@
   "note_id": "27504040",
   "diagnoses": [
     {
-      "name": "Hypertensive chronic kidney disease with stage 5 CKD",
-      "icd10_suggestion": "I13.11",
+      "name": "Hypertensive chronic kidney disease with stage 5 CKD/ESRD",
+      "icd10_suggestion": "I12.0",
       "confidence": "high",
-      "evidence_span": "complicated by hypertensive chronic kidney disease with stage 5 CKD"
+      "evidence_span": "Hypertensive chronic kidney disease with stage 5 CKD/ESRD"
     },
     {
-      "name": "End stage renal disease",
+      "name": "End stage renal disease on hemodialysis",
       "icd10_suggestion": "N18.6",
       "confidence": "high",
-      "evidence_span": "He has end stage renal disease requiring hemodialysis"
+      "evidence_span": "End stage renal disease on hemodialysis"
     },
     {
       "name": "Alcoholic cirrhosis",
       "icd10_suggestion": "K70.30",
       "confidence": "high",
-      "evidence_span": "The patient also carries a significant hepatic history, including alcoholic cirrhosis of the liver"
+      "evidence_span": "Alcoholic cirrhosis and alcoholic hepatitis"
     },
     {
       "name": "Alcoholic hepatitis",
       "icd10_suggestion": "K70.10",
       "confidence": "high",
-      "evidence_span": "and concurrent alcoholic hepatitis, both currently without ascites"
+      "evidence_span": "Alcoholic cirrhosis and alcoholic hepatitis"
     },
     {
       "name": "Hepatorenal syndrome",
       "icd10_suggestion": "K76.7",
       "confidence": "high",
-      "evidence_span": "Most concerning during this hospitalization was the development of hepatorenal syndrome, which contributed substantially to his acute clinical deterioration."
+      "evidence_span": "Hepatorenal syndrome"
     },
     {
       "name": "Hepatic encephalopathy",
       "icd10_suggestion": "K72.90",
       "confidence": "high",
-      "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
+      "evidence_span": "Hepatic encephalopathy"
     },
     {
       "name": "Anemia of chronic kidney disease",
       "icd10_suggestion": "D63.1",
       "confidence": "high",
-      "evidence_span": "Anemia secondary to chronic kidney disease"
+      "evidence_span": "Anemia of chronic kidney disease"
     },
     {
       "name": "Thrombocytopenia",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Asthma",
-      "icd10_suggestion": "J45.901",
+      "icd10_suggestion": "J45.9",
       "confidence": "high",
       "evidence_span": "Asthma, uncomplicated"
     },
@@ -69,7 +69,7 @@
     },
     {
       "name": "History of venous thromboembolism",
-      "icd10_suggestion": "Z86.711",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
       "evidence_span": "History of venous thromboembolism"
     },
@@ -91,19 +91,7 @@
       "name": "Hemodialysis",
       "cpt_suggestion": "90935",
       "confidence": "high",
-      "evidence_span": "The patient received emergent hemodialysis on hospital day one with partial resolution of uremic symptoms and electrolyte abnormalities."
-    },
-    {
-      "name": "Blood cultures",
-      "cpt_suggestion": "87040",
-      "confidence": "high",
-      "evidence_span": "infectious workup including blood cultures and ascitic fluid analysis"
-    },
-    {
-      "name": "Paracentesis",
-      "cpt_suggestion": "49080",
-      "confidence": "medium",
-      "evidence_span": "ascitic fluid analysis (paracentesis deferred given absence of clinical ascites)"
+      "evidence_span": "The patient received emergent hemodialysis on hospital day one"
     }
   ],
   "medications": [
@@ -116,7 +104,7 @@
       "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
     },
     {
-      "name": "Rifaxomin",
+      "name": "Rifaximin",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -124,6 +112,6 @@
       "evidence_span": "Lactulose and rifaxomin were initiated for presumed hepatic encephalopathy"
     }
   ],
-  "chief_complaint": "Altered mental status and acute decompensation.",
-  "medical_specialty": "Internal Medicine / Hospital Medicine"
+  "chief_complaint": "Altered mental status and acute decompensation",
+  "medical_specialty": "Internal Medicine"
 }

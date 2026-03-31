@@ -42,39 +42,51 @@
       "icd10_suggestion": "G40.909",
       "confidence": "high",
       "evidence_span": "Epilepsy, unspecified, not intractable — No seizure activity documented during admission; patient remained seizure-free."
+    },
+    {
+      "name": "Long-term insulin use",
+      "icd10_suggestion": "Z79.4",
+      "confidence": "high",
+      "evidence_span": "Long-term insulin use — Patient insulin-dependent for glycemic management."
     }
   ],
   "procedures": [
     {
-      "name": "IV hydration",
-      "cpt_suggestion": "96360",
-      "confidence": "high",
-      "evidence_span": "During hospitalization, the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia."
-    },
-    {
-      "name": "Serial sodium monitoring",
+      "name": "IV hydration with sodium repletion",
       "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Sodium levels were monitored serially to avoid overcorrection."
+      "evidence_span": "the patient received aggressive IV hydration with careful sodium repletion to address both the acute kidney injury and severe hyponatremia"
+    },
+    {
+      "name": "Serial sodium level monitoring",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Sodium levels were monitored serially to avoid overcorrection"
+    },
+    {
+      "name": "Insulin dosing optimization",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "Insulin dosing was optimized with both basal and bolus adjustments to better control hyperglycemia"
     },
     {
       "name": "Chest X-ray",
-      "cpt_suggestion": "71046",
+      "cpt_suggestion": "71020",
       "confidence": "high",
-      "evidence_span": "Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies."
+      "evidence_span": "Chest X-ray showed subtle bilateral interstitial opacities consistent with known sarcoidosis, stable from prior studies"
     }
   ],
   "medications": [
     {
-      "name": "Insulin",
+      "name": "insulin",
       "dosage": null,
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "the patient has a significant past medical history including type 2 diabetes mellitus for which he has been on insulin therapy"
+      "evidence_span": "type 2 diabetes mellitus for which he has been on insulin therapy"
     },
     {
-      "name": "Levothyroxine",
+      "name": "levothyroxine",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -82,7 +94,7 @@
       "evidence_span": "hypothyroidism managed with levothyroxine"
     },
     {
-      "name": "Antiepileptic medications",
+      "name": "antiepileptic medications",
       "dosage": null,
       "frequency": null,
       "route": null,
@@ -90,6 +102,6 @@
       "evidence_span": "epilepsy which has been controlled on current antiepileptic regimen"
     }
   ],
-  "chief_complaint": "Acute onset of altered mental status and fatigue",
-  "medical_specialty": "Internal Medicine / Hospitalist"
+  "chief_complaint": "acute onset of altered mental status and fatigue",
+  "medical_specialty": "Internal Medicine"
 }

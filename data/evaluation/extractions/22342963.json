@@ -5,25 +5,55 @@
       "name": "Acute decompensated heart failure with pulmonary edema",
       "icd10_suggestion": "I50.9",
       "confidence": "high",
-      "evidence_span": "Acute decompensated heart failure with pulmonary edema"
+      "evidence_span": "CHIEF COMPLAINT: Acute decompensated heart failure with pulmonary edema"
     },
     {
       "name": "Atherosclerotic heart disease of native coronary arteries",
       "icd10_suggestion": "I25.10",
       "confidence": "high",
-      "evidence_span": "atherosclerotic heart disease of native coronary arteries"
+      "evidence_span": "significant cardiac history including atherosclerotic heart disease of native coronary arteries"
     },
     {
       "name": "Ischemic cardiomyopathy",
       "icd10_suggestion": "I25.5",
       "confidence": "high",
-      "evidence_span": "ischemic cardiomyopathy"
+      "evidence_span": "significant cardiac history including atherosclerotic heart disease of native coronary arteries and ischemic cardiomyopathy"
     },
     {
-      "name": "Hypoxemia",
-      "icd10_suggestion": "R06.02",
+      "name": "New-onset atrial fibrillation",
+      "icd10_suggestion": "I48.91",
       "confidence": "high",
-      "evidence_span": "demonstrated significant hypoxemia requiring supplemental oxygen"
+      "evidence_span": "During the hospital course, the patient experienced new-onset atrial fibrillation"
+    },
+    {
+      "name": "Acute posthemorrhagic anemia",
+      "icd10_suggestion": "D62",
+      "confidence": "high",
+      "evidence_span": "Additionally, the pt sustained acute posthemorrhagic anemia during hospitalization"
+    },
+    {
+      "name": "Ulcerative colitis",
+      "icd10_suggestion": "K51.90",
+      "confidence": "high",
+      "evidence_span": "The patient has a remote history of ulcerative colitis, now managed via colostomy status"
+    },
+    {
+      "name": "Type 2 diabetes mellitus",
+      "icd10_suggestion": "E11.9",
+      "confidence": "high",
+      "evidence_span": "His metabolic comorbidities include type 2 diabetes mellitus"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "His metabolic comorbidities include type 2 diabetes mellitus and hyperlipidemia"
+    },
+    {
+      "name": "Chronic insomnia",
+      "icd10_suggestion": "G47.00",
+      "confidence": "high",
+      "evidence_span": "The patient also reports chronic insomnia"
     },
     {
       "name": "Acute hypotension",
@@ -32,78 +62,48 @@
       "evidence_span": "developed acute hypotension requiring vasopressor support"
     },
     {
-      "name": "New-onset atrial fibrillation",
-      "icd10_suggestion": "I48.91",
-      "confidence": "high",
-      "evidence_span": "patient experienced new-onset atrial fibrillation which was treated with antiarrhythmic therapy"
-    },
-    {
-      "name": "Acute posthemorrhagic anemia",
-      "icd10_suggestion": "D50.0",
-      "confidence": "high",
-      "evidence_span": "pt sustained acute posthemorrhagic anemia during hospitalization, likely related to procedural blood loss"
-    },
-    {
-      "name": "Ulcerative colitis",
-      "icd10_suggestion": "K51.90",
-      "confidence": "high",
-      "evidence_span": "remote history of ulcerative colitis, now managed via colostomy status following previous surgical intervention"
-    },
-    {
-      "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
-      "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus"
-    },
-    {
-      "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
-      "confidence": "high",
-      "evidence_span": "hyperlipidemia, both controlled on current medical regimens"
-    },
-    {
-      "name": "Chronic insomnia",
-      "icd10_suggestion": "G47.00",
-      "confidence": "high",
-      "evidence_span": "chronic insomnia"
-    },
-    {
       "name": "Postprocedural complications related to the circulatory system",
-      "icd10_suggestion": "I97.89",
+      "icd10_suggestion": "T81.71XA",
       "confidence": "high",
-      "evidence_span": "patient developed postprocedural complications related to the circulatory system, including persistent hypotension requiring aggressive fluid resuscitation and vasopressor support"
+      "evidence_span": "During the perioperative period, the patient developed postprocedural complications related to the circulatory system"
     }
   ],
   "procedures": [
     {
-      "name": "Cardiac output monitoring with continuous assessment",
-      "cpt_suggestion": "93000",
+      "name": "Coronary artery bypass grafting via open approach",
+      "cpt_suggestion": "33534",
       "confidence": "high",
-      "evidence_span": "pt underwent cardiac output monitoring with continuous assessment throughout admission"
-    },
-    {
-      "name": "Coronary artery bypass grafting (CABG) via open approach",
-      "cpt_suggestion": "33510",
-      "confidence": "high",
-      "evidence_span": "he proceeded to coronary artery bypass grafting via open approach"
+      "evidence_span": "Given his coronary disease burden, he proceeded to coronary artery bypass grafting via open approach"
     },
     {
       "name": "Bypass to three coronary arteries from the aorta using autologous venous tissue",
-      "cpt_suggestion": "33518",
+      "cpt_suggestion": "33536",
       "confidence": "high",
-      "evidence_span": "bypass to three coronary arteries from the aorta using autologous venous tissue"
+      "evidence_span": "the patient had bypass to three coronary arteries from the aorta using autologous venous tissue"
     },
     {
       "name": "Bypass to one coronary artery from the left internal mammary artery",
-      "cpt_suggestion": "33534",
+      "cpt_suggestion": "33533",
       "confidence": "high",
-      "evidence_span": "bypass to one coronary artery from the left internal mammary artery"
+      "evidence_span": "with additional bypass to one coronary artery from the left internal mammary artery"
     },
     {
       "name": "Left saphenous vein harvest via percutaneous endoscopic approach",
-      "cpt_suggestion": "35508",
+      "cpt_suggestion": "35572",
       "confidence": "high",
-      "evidence_span": "left saphenous vein was harvested via percutaneous endoscopic approach for graft material"
+      "evidence_span": "The left saphenous vein was harvested via percutaneous endoscopic approach for graft material"
+    },
+    {
+      "name": "Cardiac output monitoring",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "The pt underwent cardiac output monitoring with continuous assessment throughout admission"
+    },
+    {
+      "name": "Colostomy",
+      "cpt_suggestion": null,
+      "confidence": "medium",
+      "evidence_span": "now managed via colostomy status following previous surgical intervention"
     }
   ],
   "medications": [
@@ -137,7 +137,7 @@
       "frequency": "BID",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Carvedilol 6.25 mg PO BID (and 3.125 mg PO dosing available)"
+      "evidence_span": "Carvedilol 6.25 mg PO BID"
     },
     {
       "name": "Lisinopril",
@@ -153,15 +153,15 @@
       "frequency": "BID",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Metoprolol Tartrate 12.5 mg PO BID (with 5-6.25 mg dosing available)"
+      "evidence_span": "Metoprolol Tartrate 12.5 mg PO BID"
     },
     {
       "name": "Amiodarone",
-      "dosage": "400 mg PO / 600 mg IV",
-      "frequency": "daily / as needed",
-      "route": "PO/IV",
+      "dosage": "400 mg",
+      "frequency": "daily",
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "Amiodarone 400 mg PO daily with 600 mg IV drip as needed"
+      "evidence_span": "Amiodarone 400 mg PO daily"
     },
     {
       "name": "Furosemide",
@@ -177,7 +177,7 @@
       "frequency": "BID",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Metformin 500 mg PO BID (with 250 mg dosing available)"
+      "evidence_span": "Metformin 500 mg PO BID"
     },
     {
       "name": "Insulin",
@@ -191,15 +191,15 @@
       "name": "Albuterol",
       "dosage": null,
       "frequency": "as needed",
-      "route": "nebulized",
+      "route": "nebulizer",
       "confidence": "high",
       "evidence_span": "Albuterol and ipratropium nebulizers as needed"
     },
     {
-      "name": "Ipratropium bromide",
+      "name": "Ipratropium",
       "dosage": null,
       "frequency": "as needed",
-      "route": "nebulized",
+      "route": "nebulizer",
       "confidence": "high",
       "evidence_span": "Albuterol and ipratropium nebulizers as needed"
     },
@@ -214,7 +214,7 @@
     {
       "name": "Ondansetron",
       "dosage": "4 mg",
-      "frequency": "as needed",
+      "frequency": "as needed for nausea",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Ondansetron 4 mg IV as needed for nausea"
@@ -230,7 +230,7 @@
     {
       "name": "Tramadol",
       "dosage": "50 mg",
-      "frequency": "as needed",
+      "frequency": "as needed for pain",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Tramadol 50 mg PO as needed for pain"
@@ -238,7 +238,7 @@
     {
       "name": "Oxycodone",
       "dosage": "5-10 mg",
-      "frequency": "as needed",
+      "frequency": "as needed for pain",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Oxycodone 5-10 mg PO as needed for pain"
@@ -246,66 +246,18 @@
     {
       "name": "Alprazolam",
       "dosage": "0.5 mg",
-      "frequency": "daily as needed",
+      "frequency": "daily as needed for anxiety",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Alprazolam 0.5 mg PO daily as needed for anxiety"
     },
     {
-      "name": "Polyethylene glycol",
+      "name": "Phenylephrine",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "drip",
       "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Senna",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Bisacodyl",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Docusate sodium",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Lactulose",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Milk of magnesia",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Bowel regimen: Polyethylene glycol, senna, bisacodyl, docusate, lactulose, and milk of magnesia as directed"
-    },
-    {
-      "name": "Potassium supplementation",
-      "dosage": null,
-      "frequency": "as needed based on levels",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Potassium supplementation as needed based on levels"
+      "evidence_span": "vasopressor support with phenylephrine drips"
     },
     {
       "name": "Nitroglycerin",
@@ -313,7 +265,7 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "multiple boluses and infusions including nitroglycerin"
+      "evidence_span": "He received multiple boluses and infusions including nitroglycerin"
     },
     {
       "name": "Propofol",
@@ -321,47 +273,15 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "propofol for sedation"
-    },
-    {
-      "name": "Phenylephrine",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "vasopressor support with phenylephrine drips"
-    },
-    {
-      "name": "Normal saline",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "including normal saline, lactated Ringer's solution, and multiple albumin infusions"
-    },
-    {
-      "name": "Lactated Ringer's solution",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "lactated Ringer's solution, and multiple albumin infusions"
-    },
-    {
-      "name": "Albumin",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "multiple albumin infusions at various concentrations"
+      "evidence_span": "and propofol for sedation"
     },
     {
       "name": "Potassium chloride",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "oral, intravenous",
       "confidence": "high",
-      "evidence_span": "repeated potassium chloride supplementation via multiple routes (oral, intravenous, and phosphate-based)"
+      "evidence_span": "requiring repeated potassium chloride supplementation via multiple routes (oral, intravenous, and phosphate-based)"
     },
     {
       "name": "Calcium gluconate",
@@ -377,15 +297,15 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "magnesium sulfate administration"
+      "evidence_span": "and magnesium sulfate administration"
     },
     {
-      "name": "Dextrose",
+      "name": "Fentanyl",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "patch",
       "confidence": "high",
-      "evidence_span": "dextrose supplementation when hypoglycemia was detected"
+      "evidence_span": "and fentanyl patches"
     },
     {
       "name": "Cefazolin",
@@ -401,25 +321,9 @@
       "frequency": null,
       "route": null,
       "confidence": "high",
-      "evidence_span": "Antiemetic coverage was maintained with metoclopramide and ondansetron"
-    },
-    {
-      "name": "Simethicone",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Stool softening agents included docusate sodium and simethicone"
-    },
-    {
-      "name": "Chlorhexidine",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "chlorhexidine oral rinses"
+      "evidence_span": "Antiemetic coverage was maintained with metoclopramide"
     }
   ],
   "chief_complaint": "Acute decompensated heart failure with pulmonary edema",
-  "medical_specialty": "Cardiothoracic Surgery / Cardiology"
+  "medical_specialty": "Cardiovascular Surgery"
 }

@@ -2,6 +2,18 @@
   "note_id": "25103777",
   "diagnoses": [
     {
+      "name": "MRSA sepsis",
+      "icd10_suggestion": "A41.02",
+      "confidence": "high",
+      "evidence_span": "Cultures subsequently grew Methicillin-resistant Staphylococcus aureus (MRSA), confirming sepsis"
+    },
+    {
+      "name": "Acute and subacute infective endocarditis",
+      "icd10_suggestion": "I33.0",
+      "confidence": "high",
+      "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis"
+    },
+    {
       "name": "End-stage renal disease",
       "icd10_suggestion": "N18.6",
       "confidence": "high",
@@ -11,7 +23,7 @@
       "name": "Type 2 diabetes mellitus",
       "icd10_suggestion": "E11.9",
       "confidence": "high",
-      "evidence_span": "Type 2 diabetes mellitus on insulin therapy"
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
     },
     {
       "name": "Diabetic nephropathy",
@@ -20,34 +32,46 @@
       "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
     },
     {
+      "name": "Diabetic chronic kidney disease",
+      "icd10_suggestion": "E11.22",
+      "confidence": "high",
+      "evidence_span": "type 2 diabetes mellitus complicated by diabetic nephropathy and diabetic chronic kidney disease"
+    },
+    {
       "name": "Hypertensive chronic kidney disease with stage 5 CKD",
-      "icd10_suggestion": "I12.9",
+      "icd10_suggestion": "I12.0",
       "confidence": "high",
       "evidence_span": "hypertensive chronic kidney disease with stage 5 CKD"
     },
     {
-      "name": "Sepsis due to Methicillin-resistant Staphylococcus aureus (MRSA)",
-      "icd10_suggestion": "R65.21",
-      "confidence": "high",
-      "evidence_span": "Cultures subsequently grew Methicillin-resistant Staphylococcus aureus (MRSA), confirming sepsis"
-    },
-    {
-      "name": "Acute and subacute infective endocarditis",
-      "icd10_suggestion": "I33.0",
-      "confidence": "high",
-      "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis, likely seeded through the patient's vascular access"
-    },
-    {
-      "name": "Infection of cardiac infusion device",
-      "icd10_suggestion": "T82.7",
+      "name": "Infection and inflammatory reaction due to cardiac infusion device",
+      "icd10_suggestion": "T82.7XXA",
       "confidence": "high",
       "evidence_span": "An infection and inflammatory reaction due to the cardiac infusion device was identified"
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.9",
+      "icd10_suggestion": "E78.5",
       "confidence": "high",
       "evidence_span": "Hyperlipidemia"
+    },
+    {
+      "name": "History of nicotine dependence",
+      "icd10_suggestion": "Z87.891",
+      "confidence": "high",
+      "evidence_span": "History of nicotine dependence"
+    },
+    {
+      "name": "Acquired keratosis palmaris et plantaris",
+      "icd10_suggestion": "L85.1",
+      "confidence": "high",
+      "evidence_span": "Acquired keratosis palmaris et plantaris"
+    },
+    {
+      "name": "Acquired absence of right toe(s)",
+      "icd10_suggestion": "Z89.422",
+      "confidence": "high",
+      "evidence_span": "Acquired absence of right toe(s)"
     },
     {
       "name": "Hyperkalemia",
@@ -60,78 +84,54 @@
       "icd10_suggestion": "D63.1",
       "confidence": "high",
       "evidence_span": "Anemia of chronic kidney disease was monitored"
-    },
-    {
-      "name": "Constipation",
-      "icd10_suggestion": "K59.1",
-      "confidence": "high",
-      "evidence_span": "The patient's constipation, a chronic issue exacerbated by medications and dietary restrictions of end-stage renal disease"
-    },
-    {
-      "name": "History of nicotine dependence",
-      "icd10_suggestion": "F17.209",
-      "confidence": "high",
-      "evidence_span": "History of nicotine dependence"
-    },
-    {
-      "name": "Acquired keratosis palmaris et plantaris",
-      "icd10_suggestion": "L85.1",
-      "confidence": "high",
-      "evidence_span": "Acquired keratosis palmaris et plantaris"
-    },
-    {
-      "name": "Acquired absence of right toe(s)",
-      "icd10_suggestion": "Z89.42",
-      "confidence": "high",
-      "evidence_span": "Acquired absence of right toe(s)"
-    },
-    {
-      "name": "Acute fluid overload",
-      "icd10_suggestion": "R60.9",
-      "confidence": "high",
-      "evidence_span": "the patient required intermittent urinary filtration for less than 6 hours per day given the acute fluid overload state superimposed on chronic kidney disease"
     }
   ],
   "procedures": [
     {
-      "name": "Transesophageal echocardiography",
-      "cpt_suggestion": "93355",
-      "confidence": "high",
-      "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis"
-    },
-    {
       "name": "Removal of external cardiac infusion device",
-      "cpt_suggestion": "33238",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "The patient underwent removal of the external cardiac infusion device given the infected implant"
     },
     {
-      "name": "Insertion of tunneled vascular access device",
-      "cpt_suggestion": "36569",
+      "name": "Insertion of tunneled vascular access device into chest subcutaneous tissue via percutaneous approach",
+      "cpt_suggestion": "36558",
       "confidence": "high",
-      "evidence_span": "a new tunneled vascular access device was inserted into the chest subcutaneous tissue via percutaneous approach"
+      "evidence_span": "Subsequently, a new tunneled vascular access device was inserted into the chest subcutaneous tissue via percutaneous approach"
     },
     {
-      "name": "Placement of infusion device in right atrium",
-      "cpt_suggestion": "33210",
+      "name": "Percutaneous placement of infusion device into right atrium",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "An infusion device was placed into the right atrium percutaneously for continued medication administration"
     },
     {
-      "name": "Removal of old tunneled vascular access device",
-      "cpt_suggestion": "36861",
+      "name": "Removal of old tunneled vascular access device from trunk using external approach",
+      "cpt_suggestion": "36590",
       "confidence": "high",
       "evidence_span": "The old tunneled vascular access device from the trunk was removed using external approach"
     },
     {
-      "name": "Intermittent urinary filtration",
-      "cpt_suggestion": "90945",
+      "name": "Blood cultures",
+      "cpt_suggestion": "87040",
       "confidence": "high",
-      "evidence_span": "the patient required intermittent urinary filtration for less than 6 hours per day"
+      "evidence_span": "On evaluation, blood cultures were obtained"
     },
     {
-      "name": "Influenza vaccine",
-      "cpt_suggestion": "90756",
+      "name": "Transesophageal echocardiography",
+      "cpt_suggestion": "93318",
+      "confidence": "high",
+      "evidence_span": "Transesophageal echocardiography revealed vegetations consistent with acute and subacute infective endocarditis"
+    },
+    {
+      "name": "Intermittent urinary filtration",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "During hospitalization, the patient required intermittent urinary filtration for less than 6 hours per day given the acute fluid overload state superimposed on chronic kidney disease"
+    },
+    {
+      "name": "Influenza vaccine administration",
+      "cpt_suggestion": "90688",
       "confidence": "high",
       "evidence_span": "The patient received an influenza vaccine during the hospital stay"
     }
@@ -140,10 +140,10 @@
     {
       "name": "Vancomycin",
       "dosage": "1000 mg",
-      "frequency": "per ID recommendations",
+      "frequency": "continue per ID recommendations",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Antimicrobial therapy with vancomycin was administered intravenously throughout the admission"
+      "evidence_span": "Vancomycin 1000 mg IV (continue per ID recommendations)"
     },
     {
       "name": "Aspirin",
@@ -151,7 +151,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Aspirin was continued for cardiovascular protection"
+      "evidence_span": "Aspirin 81 mg PO daily"
     },
     {
       "name": "Lisinopril",
@@ -159,7 +159,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Lisinopril was used cautiously given the stage 5 chronic kidney disease"
+      "evidence_span": "Lisinopril 5 mg PO daily"
     },
     {
       "name": "Lorazepam",
@@ -167,7 +167,7 @@
       "frequency": "as needed",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Lorazepam was used as needed for anxiety management"
+      "evidence_span": "Lorazepam 0.5 mg PO as needed"
     },
     {
       "name": "Nephrocaps",
@@ -183,7 +183,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Atorvastatin was continued for hyperlipidemia management"
+      "evidence_span": "Atorvastatin 20 mg PO daily"
     },
     {
       "name": "Calcitriol",
@@ -191,15 +191,15 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "supplementation with calcitriol and vitamin D was continued"
+      "evidence_span": "Calcitriol 0.25 mcg PO daily"
     },
     {
       "name": "Furosemide",
-      "dosage": "20 mg PO daily and 40-100 mg IV post-dialysis",
-      "frequency": "daily and as needed",
+      "dosage": "20 mg PO daily and 40-100 mg IV",
+      "frequency": "daily and post-dialysis as needed",
       "route": "PO and IV",
       "confidence": "high",
-      "evidence_span": "Furosemide was titrated both orally and intravenously for fluid management"
+      "evidence_span": "Furosemide 20 mg PO daily and 40-100 mg IV post-dialysis as needed"
     },
     {
       "name": "Polyethylene glycol",
@@ -207,7 +207,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "The patient's constipation was addressed with polyethylene glycol, docusate sodium, and senna"
+      "evidence_span": "Polyethylene glycol 17 g PO daily"
     },
     {
       "name": "Heparin",
@@ -215,7 +215,7 @@
       "frequency": "daily",
       "route": "SC",
       "confidence": "high",
-      "evidence_span": "Subcutaneous heparin was provided for thromboprophylaxis"
+      "evidence_span": "Heparin 5000 units SC daily"
     },
     {
       "name": "Calcium carbonate",
@@ -231,7 +231,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "The patient's constipation was addressed with polyethylene glycol, docusate sodium, and senna"
+      "evidence_span": "Docusate sodium 100 mg PO daily"
     },
     {
       "name": "Neomycin-polymyxin-bacitracin ointment",
@@ -239,7 +239,7 @@
       "frequency": "as directed",
       "route": "topical",
       "confidence": "high",
-      "evidence_span": "Topical neomycin-polymyxin-bacitracin and hydrocerin were applied for skin care"
+      "evidence_span": "Neomycin-polymyxin-bacitracin ointment topical as directed"
     },
     {
       "name": "Sevelamer carbonate",
@@ -247,7 +247,7 @@
       "frequency": "with meals",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Sevelamer carbonate was used as a phosphate binder"
+      "evidence_span": "Sevelamer carbonate 800 mg PO with meals"
     },
     {
       "name": "Senna",
@@ -255,7 +255,7 @@
       "frequency": "daily as needed",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "The patient's constipation was addressed with polyethylene glycol, docusate sodium, and senna"
+      "evidence_span": "Senna 8.6 mg PO daily as needed"
     },
     {
       "name": "Hydrocerin",
@@ -263,7 +263,7 @@
       "frequency": "as needed",
       "route": "topical",
       "confidence": "high",
-      "evidence_span": "Topical neomycin-polymyxin-bacitracin and hydrocerin were applied for skin care"
+      "evidence_span": "Hydrocerin topical as needed"
     },
     {
       "name": "Insulin",
@@ -271,7 +271,7 @@
       "frequency": "per home regimen",
       "route": "SC",
       "confidence": "high",
-      "evidence_span": "The patient's diabetes was managed with subcutaneous insulin dosing"
+      "evidence_span": "Insulin per home regimen (6 and 8 units SC as previously established)"
     },
     {
       "name": "Sodium polystyrene sulfonate",
@@ -279,7 +279,7 @@
       "frequency": "as needed for hyperkalemia",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
+      "evidence_span": "Sodium polystyrene sulfonate 30 gm PO as needed for hyperkalemia"
     },
     {
       "name": "Vitamin D",
@@ -287,7 +287,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "supplementation with calcitriol and vitamin D was continued"
+      "evidence_span": "Vitamin D 2000 units PO daily"
     },
     {
       "name": "Acetaminophen",
@@ -301,19 +301,19 @@
       "name": "Calcium gluconate",
       "dosage": null,
       "frequency": null,
-      "route": "IV",
-      "confidence": "high",
+      "route": null,
+      "confidence": "medium",
       "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
     },
     {
       "name": "Dextrose with regular insulin",
       "dosage": null,
       "frequency": null,
-      "route": "IV",
-      "confidence": "high",
+      "route": null,
+      "confidence": "medium",
       "evidence_span": "Hyperkalemia was managed aggressively with calcium gluconate, dextrose with regular insulin, and sodium polystyrene sulfonate"
     }
   ],
   "chief_complaint": "Fever and malaise",
-  "medical_specialty": "Internal Medicine / Nephrology / Cardiology"
+  "medical_specialty": "Internal Medicine"
 }

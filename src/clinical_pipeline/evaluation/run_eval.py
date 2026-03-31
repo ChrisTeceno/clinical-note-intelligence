@@ -22,6 +22,7 @@ from clinical_pipeline.evaluation.scorer import (
 )
 from clinical_pipeline.evaluation.synthetic_notes import generate_batch
 from clinical_pipeline.extraction.cost_tracker import CostTracker
+from clinical_pipeline.extraction.extractor import DEFAULT_MODEL
 from clinical_pipeline.extraction.extractor import ClinicalExtractor, ExtractionError
 from clinical_pipeline.extraction.models import ClinicalExtraction
 
@@ -70,6 +71,7 @@ def run_evaluation(
     n_admissions: int = 30,
     settings: Settings | None = None,
     description: str = "",
+    model: str | None = None,
 ) -> EvaluationSummary:
     """Run the full evaluation pipeline.
 
@@ -134,6 +136,7 @@ def run_evaluation(
     cost_tracker = CostTracker(is_batch=False)
     extractor = ClinicalExtractor(
         api_key=settings.anthropic_api_key,
+        model=model or DEFAULT_MODEL,
         cost_tracker=cost_tracker,
     )
 
@@ -269,10 +272,17 @@ if __name__ == "__main__":
         default="",
         help="Short note about what changed in this run (e.g. 'baseline with Haiku')",
     )
+    parser.add_argument(
+        "--model",
+        type=str,
+        default=None,
+        help="Model to use for extraction (e.g. 'claude-sonnet-4-5-20241022')",
+    )
     args = parser.parse_args()
 
     run_evaluation(
         mimic_path=args.mimic_path,
         n_admissions=args.n_admissions,
         description=args.description,
+        model=args.model,
     )

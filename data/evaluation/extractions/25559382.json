@@ -5,7 +5,7 @@
       "name": "Unstable angina pectoris",
       "icd10_suggestion": "I20.0",
       "confidence": "high",
-      "evidence_span": "presented with chest discomfort concerning for unstable angina pectoris"
+      "evidence_span": "chest discomfort concerning for unstable angina pectoris"
     },
     {
       "name": "Atherosclerotic heart disease of native coronary arteries",
@@ -15,117 +15,117 @@
     },
     {
       "name": "Hypertensive heart disease with heart failure",
-      "icd10_suggestion": "I11.9",
+      "icd10_suggestion": "I11.0",
       "confidence": "high",
-      "evidence_span": "His hypertensive heart disease with heart failure and chronic systolic congestive heart failure were optimized"
+      "evidence_span": "His hypertensive heart disease with heart failure"
     },
     {
       "name": "Chronic systolic congestive heart failure",
-      "icd10_suggestion": "I50.20",
+      "icd10_suggestion": "I50.22",
       "confidence": "high",
-      "evidence_span": "chronic systolic congestive heart failure were optimized with careful monitoring of fluid status and vital signs"
+      "evidence_span": "chronic systolic congestive heart failure"
     },
     {
       "name": "Paroxysmal atrial flutter",
-      "icd10_suggestion": "I48.92",
+      "icd10_suggestion": "I48.3",
       "confidence": "high",
-      "evidence_span": "His atrial flutter remained paroxysmal without hemodynamic compromise; rate control was maintained with his current diltiazem regimen"
+      "evidence_span": "His atrial flutter remained paroxysmal"
     },
     {
       "name": "Hyperlipidemia",
       "icd10_suggestion": "E78.5",
       "confidence": "high",
-      "evidence_span": "The patient's hyperlipidemia was addressed with continuation of his statin and niacin therapy"
+      "evidence_span": "The patient's hyperlipidemia was addressed"
     },
     {
-      "name": "Asthma",
+      "name": "Unspecified asthma",
       "icd10_suggestion": "J45.9",
-      "confidence": "medium",
-      "evidence_span": "His unspecified asthma remained stable and well-controlled on current medications without exacerbation during admission"
+      "confidence": "high",
+      "evidence_span": "His unspecified asthma remained stable"
     },
     {
-      "name": "Mottled rash",
+      "name": "Mottled rash of unclear etiology",
       "icd10_suggestion": "R21",
       "confidence": "medium",
-      "evidence_span": "A mottled rash of unclear etiology appeared on the patient's trunk on hospital day 2, which remained nonpruritic and stable throughout his stay"
+      "evidence_span": "A mottled rash of unclear etiology appeared on the patient's trunk"
     },
     {
-      "name": "Transient ischemic attack",
-      "icd10_suggestion": "G45.9",
+      "name": "History of transient ischemic attack",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
-      "evidence_span": "The patient's significant cerebrovascular history—including a prior transient ischemic attack and cerebral infarction"
+      "evidence_span": "prior transient ischemic attack"
     },
     {
-      "name": "Cerebral infarction",
-      "icd10_suggestion": "I63.9",
+      "name": "History of cerebral infarction",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
-      "evidence_span": "a prior transient ischemic attack and cerebral infarction, which fortunately resolved without residual neurologic deficits"
+      "evidence_span": "cerebral infarction, which fortunately resolved without residual neurologic deficits"
     },
     {
-      "name": "Hemodynamically significant occlusion and stenosis of left carotid artery",
-      "icd10_suggestion": "I65.21",
+      "name": "Occlusion and stenosis of left carotid artery",
+      "icd10_suggestion": "I65.22",
       "confidence": "high",
-      "evidence_span": "He also has hemodynamically significant occlusion and stenosis of his left carotid artery, which has been managed medically"
+      "evidence_span": "hemodynamically significant occlusion and stenosis of his left carotid artery"
     },
     {
       "name": "Prosthetic heart valve",
       "icd10_suggestion": "Z95.2",
       "confidence": "high",
-      "evidence_span": "His prosthetic heart valve continues to function appropriately without evidence of dysfunction or infection"
+      "evidence_span": "His prosthetic heart valve continues to function appropriately"
     },
     {
-      "name": "Hodgkin lymphoma",
-      "icd10_suggestion": "C81.9",
+      "name": "History of Hodgkin lymphoma",
+      "icd10_suggestion": "Z85.71",
       "confidence": "high",
-      "evidence_span": "past medical history of Hodgkin lymphoma treated with chemotherapy and radiation, as well as prior malignant neoplasm of the prostate treated with surgery, both of which remain in remission"
+      "evidence_span": "past medical history of Hodgkin lymphoma treated with chemotherapy and radiation"
     },
     {
-      "name": "Malignant neoplasm of the prostate",
-      "icd10_suggestion": "C61",
+      "name": "History of malignant neoplasm of prostate",
+      "icd10_suggestion": "Z85.46",
       "confidence": "high",
-      "evidence_span": "prior malignant neoplasm of the prostate treated with surgery, both of which remain in remission"
+      "evidence_span": "prior malignant neoplasm of the prostate treated with surgery"
     },
     {
-      "name": "Nicotine dependence",
-      "icd10_suggestion": "F17.200",
+      "name": "Former smoker with history of nicotine dependence",
+      "icd10_suggestion": "Z87.891",
       "confidence": "high",
-      "evidence_span": "He is a former smoker with significant history of nicotine dependence but reports abstinence for several years"
+      "evidence_span": "He is a former smoker with significant history of nicotine dependence"
     }
   ],
   "procedures": [
     {
-      "name": "Aortocoronary bypass graft placement",
-      "cpt_suggestion": "33533",
+      "name": "Aortocoronary bypass graft",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "prior revascularization, including placement of an aortocoronary bypass graft"
+      "evidence_span": "placement of an aortocoronary bypass graft"
     },
     {
       "name": "Coronary angioplasty with stent implant",
-      "cpt_suggestion": "92928",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "coronary angioplasty with stent implant"
     },
     {
       "name": "Telemetry monitoring",
-      "cpt_suggestion": "93000",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "the patient was admitted for telemetry monitoring and further cardiac assessment"
+      "evidence_span": "the patient was admitted for telemetry monitoring"
     },
     {
-      "name": "Electrocardiography (EKG)",
+      "name": "EKG",
       "cpt_suggestion": "93000",
       "confidence": "high",
       "evidence_span": "EKG showed no acute ST changes"
     },
     {
       "name": "Cardiac enzyme testing",
-      "cpt_suggestion": "82550",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "Cardiac enzymes were obtained and were negative for acute myocardial infarction"
+      "evidence_span": "Cardiac enzymes were obtained"
     },
     {
       "name": "Troponin testing",
-      "cpt_suggestion": "84484",
+      "cpt_suggestion": null,
       "confidence": "high",
       "evidence_span": "Repeat troponin remained negative"
     }
@@ -196,6 +196,6 @@
       "evidence_span": "Acetaminophen 500-1000 mg every 6 hours as needed for pain by mouth"
     }
   ],
-  "chief_complaint": "Chest discomfort concerning for unstable angina pectoris",
+  "chief_complaint": "chest discomfort concerning for unstable angina pectoris",
   "medical_specialty": "Cardiology"
 }

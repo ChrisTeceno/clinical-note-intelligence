@@ -3,156 +3,38 @@
   "diagnoses": [
     {
       "name": "Displaced comminuted fracture of the shaft of the right tibia",
-      "icd10_suggestion": "S82.224A",
+      "icd10_suggestion": "S82.201A",
       "confidence": "high",
-      "evidence_span": "She sustained a displaced comminuted fracture of the shaft of the right tibia."
+      "evidence_span": "She sustained a displaced comminuted fracture of the shaft of the right tibia"
     },
     {
-      "name": "Epilepsy",
+      "name": "Epilepsy, unspecified, not intractable, without status epilepticus",
       "icd10_suggestion": "G40.909",
       "confidence": "high",
-      "evidence_span": "The patient has a significant past medical history including epilepsy, which is currently unspecified and not intractable without documented status epilepticus."
+      "evidence_span": "The patient has a significant past medical history including epilepsy, which is currently unspecified and not intractable without documented status epilepticus"
     },
     {
-      "name": "Legal blindness",
-      "icd10_suggestion": "H54.0",
+      "name": "Legal blindness as defined in the USA",
+      "icd10_suggestion": "H54.8",
       "confidence": "high",
-      "evidence_span": "She also carries a diagnosis of legal blindness as defined in the USA, which likely contributed to her fall risk."
+      "evidence_span": "She also carries a diagnosis of legal blindness as defined in the USA"
     },
     {
-      "name": "Mental disorder due to a known physiological condition",
-      "icd10_suggestion": "F06.9",
+      "name": "Unspecified mental disorder due to known physiological condition",
+      "icd10_suggestion": "F99",
       "confidence": "high",
-      "evidence_span": "Additionally, she has an unspecified mental disorder due to a known physiological condition, for which she has been on psychiatric medications."
-    },
-    {
-      "name": "Fall on the same level",
-      "icd10_suggestion": "W01.0",
-      "confidence": "high",
-      "evidence_span": "The patient is a resident of a residential care facility who presented to the emergency department after a fall on the same level at her place of residence."
+      "evidence_span": "Additionally, she has an unspecified mental disorder due to a known physiological condition"
     }
   ],
   "procedures": [
     {
       "name": "Operative reposition of the right tibia with open approach and intramedullary internal fixation device placement",
-      "cpt_suggestion": "27758",
+      "cpt_suggestion": "27506",
       "confidence": "high",
-      "evidence_span": "The patient underwent operative reposition of the right tibia with open approach and intramedullary internal fixation device placement on hospital day 1."
+      "evidence_span": "The patient underwent operative reposition of the right tibia with open approach and intramedullary internal fixation device placement on hospital day 1"
     }
   ],
   "medications": [
-    {
-      "name": "Cefazolin",
-      "dosage": null,
-      "frequency": "perioperative",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "She received perioperative antibiotic prophylaxis with cefazolin."
-    },
-    {
-      "name": "Oxycodone immediate release",
-      "dosage": "5-10 mg",
-      "frequency": "every 4-6 hours as needed",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "pain was managed with a combination of oxycodone immediate release, morphine sulfate IV as needed, and ketorolac."
-    },
-    {
-      "name": "Morphine sulfate",
-      "dosage": "2-4 mg",
-      "frequency": "as needed",
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "pain was managed with a combination of oxycodone immediate release, morphine sulfate IV as needed, and ketorolac."
-    },
-    {
-      "name": "Ketorolac",
-      "dosage": "15 mg",
-      "frequency": "every 6 hours as needed",
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "pain was managed with a combination of oxycodone immediate release, morphine sulfate IV as needed, and ketorolac."
-    },
-    {
-      "name": "Enoxaparin",
-      "dosage": "40 mg",
-      "frequency": "daily for 14 days post-discharge",
-      "route": "SC",
-      "confidence": "high",
-      "evidence_span": "Prophylactic enoxaparin was administered for thromboembolism prevention."
-    },
-    {
-      "name": "Trazodone",
-      "dosage": "50 mg and 100 mg",
-      "frequency": "at bedtime",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "her trazodone, citalopram, and quetiapine were continued and titrated during the admission."
-    },
-    {
-      "name": "Citalopram",
-      "dosage": "40 mg",
-      "frequency": "daily",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "her trazodone, citalopram, and quetiapine were continued and titrated during the admission."
-    },
-    {
-      "name": "Quetiapine fumarate",
-      "dosage": "150-300 mg",
-      "frequency": "at bedtime",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "her trazodone, citalopram, and quetiapine were continued and titrated during the admission."
-    },
-    {
-      "name": "Divalproex",
-      "dosage": "500 mg",
-      "frequency": "BID",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "Divalproex was maintained for seizure management."
-    },
-    {
-      "name": "Docusate sodium",
-      "dosage": "100 mg",
-      "frequency": "BID",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "The patient received appropriate bowel regimen including docusate sodium to prevent narcotic-induced constipation."
-    },
-    {
-      "name": "Ondansetron",
-      "dosage": null,
-      "frequency": "as needed",
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "Antiemetics with ondansetron were used as needed."
-    },
-    {
-      "name": "Dextrose and normal saline",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "IV fluid support with dextrose and normal saline was provided, along with potassium supplementation."
-    },
-    {
-      "name": "Potassium supplementation",
-      "dosage": null,
-      "frequency": null,
-      "route": null,
-      "confidence": "high",
-      "evidence_span": "IV fluid support with dextrose and normal saline was provided, along with potassium supplementation."
-    },
-    {
-      "name": "Acetaminophen",
-      "dosage": "1000 mg",
-      "frequency": "every 6 hours as needed",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "Acetaminophen was administered for additional analgesic coverage."
-    },
     {
       "name": "Multivitamins",
       "dosage": "1 tablet",
@@ -160,8 +42,120 @@
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Multivitamins 1 tablet PO daily"
+    },
+    {
+      "name": "Oxycodone immediate release",
+      "dosage": "5-10 mg",
+      "frequency": "every 4-6 hours as needed",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Oxycodone immediate release 5-10 mg PO every 4-6 hours as needed for pain"
+    },
+    {
+      "name": "Morphine sulfate",
+      "dosage": "2-4 mg",
+      "frequency": "as needed",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Morphine sulfate 2-4 mg IV as needed for breakthrough pain"
+    },
+    {
+      "name": "Trazodone",
+      "dosage": "50 mg and 100 mg",
+      "frequency": "at bedtime",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Trazodone 50 mg PO at bedtime and 100 mg PO at bedtime"
+    },
+    {
+      "name": "Divalproex delayed release",
+      "dosage": "500 mg",
+      "frequency": "BID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Divalproex delayed release 500 mg PO BID"
+    },
+    {
+      "name": "Docusate sodium",
+      "dosage": "100 mg",
+      "frequency": "BID",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Docusate sodium 100 mg PO BID"
+    },
+    {
+      "name": "Ketorolac",
+      "dosage": "15 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Ketorolac 15 mg IV every 6 hours as needed"
+    },
+    {
+      "name": "Enoxaparin sodium",
+      "dosage": "40 mg",
+      "frequency": "daily",
+      "route": "SC",
+      "confidence": "high",
+      "evidence_span": "Enoxaparin sodium 40 mg SC daily for 14 days post-discharge"
+    },
+    {
+      "name": "Citalopram",
+      "dosage": "40 mg",
+      "frequency": "daily",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Citalopram 40 mg PO daily"
+    },
+    {
+      "name": "Quetiapine fumarate",
+      "dosage": "150-300 mg",
+      "frequency": "at bedtime",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Quetiapine fumarate 150-300 mg PO at bedtime"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "1000 mg",
+      "frequency": "every 6 hours as needed",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 1000 mg PO every 6 hours as needed"
+    },
+    {
+      "name": "Cefazolin",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "She received perioperative antibiotic prophylaxis with cefazolin"
+    },
+    {
+      "name": "Ondansetron",
+      "dosage": null,
+      "frequency": "as needed",
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "Antiemetics with ondansetron were used as needed"
+    },
+    {
+      "name": "Dextrose and normal saline",
+      "dosage": null,
+      "frequency": null,
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "IV fluid support with dextrose and normal saline was provided"
+    },
+    {
+      "name": "Potassium supplementation",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "along with potassium supplementation"
     }
   ],
-  "chief_complaint": "Right leg pain and swelling following a fall.",
-  "medical_specialty": "Orthopedic Surgery / General Surgery"
+  "chief_complaint": "Right leg pain and swelling following a fall",
+  "medical_specialty": "Orthopedic Surgery"
 }

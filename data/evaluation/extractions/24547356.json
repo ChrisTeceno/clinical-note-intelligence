@@ -2,76 +2,70 @@
   "note_id": "24547356",
   "diagnoses": [
     {
-      "name": "Closed fracture of the subcondylar process of the mandible",
-      "icd10_suggestion": "S02.61",
+      "name": "Closed fracture of the subcondylar process of the mandible with dislocation",
+      "icd10_suggestion": "S02.62XA",
       "confidence": "high",
-      "evidence_span": "a closed fracture of the subcondylar process of the mandible with associated dislocation of the jaw"
-    },
-    {
-      "name": "Dislocation of the jaw",
-      "icd10_suggestion": "S03.0",
-      "confidence": "high",
-      "evidence_span": "a closed fracture of the subcondylar process of the mandible with associated dislocation of the jaw"
+      "evidence_span": "closed fracture of the subcondylar process of the mandible with associated dislocation of the jaw"
     },
     {
       "name": "Laceration of intercostal blood vessels",
-      "icd10_suggestion": "S25.51",
+      "icd10_suggestion": "S25.509A",
       "confidence": "high",
-      "evidence_span": "Imaging also revealed a laceration of intercostal blood vessels on the left side"
+      "evidence_span": "laceration of intercostal blood vessels on the left side"
     },
     {
-      "name": "Contusion of intra-abdominal organs from blunt trauma",
-      "icd10_suggestion": "S36.91",
+      "name": "Contusion of other intra-abdominal organs from blunt trauma",
+      "icd10_suggestion": "S36.899A",
       "confidence": "high",
-      "evidence_span": "the patient sustained a contusion of other intra-abdominal organs from blunt trauma"
+      "evidence_span": "contusion of other intra-abdominal organs from blunt trauma"
     },
     {
       "name": "Alcohol abuse, uncomplicated",
       "icd10_suggestion": "F10.10",
       "confidence": "high",
-      "evidence_span": "The pt has a known history of alcohol abuse, uncomplicated"
+      "evidence_span": "known history of alcohol abuse, uncomplicated"
     },
     {
       "name": "Thrombocytopenia of unspecified etiology",
       "icd10_suggestion": "D69.6",
       "confidence": "high",
-      "evidence_span": "the patient demonstrated thrombocytopenia of unspecified etiology"
+      "evidence_span": "thrombocytopenia of unspecified etiology"
     },
     {
       "name": "Anemia, unspecified",
       "icd10_suggestion": "D64.9",
       "confidence": "high",
-      "evidence_span": "and anemia, unspecified"
+      "evidence_span": "anemia, unspecified"
     },
     {
-      "name": "Tachycardia",
-      "icd10_suggestion": "R00.0",
-      "confidence": "medium",
-      "evidence_span": "Vital signs on admission were notable for mild tachycardia"
+      "name": "Assault by unarmed brawl or fight",
+      "icd10_suggestion": "Y04.0XXA",
+      "confidence": "high",
+      "evidence_span": "assault by unarmed brawl or fight"
     }
   ],
   "procedures": [
     {
-      "name": "Open reduction with internal fixation of right mandibular subcondylar fracture",
-      "cpt_suggestion": "21461",
+      "name": "Open reduction with internal fixation of right mandible subcondylar fracture",
+      "cpt_suggestion": "21470",
       "confidence": "high",
       "evidence_span": "The right mandible was repositioned with internal fixation device using an open approach to address the subcondylar fracture"
     },
     {
-      "name": "External fixation of left maxilla and left mandible via percutaneous approach",
-      "cpt_suggestion": "21110",
+      "name": "Percutaneous external fixation of left maxilla and left mandible",
+      "cpt_suggestion": "21454",
       "confidence": "high",
-      "evidence_span": "the left maxilla and left mandible were repositioned with external fixation devices via percutaneous approach to stabilize the facial skeleton"
+      "evidence_span": "the left maxilla and left mandible were repositioned with external fixation devices via percutaneous approach"
     },
     {
-      "name": "Repair of intercostal artery via open approach",
-      "cpt_suggestion": "35211",
+      "name": "Open repair of upper artery (intercostal vessels)",
+      "cpt_suggestion": "35226",
       "confidence": "high",
       "evidence_span": "An upper artery repair was performed via open approach to control hemorrhage from the lacerated intercostal vessels"
     },
     {
       "name": "Influenza vaccination",
-      "cpt_suggestion": "90658",
+      "cpt_suggestion": "90688",
       "confidence": "high",
       "evidence_span": "The patient received influenza vaccination during hospitalization"
     }
@@ -80,15 +74,15 @@
     {
       "name": "Fentanyl citrate",
       "dosage": null,
-      "frequency": null,
+      "frequency": "continuous drip",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Pain was controlled with a combination of fentanyl citrate drip"
+      "evidence_span": "fentanyl citrate drip"
     },
     {
       "name": "Propofol",
       "dosage": null,
-      "frequency": null,
+      "frequency": "continuous infusion",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "propofol infusion for sedation"
@@ -105,25 +99,25 @@
       "name": "Acetaminophen",
       "dosage": "1000 mg",
       "frequency": "TID",
-      "route": "IV",
+      "route": "PO",
       "confidence": "high",
       "evidence_span": "IV acetaminophen"
     },
     {
       "name": "Ampicillin-sulbactam",
       "dosage": "3 g",
-      "frequency": "BID for 7 additional days",
+      "frequency": "BID",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Antibiotic coverage was provided with ampicillin-sulbactam"
     },
     {
-      "name": "IV potassium chloride",
+      "name": "Potassium chloride",
       "dosage": null,
       "frequency": null,
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Electrolyte abnormalities were addressed with IV potassium chloride"
+      "evidence_span": "IV potassium chloride"
     },
     {
       "name": "Calcium gluconate",
@@ -142,12 +136,12 @@
       "evidence_span": "magnesium sulfate"
     },
     {
-      "name": "Phosphorus supplementation",
+      "name": "Phosphorus",
       "dosage": null,
       "frequency": null,
       "route": "IV",
-      "confidence": "medium",
-      "evidence_span": "and phosphorus supplementation"
+      "confidence": "high",
+      "evidence_span": "phosphorus supplementation"
     },
     {
       "name": "Normal saline",
@@ -155,7 +149,7 @@
       "frequency": null,
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "aggressive fluid resuscitation with normal saline and D5 1/2NS"
+      "evidence_span": "aggressive fluid resuscitation with normal saline"
     },
     {
       "name": "D5 1/2NS",
@@ -163,7 +157,7 @@
       "frequency": null,
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "aggressive fluid resuscitation with normal saline and D5 1/2NS"
+      "evidence_span": "D5 1/2NS"
     },
     {
       "name": "Heparin",
@@ -171,7 +165,7 @@
       "frequency": null,
       "route": "subcutaneous",
       "confidence": "high",
-      "evidence_span": "Anticoagulation prophylaxis included subcutaneous heparin"
+      "evidence_span": "subcutaneous heparin"
     },
     {
       "name": "Famotidine",
@@ -179,7 +173,7 @@
       "frequency": "daily",
       "route": "IV",
       "confidence": "high",
-      "evidence_span": "Gastrointestinal support included famotidine for ulcer prophylaxis"
+      "evidence_span": "famotidine for ulcer prophylaxis"
     },
     {
       "name": "Ondansetron",
@@ -195,7 +189,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "bowel regimen with docusate sodium"
+      "evidence_span": "docusate sodium"
     },
     {
       "name": "Senna",
@@ -215,35 +209,35 @@
     },
     {
       "name": "Chlorhexidine gluconate",
-      "dosage": "0.12% 15 mL",
+      "dosage": "0.12%",
       "frequency": "BID",
       "route": "oral rinse",
       "confidence": "high",
-      "evidence_span": "Oral hygiene was maintained with chlorhexidine gluconate rinse"
+      "evidence_span": "chlorhexidine gluconate rinse"
     },
     {
       "name": "Pseudoephedrine",
       "dosage": null,
       "frequency": null,
-      "route": null,
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "Pseudoephedrine and oxymetazoline nasal spray were used for congestion management"
+      "evidence_span": "Pseudoephedrine"
     },
     {
       "name": "Oxymetazoline nasal spray",
       "dosage": null,
       "frequency": null,
-      "route": "nasal spray",
+      "route": "nasal",
       "confidence": "high",
-      "evidence_span": "oxymetazoline nasal spray were used for congestion management"
+      "evidence_span": "oxymetazoline nasal spray"
     },
     {
-      "name": "Oxycodone liquid",
+      "name": "Oxycodone",
       "dosage": "5-10 mg",
       "frequency": "Q4-6H PRN",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "oxycodone liquid was available for breakthrough pain control"
+      "evidence_span": "oxycodone liquid"
     },
     {
       "name": "Diphenhydramine",
@@ -259,7 +253,7 @@
       "frequency": null,
       "route": "ophthalmic",
       "confidence": "high",
-      "evidence_span": "Dexamethasone ophthalmic suspension and ciprofloxacin ophthalmic solution were instilled to the left ear"
+      "evidence_span": "Dexamethasone ophthalmic suspension"
     },
     {
       "name": "Ciprofloxacin ophthalmic solution",
@@ -267,7 +261,7 @@
       "frequency": null,
       "route": "ophthalmic",
       "confidence": "high",
-      "evidence_span": "ciprofloxacin ophthalmic solution were instilled to the left ear"
+      "evidence_span": "ciprofloxacin ophthalmic solution"
     },
     {
       "name": "Trazodone",
@@ -281,11 +275,11 @@
       "name": "Sodium chloride nasal spray",
       "dosage": "1-2 sprays each nostril",
       "frequency": "BID",
-      "route": "nasal spray",
+      "route": "nasal",
       "confidence": "high",
       "evidence_span": "Sodium chloride nasal spray 1-2 sprays each nostril BID"
     }
   ],
-  "chief_complaint": "Facial trauma and left-sided chest injury sustained during altercation.",
-  "medical_specialty": "Trauma and Maxillofacial Surgery"
+  "chief_complaint": "Facial trauma and left-sided chest injury sustained during altercation",
+  "medical_specialty": "Trauma Surgery / Oral and Maxillofacial Surgery"
 }

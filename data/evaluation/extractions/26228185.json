@@ -2,10 +2,10 @@
   "note_id": "26228185",
   "diagnoses": [
     {
-      "name": "Acute kidney injury",
+      "name": "Acute kidney failure",
       "icd10_suggestion": "N17.9",
       "confidence": "high",
-      "evidence_span": "presenting with acute kidney failure of unspecified etiology"
+      "evidence_span": "Acute kidney failure and dysuria"
     },
     {
       "name": "Urinary tract infection",
@@ -14,20 +14,14 @@
       "evidence_span": "urinary tract infection. The pt was found to have significantly elevated creatinine on routine labs and endorsed dysuria and frequency"
     },
     {
-      "name": "Dysuria",
-      "icd10_suggestion": "R30.0",
-      "confidence": "high",
-      "evidence_span": "endorsed dysuria and frequency"
-    },
-    {
-      "name": "Chronic lymphocytic leukemia of B-cell type not in remission",
+      "name": "Chronic lymphocytic leukemia of B-cell type",
       "icd10_suggestion": "C91.10",
       "confidence": "high",
       "evidence_span": "chronic lymphocytic leukemia of B-cell type not in remission"
     },
     {
-      "name": "Cerebral infarction with left-sided hemiparesis",
-      "icd10_suggestion": "I69.351",
+      "name": "Prior cerebral infarction with left-sided hemiparesis",
+      "icd10_suggestion": "I69.354",
       "confidence": "high",
       "evidence_span": "prior cerebral infarction with resulting left-sided hemiparesis"
     },
@@ -39,31 +33,25 @@
     },
     {
       "name": "Paroxysmal atrial fibrillation",
-      "icd10_suggestion": "I48.01",
+      "icd10_suggestion": "I48.0",
       "confidence": "high",
       "evidence_span": "paroxysmal atrial fibrillation managed on anticoagulation"
     },
     {
-      "name": "Atherosclerotic coronary artery disease",
+      "name": "Atherosclerotic coronary artery disease with angioplasty implant",
       "icd10_suggestion": "I25.10",
       "confidence": "high",
       "evidence_span": "atherosclerotic coronary artery disease s/p angioplasty implant"
     },
     {
-      "name": "Type 2 diabetes mellitus",
-      "icd10_suggestion": "E11.9",
-      "confidence": "high",
-      "evidence_span": "his type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence"
-    },
-    {
-      "name": "Diabetic polyneuropathy",
+      "name": "Type 2 diabetes mellitus with diabetic polyneuropathy",
       "icd10_suggestion": "E11.42",
       "confidence": "high",
-      "evidence_span": "type 2 diabetes mellitus with diabetic polyneuropathy"
+      "evidence_span": "type 2 diabetes mellitus with diabetic polyneuropathy and insulin dependence"
     },
     {
-      "name": "Morbid obesity",
-      "icd10_suggestion": "E66.01",
+      "name": "Morbid obesity status post bariatric surgery",
+      "icd10_suggestion": "Z98.84",
       "confidence": "high",
       "evidence_span": "morbid obesity s/p bariatric surgery"
     },
@@ -93,39 +81,39 @@
     },
     {
       "name": "Hypovolemia",
-      "icd10_suggestion": "R58.9",
+      "icd10_suggestion": "E86.1",
       "confidence": "high",
-      "evidence_span": "pt presented with signs of hypovolemia and acute kidney injury"
+      "evidence_span": "the pt presented with signs of hypovolemia and acute kidney injury"
     },
     {
       "name": "Hematuria",
       "icd10_suggestion": "R31.9",
       "confidence": "high",
-      "evidence_span": "Labs revealed elevated BUN and creatinine with hematuria noted on UA"
+      "evidence_span": "hematuria noted on UA"
     },
     {
       "name": "Gastrojejunal ulcer",
       "icd10_suggestion": "K28.9",
       "confidence": "high",
-      "evidence_span": "his history of gastrojejunal ulcer and urinary retention"
+      "evidence_span": "Given his history of gastrojejunal ulcer"
     },
     {
       "name": "Urinary retention",
       "icd10_suggestion": "R33.9",
       "confidence": "high",
-      "evidence_span": "history of gastrojejunal ulcer and urinary retention"
+      "evidence_span": "Given his history of gastrojejunal ulcer and urinary retention"
     },
     {
       "name": "Thrombocytopenia",
-      "icd10_suggestion": "D69.9",
+      "icd10_suggestion": "D69.6",
       "confidence": "high",
-      "evidence_span": "Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission"
+      "evidence_span": "given thrombocytopenia and iron deficiency anemia documented on admission"
     },
     {
       "name": "Iron deficiency anemia",
       "icd10_suggestion": "D50.9",
       "confidence": "high",
-      "evidence_span": "thrombocytopenia and iron deficiency anemia documented on admission"
+      "evidence_span": "given thrombocytopenia and iron deficiency anemia documented on admission"
     },
     {
       "name": "Hypertension",
@@ -148,31 +136,43 @@
   ],
   "procedures": [
     {
-      "name": "Pacemaker placement",
-      "cpt_suggestion": "33208",
-      "confidence": "high",
-      "evidence_span": "pacemaker for sick sinus syndrome"
-    },
-    {
-      "name": "Coronary angioplasty with stent implant",
-      "cpt_suggestion": "92928",
-      "confidence": "high",
-      "evidence_span": "atherosclerotic coronary artery disease s/p angioplasty implant"
-    },
-    {
-      "name": "Bariatric surgery",
-      "cpt_suggestion": "43645",
-      "confidence": "high",
-      "evidence_span": "morbid obesity s/p bariatric surgery"
-    },
-    {
       "name": "IV hydration with 0.9% sodium chloride and lactated Ringers",
-      "cpt_suggestion": "96360",
+      "cpt_suggestion": null,
       "confidence": "high",
-      "evidence_span": "treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component"
+      "evidence_span": "The patient was treated with IV hydration using 0.9% sodium chloride and lactated Ringers to address the hypovolemia component"
+    },
+    {
+      "name": "Urinalysis cultures",
+      "cpt_suggestion": "87086",
+      "confidence": "high",
+      "evidence_span": "Urinalysis cultures were obtained and grew organisms consistent with urinary tract infection"
+    },
+    {
+      "name": "Point-of-care glucose monitoring",
+      "cpt_suggestion": "82962",
+      "confidence": "high",
+      "evidence_span": "His insulin dosing (80, 30, 50, and 70 unit regimens) was optimized during admission with point-of-care glucose monitoring"
+    },
+    {
+      "name": "Complete blood count trending",
+      "cpt_suggestion": "85025",
+      "confidence": "high",
+      "evidence_span": "Complete blood count trending was followed given thrombocytopenia and iron deficiency anemia documented on admission"
+    },
+    {
+      "name": "Lidocaine patches application",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "lidocaine 5% patches were applied"
+    },
+    {
+      "name": "IV flushes with heparin and normal saline",
+      "cpt_suggestion": null,
+      "confidence": "high",
+      "evidence_span": "IV flushes with both heparin (10 and 100 units/ml) and normal saline maintained vascular access"
     }
   ],
   "medications": [],
-  "chief_complaint": "Acute kidney failure and dysuria.",
-  "medical_specialty": null
+  "chief_complaint": "Acute kidney failure and dysuria",
+  "medical_specialty": "Internal Medicine"
 }

@@ -3,68 +3,50 @@
   "diagnoses": [
     {
       "name": "Non-ST elevation myocardial infarction (NSTEMI)",
-      "icd10_suggestion": "I21.02",
+      "icd10_suggestion": "I21.4",
       "confidence": "high",
-      "evidence_span": "The clinical presentation and biomarkers were consistent with a non-ST elevation myocardial infarction (NSTEMI)."
+      "evidence_span": "The clinical presentation and biomarkers were consistent with a non-ST elevation myocardial infarction (NSTEMI)"
     },
     {
       "name": "Type B dissection of the abdominal aorta",
-      "icd10_suggestion": "I71.02",
+      "icd10_suggestion": "I71.03",
       "confidence": "high",
       "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery"
     },
     {
-      "name": "Acute myocardial injury",
-      "icd10_suggestion": "I21.9",
+      "name": "Critical stenosis in the left anterior descending artery",
+      "icd10_suggestion": "I25.111",
       "confidence": "high",
-      "evidence_span": "Troponin I was elevated at 2.8 ng/mL, consistent with acute myocardial injury."
+      "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery with significant thrombus burden"
     },
     {
-      "name": "Gastro-esophageal reflux disease without esophagitis",
+      "name": "Gastro-esophageal reflux disease",
       "icd10_suggestion": "K21.9",
       "confidence": "high",
       "evidence_span": "the patient has a history of gastro-esophageal reflux disease without esophagitis"
-    },
-    {
-      "name": "Critical stenosis of left anterior descending artery",
-      "icd10_suggestion": "I25.12",
-      "confidence": "high",
-      "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery with significant thrombus burden."
-    },
-    {
-      "name": "Hypertension",
-      "icd10_suggestion": "I10",
-      "confidence": "medium",
-      "evidence_span": "BP 168/92 mmHg on admission; vascular surgery determined that conservative medical management was appropriate given...emphasis on optimization of blood pressure control"
     }
   ],
   "procedures": [
     {
-      "name": "Emergent coronary intervention with thrombectomy of left anterior descending artery",
-      "cpt_suggestion": "92975",
+      "name": "Percutaneous coronary intervention with thrombectomy",
+      "cpt_suggestion": "92928",
       "confidence": "high",
-      "evidence_span": "The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach."
+      "evidence_span": "The patient underwent emergent coronary intervention with extirpation of thrombotic material from the left anterior descending artery via percutaneous approach"
     },
     {
       "name": "Coronary angiography",
-      "cpt_suggestion": "93454",
+      "cpt_suggestion": "93458",
       "confidence": "high",
       "evidence_span": "Coronary angiography with fluoroscopic imaging of multiple coronary arteries revealed a critical stenosis in the left anterior descending artery"
     },
     {
       "name": "CT angiography",
-      "cpt_suggestion": "71275",
+      "cpt_suggestion": "74174",
       "confidence": "high",
-      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta"
+      "evidence_span": "CT angiography confirmed Type B dissection of the abdominal aorta extending from the left subclavian artery"
     },
     {
-      "name": "12-lead EKG",
-      "cpt_suggestion": "93000",
-      "confidence": "high",
-      "evidence_span": "Initial 12-lead EKG demonstrated ST segment depressions in the anterolateral leads."
-    },
-    {
-      "name": "Quadrivalent influenza vaccine",
+      "name": "Quadrivalent influenza vaccination",
       "cpt_suggestion": "90686",
       "confidence": "high",
       "evidence_span": "the patient received the quadrivalent influenza vaccine"
@@ -114,7 +96,7 @@
     {
       "name": "Nitroglycerin",
       "dosage": "0.3 mg",
-      "frequency": "as needed for chest pain",
+      "frequency": "as needed",
       "route": "sublingual",
       "confidence": "high",
       "evidence_span": "Nitroglycerin 0.3 mg sublingual as needed for chest pain"
@@ -160,7 +142,7 @@
       "evidence_span": "Potassium chloride 40 mEq PO daily"
     },
     {
-      "name": "IV nitroglycerin infusion",
+      "name": "Nitroglycerin",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -168,7 +150,7 @@
       "evidence_span": "The patient received IV nitroglycerin infusion"
     },
     {
-      "name": "IV hydralazine",
+      "name": "Hydralazine",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -176,7 +158,7 @@
       "evidence_span": "IV hydralazine for blood pressure management"
     },
     {
-      "name": "IV magnesium sulfate",
+      "name": "Magnesium sulfate",
       "dosage": null,
       "frequency": null,
       "route": "IV",
@@ -184,7 +166,7 @@
       "evidence_span": "IV magnesium sulfate for cardioprotection"
     },
     {
-      "name": "IV heparin",
+      "name": "Heparin",
       "dosage": null,
       "frequency": null,
       "route": "IV",

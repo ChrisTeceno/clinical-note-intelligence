@@ -1,131 +1,191 @@
 {
   "summary": {
-    "total_requests": 20,
-    "total_input_tokens": 53815,
-    "total_output_tokens": 54509,
-    "estimated_cost_usd": 0.2611,
+    "total_requests": 30,
+    "total_input_tokens": 72499,
+    "total_output_tokens": 79036,
+    "estimated_cost_usd": 0.0,
     "is_batch": false
   },
   "records": [
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2599,
-      "output_tokens": 2394,
-      "timestamp": "2026-03-31T01:50:51.494437+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2472,
+      "output_tokens": 2353,
+      "timestamp": "2026-03-31T16:23:21.764459+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2578,
-      "output_tokens": 2133,
-      "timestamp": "2026-03-31T01:51:00.744574+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2326,
+      "output_tokens": 2049,
+      "timestamp": "2026-03-31T16:23:40.893090+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2704,
-      "output_tokens": 2692,
-      "timestamp": "2026-03-31T01:51:13.097409+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2305,
+      "output_tokens": 2187,
+      "timestamp": "2026-03-31T16:24:00.478769+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2916,
-      "output_tokens": 3915,
-      "timestamp": "2026-03-31T01:51:31.145641+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2431,
+      "output_tokens": 2317,
+      "timestamp": "2026-03-31T16:24:21.531626+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2544,
-      "output_tokens": 2032,
-      "timestamp": "2026-03-31T01:51:40.240668+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2643,
+      "output_tokens": 3379,
+      "timestamp": "2026-03-31T16:24:52.064492+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2612,
-      "output_tokens": 2215,
-      "timestamp": "2026-03-31T01:51:50.290759+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2271,
+      "output_tokens": 2288,
+      "timestamp": "2026-03-31T16:25:12.782713+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2605,
-      "output_tokens": 1890,
-      "timestamp": "2026-03-31T01:51:58.841207+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2181,
+      "output_tokens": 1402,
+      "timestamp": "2026-03-31T16:25:26.785675+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2532,
-      "output_tokens": 2618,
-      "timestamp": "2026-03-31T01:52:10.105184+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2339,
+      "output_tokens": 1894,
+      "timestamp": "2026-03-31T16:25:45.300847+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2826,
-      "output_tokens": 3726,
-      "timestamp": "2026-03-31T01:52:26.146635+00:00"
-    },
-    {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2644,
-      "output_tokens": 2970,
-      "timestamp": "2026-03-31T01:52:39.675676+00:00"
-    },
-    {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2652,
-      "output_tokens": 2814,
-      "timestamp": "2026-03-31T01:52:51.650990+00:00"
-    },
-    {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2798,
-      "output_tokens": 3476,
-      "timestamp": "2026-03-31T01:53:07.610346+00:00"
-    },
-    {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 3087,
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2711,
       "output_tokens": 4096,
-      "timestamp": "2026-03-31T01:53:28.570349+00:00"
+      "timestamp": "2026-03-31T16:26:23.688753+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2797,
-      "output_tokens": 4063,
-      "timestamp": "2026-03-31T01:53:50.759463+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2332,
+      "output_tokens": 1788,
+      "timestamp": "2026-03-31T16:26:40.644434+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2709,
-      "output_tokens": 3121,
-      "timestamp": "2026-03-31T01:54:11.807876+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2259,
+      "output_tokens": 2642,
+      "timestamp": "2026-03-31T16:27:04.303495+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2745,
-      "output_tokens": 1346,
-      "timestamp": "2026-03-31T01:54:24.770323+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2553,
+      "output_tokens": 3500,
+      "timestamp": "2026-03-31T16:27:35.630958+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2599,
-      "output_tokens": 1163,
-      "timestamp": "2026-03-31T01:54:31.066482+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2371,
+      "output_tokens": 2776,
+      "timestamp": "2026-03-31T16:28:01.627600+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2589,
-      "output_tokens": 1886,
-      "timestamp": "2026-03-31T01:54:43.650892+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2379,
+      "output_tokens": 2694,
+      "timestamp": "2026-03-31T16:28:26.608644+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2495,
-      "output_tokens": 1863,
-      "timestamp": "2026-03-31T01:54:52.924642+00:00"
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2525,
+      "output_tokens": 3434,
+      "timestamp": "2026-03-31T16:28:57.838389+00:00"
     },
     {
-      "model": "claude-haiku-4-5-20251001",
-      "input_tokens": 2784,
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2228,
+      "output_tokens": 2515,
+      "timestamp": "2026-03-31T16:29:20.896535+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2232,
+      "output_tokens": 2119,
+      "timestamp": "2026-03-31T16:29:41.293611+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2814,
       "output_tokens": 4096,
-      "timestamp": "2026-03-31T01:55:11.585661+00:00"
+      "timestamp": "2026-03-31T16:30:17.116683+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2524,
+      "output_tokens": 4096,
+      "timestamp": "2026-03-31T16:30:52.921368+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2587,
+      "output_tokens": 4096,
+      "timestamp": "2026-03-31T16:31:29.826611+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2117,
+      "output_tokens": 812,
+      "timestamp": "2026-03-31T16:31:39.349862+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2436,
+      "output_tokens": 2877,
+      "timestamp": "2026-03-31T16:32:05.364007+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2472,
+      "output_tokens": 1179,
+      "timestamp": "2026-03-31T16:32:16.830254+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2302,
+      "output_tokens": 2407,
+      "timestamp": "2026-03-31T16:32:41.089294+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2686,
+      "output_tokens": 4096,
+      "timestamp": "2026-03-31T16:33:15.129207+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2628,
+      "output_tokens": 3415,
+      "timestamp": "2026-03-31T16:33:45.415479+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2326,
+      "output_tokens": 1276,
+      "timestamp": "2026-03-31T16:33:57.683446+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2316,
+      "output_tokens": 1745,
+      "timestamp": "2026-03-31T16:34:13.593536+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2222,
+      "output_tokens": 1447,
+      "timestamp": "2026-03-31T16:34:29.549769+00:00"
+    },
+    {
+      "model": "claude-4-sonnet-20250514",
+      "input_tokens": 2511,
+      "output_tokens": 4061,
+      "timestamp": "2026-03-31T16:35:04.979905+00:00"
     }
   ]
 }

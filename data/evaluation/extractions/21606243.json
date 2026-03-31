@@ -8,16 +8,10 @@
       "evidence_span": "Initial evaluation revealed findings consistent with acute pericarditis with associated pericardial effusion"
     },
     {
-      "name": "Pericardial effusion",
-      "icd10_suggestion": "I31.3",
-      "confidence": "high",
-      "evidence_span": "Initial evaluation revealed findings consistent with acute pericarditis with associated pericardial effusion"
-    },
-    {
       "name": "Bilateral pleural effusion",
-      "icd10_suggestion": "J91.8",
+      "icd10_suggestion": "J94.8",
       "confidence": "high",
-      "evidence_span": "Imaging revealed pleural effusion bilaterally and left basilar atelectasis on chest radiograph"
+      "evidence_span": "Bilateral pleural effusion"
     },
     {
       "name": "Acute kidney failure",
@@ -33,27 +27,27 @@
     },
     {
       "name": "Hypo-osmolality",
-      "icd10_suggestion": "E87.0",
+      "icd10_suggestion": "E87.1",
       "confidence": "high",
-      "evidence_span": "significant electrolyte derangements including hypo-osmolality and hyponatremia with sodium levels as low as 128 mEq/L"
+      "evidence_span": "significant electrolyte derangements including hypo-osmolality and hyponatremia"
     },
     {
       "name": "Dehydration",
       "icd10_suggestion": "E86.0",
       "confidence": "high",
-      "evidence_span": "The patient also presented with clinical signs of dehydration despite initial fluid intake concerns"
+      "evidence_span": "The patient also presented with clinical signs of dehydration"
+    },
+    {
+      "name": "Other hypotension",
+      "icd10_suggestion": "I95.9",
+      "confidence": "high",
+      "evidence_span": "blood pressure ranging 92-108/58-72 mmHg, reflecting other hypotension"
     },
     {
       "name": "Left basilar atelectasis",
       "icd10_suggestion": "J98.11",
       "confidence": "high",
-      "evidence_span": "Imaging revealed pleural effusion bilaterally and left basilar atelectasis on chest radiograph"
-    },
-    {
-      "name": "Hypotension",
-      "icd10_suggestion": "I95.9",
-      "confidence": "high",
-      "evidence_span": "vital signs notable for blood pressure ranging 92-108/58-72 mmHg, reflecting other hypotension"
+      "evidence_span": "left basilar atelectasis on chest radiograph"
     },
     {
       "name": "Tachycardia",
@@ -62,66 +56,66 @@
       "evidence_span": "the patient was febrile and tachycardic"
     },
     {
+      "name": "Essential hypertension",
+      "icd10_suggestion": "I10",
+      "confidence": "high",
+      "evidence_span": "Essential hypertension"
+    },
+    {
+      "name": "Hyperlipidemia",
+      "icd10_suggestion": "E78.5",
+      "confidence": "high",
+      "evidence_span": "Hyperlipidemia"
+    },
+    {
+      "name": "Discoid lupus erythematosus",
+      "icd10_suggestion": "L93.0",
+      "confidence": "high",
+      "evidence_span": "past medical history significant for discoid lupus erythematosus"
+    },
+    {
       "name": "Palpitations",
       "icd10_suggestion": "R00.2",
       "confidence": "high",
       "evidence_span": "presented to the emergency department with acute onset chest pain, dyspnea, and palpitations"
     },
     {
-      "name": "Essential hypertension",
-      "icd10_suggestion": "I10",
-      "confidence": "high",
-      "evidence_span": "past medical history significant for discoid lupus erythematosus, essential hypertension, and hyperlipidemia"
-    },
-    {
-      "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.5",
-      "confidence": "high",
-      "evidence_span": "past medical history significant for discoid lupus erythematosus, essential hypertension, and hyperlipidemia"
-    },
-    {
-      "name": "Discoid lupus erythematosus",
-      "icd10_suggestion": "L93.0",
-      "confidence": "high",
-      "evidence_span": "past medical history significant for discoid lupus erythematosus, essential hypertension, and hyperlipidemia"
-    },
-    {
       "name": "History of traumatic fracture",
-      "icd10_suggestion": null,
-      "confidence": "medium",
+      "icd10_suggestion": "Z87.81",
+      "confidence": "high",
       "evidence_span": "History of traumatic fracture"
     },
     {
       "name": "History of endocrine/metabolic disease",
-      "icd10_suggestion": null,
-      "confidence": "medium",
+      "icd10_suggestion": "Z87.19",
+      "confidence": "high",
       "evidence_span": "History of endocrine/metabolic disease"
     },
     {
       "name": "History of nicotine dependence",
-      "icd10_suggestion": "F17.200",
-      "confidence": "medium",
+      "icd10_suggestion": "Z87.891",
+      "confidence": "high",
       "evidence_span": "History of nicotine dependence"
     }
   ],
   "procedures": [
     {
       "name": "Percutaneous drainage of pericardial cavity",
-      "cpt_suggestion": "33025",
+      "cpt_suggestion": "33010",
       "confidence": "high",
-      "evidence_span": "percutaneous drainage of the pericardial cavity was performed on hospital day 2, which yielded approximately 800 mL of serosanguineous fluid"
+      "evidence_span": "a percutaneous drainage of the pericardial cavity was performed on hospital day 2, which yielded approximately 800 mL of serosanguineous fluid"
     },
     {
       "name": "Pneumococcal 23-valent polysaccharide vaccine administration",
-      "cpt_suggestion": "90657",
+      "cpt_suggestion": "90732",
       "confidence": "high",
-      "evidence_span": "administration of pneumococcal 23-valent polysaccharide vaccine and influenza vaccine quadrivalent during hospitalization"
+      "evidence_span": "administration of pneumococcal 23-valent polysaccharide vaccine"
     },
     {
       "name": "Influenza vaccine quadrivalent administration",
-      "cpt_suggestion": "90686",
+      "cpt_suggestion": "90688",
       "confidence": "high",
-      "evidence_span": "administration of pneumococcal 23-valent polysaccharide vaccine and influenza vaccine quadrivalent during hospitalization"
+      "evidence_span": "influenza vaccine quadrivalent during hospitalization"
     }
   ],
   "medications": [
@@ -131,15 +125,15 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Hypertension was controlled with amlodipine and metoprolol"
+      "evidence_span": "Amlodipine 5 mg PO daily"
     },
     {
-      "name": "Metoprolol succinate XL",
+      "name": "Metoprolol succinate",
       "dosage": "50 mg",
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Hypertension was controlled with amlodipine and metoprolol (both succinate extended-release and tartrate formulations)"
+      "evidence_span": "Metoprolol succinate XL 50 mg PO daily"
     },
     {
       "name": "Metoprolol tartrate",
@@ -147,7 +141,7 @@
       "frequency": "BID",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Hypertension was controlled with amlodipine and metoprolol (both succinate extended-release and tartrate formulations)"
+      "evidence_span": "Metoprolol tartrate 12.5 mg PO BID"
     },
     {
       "name": "Atorvastatin",
@@ -155,15 +149,7 @@
       "frequency": "daily",
       "route": "PO",
       "confidence": "high",
-      "evidence_span": "Lipid management was continued with atorvastatin 20 mg daily"
-    },
-    {
-      "name": "Potassium chloride",
-      "dosage": "40-80 mEq",
-      "frequency": "divided doses",
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "potassium chloride supplementation (administered in divided doses of 40, 60, and 80 mEq)"
+      "evidence_span": "Atorvastatin 20 mg PO daily"
     },
     {
       "name": "Potassium chloride",
@@ -174,28 +160,36 @@
       "evidence_span": "Potassium chloride 20 mEq PO daily"
     },
     {
-      "name": "Magnesium sulfate",
-      "dosage": "2-4 gm",
-      "frequency": null,
-      "route": "IV",
-      "confidence": "high",
-      "evidence_span": "magnesium sulfate replacement (both 2 gm and 4 gm dosing)"
-    },
-    {
       "name": "Magnesium supplementation",
       "dosage": null,
       "frequency": "as needed",
-      "route": "PO",
+      "route": null,
       "confidence": "high",
       "evidence_span": "Magnesium supplementation as needed"
     },
     {
-      "name": "Calcium gluconate",
-      "dosage": null,
-      "frequency": null,
-      "route": "IV",
+      "name": "Lorazepam",
+      "dosage": "0.5-1 mg",
+      "frequency": "daily as needed",
+      "route": "PO",
       "confidence": "high",
-      "evidence_span": "calcium gluconate support"
+      "evidence_span": "Lorazepam 0.5-1 mg PO daily as needed for anxiety"
+    },
+    {
+      "name": "Trazodone",
+      "dosage": "25 mg",
+      "frequency": "at bedtime",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Trazodone 25 mg PO at bedtime"
+    },
+    {
+      "name": "Acetaminophen",
+      "dosage": "650 mg",
+      "frequency": "Q6H as needed",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Acetaminophen 650 mg PO Q6H as needed for pain"
     },
     {
       "name": "Normal saline",
@@ -206,36 +200,20 @@
       "evidence_span": "The patient received multiple doses of intravenous normal saline"
     },
     {
-      "name": "Sodium chloride 0.9%",
+      "name": "Magnesium sulfate",
+      "dosage": "2 gm and 4 gm",
+      "frequency": null,
+      "route": null,
+      "confidence": "high",
+      "evidence_span": "magnesium sulfate replacement (both 2 gm and 4 gm dosing)"
+    },
+    {
+      "name": "Calcium gluconate",
       "dosage": null,
       "frequency": null,
-      "route": "IV",
+      "route": null,
       "confidence": "high",
-      "evidence_span": "IV fluid resuscitation was continued with 0.9% sodium chloride bags"
-    },
-    {
-      "name": "Acetaminophen",
-      "dosage": "650 mg",
-      "frequency": "Q6H as needed",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "the patient received acetaminophen for pain control"
-    },
-    {
-      "name": "Lorazepam",
-      "dosage": "0.5-1 mg",
-      "frequency": "daily as needed",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "the patient received... lorazepam for anxiety"
-    },
-    {
-      "name": "Trazodone",
-      "dosage": "25 mg",
-      "frequency": "at bedtime",
-      "route": "PO",
-      "confidence": "high",
-      "evidence_span": "and trazodone for sleep support"
+      "evidence_span": "calcium gluconate support"
     }
   ],
   "chief_complaint": "Chest pain and shortness of breath",

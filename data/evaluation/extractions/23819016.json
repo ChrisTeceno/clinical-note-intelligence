@@ -2,126 +2,102 @@
   "note_id": "23819016",
   "diagnoses": [
     {
-      "name": "Sepsis with septic shock",
+      "name": "Severe sepsis with septic shock",
       "icd10_suggestion": "R65.21",
       "confidence": "high",
-      "evidence_span": "Patient rapidly deteriorated with hemodynamic instability requiring vasopressor support. Severe sepsis with septic shock developed secondary to gram-negative infection."
+      "evidence_span": "other specified sepsis progressing to severe sepsis with septic shock"
     },
     {
       "name": "Acute pancreatitis",
-      "icd10_suggestion": "K85.90",
+      "icd10_suggestion": "K85.9",
       "confidence": "high",
-      "evidence_span": "CT abdomen/pelvis revealed acute pancreatitis with peripancreatic fluid collection. No evidence of pseudoaneurysm or walled-off necrosis."
+      "evidence_span": "acute pancreatitis with peripancreatic fluid collection"
     },
     {
-      "name": "Acute kidney injury",
+      "name": "Acute kidney failure",
       "icd10_suggestion": "N17.9",
       "confidence": "high",
-      "evidence_span": "Acute kidney injury progressed requiring careful fluid management and electrolyte repletion."
+      "evidence_span": "acute kidney failure unspecified"
+    },
+    {
+      "name": "Protein-calorie malnutrition",
+      "icd10_suggestion": "E46",
+      "confidence": "high",
+      "evidence_span": "cachexia with unspecified protein-calorie malnutrition"
     },
     {
       "name": "Metabolic acidosis",
       "icd10_suggestion": "E87.2",
       "confidence": "high",
-      "evidence_span": "Metabolic acidosis was present with pH 7.21 and base deficit of -8."
+      "evidence_span": "Metabolic acidosis was present with pH 7.21 and base deficit of -8"
     },
     {
-      "name": "Cachexia with protein-calorie malnutrition",
-      "icd10_suggestion": "E46",
-      "confidence": "high",
-      "evidence_span": "Patient exhibited profound cachexia and protein-calorie malnutrition consistent with chronic alcohol use and underlying hepatic dysfunction."
-    },
-    {
-      "name": "Wet beriberi (thiamine deficiency)",
+      "name": "Wet beriberi with polyneuropathy",
       "icd10_suggestion": "E51.12",
       "confidence": "high",
-      "evidence_span": "Findings consistent with wet beriberi (thiamine deficiency) and polyneuropathy were noted on examination."
+      "evidence_span": "evidence of wet beriberi with polyneuropathy related to chronic alcohol dependence"
     },
     {
-      "name": "Polyneuropathy",
-      "icd10_suggestion": "G62.9",
+      "name": "Chronic kidney disease",
+      "icd10_suggestion": "I12.9",
       "confidence": "high",
-      "evidence_span": "Findings consistent with wet beriberi (thiamine deficiency) and polyneuropathy were noted on examination."
+      "evidence_span": "hypertensive chronic kidney disease"
     },
     {
       "name": "Alcoholic hepatitis",
       "icd10_suggestion": "K70.10",
       "confidence": "high",
-      "evidence_span": "Alcoholic hepatitis without ascites documented on clinical and laboratory grounds."
-    },
-    {
-      "name": "Chronic kidney disease with hypertension",
-      "icd10_suggestion": "I12.9",
-      "confidence": "high",
-      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease"
+      "evidence_span": "Alcoholic hepatitis without ascites documented on clinical and laboratory grounds"
     },
     {
       "name": "Alcohol dependence",
       "icd10_suggestion": "F10.20",
       "confidence": "high",
-      "evidence_span": "Patient is a [age]-year-old male with significant past medical history including alcohol dependence"
+      "evidence_span": "alcohol dependence complicated by hepatitis"
     },
     {
       "name": "Hypothyroidism",
       "icd10_suggestion": "E03.9",
       "confidence": "high",
-      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout, and history of prior thromboembolism."
+      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout"
     },
     {
       "name": "Gout",
       "icd10_suggestion": "M10.9",
       "confidence": "high",
-      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout, and history of prior thromboembolism."
-    },
-    {
-      "name": "History of venous thromboembolism",
-      "icd10_suggestion": "I82.90",
-      "confidence": "high",
-      "evidence_span": "Patient has had prior venous thromboembolic events."
+      "evidence_span": "Chronic conditions including hypertensive chronic kidney disease, alcoholic hepatitis, hypothyroidism, gout"
     },
     {
       "name": "Anemia",
       "icd10_suggestion": "D64.9",
       "confidence": "high",
-      "evidence_span": "Hgb 7.2 g/dL (anemia noted)"
+      "evidence_span": "Anemia requiring transfusion support"
     },
     {
       "name": "Asthma",
       "icd10_suggestion": "J45.9",
       "confidence": "high",
-      "evidence_span": "History of tobacco use and asthma also documented."
+      "evidence_span": "History of tobacco use and asthma also documented"
+    },
+    {
+      "name": "History of venous thromboembolism",
+      "icd10_suggestion": "Z87.891",
+      "confidence": "high",
+      "evidence_span": "Patient has had prior venous thromboembolic events"
     },
     {
       "name": "History of bariatric surgery",
       "icd10_suggestion": "Z98.84",
       "confidence": "high",
-      "evidence_span": "prior bariatric surgery"
-    },
-    {
-      "name": "Disorientation",
-      "icd10_suggestion": "R41.0",
-      "confidence": "medium",
-      "evidence_span": "Patient displayed disorientation upon admission."
-    },
-    {
-      "name": "Tobacco use disorder",
-      "icd10_suggestion": "F17.200",
-      "confidence": "medium",
-      "evidence_span": "History of tobacco use and asthma also documented."
+      "evidence_span": "Prior bariatric surgery status relevant to nutritional needs"
     }
   ],
   "procedures": [
     {
-      "name": "Percutaneous central venous catheter placement (Infusion Device into Superior Vena Cava)",
+      "name": "Percutaneous central venous catheter insertion",
       "cpt_suggestion": "36556",
       "confidence": "high",
-      "evidence_span": "Percutaneous central venous catheter (Infusion Device into Superior Vena Cava) placed for hemodynamic monitoring and medication administration."
-    },
-    {
-      "name": "CT abdomen/pelvis",
-      "cpt_suggestion": "74177",
-      "confidence": "high",
-      "evidence_span": "CT abdomen/pelvis revealed acute pancreatitis with peripancreatic fluid collection."
+      "evidence_span": "Percutaneous central venous catheter (Infusion Device into Superior Vena Cava) placed for hemodynamic monitoring and medication administration"
     }
   ],
   "medications": [
@@ -175,9 +151,17 @@
     },
     {
       "name": "Thiamine",
-      "dosage": "100 mg PO and 500 mg IV",
+      "dosage": "100 mg",
       "frequency": "daily",
-      "route": "PO and IV",
+      "route": "PO",
+      "confidence": "high",
+      "evidence_span": "Thiamine 100 mg PO daily and thiamine 500 mg IV daily (beriberi treatment)"
+    },
+    {
+      "name": "Thiamine",
+      "dosage": "500 mg",
+      "frequency": "daily",
+      "route": "IV",
       "confidence": "high",
       "evidence_span": "Thiamine 100 mg PO daily and thiamine 500 mg IV daily (beriberi treatment)"
     },
@@ -279,9 +263,17 @@
     },
     {
       "name": "Hydromorphone",
-      "dosage": "0.25-0.5 mg IV or 1-2 mg PO/NG",
-      "frequency": "q4-6h prn",
-      "route": "IV or PO/NG",
+      "dosage": "0.25-0.5 mg",
+      "frequency": "q4-6h prn pain",
+      "route": "IV",
+      "confidence": "high",
+      "evidence_span": "Hydromorphone 0.25-0.5 mg IV or 1-2 mg PO/NG q4-6h prn pain"
+    },
+    {
+      "name": "Hydromorphone",
+      "dosage": "1-2 mg",
+      "frequency": "q4-6h prn pain",
+      "route": "PO/NG",
       "confidence": "high",
       "evidence_span": "Hydromorphone 0.25-0.5 mg IV or 1-2 mg PO/NG q4-6h prn pain"
     },
@@ -296,7 +288,7 @@
     {
       "name": "Ondansetron",
       "dosage": "4 mg",
-      "frequency": "q8h prn",
+      "frequency": "q8h prn nausea",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Ondansetron 4 mg IV q8h prn nausea"
@@ -305,7 +297,7 @@
       "name": "Sarna lotion",
       "dosage": null,
       "frequency": "prn",
-      "route": "topical",
+      "route": "topically",
       "confidence": "high",
       "evidence_span": "Sarna lotion apply topically prn"
     },
@@ -326,6 +318,6 @@
       "evidence_span": "Artificial tears 1-2 drops to both eyes TID prn"
     }
   ],
-  "chief_complaint": "Abdominal pain with acute illness and severe distress",
-  "medical_specialty": "Internal Medicine/Acute Care Medicine"
+  "chief_complaint": "abdominal pain",
+  "medical_specialty": "Internal Medicine"
 }

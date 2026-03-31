@@ -2,6 +2,12 @@
   "note_id": "26529390",
   "diagnoses": [
     {
+      "name": "Splenic infarction",
+      "icd10_suggestion": "D73.5",
+      "confidence": "high",
+      "evidence_span": "CT abdomen revealed splenic infarction with associated splenomegaly"
+    },
+    {
       "name": "Myelodysplastic syndrome",
       "icd10_suggestion": "D46.9",
       "confidence": "high",
@@ -9,9 +15,21 @@
     },
     {
       "name": "COPD with coalworker's pneumoconiosis",
-      "icd10_suggestion": "J44.9",
+      "icd10_suggestion": "J44.1",
       "confidence": "high",
       "evidence_span": "COPD with coalworker's pneumoconiosis"
+    },
+    {
+      "name": "Acute respiratory failure with hypoxia",
+      "icd10_suggestion": "J96.00",
+      "confidence": "high",
+      "evidence_span": "Acute respiratory failure with hypoxia secondary to underlying COPD, coalworker's pneumoconiosis, chronic pulmonary edema, and atelectasis"
+    },
+    {
+      "name": "Acute on chronic diastolic heart failure",
+      "icd10_suggestion": "I50.33",
+      "confidence": "high",
+      "evidence_span": "Acute on chronic diastolic heart failure exacerbated by hypertensive heart disease"
     },
     {
       "name": "Hypertensive heart disease",
@@ -20,82 +38,34 @@
       "evidence_span": "hypertensive heart disease"
     },
     {
-      "name": "Prior breast cancer",
-      "icd10_suggestion": "Z85.3",
-      "confidence": "high",
-      "evidence_span": "prior breast cancer"
-    },
-    {
-      "name": "Splenic infarction",
-      "icd10_suggestion": "I74.81",
-      "confidence": "high",
-      "evidence_span": "CT abdomen revealed splenic infarction with associated splenomegaly"
-    },
-    {
-      "name": "Splenomegaly",
-      "icd10_suggestion": "R16.1",
-      "confidence": "high",
-      "evidence_span": "splenic infarction with associated splenomegaly"
-    },
-    {
-      "name": "Acute respiratory failure with hypoxia",
-      "icd10_suggestion": "J96.01",
-      "confidence": "high",
-      "evidence_span": "Acute respiratory failure with hypoxia secondary to underlying COPD, coalworker's pneumoconiosis, chronic pulmonary edema, and atelectasis"
-    },
-    {
-      "name": "Chronic pulmonary edema",
-      "icd10_suggestion": "J81.1",
-      "confidence": "high",
-      "evidence_span": "CXR demonstrated chronic changes consistent with coalworker's pneumoconiosis with areas of atelectasis bilaterally and evidence of chronic pulmonary edema"
-    },
-    {
-      "name": "Atelectasis",
-      "icd10_suggestion": "J98.11",
-      "confidence": "high",
-      "evidence_span": "areas of atelectasis bilaterally"
-    },
-    {
-      "name": "Acute on chronic diastolic heart failure",
-      "icd10_suggestion": "I50.32",
-      "confidence": "high",
-      "evidence_span": "Acute on chronic diastolic heart failure exacerbated by hypertensive heart disease"
-    },
-    {
       "name": "Tumor lysis syndrome",
       "icd10_suggestion": "E88.3",
       "confidence": "high",
-      "evidence_span": "Tumor lysis syndrome from myelodysplastic syndrome, managed with aggressive hydration, rasburicase, and allopurinol"
+      "evidence_span": "Tumor lysis syndrome from myelodysplastic syndrome"
     },
     {
       "name": "Acute kidney injury",
       "icd10_suggestion": "N17.9",
       "confidence": "high",
-      "evidence_span": "Acute kidney injury likely multifactorial from sepsis (UTI identified), dehydration, and tumor lysis; creatinine peaked at 2.4"
+      "evidence_span": "Acute kidney injury likely multifactorial from sepsis (UTI identified), dehydration, and tumor lysis"
     },
     {
       "name": "Anemia in neoplastic disease",
-      "icd10_suggestion": "D63.0",
+      "icd10_suggestion": "D63.1",
       "confidence": "high",
-      "evidence_span": "anemia in neoplastic disease"
+      "evidence_span": "Hgb 7.4 (anemia in neoplastic disease)"
     },
     {
       "name": "Secondary thrombocytopenia",
-      "icd10_suggestion": "D69.3",
+      "icd10_suggestion": "D69.59",
       "confidence": "high",
-      "evidence_span": "secondary thrombocytopenia"
+      "evidence_span": "Plt 85 (secondary thrombocytopenia)"
     },
     {
       "name": "Urinary tract infection",
       "icd10_suggestion": "N39.0",
       "confidence": "high",
       "evidence_span": "Urinary tract infection treated with appropriate antibiotics"
-    },
-    {
-      "name": "Hyperuricemia",
-      "icd10_suggestion": "E79.0",
-      "confidence": "high",
-      "evidence_span": "Uric acid 9.8 (hyperuricemia)"
     },
     {
       "name": "Type 2 diabetes",
@@ -105,7 +75,7 @@
     },
     {
       "name": "Hyperlipidemia",
-      "icd10_suggestion": "E78.9",
+      "icd10_suggestion": "E78.5",
       "confidence": "high",
       "evidence_span": "hyperlipidemia"
     },
@@ -113,13 +83,19 @@
       "name": "Hypothyroidism",
       "icd10_suggestion": "E03.9",
       "confidence": "high",
-      "evidence_span": "hypothyroidism"
+      "evidence_span": "on levothyroxine for hypothyroidism"
+    },
+    {
+      "name": "Hyperuricemia",
+      "icd10_suggestion": "E79.0",
+      "confidence": "high",
+      "evidence_span": "Uric acid 9.8 (hyperuricemia)"
     },
     {
       "name": "NASH",
       "icd10_suggestion": "K75.81",
       "confidence": "high",
-      "evidence_span": "consistent with NASH"
+      "evidence_span": "ALT 67, AST 82 (consistent with NASH)"
     },
     {
       "name": "Anxiety disorder",
@@ -134,30 +110,24 @@
       "evidence_span": "major depressive disorder"
     },
     {
-      "name": "Neoplasm-related pain",
-      "icd10_suggestion": "G89.29",
+      "name": "Prior breast cancer",
+      "icd10_suggestion": "Z85.3",
       "confidence": "high",
-      "evidence_span": "Neoplasm-related pain (acute and chronic) from splenic involvement managed with tramadol"
+      "evidence_span": "prior breast cancer"
     }
   ],
   "procedures": [
     {
-      "name": "Beam radiation therapy to spleen",
-      "cpt_suggestion": "77402",
+      "name": "Beam radiation therapy",
+      "cpt_suggestion": "77401",
       "confidence": "high",
-      "evidence_span": "Splenic infarction with massive splenomegaly requiring beam radiation therapy to address pain and size reduction"
+      "evidence_span": "requiring beam radiation therapy to address pain and size reduction"
     },
     {
       "name": "Drainage of right middle and left lower lung lobes",
-      "cpt_suggestion": "32098",
+      "cpt_suggestion": "32554",
       "confidence": "high",
       "evidence_span": "managed with drainage of right middle and left lower lung lobes for diagnostic purposes and therapeutic relief"
-    },
-    {
-      "name": "Diuresis",
-      "cpt_suggestion": null,
-      "confidence": "high",
-      "evidence_span": "diuresis initiated with close monitoring"
     },
     {
       "name": "Bone marrow biopsy",
@@ -170,6 +140,18 @@
       "cpt_suggestion": "36556",
       "confidence": "high",
       "evidence_span": "A percutaneous central venous catheter was placed for future infusion access"
+    },
+    {
+      "name": "CT abdomen",
+      "cpt_suggestion": "74176",
+      "confidence": "high",
+      "evidence_span": "CT abdomen revealed splenic infarction with associated splenomegaly"
+    },
+    {
+      "name": "Chest X-ray",
+      "cpt_suggestion": "71020",
+      "confidence": "high",
+      "evidence_span": "CXR demonstrated chronic changes consistent with coalworker's pneumoconiosis"
     }
   ],
   "medications": [
@@ -200,7 +182,7 @@
     {
       "name": "Tramadol",
       "dosage": "50 mg",
-      "frequency": "q6h PRN",
+      "frequency": "q6h PRN pain",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Tramadol 50 mg PO q6h PRN pain"
@@ -216,7 +198,7 @@
     {
       "name": "Rasburicase",
       "dosage": "6 mg",
-      "frequency": "per protocol",
+      "frequency": null,
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Rasburicase 6 mg IV per protocol for uric acid management"
@@ -232,7 +214,7 @@
     {
       "name": "Magnesium sulfate",
       "dosage": "2 gm",
-      "frequency": "per protocol",
+      "frequency": null,
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Magnesium sulfate 2 gm IV per protocol"
@@ -246,10 +228,10 @@
       "evidence_span": "Potassium chloride 60–80 mEq PO divided dosing"
     },
     {
-      "name": "Sodium chloride 0.9% flush",
-      "dosage": "0.9%",
-      "frequency": "for central line maintenance",
-      "route": "IV",
+      "name": "Sodium chloride 0.9%",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
       "confidence": "high",
       "evidence_span": "Sodium chloride 0.9% flush for central line"
     },
@@ -272,15 +254,15 @@
     {
       "name": "Glucose gel",
       "dosage": "15 g",
-      "frequency": "PRN",
+      "frequency": "PRN hypoglycemia",
       "route": "PO",
       "confidence": "high",
       "evidence_span": "Glucose gel 15 g PO PRN hypoglycemia"
     },
     {
       "name": "Dextrose 50%",
-      "dosage": "50%",
-      "frequency": "PRN",
+      "dosage": null,
+      "frequency": "PRN severe hypoglycemia",
       "route": "IV",
       "confidence": "high",
       "evidence_span": "Dextrose 50% IV access PRN severe hypoglycemia"
@@ -290,10 +272,18 @@
       "dosage": null,
       "frequency": null,
       "route": null,
-      "confidence": "medium",
+      "confidence": "high",
       "evidence_span": "managed with aggressive hydration, rasburicase, and allopurinol"
+    },
+    {
+      "name": "Potassium binders",
+      "dosage": null,
+      "frequency": null,
+      "route": null,
+      "confidence": "medium",
+      "evidence_span": "K+ 5.2 (managed with potassium binders)"
     }
   ],
-  "chief_complaint": "Progressive dyspnea, abdominal pain, and constitutional symptoms with acute decompensation",
-  "medical_specialty": "Internal Medicine / Oncology"
+  "chief_complaint": "progressive dyspnea, abdominal pain, and constitutional symptoms",
+  "medical_specialty": "Internal Medicine"
 }
