@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 import streamlit as st
+import streamlit.components.v1 as components
 from db import execute, query_df
 from tooltips import TOOLTIP_CSS, tt
 
@@ -12,6 +13,14 @@ from clinical_pipeline.feedback.feedback_store import FeedbackItem, FeedbackStor
 
 # Inject tooltip CSS once
 st.markdown(TOOLTIP_CSS, unsafe_allow_html=True)
+
+# Scroll to top after auto-advance
+if st.session_state.get("_scroll_to_top"):
+    st.session_state["_scroll_to_top"] = False
+    components.html(
+        "<script>parent.document.querySelector('section.main').scrollTo(0, 0);</script>",
+        height=0,
+    )
 
 # ---------------------------------------------------------------------------
 # Load ICD-10 reference table for code descriptions
@@ -299,22 +308,100 @@ with right:
             score_text = ""
             if d["match_score"] and d["match_type"] == "partial":
                 score_text = f" <small style='color:#888'>({d['match_score']:.0f}%)</small>"
+            # Get the ICD-10 description for inline display
+            icd_desc = ""
+            if icd != "N/A":
+                normalized = icd.strip().upper().replace(".", "")
+                desc = _icd10_descriptions.get(normalized, "")
+                if desc:
+                    icd_desc = f"<br><small style='color:#999;margin-left:4px'>{html.escape(desc)}</small>"
             st.markdown(
                 f"**{d['name']}** &mdash; {icd_html} "
                 f"{_match_badge(d['match_type'] or 'none')}{score_text} "
-                f"{_confidence_badge(d['confidence'])}  \n"
+                f"{_confidence_badge(d['confidence'])}{icd_desc}  \n"
                 f"<small style='color:#777'>Evidence: \"{d['evidence_span']}\"</small>",
                 unsafe_allow_html=True,
             )
             btn_col1, btn_col2 = st.columns(2)
             with btn_col1:
                 with st.popover("Edit", use_container_width=True):
-                    new_name = st.text_input("Name", value=d["name"], key=f"dx_name_{idx}")
                     icd_val = icd if icd != "N/A" else ""
-                    new_icd = st.text_input(
-                        "ICD-10", value=icd_val, key=f"dx_icd_{idx}"
-                    )
-                    if st.button("Save", key=f"dx_save_{idx}"):
+                    normalized_current = icd_val.strip().upper().replace(".", "")
+                    current_desc = _icd10_descriptions.get(normalized_current, "")
+
+                    # Two columns: ICD code | Description
+                    edit_c1, edit_c2 = st.columns([1, 2])
+
+                    with edit_c1:
+                        code_input = st.text_input(
+                            "ICD-10 Code",
+                            value=normalized_current,
+                            key=f"dx_code_{idx}",
+                            placeholder="e.g. I340",
+                        )
+
+                    with edit_c2:
+                        desc_input = st.text_input(
+                            "Description",
+                            value=d["name"],
+                            key=f"dx_desc_{idx}",
+                            placeholder="e.g. mitral regurgitation",
+                        )
+
+                    # Search by code input
+                    code_matches = []
+                    if code_input and len(code_input) >= 2:
+                        cl = code_input.strip().upper().replace(".", "")
+                        code_matches = [
+                            (c, desc) for c, desc in _icd10_descriptions.items()
+                            if c.startswith(cl)
+                        ]
+
+                    # Search by description input
+                    desc_matches = []
+                    if desc_input and len(desc_input) >= 3:
+                        words = [w.lower() for w in desc_input.split() if len(w) >= 2]
+                        for c, desc in _icd10_descriptions.items():
+                            if all(w in desc.lower() for w in words):
+                                desc_matches.append((c, desc))
+                            if len(desc_matches) >= 100:
+                                break
+
+                    # Combine and deduplicate, prefer code matches first
+                    seen = set()
+                    combined = []
+                    for c, desc in code_matches + desc_matches:
+                        if c not in seen:
+                            combined.append((c, desc))
+                            seen.add(c)
+
+                    # Only show results when filtered enough
+                    new_name = desc_input
+                    new_icd = code_input.strip().upper().replace(".", "") if code_input else normalized_current
+
+                    if combined and len(combined) <= 100:
+                        options = [f"{c} — {desc}" for c, desc in combined]
+                        selected = st.selectbox(
+                            f"{len(combined)} matches",
+                            options=options,
+                            index=0,
+                            key=f"dx_select_{idx}",
+                        )
+                        new_icd = selected.split(" — ")[0].strip()
+                        new_desc = selected.split(" — ", 1)[1] if " — " in selected else ""
+                        if new_icd != normalized_current:
+                            st.markdown(
+                                f"<small>Changing: <s>{normalized_current} ({current_desc})</s> → "
+                                f"**{new_icd}** ({new_desc})</small>",
+                                unsafe_allow_html=True,
+                            )
+                    elif combined:
+                        st.caption(f"{len(combined)}+ results — keep typing to narrow down.")
+                    else:
+                        if current_desc:
+                            st.caption(f"Current: **{normalized_current}** — {current_desc}")
+
+                    if st.button("Save", key=f"dx_save_{idx}", type="primary"):
                         original = {
                             "name": d["name"],
                             "icd10_suggestion": icd,
@@ -464,31 +551,76 @@ with right:
 # ---------------------------------------------------------------------------
 # HITL Review controls
 # ---------------------------------------------------------------------------
+
+
+def _advance_to_next_pending(current_note_id: str) -> None:
+    """Set query params to the next pending note, or stay on current if none."""
+    result = query_df(
+        """
+        SELECT cn.id
+        FROM clinical_notes cn
+        JOIN extractions e ON e.note_id = cn.id
+        WHERE e.status = 'pending' AND cn.id != ?
+        ORDER BY e.created_at DESC
+        LIMIT 1
+        """,
+        (current_note_id,),
+    )
+    if not result.empty:
+        st.query_params["note_id"] = result.iloc[0]["id"]
+        st.session_state["_scroll_to_top"] = True
+
+
 st.divider()
 st.subheader("Review Actions")
 
 review_col1, review_col2, review_col3 = st.columns([1, 1, 2])
 
 with review_col1:
-    if st.button("Approve", type="primary", use_container_width=True):
+    if st.button(
+        "Approve",
+        type="primary",
+        use_container_width=True,
+        help="Mark this extraction as reviewed and correct. Status changes to 'approved' and the note moves out of the review queue.",
+    ):
         now = datetime.now(UTC).isoformat()
         execute(
             "UPDATE extractions SET status = 'approved', reviewed_at = ? WHERE id = ?",
             (now, extraction_id),
         )
+        # Record as confirmed feedback
+        _record_feedback(
+            note_id, "extraction", "confirmed",
+            {"status": "pending", "dx_count": len(dx_df), "px_count": len(px_df), "rx_count": len(rx_df)},
+            {"status": "approved"},
+            (transcription or "")[:500],
+        )
         st.cache_data.clear()
-        st.success("Extraction approved.")
+        st.toast("Extraction approved", icon="✅")
+        _advance_to_next_pending(note_id)
         st.rerun()
 
 with review_col2:
-    if st.button("Reject", type="secondary", use_container_width=True):
+    if st.button(
+        "Reject",
+        type="secondary",
+        use_container_width=True,
+        help="Mark this extraction as incorrect. Status changes to 'rejected'. Use the Edit/Remove buttons above to record specific errors first.",
+    ):
         now = datetime.now(UTC).isoformat()
         execute(
             "UPDATE extractions SET status = 'rejected', reviewed_at = ? WHERE id = ?",
             (now, extraction_id),
         )
+        _record_feedback(
+            note_id, "extraction", "removed",
+            {"status": "pending", "dx_count": len(dx_df), "px_count": len(px_df), "rx_count": len(rx_df)},
+            {"status": "rejected"},
+            (transcription or "")[:500],
+        )
         st.cache_data.clear()
-        st.success("Extraction rejected.")
+        st.toast("Extraction rejected", icon="❌")
+        _advance_to_next_pending(note_id)
         st.rerun()
 
 with review_col3:
