@@ -1,0 +1,68 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name] | **MRN:** [XXXXX]
+**ADMISSION DATE:** [Date] | **DISCHARGE DATE:** [Date]
+**ATTENDING PHYSICIAN:** [Name], MD
+
+---
+
+**SUBJECTIVE:**
+
+Patient is a [age]-year-old [gender] with significant cardiac and metabolic history presenting with progressive dyspnea on exertion and orthopnea over the past two weeks. Pt reports increasing lower extremity edema and nocturnal cough. Denies chest pain or syncope. States compliance has been inconsistent with home medications. Lives alone; daughter visits twice weekly.
+
+---
+
+**OBJECTIVE:**
+
+**Vital Signs on Admission:** BP 158/94, HR 102, RR 24, O2 sat 91% on RA, Temp 37.2°C
+
+**Physical Exam:** Elevated JVD, bilateral crackles at lung bases, S3 gallop noted at apex, 2+ pitting edema bilateral lower extremities, no acute distress at rest.
+
+**Labs:**
+- BNP 580 pg/mL (elevated)
+- Troponin 0.02 ng/mL (negative)
+- TSH 2.1 mIU/L (normal)
+- Creatinine 1.3 mg/dL, eGFR 52 mL/min
+- Glucose 184 mg/dL
+- Total cholesterol 248 mg/dL, LDL 162 mg/dL, HDL 38 mg/dL
+- Hemoglobin 12.8 g/dL
+
+**Imaging:** Chest X-ray demonstrated bilateral pulmonary edema with interstitial infiltrates; EKG showed normal sinus rhythm with nonspecific ST changes; echocardiogram (prior, reviewed) revealed EF 35-40% with global hypokinesis.
+
+---
+
+**ASSESSMENT:**
+
+Patient admitted with acute exacerbation of chronic pulmonary edema secondary to decompensated heart failure. His underlying pathophysiology is multifactorial, stemming from long-standing hypertensive heart disease complicated by heart failure, atherosclerotic coronary artery disease of the native vessels without active anginal symptoms, and poorly controlled Type 2 diabetes mellitus. Additionally, pt has unspecified pure hypercholesterolemia contributing to atherosclerotic burden. Currently insulin-dependent for glycemic management.
+
+Hospital course notable for diuresis with IV furosemide, achieving net negative 2.8 L over three days with symptom improvement. Oxygen requirements weaned to nasal cannula 2 L/min by discharge. Patient remained hemodynamically stable without troponin elevation; no acute coronary event documented.
+
+---
+
+**PLAN/DISCHARGE:**
+
+**Diagnoses at Discharge:**
+1. Chronic pulmonary edema — improved with IV diuretics
+2. Heart failure, unspecified type — managed medically
+3. Hypertensive heart disease with heart failure — optimized on current regimen
+4. Atherosclerotic heart disease of native coronary artery without angina pectoris — stable, no acute symptoms
+5. Pure hypercholesterolemia, unspecified — requires ongoing management
+6. Type 2 diabetes mellitus without complications — on insulin therapy
+
+**Discharge Instructions:**
+- Strict fluid restriction (1.5 L daily)
+- Daily weights; report gain >3 lbs in 24 hrs or >5 lbs in one week
+- Low-sodium diet (<2g/day)
+- Continue all cardiac and diabetes medications as prescribed; do NOT restart medications without medical approval
+- Follow up with cardiologist in 1 week
+- Follow up with primary care and endocrinology within 1 week
+- BP log to bring to follow-up visits
+- Return to ED if dyspnea worsens, chest pain develops, orthostatic symptoms, or confusion
+
+**Patient Education:** Reviewed importance of medication adherence, dietary salt restriction, and recognizing early signs of decompensation. Discussed goals of therapy and prognosis.
+
+Patient verbalized understanding and expressed commitment to follow-up care. Daughter present at discharge and confirmed understanding of plan.
+
+---
+
+**Physician Signature:** _________________________ **Date:** _________

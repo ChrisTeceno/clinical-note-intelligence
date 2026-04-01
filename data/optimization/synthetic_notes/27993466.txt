@@ -1,0 +1,57 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [X] days
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain and palpitations.
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a [age]-year-old with significant past medical history including multiple myeloma not yet in remission, chronic systolic heart failure, prior aortocoronary bypass grafting, and unspecified atrial fibrillation who presented with acute onset chest discomfort and cardiac dysrhythmias. The patient was found to have acute embolism and thrombosis involving the left femoral vein and left popliteal vein, complicated by pulmonary embolism without acute cor pulmonale. Episodes of ventricular tachycardia were documented on telemetry during hospitalization. Additionally, the patient has secondary pulmonary hypertension related to chronic cardiopulmonary disease. Laboratory assessment revealed persistent monoclonal gammopathy consistent with the underlying multiple myeloma diagnosis. The patient reported gas pain and has a documented history of falling.
+
+**HOSPITAL COURSE:**
+The patient was admitted and initiated on comprehensive anticoagulation given the acute deep venous thrombosis. Heparin sodium was administered intravenously with dose titration to therapeutic levels (ranging from 800-1500 units/hour). Warfarin was started concurrently for long-term anticoagulation management, with a target dose of 2 mg daily. Enoxaparin sodium 50 mg subcutaneously was also provided for bridging therapy. The patient remained on long-term aspirin 81 mg daily as part of chronic dual antiplatelet and anticoagulation strategy given his prior bypass graft and atrial fibrillation.
+
+Cardiac management focused on rate and rhythm control. Metoprolol tartrate was titrated with doses ranging from 2.5 mg IV to 25 mg orally BID. Digoxin was administered both intravenously (0.5 mg and 0.25 mg doses) and orally (0.125 mg daily) for additional rate control and inotropic support in the setting of decompensated systolic heart failure. 
+
+Significant electrolyte abnormalities requiring aggressive repletion were encountered. Multiple potassium chloride supplementation regimens were used, including oral doses up to 80 mEq daily and critical care oncology formulations. Magnesium sulfate was administered IV in 2-4 gram doses. Phosphorus and calcium supplementation (calcium gluconate 2-4 grams IV and phosphorus 250-500 mg orally) were provided to correct critical deficiencies. Normal saline was given as maintenance and replacement fluid therapy.
+
+Supportive care measures included senna 8.6 mg and docusate sodium 100 mg for bowel regimen, and simethicone 40-80 mg for management of gas pain. Pneumococcal 23-valent polysaccharide vaccine and influenza vaccine quadrivalent were administered during hospitalization.
+
+Vital signs at discharge were relatively stable. The patient tolerated oral medications and maintained adequate oxygenation.
+
+**DISCHARGE MEDICATIONS:**
+- Aspirin 81 mg PO daily
+- Warfarin 2 mg PO daily
+- Metoprolol tartrate 25 mg PO BID
+- Digoxin 0.125 mg PO daily
+- Heparin 800-1500 units IV as directed
+- Enoxaparin sodium 50 mg SC daily
+- Potassium chloride 40-80 mEq PO daily (as directed)
+- Magnesium sulfate 2-4 gm IV daily
+- Calcium gluconate 2-4 gm IV daily
+- Phosphorus 250-500 mg PO daily
+- Docusate sodium 100 mg PO daily
+- Senna 8.6 mg PO daily
+- Simethicone 40-80 mg PO as needed
+
+**DISCHARGE DIAGNOSIS:**
+1. Pulmonary embolism without acute cor pulmonale
+2. Ventricular tachycardia
+3. Multiple myeloma not in remission
+4. Chronic systolic heart failure
+5. Acute thrombosis of left femoral vein
+6. Acute thrombosis of left popliteal vein
+7. Status post aortocoronary bypass graft
+8. Atrial fibrillation
+9. Monoclonal gammopathy
+10. Secondary pulmonary hypertension
+11. History of falls
+12. Gas pain
+
+**FOLLOW-UP:**
+Patient to follow up with cardiology, oncology, and anticoagulation clinic within 1 week. INR monitoring to be arranged. Patient counseled on signs/symptoms of recurrent thromboembolism and advised to avoid further falls.

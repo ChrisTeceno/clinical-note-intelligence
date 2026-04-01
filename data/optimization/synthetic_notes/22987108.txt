@@ -1,0 +1,45 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name] | **MRN:** [ID] | **DOB:** [Date]  
+**ADMISSION DATE:** [Date] | **DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** 47 days
+
+---
+
+**ADMISSION HISTORY & PRESENTATION**
+
+This 68-year-old male with a significant past medical history was admitted via the emergency department with acute decompensation. The patient presented with sepsis due to E. coli, complicated by hepatorenal syndrome and acute respiratory failure. He had underlying cirrhosis of the liver with portal hypertension, nonalcoholic steatohepatitis (NASH), and advanced chronic kidney disease stage 3. Additionally, he suffered from type 2 diabetes mellitus managed on insulin, atherosclerotic heart disease with prior coronary angioplasty, and unspecified atrial fibrillation. On arrival, the patient demonstrated severe sepsis with septic shock, hypovolemic shock, acute kidney failure, and hemoperitoneum with peritonitis. Labs revealed acute posthemorrhagic anemia, coagulation factor deficiency, and severe protein-calorie malnutrition. He also presented with acute hepatic failure with coma, metabolic acidosis, hyponatremia with hypoosmolality, and significant ascites.
+
+---
+
+**HOSPITAL COURSE**
+
+The patient required intubation early in his admission for acute respiratory failure; an endotracheal airway was placed via natural opening. He was initiated on mechanical ventilation exceeding 96 consecutive hours. A percutaneous central venous catheter was inserted into the right atrium for hemodynamic support, with an additional infusion device placed in the superior vena cava. Given the severity of illness, he required continuous vasopressor support with norepinephrine, phenylephrine, and epinephrine drips, plus vasopressin infusion for refractory shock.
+
+Diagnostically, he underwent fluoroscopy of multiple coronary arteries with contrast to assess for acute coronary involvement. Fluoroscopy of the right heart and superior vena cava was also performed for guidance during line placement.
+
+The patient developed ventilator-associated pneumonia during hospitalization, complicated by atelectasis and secretion accumulation in the left lower lobe and left main bronchus. Multiple bronchoscopic procedures with endoscopic extirpation of secretions were performed to clear the airways. Additionally, diagnostic and therapeutic drainage of the peritoneal cavity was performed percutaneously on multiple occasions to address hemoperitoneum and peritonitis.
+
+His acute kidney failure progressed, necessitating continuous renal replacement therapy with multiple CRRT sessions using Prismasate solution. Central venous nutrition was introduced percutaneously given severe malnutrition and inability to tolerate enteral feeds; nasogastric nutritional support was also initiated when tolerated.
+
+During a cardiac catheterization procedure, he suffered postprocedural hemorrhage of a circulatory system organ, requiring intervention. Occlusion devices were placed percutaneously in the right vertebral artery and right femoral artery to control bleeding. He developed unspecified atrial flutter and required rate control with metoprolol and diltiazem; amiodarone was administered for arrhythmia management.
+
+An unspecified infection related to the central venous catheter was documented and treated with broad-spectrum antibiotics. He also developed urinary tract infection. Peritonitis was managed with continued antimicrobial therapy. He experienced ileus, treated with prokinetic agents and laxatives.
+
+The patient received extensive antibiotic coverage including meropenem, cefepime, aztreonam, vancomycin, ciprofloxacin, and tobramycin to address E. coli sepsis and secondary infections due to methicillin-susceptible Staphylococcus aureus. Micafungin was added for potential fungal coverage.
+
+Multiple albumin infusions (doses ranging 12.5g to 100g) were administered for volume resuscitation and management of coagulopathy. Phytonadione was given for acquired coagulation factor deficiency. Calcium gluconate was infused for electrolyte management. Lactulose and rifaximin were utilized for hepatic encephalopathy management related to acute hepatic failure. Octreotide was administered for potential variceal prophylaxis given portal hypertension.
+
+He received insulin for glycemic control, midodrine for blood pressure support, and multiple electrolyte replacements including potassium chloride and magnesium sulfate. Sedation and analgesia were maintained with propofol, morphine, fentanyl, and midazolam drips. Naloxone was administered as needed.
+
+---
+
+**DISCHARGE MEDICATIONS**
+
+At discharge, the patient was on: aspirin 81 mg daily, metoprolol tartrate 25 mg BID, diltiazem 125 mg daily, amiodarone 600 mg daily, insulin per sliding scale, vancomycin 500 mg IV daily, meropenem 500 mg IV TID, rifaximin 550 mg TID, lactulose 30 mL BID, midodrine 15 mg TID, omeprazole 20 mg daily, ondansetron 4-8 mg as needed, folic acid 1 mg daily, thiamine 100 mg daily, multivitamins daily, vitamin D 1000 units daily, phosphorus supplementation 500 mg daily, sevelamer carbonate 1600 mg with meals, and pancrelipase 5000 units with meals. Metformin and fenofibrate were continued for diabetes and lipid management. Prophylactic vaccines including pneumococcal 23-valent, influenza quadrivalent, and tuberculin protein testing were administered.
+
+---
+
+**DISPOSITION & FOLLOW-UP**
+
+The patient demonstrated partial improvement with intensive critical care management but remained significantly debilitated. He is discharged to a long-term acute care facility for continued weaning from mechanical ventilation, ongoing dialysis management of chronic kidney disease, and rehabilitation. Follow-up is arranged with hepatology, nephrology, cardiology, and infectious disease. The family was counseled regarding the serious nature of his underlying cirrhosis, renal failure, and septic episode.

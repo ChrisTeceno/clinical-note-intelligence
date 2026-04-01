@@ -153,6 +153,31 @@ st.warning(
     "iterations x eval set size."
 )
 
+# Check for cached evaluation data (previous runs)
+EVAL_DIR = PROJECT_ROOT / "data" / "evaluation"
+has_cached_data = (EVAL_DIR / "selected_hadm_ids.json").exists() and (EVAL_DIR / "synthetic_notes").is_dir()
+
+# Default MIMIC path — check common locations
+DEFAULT_MIMIC_PATHS = [
+    "/home/deploy/data/mimic-iv-demo/hosp",
+    "/Users/teceno/Downloads/mimic-iv-clinical-database-demo-2.2/hosp",
+    str(Path.home() / "Downloads/mimic-iv-clinical-database-demo-2.2/hosp"),
+]
+default_mimic = ""
+for p in DEFAULT_MIMIC_PATHS:
+    if Path(p).exists():
+        default_mimic = p
+        break
+
+mimic_path_str = st.text_input(
+    "MIMIC-IV hosp/ directory path",
+    value=default_mimic,
+    help="Path to the MIMIC-IV demo hosp/ directory. Cached data from previous evaluation runs will be reused.",
+)
+
+if has_cached_data:
+    st.caption("Previous evaluation data found — synthetic notes and ground truth will be reused.")
+
 with st.form("opt_form"):
     opt_col1, opt_col2 = st.columns(2)
     with opt_col1:
@@ -180,19 +205,14 @@ with st.form("opt_form"):
     submitted = st.form_submit_button("Run Optimization")
 
 if submitted:
-    mimic_path_str = st.text_input(
-        "MIMIC-IV hosp/ directory path",
-        value="",
-        key="mimic_path_input",
-    )
-    if not mimic_path_str:
-        st.error("Please provide the MIMIC-IV hosp/ directory path above.")
+    if not mimic_path_str or not Path(mimic_path_str).exists():
+        st.error("MIMIC-IV path not found. Please check the path above.")
     else:
         from clinical_pipeline.optimization.run_optimize import (
             run_optimization,
         )
 
-        with st.spinner("Running optimization loop..."):
+        with st.spinner("Running optimization loop — this takes a few minutes..."):
             result = run_optimization(
                 mimic_path=Path(mimic_path_str),
                 n_iterations=n_iterations,

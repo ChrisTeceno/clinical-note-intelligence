@@ -1,0 +1,57 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT INFORMATION:**
+Hospital Course: 7 days
+
+**ADMITTING DIAGNOSIS:**
+The patient, a 68-year-old male with extensive past medical history, presented with acute kidney injury in the setting of acute urinary tract infection.
+
+**CHIEF COMPLAINT AND HISTORY OF PRESENT ILLNESS:**
+The patient was admitted following evaluation in the emergency department for acute worsening of renal function and urinary symptoms. He reported dysuria and frequency, with laboratory studies revealing significantly elevated creatinine and positive urinalysis. The patient has a complex medical history including chronic lymphocytic leukemia of B-cell type not in remission, for which he is currently on venetoclax therapy. Prior cerebral infarction had resulted in left-sided hemiparesis and hemiplegia affecting his non-dominant side, and he has residual motor deficits from this event. His cardiac history is significant for atherosclerotic heart disease of native coronary arteries managed with prior coronary angioplasty and stent placement. He has an implanted pacemaker for sick sinus syndrome management. Additional complications include paroxysmal atrial fibrillation managed with anticoagulation, and type 2 diabetes mellitus complicated by polyneuropathy requiring insulin therapy. The patient has undergone bariatric surgery in the past and carries diagnoses of severe obesity, obstructive sleep apnea, and hypertension. He also reports chronic pain, anxiety, and major depressive disorder.
+
+**HOSPITAL COURSE:**
+On admission, vital signs were notable for mild hypotension (BP 98/62), HR 82 with regular rhythm, RR 18, O2 saturation 96% on room air. Acute kidney failure was confirmed with creatinine of 3.2 mg/dL and BUN of 48 mg/dL. The patient was started on IV ceftriaxone 1 gm for empiric treatment of urinary tract infection. Over the first two days, aggressive IV hydration with normal saline and lactated Ringer's was initiated to address hypovolemia contributing to his acute renal dysfunction. Urine output gradually improved, and by hospital day 3, creatinine began trending downward. The patient experienced some nausea, managed with ondansetron and prochlorperazine.
+
+Hematologic abnormalities noted on labs included mild thrombocytopenia and iron deficiency anemia, though these remained stable. Transaminase and LDH elevations were noted and attributed to his chronic leukemia process. Hematuria was documented but resolved with hydration and antibiotic therapy. The patient's insulin requirements were adjusted during admission given his acute illness; he was maintained on his home regimen of insulin with dosing of 70, 80, 50, and 30 units at various intervals. Glucose management remained stable throughout.
+
+Pain control was addressed with tramadol, hydromorphone, and oxycodone, though the patient experienced constipation likely related to opioid use and his baseline intestinal motility issues post-bariatric surgery. Bowel regimen including docusate, senna, bisacodyl, polyethylene glycol, lactulose, and magnesium citrate was implemented. Urinary retention was monitored; catheterization was avoided when possible given infection risk.
+
+Psychiatric medications including escitalopram, risperidone, topiramate, and lorazepam were continued for management of his anxiety and depression. Hypothyroidism was managed with levothyroxine 125 mcg. Gout management included allopurinol. His anticoagulation for atrial fibrillation was maintained with rivaroxaban. Metoprolol was continued for rate control. Atorvastatin was continued for hyperlipidemia management. Losartan was maintained for hypertension. Gabapentin was used for neuropathic pain, supplemented with lidocaine patches and topical anesthetics. Levothyroxine was continued for hypothyroidism.
+
+By discharge, creatinine had improved to 1.8 mg/dL, indicating significant recovery of renal function. The patient was afebrile and hemodynamically stable on his home blood pressure regimen.
+
+**DISCHARGE DIAGNOSES:**
+1. Acute kidney injury, resolved
+2. Urinary tract infection, treated
+3. Chronic lymphocytic leukemia of B-cell type not in remission
+4. Hemiparesis and hemiplegia, left non-dominant side, post-cerebral infarction
+5. History of pacemaker implantation
+6. Atherosclerotic coronary artery disease
+7. Status post coronary angioplasty with stent
+8. Type 2 diabetes mellitus with polyneuropathy
+9. Paroxysmal atrial fibrillation
+10. Hyperlipidemia
+11. Severe obesity, post-bariatric surgery
+12. Obstructive sleep apnea
+13. Hypothyroidism
+14. Anxiety disorder
+15. Major depressive disorder
+16. Chronic pain
+17. Thrombocytopenia
+18. Iron deficiency anemia
+19. Sick sinus syndrome
+20. Gout
+21. Gastrojejunal ulcer
+22. Urinary retention
+23. Hypotension
+24. History of testicular malignancy
+25. Hematuria
+26. Elevated liver enzymes
+27. Fatigue
+28. Constipation
+
+**DISCHARGE MEDICATIONS:**
+Aspirin 81 mg PO daily, atorvastatin 80 mg PO daily, ceftriaxone 1 gm IV (completed course), sucralfate 1 gm PO four times daily, pantoprazole 40 mg PO daily, acyclovir 400 mg PO daily, allopurinol 100 mg PO daily, levothyroxine 125 mcg PO daily, losartan 50 mg PO daily, metoprolol succinate XL 150 mg PO daily, rivaroxaban 20 mg PO daily, gabapentin 100 mg PO three times daily, tramadol 50 mg PO Q6H PRN, oxycodone 5-10 mg PO Q4-6H PRN, hydromorphone 0.5 mg IV Q4-6H PRN, docusate 100 mg PO BID, senna 8.6 mg PO daily, bisacodyl 10 mg PO daily, polyethylene glycol 17 gm PO daily, lactulose 30 mL PO daily, insulin: 70 units bedtime, 80 units breakfast, 50 units lunch, 30 units dinner, escitalopram 20 mg PO daily, risperidone 3 mg PO daily, topiramate 50 mg PO daily, lorazepam 0.5-1 mg PO TID PRN, hydroxyzine 10 mg PO Q6H PRN, amitriptyline 10 mg PO bedtime, prochlorperazine 5 mg PO Q6H PRN, ondansetron 4-8 mg IV Q6H PRN, acetaminophen 500 mg PO Q6H PRN, lidocaine 5% patches (3 patches) topical daily, nystatin-triamcinolone cream topical BID PRN, lidocaine jelly 2% topical PRN, carbamide peroxide 6.5% otic solution both ears PRN.
+
+**DISPOSITION:**
+Patient discharged to home in stable condition. Follow-up arranged with nephrology in 1 week to monitor renal function. Patient instructed to contact primary care immediately if fever, dysuria recurs, or shortness of breath develops. Oncology to continue venetoclax dosing per protocol for chronic leukemia management.

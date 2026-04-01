@@ -1,0 +1,50 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**MRN:** [ID]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [X] days
+
+---
+
+**SUBJECTIVE:**
+
+Patient is a [age]-year-old presenting with acute psychiatric decompensation in the setting of polysubstance use. Pt reports recent heavy cocaine and alcohol use over the past [timeframe], with associated mood disturbances, paranoia, and auditory hallucinations. Collateral history obtained from [source] regarding patient's baseline psychiatric status and substance use patterns. Pt denies current suicidal or homicidal ideation but acknowledges ongoing internal struggle with managing his schizophrenia diagnosis and comorbid conditions. He has a significant past medical history including HIV disease, chronic hepatitis C infection, and a remote history of traumatic brain injury with residual cognitive effects. Pt previously tobacco dependent, though reports abstinence x[timeframe]. Presentation was prompted by escalating behavioral concerns and inability to engage in self-care.
+
+---
+
+**OBJECTIVE:**
+
+Vitals on admission: T 98.6°F, HR 88, BP 132/78, RR 16, O2 sat 97% on room air.  
+Weight: [X] kg.
+
+**Labs:** CBC relatively unremarkable with Hgb 13.2, WBC 6.8. CMP notable for mild hypokalemia at 3.4 (repleted), glucose 105. Liver function tests show mild elevation in transaminases (AST 58, ALT 72) consistent with chronic hepatitis C. Albumin 3.6, total bilirubin 0.9. HIV viral load undetectable on current regimen; CD4 count 410. Urine drug screen positive for cocaine metabolites and alcohol. Lipid panel deferred pending stabilization.
+
+Mental status exam on admission: Patient oriented x3, tangential thought process, paranoid ideation regarding perceived threats, auditory hallucinations present, flat affect, poor eye contact. Pt restless and agitated initially, responding to internal stimuli. No acute medical complications from substance ingestion noted.
+
+---
+
+**ASSESSMENT:**
+
+This is a [age]-year-old male with multiple complex psychiatric and medical comorbidities presenting with acute decompensation. Primary issues include psychoactive substance use with induced mood disorder, specifically recent cocaine and alcohol use in the context of his underlying schizophrenia. The patient's HIV disease remains relatively controlled immunologically, though hepatitis C infection persists. History of traumatic brain injury is relevant to his current neuropsychiatric presentation. During hospitalization, we addressed acute substance-induced psychosis, mood dysregulation, and stabilization of his chronic psychiatric condition. Medical optimization for his HIV status and hepatitis C disease was continued.
+
+---
+
+**PLAN/DISCHARGE:**
+
+Patient engaged in individual therapy sessions and group programming. His schizophrenia was managed pharmacologically with quetiapine titration for antipsychotic coverage and mood stabilization. Sertraline continued for mood support, and hydroxyzine utilized for anxiety management. Given his substance use disorder and polysubstance engagement with both cocaine and alcohol, referral to intensive outpatient rehabilitation program has been arranged. Nutritional support optimized with folic acid, thiamine, and multivitamin supplementation given his risk for nutritional deficiencies related to chronic substance use.
+
+**Discharge Medications:**
+- Quetiapine Fumarate 25 mg, 50 mg, 100 mg, 200 mg, and 300 mg PO (dosing per psychiatry instructions)
+- Sertraline 25 mg PO daily
+- Hydroxyzine 50 mg PO TID as needed for anxiety
+- Sulfamethoxazole/Trimethoprim DS 1 TAB PO daily (PCP prophylaxis)
+- Thiamine 100 mg PO daily
+- Folic acid 1 mg PO daily
+- Calcium carbonate 500 mg PO daily
+- Multivitamins 1 TAB PO daily
+- Lidocaine 5% patch topical to affected areas
+- Bengay cream topical as needed for localized pain
+
+Patient advised on substance abuse relapse prevention, HIV medication adherence, and hepatitis C follow-up. Pt discharged to [location] with scheduled psychiatry follow-up in [timeframe] and infectious disease appointment arranged. Case management referrals placed for ongoing psychosocial support.

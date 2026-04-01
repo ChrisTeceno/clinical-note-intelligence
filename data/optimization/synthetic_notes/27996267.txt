@@ -1,0 +1,41 @@
+# DISCHARGE SUMMARY
+
+**PATIENT:** [Name]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** [# days]
+
+---
+
+## CHIEF COMPLAINT
+Left lower extremity diabetic gangrene with wound complications.
+
+## HISTORY OF PRESENT ILLNESS
+The patient is a complex medical case with multiple comorbidities including Type 2 diabetes mellitus with diabetic peripheral angiopathy and gangrene of the left foot, chronic kidney disease stage 4, acute on chronic diastolic heart failure, and coronary artery disease. The pt was admitted following surgical intervention for management of progressive left lower extremity necrosis. The clinical course was complicated by postoperative infection due to enterococcus with resistance to vancomycin, as well as other bacterial pathogens including streptococcus species, resistant to quinolones and fluoroquinolones. The patient developed acute posthemorrhagic anemia requiring transfusion, acute kidney injury superimposed on underlying chronic kidney disease, and postprocedural shock necessitating vasopressor support. Additionally, the pt experienced delirium secondary to the acute physiologic derangements. Disruption of the external surgical wound occurred, adding further complexity. An abnormal coagulation profile was documented and managed. The patient has a documented history of gout and gastroesophageal reflux disease, and carries a diagnosis of hypothyroidism and hyperlipidemia. Atrial fibrillation is present. Mental health history includes major depressive disorder, currently managed pharmacologically. Chronic obstructive pulmonary disease contributes to respiratory considerations. The pt also has a chronic left foot ulcer with diabetic etiology. Pressure ulcer of unspecified site developed during admission. Full fecal incontinence and diarrhea required nursing care and dietary management. Given the patient's critical condition and multiple life-limiting comorbidities, goals of care were reassessed; a do-not-resuscitate order was established. The patient received palliative care consultation and required physical restraints during periods of delirium.
+
+## HOSPITAL COURSE
+Vital signs on admission: BP 98/62, HR 112, RR 24, O2 sat 88% on 2L NC, Temp 38.9°C. Initial labs showed WBC 18.4, Hgb 7.2 (posthemorrhagic anemia), Cr 3.1 (acute kidney failure with CKD-4 baseline), INR 2.1 (abnormal coagulation). The patient underwent excision of left foot tendon and extraction of left lower leg and upper leg subcutaneous tissue and fascia via open approaches. A PICC line was placed via percutaneous insertion into the superior vena cava for long-term vascular access.
+
+Postoperatively, the pt developed septic physiology with positive blood cultures growing enterococcus (vancomycin-resistant), other streptococcus, and gram-negative organisms resistant to fluoroquinolones. Empiric therapy was initiated with meropenem, linezolid, daptomycin, and ciprofloxacin, adjusted based on culture sensitivities. The pt progressed to postprocedural shock requiring norepinephrine and phenylephrine drips, along with aggressive fluid resuscitation and vasopressor titration. ICU-level sedation was provided with propofol, dexmedetomidine, and fentanyl infusions. Acute kidney injury worsened, requiring careful electrolyte management with potassium and calcium supplementation; hemodialysis was considered but deferred given DNR status.
+
+The pt's acute on chronic heart failure was exacerbated by fluid shifts and sepsis. Diuretics (furosemide and torsemide) were used cautiously given renal dysfunction. Digoxin and beta-blockers were continued for rate control in the setting of atrial fibrillation. Surgical wound disruption was noted and managed with topical wound care including collagenase ointment and orthopedic solution applications. Haloperidol and lorazepam were used to manage delirium secondary to critical illness. Blood glucose was managed with insulin sliding scale. Pain control involved opioid therapy with oxycodone, morphine, and hydromorphone. Antithrombotic therapy with aspirin and prasugrel was continued given atherosclerotic disease.
+
+## DISCHARGE MEDICATIONS
+**Cardiac/Renal:** Metoprolol tartrate 50-100 mg PO BID, digoxin 0.0625-0.125 mg PO daily, isosorbide mononitrate 20 mg PO daily, irbesartan 150 mg PO daily, furosemide 40-60 mg IV/PO daily, torsemide 30-60 mg PO daily, metolazone 2.5 mg PO daily, hydralazine 20 mg PO daily
+
+**Antithrombotic/Lipid:** Aspirin 81 mg PO daily, prasugrel 10 mg PO daily, ezetimibe 10 mg PO daily, simvastatin (simethicone) 80 mg PO daily
+
+**Endocrine:** Levothyroxine 56-112 mcg PO/IV daily, insulin SQ per sliding scale
+
+**Gastrointestinal:** Omeprazole 20 mg PO daily, famotidine 20 mg IV BID, polyethylene glycol 17 g PO daily, senna 17.2 mg PO daily, bisacodyl 10 mg PO PRN, metronidazole 500 mg IV TID
+
+**Antimicrobials:** Linezolid 600 mg PO BID, daptomycin 300 mg IV daily (to complete course)
+
+**Pain/Psychiatric:** Oxycodone 5-15 mg PO/NG Q4-6H PRN, acetaminophen 650-1000 mg PO/NG Q6H PRN, bupropion 75 mg PO daily and 150 mg SR PO daily, lorazepam 0.5 mg PO Q6H PRN
+
+**Pulmonary:** Tiotropium 1 cap IH daily, albuterol neb 0.083% Q4-6H, fluticasone 110 mcg 2 puffs IH BID
+
+**Other:** Gabapentin 100-200 mg PO TID, febuxostat 40 mg PO daily, zinc sulfate 220 mg PO daily, ascorbic acid 500 mg PO daily, multivitamins daily, heparin SQ 5000 units BID
+
+## FOLLOW-UP
+Palliative care to continue involvement. Wound care nursing. Infectious disease consultation as needed for antimicrobial stewardship. Patient and family counseling regarding advanced directives and goals of care ongoing.

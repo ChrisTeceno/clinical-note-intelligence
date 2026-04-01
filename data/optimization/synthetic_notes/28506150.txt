@@ -1,0 +1,48 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name and identifiers]
+**ADMISSION DATE:** [Date]
+**DISCHARGE DATE:** [Date]
+**LENGTH OF STAY:** [Number of days]
+
+---
+
+**CHIEF COMPLAINT:**
+Altered mental status with respiratory compromise.
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a complex medical individual with a longstanding history of amyotrophic lateral sclerosis (ALS) who presented with acute altered mental status. The pt has known frontotemporal dementia and schizoaffective disorder, unspecified, which complicate his baseline cognitive and behavioral status. During his hospitalization, he experienced an acute non-ST elevation myocardial infarction (NSTEMI), requiring careful cardiac risk stratification and medical management. His past medical history is significant for atherosclerotic heart disease of the native coronary arteries without active angina, essential hypertension, type 2 diabetes mellitus on insulin, and underlying pericardial disease. 
+
+Shortly after admission, the pt developed a critical airway event when a foreign object lodged in his respiratory tract, necessitating emergent intervention. Additionally, he developed ventilator-associated pneumonia while dependent on mechanical ventilation, which was managed with targeted antibiotic therapy. The patient had previously undergone tracheostomy placement for his advanced ALS, which facilitated prolonged ventilator management during this admission. He also presented with symptomatic hypotension requiring careful fluid resuscitation and vasopressor consideration. A concurrent urinary tract infection was identified and treated. During his hospital course, the pt experienced unspecified convulsions, requiring seizure prophylaxis and management.
+
+**HOSPITAL COURSE:**
+On admission, vital signs revealed: BP 88/54 mmHg, HR 102 bpm, RR 24, Temperature 38.2°C, SpO2 94% on supplemental oxygen. Laboratory work demonstrated metabolic derangements including hypokalemia and hyperglycemia. The cardiac event was confirmed with troponin elevation consistent with NSTEMI. Aspiration of foreign material from the bilateral lower lung lobes was required via bronchoscopy with extraction of matter from both the left and right lower lobe bronchi. The pt required respiratory ventilation for 24-96 consecutive hours during the acute phase. Broad-spectrum antibiotics including ceftazidime were initiated for ventilator-associated pneumonia. Electrolyte abnormalities (potassium and magnesium) were corrected with IV supplementation. The pt received anticoagulation with heparin and dual antiplatelet therapy, along with high-intensity statin therapy for his coronary artery disease.
+
+Seizure activity was managed with levetiracetam administration. His psychiatric symptoms related to schizoaffective disorder and behavioral issues stemming from his frontotemporal dementia were addressed with quetiapine and sertraline. Pain and anxiety management in the setting of mechanical ventilation required judicious use of fentanyl, midazolam, and lorazepam. Glucose management was optimized with subcutaneous insulin dosing adjusted to POC values. GI prophylaxis was maintained with both lansoprazole and omeprazole given his critical illness. Supportive care included fluid resuscitation with normal saline, acetaminophen for fever management, docusate for bowel regimen, ferrous sulfate supplementation, polyethylene glycol, and guaifenesin with acetylcysteine nebulization for respiratory secretion management.
+
+**PROCEDURES PERFORMED:**
+1. Extirpation of matter from left lower lobe bronchus via natural/artificial opening endoscopic approach
+2. Respiratory ventilation, 24-96 consecutive hours
+3. Extirpation of matter from right lower lung lobe via natural/artificial opening endoscopic approach
+
+**DISCHARGE MEDICATIONS:**
+- Aspirin 81 mg PO daily
+- Atorvastatin 80 mg PO daily
+- Ceftazidime 1 g IV as directed
+- Metoprolol tartrate 12.5 mg PO BID
+- Heparin 5000 units SC BID
+- Lansoprazole 30 mg PO daily
+- Omeprazole 40 mg PO daily
+- Sertraline 150 mg PO daily
+- Quetiapine 12.5 mg PO BID
+- Levetiracetam 750 mg IV daily
+- Insulin dosing per sliding scale (10 units SC as needed)
+- Docusate 100 mg PO daily
+- Ferrous sulfate 300 mg PO daily
+- Polyethylene glycol 17 g PO daily
+- Guaifenesin 5-10 mL PO four times daily
+- Acetylcysteine 20% 6-10 mL nebulized as needed
+- Fentanyl citrate and lorazepam for comfort care per protocol
+
+**DISCHARGE DISPOSITION:**
+Patient discharged to long-term acute care facility with continued ventilator support and tracheostomy management. Comprehensive care plan established addressing all chronic conditions. Close cardiology and infectious disease follow-up arranged.

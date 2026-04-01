@@ -1,0 +1,66 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 5 days
+
+---
+
+**CHIEF COMPLAINT:**  
+Left lower extremity swelling and pain
+
+**HISTORY OF PRESENT ILLNESS:**  
+The patient is a [age]-year-old who presented to the emergency department with acute onset swelling and pain in the left leg. Imaging revealed acute embolism and thrombosis of the left iliac vein with associated vein compression. The patient underwent urgent intervention given the acute nature of the thrombotic event and risk of limb-threatening complications.
+
+**HOSPITAL COURSE:**  
+The patient was admitted and started on anticoagulation therapy with heparin sodium IV and enoxaparin sodium subcutaneously. Initial management included pain control with a combination of hydromorphone and oxycodone as needed. The clinical team proceeded with percutaneous endovascular intervention on hospital day 2.
+
+Under fluoroscopic guidance, multiple procedures were performed to address the thrombotic occlusion. Thrombolytic therapy was administered via peripheral vein access with alteplase. Extirpation of thrombus was performed from the left femoral vein, left common iliac vein (performed twice given the burden of clot), and surrounding vessels. Dilation of the left common iliac vein and left external iliac vein was accomplished using intraluminal devices via percutaneous approach to restore adequate flow. An intraluminal device was also inserted into the inferior vena cava for additional protection against recurrent thromboembolic events.
+
+During the procedure, the patient sustained an accidental puncture and laceration of a circulatory system structure, which was recognized and managed appropriately at the time. This complication occurred as a consequence of the surgical procedures being performed and was addressed with conservative management without additional operative intervention required.
+
+**POSTOPERATIVE COURSE:**  
+Following the interventional procedures, the patient was monitored in the ICU setting for 24 hours with continuous telemetry and frequent vital sign assessment. Pain was managed with IV hydromorphone initially, then transitioned to oral oxycodone. Anticoagulation was continued with IV heparin and transitioned to warfarin for long-term management. The patient also received apixaban as part of the anticoagulation regimen. Bowel function was supported with polyethylene glycol and docusate sodium. The patient's existing medications including levothyroxine sodium for thyroid replacement and duloxetine for depression were continued throughout hospitalization.
+
+Vital signs on discharge: BP 128/82, HR 76, RR 16, O2 sat 98% on room air, Temp 98.2°F.
+
+Laboratory values at discharge showed appropriate anticoagulation with INR pending final warfarin dosing adjustment.
+
+**DISCHARGE DIAGNOSES:**  
+1. Acute embolism and thrombosis of left iliac vein  
+2. Compression of left iliac vein  
+3. Accidental puncture and laceration of circulatory system structure during percutaneous intervention  
+4. Complication related to endovascular procedure
+
+**PROCEDURES PERFORMED:**  
+- Percutaneous dilation of left common iliac vein with intraluminal device placement  
+- Percutaneous dilation of left external iliac vein with intraluminal device placement  
+- Thrombolytic infusion into peripheral vein with alteplase  
+- Percutaneous extirpation of thrombus from left femoral vein  
+- Percutaneous extirpation of thrombus from left common iliac vein (two separate passes)  
+- Percutaneous insertion of intraluminal device into inferior vena cava
+
+**DISCHARGE MEDICATIONS:**  
+- Warfarin 5 mg PO once daily (adjusted per INR monitoring)  
+- Apixaban 10 mg PO BID  
+- Enoxaparin sodium 90 mg SC once daily  
+- Levothyroxine sodium 75 mcg PO once daily  
+- Duloxetine 120 mg PO once daily  
+- Oxycodone 5-10 mg PO every 4-6 hours as needed for pain  
+- Hydromorphone 0.25-0.5 mg IV every 3-4 hours as needed (limited use for breakthrough pain at home)  
+- Acetaminophen 650 mg PO every 6 hours  
+- Ranitidine 150 mg PO BID  
+- Clonazepam 0.5 mg PO once daily at bedtime  
+- Potassium chloride 20 mEq PO once daily  
+- Docusate sodium 100 mg PO BID  
+- Polyethylene glycol 17 g PO daily as needed for constipation  
+- Phenazopyridine 100 mg PO TID for dysuria
+
+**FOLLOW-UP:**  
+- Vascular surgery clinic in 1-2 weeks  
+- Primary care physician within 3-5 days for medication reconciliation and INR check  
+- Duplex ultrasound of left lower extremity in 4 weeks
+
+**ACTIVITY:**  
+Ambulate as tolerated with elevation of left leg when resting. Avoid prolonged sitting or standing.

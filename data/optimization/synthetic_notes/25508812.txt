@@ -1,0 +1,56 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT NAME:** [REDACTED]  
+**ADMISSION DATE:** [DATE]  
+**DISCHARGE DATE:** [DATE]  
+**LENGTH OF STAY:** 5 days
+
+---
+
+**CHIEF COMPLAINT:**
+Shortness of breath and hypoxemia
+
+**HOSPITAL COURSE:**
+The patient is a [AGE]-year-old admitted with acute hypoxemia requiring supplemental oxygen support. Initial presentation was complicated by significant pleural effusion bilaterally and atelectasis of the lower lobes. The pt has a complex medical history including chronic obstructive pulmonary disease, chronic pulmonary edema, and myelodysplastic syndrome, which likely contributed to the acute decompensation. Additionally, the patient suffered acute splenic infarction during this admission, discovered on imaging workup.
+
+Given the patient's constellation of pulmonary findings and need for diagnostic evaluation, bronchoscopy with drainage procedures was performed on both the left lower lobe and right middle lobe via endoscopic approach. These diagnostic drainage procedures helped guide management of the effusions and atelectasis. Oxygen saturation improved gradually with aggressive diuresis and pulmonary toilet.
+
+The patient's myelodysplastic syndrome was managed during hospitalization with hydroxyurea dosing (500 mg, 1000 mg, and 1500 mg PO in divided regimens). Uric acid management was addressed given hyperuricemia without inflammatory arthritis; rasburicase was administered IV at 3 mg and 6 mg doses to prevent tumor lysis syndrome complications. Fluid status was optimized with furosemide 20 mg and 40 mg IV dosing.
+
+Type 2 diabetes was monitored with glucose checks and insulin management as needed; glucose gel was available for treatment of hypoglycemic episodes. Hypothyroidism was managed with levothyroxine sodium 88 mcg daily. The patient's major depressive disorder, single episode, was treated with escitalopram oxalate 5 mg PO. Hyperlipidemia was addressed with simvastatin 5 mg PO.
+
+Symptomatic management included oxycodone 5 mg PO for pain control, tramadol 50 mg PO for additional analgesia, and albuterol nebulized solution for bronchospasm. Tiotropium bromide inhaled capsule was continued for COPD maintenance. GI prophylaxis was provided with pantoprazole 40 mg, and bowel regimen included polyethylene glycol, docusate sodium, and senna to prevent constipation associated with opioid therapy.
+
+A DNR (do not resuscitate) status was established per patient wishes and documented in the medical record.
+
+**VITAL SIGNS AT DISCHARGE:**
+BP 128/76, HR 92, RR 20, O2 sat 92% on 2L NC, Temp 98.6°F
+
+**LABORATORY VALUES:**
+WBC 3.2, Hgb 8.4, Plt 85, Cr 1.1, BUN 24, glucose 118 mg/dL
+
+---
+
+**DISCHARGE MEDICATIONS:**
+1. Tiotropium bromide 1 cap inhaled daily
+2. Albuterol 0.083% nebulized solution as needed for shortness of breath
+3. Levothyroxine sodium 88 mcg PO daily
+4. Pantoprazole 40 mg PO daily
+5. Escitalopram oxalate 5 mg PO daily
+6. Simvastatin 5 mg PO daily
+7. Hydroxyurea 500 mg, 1000 mg, and 1500 mg PO per prescribed schedule
+8. Oxycodone 5 mg PO every 6 hours as needed for pain
+9. Tramadol 50 mg PO every 6 hours as needed for pain
+10. Polyethylene glycol 17 g PO daily
+11. Docusate sodium 100 mg PO BID
+12. Senna 8.6 mg PO at bedtime
+13. Multivitamin 1 tablet PO daily
+14. Vitamin D 2000 units PO daily
+15. Glucagon 1 mg IM available for hypoglycemia
+16. Glucose gel 15 g PO as needed for low blood sugar
+17. Insulin per sliding scale SC as directed
+
+---
+
+**FOLLOW-UP:**
+The patient should follow up with Pulmonology within 1 week for reassessment of pleural effusions and atelectasis resolution. Hematology/Oncology follow-up is essential given the myelodysplastic syndrome diagnosis. Primary care physician should monitor oxygen requirements and reassess need for diuretics. Continue DNR status as previously discussed.

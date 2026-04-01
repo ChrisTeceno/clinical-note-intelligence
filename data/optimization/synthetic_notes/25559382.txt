@@ -1,0 +1,57 @@
+**DISCHARGE SUMMARY**
+
+**PATIENT:** [Name]  
+**ADMISSION DATE:** [Date]  
+**DISCHARGE DATE:** [Date]  
+**LENGTH OF STAY:** 3 days
+
+---
+
+**CHIEF COMPLAINT:**
+Chest pain and palpitations
+
+**HISTORY OF PRESENT ILLNESS:**
+The patient is a male with extensive cardiac history presenting with recurrent chest discomfort concerning for unstable angina pectoris. He reports substernal chest pressure that began acutely while at rest, accompanied by dyspnea and mild diaphoresis. The patient has significant atherosclerotic heart disease of the native coronary arteries with prior revascularization via aortocoronary bypass graft and coronary angioplasty with stent placement. Given his complex cardiac anatomy and symptomatology, he was admitted for observation and risk stratification. On admission, vital signs were notable for mild hypertension at 148/92 mmHg with heart rate of 88 bpm. Troponin was initially negative but repeated serially given clinical suspicion.
+
+**PAST MEDICAL HISTORY:**
+Patient has hypertensive heart disease complicated by chronic systolic congestive heart failure, which is being medically managed. He carries diagnoses of hyperlipidemia and unspecified asthma, both uncomplicated. Notably, he has a history of transient ischemic attack and prior cerebral infarction without residual neurologic deficits, and imaging reveals occlusion and stenosis of the left carotid artery. He is status post prosthetic heart valve placement. Additionally, the patient has a remote history of Hodgkin lymphoma treated with chemotherapy and radiation, and prior malignant neoplasm of the prostate. Recent ECG demonstrated unspecified atrial flutter, which is new compared to prior studies. He also developed a rash and nonspecific skin eruption during this admission, thought to be medication-related.
+
+**SOCIAL HISTORY:**
+Patient denies current tobacco use but has a personal history of nicotine dependence. Family history is significant for ischemic heart disease and other circulatory diseases affecting multiple first-degree relatives.
+
+**PHYSICAL EXAMINATION:**
+On discharge, the patient appeared comfortable at rest. Cardiovascular exam revealed an irregular heart rate consistent with atrial flutter noted on telemetry. Lung fields were clear to auscultation bilaterally. Extremities showed no significant edema. The previously noted rash had begun to improve with conservative management.
+
+**HOSPITAL COURSE:**
+Serial troponins remained negative, and the patient remained hemodynamically stable throughout admission. He was monitored on continuous telemetry given the new atrial flutter. Echocardiography was deferred as it had been performed recently prior to admission. The patient's chronic systolic heart failure remained compensated on his current medical regimen. His chest discomfort gradually resolved with medical therapy. Given the extensive prior cerebrovascular disease with carotid stenosis and his coronary artery disease, antiplatelet therapy was optimized.
+
+**DISCHARGE DIAGNOSES:**
+1. Atherosclerotic heart disease of native coronary artery with unstable angina pectoris
+2. Status post aortocoronary bypass graft
+3. Status post coronary angioplasty with stent implantation
+4. Hypertensive heart disease with congestive heart failure
+5. Chronic systolic congestive heart failure
+6. Hyperlipidemia
+7. History of transient ischemic attack and cerebral infarction without residual deficits
+8. Occlusion and stenosis of left carotid artery
+9. Prosthetic heart valve in situ
+10. Unspecified atrial flutter
+11. Unspecified asthma
+12. Drug-related rash and skin eruption
+13. History of Hodgkin lymphoma
+14. History of prostate cancer
+15. History of nicotine dependence
+16. Family history of ischemic heart disease
+
+**DISCHARGE MEDICATIONS:**
+- Aspirin 81 mg PO daily for antiplatelet effect
+- Clopidogrel 75 mg PO daily for dual antiplatelet therapy
+- Isosorbide mononitrate extended-release 30 mg PO daily for angina prophylaxis
+- Diltiazem extended-release 120 mg PO daily for rate control and coronary vasodilation
+- Niacin 1000 mg PO daily for lipid management
+- Fish oil (omega-3) 1000 mg PO daily for cardiovascular health
+- Ramelteon 8 mg PO at bedtime as needed for sleep
+- Acetaminophen 500–1000 mg PO as needed for pain
+
+**DISPOSITION:**
+Patient discharged to home in stable condition with instructions to follow up with his cardiologist within one week. He was counseled to seek emergency care for recurrent chest pain, severe dyspnea, or syncope. Patient verbalized understanding of discharge instructions.
