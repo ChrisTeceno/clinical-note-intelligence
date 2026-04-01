@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>End-to-End Pipeline</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1b1b2f;
+  color: #e0e0e8;
+  line-height: 1.6;
+}
+.nb-header {
+  background: #2d2d44;
+  border-bottom: 2px solid #3a3a55;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nb-header .logo {
+  font-weight: 800;
+  color: #ff6f61;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.nb-header .sep { color: #555; font-size: 18px; }
+.nb-header .name { color: #ccc; font-size: 14px; font-weight: 500; }
+.nb-header .badge {
+  background: #2ecc71;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+.nb-header .cell-count {
+  color: #888;
+  font-size: 12px;
+}
+.nb-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+.cell-md {
+  padding: 20px 28px;
+  margin-bottom: 8px;
+}
+.cell-md h1 { font-size: 26px; font-weight: 700; color: #fff; margin: 16px 0 10px; }
+.cell-md h2 { font-size: 21px; font-weight: 600; color: #ddd; margin: 20px 0 8px; border-bottom: 1px solid #3a3a55; padding-bottom: 6px; }
+.cell-md h3 { font-size: 17px; font-weight: 600; color: #ccc; margin: 14px 0 6px; }
+.cell-md p { color: #bbb; margin-bottom: 8px; }
+.cell-md ul, .cell-md ol { color: #bbb; margin-left: 24px; margin-bottom: 8px; }
+.cell-md li { margin-bottom: 3px; }
+.cell-md strong { color: #e0e0e8; }
+.cell-md code { background: #2d2d44; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #e8b86d; }
+.cell-md a { color: #64b5f6; }
+.cell-md hr { border: none; border-top: 1px solid #3a3a55; margin: 16px 0; }
+.cell-md table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.cell-md th { background: #2d2d44; color: #aaa; text-align: left; padding: 8px 14px; border: 1px solid #3a3a55; font-size: 13px; font-weight: 600; }
+.cell-md td { padding: 8px 14px; border: 1px solid #3a3a55; color: #ccc; font-size: 13px; }
+.cell-md pre { background: #1e1e32; padding: 12px 16px; border-radius: 6px; overflow-x: auto; margin: 8px 0; }
+.cell-md pre code { background: transparent; padding: 0; color: #ccc; }
+.cell-code {
+  background: #1e1e32;
+  border: 1px solid #3a3a55;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.cell-toolbar {
+  background: #262640;
+  padding: 6px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #3a3a55;
+  font-size: 12px;
+}
+.cell-num {
+  color: #666;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  min-width: 32px;
+}
+.cell-lang {
+  color: #888;
+  font-size: 11px;
+  margin-left: auto;
+  background: #2d2d44;
+  padding: 2px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.status-ok { color: #2ecc71; font-size: 14px; }
+.status-none { color: #555; }
+.cell-source pre {
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: transparent;
+  white-space: pre;
+  tab-size: 4;
+}
+.cell-output {
+  border-top: 1px solid #3a3a55;
+  background: #191930;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.cell-output pre {
+  padding: 12px 20px;
+  font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #aaa;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.cell-output-table { padding: 0; overflow-x: auto; }
+.cell-output-table table { border-collapse: collapse; width: 100%; font-size: 12px; }
+.cell-output-table th {
+  background: #232340; color: #aaa; text-align: left; padding: 8px 12px;
+  border: 1px solid #3a3a55; font-weight: 600; position: sticky; top: 0;
+}
+.cell-output-table td {
+  padding: 6px 12px; border: 1px solid #2d2d44; color: #ccc;
+  max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.cell-output-table tr:nth-child(even) td { background: #1d1d35; }
+.cell-output-table tr:hover td { background: #252545; }
+.cell-output img { max-width: 100%; border-radius: 6px; margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="nb-header">
+  <span class="logo">Databricks</span>
+  <span class="sep">/</span>
+  <span class="name">End-to-End Pipeline</span>
+  <span class="cell-count">40 cells</span>
+  <span class="badge">Notebook</span>
+</div>
+<div class="nb-container">
+<div class="cell cell-md"><h1>Clinical Note Intelligence -- End-to-End Pipeline</h1>
+<p><strong>Full lifecycle</strong>: Raw CSV ingestion &rarr; PySpark cleaning &rarr; Claude API extraction &rarr; ICD-10 validation &rarr; Delta table persistence &rarr; result visualization</p>
+<p>This notebook is self-contained and runs on <strong>Databricks</strong> (recommended) or locally with <code>delta-spark</code>.
+Each stage produces artifacts consumed by the next, demonstrating a production-grade clinical data automation pipeline.</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>What</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>PySpark Ingestion &amp; Cleaning</td>
+<td>Delta table of 2,358 deduplicated clinical notes</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Claude API Extraction</td>
+<td>Structured diagnoses, procedures, medications via <code>tool_use</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>ICD-10 Code Validation</td>
+<td>Exact + fuzzy match against CMS 2025 (74K codes)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Delta Table Persistence</td>
+<td>Star-schema tables in Databricks (notes, extractions, entities)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Results &amp; Visualization</td>
+<td>Interactive charts, quality metrics, sample deep-dives</td>
+</tr>
+</tbody>
+</table></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[1]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Install dependencies (Databricks: runs once per cluster restart)</span>
+<span style="color: #959077"># Locally: pip install anthropic rapidfuzz pydantic delta-spark matplotlib</span>
+<span style="color: #FF4689">%</span><span style="color: #F8F8F2">pip</span> <span style="color: #F8F8F2">install</span> <span style="color: #F8F8F2">anthropic</span> <span style="color: #F8F8F2">rapidfuzz</span> <span style="color: #F8F8F2">pydantic</span><span style="color: #FF4689">&gt;=</span><span style="color: #AE81FF">2.0</span> <span style="color: #F8F8F2">matplotlib</span> <span style="color: #FF4689">-</span><span style="color: #F8F8F2">q</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[2]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> os</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> json</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> time</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> html</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> re</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> unicodedata</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> tempfile</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> urllib.request</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> zipfile</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> uuid</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> logging</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> datetime </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">datetime,</span> <span style="color: #F8F8F2">timezone</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> typing </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">Literal,</span> <span style="color: #F8F8F2">Optional</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pathlib </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">Path</span>
+
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> pandas </span><span style="color: #66D9EF">as</span><span style="color: #F8F8F2"> pd</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> matplotlib.pyplot </span><span style="color: #66D9EF">as</span><span style="color: #F8F8F2"> plt</span>
+<span style="color: #FF4689">import</span><span style="color: #F8F8F2"> matplotlib.ticker </span><span style="color: #66D9EF">as</span><span style="color: #F8F8F2"> mticker</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pydantic </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">BaseModel,</span> <span style="color: #F8F8F2">Field</span>
+
+<span style="color: #959077"># Detect environment</span>
+<span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">spark</span>  <span style="color: #959077"># noqa: F821 — available in Databricks</span>
+    <span style="color: #F8F8F2">ON_DATABRICKS</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">True</span>
+<span style="color: #66D9EF">except</span> <span style="color: #A6E22E">NameError</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">SparkSession</span>
+    <span style="color: #F8F8F2">spark</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+        <span style="color: #F8F8F2">SparkSession</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">builder</span>
+        <span style="color: #FF4689">.</span><span style="color: #F8F8F2">appName(</span><span style="color: #E6DB74">&quot;ClinicalNoteIntelligence&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #FF4689">.</span><span style="color: #F8F8F2">config(</span><span style="color: #E6DB74">&quot;spark.jars.packages&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;io.delta:delta-spark_2.12:3.1.0&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #FF4689">.</span><span style="color: #F8F8F2">config(</span><span style="color: #E6DB74">&quot;spark.sql.extensions&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;io.delta.sql.DeltaSparkSessionExtension&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #FF4689">.</span><span style="color: #F8F8F2">config(</span><span style="color: #E6DB74">&quot;spark.sql.catalog.spark_catalog&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;org.apache.spark.sql.delta.catalog.DeltaCatalogExtension&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #FF4689">.</span><span style="color: #F8F8F2">getOrCreate()</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">ON_DATABRICKS</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">False</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Environment: {&#39;Databricks&#39;</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> ON_DATABRICKS </span><span style="color: #66D9EF">else</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;Local PySpark&#39;}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Spark version: {</span><span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">version</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[3]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># --- Configuration ---</span>
+<span style="color: #959077"># Databricks: use Volumes paths and widgets for secrets</span>
+<span style="color: #959077"># Local: use relative paths and environment variables</span>
+
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">ON_DATABRICKS:</span>
+    <span style="color: #F8F8F2">RAW_DATA_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/raw-data/mtsamples.csv&quot;</span>
+    <span style="color: #F8F8F2">DELTA_BASE</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;/Volumes/workspace/default/clinical-pipeline&quot;</span>
+    <span style="color: #F8F8F2">dbutils</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">widgets</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">text(</span><span style="color: #E6DB74">&quot;api_key&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;Anthropic API Key&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">ANTHROPIC_API_KEY</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">dbutils</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">widgets</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;api_key&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">RAW_DATA_PATH</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(Path(</span><span style="color: #E6DB74">&quot;../data/raw/mtsamples.csv&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">resolve())</span>
+    <span style="color: #F8F8F2">DELTA_BASE</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(Path(</span><span style="color: #E6DB74">&quot;../data/processed/delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">resolve())</span>
+    <span style="color: #F8F8F2">ANTHROPIC_API_KEY</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">environ</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;ANTHROPIC_API_KEY&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">NOTES_DELTA</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">DELTA_BASE</span><span style="color: #E6DB74">}/notes_clean&quot;</span>
+<span style="color: #F8F8F2">EXTRACTIONS_DELTA</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">DELTA_BASE</span><span style="color: #E6DB74">}/extractions&quot;</span>
+<span style="color: #F8F8F2">DIAGNOSES_DELTA</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">DELTA_BASE</span><span style="color: #E6DB74">}/diagnoses&quot;</span>
+<span style="color: #F8F8F2">PROCEDURES_DELTA</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">DELTA_BASE</span><span style="color: #E6DB74">}/procedures&quot;</span>
+<span style="color: #F8F8F2">MEDICATIONS_DELTA</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">DELTA_BASE</span><span style="color: #E6DB74">}/medications&quot;</span>
+
+<span style="color: #F8F8F2">N_SAMPLE_NOTES</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">10</span>  <span style="color: #959077"># Number of notes to extract (increase for full run)</span>
+
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">ANTHROPIC_API_KEY:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;WARNING: No API key. Stage 1 will run; Stages 2-5 require ANTHROPIC_API_KEY.&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;API key configured (ends ...{</span><span style="color: #F8F8F2">ANTHROPIC_API_KEY[</span><span style="color: #FF4689">-</span><span style="color: #AE81FF">4</span><span style="color: #F8F8F2">:]</span><span style="color: #E6DB74">})&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Stage 1: PySpark Ingestion &amp; Cleaning</h2>
+<p>Load the MTSamples clinical note dataset (5,028 rows), enforce a schema, clean text artifacts,
+deduplicate on transcription content, and persist as a partitioned Delta table.</p>
+<p><strong>Why PySpark?</strong> The pipeline is designed to scale to millions of notes (e.g., full MIMIC-IV).
+PySpark gives us distributed text cleaning, schema enforcement, and native Delta Lake support.</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[4]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">IntegerType,</span> <span style="color: #F8F8F2">StringType,</span> <span style="color: #F8F8F2">StructField,</span> <span style="color: #F8F8F2">StructType</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">functions</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">F</span>
+
+<span style="color: #959077"># --- Schema Definition ---</span>
+<span style="color: #F8F8F2">MTSAMPLES_SCHEMA</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">StructType([</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">IntegerType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">False</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">StructField(</span><span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">StringType(),</span> <span style="color: #F8F8F2">nullable</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">),</span>
+<span style="color: #F8F8F2">])</span>
+
+<span style="color: #959077"># --- Read CSV with schema enforcement ---</span>
+<span style="color: #F8F8F2">df_raw</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;header&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;multiLine&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;true&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">option(</span><span style="color: #E6DB74">&quot;escape&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">schema(MTSAMPLES_SCHEMA)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">csv(RAW_DATA_PATH)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">raw_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Raw row count: {</span><span style="color: #F8F8F2">raw_count</span><span style="color: #E6DB74">:,}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>Text Cleaning</h3>
+<p>Clinical notes from MTSamples contain HTML tags, Unicode artifacts (smart quotes, em-dashes),
+and irregular whitespace. We apply three cleaning passes as PySpark UDFs:</p>
+<ol>
+<li><strong>HTML removal</strong> -- strip tags, decode entities</li>
+<li><strong>Encoding normalization</strong> -- NFKD Unicode, replace smart quotes/dashes</li>
+<li><strong>Whitespace collapse</strong> -- single spaces, trimmed edges</li>
+</ol></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[5]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">clean_text</span><span style="color: #F8F8F2">(text):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Full cleaning pipeline: HTML removal, encoding fix, whitespace normalization.&quot;&quot;&quot;</span>
+    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">is</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #66D9EF">None</span>
+    <span style="color: #959077"># Strip HTML tags and decode entities</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;&lt;[^&gt;]+&gt;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">html</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">unescape(text)</span>
+    <span style="color: #959077"># Normalize Unicode</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">unicodedata</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">normalize(</span><span style="color: #E6DB74">&quot;NFKD&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">src,</span> <span style="color: #F8F8F2">dst</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">{</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2019</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2018</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;&#39;&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201c</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u201d</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&#39;&quot;&#39;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2013</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2014</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;-&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u2026</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;...&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\u00a0</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #F8F8F2">}</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items():</span>
+        <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">text</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(src,</span> <span style="color: #F8F8F2">dst)</span>
+    <span style="color: #959077"># Collapse whitespace</span>
+    <span style="color: #F8F8F2">text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">re</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sub(</span><span style="color: #E6DB74">r&quot;\s+&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot; &quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">text)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+    <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">text</span>
+
+
+<span style="color: #F8F8F2">clean_text_udf</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">udf(clean_text,</span> <span style="color: #F8F8F2">StringType())</span>
+
+<span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;keywords&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">]:</span>
+    <span style="color: #F8F8F2">df_cleaned</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(col_name,</span> <span style="color: #F8F8F2">clean_text_udf(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)))</span>
+
+<span style="color: #959077"># Show before/after on one row</span>
+<span style="color: #F8F8F2">sample_id</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">raw_text</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_raw</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">filter(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">==</span> <span style="color: #F8F8F2">sample_id)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">clean_text_val</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">filter(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">==</span> <span style="color: #F8F8F2">sample_id)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;RAW  (first 200 chars): {</span><span style="color: #F8F8F2">(raw_text </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;&#39;</span><span style="color: #F8F8F2">)[:</span><span style="color: #AE81FF">200</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;CLEAN (first 200 chars): {</span><span style="color: #F8F8F2">(clean_text_val </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;&#39;</span><span style="color: #F8F8F2">)[:</span><span style="color: #AE81FF">200</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>Deduplication &amp; Data Quality Report</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[6]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #F8F8F2">count_before</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">df_dedup</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_cleaned</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">dropDuplicates([</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">filter(</span><span style="color: #E6DB74">&quot;transcription IS NOT NULL&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">count_after</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Before dedup: {</span><span style="color: #F8F8F2">count_before</span><span style="color: #E6DB74">:,}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;After dedup:  {</span><span style="color: #F8F8F2">count_after</span><span style="color: #E6DB74">:,}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Removed:      {</span><span style="color: #F8F8F2">count_before </span><span style="color: #FF4689">-</span><span style="color: #F8F8F2"> count_after</span><span style="color: #E6DB74">:,} rows (duplicates + nulls)&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Null rates</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Null rates:&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">col_name</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">columns:</span>
+    <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">where(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(col_name)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">isNull())</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #F8F8F2">rate</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">null_count</span> <span style="color: #FF4689">/</span> <span style="color: #F8F8F2">count_after</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">count_after</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">0</span> <span style="color: #66D9EF">else</span> <span style="color: #AE81FF">0.0</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">col_name</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">rate</span><span style="color: #E6DB74">:.1%} ({</span><span style="color: #F8F8F2">null_count</span><span style="color: #E6DB74">:,} nulls)&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Transcription length statistics</span>
+<span style="color: #F8F8F2">df_with_len</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">withColumn(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">length(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">col(</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">)))</span>
+<span style="color: #F8F8F2">stats</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_with_len</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">agg(</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">min(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;min&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;max&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mean(</span><span style="color: #E6DB74">&quot;transcription_length&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;mean&quot;</span><span style="color: #F8F8F2">),</span>
+    <span style="color: #F8F8F2">F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">expr(</span><span style="color: #E6DB74">&quot;percentile_approx(transcription_length, 0.5)&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">alias(</span><span style="color: #E6DB74">&quot;median&quot;</span><span style="color: #F8F8F2">),</span>
+<span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">first()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Transcription length: min={</span><span style="color: #F8F8F2">stats[</span><span style="color: #E6DB74">&#39;min&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}, median={</span><span style="color: #F8F8F2">stats[</span><span style="color: #E6DB74">&#39;median&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}, &quot;</span>
+      <span style="color: #E6DB74">f&quot;mean={</span><span style="color: #F8F8F2">stats[</span><span style="color: #E6DB74">&#39;mean&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">:.0f}, max={</span><span style="color: #F8F8F2">stats[</span><span style="color: #E6DB74">&#39;max&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[7]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Specialty distribution — top 15</span>
+<span style="color: #F8F8F2">specialty_pd</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">groupBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">orderBy(F</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">desc(</span><span style="color: #E6DB74">&quot;count&quot;</span><span style="color: #F8F8F2">))</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(</span><span style="color: #AE81FF">15</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">fig,</span> <span style="color: #F8F8F2">ax</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">subplots(figsize</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">(</span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">5</span><span style="color: #F8F8F2">))</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">barh(specialty_pd[</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">][::</span><span style="color: #FF4689">-</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">specialty_pd[</span><span style="color: #E6DB74">&quot;count&quot;</span><span style="color: #F8F8F2">][::</span><span style="color: #FF4689">-</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">color</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;#4A90D9&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_xlabel(</span><span style="color: #E6DB74">&quot;Number of Notes&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_title(</span><span style="color: #E6DB74">&quot;Top 15 Medical Specialties in MTSamples&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">i,</span> <span style="color: #F8F8F2">v</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">enumerate(specialty_pd[</span><span style="color: #E6DB74">&quot;count&quot;</span><span style="color: #F8F8F2">][::</span><span style="color: #FF4689">-</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">]):</span>
+    <span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">text(v</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">5</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">i,</span> <span style="color: #F8F8F2">str(v),</span> <span style="color: #F8F8F2">va</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;center&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">fontsize</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">9</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">tight_layout()</span>
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">show()</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>Write Cleaned Notes to Delta</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[8]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">df_dedup</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">repartition(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">partitionBy(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(NOTES_DELTA)</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Verify</span>
+<span style="color: #F8F8F2">df_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(NOTES_DELTA)</span>
+<span style="color: #F8F8F2">verified_count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_notes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">n_specialties</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_notes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">select(</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">distinct()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Delta table written to {</span><span style="color: #F8F8F2">NOTES_DELTA</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Verified: {</span><span style="color: #F8F8F2">verified_count</span><span style="color: #E6DB74">:,} notes across {</span><span style="color: #F8F8F2">n_specialties</span><span style="color: #E6DB74">} specialties&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Stage 2: LLM-Based Clinical Extraction</h2>
+<p>Extract diagnoses, procedures, and medications from clinical notes using <strong>Claude Haiku</strong> with
+structured <code>tool_use</code> output. Tool use guarantees valid JSON matching our Pydantic schema --
+no regex parsing, no output format errors.</p>
+<p><strong>Key design decisions:</strong>
+- <strong><code>tool_choice: {"type": "tool"}</code></strong> forces Claude to respond only via the extraction tool (guaranteed structured output)
+- <strong>Pydantic validation</strong> catches any schema violations before downstream processing
+- <strong>Evidence spans</strong> anchor every extraction to verbatim text from the note
+- <strong>Confidence levels</strong> (high/medium/low) enable downstream filtering and prioritized review</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[9]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># --- Pydantic Models ---</span>
+<span style="color: #959077"># These define the exact schema Claude must produce via tool_use.</span>
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Diagnosis</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Name of the diagnosis&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">icd10_suggestion:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Suggested ICD-10-CM code&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this diagnosis&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Procedure</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Name of the procedure performed or planned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">cpt_suggestion:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Suggested CPT code&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this procedure&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">Medication</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">name:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Medication name&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">dosage:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Dosage if mentioned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">frequency:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Frequency if mentioned&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">route:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Route of administration&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">confidence:</span> <span style="color: #F8F8F2">Literal[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence in this extraction&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">evidence_span:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Verbatim text from the note supporting this medication&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ClinicalExtraction</span><span style="color: #F8F8F2">(BaseModel):</span>
+    <span style="color: #F8F8F2">note_id:</span> <span style="color: #F8F8F2">str</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Identifier of the source clinical note&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">diagnoses:</span> <span style="color: #F8F8F2">list[Diagnosis]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">procedures:</span> <span style="color: #F8F8F2">list[Procedure]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">medications:</span> <span style="color: #F8F8F2">list[Medication]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default_factory</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">list)</span>
+    <span style="color: #F8F8F2">chief_complaint:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Chief complaint or reason for visit&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">medical_specialty:</span> <span style="color: #F8F8F2">Optional[str]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">Field(default</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">description</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Medical specialty of this note&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Schema fields: {</span><span style="color: #F8F8F2">list(ClinicalExtraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model_fields</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">keys())</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Diagnosis fields: {</span><span style="color: #F8F8F2">list(Diagnosis</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model_fields</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">keys())</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[10]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #FF4689">import</span><span style="color: #F8F8F2"> anthropic</span>
+
+<span style="color: #959077"># --- System Prompt &amp; Tool Schema ---</span>
+<span style="color: #F8F8F2">SYSTEM_PROMPT</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">You are a clinical data extraction specialist. Your task is to extract structured </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">medical information from clinical notes with high accuracy.</span>
+
+<span style="color: #E6DB74">Use the extract_clinical_data tool to return your results.</span>
+
+<span style="color: #E6DB74">Rules:</span>
+<span style="color: #E6DB74">1. Only extract information explicitly stated in the note. Do not infer diagnoses </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">that are not mentioned.</span>
+<span style="color: #E6DB74">2. For each extraction, provide the exact verbatim text span from the note as evidence.</span>
+<span style="color: #E6DB74">3. Assign confidence levels:</span>
+<span style="color: #E6DB74">   - &quot;high&quot;: explicitly stated and unambiguous</span>
+<span style="color: #E6DB74">   - &quot;medium&quot;: strongly implied or uses clinical shorthand</span>
+<span style="color: #E6DB74">   - &quot;low&quot;: mentioned in differential or uncertain context</span>
+<span style="color: #E6DB74">4. For ICD-10 codes, suggest the most specific code you can. Use the format &quot;X00.00&quot;. </span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">If unsure, provide the broader category code.</span>
+<span style="color: #E6DB74">5. If a field has no relevant information in the note, return an empty list or null.</span><span style="color: #AE81FF">\</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span>
+
+<span style="color: #F8F8F2">CONFIDENCE_ENUM</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">]</span>
+
+<span style="color: #F8F8F2">EXTRACTION_TOOL</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span>
+    <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;extract_clinical_data&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">(</span>
+        <span style="color: #E6DB74">&quot;Extract structured clinical data from a clinical note. &quot;</span>
+        <span style="color: #E6DB74">&quot;Call this tool with all diagnoses, procedures, medications, &quot;</span>
+        <span style="color: #E6DB74">&quot;chief complaint, and medical specialty found in the note.&quot;</span>
+    <span style="color: #F8F8F2">),</span>
+    <span style="color: #E6DB74">&quot;input_schema&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+        <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+            <span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;icd10_suggestion&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;cpt_suggestion&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;array&quot;</span><span style="color: #F8F8F2">,</span>
+                <span style="color: #E6DB74">&quot;items&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                    <span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;object&quot;</span><span style="color: #F8F8F2">,</span>
+                    <span style="color: #E6DB74">&quot;properties&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span>
+                        <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                        <span style="color: #E6DB74">&quot;dosage&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+                        <span style="color: #E6DB74">&quot;frequency&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+                        <span style="color: #E6DB74">&quot;route&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+                        <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;enum&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">CONFIDENCE_ENUM},</span>
+                        <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">},</span>
+                    <span style="color: #F8F8F2">},</span>
+                    <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">],</span>
+                <span style="color: #F8F8F2">},</span>
+            <span style="color: #F8F8F2">},</span>
+            <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+            <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;string&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;null&quot;</span><span style="color: #F8F8F2">]},</span>
+        <span style="color: #F8F8F2">},</span>
+        <span style="color: #E6DB74">&quot;required&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">],</span>
+    <span style="color: #F8F8F2">},</span>
+<span style="color: #F8F8F2">}</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Tool schema: {</span><span style="color: #F8F8F2">EXTRACTION_TOOL[</span><span style="color: #E6DB74">&#39;name&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">} with {</span><span style="color: #F8F8F2">len(EXTRACTION_TOOL[</span><span style="color: #E6DB74">&#39;input_schema&#39;</span><span style="color: #F8F8F2">][</span><span style="color: #E6DB74">&#39;properties&#39;</span><span style="color: #F8F8F2">])</span><span style="color: #E6DB74">} top-level fields&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[11]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #F8F8F2">logger</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">logging</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">getLogger(</span><span style="color: #E6DB74">&quot;clinical_extractor&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">DEFAULT_MODEL</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;claude-haiku-4-5-20251001&quot;</span>
+<span style="color: #F8F8F2">MAX_TOKENS</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">4096</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ExtractionError</span><span style="color: #F8F8F2">(</span><span style="color: #A6E22E">Exception</span><span style="color: #F8F8F2">):</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Raised when extraction fails after retries.&quot;&quot;&quot;</span>
+
+
+<span style="color: #66D9EF">class</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">ClinicalExtractor</span><span style="color: #F8F8F2">:</span>
+<span style="color: #F8F8F2">    </span><span style="color: #E6DB74">&quot;&quot;&quot;Extracts structured clinical data from a single note using Claude tool_use.&quot;&quot;&quot;</span>
+
+    <span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">__init__</span><span style="color: #F8F8F2">(self,</span> <span style="color: #F8F8F2">api_key,</span> <span style="color: #F8F8F2">model</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">DEFAULT_MODEL,</span> <span style="color: #F8F8F2">max_retries</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">):</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">client</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">Anthropic(api_key</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">api_key)</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">model</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">max_retries</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_input_tokens</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0</span>
+        <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_output_tokens</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0</span>
+
+    <span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">extract</span><span style="color: #F8F8F2">(self,</span> <span style="color: #F8F8F2">note_id,</span> <span style="color: #F8F8F2">transcription):</span>
+<span style="color: #F8F8F2">        </span><span style="color: #E6DB74">&quot;&quot;&quot;Extract clinical data from a single note. Returns a validated ClinicalExtraction.&quot;&quot;&quot;</span>
+        <span style="color: #F8F8F2">messages</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[{</span><span style="color: #E6DB74">&quot;role&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;user&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;content&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;Extract structured clinical data from this note:</span><span style="color: #AE81FF">\n\n</span><span style="color: #E6DB74">{</span><span style="color: #F8F8F2">transcription</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">}]</span>
+
+        <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">attempt</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">range(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span> <span style="color: #FF4689">+</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">):</span>
+            <span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>
+                <span style="color: #F8F8F2">response</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">client</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">messages</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">create(</span>
+                    <span style="color: #F8F8F2">model</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model,</span>
+                    <span style="color: #F8F8F2">max_tokens</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">MAX_TOKENS,</span>
+                    <span style="color: #F8F8F2">system</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">SYSTEM_PROMPT,</span>
+                    <span style="color: #F8F8F2">messages</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">messages,</span>
+                    <span style="color: #F8F8F2">tools</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">[EXTRACTION_TOOL],</span>
+                    <span style="color: #F8F8F2">tool_choice</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;tool&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;extract_clinical_data&quot;</span><span style="color: #F8F8F2">},</span>
+                <span style="color: #F8F8F2">)</span>
+                <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_input_tokens</span> <span style="color: #FF4689">+=</span> <span style="color: #F8F8F2">response</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">usage</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">input_tokens</span>
+                <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_output_tokens</span> <span style="color: #FF4689">+=</span> <span style="color: #F8F8F2">response</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">usage</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">output_tokens</span>
+
+                <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">block</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">response</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">content:</span>
+                    <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">block</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">type</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;tool_use&quot;</span><span style="color: #F8F8F2">:</span>
+                        <span style="color: #F8F8F2">data</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">block</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">input</span>
+                        <span style="color: #F8F8F2">data[</span><span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(note_id)</span>
+                        <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">ClinicalExtraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model_validate(data)</span>
+
+                <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">&quot;No tool_use block in response&quot;</span><span style="color: #F8F8F2">)</span>
+
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">RateLimitError:</span>
+                <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #A6E22E">Exception</span><span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;Rate limit exceeded&quot;</span><span style="color: #F8F8F2">)</span>
+                <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">2</span> <span style="color: #FF4689">**</span> <span style="color: #F8F8F2">attempt)</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">anthropic</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">APIStatusError</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+                <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">e</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">status_code</span> <span style="color: #FF4689">&gt;=</span> <span style="color: #AE81FF">500</span><span style="color: #F8F8F2">:</span>
+                    <span style="color: #F8F8F2">last_error</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">e</span>
+                    <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">2</span> <span style="color: #FF4689">**</span> <span style="color: #F8F8F2">attempt)</span>
+                <span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+                    <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">f&quot;API error for note {</span><span style="color: #F8F8F2">note_id</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">from</span><span style="color: #F8F8F2"> e</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #F8F8F2">ExtractionError:</span>
+                <span style="color: #66D9EF">raise</span>
+            <span style="color: #66D9EF">except</span> <span style="color: #A6E22E">Exception</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+                <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">f&quot;Unexpected error for note {</span><span style="color: #F8F8F2">note_id</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">from</span><span style="color: #F8F8F2"> e</span>
+
+        <span style="color: #66D9EF">raise</span> <span style="color: #F8F8F2">ExtractionError(</span><span style="color: #E6DB74">f&quot;Failed after {</span><span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">max_retries</span><span style="color: #E6DB74">} attempts: {</span><span style="color: #F8F8F2">last_error</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+
+    <span style="color: #A6E22E">@property</span>
+    <span style="color: #66D9EF">def</span><span style="color: #F8F8F2"> </span><span style="color: #A6E22E">estimated_cost</span><span style="color: #F8F8F2">(self):</span>
+<span style="color: #F8F8F2">        </span><span style="color: #E6DB74">&quot;&quot;&quot;Estimate USD cost based on Haiku pricing ($0.25/1M input, $1.25/1M output).&quot;&quot;&quot;</span>
+        <span style="color: #66D9EF">return</span> <span style="color: #F8F8F2">(self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_input_tokens</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">0.25</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">self</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_output_tokens</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">1.25</span><span style="color: #F8F8F2">)</span> <span style="color: #FF4689">/</span> <span style="color: #AE81FF">1_000_000</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;ClinicalExtractor ready&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>Run Extraction on Sample Notes</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[12]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #66D9EF">assert</span> <span style="color: #F8F8F2">ANTHROPIC_API_KEY,</span> <span style="color: #E6DB74">&quot;Set the api_key widget (Databricks) or ANTHROPIC_API_KEY env var before running.&quot;</span>
+
+<span style="color: #F8F8F2">df_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(NOTES_DELTA)</span>
+<span style="color: #F8F8F2">sample_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">df_notes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">orderBy(</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">limit(N_SAMPLE_NOTES)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+
+<span style="color: #F8F8F2">extractor</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">ClinicalExtractor(api_key</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">ANTHROPIC_API_KEY)</span>
+<span style="color: #F8F8F2">extractions</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>   <span style="color: #959077"># full ClinicalExtraction objects</span>
+<span style="color: #F8F8F2">results</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>       <span style="color: #959077"># summary rows for display</span>
+<span style="color: #F8F8F2">errors</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">idx,</span> <span style="color: #F8F8F2">row</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">sample_notes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">iterrows():</span>
+    <span style="color: #F8F8F2">label</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">idx</span><span style="color: #FF4689">+</span><span style="color: #AE81FF">1</span><span style="color: #E6DB74">}/{</span><span style="color: #F8F8F2">N_SAMPLE_NOTES</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&#39;sample_name&#39;</span><span style="color: #F8F8F2">] </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;Untitled&#39;}&quot;</span>
+    <span style="color: #66D9EF">try</span><span style="color: #F8F8F2">:</span>
+        <span style="color: #F8F8F2">ext</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extract(str(row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">]),</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span>
+        <span style="color: #F8F8F2">extractions</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append((row,</span> <span style="color: #F8F8F2">ext))</span>
+        <span style="color: #F8F8F2">results</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+            <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">],</span>
+            <span style="color: #E6DB74">&quot;specialty&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">],</span>
+            <span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;sample_name&quot;</span><span style="color: #F8F8F2">],</span>
+            <span style="color: #E6DB74">&quot;n_dx&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses),</span>
+            <span style="color: #E6DB74">&quot;n_px&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures),</span>
+            <span style="color: #E6DB74">&quot;n_rx&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications),</span>
+            <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">chief_complaint,</span>
+        <span style="color: #F8F8F2">})</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">label</span><span style="color: #E6DB74">} -&gt; {</span><span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses)</span><span style="color: #E6DB74">} dx, {</span><span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures)</span><span style="color: #E6DB74">} px, {</span><span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications)</span><span style="color: #E6DB74">} rx&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #66D9EF">except</span> <span style="color: #A6E22E">Exception</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">e:</span>
+        <span style="color: #F8F8F2">errors</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span><span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #E6DB74">&quot;error&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(e)})</span>
+        <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">label</span><span style="color: #E6DB74">} -&gt; ERROR: {</span><span style="color: #F8F8F2">e</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">time</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sleep(</span><span style="color: #AE81FF">0.3</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">results_df</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(results)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">Extracted {</span><span style="color: #F8F8F2">len(results)</span><span style="color: #E6DB74">}/{</span><span style="color: #F8F8F2">N_SAMPLE_NOTES</span><span style="color: #E6DB74">} notes | &quot;</span>
+      <span style="color: #E6DB74">f&quot;Tokens: {</span><span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_input_tokens</span><span style="color: #E6DB74">:,} in + {</span><span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">total_output_tokens</span><span style="color: #E6DB74">:,} out | &quot;</span>
+      <span style="color: #E6DB74">f&quot;Cost: ${</span><span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">estimated_cost</span><span style="color: #E6DB74">:.4f}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">results_df</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[13]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Show one full extraction as JSON for inspection</span>
+<span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">extractions:</span>
+    <span style="color: #F8F8F2">sample_row,</span> <span style="color: #F8F8F2">sample_ext</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">extractions[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;--- Full extraction for note {</span><span style="color: #F8F8F2">sample_row[</span><span style="color: #E6DB74">&#39;id&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">sample_row[</span><span style="color: #E6DB74">&#39;sample_name&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">} ---</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(sample_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">model_dump_json(indent</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">2</span><span style="color: #F8F8F2">))</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Stage 3: ICD-10 Code Validation</h2>
+<p>Cross-reference Claude's ICD-10 suggestions against the <strong>CMS 2025 ICD-10-CM code table</strong> (74,260 codes).</p>
+<p>Two-tier matching strategy:
+1. <strong>Exact match</strong> -- normalize the code (strip dots, uppercase) and look up directly
+2. <strong>Fuzzy match</strong> -- use <code>rapidfuzz.fuzz.WRatio</code> on the diagnosis name against all CMS code descriptions (threshold: 80%)</p>
+<p>Codes that match neither tier are flagged for manual review in the HITL dashboard.</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[14]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Download and parse CMS ICD-10-CM 2025 code table</span>
+<span style="color: #F8F8F2">icd10_url</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;https://www.cms.gov/files/zip/2025-code-descriptions-tabular-order.zip&quot;</span>
+<span style="color: #F8F8F2">tmp_dir</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">tempfile</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mkdtemp()</span>
+<span style="color: #F8F8F2">zip_path</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">path</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">join(tmp_dir,</span> <span style="color: #E6DB74">&quot;icd10cm_2025.zip&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;Downloading CMS ICD-10-CM 2025 code table...&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">urllib</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">request</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">urlretrieve(icd10_url,</span> <span style="color: #F8F8F2">zip_path)</span>
+
+<span style="color: #66D9EF">with</span> <span style="color: #F8F8F2">zipfile</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">ZipFile(zip_path,</span> <span style="color: #E6DB74">&quot;r&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">zf:</span>
+    <span style="color: #F8F8F2">txt_files</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[f</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">f</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">zf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">namelist()</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">f</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">endswith(</span><span style="color: #E6DB74">&quot;.txt&quot;</span><span style="color: #F8F8F2">)]</span>
+    <span style="color: #F8F8F2">zf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extractall(tmp_dir)</span>
+
+<span style="color: #F8F8F2">txt_path</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">os</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">path</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">join(tmp_dir,</span> <span style="color: #F8F8F2">txt_files[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">])</span>
+
+<span style="color: #959077"># Parse fixed-width format: first 7 chars = code, rest = description</span>
+<span style="color: #F8F8F2">icd10_codes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{}</span>
+<span style="color: #66D9EF">with</span> <span style="color: #F8F8F2">open(txt_path,</span> <span style="color: #F8F8F2">encoding</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;utf-8&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">as</span> <span style="color: #F8F8F2">f:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">line</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">f:</span>
+        <span style="color: #F8F8F2">line</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">rstrip(</span><span style="color: #E6DB74">&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">len(line)</span> <span style="color: #FF4689">&lt;</span> <span style="color: #AE81FF">8</span><span style="color: #F8F8F2">:</span>
+            <span style="color: #66D9EF">continue</span>
+        <span style="color: #F8F8F2">code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line[:</span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(</span><span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #F8F8F2">description</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">line[</span><span style="color: #AE81FF">7</span><span style="color: #F8F8F2">:]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">code</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">description:</span>
+            <span style="color: #F8F8F2">icd10_codes[code]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">description</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Loaded {</span><span style="color: #F8F8F2">len(icd10_codes)</span><span style="color: #E6DB74">:,} ICD-10-CM codes&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #959077"># Show examples</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">code,</span> <span style="color: #F8F8F2">desc</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">list(icd10_codes</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items())[:</span><span style="color: #AE81FF">3</span><span style="color: #F8F8F2">]:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">code</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">desc</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[15]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #FF4689">from</span><span style="color: #F8F8F2"> rapidfuzz </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">fuzz,</span> <span style="color: #F8F8F2">process</span>
+
+<span style="color: #F8F8F2">PARTIAL_MATCH_THRESHOLD</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">80</span>
+
+<span style="color: #F8F8F2">match_results</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">row,</span> <span style="color: #F8F8F2">extraction</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extractions:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">dx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses:</span>
+        <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion</span> <span style="color: #FF4689">or</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">strip()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">replace(</span><span style="color: #E6DB74">&quot;.&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+        <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;none&quot;</span>
+        <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #F8F8F2">matched_desc</span> <span style="color: #FF4689">=</span> <span style="color: #66D9EF">None</span>
+        <span style="color: #F8F8F2">score</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0.0</span>
+
+        <span style="color: #959077"># Tier 1: Exact code match</span>
+        <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">and</span> <span style="color: #F8F8F2">suggested</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">icd10_codes:</span>
+            <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;exact&quot;</span>
+            <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">suggested</span>
+            <span style="color: #F8F8F2">matched_desc</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">icd10_codes[suggested]</span>
+            <span style="color: #F8F8F2">score</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">100.0</span>
+        <span style="color: #959077"># Tier 2: Fuzzy description match</span>
+        <span style="color: #66D9EF">elif</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name:</span>
+            <span style="color: #F8F8F2">result</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">process</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">extractOne(</span>
+                <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span> <span style="color: #F8F8F2">icd10_codes,</span>
+                <span style="color: #F8F8F2">scorer</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">fuzz</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">WRatio,</span>
+                <span style="color: #F8F8F2">score_cutoff</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">PARTIAL_MATCH_THRESHOLD,</span>
+            <span style="color: #F8F8F2">)</span>
+            <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">result</span> <span style="color: #FF4689">is</span> <span style="color: #FF4689">not</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">:</span>
+                <span style="color: #F8F8F2">matched_desc,</span> <span style="color: #F8F8F2">score,</span> <span style="color: #F8F8F2">matched_code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">result</span>
+                <span style="color: #F8F8F2">match_type</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot;partial&quot;</span>
+
+        <span style="color: #F8F8F2">match_results</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+            <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">extraction</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">note_id,</span>
+            <span style="color: #E6DB74">&quot;diagnosis&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+            <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence,</span>
+            <span style="color: #E6DB74">&quot;suggested_code&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion,</span>
+            <span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">match_type,</span>
+            <span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">matched_code,</span>
+            <span style="color: #E6DB74">&quot;matched_description&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">matched_desc,</span>
+            <span style="color: #E6DB74">&quot;score&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">round(score,</span> <span style="color: #AE81FF">1</span><span style="color: #F8F8F2">),</span>
+        <span style="color: #F8F8F2">})</span>
+
+<span style="color: #F8F8F2">match_df</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(match_results)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Validated {</span><span style="color: #F8F8F2">len(match_df)</span><span style="color: #E6DB74">} diagnosis codes&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">match_df</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Stage 4: Persist Results to Delta Tables</h2>
+<p>Write all extraction results to structured Delta tables following a <strong>star schema</strong>:
+- <code>extractions</code> (fact) -- one row per note, links to entity dimension tables
+- <code>diagnoses</code>, <code>procedures</code>, <code>medications</code> (dimensions) -- one row per extracted entity</p>
+<p>This enables SQL analytics in Databricks, version-controlled data with Delta's time travel,
+and serves as the source of truth for the HITL review dashboard.</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[16]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Build DataFrames from extraction results</span>
+<span style="color: #FF4689">from</span><span style="color: #F8F8F2"> pyspark.sql.types </span><span style="color: #FF4689">import</span> <span style="color: #F8F8F2">(</span>
+    <span style="color: #F8F8F2">ArrayType,</span> <span style="color: #F8F8F2">FloatType,</span> <span style="color: #F8F8F2">IntegerType,</span> <span style="color: #F8F8F2">StringType,</span> <span style="color: #F8F8F2">StructField,</span> <span style="color: #F8F8F2">StructType,</span> <span style="color: #F8F8F2">TimestampType,</span>
+<span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">now</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">datetime</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">now(timezone</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">utc)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">isoformat()</span>
+
+<span style="color: #959077"># --- Extractions fact table ---</span>
+<span style="color: #F8F8F2">extraction_rows</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+<span style="color: #F8F8F2">dx_rows</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+<span style="color: #F8F8F2">px_rows</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+<span style="color: #F8F8F2">rx_rows</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+
+<span style="color: #959077"># Build a lookup from match_df for ICD-10 validation results</span>
+<span style="color: #F8F8F2">match_lookup</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{}</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">_,</span> <span style="color: #F8F8F2">m</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">match_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">iterrows():</span>
+    <span style="color: #F8F8F2">key</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(str(m[</span><span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">]),</span> <span style="color: #F8F8F2">m[</span><span style="color: #E6DB74">&quot;diagnosis&quot;</span><span style="color: #F8F8F2">])</span>
+    <span style="color: #F8F8F2">match_lookup[key]</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">m</span>
+
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">row,</span> <span style="color: #F8F8F2">ext</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extractions:</span>
+    <span style="color: #F8F8F2">ext_id</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(uuid</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">uuid4())</span>
+    <span style="color: #F8F8F2">note_id</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">str(row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">])</span>
+
+    <span style="color: #F8F8F2">extraction_rows</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+        <span style="color: #E6DB74">&quot;extraction_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext_id,</span>
+        <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">note_id,</span>
+        <span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medical_specialty</span> <span style="color: #FF4689">or</span> <span style="color: #F8F8F2">row[</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">],</span>
+        <span style="color: #E6DB74">&quot;chief_complaint&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">chief_complaint,</span>
+        <span style="color: #E6DB74">&quot;n_diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses),</span>
+        <span style="color: #E6DB74">&quot;n_procedures&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures),</span>
+        <span style="color: #E6DB74">&quot;n_medications&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">len(ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications),</span>
+        <span style="color: #E6DB74">&quot;model&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">DEFAULT_MODEL,</span>
+        <span style="color: #E6DB74">&quot;status&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;pending&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #E6DB74">&quot;extracted_at&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">now,</span>
+    <span style="color: #F8F8F2">})</span>
+
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">dx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses:</span>
+        <span style="color: #F8F8F2">m</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">match_lookup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get((note_id,</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name),</span> <span style="color: #F8F8F2">{})</span>
+        <span style="color: #F8F8F2">dx_rows</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+            <span style="color: #E6DB74">&quot;diagnosis_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(uuid</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">uuid4()),</span>
+            <span style="color: #E6DB74">&quot;extraction_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext_id,</span>
+            <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">note_id,</span>
+            <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+            <span style="color: #E6DB74">&quot;icd10_suggested&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion,</span>
+            <span style="color: #E6DB74">&quot;icd10_matched&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">m</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">isinstance(m,</span> <span style="color: #F8F8F2">dict)</span> <span style="color: #66D9EF">else</span> <span style="color: #F8F8F2">getattr(m,</span> <span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #66D9EF">None</span><span style="color: #F8F8F2">),</span>
+            <span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">m</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;none&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">isinstance(m,</span> <span style="color: #F8F8F2">dict)</span> <span style="color: #66D9EF">else</span> <span style="color: #F8F8F2">getattr(m,</span> <span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;none&quot;</span><span style="color: #F8F8F2">),</span>
+            <span style="color: #E6DB74">&quot;match_score&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">float(m</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;score&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">0</span><span style="color: #F8F8F2">))</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">isinstance(m,</span> <span style="color: #F8F8F2">dict)</span> <span style="color: #66D9EF">else</span> <span style="color: #F8F8F2">float(getattr(m,</span> <span style="color: #E6DB74">&quot;score&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">0</span><span style="color: #F8F8F2">)),</span>
+            <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence,</span>
+            <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span,</span>
+        <span style="color: #F8F8F2">})</span>
+
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">px</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures:</span>
+        <span style="color: #F8F8F2">px_rows</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+            <span style="color: #E6DB74">&quot;procedure_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(uuid</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">uuid4()),</span>
+            <span style="color: #E6DB74">&quot;extraction_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext_id,</span>
+            <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">note_id,</span>
+            <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+            <span style="color: #E6DB74">&quot;cpt_suggestion&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">cpt_suggestion,</span>
+            <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence,</span>
+            <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span,</span>
+        <span style="color: #F8F8F2">})</span>
+
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">rx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications:</span>
+        <span style="color: #F8F8F2">rx_rows</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span>
+            <span style="color: #E6DB74">&quot;medication_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">str(uuid</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">uuid4()),</span>
+            <span style="color: #E6DB74">&quot;extraction_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">ext_id,</span>
+            <span style="color: #E6DB74">&quot;note_id&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">note_id,</span>
+            <span style="color: #E6DB74">&quot;name&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name,</span>
+            <span style="color: #E6DB74">&quot;dosage&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">dosage,</span>
+            <span style="color: #E6DB74">&quot;frequency&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">frequency,</span>
+            <span style="color: #E6DB74">&quot;route&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">route,</span>
+            <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence,</span>
+            <span style="color: #E6DB74">&quot;evidence_span&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span,</span>
+        <span style="color: #F8F8F2">})</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Prepared: {</span><span style="color: #F8F8F2">len(extraction_rows)</span><span style="color: #E6DB74">} extractions, &quot;</span>
+      <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">len(dx_rows)</span><span style="color: #E6DB74">} diagnoses, {</span><span style="color: #F8F8F2">len(px_rows)</span><span style="color: #E6DB74">} procedures, {</span><span style="color: #F8F8F2">len(rx_rows)</span><span style="color: #E6DB74">} medications&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[17]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Write to Delta tables</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createDataFrame(extraction_rows)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(EXTRACTIONS_DELTA)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createDataFrame(dx_rows)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(DIAGNOSES_DELTA)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createDataFrame(px_rows)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(PROCEDURES_DELTA)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createDataFrame(rx_rows)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">write</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">mode(</span><span style="color: #E6DB74">&quot;overwrite&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">save(MEDICATIONS_DELTA)</span>
+
+<span style="color: #959077"># Verify all tables</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">name,</span> <span style="color: #F8F8F2">path</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">[</span>
+    <span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;extractions&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">EXTRACTIONS_DELTA),</span>
+    <span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">DIAGNOSES_DELTA),</span>
+    <span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">PROCEDURES_DELTA),</span>
+    <span style="color: #F8F8F2">(</span><span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">MEDICATIONS_DELTA),</span>
+<span style="color: #F8F8F2">]:</span>
+    <span style="color: #F8F8F2">count</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(path)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">count()</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">name</span><span style="color: #E6DB74">}: {</span><span style="color: #F8F8F2">count</span><span style="color: #E6DB74">:,} rows -&gt; {</span><span style="color: #F8F8F2">path</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[18]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Register as temporary SQL views for cross-table queries</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(NOTES_DELTA)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createOrReplaceTempView(</span><span style="color: #E6DB74">&quot;notes&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(EXTRACTIONS_DELTA)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createOrReplaceTempView(</span><span style="color: #E6DB74">&quot;extractions&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(DIAGNOSES_DELTA)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createOrReplaceTempView(</span><span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(PROCEDURES_DELTA)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createOrReplaceTempView(</span><span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">read</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">format(</span><span style="color: #E6DB74">&quot;delta&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">load(MEDICATIONS_DELTA)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">createOrReplaceTempView(</span><span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #959077"># Verify with a join query</span>
+<span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sql(</span><span style="color: #E6DB74">&quot;&quot;&quot;</span>
+<span style="color: #E6DB74">    SELECT e.note_id, e.medical_specialty, e.n_diagnoses, e.n_procedures, e.n_medications,</span>
+<span style="color: #E6DB74">           e.chief_complaint, e.status</span>
+<span style="color: #E6DB74">    FROM extractions e</span>
+<span style="color: #E6DB74">    ORDER BY e.n_diagnoses DESC</span>
+<span style="color: #E6DB74">    LIMIT 5</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Stage 5: Results &amp; Visualization</h2>
+<p>Query the Delta tables to produce quality metrics and visual summaries of the extraction pipeline.</p></div>
+<div class="cell cell-md"><h3>5a. Pipeline KPIs</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[19]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #F8F8F2">total_notes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(results)</span>
+<span style="color: #F8F8F2">total_dx</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_dx&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+<span style="color: #F8F8F2">total_px</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_px&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+<span style="color: #F8F8F2">total_rx</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">sum(r[</span><span style="color: #E6DB74">&quot;n_rx&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">r</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">results)</span>
+
+<span style="color: #959077"># ICD-10 match rates</span>
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">match_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">empty:</span>
+    <span style="color: #F8F8F2">n_codes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">len(match_df)</span>
+    <span style="color: #F8F8F2">n_exact</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;exact&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sum()</span>
+    <span style="color: #F8F8F2">n_partial</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;partial&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sum()</span>
+    <span style="color: #F8F8F2">n_none</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">(match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span> <span style="color: #FF4689">==</span> <span style="color: #E6DB74">&quot;none&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sum()</span>
+<span style="color: #66D9EF">else</span><span style="color: #F8F8F2">:</span>
+    <span style="color: #F8F8F2">n_codes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">n_exact</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">n_partial</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">n_none</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0</span>
+
+<span style="color: #F8F8F2">kpi_data</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span>
+    <span style="color: #E6DB74">&quot;Notes processed&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">total_notes,</span>
+    <span style="color: #E6DB74">&quot;Total diagnoses&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">total_dx,</span>
+    <span style="color: #E6DB74">&quot;Total procedures&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">total_px,</span>
+    <span style="color: #E6DB74">&quot;Total medications&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">total_rx,</span>
+    <span style="color: #E6DB74">&quot;Avg entities/note&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">(total_dx </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> total_px </span><span style="color: #FF4689">+</span><span style="color: #F8F8F2"> total_rx) </span><span style="color: #FF4689">/</span><span style="color: #F8F8F2"> max(total_notes, </span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">)</span><span style="color: #E6DB74">:.1f}&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;ICD-10 exact match&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">n_exact</span><span style="color: #E6DB74">}/{</span><span style="color: #F8F8F2">n_codes</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">n_exact</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">max(n_codes,</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">)</span><span style="color: #E6DB74">:.0%})&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;ICD-10 partial match&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">n_partial</span><span style="color: #E6DB74">}/{</span><span style="color: #F8F8F2">n_codes</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">n_partial</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">max(n_codes,</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">)</span><span style="color: #E6DB74">:.0%})&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;ICD-10 no match&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;{</span><span style="color: #F8F8F2">n_none</span><span style="color: #E6DB74">}/{</span><span style="color: #F8F8F2">n_codes</span><span style="color: #E6DB74">} ({</span><span style="color: #F8F8F2">n_none</span><span style="color: #FF4689">/</span><span style="color: #F8F8F2">max(n_codes,</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">)</span><span style="color: #E6DB74">:.0%})&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;API cost&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">f&quot;${</span><span style="color: #F8F8F2">extractor</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">estimated_cost</span><span style="color: #E6DB74">:.4f}&quot;</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #E6DB74">&quot;Model&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">DEFAULT_MODEL,</span>
+<span style="color: #F8F8F2">}</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">55</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;  PIPELINE QUALITY SUMMARY&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">55</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">k,</span> <span style="color: #F8F8F2">v</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">kpi_data</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">items():</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  {</span><span style="color: #F8F8F2">k</span><span style="color: #E6DB74">:&lt;25} {</span><span style="color: #F8F8F2">v</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;=&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">55</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>5b. Entity Distribution by Specialty</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[20]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Entity counts by specialty from Delta</span>
+<span style="color: #F8F8F2">entity_by_spec</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sql(</span><span style="color: #E6DB74">&quot;&quot;&quot;</span>
+<span style="color: #E6DB74">    SELECT e.medical_specialty,</span>
+<span style="color: #E6DB74">           SUM(e.n_diagnoses) as diagnoses,</span>
+<span style="color: #E6DB74">           SUM(e.n_procedures) as procedures,</span>
+<span style="color: #E6DB74">           SUM(e.n_medications) as medications</span>
+<span style="color: #E6DB74">    FROM extractions e</span>
+<span style="color: #E6DB74">    GROUP BY e.medical_specialty</span>
+<span style="color: #E6DB74">    ORDER BY diagnoses + procedures + medications DESC</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #F8F8F2">)</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+
+<span style="color: #F8F8F2">fig,</span> <span style="color: #F8F8F2">ax</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">subplots(figsize</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">(</span><span style="color: #AE81FF">10</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">5</span><span style="color: #F8F8F2">))</span>
+<span style="color: #F8F8F2">x</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">range(len(entity_by_spec))</span>
+<span style="color: #F8F8F2">w</span> <span style="color: #FF4689">=</span> <span style="color: #AE81FF">0.25</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">bar([i</span> <span style="color: #FF4689">-</span> <span style="color: #F8F8F2">w</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">i</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">x],</span> <span style="color: #F8F8F2">entity_by_spec[</span><span style="color: #E6DB74">&quot;diagnoses&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">w,</span> <span style="color: #F8F8F2">label</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Diagnoses&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">color</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;#E74C3C&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">bar(x,</span> <span style="color: #F8F8F2">entity_by_spec[</span><span style="color: #E6DB74">&quot;procedures&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">w,</span> <span style="color: #F8F8F2">label</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Procedures&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">color</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;#3498DB&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">bar([i</span> <span style="color: #FF4689">+</span> <span style="color: #F8F8F2">w</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">i</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">x],</span> <span style="color: #F8F8F2">entity_by_spec[</span><span style="color: #E6DB74">&quot;medications&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">w,</span> <span style="color: #F8F8F2">label</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Medications&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">color</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;#2ECC71&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_xticks(x)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_xticklabels(entity_by_spec[</span><span style="color: #E6DB74">&quot;medical_specialty&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">rotation</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">45</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">ha</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;right&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">fontsize</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">9</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_ylabel(</span><span style="color: #E6DB74">&quot;Count&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_title(</span><span style="color: #E6DB74">&quot;Extracted Entities by Medical Specialty&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">legend()</span>
+<span style="color: #F8F8F2">ax</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">yaxis</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_major_locator(mticker</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">MaxNLocator(integer</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">))</span>
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">tight_layout()</span>
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">show()</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>5c. Confidence Distribution &amp; ICD-10 Match Rates</h3></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[21]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #F8F8F2">fig,</span> <span style="color: #F8F8F2">axes</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">subplots(</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">2</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">figsize</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">(</span><span style="color: #AE81FF">12</span><span style="color: #F8F8F2">,</span> <span style="color: #AE81FF">4.5</span><span style="color: #F8F8F2">))</span>
+
+<span style="color: #959077"># Left: Confidence distribution across all entity types</span>
+<span style="color: #F8F8F2">all_conf</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">[]</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">_,</span> <span style="color: #F8F8F2">ext</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">extractions:</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">dx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses:</span>
+        <span style="color: #F8F8F2">all_conf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Diagnosis&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence})</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">px</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures:</span>
+        <span style="color: #F8F8F2">all_conf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Procedure&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence})</span>
+    <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">rx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications:</span>
+        <span style="color: #F8F8F2">all_conf</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">append({</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;Medication&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence})</span>
+
+<span style="color: #F8F8F2">conf_df</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pd</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">DataFrame(all_conf)</span>
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">conf_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">empty:</span>
+    <span style="color: #F8F8F2">pivot</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">conf_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">groupby([</span><span style="color: #E6DB74">&quot;type&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;confidence&quot;</span><span style="color: #F8F8F2">])</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">size()</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">unstack(fill_value</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">pivot</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">pivot</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">reindex(columns</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">[</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">fill_value</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">pivot</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">plot</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">bar(ax</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">],</span> <span style="color: #F8F8F2">color</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;high&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#2ECC71&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;medium&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#F39C12&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;low&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#E74C3C&quot;</span><span style="color: #F8F8F2">})</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_title(</span><span style="color: #E6DB74">&quot;Confidence Distribution by Entity Type&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_xlabel(</span><span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_ylabel(</span><span style="color: #E6DB74">&quot;Count&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">legend(title</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;Confidence&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">tick_params(axis</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;x&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">rotation</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">0</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">yaxis</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_major_locator(mticker</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">MaxNLocator(integer</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">True</span><span style="color: #F8F8F2">))</span>
+
+<span style="color: #959077"># Right: ICD-10 match type breakdown</span>
+<span style="color: #66D9EF">if</span> <span style="color: #FF4689">not</span> <span style="color: #F8F8F2">match_df</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">empty:</span>
+    <span style="color: #F8F8F2">match_counts</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">match_df[</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">value_counts()</span>
+    <span style="color: #F8F8F2">colors</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">{</span><span style="color: #E6DB74">&quot;exact&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#2ECC71&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;partial&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#F39C12&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;none&quot;</span><span style="color: #F8F8F2">:</span> <span style="color: #E6DB74">&quot;#E74C3C&quot;</span><span style="color: #F8F8F2">}</span>
+    <span style="color: #F8F8F2">match_counts</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">plot</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">pie(</span>
+        <span style="color: #F8F8F2">ax</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">],</span>
+        <span style="color: #F8F8F2">autopct</span><span style="color: #FF4689">=</span><span style="color: #E6DB74">&quot;%1.0f%%&quot;</span><span style="color: #F8F8F2">,</span>
+        <span style="color: #F8F8F2">colors</span><span style="color: #FF4689">=</span><span style="color: #F8F8F2">[colors</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(t,</span> <span style="color: #E6DB74">&quot;#95a5a6&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">t</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">match_counts</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">index],</span>
+        <span style="color: #F8F8F2">startangle</span><span style="color: #FF4689">=</span><span style="color: #AE81FF">90</span><span style="color: #F8F8F2">,</span>
+    <span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_ylabel(</span><span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">axes[</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">set_title(</span><span style="color: #E6DB74">&quot;ICD-10 Code Match Types&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">tight_layout()</span>
+<span style="color: #F8F8F2">plt</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">show()</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>5d. Sample Deep-Dive: One Note End-to-End</h3>
+<p>Select one note and show the full pipeline output: raw text, extracted entities with evidence spans, and ICD-10 validation results.</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[22]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Pick the note with the most diagnoses for the richest example</span>
+<span style="color: #F8F8F2">best_idx</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">max(range(len(extractions)),</span> <span style="color: #F8F8F2">key</span><span style="color: #FF4689">=</span><span style="color: #66D9EF">lambda</span> <span style="color: #F8F8F2">i:</span> <span style="color: #F8F8F2">len(extractions[i][</span><span style="color: #AE81FF">1</span><span style="color: #F8F8F2">]</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses))</span>
+<span style="color: #F8F8F2">demo_row,</span> <span style="color: #F8F8F2">demo_ext</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">extractions[best_idx]</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Note ID: {</span><span style="color: #F8F8F2">demo_row[</span><span style="color: #E6DB74">&#39;id&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}  |  Specialty: {</span><span style="color: #F8F8F2">demo_row[</span><span style="color: #E6DB74">&#39;medical_specialty&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}  |  {</span><span style="color: #F8F8F2">demo_row[</span><span style="color: #E6DB74">&#39;sample_name&#39;</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;Chief Complaint: {</span><span style="color: #F8F8F2">demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">chief_complaint </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;N/A&#39;}&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;-&quot;</span> <span style="color: #FF4689">*</span> <span style="color: #AE81FF">80</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;CLINICAL NOTE (first 800 chars):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print(demo_row[</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">][:</span><span style="color: #AE81FF">800</span><span style="color: #F8F8F2">])</span>
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">&quot;...&quot;</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">len(demo_row[</span><span style="color: #E6DB74">&quot;transcription&quot;</span><span style="color: #F8F8F2">])</span> <span style="color: #FF4689">&gt;</span> <span style="color: #AE81FF">800</span> <span style="color: #66D9EF">else</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #F8F8F2">print()</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;DIAGNOSES ({</span><span style="color: #F8F8F2">len(demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses)</span><span style="color: #E6DB74">}):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">dx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">diagnoses:</span>
+    <span style="color: #F8F8F2">code</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">icd10_suggestion</span> <span style="color: #FF4689">or</span> <span style="color: #E6DB74">&quot;N/A&quot;</span>
+    <span style="color: #959077"># Look up matched code</span>
+    <span style="color: #F8F8F2">m</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">match_lookup</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get((str(demo_row[</span><span style="color: #E6DB74">&quot;id&quot;</span><span style="color: #F8F8F2">]),</span> <span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name),</span> <span style="color: #F8F8F2">{})</span>
+    <span style="color: #F8F8F2">matched</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">m</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">isinstance(m,</span> <span style="color: #F8F8F2">dict)</span> <span style="color: #66D9EF">else</span> <span style="color: #F8F8F2">getattr(m,</span> <span style="color: #E6DB74">&quot;matched_code&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">mtype</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">m</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">get(</span><span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span> <span style="color: #66D9EF">if</span> <span style="color: #F8F8F2">isinstance(m,</span> <span style="color: #F8F8F2">dict)</span> <span style="color: #66D9EF">else</span> <span style="color: #F8F8F2">getattr(m,</span> <span style="color: #E6DB74">&quot;match_type&quot;</span><span style="color: #F8F8F2">,</span> <span style="color: #E6DB74">&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  [{</span><span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #E6DB74">:6s}] {</span><span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name</span><span style="color: #E6DB74">}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;           ICD-10: {</span><span style="color: #F8F8F2">code</span><span style="color: #E6DB74">} -&gt; {</span><span style="color: #F8F8F2">matched </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;no match&#39;} ({</span><span style="color: #F8F8F2">mtype</span><span style="color: #E6DB74">})&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;           Evidence: </span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">{</span><span style="color: #F8F8F2">dx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span[:</span><span style="color: #AE81FF">120</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}</span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">PROCEDURES ({</span><span style="color: #F8F8F2">len(demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures)</span><span style="color: #E6DB74">}):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">px</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">procedures:</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  [{</span><span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #E6DB74">:6s}] {</span><span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name</span><span style="color: #E6DB74">} (CPT: {</span><span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">cpt_suggestion </span><span style="color: #FF4689">or</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;N/A&#39;})&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;           Evidence: </span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">{</span><span style="color: #F8F8F2">px</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span[:</span><span style="color: #AE81FF">120</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}</span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;</span><span style="color: #AE81FF">\n</span><span style="color: #E6DB74">MEDICATIONS ({</span><span style="color: #F8F8F2">len(demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications)</span><span style="color: #E6DB74">}):&quot;</span><span style="color: #F8F8F2">)</span>
+<span style="color: #66D9EF">for</span> <span style="color: #F8F8F2">rx</span> <span style="color: #FF4689">in</span> <span style="color: #F8F8F2">demo_ext</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">medications:</span>
+    <span style="color: #F8F8F2">details</span> <span style="color: #FF4689">=</span> <span style="color: #E6DB74">&quot; | &quot;</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">join(filter(</span><span style="color: #66D9EF">None</span><span style="color: #F8F8F2">,</span> <span style="color: #F8F8F2">[rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">dosage,</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">frequency,</span> <span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">route]))</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;  [{</span><span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">confidence</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">upper()</span><span style="color: #E6DB74">:6s}] {</span><span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">name</span><span style="color: #E6DB74">} {f&#39;({</span><span style="color: #F8F8F2">details</span><span style="color: #E6DB74">})&#39;</span><span style="color: #F8F8F2"> </span><span style="color: #66D9EF">if</span><span style="color: #F8F8F2"> details </span><span style="color: #66D9EF">else</span><span style="color: #F8F8F2"> </span><span style="color: #E6DB74">&#39;&#39;}&quot;</span><span style="color: #F8F8F2">)</span>
+    <span style="color: #F8F8F2">print(</span><span style="color: #E6DB74">f&quot;           Evidence: </span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">{</span><span style="color: #F8F8F2">rx</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">evidence_span[:</span><span style="color: #AE81FF">120</span><span style="color: #F8F8F2">]</span><span style="color: #E6DB74">}</span><span style="color: #AE81FF">\&quot;</span><span style="color: #E6DB74">&quot;</span><span style="color: #F8F8F2">)</span>
+</pre></div></div>
+<div class="cell cell-md"><h3>5e. Query Delta Tables with SQL</h3>
+<p>Demonstrate that all results are now queryable as standard SQL tables -- the same queries
+power the live Streamlit HITL dashboard at <a href="https://clinical.christeceno.com">clinical.christeceno.com</a>.</p></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[23]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Join extractions with diagnoses, showing ICD-10 validation results</span>
+<span style="color: #F8F8F2">dx_detail</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sql(</span><span style="color: #E6DB74">&quot;&quot;&quot;</span>
+<span style="color: #E6DB74">    SELECT</span>
+<span style="color: #E6DB74">        e.medical_specialty,</span>
+<span style="color: #E6DB74">        d.name AS diagnosis,</span>
+<span style="color: #E6DB74">        d.icd10_suggested,</span>
+<span style="color: #E6DB74">        d.icd10_matched,</span>
+<span style="color: #E6DB74">        d.match_type,</span>
+<span style="color: #E6DB74">        d.match_score,</span>
+<span style="color: #E6DB74">        d.confidence,</span>
+<span style="color: #E6DB74">        SUBSTR(d.evidence_span, 1, 80) AS evidence_preview</span>
+<span style="color: #E6DB74">    FROM diagnoses d</span>
+<span style="color: #E6DB74">    JOIN extractions e ON d.extraction_id = e.extraction_id</span>
+<span style="color: #E6DB74">    ORDER BY e.medical_specialty, d.confidence</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">dx_detail</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+</pre></div></div>
+<div class="cell cell-code">  <div class="cell-toolbar">    <span class="cell-num">[24]</span>    <span class="status-none">&#8212;</span>    <span class="cell-lang">python</span>  </div>  <div class="cell-source"><pre><span style="color: #959077"># Medications with dosage information from Delta</span>
+<span style="color: #F8F8F2">rx_detail</span> <span style="color: #FF4689">=</span> <span style="color: #F8F8F2">spark</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">sql(</span><span style="color: #E6DB74">&quot;&quot;&quot;</span>
+<span style="color: #E6DB74">    SELECT</span>
+<span style="color: #E6DB74">        e.medical_specialty,</span>
+<span style="color: #E6DB74">        m.name AS medication,</span>
+<span style="color: #E6DB74">        m.dosage,</span>
+<span style="color: #E6DB74">        m.frequency,</span>
+<span style="color: #E6DB74">        m.route,</span>
+<span style="color: #E6DB74">        m.confidence,</span>
+<span style="color: #E6DB74">        SUBSTR(m.evidence_span, 1, 80) AS evidence_preview</span>
+<span style="color: #E6DB74">    FROM medications m</span>
+<span style="color: #E6DB74">    JOIN extractions e ON m.extraction_id = e.extraction_id</span>
+<span style="color: #E6DB74">    ORDER BY m.name</span>
+<span style="color: #E6DB74">&quot;&quot;&quot;</span><span style="color: #F8F8F2">)</span>
+
+<span style="color: #F8F8F2">rx_detail</span><span style="color: #FF4689">.</span><span style="color: #F8F8F2">toPandas()</span>
+</pre></div></div>
+<div class="cell cell-md"><hr />
+<h2>Pipeline Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Status</th>
+<th>Key Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. PySpark Ingestion</strong></td>
+<td>Complete</td>
+<td>Delta table: cleaned, deduplicated clinical notes</td>
+</tr>
+<tr>
+<td><strong>2. Claude Extraction</strong></td>
+<td>Complete</td>
+<td>Structured entities via <code>tool_use</code> (Pydantic-validated)</td>
+</tr>
+<tr>
+<td><strong>3. ICD-10 Validation</strong></td>
+<td>Complete</td>
+<td>Exact + fuzzy match against CMS 2025 (74K codes)</td>
+</tr>
+<tr>
+<td><strong>4. Delta Persistence</strong></td>
+<td>Complete</td>
+<td>Star-schema tables: extractions, diagnoses, procedures, medications</td>
+</tr>
+<tr>
+<td><strong>5. Visualization</strong></td>
+<td>Complete</td>
+<td>KPIs, charts, SQL queries, sample deep-dive</td>
+</tr>
+</tbody>
+</table>
+<h3>Architecture</h3>
+<pre><code>CSV -&gt; PySpark (clean/dedup) -&gt; Delta Table
+         |
+         v
+    Claude Haiku (tool_use) -&gt; Pydantic validation -&gt; ICD-10 matching
+         |
+         v
+    Delta Tables (star schema) -&gt; SQL analytics
+         |
+         v
+    Streamlit HITL Dashboard (approve/reject/edit)
+</code></pre>
+<h3>Next Steps</h3>
+<ul>
+<li><strong>Scale</strong>: Process all 2,358 notes using Anthropic Batch API (~$4 estimated cost)</li>
+<li><strong>Evaluate</strong>: Run against MIMIC-IV ground truth (Dx F1=83.8% with prompt optimization)</li>
+<li><strong>HITL Review</strong>: Live dashboard at <a href="https://clinical.christeceno.com">clinical.christeceno.com</a></li>
+<li><strong>Production</strong>: Replace SQLite with Databricks-managed Delta tables, add Unity Catalog governance</li>
+</ul></div>
+</div>
+</body>
+</html>

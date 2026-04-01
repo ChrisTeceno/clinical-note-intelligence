@@ -48,6 +48,7 @@ if not notebooks:
 # Notebook selector
 # ---------------------------------------------------------------------------
 DISPLAY_NAMES = {
+    "04_end_to_end_pipeline": "End-to-End Pipeline (Ingestion + Extraction + ICD-10 + Delta + Viz)",
     "03_full_pipeline_databricks": "Full Pipeline (Ingestion + Extraction + ICD-10)",
     "02_spark_ingestion_databricks": "PySpark Ingestion Only",
 }

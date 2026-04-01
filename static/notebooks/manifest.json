@@ -1,5 +1,12 @@
 [
   {
+    "name": "04_end_to_end_pipeline",
+    "path": null,
+    "source_file": "04_end_to_end_pipeline_databricks.py",
+    "html_file": "04_end_to_end_pipeline.html",
+    "language": "PYTHON"
+  },
+  {
     "name": "03_full_pipeline_databricks",
     "path": "/Users/chris.teceno@gmail.com/03_full_pipeline_databricks",
     "source_file": "03_full_pipeline_databricks.py",
