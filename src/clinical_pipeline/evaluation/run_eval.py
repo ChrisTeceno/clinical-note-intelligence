@@ -67,7 +67,7 @@ def _save_extraction(cache_dir: Path, hadm_id: int, extraction: ClinicalExtracti
 
 
 def run_evaluation(
-    mimic_path: Path,
+    mimic_path: Path | None = None,
     n_admissions: int = 30,
     settings: Settings | None = None,
     description: str = "",
@@ -83,11 +83,13 @@ def run_evaluation(
     4. Score against ground truth
     5. Return summary with overall and per-admission metrics
 
-    Results are cached in ``data/evaluation/`` to avoid re-generating on repeated runs.
+    ``mimic_path`` defaults to the active source's ``hosp/`` directory.
+    Results are cached in ``settings.evaluation_dir`` to avoid re-generating on repeated runs.
     """
     start_time = time.monotonic()
     settings = settings or get_settings()
-    cache_dir = settings.data_dir / "evaluation"
+    mimic_path = mimic_path or settings.mimic_hosp_dir
+    cache_dir = settings.evaluation_dir
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     # Step 1: Select admissions and load ground truth
@@ -268,8 +270,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--mimic-path",
         type=Path,
-        required=True,
-        help="Path to MIMIC-IV demo hosp/ directory",
+        default=None,
+        help="Path to MIMIC-IV hosp/ directory (default: hosp/ of the MIMIC_SOURCE root)",
     )
     parser.add_argument(
         "--n-admissions",

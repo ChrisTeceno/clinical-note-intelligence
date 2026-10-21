@@ -39,6 +39,13 @@ data/imaging/*
 # CSV files in data directories
 data/**/*.csv
 
+# Compressed CSV files (MIMIC-IV ships as .csv.gz)
+*.csv.gz
+
+# Full MIMIC-IV is credentialed data under a DUA: never commit it or its derived output
+physionet.org/
+data/full/
+
 # Parquet files
 *.parquet
 data/**/*.parquet

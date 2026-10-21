@@ -43,7 +43,7 @@ Data flows from raw clinical text through a PySpark ingestion step into Claude-p
 
 ## Evaluation Results
 
-Scored against MIMIC-IV demo discharge summaries (30 admissions). Synthetic discharge notes were generated from structured MIMIC-IV data (ICD codes, procedures, medications), then run through the extraction pipeline and scored against known ground truth.
+Demo results: scored against MIMIC-IV demo discharge summaries (30 admissions). Synthetic discharge notes were generated from structured MIMIC-IV data (ICD codes, procedures, medications), then run through the extraction pipeline and scored against known ground truth.
 
 | Entity Type | Precision | Recall | F1 |
 |-------------|-----------|--------|----|
@@ -55,7 +55,20 @@ Scored against MIMIC-IV demo discharge summaries (30 admissions). Synthetic disc
 - Diagnosis extraction is the strongest signal; high precision means low hallucination rate.
 - Procedure recall is limited by clinical note verbosity — many procedures are implied, not stated.
 - Medication precision is very high (0.93); low recall reflects that discharge summaries reference only a subset of the full medication list present in structured data. Full-text clinical notes are expected to close this gap.
-- Evaluation uses synthetic notes generated from structured data. Real MIMIC-IV clinical note evaluation is planned pending PhysioNet credentialing.
+- Evaluation uses synthetic notes generated from structured data. Real MIMIC-IV clinical note evaluation needs access to MIMIC-IV-Note, a separate PhysioNet project, and is a follow-up.
+- These numbers are from the demo. No full-data results are reported yet.
+
+### Data sources
+
+The evaluation can run against the MIMIC-IV demo (default) or the credentialed full MIMIC-IV 3.1 release. Set these in `.env` (see `.env.example`):
+
+| Variable | Default | Meaning |
+|----------|---------|---------|
+| `MIMIC_SOURCE` | `demo` | `demo` or `full` |
+| `MIMIC_DEMO_ROOT` | `~/Downloads/mimic-iv-clinical-database-demo-2.2` | Demo root (contains `hosp/`) |
+| `MIMIC_FULL_ROOT` | `~/physionet.org/files/mimiciv/3.1` | Full 3.1 root (contains `hosp/`) |
+
+`--mimic-path` is optional for `run_eval` and `run_optimize`; it defaults to the active source. Demo output goes to `data/evaluation/` and `data/optimization/`. Full output goes to `data/full/`, which is gitignored, and the app shows only aggregate metrics in full mode. Full data is covered by the PhysioNet DUA and stays local. Notes are still synthetic; MIMIC-IV-Note is not used.
 
 ---
 
@@ -170,7 +183,7 @@ The clinical background behind this project is direct: I served as a medic in th
 
 ## Roadmap
 
-- [ ] Full MIMIC-IV evaluation with real clinical notes (pending PhysioNet credentialing)
+- [ ] Full MIMIC-IV evaluation: loader and `MIMIC_SOURCE=full` support exist; full-data evaluation runs are pending, and real clinical notes (MIMIC-IV-Note, a separate PhysioNet project) are a follow-up
 - [ ] Medical imaging integration — MIMIC-CXR chest X-ray classification with TorchXRayVision
 - [ ] Databricks production deployment with Delta tables
 - [ ] Prompt optimization experiments (Sonnet vs. Haiku, few-shot variants)

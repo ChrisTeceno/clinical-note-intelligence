@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Date:** 2026-03-30
-**Source:** MIMIC-IV demo evaluation, 30 admissions
+**Source:** MIMIC-IV demo evaluation, 30 admissions (demo-based; no full-data numbers)
 
 This document catalogs error patterns observed in the evaluation run, organized by entity type and error class. Each category includes representative examples drawn from the evaluation data.
 
@@ -130,9 +130,9 @@ Procedure false negatives include complex multi-step procedures (e.g., vascular 
 
 ### False Negatives (Primary Error Class)
 
-#### FN-Rx1: MAR vs. Note Coverage Mismatch
+#### FN-Rx1: Prescriptions vs. Note Coverage Mismatch
 
-**Description:** The large medication false negative count (796, driving recall to 0.319) is not a model failure. The MIMIC ground truth is the Medication Administration Record, which captures every medication event during the hospitalization. Clinical notes document only:
+**Description:** The large medication false negative count (796, driving recall to 0.319) is not a model failure. The MIMIC ground truth is the `prescriptions` table, which lists every medication prescribed during the hospitalization. Clinical notes document only:
 - Discharge medications
 - Medications material to the admission narrative (e.g., the anticoagulant central to a DVT admission)
 - Adverse drug events
@@ -140,12 +140,12 @@ Procedure false negatives include complex multi-step procedures (e.g., vascular 
 PRN medications, maintenance electrolytes, routine IV fluids, and background medications from the patient's home regimen are commonly omitted from the note body.
 
 **Example — Admission 20199380:**
-- MAR medications: 31 unique drugs
+- prescribed medications: 31 unique drugs
 - Extracted from note: 18 medications
 - All 18 extracted were correct matches (precision 1.0)
-- 13 MAR medications not mentioned in the note
+- 13 prescribed medications not mentioned in the note
 
-**Implication:** Measuring medication recall against the MAR is not the appropriate benchmark for note-based extraction. The operationally correct ground truth for this task is "medications documented in the note" — which is not independently available without human annotation.
+**Implication:** Measuring medication recall against the prescriptions table is not the appropriate benchmark for note-based extraction. The operationally correct ground truth for this task is "medications documented in the note", which is not independently available without human annotation.
 
 ---
 
@@ -153,15 +153,15 @@ PRN medications, maintenance electrolytes, routine IV fluids, and background med
 
 #### FP-Rx1: Generic / Formulation Variants
 
-**Description:** The model extracts broad medication references that do not map to a specific ground truth MAR entry.
+**Description:** The model extracts broad medication references that do not map to a specific ground truth prescription entry.
 
 **Examples from evaluation data:**
 
 | Extracted (FP) | Issue |
 |---------------|-------|
-| Normal saline | Generic term; IV fluid not always a discrete MAR entry |
+| Normal saline | Generic term; IV fluid not always a discrete prescription entry |
 | Potassium supplementation | Route/formulation unspecified; may not match specific potassium chloride entry |
-| Pantoprazole | Extracted correctly but not present in this admission's MAR (wrong admission attribution?) |
+| Pantoprazole | Extracted correctly but not present in this admission's prescriptions (wrong admission attribution?) |
 | Famotidine | Similar issue |
 
 ---
@@ -209,7 +209,7 @@ PRN medications, maintenance electrolytes, routine IV fluids, and background med
 | FP-P1 | Procedures | FP | ~55 | High — inflates procedure list materially |
 | FP-P2 | Procedures | FP | ~11 | Low — obvious to reviewer |
 | FN-P1 | Procedures | FN | 29 | Medium — subsidiary PCS codes not captured |
-| FN-Rx1 | Medications | FN | ~780 | Low (by design) — MAR mismatch |
+| FN-Rx1 | Medications | FN | ~780 | Low (by design), prescriptions mismatch |
 | FP-Rx1 | Medications | FP | 27 | Low — generic terms |
 | CM-1 | Codes | Match | Unquantified | Medium — specificity risk |
 | CM-2 | Codes | Match | ~27% of partials | High — requires mandatory review |
