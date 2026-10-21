@@ -1083,7 +1083,7 @@ rx_detail.toPandas()
 # MAGIC %md
 # MAGIC - **Scale**: Process all 2,358 notes using Anthropic Batch API (~$4 estimated cost)
 # MAGIC %md
-# MAGIC - **Evaluate**: Run against MIMIC-IV ground truth (Dx F1=83.8% with prompt optimization)
+# MAGIC - **Evaluate**: Run against MIMIC-IV ground truth (demo baseline Dx F1=81.5%; the 83.8% prompt optimization result is unvalidated)
 # MAGIC %md
 # MAGIC - **HITL Review**: Live dashboard at [clinical.christeceno.com](https://clinical.christeceno.com)
 # MAGIC %md
