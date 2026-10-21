@@ -9,6 +9,8 @@ from tooltips import TOOLTIP_CSS, tt_heading
 
 from clinical_pipeline.config import get_settings
 
+settings = get_settings()
+
 # ---------------------------------------------------------------------------
 # Page header
 # ---------------------------------------------------------------------------
@@ -33,7 +35,6 @@ if settings.mimic_source == "full":
 # ---------------------------------------------------------------------------
 # Load run history
 # ---------------------------------------------------------------------------
-settings = get_settings()
 EVAL_DIR = settings.evaluation_dir
 HISTORY_PATH = EVAL_DIR / "run_history.json"
 RESULTS_PATH = EVAL_DIR / "evaluation_results.json"
