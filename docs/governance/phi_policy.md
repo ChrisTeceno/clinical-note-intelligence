@@ -1,7 +1,7 @@
 # PHI / PII Handling Policy
 
-**Version:** 1.0
-**Date:** 2026-03-30
+**Version:** 1.1
+**Date:** 2026-10-21
 **Scope:** Clinical Note Intelligence Pipeline (this repository)
 
 ---
@@ -45,6 +45,24 @@ Access to the MIMIC-IV demo requires:
 2. Acceptance of the ODbL license terms
 
 **Conclusion:** May be used for research and evaluation. No additional de-identification required. MIMIC data is not stored in this repository (see data lineage).
+
+---
+
+### MIMIC-IV 3.1 Full Dataset (Evaluation Only, credentialed)
+
+**PHI status: De-identified, credentialed access under a DUA**
+
+The full MIMIC-IV 3.1 release uses the same Safe Harbor de-identification as the demo, but unlike the demo it is not open data. Access requires PhysioNet credentialing, completed training and a signed Data Use Agreement (DUA). It is selected with `MIMIC_SOURCE=full`.
+
+Handling rules in this project:
+- Full data stays on the researcher's local machine. It is never copied to the public deploy or the VPS, which stay on the demo (`MIMIC_DEMO_ROOT`).
+- Derived output (synthetic notes, selections, results, run history) goes to `data/full/`, which is gitignored. Nothing derived from full data is committed.
+- The Streamlit app shows only aggregate metrics in full mode, with a credentialed-data banner. It does not list per-admission records, and the Optimization page does not start runs in full mode (CLI only).
+- Only `hosp/` diagnoses, procedures, prescriptions and their dictionary tables are read. `icu/` and MIMIC-IV-Note are not used; notes remain synthetic.
+
+**LLM route:** in full mode, synthetic note generation and extraction still call the Anthropic API directly. This is the project owner's decision, made 2026-10-21. This policy does not assess whether that route is permitted under the DUA.
+
+**Conclusion:** May be used for local research and evaluation by the credentialed account holder only.
 
 ---
 
@@ -104,11 +122,14 @@ The following controls are in place to prevent accidental PHI storage in this re
 
 | Control | Implementation |
 |---------|---------------|
-| Data directory excluded from git | `data/` in `.gitignore` |
+| Raw and credentialed data excluded from git | `.gitignore` covers `data/raw/*`, `data/processed/*`, `data/imaging/*`, `data/**/*.csv`, `*.csv.gz`, `physionet.org/` and `data/full/`. `data/` as a whole is not ignored: `data/reference/` and demo evaluation output are tracked |
 | Environment variables for credentials | API keys in `.env` (gitignored); `.env.example` committed without values |
 | No patient identifiers in source code | Verified by code review |
 | Evaluation results file reviewed | `data/evaluation/evaluation_results.json` contains only MIMIC admission IDs (de-identified integers) and extracted entity strings; no patient names or dates |
-| MIMIC data not committed | MIMIC files are researcher-provided and gitignored |
+| MIMIC data not committed | MIMIC files are researcher-provided; `*.csv.gz` and `physionet.org/` are gitignored |
+| Full-data output kept out of git | Full mode writes to `data/full/`, which is gitignored |
+| Aggregate-only display for full data | App pages show aggregate metrics only in full mode; Optimization runs are CLI only |
+| No full data on the VPS | The public deploy uses the demo only |
 
 ### What Is Committed to Git
 
@@ -116,7 +137,8 @@ The following controls are in place to prevent accidental PHI storage in this re
 |------|--------------|-------|
 | Source code (`src/`) | No | Code only |
 | CMS reference files (`data/reference/`) | No | Public domain terminology |
-| Evaluation results (`data/evaluation/evaluation_results.json`) | No | De-identified MIMIC IDs + extracted strings |
+| Demo evaluation results (`data/evaluation/evaluation_results.json`) | No | De-identified demo MIMIC IDs + extracted strings |
+| Full-data output (`data/full/`) | Not committed | Gitignored; DUA-governed |
 | Documentation (`docs/`) | No | |
 | `.env.example` | No | Template only, no values |
 

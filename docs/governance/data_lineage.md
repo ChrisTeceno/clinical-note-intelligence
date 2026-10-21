@@ -1,7 +1,7 @@
 # Data Lineage
 
-**Version:** 1.0
-**Date:** 2026-03-30
+**Version:** 1.1
+**Date:** 2026-10-21
 
 This document traces each dataset used in the pipeline from its source through to its role in the system, including license terms and any transformations applied.
 
@@ -49,7 +49,7 @@ data/processed/mtsamples.parquet
 
 ---
 
-### 2. MIMIC-IV Clinical Database Demo (Evaluation Only)
+### 2. MIMIC-IV Clinical Database Demo (Evaluation Only, default source)
 
 | Attribute | Value |
 |-----------|-------|
@@ -66,7 +66,7 @@ data/processed/mtsamples.parquet
 MIMIC-IV demo hosp/ directory
     - diagnoses_icd.csv.gz    → ground truth diagnoses (ICD-10 only)
     - procedures_icd.csv.gz   → ground truth procedures (ICD-10-PCS)
-    - prescriptions.csv.gz    → ground truth medications (MAR)
+    - prescriptions.csv.gz    → ground truth medications (prescriptions table)
     - d_icd_diagnoses.csv.gz  → ICD-10 code descriptions
     - d_icd_procedures.csv.gz → ICD-10-PCS code descriptions
     |
@@ -79,7 +79,8 @@ MIMIC-IV demo hosp/ directory
     |  - Claude Haiku 4.5 generates synthetic discharge summaries
     |  - Input: structured diagnosis/procedure/medication lists from MIMIC
     |  - Output: free-text notes (NO ICD codes included)
-    |  - Cached to data/evaluation/synthetic_notes/<hadm_id>.txt
+    |  - Cached to <evaluation_dir>/synthetic_notes/<hadm_id>.txt
+    |    (data/evaluation/ for the demo)
     |
     v  run_eval.py
     |  - Extraction run on synthetic notes
@@ -88,7 +89,42 @@ MIMIC-IV demo hosp/ directory
     v  data/evaluation/evaluation_results.json
 ```
 
-**MIMIC data is not stored in the repository.** The `data/` directory is gitignored. Researchers must obtain MIMIC-IV demo access independently from PhysioNet and place files in the expected directory structure.
+The demo is selected with `MIMIC_SOURCE=demo` (the default). Its root is `MIMIC_DEMO_ROOT` (default `~/Downloads/mimic-iv-clinical-database-demo-2.2`).
+
+**MIMIC data is not stored in the repository.** `.gitignore` excludes `*.csv.gz`, `*.csv` under `data/`, `physionet.org/` and `data/full/`. It does not exclude `data/` as a whole: demo-derived output under `data/evaluation/` and `data/optimization/` is tracked, except `synthetic_notes/`, `selected_hadm_ids.json` and `run_history.json` under `data/evaluation/`, which are ignored. Researchers must obtain MIMIC-IV demo access independently from PhysioNet and point `MIMIC_DEMO_ROOT` at the download.
+
+---
+
+### 2b. MIMIC-IV 3.1 Full Dataset (Evaluation Only, credentialed)
+
+| Attribute | Value |
+|-----------|-------|
+| Source | PhysioNet, MIMIC-IV v3.1 |
+| URL | https://physionet.org/content/mimiciv/3.1/ |
+| License | PhysioNet Credentialed Health Data License; use is governed by the Data Use Agreement (DUA) |
+| Access | Requires PhysioNet credentialing, completed training and a signed DUA |
+| Contains PHI | De-identified per HIPAA Safe Harbor, but credentialed: redistribution is restricted by the DUA |
+| Selection | `MIMIC_SOURCE=full`; root is `MIMIC_FULL_ROOT` (default `~/physionet.org/files/mimiciv/3.1`) |
+
+**Usage in this project (evaluation only, local machine only):**
+
+```
+MIMIC-IV 3.1 hosp/ directory (read-only; icu/ is not read)
+    - diagnoses_icd.csv.gz, procedures_icd.csv.gz, prescriptions.csv.gz
+    - d_icd_diagnoses.csv.gz, d_icd_procedures.csv.gz
+    |
+    v  ground_truth.py (load_ground_truth / select_admissions)
+    |  - Reads only the columns needed
+    |  - Streams prescriptions in chunks, keeping rows for selected admissions
+    |  - Same ICD-10 filter and stratified sampling as the demo
+    |
+    v  synthetic_notes.py (generate_batch), then run_eval.py / run_optimize.py
+    |  - Notes are still synthetic; MIMIC-IV-Note is not used
+    |
+    v  data/full/evaluation/ and data/full/optimization/ (gitignored)
+```
+
+Full-data output is written under `data/full/`, never into the tracked demo caches. The Streamlit app shows only aggregate metrics in full mode (see `phi_policy.md`). `--mimic-path` is optional for `run_eval` and `run_optimize`; it defaults to the `hosp/` directory of the active source.
 
 ---
 
@@ -151,8 +187,8 @@ This project was developed and evaluated on synthetic/de-identified data. The AP
 ## Data Flow Diagram
 
 ```
-[MTSamples CSV]          [MIMIC-IV demo]          [CMS ICD-10-CM]
-  (CC0, Kaggle)           (ODbL, PhysioNet)         (public domain)
+[MTSamples CSV]     [MIMIC-IV demo or full 3.1]     [CMS ICD-10-CM]
+  (CC0, Kaggle)      (ODbL / PhysioNet DUA)        (public domain)
       |                        |                          |
       v                        v                          v
   PySpark                 ground_truth.py            icd10_loader.py
@@ -200,8 +236,10 @@ This project was developed and evaluated on synthetic/de-identified data. The AP
 | MTSamples CSV | `data/raw/` | Gitignored; researcher-managed |
 | Processed Parquet | `data/processed/` | Gitignored; re-derivable from CSV |
 | MIMIC-IV demo | External (PhysioNet) | Not stored in repo |
+| MIMIC-IV 3.1 full | External (PhysioNet, `MIMIC_FULL_ROOT`) | Not stored in repo; `*.csv.gz` and `physionet.org/` gitignored; DUA applies |
 | Synthetic eval notes | `data/evaluation/synthetic_notes/` | Gitignored; re-derivable |
-| Evaluation results | `data/evaluation/evaluation_results.json` | Not gitignored; no PHI |
+| Evaluation results (demo) | `data/evaluation/evaluation_results.json` | Not gitignored; no PHI |
+| Full-data output | `data/full/` | Gitignored; local machine only |
 | CMS reference files | `data/reference/` | Committed to git; public domain |
 | Database | `data/clinical_notes.db` | Gitignored; contains extracted entities |
 

@@ -3,7 +3,7 @@
 **Version:** 1.0
 **Date:** 2026-03-30
 **Evaluated by:** Automated evaluation harness (`src/clinical_pipeline/evaluation/run_eval.py`)
-**Evaluation corpus:** MIMIC-IV demo, 30 admissions, synthetic discharge summaries
+**Evaluation corpus:** MIMIC-IV demo, 30 admissions, synthetic discharge summaries (all numbers in this report are demo-based)
 
 ---
 

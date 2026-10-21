@@ -101,7 +101,7 @@ The primary medication recall gap reflects a structural mismatch: the ground tru
 
 ## Metrics
 
-Evaluated on 30 MIMIC-IV demo admissions (see Evaluation Data section). Confidence intervals use the normal approximation to the binomial proportion.
+Evaluated on 30 MIMIC-IV demo admissions (see Evaluation Data section). All figures below are demo-based; no full-data results exist. Confidence intervals use the normal approximation to the binomial proportion.
 
 ### Overall Performance — Claude Haiku 4.5
 
