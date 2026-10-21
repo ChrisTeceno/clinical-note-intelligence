@@ -39,12 +39,32 @@ class ClinicalExtractor:
         cost_tracker: CostTracker | None = None,
         max_retries: int = 3,
         retriever: ICD10Retriever | None = None,
+        system_prompt: str = SYSTEM_PROMPT,
     ) -> None:
         self.client = anthropic.Anthropic(api_key=api_key)
         self.model = model
         self.cost_tracker = cost_tracker
         self.max_retries = max_retries
         self.retriever = retriever
+        self.system_prompt = system_prompt
+
+    def build_messages(self, transcription: str) -> list[dict[str, str]]:
+        """Build the user messages for a note, with RAG codes when a retriever is set."""
+        if self.retriever is not None:
+            relevant_codes = self.retriever.retrieve(transcription, top_k=50)
+            user_message = build_rag_extraction_prompt(transcription, relevant_codes)
+        else:
+            user_message = build_extraction_prompt(transcription)
+        return [
+            {"role": "user", "content": user_message},
+        ]
+
+    def build_request_params(self, transcription: str) -> dict:
+        """Return the messages.create parameters for a note.
+
+        Shared by the per-request path and the Message Batches path.
+        """
+        return self._request_params(self.build_messages(transcription))
 
     def extract(self, note_id: str, transcription: str) -> ClinicalExtraction:
         """Extract clinical data from a single note.
@@ -52,14 +72,7 @@ class ClinicalExtractor:
         Uses Claude's tool_use to guarantee structured JSON output.
         Retries on transient API errors.
         """
-        if self.retriever is not None:
-            relevant_codes = self.retriever.retrieve(transcription, top_k=50)
-            user_message = build_rag_extraction_prompt(transcription, relevant_codes)
-        else:
-            user_message = build_extraction_prompt(transcription)
-        messages = [
-            {"role": "user", "content": user_message},
-        ]
+        messages = self.build_messages(transcription)
 
         last_error: Exception | None = None
         for attempt in range(1, self.max_retries + 1):
@@ -94,16 +107,20 @@ class ClinicalExtractor:
             f"Failed to extract note {note_id} after {self.max_retries} attempts: {last_error}"
         )
 
+    def _request_params(self, messages: list[dict[str, str]]) -> dict:
+        """Parameters for one extraction request (tool_use for structured output)."""
+        return {
+            "model": self.model,
+            "max_tokens": MAX_TOKENS,
+            "system": self.system_prompt,
+            "messages": messages,
+            "tools": [EXTRACTION_TOOL],
+            "tool_choice": {"type": "tool", "name": "extract_clinical_data"},
+        }
+
     def _call_api(self, messages: list[dict[str, str]]) -> anthropic.types.Message:
         """Make the API call to Claude with tool_use for structured output."""
-        return self.client.messages.create(
-            model=self.model,
-            max_tokens=MAX_TOKENS,
-            system=SYSTEM_PROMPT,
-            messages=messages,
-            tools=[EXTRACTION_TOOL],
-            tool_choice={"type": "tool", "name": "extract_clinical_data"},
-        )
+        return self.client.messages.create(**self._request_params(messages))
 
     def _parse_response(
         self, response: anthropic.types.Message, note_id: str

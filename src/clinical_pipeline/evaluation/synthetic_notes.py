@@ -9,7 +9,9 @@ from pathlib import Path
 
 import anthropic
 
+from clinical_pipeline.evaluation.batch_api import run_batch
 from clinical_pipeline.evaluation.ground_truth import GroundTruth
+from clinical_pipeline.extraction.cost_tracker import CostTracker
 
 logger = logging.getLogger(__name__)
 
@@ -82,6 +84,19 @@ def _build_admission_prompt(gt: GroundTruth, style: str) -> str:
     return "\n".join(sections)
 
 
+def build_note_request_params(gt: GroundTruth, style: str) -> dict:
+    """Return the messages.create parameters for one synthetic note.
+
+    Shared by the per-request path and the Message Batches path.
+    """
+    return {
+        "model": GENERATION_MODEL,
+        "max_tokens": MAX_TOKENS,
+        "system": SYSTEM_PROMPT,
+        "messages": [{"role": "user", "content": _build_admission_prompt(gt, style)}],
+    }
+
+
 def generate_synthetic_note(
     gt: GroundTruth,
     client: anthropic.Anthropic,
@@ -102,13 +117,7 @@ def generate_synthetic_note(
     -------
     The generated discharge summary text.
     """
-    user_message = _build_admission_prompt(gt, style)
-    response = client.messages.create(
-        model=GENERATION_MODEL,
-        max_tokens=MAX_TOKENS,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": user_message}],
-    )
+    response = client.messages.create(**build_note_request_params(gt, style))
     return response.content[0].text
 
 
@@ -175,6 +184,57 @@ def generate_batch(
     }
     manifest_path = notes_dir / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2))
+
+    logger.info("Generated %d/%d synthetic notes", len(results), len(hadm_ids))
+    return results
+
+
+def generate_batch_api(
+    ground_truths: dict[int, GroundTruth],
+    api_key: str,
+    cache_dir: Path,
+    cost_tracker: CostTracker | None = None,
+) -> dict[int, str]:
+    """Like ``generate_batch`` but sends uncached admissions through the Batches API.
+
+    Cached notes are not re-requested. Failed items are logged and skipped.
+    """
+    notes_dir = cache_dir / "synthetic_notes"
+    notes_dir.mkdir(parents=True, exist_ok=True)
+
+    results: dict[int, str] = {}
+    requests: dict[str, dict] = {}
+    hadm_ids = sorted(ground_truths.keys())
+
+    for i, hadm_id in enumerate(hadm_ids):
+        cache_path = notes_dir / f"{hadm_id}.txt"
+        if cache_path.exists():
+            results[hadm_id] = cache_path.read_text(encoding="utf-8")
+            logger.info("[%d/%d] Loaded cached note for hadm_id=%d", i + 1, len(hadm_ids), hadm_id)
+            continue
+        style = NOTE_STYLES[i % len(NOTE_STYLES)]
+        requests[str(hadm_id)] = build_note_request_params(ground_truths[hadm_id], style)
+
+    if requests:
+        client = anthropic.Anthropic(api_key=api_key)
+        messages = run_batch(client, requests, label="note generation")
+        for custom_id, message in messages.items():
+            hadm_id = int(custom_id)
+            note = message.content[0].text
+            (notes_dir / f"{hadm_id}.txt").write_text(note, encoding="utf-8")
+            results[hadm_id] = note
+            if cost_tracker is not None:
+                cost_tracker.record(
+                    model=GENERATION_MODEL,
+                    input_tokens=message.usage.input_tokens,
+                    output_tokens=message.usage.output_tokens,
+                )
+
+    manifest = {
+        "total_generated": len(results),
+        "hadm_ids": sorted(results.keys()),
+    }
+    (notes_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
 
     logger.info("Generated %d/%d synthetic notes", len(results), len(hadm_ids))
     return results
