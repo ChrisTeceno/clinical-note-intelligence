@@ -10,9 +10,10 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-# Pricing per million tokens (as of early 2025 for Haiku 4.5)
+# Pricing per million tokens (checked against the Anthropic pricing page, 2026-10)
 MODEL_PRICING: dict[str, dict[str, float]] = {
-    "claude-haiku-4-5-20251001": {"input": 0.80, "output": 4.00},
+    "claude-haiku-4-5-20251001": {"input": 1.00, "output": 5.00},
+    "claude-sonnet-4-5-20250929": {"input": 3.00, "output": 15.00},
     "claude-sonnet-4-5-20241022": {"input": 3.00, "output": 15.00},
     "claude-sonnet-4-6-20250514": {"input": 3.00, "output": 15.00},
 }

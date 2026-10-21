@@ -9,6 +9,13 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from clinical_pipeline.config import Settings, get_settings
+from clinical_pipeline.evaluation.batch_api import (
+    ESTIMATED_EXTRACTION_TOKENS,
+    ESTIMATED_NOTE_TOKENS,
+    BatchError,
+    estimate_batch_cost,
+    run_batch,
+)
 from clinical_pipeline.evaluation.ground_truth import (
     load_ground_truth,
     select_admissions,
@@ -20,11 +27,16 @@ from clinical_pipeline.evaluation.scorer import (
     aggregate_results,
     evaluate_extraction,
 )
-from clinical_pipeline.evaluation.synthetic_notes import generate_batch
+from clinical_pipeline.evaluation.synthetic_notes import (
+    GENERATION_MODEL,
+    generate_batch,
+    generate_batch_api,
+)
 from clinical_pipeline.extraction.cost_tracker import CostTracker
 from clinical_pipeline.extraction.extractor import DEFAULT_MODEL
 from clinical_pipeline.extraction.extractor import ClinicalExtractor, ExtractionError
 from clinical_pipeline.extraction.models import ClinicalExtraction
+from clinical_pipeline.extraction.prompts import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +78,38 @@ def _save_extraction(cache_dir: Path, hadm_id: int, extraction: ClinicalExtracti
     path.write_text(extraction.model_dump_json(indent=2), encoding="utf-8")
 
 
+DEFAULT_MAX_COST = 3.00
+
+
+def _check_batch_budget(
+    cache_dir: Path, hadm_ids: list[int], extraction_model: str, max_cost: float
+) -> None:
+    """Log the estimated batch cost for uncached work and abort if it exceeds max_cost."""
+    notes_dir = cache_dir / "synthetic_notes"
+    n_notes = sum(1 for h in hadm_ids if not (notes_dir / f"{h}.txt").exists())
+    n_extractions = sum(
+        1 for h in hadm_ids if not (cache_dir / "extractions" / f"{h}.json").exists()
+    )
+    note_cost = estimate_batch_cost(GENERATION_MODEL, n_notes, ESTIMATED_NOTE_TOKENS)
+    extraction_cost = estimate_batch_cost(
+        extraction_model, n_extractions, ESTIMATED_EXTRACTION_TOKENS
+    )
+    estimate = note_cost + extraction_cost
+    logger.info(
+        "Estimated batch cost: $%.2f (%d notes $%.2f, %d extractions $%.2f), limit $%.2f",
+        estimate,
+        n_notes,
+        note_cost,
+        n_extractions,
+        extraction_cost,
+        max_cost,
+    )
+    if estimate > max_cost:
+        raise BatchError(
+            f"Estimated cost ${estimate:.2f} exceeds --max-cost ${max_cost:.2f}; nothing submitted"
+        )
+
+
 def run_evaluation(
     mimic_path: Path | None = None,
     n_admissions: int = 30,
@@ -73,6 +117,9 @@ def run_evaluation(
     description: str = "",
     model: str | None = None,
     use_rag: bool = False,
+    batch: bool = False,
+    prompt_file: Path | None = None,
+    max_cost: float = DEFAULT_MAX_COST,
 ) -> EvaluationSummary:
     """Run the full evaluation pipeline.
 
@@ -84,6 +131,8 @@ def run_evaluation(
     5. Return summary with overall and per-admission metrics
 
     ``mimic_path`` defaults to the active source's ``hosp/`` directory.
+    With ``batch`` set, note generation and extraction go through the Message
+    Batches API (50% discount); ``prompt_file`` replaces the extraction system prompt.
     Results are cached in ``settings.evaluation_dir`` to avoid re-generating on repeated runs.
     """
     start_time = time.monotonic()
@@ -126,17 +175,34 @@ def run_evaluation(
             }
             gt_path.write_text(json.dumps(gt_dict, indent=2), encoding="utf-8")
 
+    system_prompt = SYSTEM_PROMPT
+    if prompt_file is not None:
+        system_prompt = prompt_file.read_text(encoding="utf-8")
+        logger.info("Using extraction system prompt from %s", prompt_file)
+
+    cost_tracker = CostTracker(is_batch=batch)
+
+    if batch:
+        _check_batch_budget(cache_dir, sorted(ground_truths), model or DEFAULT_MODEL, max_cost)
+
     # Step 2: Generate synthetic notes
     logger.info("Generating synthetic notes...")
-    notes = generate_batch(
-        ground_truths=ground_truths,
-        api_key=settings.anthropic_api_key,
-        cache_dir=cache_dir,
-    )
+    if batch:
+        notes = generate_batch_api(
+            ground_truths=ground_truths,
+            api_key=settings.anthropic_api_key,
+            cache_dir=cache_dir,
+            cost_tracker=cost_tracker,
+        )
+    else:
+        notes = generate_batch(
+            ground_truths=ground_truths,
+            api_key=settings.anthropic_api_key,
+            cache_dir=cache_dir,
+        )
 
     # Step 3: Run extraction on each note
     logger.info("Running extraction pipeline on %d notes...", len(notes))
-    cost_tracker = CostTracker(is_batch=False)
 
     retriever = None
     if use_rag:
@@ -151,10 +217,12 @@ def run_evaluation(
         model=model or DEFAULT_MODEL,
         cost_tracker=cost_tracker,
         retriever=retriever,
+        system_prompt=system_prompt,
     )
 
     extractions: dict[int, ClinicalExtraction] = {}
     failed: list[int] = []
+    batch_requests: dict[str, dict] = {}
 
     for hadm_id, note_text in notes.items():
         # Check cache first
@@ -162,6 +230,10 @@ def run_evaluation(
         if cached is not None:
             extractions[hadm_id] = cached
             logger.info("Loaded cached extraction for hadm_id=%d", hadm_id)
+            continue
+
+        if batch:
+            batch_requests[str(hadm_id)] = extractor.build_request_params(note_text)
             continue
 
         try:
@@ -174,6 +246,28 @@ def run_evaluation(
         except ExtractionError:
             logger.exception("Extraction failed for hadm_id=%d", hadm_id)
             failed.append(hadm_id)
+
+    if batch_requests:
+        messages = run_batch(extractor.client, batch_requests, label="extraction")
+        for custom_id in batch_requests:
+            hadm_id = int(custom_id)
+            message = messages.get(custom_id)
+            if message is None:
+                failed.append(hadm_id)
+                continue
+            try:
+                extraction = extractor._parse_response(message, custom_id)
+            except Exception:
+                logger.exception("Could not parse batch extraction for hadm_id=%d", hadm_id)
+                failed.append(hadm_id)
+                continue
+            extractions[hadm_id] = extraction
+            _save_extraction(cache_dir, hadm_id, extraction)
+            cost_tracker.record(
+                model=extractor.model,
+                input_tokens=message.usage.input_tokens,
+                output_tokens=message.usage.output_tokens,
+            )
 
     # Step 4: Score each extraction
     logger.info("Scoring %d extractions...", len(extractions))
@@ -229,11 +323,16 @@ def run_evaluation(
 
     # Record run in history
     duration = time.monotonic() - start_time
+    description = description or "evaluation run"
+    if batch:
+        description += " [batch]"
+    if prompt_file is not None:
+        description += f" [prompt: {prompt_file.name}]"
     tracker = RunTracker(cache_dir / "run_history.json")
     run_record = RunRecord(
         model=extractor.model,
         n_admissions=len(extractions),
-        description=description or "evaluation run",
+        description=description,
         diagnoses=overall.get("diagnoses", {}),
         procedures=overall.get("procedures", {}),
         medications=overall.get("medications", {}),
@@ -296,6 +395,23 @@ if __name__ == "__main__":
         action="store_true",
         help="Enable RAG with ICD-10 codebook for grounded code suggestions",
     )
+    parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="Use the Message Batches API (50%% discount, results can take minutes to hours)",
+    )
+    parser.add_argument(
+        "--prompt-file",
+        type=Path,
+        default=None,
+        help="Text file whose contents replace the extraction system prompt",
+    )
+    parser.add_argument(
+        "--max-cost",
+        type=float,
+        default=DEFAULT_MAX_COST,
+        help="Abort a --batch run if the estimated cost in USD exceeds this (default: 3.00)",
+    )
     args = parser.parse_args()
 
     description = args.description
@@ -309,4 +425,7 @@ if __name__ == "__main__":
         description=description,
         model=args.model,
         use_rag=args.use_rag,
+        batch=args.batch,
+        prompt_file=args.prompt_file,
+        max_cost=args.max_cost,
     )
