@@ -93,7 +93,7 @@ def _build_eval_runner(
 
 
 def run_optimization(
-    mimic_path: Path,
+    mimic_path: Path | None = None,
     n_iterations: int = 5,
     target_metric: str = "diagnoses_f1",
     n_admissions: int = 10,
@@ -106,7 +106,8 @@ def run_optimization(
     Uses a small eval set (default 10 admissions) for fast iteration.
     """
     settings = settings or get_settings()
-    cache_dir = settings.data_dir / "optimization"
+    mimic_path = mimic_path or settings.mimic_hosp_dir
+    cache_dir = settings.optimization_dir
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     model = model or DEFAULT_MODEL
@@ -157,7 +158,7 @@ def run_optimization(
     )
 
     # Record in experiment tracker
-    tracker = RunTracker(settings.data_dir / "evaluation" / "run_history.json")
+    tracker = RunTracker(settings.evaluation_dir / "run_history.json")
     best = result.get("best_metrics", {})
     run_record = RunRecord(
         model=model,
@@ -184,8 +185,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--mimic-path",
         type=Path,
-        required=True,
-        help="Path to MIMIC-IV demo hosp/ directory",
+        default=None,
+        help="Path to MIMIC-IV hosp/ directory (default: hosp/ of the MIMIC_SOURCE root)",
     )
     parser.add_argument(
         "--n-iterations",
