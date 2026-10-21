@@ -16,6 +16,10 @@ class Settings(BaseSettings):
         default="",
         description="Anthropic API key for Claude access (required for extraction)",
     )
+    openai_compat_api_key: str = Field(
+        default="",
+        description="Bearer token for an OpenAI-compatible extraction server (omlx needs one)",
+    )
     database_url: str = Field(
         default="sqlite:///data/clinical_notes.db",
         description="Database connection string (SQLite default, Postgres for production)",

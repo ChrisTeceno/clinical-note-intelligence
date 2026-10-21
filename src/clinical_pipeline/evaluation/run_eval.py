@@ -36,10 +36,14 @@ from clinical_pipeline.evaluation.synthetic_notes import (
 from clinical_pipeline.extraction.cost_tracker import CostTracker
 from clinical_pipeline.extraction.extractor import DEFAULT_MODEL
 from clinical_pipeline.extraction.extractor import ClinicalExtractor, ExtractionError
+from clinical_pipeline.extraction.openai_compat import OpenAICompatExtractor
 from clinical_pipeline.extraction.models import ClinicalExtraction
 from clinical_pipeline.extraction.prompts import EXTRACTION_TOOL, SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
+
+ANTHROPIC_PROVIDER = "anthropic"
+OPENAI_COMPAT_PROVIDER = "openai-compat"
 
 
 @dataclass(slots=True)
@@ -66,22 +70,37 @@ def _sha256(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def _config_key(model: str, system_prompt: str, use_rag: bool) -> str:
-    """Short hash of everything that changes an extraction's output."""
-    payload = json.dumps(
-        {
-            "model": model,
-            "system_prompt": system_prompt,
-            "use_rag": use_rag,
-            "tool": EXTRACTION_TOOL,
-        },
-        sort_keys=True,
-    )
-    return _sha256(payload)[:12]
+def _config_key(
+    model: str,
+    system_prompt: str,
+    use_rag: bool,
+    provider: str = ANTHROPIC_PROVIDER,
+    base_url: str = "",
+) -> str:
+    """Short hash of everything that changes an extraction's output.
+
+    The Anthropic provider hashes exactly as before, so existing keyed directories stay valid;
+    any other provider adds itself and its base URL to the hash.
+    """
+    config = {
+        "model": model,
+        "system_prompt": system_prompt,
+        "use_rag": use_rag,
+        "tool": EXTRACTION_TOOL,
+    }
+    if provider != ANTHROPIC_PROVIDER:
+        config["provider"] = provider
+        config["base_url"] = base_url.rstrip("/")
+    return _sha256(json.dumps(config, sort_keys=True))[:12]
 
 
 def _extractions_dir(
-    cache_dir: Path, model: str, system_prompt: str, use_rag: bool
+    cache_dir: Path,
+    model: str,
+    system_prompt: str,
+    use_rag: bool,
+    provider: str = ANTHROPIC_PROVIDER,
+    base_url: str = "",
 ) -> Path:
     """Directory holding extractions for one config.
 
@@ -89,20 +108,27 @@ def _extractions_dir(
     any other config gets ``extractions/<key>/`` so a prompt or model change can never
     reuse another config's results.
     """
-    key = _config_key(model, system_prompt, use_rag)
+    key = _config_key(model, system_prompt, use_rag, provider, base_url)
     if key == _config_key(DEFAULT_MODEL, SYSTEM_PROMPT, False):
         return cache_dir / "extractions"
     return cache_dir / "extractions" / key
 
 
 def _write_extractions_config(
-    out_dir: Path, model: str, system_prompt: str, use_rag: bool
+    out_dir: Path,
+    model: str,
+    system_prompt: str,
+    use_rag: bool,
+    provider: str = ANTHROPIC_PROVIDER,
+    base_url: str = "",
 ) -> None:
     """Record the config behind a keyed extractions directory (the legacy one has none)."""
     if out_dir.name == "extractions":
         return
     out_dir.mkdir(parents=True, exist_ok=True)
     config = {"model": model, "prompt_sha": _sha256(system_prompt)[:12], "use_rag": use_rag}
+    if provider != ANTHROPIC_PROVIDER:
+        config.update({"provider": provider, "base_url": base_url.rstrip("/")})
     (out_dir / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
 
 
@@ -168,6 +194,8 @@ def run_evaluation(
     batch: bool = False,
     prompt_file: Path | None = None,
     max_cost: float = DEFAULT_MAX_COST,
+    provider: str = ANTHROPIC_PROVIDER,
+    base_url: str = "",
 ) -> EvaluationSummary:
     """Run the full evaluation pipeline.
 
@@ -182,9 +210,16 @@ def run_evaluation(
     With ``batch`` set, note generation and extraction go through the Message
     Batches API (50% discount); ``prompt_file`` replaces the extraction system prompt.
     Results are cached in ``settings.evaluation_dir`` to avoid re-generating on repeated runs;
-    extractions are keyed by model, prompt, RAG and tool schema.
+    extractions are keyed by provider, base URL, model, prompt, RAG and tool schema.
+    With ``provider="openai-compat"`` extraction goes to the OpenAI-compatible server at
+    ``base_url`` (a local model); note generation still uses Claude.
     """
     start_time = time.monotonic()
+    if provider == OPENAI_COMPAT_PROVIDER:
+        if not (base_url and model):
+            raise ValueError("--provider openai-compat requires --base-url and --model")
+        if batch:
+            raise ValueError("--batch is only available with --provider anthropic")
     settings = settings or get_settings()
     mimic_path = mimic_path or settings.mimic_hosp_dir
     cache_dir = settings.evaluation_dir
@@ -231,7 +266,9 @@ def run_evaluation(
 
     cost_tracker = CostTracker(is_batch=batch)
     extraction_model = model or DEFAULT_MODEL
-    extractions_dir = _extractions_dir(cache_dir, extraction_model, system_prompt, use_rag)
+    extractions_dir = _extractions_dir(
+        cache_dir, extraction_model, system_prompt, use_rag, provider, base_url
+    )
 
     if batch:
         _check_batch_budget(
@@ -265,21 +302,35 @@ def run_evaluation(
         logger.info("Building ICD-10 retriever from %s...", code_table_path)
         retriever = ICD10Retriever(code_table_path)
 
-    extractor = ClinicalExtractor(
-        api_key=settings.anthropic_api_key,
-        model=extraction_model,
-        cost_tracker=cost_tracker,
-        retriever=retriever,
-        system_prompt=system_prompt,
-    )
+    if provider == OPENAI_COMPAT_PROVIDER:
+        extractor: ClinicalExtractor = OpenAICompatExtractor(
+            base_url=base_url,
+            model=extraction_model,
+            api_key=settings.openai_compat_api_key,
+            cost_tracker=cost_tracker,
+            retriever=retriever,
+            system_prompt=system_prompt,
+        )
+    else:
+        extractor = ClinicalExtractor(
+            api_key=settings.anthropic_api_key,
+            model=extraction_model,
+            cost_tracker=cost_tracker,
+            retriever=retriever,
+            system_prompt=system_prompt,
+        )
 
     logger.info("Extraction cache: %s", extractions_dir)
-    _write_extractions_config(extractions_dir, extraction_model, system_prompt, use_rag)
+    _write_extractions_config(
+        extractions_dir, extraction_model, system_prompt, use_rag, provider, base_url
+    )
 
     extractions: dict[int, ClinicalExtraction] = {}
     failed: list[int] = []
     batch_requests: dict[str, dict] = {}
 
+    extract_start = time.monotonic()
+    n_extracted = 0
     for hadm_id, note_text in notes.items():
         # Check cache first
         cached = _load_cached_extraction(extractions_dir, hadm_id)
@@ -302,6 +353,18 @@ def run_evaluation(
         except ExtractionError:
             logger.exception("Extraction failed for hadm_id=%d", hadm_id)
             failed.append(hadm_id)
+        n_extracted += 1
+
+    if n_extracted:
+        logger.info(
+            "Extracted %d notes in %.1fs (%.1fs per note), %d failed",
+            n_extracted,
+            time.monotonic() - extract_start,
+            (time.monotonic() - extract_start) / n_extracted,
+            len(failed),
+        )
+    if isinstance(extractor, OpenAICompatExtractor):
+        logger.info("Failed attempts by kind: %s", dict(extractor.failure_counts))
 
     if batch_requests:
         messages = run_batch(extractor.client, batch_requests, label="extraction")
@@ -382,6 +445,8 @@ def run_evaluation(
     description = description or "evaluation run"
     if batch:
         description += " [batch]"
+    if provider != ANTHROPIC_PROVIDER:
+        description += f" [{provider}: {base_url}]"
     if prompt_file is not None:
         description += f" [prompt: {prompt_file.name}]"
     tracker = RunTracker(cache_dir / "run_history.json")
@@ -468,6 +533,18 @@ if __name__ == "__main__":
         default=DEFAULT_MAX_COST,
         help="Abort a --batch run if the estimated cost in USD exceeds this (default: 3.00)",
     )
+    parser.add_argument(
+        "--provider",
+        choices=[ANTHROPIC_PROVIDER, OPENAI_COMPAT_PROVIDER],
+        default=ANTHROPIC_PROVIDER,
+        help="Extraction backend: Claude, or an OpenAI-compatible server such as Ollama or omlx",
+    )
+    parser.add_argument(
+        "--base-url",
+        type=str,
+        default="",
+        help="Base URL of the OpenAI-compatible server, e.g. http://127.0.0.1:11434/v1",
+    )
     args = parser.parse_args()
 
     description = args.description
@@ -484,4 +561,6 @@ if __name__ == "__main__":
         batch=args.batch,
         prompt_file=args.prompt_file,
         max_cost=args.max_cost,
+        provider=args.provider,
+        base_url=args.base_url,
     )
