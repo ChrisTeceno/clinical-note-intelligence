@@ -215,8 +215,8 @@ st.divider()
 st.subheader("Planned Updates")
 
 planned = [
-    ("Real MIMIC-IV Note Evaluation", "Full MIMIC-IV 3.1 source is supported (MIMIC_SOURCE=full) but not yet run; real notes pending PhysioNet credentialing (CITI training complete, application submitted). Will replace synthetic notes with real discharge summaries for rigorous F1 evaluation."),
-    ("MIMIC-CXR Imaging Integration", "Same PhysioNet credentialing unlocks 227K chest X-rays with paired radiology reports for multimodal cross-referencing."),
+    ("Real MIMIC-IV Note Evaluation", "Full MIMIC-IV 3.1 source is supported (MIMIC_SOURCE=full) but not yet run; real notes need access to MIMIC-IV-Note, a separate PhysioNet project, and are a follow-up. Will replace synthetic notes with real discharge summaries for rigorous F1 evaluation."),
+    ("MIMIC-CXR Imaging Integration", "MIMIC-CXR is a separate PhysioNet project; access to it unlocks 227K chest X-rays with paired radiology reports for multimodal cross-referencing."),
     ("Full 2,358 Note Extraction", "Scale from 50-note demo to full dataset using Anthropic Batch API for 50% cost reduction."),
     ("Prompt Optimization", "Systematic prompt engineering experiments with specialty-specific few-shot examples to improve per-specialty F1."),
     ("Semantic ICD-10 Matching", "Replace TF-IDF with embedding-based retrieval (SNOMED-to-ICD crosswalk) for clinically-validated code mapping."),

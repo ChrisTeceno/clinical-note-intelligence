@@ -55,7 +55,7 @@ Demo results: scored against MIMIC-IV demo discharge summaries (30 admissions). 
 - Diagnosis extraction is the strongest signal; high precision means low hallucination rate.
 - Procedure recall is limited by clinical note verbosity — many procedures are implied, not stated.
 - Medication precision is very high (0.93); low recall reflects that discharge summaries reference only a subset of the full medication list present in structured data. Full-text clinical notes are expected to close this gap.
-- Evaluation uses synthetic notes generated from structured data. Real MIMIC-IV clinical note evaluation is planned pending PhysioNet credentialing.
+- Evaluation uses synthetic notes generated from structured data. Real MIMIC-IV clinical note evaluation needs access to MIMIC-IV-Note, a separate PhysioNet project, and is a follow-up.
 - These numbers are from the demo. No full-data results are reported yet.
 
 ### Data sources
@@ -183,7 +183,7 @@ The clinical background behind this project is direct: I served as a medic in th
 
 ## Roadmap
 
-- [ ] Full MIMIC-IV evaluation: loader and `MIMIC_SOURCE=full` support exist; full-data evaluation runs are pending, and real clinical notes (MIMIC-IV-Note) are not used yet
+- [ ] Full MIMIC-IV evaluation: loader and `MIMIC_SOURCE=full` support exist; full-data evaluation runs are pending, and real clinical notes (MIMIC-IV-Note, a separate PhysioNet project) are a follow-up
 - [ ] Medical imaging integration — MIMIC-CXR chest X-ray classification with TorchXRayVision
 - [ ] Databricks production deployment with Delta tables
 - [ ] Prompt optimization experiments (Sonnet vs. Haiku, few-shot variants)
