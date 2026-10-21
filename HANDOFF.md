@@ -39,7 +39,7 @@ End-to-end clinical data automation system for a job application. Extracts diagn
 1. **Baseline Haiku**: Dx F1=81.5%, Px F1=55.8%, Rx F1=47.5%
 2. **Sonnet 4**: Dx F1=82.1% (best precision 93.5%)
 3. **Haiku + RAG**: Rx F1=51.1% (best medication extraction)
-4. **Prompt optimization**: Dx F1=83.8% (kept evidence_strictness + reduce_hallucination)
+4. **Prompt optimization (unvalidated)**: the run did not test its candidates. The prompt patch never reached the extractor (fixed in PR #2), so every candidate ran with the default prompt and the Dx F1=83.8% figure is not a real gain. On 30 full MIMIC-IV admissions the saved best prompt lowered medication F1 from 0.560 to 0.443. The default SYSTEM_PROMPT remains the production prompt.
 
 ### Deployment Command
 ```bash
