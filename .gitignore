@@ -77,3 +77,6 @@ data/evaluation/synthetic_notes/
 data/evaluation/selected_hadm_ids.json
 data/evaluation/run_history.json
 data/processed/
+
+# Walkthrough docs (personal study notes, not for repo)
+notebooks/*_walkthrough.md
