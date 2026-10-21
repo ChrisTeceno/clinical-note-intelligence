@@ -58,13 +58,8 @@ def _build_eval_runner(
             model=model,
             cost_tracker=cost_tracker,
             retriever=retriever,
+            system_prompt=system_prompt,
         )
-
-        # Monkey-patch the system prompt for this eval run
-        import clinical_pipeline.extraction.prompts as prompts_module
-
-        original_prompt = prompts_module.SYSTEM_PROMPT
-        prompts_module.SYSTEM_PROMPT = system_prompt
 
         extractions = {}
         for hadm_id, note_text in notes.items():
@@ -76,9 +71,6 @@ def _build_eval_runner(
                 extractions[hadm_id] = extraction
             except ExtractionError:
                 logger.warning("Extraction failed for hadm_id=%d during optimization", hadm_id)
-
-        # Restore original prompt
-        prompts_module.SYSTEM_PROMPT = original_prompt
 
         # Score
         all_results = {}
