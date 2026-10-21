@@ -41,6 +41,10 @@ with col2:
     st.markdown("**Best Optimized Prompt**")
     if BEST_PROMPT_PATH.exists():
         best_prompt = BEST_PROMPT_PATH.read_text(encoding="utf-8")
+        st.warning(
+            "Unvalidated: this prompt is from a run that did not actually test its "
+            "candidates, and it is not used in production."
+        )
         st.code(best_prompt, language="text")
         if best_prompt == BASELINE_PROMPT:
             st.info("Best prompt is identical to baseline (no improvements found yet).")
