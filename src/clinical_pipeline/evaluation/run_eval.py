@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import time
@@ -36,7 +37,7 @@ from clinical_pipeline.extraction.cost_tracker import CostTracker
 from clinical_pipeline.extraction.extractor import DEFAULT_MODEL
 from clinical_pipeline.extraction.extractor import ClinicalExtractor, ExtractionError
 from clinical_pipeline.extraction.models import ClinicalExtraction
-from clinical_pipeline.extraction.prompts import SYSTEM_PROMPT
+from clinical_pipeline.extraction.prompts import EXTRACTION_TOOL, SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
 
@@ -61,20 +62,63 @@ class EvaluationSummary:
         }
 
 
-def _load_cached_extraction(cache_dir: Path, hadm_id: int) -> ClinicalExtraction | None:
+def _sha256(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def _config_key(model: str, system_prompt: str, use_rag: bool) -> str:
+    """Short hash of everything that changes an extraction's output."""
+    payload = json.dumps(
+        {
+            "model": model,
+            "system_prompt": system_prompt,
+            "use_rag": use_rag,
+            "tool": EXTRACTION_TOOL,
+        },
+        sort_keys=True,
+    )
+    return _sha256(payload)[:12]
+
+
+def _extractions_dir(
+    cache_dir: Path, model: str, system_prompt: str, use_rag: bool
+) -> Path:
+    """Directory holding extractions for one config.
+
+    The exact default config keeps the legacy ``extractions/`` path (the app reads it);
+    any other config gets ``extractions/<key>/`` so a prompt or model change can never
+    reuse another config's results.
+    """
+    key = _config_key(model, system_prompt, use_rag)
+    if key == _config_key(DEFAULT_MODEL, SYSTEM_PROMPT, False):
+        return cache_dir / "extractions"
+    return cache_dir / "extractions" / key
+
+
+def _write_extractions_config(
+    out_dir: Path, model: str, system_prompt: str, use_rag: bool
+) -> None:
+    """Record the config behind a keyed extractions directory (the legacy one has none)."""
+    if out_dir.name == "extractions":
+        return
+    out_dir.mkdir(parents=True, exist_ok=True)
+    config = {"model": model, "prompt_sha": _sha256(system_prompt)[:12], "use_rag": use_rag}
+    (out_dir / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
+
+
+def _load_cached_extraction(extractions_dir: Path, hadm_id: int) -> ClinicalExtraction | None:
     """Load a cached extraction result if available."""
-    path = cache_dir / "extractions" / f"{hadm_id}.json"
+    path = extractions_dir / f"{hadm_id}.json"
     if path.exists():
         data = json.loads(path.read_text(encoding="utf-8"))
         return ClinicalExtraction.model_validate(data)
     return None
 
 
-def _save_extraction(cache_dir: Path, hadm_id: int, extraction: ClinicalExtraction) -> None:
+def _save_extraction(extractions_dir: Path, hadm_id: int, extraction: ClinicalExtraction) -> None:
     """Cache an extraction result."""
-    out_dir = cache_dir / "extractions"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / f"{hadm_id}.json"
+    extractions_dir.mkdir(parents=True, exist_ok=True)
+    path = extractions_dir / f"{hadm_id}.json"
     path.write_text(extraction.model_dump_json(indent=2), encoding="utf-8")
 
 
@@ -82,14 +126,18 @@ DEFAULT_MAX_COST = 3.00
 
 
 def _check_batch_budget(
-    cache_dir: Path, hadm_ids: list[int], extraction_model: str, max_cost: float
+    cache_dir: Path,
+    hadm_ids: list[int],
+    extraction_model: str,
+    max_cost: float,
+    system_prompt: str = SYSTEM_PROMPT,
+    use_rag: bool = False,
 ) -> None:
     """Log the estimated batch cost for uncached work and abort if it exceeds max_cost."""
     notes_dir = cache_dir / "synthetic_notes"
     n_notes = sum(1 for h in hadm_ids if not (notes_dir / f"{h}.txt").exists())
-    n_extractions = sum(
-        1 for h in hadm_ids if not (cache_dir / "extractions" / f"{h}.json").exists()
-    )
+    extractions_dir = _extractions_dir(cache_dir, extraction_model, system_prompt, use_rag)
+    n_extractions = sum(1 for h in hadm_ids if not (extractions_dir / f"{h}.json").exists())
     note_cost = estimate_batch_cost(GENERATION_MODEL, n_notes, ESTIMATED_NOTE_TOKENS)
     extraction_cost = estimate_batch_cost(
         extraction_model, n_extractions, ESTIMATED_EXTRACTION_TOKENS
@@ -133,7 +181,8 @@ def run_evaluation(
     ``mimic_path`` defaults to the active source's ``hosp/`` directory.
     With ``batch`` set, note generation and extraction go through the Message
     Batches API (50% discount); ``prompt_file`` replaces the extraction system prompt.
-    Results are cached in ``settings.evaluation_dir`` to avoid re-generating on repeated runs.
+    Results are cached in ``settings.evaluation_dir`` to avoid re-generating on repeated runs;
+    extractions are keyed by model, prompt, RAG and tool schema.
     """
     start_time = time.monotonic()
     settings = settings or get_settings()
@@ -181,9 +230,13 @@ def run_evaluation(
         logger.info("Using extraction system prompt from %s", prompt_file)
 
     cost_tracker = CostTracker(is_batch=batch)
+    extraction_model = model or DEFAULT_MODEL
+    extractions_dir = _extractions_dir(cache_dir, extraction_model, system_prompt, use_rag)
 
     if batch:
-        _check_batch_budget(cache_dir, sorted(ground_truths), model or DEFAULT_MODEL, max_cost)
+        _check_batch_budget(
+            cache_dir, sorted(ground_truths), extraction_model, max_cost, system_prompt, use_rag
+        )
 
     # Step 2: Generate synthetic notes
     logger.info("Generating synthetic notes...")
@@ -214,11 +267,14 @@ def run_evaluation(
 
     extractor = ClinicalExtractor(
         api_key=settings.anthropic_api_key,
-        model=model or DEFAULT_MODEL,
+        model=extraction_model,
         cost_tracker=cost_tracker,
         retriever=retriever,
         system_prompt=system_prompt,
     )
+
+    logger.info("Extraction cache: %s", extractions_dir)
+    _write_extractions_config(extractions_dir, extraction_model, system_prompt, use_rag)
 
     extractions: dict[int, ClinicalExtraction] = {}
     failed: list[int] = []
@@ -226,7 +282,7 @@ def run_evaluation(
 
     for hadm_id, note_text in notes.items():
         # Check cache first
-        cached = _load_cached_extraction(cache_dir, hadm_id)
+        cached = _load_cached_extraction(extractions_dir, hadm_id)
         if cached is not None:
             extractions[hadm_id] = cached
             logger.info("Loaded cached extraction for hadm_id=%d", hadm_id)
@@ -242,7 +298,7 @@ def run_evaluation(
                 transcription=note_text,
             )
             extractions[hadm_id] = extraction
-            _save_extraction(cache_dir, hadm_id, extraction)
+            _save_extraction(extractions_dir, hadm_id, extraction)
         except ExtractionError:
             logger.exception("Extraction failed for hadm_id=%d", hadm_id)
             failed.append(hadm_id)
@@ -262,7 +318,7 @@ def run_evaluation(
                 failed.append(hadm_id)
                 continue
             extractions[hadm_id] = extraction
-            _save_extraction(cache_dir, hadm_id, extraction)
+            _save_extraction(extractions_dir, hadm_id, extraction)
             cost_tracker.record(
                 model=extractor.model,
                 input_tokens=message.usage.input_tokens,

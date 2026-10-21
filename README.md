@@ -70,7 +70,7 @@ The evaluation can run against the MIMIC-IV demo (default) or the credentialed f
 
 `--mimic-path` is optional for `run_eval` and `run_optimize`; it defaults to the active source. Demo output goes to `data/evaluation/` and `data/optimization/`. Full output goes to `data/full/`, which is gitignored, and the app shows only aggregate metrics in full mode. Full data is covered by the PhysioNet DUA and stays local. Notes are still synthetic; MIMIC-IV-Note is not used.
 
-`run_eval --batch` sends note generation and extraction through the Message Batches API at half price (aborts if the estimate exceeds `--max-cost`, default 3.00 USD); `--prompt-file PATH` replaces the extraction system prompt.
+`run_eval --batch` sends note generation and extraction through the Message Batches API at half price (aborts if the estimate exceeds `--max-cost`, default 3.00 USD); `--prompt-file PATH` replaces the extraction system prompt. Extractions are cached per model, prompt and RAG setting (non-default configs under `extractions/<key>/`), so changing any of them re-runs extraction.
 
 ---
 
