@@ -1,4 +1,4 @@
-"""Load and structure MIMIC-IV demo ground truth for evaluation."""
+"""Load and structure MIMIC-IV ground truth for evaluation."""
 
 from __future__ import annotations
 
@@ -9,6 +9,30 @@ from pathlib import Path
 import pandas as pd
 
 logger = logging.getLogger(__name__)
+
+# Rows per chunk when streaming prescriptions.csv.gz (the full table has ~15M rows)
+RX_CHUNK_ROWS = 1_000_000
+
+
+def _read_diagnoses(mimic_path: Path) -> pd.DataFrame:
+    """Read only the needed diagnoses_icd columns, ICD-10 rows only."""
+    dx_df = pd.read_csv(
+        mimic_path / "diagnoses_icd.csv.gz",
+        usecols=["hadm_id", "seq_num", "icd_code", "icd_version"],
+    )
+    return dx_df[dx_df["icd_version"] == 10]
+
+
+def _read_prescriptions(mimic_path: Path, hadm_set: set[int]) -> pd.DataFrame:
+    """Stream prescriptions in chunks, keeping only rows for the selected admissions."""
+    chunks = []
+    for chunk in pd.read_csv(
+        mimic_path / "prescriptions.csv.gz",
+        usecols=["hadm_id", "drug", "dose_val_rx", "dose_unit_rx", "route"],
+        chunksize=RX_CHUNK_ROWS,
+    ):
+        chunks.append(chunk[chunk["hadm_id"].isin(hadm_set)])
+    return pd.concat(chunks, ignore_index=True)
 
 
 @dataclass(frozen=True, slots=True)
@@ -40,12 +64,12 @@ class GroundTruth:
 
 
 def load_ground_truth(mimic_path: Path, hadm_ids: list[int]) -> dict[int, GroundTruth]:
-    """Load ground truth from MIMIC demo for selected admissions.
+    """Load ground truth from MIMIC-IV for selected admissions.
 
     Parameters
     ----------
     mimic_path:
-        Path to the ``hosp/`` directory of the MIMIC-IV demo.
+        Path to the ``hosp/`` directory of the MIMIC-IV demo or full dataset.
     hadm_ids:
         Admission IDs to load (must be ICD-10 admissions).
 
@@ -56,26 +80,34 @@ def load_ground_truth(mimic_path: Path, hadm_ids: list[int]) -> dict[int, Ground
     hadm_set = set(hadm_ids)
 
     # --- Diagnoses ---
-    dx_df = pd.read_csv(mimic_path / "diagnoses_icd.csv.gz")
-    dx_df = dx_df[(dx_df["icd_version"] == 10) & (dx_df["hadm_id"].isin(hadm_set))]
+    dx_df = _read_diagnoses(mimic_path)
+    dx_df = dx_df[dx_df["hadm_id"].isin(hadm_set)]
 
-    d_dx = pd.read_csv(mimic_path / "d_icd_diagnoses.csv.gz")
+    d_dx = pd.read_csv(
+        mimic_path / "d_icd_diagnoses.csv.gz",
+        usecols=["icd_code", "icd_version", "long_title"],
+    )
     d_dx = d_dx[d_dx["icd_version"] == 10].rename(columns={"long_title": "description"})
     dx_df = dx_df.merge(d_dx[["icd_code", "description"]], on="icd_code", how="left")
     dx_df["description"] = dx_df["description"].fillna("")
 
     # --- Procedures ---
-    proc_df = pd.read_csv(mimic_path / "procedures_icd.csv.gz")
+    proc_df = pd.read_csv(
+        mimic_path / "procedures_icd.csv.gz",
+        usecols=["hadm_id", "icd_code", "icd_version"],
+    )
     proc_df = proc_df[(proc_df["icd_version"] == 10) & (proc_df["hadm_id"].isin(hadm_set))]
 
-    d_proc = pd.read_csv(mimic_path / "d_icd_procedures.csv.gz")
+    d_proc = pd.read_csv(
+        mimic_path / "d_icd_procedures.csv.gz",
+        usecols=["icd_code", "icd_version", "long_title"],
+    )
     d_proc = d_proc[d_proc["icd_version"] == 10].rename(columns={"long_title": "description"})
     proc_df = proc_df.merge(d_proc[["icd_code", "description"]], on="icd_code", how="left")
     proc_df["description"] = proc_df["description"].fillna("")
 
     # --- Prescriptions ---
-    rx_df = pd.read_csv(mimic_path / "prescriptions.csv.gz")
-    rx_df = rx_df[rx_df["hadm_id"].isin(hadm_set)]
+    rx_df = _read_prescriptions(mimic_path, hadm_set)
     # Deduplicate: keep unique drug/dose/route per admission
     rx_df = rx_df.drop_duplicates(subset=["hadm_id", "drug", "dose_val_rx", "route"])
 
@@ -135,13 +167,12 @@ def load_ground_truth(mimic_path: Path, hadm_ids: list[int]) -> dict[int, Ground
 
 
 def select_admissions(mimic_path: Path, n: int = 30, seed: int = 42) -> list[int]:
-    """Select a diverse set of ICD-10 admissions from the MIMIC demo.
+    """Select a diverse set of ICD-10 admissions from MIMIC-IV (demo or full).
 
     Picks admissions with a mix of diagnosis counts: some simple (5-10 dx),
     some moderate (11-20), and some complex (20+).
     """
-    dx_df = pd.read_csv(mimic_path / "diagnoses_icd.csv.gz")
-    dx10 = dx_df[dx_df["icd_version"] == 10]
+    dx10 = _read_diagnoses(mimic_path)
     counts = dx10.groupby("hadm_id").size().reset_index(name="n_dx")
 
     # Bin into complexity tiers
