@@ -1,12 +1,13 @@
 """Experiments -- run history and performance trends."""
 
 import json
-from pathlib import Path
 
 import altair as alt
 import pandas as pd
 import streamlit as st
 from tooltips import TOOLTIP_CSS, tt_heading
+
+from clinical_pipeline.config import get_settings
 
 # ---------------------------------------------------------------------------
 # Page header
@@ -22,10 +23,18 @@ st.info(
     icon=":material/labs:",
 )
 
+if settings.mimic_source == "full":
+    st.info(
+        "Results on this page come from credentialed MIMIC-IV data. "
+        "Only aggregate metrics are shown.",
+        icon=":material/lock:",
+    )
+
 # ---------------------------------------------------------------------------
 # Load run history
 # ---------------------------------------------------------------------------
-EVAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "evaluation"
+settings = get_settings()
+EVAL_DIR = settings.evaluation_dir
 HISTORY_PATH = EVAL_DIR / "run_history.json"
 RESULTS_PATH = EVAL_DIR / "evaluation_results.json"
 COST_PATH = EVAL_DIR / "eval_cost_report.json"
@@ -99,8 +108,10 @@ if not runs:
         "No experiment history found. Run the evaluation pipeline first:\n\n"
         "```\n"
         "PYTHONPATH=src python -m clinical_pipeline.evaluation.run_eval "
-        "--mimic-path /path/to/mimic-iv-demo/hosp --description 'baseline'\n"
-        "```"
+        "--description 'baseline'\n"
+        "```\n\n"
+        "`MIMIC_SOURCE` (`demo` or `full`) selects the data source. "
+        "`--mimic-path` is optional and overrides the source's default location."
     )
     st.stop()
 

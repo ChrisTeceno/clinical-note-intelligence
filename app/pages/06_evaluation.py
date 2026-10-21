@@ -1,12 +1,16 @@
 """Evaluation — synthetic data extraction quality metrics."""
 
 import json
-from pathlib import Path
 
 import altair as alt
 import pandas as pd
 import streamlit as st
 from tooltips import TOOLTIP_CSS, tt, tt_heading
+
+from clinical_pipeline.config import get_settings
+
+settings = get_settings()
+FULL_MODE = settings.mimic_source == "full"
 
 # ---------------------------------------------------------------------------
 # Page header
@@ -24,19 +28,27 @@ st.info(
     icon=":material/science:",
 )
 
+if FULL_MODE:
+    st.info(
+        "Results on this page come from credentialed MIMIC-IV data. "
+        "Only aggregate metrics are shown.",
+        icon=":material/lock:",
+    )
+
 # ---------------------------------------------------------------------------
 # Load results
 # ---------------------------------------------------------------------------
-EVAL_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "evaluation"
+EVAL_DIR = settings.evaluation_dir
 RESULTS_PATH = EVAL_DIR / "evaluation_results.json"
 
 if not RESULTS_PATH.exists():
     st.warning(
         "No evaluation results found. Run the evaluation pipeline first:\n\n"
         "```\n"
-        "PYTHONPATH=src python -m clinical_pipeline.evaluation.run_eval "
-        "--mimic-path /path/to/mimic-iv-demo/hosp\n"
-        "```"
+        "PYTHONPATH=src python -m clinical_pipeline.evaluation.run_eval\n"
+        "```\n\n"
+        "`MIMIC_SOURCE` (`demo` or `full`) selects the data source. "
+        "`--mimic-path` is optional and overrides the source's default location."
     )
     st.stop()
 
@@ -126,224 +138,225 @@ if prf_rows:
 
 st.divider()
 
-# ---------------------------------------------------------------------------
-# Per-admission breakdown
-# ---------------------------------------------------------------------------
-st.subheader("Per-Admission Breakdown")
+if not FULL_MODE:
+    # ---------------------------------------------------------------------------
+    # Per-admission breakdown
+    # ---------------------------------------------------------------------------
+    st.subheader("Per-Admission Breakdown")
 
-admission_rows = []
-for hadm_id, results in per_admission.items():
-    row = {"Admission ID": int(hadm_id)}
-    for r in results:
-        etype = r["entity_type"]
-        row[f"{etype.title()} F1"] = r["f1"]
-        row[f"{etype.title()} P"] = r["precision"]
-        row[f"{etype.title()} R"] = r["recall"]
-        row[f"{etype.title()} TP"] = r["true_positives"]
-        row[f"{etype.title()} FP"] = r["false_positives"]
-        row[f"{etype.title()} FN"] = r["false_negatives"]
-    admission_rows.append(row)
+    admission_rows = []
+    for hadm_id, results in per_admission.items():
+        row = {"Admission ID": int(hadm_id)}
+        for r in results:
+            etype = r["entity_type"]
+            row[f"{etype.title()} F1"] = r["f1"]
+            row[f"{etype.title()} P"] = r["precision"]
+            row[f"{etype.title()} R"] = r["recall"]
+            row[f"{etype.title()} TP"] = r["true_positives"]
+            row[f"{etype.title()} FP"] = r["false_positives"]
+            row[f"{etype.title()} FN"] = r["false_negatives"]
+        admission_rows.append(row)
 
-if admission_rows:
-    adm_df = pd.DataFrame(admission_rows).sort_values("Admission ID")
-    st.dataframe(
-        adm_df,
-        column_config={
-            "Admission ID": st.column_config.NumberColumn(format="%d"),
-            "Diagnoses F1": st.column_config.ProgressColumn(
-                "Dx F1", min_value=0, max_value=1, format="%.2f"
-            ),
-            "Procedures F1": st.column_config.ProgressColumn(
-                "Proc F1", min_value=0, max_value=1, format="%.2f"
-            ),
-            "Medications F1": st.column_config.ProgressColumn(
-                "Rx F1", min_value=0, max_value=1, format="%.2f"
-            ),
-        },
-        hide_index=True,
-        use_container_width=True,
-    )
-
-st.divider()
-
-# ---------------------------------------------------------------------------
-# Synthetic Note Viewer
-# ---------------------------------------------------------------------------
-st.subheader("Synthetic Note Viewer")
-st.caption("Select an admission to view the synthetic discharge summary, ground truth, and what the pipeline extracted.")
-
-NOTES_DIR = EVAL_DIR / "synthetic_notes"
-EXTRACTIONS_DIR = EVAL_DIR / "extractions"
-GT_DIR = EVAL_DIR  # ground truth loaded from MIMIC
-
-hadm_ids_available = sorted(int(h) for h in per_admission.keys())
-selected_hadm = st.selectbox(
-    "Select Admission",
-    options=hadm_ids_available,
-    format_func=lambda x: f"Admission #{x}",
-)
-
-if selected_hadm:
-    # Load synthetic note
-    note_path = NOTES_DIR / f"{selected_hadm}.txt"
-    note_text = note_path.read_text(encoding="utf-8") if note_path.exists() else "Note not found."
-
-    # Load extraction
-    ext_path = EXTRACTIONS_DIR / f"{selected_hadm}.json"
-    extraction_data = json.loads(ext_path.read_text()) if ext_path.exists() else {}
-
-    # Get scores for this admission
-    adm_results = per_admission.get(str(selected_hadm), [])
-    score_cols = st.columns(3)
-    for col, etype in zip(score_cols, entity_types):
-        r = next((r for r in adm_results if r["entity_type"] == etype), None)
-        if r:
-            col.metric(f"{etype.title()} F1", f"{r['f1']:.0%}",
-                       help=f"P={r['precision']:.0%} R={r['recall']:.0%} | TP={r['true_positives']} FP={r['false_positives']} FN={r['false_negatives']}")
-
-    note_tab, gt_tab, ext_tab = st.tabs(["Synthetic Note", "Ground Truth", "Extracted"])
-
-    with note_tab:
-        st.markdown(
-            f"<div style='max-height:500px;overflow-y:auto;padding:12px;"
-            f"border:1px solid #ddd;border-radius:8px;font-size:0.88em;"
-            f"line-height:1.6;white-space:pre-wrap'>{note_text}</div>",
-            unsafe_allow_html=True,
+    if admission_rows:
+        adm_df = pd.DataFrame(admission_rows).sort_values("Admission ID")
+        st.dataframe(
+            adm_df,
+            column_config={
+                "Admission ID": st.column_config.NumberColumn(format="%d"),
+                "Diagnoses F1": st.column_config.ProgressColumn(
+                    "Dx F1", min_value=0, max_value=1, format="%.2f"
+                ),
+                "Procedures F1": st.column_config.ProgressColumn(
+                    "Proc F1", min_value=0, max_value=1, format="%.2f"
+                ),
+                "Medications F1": st.column_config.ProgressColumn(
+                    "Rx F1", min_value=0, max_value=1, format="%.2f"
+                ),
+            },
+            hide_index=True,
+            use_container_width=True,
         )
 
-    with gt_tab:
-        # Load ground truth from MIMIC data
-        gt_hadm_path = EVAL_DIR / "ground_truth" / f"{selected_hadm}.json"
-        if gt_hadm_path.exists():
-            gt_data = json.loads(gt_hadm_path.read_text())
-        else:
-            # Reconstruct from evaluation details
-            gt_data = None
+    st.divider()
 
-        if gt_data:
-            gt_dx = gt_data.get("diagnoses", [])
-            gt_px = gt_data.get("procedures", [])
-            gt_rx = gt_data.get("medications", [])
+    # ---------------------------------------------------------------------------
+    # Synthetic Note Viewer
+    # ---------------------------------------------------------------------------
+    st.subheader("Synthetic Note Viewer")
+    st.caption("Select an admission to view the synthetic discharge summary, ground truth, and what the pipeline extracted.")
 
-            if gt_dx:
-                st.markdown(f"**Diagnoses ({len(gt_dx)})**")
-                for d in gt_dx:
-                    st.markdown(f"- `{d.get('icd_code', '')}` — {d.get('description', '')}")
+    NOTES_DIR = EVAL_DIR / "synthetic_notes"
+    EXTRACTIONS_DIR = EVAL_DIR / "extractions"
+    GT_DIR = EVAL_DIR  # ground truth loaded from MIMIC
 
-            if gt_px:
-                st.markdown(f"**Procedures ({len(gt_px)})**")
-                for p in gt_px:
-                    st.markdown(f"- `{p.get('icd_code', '')}` — {p.get('description', '')}")
+    hadm_ids_available = sorted(int(h) for h in per_admission.keys())
+    selected_hadm = st.selectbox(
+        "Select Admission",
+        options=hadm_ids_available,
+        format_func=lambda x: f"Admission #{x}",
+    )
 
-            if gt_rx:
-                st.markdown(f"**Medications ({len(gt_rx)})**")
-                for m in gt_rx:
-                    drug = m.get("drug", "")
-                    dose = f" {m.get('dose_val', '')} {m.get('dose_unit', '')}".strip()
-                    route = m.get("route", "")
-                    st.markdown(f"- {drug}{dose} ({route})" if route else f"- {drug}{dose}")
-        else:
-            st.info("Ground truth file not cached. Run evaluation again to generate.")
+    if selected_hadm:
+        # Load synthetic note
+        note_path = NOTES_DIR / f"{selected_hadm}.txt"
+        note_text = note_path.read_text(encoding="utf-8") if note_path.exists() else "Note not found."
 
-    with ext_tab:
-        ext_dx = extraction_data.get("diagnoses", [])
-        ext_px = extraction_data.get("procedures", [])
-        ext_rx = extraction_data.get("medications", [])
+        # Load extraction
+        ext_path = EXTRACTIONS_DIR / f"{selected_hadm}.json"
+        extraction_data = json.loads(ext_path.read_text()) if ext_path.exists() else {}
 
-        if ext_dx:
-            st.markdown(f"**Extracted Diagnoses ({len(ext_dx)})**")
-            for d in ext_dx:
-                icd = d.get("icd10_suggestion", "N/A")
-                conf = d.get("confidence", "?")
-                st.markdown(f"- `{icd}` **{d['name']}** ({conf})")
+        # Get scores for this admission
+        adm_results = per_admission.get(str(selected_hadm), [])
+        score_cols = st.columns(3)
+        for col, etype in zip(score_cols, entity_types):
+            r = next((r for r in adm_results if r["entity_type"] == etype), None)
+            if r:
+                col.metric(f"{etype.title()} F1", f"{r['f1']:.0%}",
+                           help=f"P={r['precision']:.0%} R={r['recall']:.0%} | TP={r['true_positives']} FP={r['false_positives']} FN={r['false_negatives']}")
 
-        if ext_px:
-            st.markdown(f"**Extracted Procedures ({len(ext_px)})**")
-            for p in ext_px:
-                cpt = p.get("cpt_suggestion", "N/A")
-                st.markdown(f"- `{cpt}` **{p['name']}** ({p.get('confidence', '?')})")
+        note_tab, gt_tab, ext_tab = st.tabs(["Synthetic Note", "Ground Truth", "Extracted"])
 
-        if ext_rx:
-            st.markdown(f"**Extracted Medications ({len(ext_rx)})**")
-            for m in ext_rx:
-                details = " | ".join(filter(None, [m.get("dosage"), m.get("frequency"), m.get("route")]))
-                st.markdown(f"- **{m['name']}** {f'({details})' if details else ''} ({m.get('confidence', '?')})")
+        with note_tab:
+            st.markdown(
+                f"<div style='max-height:500px;overflow-y:auto;padding:12px;"
+                f"border:1px solid #ddd;border-radius:8px;font-size:0.88em;"
+                f"line-height:1.6;white-space:pre-wrap'>{note_text}</div>",
+                unsafe_allow_html=True,
+            )
 
-st.divider()
+        with gt_tab:
+            # Load ground truth from MIMIC data
+            gt_hadm_path = EVAL_DIR / "ground_truth" / f"{selected_hadm}.json"
+            if gt_hadm_path.exists():
+                gt_data = json.loads(gt_hadm_path.read_text())
+            else:
+                # Reconstruct from evaluation details
+                gt_data = None
 
-# ---------------------------------------------------------------------------
-# Confusion examples: FP and FN details
-# ---------------------------------------------------------------------------
-st.subheader("Error Analysis")
+            if gt_data:
+                gt_dx = gt_data.get("diagnoses", [])
+                gt_px = gt_data.get("procedures", [])
+                gt_rx = gt_data.get("medications", [])
 
-selected_type = st.selectbox("Entity type", entity_types, format_func=str.title)
+                if gt_dx:
+                    st.markdown(f"**Diagnoses ({len(gt_dx)})**")
+                    for d in gt_dx:
+                        st.markdown(f"- `{d.get('icd_code', '')}` — {d.get('description', '')}")
 
-fp_rows = []
-fn_rows = []
+                if gt_px:
+                    st.markdown(f"**Procedures ({len(gt_px)})**")
+                    for p in gt_px:
+                        st.markdown(f"- `{p.get('icd_code', '')}` — {p.get('description', '')}")
 
-for hadm_id, results in per_admission.items():
-    for r in results:
-        if r["entity_type"] != selected_type:
-            continue
-        for d in r.get("details", []):
-            if d["matched"]:
+                if gt_rx:
+                    st.markdown(f"**Medications ({len(gt_rx)})**")
+                    for m in gt_rx:
+                        drug = m.get("drug", "")
+                        dose = f" {m.get('dose_val', '')} {m.get('dose_unit', '')}".strip()
+                        route = m.get("route", "")
+                        st.markdown(f"- {drug}{dose} ({route})" if route else f"- {drug}{dose}")
+            else:
+                st.info("Ground truth file not cached. Run evaluation again to generate.")
+
+        with ext_tab:
+            ext_dx = extraction_data.get("diagnoses", [])
+            ext_px = extraction_data.get("procedures", [])
+            ext_rx = extraction_data.get("medications", [])
+
+            if ext_dx:
+                st.markdown(f"**Extracted Diagnoses ({len(ext_dx)})**")
+                for d in ext_dx:
+                    icd = d.get("icd10_suggestion", "N/A")
+                    conf = d.get("confidence", "?")
+                    st.markdown(f"- `{icd}` **{d['name']}** ({conf})")
+
+            if ext_px:
+                st.markdown(f"**Extracted Procedures ({len(ext_px)})**")
+                for p in ext_px:
+                    cpt = p.get("cpt_suggestion", "N/A")
+                    st.markdown(f"- `{cpt}` **{p['name']}** ({p.get('confidence', '?')})")
+
+            if ext_rx:
+                st.markdown(f"**Extracted Medications ({len(ext_rx)})**")
+                for m in ext_rx:
+                    details = " | ".join(filter(None, [m.get("dosage"), m.get("frequency"), m.get("route")]))
+                    st.markdown(f"- **{m['name']}** {f'({details})' if details else ''} ({m.get('confidence', '?')})")
+
+    st.divider()
+
+    # ---------------------------------------------------------------------------
+    # Confusion examples: FP and FN details
+    # ---------------------------------------------------------------------------
+    st.subheader("Error Analysis")
+
+    selected_type = st.selectbox("Entity type", entity_types, format_func=str.title)
+
+    fp_rows = []
+    fn_rows = []
+
+    for hadm_id, results in per_admission.items():
+        for r in results:
+            if r["entity_type"] != selected_type:
                 continue
-            if d.get("extracted_value") and not d.get("ground_truth_value"):
-                fp_rows.append({
+            for d in r.get("details", []):
+                if d["matched"]:
+                    continue
+                if d.get("extracted_value") and not d.get("ground_truth_value"):
+                    fp_rows.append({
+                        "Admission ID": int(hadm_id),
+                        "Extracted (Hallucinated)": d["extracted_value"],
+                        "Match Method": d["match_method"],
+                    })
+
+            # Collect FNs: ground truth items not matched by any extraction
+            matched_gt = {
+                d["ground_truth_value"]
+                for d in r.get("details", [])
+                if d["matched"] and d.get("ground_truth_value")
+            }
+            # We need the GT details — reconstruct from TP + FN counts
+            # FNs are GT items minus matched ones; details only have matched + FP extractions
+            # For FN display, note the fn count; detailed GT listing requires the ground truth file
+            fn_count = r.get("false_negatives", 0)
+            if fn_count > 0:
+                fn_rows.append({
                     "Admission ID": int(hadm_id),
-                    "Extracted (Hallucinated)": d["extracted_value"],
-                    "Match Method": d["match_method"],
+                    "Missed Count": fn_count,
+                    "Matched Count": r.get("true_positives", 0),
+                    "Total GT": r.get("true_positives", 0) + fn_count,
                 })
 
-        # Collect FNs: ground truth items not matched by any extraction
-        matched_gt = {
-            d["ground_truth_value"]
-            for d in r.get("details", [])
-            if d["matched"] and d.get("ground_truth_value")
-        }
-        # We need the GT details — reconstruct from TP + FN counts
-        # FNs are GT items minus matched ones; details only have matched + FP extractions
-        # For FN display, note the fn count; detailed GT listing requires the ground truth file
-        fn_count = r.get("false_negatives", 0)
-        if fn_count > 0:
-            fn_rows.append({
-                "Admission ID": int(hadm_id),
-                "Missed Count": fn_count,
-                "Matched Count": r.get("true_positives", 0),
-                "Total GT": r.get("true_positives", 0) + fn_count,
-            })
+    col_fp, col_fn = st.columns(2)
 
-col_fp, col_fn = st.columns(2)
+    with col_fp:
+        st.markdown(
+            tt_heading(
+                "False Positives (Hallucinated)",
+                f"Extracted {selected_type} that do not match any ground truth entity. "
+                "These may be hallucinated by the note generator or the extraction pipeline.",
+                style="font-size:1.05em;font-weight:600",
+            ),
+            unsafe_allow_html=True,
+        )
+        if fp_rows:
+            st.dataframe(pd.DataFrame(fp_rows), hide_index=True, use_container_width=True)
+        else:
+            st.success(f"No false positives for {selected_type}.")
 
-with col_fp:
-    st.markdown(
-        tt_heading(
-            "False Positives (Hallucinated)",
-            f"Extracted {selected_type} that do not match any ground truth entity. "
-            "These may be hallucinated by the note generator or the extraction pipeline.",
-            style="font-size:1.05em;font-weight:600",
-        ),
-        unsafe_allow_html=True,
-    )
-    if fp_rows:
-        st.dataframe(pd.DataFrame(fp_rows), hide_index=True, use_container_width=True)
-    else:
-        st.success(f"No false positives for {selected_type}.")
-
-with col_fn:
-    st.markdown(
-        tt_heading(
-            "False Negatives (Missed)",
-            f"Ground truth {selected_type} that the extraction pipeline failed to find. "
-            "Higher counts indicate the pipeline is missing entities.",
-            style="font-size:1.05em;font-weight:600",
-        ),
-        unsafe_allow_html=True,
-    )
-    if fn_rows:
-        st.dataframe(pd.DataFrame(fn_rows), hide_index=True, use_container_width=True)
-    else:
-        st.success(f"No false negatives for {selected_type}.")
+    with col_fn:
+        st.markdown(
+            tt_heading(
+                "False Negatives (Missed)",
+                f"Ground truth {selected_type} that the extraction pipeline failed to find. "
+                "Higher counts indicate the pipeline is missing entities.",
+                style="font-size:1.05em;font-weight:600",
+            ),
+            unsafe_allow_html=True,
+        )
+        if fn_rows:
+            st.dataframe(pd.DataFrame(fn_rows), hide_index=True, use_container_width=True)
+        else:
+            st.success(f"No false negatives for {selected_type}.")
 
 st.divider()
 

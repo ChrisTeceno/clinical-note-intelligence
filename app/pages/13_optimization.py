@@ -6,9 +6,12 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from clinical_pipeline.config import get_settings
 from clinical_pipeline.extraction.prompts import (
     SYSTEM_PROMPT as BASELINE_PROMPT,
 )
+
+settings = get_settings()
 
 st.title("Prompt Optimization")
 st.caption(
@@ -19,8 +22,8 @@ st.caption(
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
-OPT_DIR = DATA_DIR / "optimization"
+OPT_DIR = settings.optimization_dir
+EVAL_DIR = settings.evaluation_dir
 HISTORY_PATH = OPT_DIR / "prompt_history.json"
 BEST_PROMPT_PATH = OPT_DIR / "best_prompt.txt"
 
@@ -153,25 +156,19 @@ st.warning(
     "iterations x eval set size."
 )
 
-# Check for cached evaluation data (previous runs)
-EVAL_DIR = PROJECT_ROOT / "data" / "evaluation"
-has_cached_data = (EVAL_DIR / "selected_hadm_ids.json").exists() and (EVAL_DIR / "synthetic_notes").is_dir()
+if settings.mimic_source == "full":
+    st.info(
+        "Full MIMIC-IV is credentialed data and stays local. "
+        "Optimization runs on it are started from the CLI, not from this app."
+    )
+    st.stop()
 
-# Default MIMIC path — check common locations
-DEFAULT_MIMIC_PATHS = [
-    "/home/deploy/data/mimic-iv-demo/hosp",
-    "/Users/teceno/Downloads/mimic-iv-clinical-database-demo-2.2/hosp",
-    str(Path.home() / "Downloads/mimic-iv-clinical-database-demo-2.2/hosp"),
-]
-default_mimic = ""
-for p in DEFAULT_MIMIC_PATHS:
-    if Path(p).exists():
-        default_mimic = p
-        break
+# Check for cached evaluation data (previous runs)
+has_cached_data = (EVAL_DIR / "selected_hadm_ids.json").exists() and (EVAL_DIR / "synthetic_notes").is_dir()
 
 mimic_path_str = st.text_input(
     "MIMIC-IV hosp/ directory path",
-    value=default_mimic,
+    value=str(settings.mimic_hosp_dir),
     help="Path to the MIMIC-IV demo hosp/ directory. Cached data from previous evaluation runs will be reused.",
 )
 
