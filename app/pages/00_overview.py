@@ -104,7 +104,7 @@ st.markdown("""
   <!-- Evaluation Framework -->
   <rect x="400" y="170" width="190" height="55" rx="10" fill="#1e1e32" stroke="#f39c12" stroke-width="1.5"/>
   <text x="495" y="193" text-anchor="middle" fill="#f39c12" font-size="11" font-family="sans-serif">Evaluation Framework</text>
-  <text x="495" y="210" text-anchor="middle" fill="#888" font-size="10" font-family="sans-serif">P/R/F1 vs MIMIC-IV ground truth</text>
+  <text x="495" y="210" text-anchor="middle" fill="#888" font-size="10" font-family="sans-serif">P/R/F1 vs MIMIC-IV demo ground truth</text>
   <line x1="475" y1="100" x2="475" y2="168" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr2)"/>
 
   <!-- Experiment Tracking -->
@@ -164,7 +164,7 @@ status_data = [
     ("Claude API Extraction", "Complete", "50 notes extracted with tool_use structured output, 0% parse failures"),
     ("ICD-10 Code Matching", "Complete", "71.8% exact match, 27.0% partial, 1.2% unmatched against CMS 2025"),
     ("HITL Review Dashboard", "Complete", "10 pages: review queue, note detail with evidence highlighting, analytics"),
-    ("Evaluation Framework", "Complete", "P/R/F1 scoring against MIMIC-IV ground truth (30 synthetic admissions)"),
+    ("Evaluation Framework", "Complete", "P/R/F1 scoring against MIMIC-IV demo ground truth (30 synthetic admissions)"),
     ("Experiment Tracking", "Complete", "3 runs tracked: Haiku baseline, Sonnet 4, Haiku + RAG"),
     ("RAG Enhancement", "Complete", "TF-IDF retrieval from 74K ICD-10 codes; improved Rx F1 by +3.6%"),
     ("Medical Imaging", "Complete", "7 models compared on 500 NIH chest X-rays (best AUC: 0.711)"),
@@ -193,7 +193,7 @@ st.subheader("Key Results")
 col1, col2, col3 = st.columns(3)
 
 col1.markdown("**Clinical Note Extraction**")
-col1.metric("Best Diagnosis F1", "82.1%", help="Sonnet 4 on 30 MIMIC-IV admissions")
+col1.metric("Best Diagnosis F1", "82.1%", help="Sonnet 4 on 30 MIMIC-IV demo admissions")
 col1.metric("Diagnosis Precision", "93.5%", help="Sonnet: when it extracts a diagnosis, it's almost always correct")
 col1.metric("Medication Precision", "93.4%", help="Haiku + RAG")
 
@@ -215,7 +215,7 @@ st.divider()
 st.subheader("Planned Updates")
 
 planned = [
-    ("Real MIMIC-IV Note Evaluation", "Pending PhysioNet credentialing (CITI training complete, application submitted). Will replace synthetic notes with real discharge summaries for rigorous F1 evaluation."),
+    ("Real MIMIC-IV Note Evaluation", "Full MIMIC-IV 3.1 source is supported (MIMIC_SOURCE=full) but not yet run; real notes pending PhysioNet credentialing (CITI training complete, application submitted). Will replace synthetic notes with real discharge summaries for rigorous F1 evaluation."),
     ("MIMIC-CXR Imaging Integration", "Same PhysioNet credentialing unlocks 227K chest X-rays with paired radiology reports for multimodal cross-referencing."),
     ("Full 2,358 Note Extraction", "Scale from 50-note demo to full dataset using Anthropic Batch API for 50% cost reduction."),
     ("Prompt Optimization", "Systematic prompt engineering experiments with specialty-specific few-shot examples to improve per-specialty F1."),

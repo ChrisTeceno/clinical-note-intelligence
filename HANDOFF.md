@@ -30,7 +30,7 @@ End-to-end clinical data automation system for a job application. Extracts diagn
 - `scripts/sync_databricks_notebooks.py` — Pull notebooks from Databricks API
 - `scripts/convert_databricks_notebook.py` — Convert to dark-themed HTML
 - `data/clinical_notes.db` — SQLite with 50 extracted notes
-- `data/evaluation/` — 30 MIMIC-IV evaluation results, run history
+- `data/evaluation/`: 30 MIMIC-IV demo evaluation results, run history (`MIMIC_SOURCE=full` writes to gitignored `data/full/` instead)
 - `data/feedback/` — HITL corrections (JSON)
 - `data/optimization/` — Prompt optimization history + best prompt
 - `data/imaging/results/` — 7 model results (6 TorchXRayVision + Claude Vision)
@@ -70,6 +70,7 @@ conda run -n clinical-pipeline python -c "from playwright.sync_api import sync_p
 - PhysioNet credentialing submitted 2026-03-31 (CITI done), awaiting approval ~3-7 days
 - Full 2,358 note extraction not yet run (~$8-10 API cost)
 - Real MIMIC-IV note evaluation (blocked on PhysioNet)
+- Full MIMIC-IV 3.1 support is in: set `MIMIC_SOURCE=full` and `MIMIC_FULL_ROOT`; no full-data run has been done yet. Public deploy stays on the demo (`MIMIC_DEMO_ROOT=/home/deploy/data/mimic-iv-demo`)
 - Portfolio headshot on christeceno.com uses inline styles (CSS class wasn't applying)
 
 ### User Preferences (from memory)
